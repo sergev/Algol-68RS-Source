@@ -1,0 +1,10 @@
+*.o
+*.a
+qad/*.c
+qad/*.m
+nameseed
+c-stamp
+g-stamp
+q-stamp
+bdwgc/
+src/a68toc

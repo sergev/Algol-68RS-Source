@@ -247,7 +247,7 @@ else
 	echo "ca: Module name must be specified, use -m <libname>"
 	exit 1
     fi
-    
+
     # Ensure that the sub-directory for .m files exists
     if [ ! -z "${DESTDIR}" ]
     then

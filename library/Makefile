@@ -28,7 +28,7 @@ liba68.a : $(library_o)
 	$(CC) $(NOR) -o $@ -c $<
 
 clean :
-	$(RM) -v *.o liba68.a
+	$(RM) -v *.o *.a
 
 install :
 	$(INSTALLDATA) -p Afirst.o $(PKGDIR)
