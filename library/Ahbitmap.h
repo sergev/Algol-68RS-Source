@@ -232,17 +232,17 @@ typedef _bit_type       *BITMAPPTR;
 #endif
 #ifndef SETMARKS
 #define SETMARKS(bitmap,from,n)                                                                          \
-{ SIZE temp;                                                                                             \
+{ SIZE marks_i;                                                                                             \
     (void)BCHECK(from,SETMARKS,start);                                                                         \
     (void)BCHECK((from)+(n)-1,SETMARKS,end);                                                                   \
-    for(temp=(from)+(n)-1; temp>=(from); temp--) _bit_set(bitmap,temp);                                  \
+    for(marks_i=(from)+(n)-1; marks_i>=(from); marks_i--) _bit_set(bitmap,marks_i);                                  \
   }
 #endif
 #define CLRMARKS(bitmap,from,n)                                                                          \
-  { SIZE temp;                                                                                           \
+  { SIZE marks_i;                                                                                           \
     (void)BCHECK(from,CLRMARKS,start);                                                                         \
     (void)BCHECK((from)+(n)-1,CLRMARKS,end);                                                                   \
-    for(temp=(from)+(n)-1; temp>=(from); temp--) _bit_clear(bitmap,temp);                                \
+    for(marks_i=(from)+(n)-1; marks_i>=(from); marks_i--) _bit_clear(bitmap,marks_i);                                \
   }
 
 

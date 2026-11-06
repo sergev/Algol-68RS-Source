@@ -27,7 +27,7 @@ sudo make install    # /usr (or /usr/local on macOS)
   prelude). Delete them (or `make dist-clean`) to force a rebuild.
 - GC: system libgc via `pkg-config bdw-gc` (`libgc-dev` / Homebrew `bdw-gc`) is required,
   giving `GC_CFLAGS`/`GC_LIBS`. `make install` bakes the GC flags into the installed `ca`.
-- C is compiled with `-O2 -Wall -Werror` (forced via `override CFLAGS`). Generated C must stay
+- C is compiled with `-O2 -Wall -Wshadow -Werror` (forced via `override CFLAGS`). Generated C must stay
   warning-free under gcc and clang: the backend voids discarded call results, zero-initialises
   locals/SKIP/union temporaries, and marks declarations `A_UNUSED`. Changing that output needs a
   bootstrap through C that is not yet clean, so drop `-Werror` temporarily for that step.
