@@ -89,7 +89,7 @@ extern A68_INT A_T3INDEX(const A_DIM *old, const A68_INT lwb1, const A68_INT lwb
   Aerror
 */
 
-extern A68_VOID A68_ERROR(const char *message);
+extern A68_VOID A68_ERROR(const char *message) __attribute__((__noreturn__));
 
 /*
   Aalloc

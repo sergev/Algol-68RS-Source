@@ -32009,10 +32009,10 @@ ODAACTR();   /* USE incinstallation */
 BAAACTR();   /* USE incid */
 /* --- Initialise configuration information */
 A_config.source_file = "/home/vak/Project/Algol/Algol-68RS-Source/src/rscompiler.a68";
-A_config.translation_time = "Thu Nov  5 20:30:30 2026";
+A_config.translation_time = "Thu Nov  5 20:46:57 2026";
 A_config.ctrans_version = "Ctrans_34.6";
 A_config.name_seed = "YJAACTR (from seed file) ";
-A_config.spec_change_time = "Thu Nov  5 20:30:30 2026";
+A_config.spec_change_time = "Thu Nov  5 20:46:57 2026";
 A_config.arguments = A_config_arguments;
 A_config.environment = A_config_environment;
 A_config.modinfo_files = A_config_modinfo_files;

@@ -95,9 +95,9 @@ A68_LIB:=$(ACD)
 
 #------------ Flags ------------
 ifeq ($(DEBUG),no)
-override CFLAGS=-O0
+override CFLAGS=-O2
 else
-override CFLAGS=-O0 -g
+override CFLAGS=-O2 -g
 endif
 NOR=$(CFLAGS) $(INCS)
 CTSTAR=59LR

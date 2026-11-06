@@ -280,8 +280,8 @@ then
 	${ECHO} sed -E "s/ \/\* line ([0-9]+): \*\//#line \1 \"${A68S}.a68\"/" ${A68S}.c
 	        sed -E "s/ \/\* line ([0-9]+): \*\//#line \1 \"${A68S}.a68\"/" < .${A68S}.c >${A68S}.c
     fi
-    ${ECHO} ${CC} -O0 ${CHECK} ${CFLAGS} ${INCLUDES} ${GC_CFLAGS} -o ${A68S}.o -c ${A68S}.c
-            ${CC} -O0 ${CHECK} ${CFLAGS} ${INCLUDES} ${GC_CFLAGS} -o ${A68S}.o -c ${A68S}.c
+    ${ECHO} ${CC} -O2 ${CHECK} ${CFLAGS} ${INCLUDES} ${GC_CFLAGS} -o ${A68S}.o -c ${A68S}.c
+            ${CC} -O2 ${CHECK} ${CFLAGS} ${INCLUDES} ${GC_CFLAGS} -o ${A68S}.o -c ${A68S}.c
     RES=$?
     if [ ${RES} -ne 0 ]
     then exit ${RES}

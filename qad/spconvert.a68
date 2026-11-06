@@ -2,6 +2,8 @@ DECS spconvert CONTEXT VOID
 USE spmodes, spaliens, spplain, spops:
 
 COMMENT
+   2026-11-05 SV  subwhole: no overflow on the most negative integer.
+
    $Log: spconvert.a68,v $
    Revision 1.2  2003-05-30 21:20:47  sian
    Cured two bugs in spconvert.a68
@@ -132,10 +134,13 @@ PROC {?} subwhole =
    CASE x IN
       (LONG INT  x):
          BEGIN
-            LONG INT n:= ABS x; INT f = first; first:= upb + 1;
+            { Keep n <= 0: ABS of the most negative value overflows }
+            LONG INT n:= (x > LONG 0 | -x | x);
+            INT f = first; first:= upb + 1;
             WHILE
-               s[first -:= 1]:= dig char(SHORTEN(n MOD LONG 10));
-               n OVERAB LONG 10;
+               LONG INT q = n OVER LONG 10;
+               s[first -:= 1]:= dig char(SHORTEN(q * LONG 10 - n));
+               n:= q;
                n /= LONG 0
             DO SKIP OD;
             FOR i FROM f TO first - 1 DO s[i]:= " " OD;
@@ -146,12 +151,14 @@ PROC {?} subwhole =
             INT n:= (x|(INT             i): i,
                        (SHORT INT       i): LENG i,
                        (SHORT SHORT INT i): LENG LENG i);
-            INT sign = SIGN n;  n:=ABS n;
+            { Keep n <= 0: ABS of the most negative value overflows }
+            INT sign = SIGN n;  (n > 0 | n:= -n);
             INT f = first; first:= upb + 1;
 
             WHILE
-               s[first -:= 1]:= dig char(n MOD 10);
-               n OVERAB 10;
+               INT q = n OVER 10;
+               s[first -:= 1]:= dig char(q * 10 - n);
+               n:= q;
                n /= 0
             DO SKIP OD;
 

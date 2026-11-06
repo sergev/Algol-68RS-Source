@@ -49,6 +49,8 @@ COMMENT
 29:03:95  34.003  ELLA  Modcprght Change copyright header
 05:11:26  34.004  SV    C23       Use <stdio.h> instead of old-style extern
                                   declarations; prototype for A_readdir.
+05:11:26  34.005  SV    Scope     get_file_details: heap-allocate the result
+                                  instead of returning a local.
 ??:??:??   ?.???  ????
 COMMENT
 
@@ -567,7 +569,7 @@ PROC get_file_details = ( UNION(FILE,VECTOR [] CHAR) file,
 CASE file IN
   (FILE f):  { an open file }
     IF
-      FILEDETAILS details;
+      HEAP FILEDETAILS details;
       fstat(fileno(stdio file OF f),statbuf) /= 0
     THEN
       msg(system, "get_file_details:  'fstat' failed on file parameter");
@@ -577,7 +579,7 @@ CASE file IN
     FI,
   (VECTOR [] CHAR filename): { an arbitrary file }
     IF
-      FILEDETAILS details;
+      HEAP FILEDETAILS details;
       stat(filename,statbuf) /= 0
     THEN
       IF errno = eacces
