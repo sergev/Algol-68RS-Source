@@ -112,7 +112,7 @@ INSTALLPROG=$(INSTALL) -m 555
 export
 
 #-------------- Rules --------------
-.PHONY : clean info uninstall
+.PHONY : clean info uninstall check resetseed
 
 #-----Don't remake the documentation all the time----
 #all : g-stamp c-stamp q-stamp d-stamp
@@ -121,8 +121,8 @@ all : g-stamp c-stamp q-stamp
 remove :
 	for d in $(ADIRS); do $(RM) $$d/*.c $$d/*.m; done
 
-Translate : remove nameseed
-	-for d in $(ADIRS); do $(MAKE) -C $$d Translate; done
+Translate : remove resetseed
+	for d in $(ADIRS); do $(MAKE) -C $$d Translate || exit 1; done
 
 g-stamp: $(GCD)/gc.a
 	-mkdir -p include/gc
@@ -132,18 +132,18 @@ g-stamp: $(GCD)/gc.a
 
 $(GCD)/gc.a:
 	tar zxvf bdwgc.tar.gz
-	-$(MAKE) -C $(GCD) -f Makefile.direct check
+	$(MAKE) -C $(GCD) -f Makefile.direct check
 
 c-stamp: g-stamp
-	-for d in $(CDIRS); do $(MAKE) -C $$d; done
+	for d in $(CDIRS); do $(MAKE) -C $$d || exit 1; done
 	touch c-stamp
 
 q-stamp : c-stamp nameseed
-	-$(MAKE) -C $(QAD)
+	$(MAKE) -C $(QAD)
 	touch q-stamp
 
 d-stamp :
-	-$(MAKE) -C $(DOD)
+	$(MAKE) -C $(DOD)
 	touch d-stamp
 
 #install : c-stamp q-stamp d-stamp
@@ -184,6 +184,14 @@ dist-clean: clean
 
 nameseed : a68config/rctr liba68prel/rctr src/rctr qad/rctr
 	for d in $(ADIRS); do cp $$d/rctr $$d/nameseed; done
+
+# Always start re-translation from fresh seeds.
+resetseed :
+	for d in $(ADIRS); do cp $$d/rctr $$d/nameseed; done
+
+# Self-hosting fixed point and examples, using the build tree.
+check : g-stamp c-stamp q-stamp
+	$(SHELL) scripts/check
 
 savepoint:
 	COPYFILE_DISABLE=1 tar zcvf ../$(HERE).save.a68.tar.gz .

@@ -21,24 +21,29 @@ make dist-clean && make   # stage 2: compiler built from its own output
 sudo make install    # /usr (or /usr/local on macOS)
 ```
 
-- Top-level `make` uses `-for d in ...; do $(MAKE) -C $$d; done` loops that **ignore sub-make
-  failures**; check output for errors rather than trusting the exit status.
+- Sub-make failures propagate to the top-level exit status. Per-directory builds are serial
+  (`.NOTPARALLEL` in `Algol68.mk`), because modules need each other's `.m` files and share `nameseed`.
 - Progress is tracked by stamp files `g-stamp` (bdwgc), `c-stamp` (C dirs), `q-stamp` (QAD
   prelude). Delete them (or `make dist-clean`) to force a rebuild.
 - `bdwgc/` is extracted from `bdwgc.tar.gz` on first build and is git-ignored.
 - Build order matters: `library` → `a68config` → `liba68prel` → `src`, then `qad`.
-- Self-hosting check: translate, rebuild, translate again, and diff the generated `.c` files.
+- Self-hosting check: `make check` (see Tests below).
 - Debian package: `dpkg-buildpackage -F`. Docs (`doc/`, `d-stamp`) are not built by default.
 
 ## Tests / examples
 
-There is no unit-test suite. Verification is by self-compilation plus example programs, which use
+`make check` runs `scripts/check` on a scratch copy of the tree. It verifies the self-hosting fixed point
+(stage-1 and stage-2 compilers produce the same C, ignoring timestamps), compiles every `examples/*.a68`,
+and runs `examples/tests` and the `logic68` part of `examples/logic`. It needs no install: the
+`CA_A68TOC`, `CA_ROOT`, `CA_LIBDIR` and `CA_INCLUDES` variables point `ca` at the build tree.
+
+There is no unit-test suite. The examples can also be run by hand. Those runs use
 the **installed** `ca` driver (`/usr/bin/ca`, `/usr/share/algol68toc`), so install first:
 
 ```sh
 cd examples && ca Abundant_odd_numbers.a68 && ./Abundant_odd_numbers
 make -C examples/tests test     # separate compilation of DECS modules into a library; diffs expected-output.txt
-make -C examples/logic logic68  # diffs expected.output
+make -C examples/logic logic68  # diffs expected.output; Makefile needs Algol W's awe.mk
 ```
 
 `scripts/ca` is the user-level driver: runs `a68toc` → `gcc -O0 -DA68_CHECK` → links with

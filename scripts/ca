@@ -45,11 +45,16 @@ ROOT=/usr/share/algol68toc
 INCLUDES="-I/usr/include/algol68 -I/usr/include"
 fi
 
+# Overrides for running from a build tree (see scripts/check).
+PROGRAM=${CA_A68TOC:-$PROGRAM}
+ROOT=${CA_ROOT:-$ROOT}
+INCLUDES=${CA_INCLUDES:-$INCLUDES}
+
 A68DIRS="-dir ${ROOT}"
 CHECK=-DA68_CHECK
 DEBUG=
 DESTDIR=${HOME}/lib
-LIBRARIES=-L${DESTDIR}
+LIBRARIES="-L${DESTDIR}${CA_LIBDIR:+ -L${CA_LIBDIR}}"
 MUNGE=n
 UNAME="-uname seedfile"
 WEBDIR="-w${DESTDIR}"
