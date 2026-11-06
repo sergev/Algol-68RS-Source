@@ -281,7 +281,7 @@ extern void IKAAOSF(void);   /* usefulops */
 /* --- end of DECS initialisation functions --- */
 static A68_60   GDHACTR = {"$Id: message.a68,v 1.1.1.1 2001-05-07 10:16:10 sian Exp $"}; 
 A_GISVEC(A68_VC ,HDHACTR,GDHACTR,57)
-static A68_BOOL  IDHACTR_longlongoption;
+static A68_BOOL  IDHACTR_longlongoption A_UNUSED;
 static A68_62   NDHACTR = {"] "}; 
 A_GISVEC(A68_VC ,ODHACTR,NDHACTR,2)
 static A68_63   PDHACTR = {"STRUCT ("}; 
@@ -1283,7 +1283,7 @@ A68_VC  CAIACTR;  /* OPERATORS - scalar -> [] or VEC[] */
 A68_VC  JCIACTR;  /* OPERATORS - scalar -> [] or VEC[] */
 A68_VC  TOIACTR;  /* OPERATORS - scalar -> [] or VEC[] */
 A68_VC  UOIACTR;  /* avoid structure result */
-A68_VC  WOIACTR_mess;
+A68_VC  WOIACTR_mess A_UNUSED = {0};
 A68_54  YOIACTR_generator;   /* proc value of non-global proc */
 A68_VC  DPIACTR;  /* clause result */
 A68_VC  EPIACTR;  /* avoid structure result */
@@ -1428,7 +1428,7 @@ case 33:
 LDHACTR = UFHACTR;
 break;
 case 34: 
-if ( IDHACTR_longlongoption )
+if (IDHACTR_longlongoption)
 { 
 LDHACTR = WFHACTR;
 } 
@@ -1443,7 +1443,7 @@ case 35:
 LDHACTR = AGHACTR;
 break;
 case 36: 
-if ( IDHACTR_longlongoption )
+if (IDHACTR_longlongoption)
 { 
 LDHACTR = CGHACTR;
 } 
@@ -1454,7 +1454,7 @@ LDHACTR = EGHACTR;
 } 
 break;
 case 37: 
-if ( IDHACTR_longlongoption )
+if (IDHACTR_longlongoption)
 { 
 LDHACTR = GGHACTR;
 } 
@@ -1465,7 +1465,7 @@ LDHACTR = IGHACTR;
 } 
 break;
 case 38: 
-if ( IDHACTR_longlongoption )
+if (IDHACTR_longlongoption)
 { 
 LDHACTR = KGHACTR;
 } 
@@ -1480,7 +1480,7 @@ case 39:
 LDHACTR = OGHACTR;
 break;
 case 40: 
-if ( IDHACTR_longlongoption )
+if (IDHACTR_longlongoption)
 { 
 LDHACTR = QGHACTR;
 } 
@@ -1491,7 +1491,7 @@ LDHACTR = SGHACTR;
 } 
 break;
 case 41: 
-if ( IDHACTR_longlongoption )
+if (IDHACTR_longlongoption)
 { 
 LDHACTR = UGHACTR;
 } 
@@ -1502,7 +1502,7 @@ LDHACTR = WGHACTR;
 } 
 break;
 case 42: 
-if ( IDHACTR_longlongoption )
+if (IDHACTR_longlongoption)
 { 
 LDHACTR = YGHACTR;
 } 
@@ -1517,7 +1517,7 @@ case 43:
 LDHACTR = CHHACTR;
 break;
 case 44: 
-if ( IDHACTR_longlongoption )
+if (IDHACTR_longlongoption)
 { 
 LDHACTR = EHHACTR;
 } 
@@ -1528,7 +1528,7 @@ LDHACTR = GHHACTR;
 } 
 break;
 case 45: 
-if ( IDHACTR_longlongoption )
+if (IDHACTR_longlongoption)
 { 
 LDHACTR = IHHACTR;
 } 
@@ -1539,7 +1539,7 @@ LDHACTR = KHHACTR;
 } 
 break;
 case 46: 
-if ( IDHACTR_longlongoption )
+if (IDHACTR_longlongoption)
 { 
 LDHACTR = MHHACTR;
 } 
@@ -1554,7 +1554,7 @@ case 47:
 LDHACTR = QHHACTR;
 break;
 case 48: 
-if ( IDHACTR_longlongoption )
+if (IDHACTR_longlongoption)
 { 
 LDHACTR = SHHACTR;
 } 
@@ -1565,7 +1565,7 @@ LDHACTR = UHHACTR;
 } 
 break;
 case 49: 
-if ( IDHACTR_longlongoption )
+if (IDHACTR_longlongoption)
 { 
 LDHACTR = WHHACTR;
 } 
@@ -3353,7 +3353,7 @@ A_CLOSURE( YOIACTR_generator, ZOIACTR_generator, APIACTR_generator );
 (( APIACTR_generator * ) ( YOIACTR_generator.nonlocals )) -> WOIACTR_mess = WOIACTR_mess;
  /* line 557: */
 A_CALLPROC(YOIACTR_generator,(A68_FALSE, &EPIACTR),(A68_FALSE, &EPIACTR,(YOIACTR_generator).nonlocals));
-A_VASSIGN2(WOIACTR_mess,EPIACTR,A68_CHAR ) ;
+(void)(A_VASSIGN2(WOIACTR_mess,EPIACTR,A68_CHAR )) ;
 DPIACTR = EPIACTR;
 } 
 A_PROC_EXIT(message);
@@ -3380,7 +3380,7 @@ static A68_BOOL A_invoked = A68_FALSE;
 static char *A_config_arguments[] = {"/home/vak/Project/Algol/Algol-68RS-Source/src/a68toc","-v","-uname","seedfile","-staredit","59LR","-lib","/home/vak/Project/Algol/Algol-68RS-Source/a68config","-dir","/home/vak/Project/Algol/Algol-68RS-Source/a68config","-dir","/home/vak/Project/Algol/Algol-68RS-Source/liba68prel","-dir",".","message.a68",""};
 static char *A_config_environment[] = {"A68_LIB=/home/vak/Project/Algol/Algol-68RS-Source/a68config","A68_CDIR=","A68_DIR=","A68_STAREDIT=","A68_NAMESEED=nameseed","CTRANS_NAMESEED=",""};
 static char *A_config_modinfo_files[] = {"/home/vak/Project/Algol/Algol-68RS-Source/a68config/a68config.m","/home/vak/Project/Algol/Algol-68RS-Source/liba68prel/usefulops.m",""};
-static A_CONFIG_INFO A_config;
+static A_CONFIG_INFO A_config A_UNUSED;
 /* --- end of configuration information */
 if( A_invoked ) return;
 A_invoked = A68_TRUE;
@@ -3388,15 +3388,15 @@ BAAALIB();   /* USE a68config */
 IKAAOSF();   /* USE usefulops */
 /* --- Initialise configuration information */
 A_config.source_file = "/home/vak/Project/Algol/Algol-68RS-Source/src/message.a68";
-A_config.translation_time = "Thu Nov  5 20:46:57 2026";
+A_config.translation_time = "Thu Nov  5 21:10:59 2026";
 A_config.ctrans_version = "Ctrans_34.6";
 A_config.name_seed = "CDHACTR (from seed file) ";
-A_config.spec_change_time = "Thu Nov  5 20:46:57 2026";
+A_config.spec_change_time = "Thu Nov  5 21:10:59 2026";
 A_config.arguments = A_config_arguments;
 A_config.environment = A_config_environment;
 A_config.modinfo_files = A_config_modinfo_files;
 A_PROC_ENTRY(DECS message);
-UEAALIB_a68config(LGAALIB_configinfo, HDHACTR);
+(void)(UEAALIB_a68config(LGAALIB_configinfo, HDHACTR));
  /* line 44: */
 IDHACTR_longlongoption = A68_FALSE;
  /* line 46: */

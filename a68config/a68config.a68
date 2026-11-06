@@ -242,7 +242,7 @@ END;
 
 CODE (init)
 *4 16r"fb 00 9e"   { CALLS #0 @(SP)+ }
-%4 "ACONFIG;       /* Invoke the macro to setup A_configinfo */"
+%4 "(void)ACONFIG; /* Invoke the macro to setup A_configinfo */"
 %4 "init();"
 
 

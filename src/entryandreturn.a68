@@ -40,6 +40,7 @@ COMMENT
                                   number 2.13 
 29:03:95  34.002  ELLA  Modcprght Change copyright header
 10:06:03  34.003  SL    Phoenix Engineering SL: changed main header and macro
+05:11:26  34.004  SV    Wall      A_config may be unused.
 ??:??:??   ?.???  ????
 COMMENT
 
@@ -130,7 +131,7 @@ BEGIN
 
     write c stream((
       """""};", cnewline,
-      "static A_CONFIG_INFO A_config;", cnewline,
+      "static A_CONFIG_INFO A_config A_UNUSED;", cnewline,
        "/* --- end of configuration information */", cnewline
       ), LOCDECSTREAM 0);
 

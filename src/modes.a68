@@ -43,6 +43,7 @@ COMMENT
 29:03:95  34.003  ELLA  Modcprght Change copyright header
 05:11:26  34.004  SV    C23       Emit prototype for A_STRAIGHT index proc;
                                   struct result only if element is C struct.
+05:11:26  34.005  SV    Wall      'new zeroed' temporaries.
 ??:??:??   ?.???  ????
 COMMENT
 
@@ -1449,9 +1450,11 @@ BEGIN
    OD
 END;
 
-PROC  declare c temporary = ( INT mode, CFRAGMENT comment text ) TEMPORARY:
+PROC  declare c temporary init = ( INT mode, CFRAGMENT comment text,
+                                   BOOL zeroed ) TEMPORARY:
 {
-   Declares a C temporary corresponding to algol 68 'mode'.
+   Declares a C temporary corresponding to algol 68 'mode',
+   zero-initialised if 'zeroed'.
    If 'verbose option' is set, 'comment text' is output in a
    C comment after the declaration.
    The temporary is returned.
@@ -1463,7 +1466,7 @@ BEGIN
    name OF new temp := new unique name;
    mode OF new temp := cvt;
    write c stream
-   ( cvartype( cvt ) + " " + name OF new temp + ";",
+   ( cvartype( cvt ) + " " + name OF new temp + ( zeroed | " = {0};" | ";" ),
      locdecstream
    );
    IF verbose option ANDTH UPB comment text > 0
@@ -1476,7 +1479,13 @@ BEGIN
    new temp
 END;
 
+PROC  declare c temporary = ( INT mode, CFRAGMENT comment text ) TEMPORARY:
+   declare c temporary init( mode, comment text, FALSE );
+
 PROC( INT, CFRAGMENT )TEMPORARY new = declare c temporary;
+
+PROC  new zeroed = ( INT mode, CFRAGMENT comment text ) TEMPORARY:
+   declare c temporary init( mode, comment text, TRUE );
 
 SKIP
 
@@ -1488,7 +1497,7 @@ KEEP
     element mode, has refs, initialise mode table,
     is array, is compl, is firm array, is flex array, is row, is vector,
     is struct, is union, is istruct, is proc, is procp, istruct length, mode name,
-    mode type, new, parameters, procinfo, cast, c sizeof,
+    mode type, new, new zeroed, parameters, procinfo, cast, c sizeof,
     is c struct,
     struct fields, find deflex mode, give c variable type, c tagged type,
     align next struct field,

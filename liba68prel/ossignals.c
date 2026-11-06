@@ -635,8 +635,8 @@ static A68_131   TOCAOSF = {"input/output possible signal"};
 A_GISVEC(A68_VC ,UOCAOSF,TOCAOSF,28)
 static A68_116   VOCAOSF = {"power failure restart"}; 
 A_GISVEC(A68_VC ,WOCAOSF,VOCAOSF,21)
-static A68_54  YOCAOSF_signal_facility;
-A68_133  DPCAOSF_sig_msgprocs;
+static A68_54  YOCAOSF_signal_facility A_UNUSED;
+A68_133  DPCAOSF_sig_msgprocs A_UNUSED;
 A_STATIC struct sigaction osif_handler_sigaction;
 #define OSIF_HANDLER_SIGACTION osif_handler_sigaction
 
@@ -732,14 +732,14 @@ A_PROC_ENTRY(sigusr1_handler);
  /* line 256: */
  /* line 258: */
 { 
-OKCAOSF_sigfillset((&MPCAOSF_all_sigset));
+(void)(OKCAOSF_sigfillset((&MPCAOSF_all_sigset)));
  /* line 259: */
-RKCAOSF_sigprocmask(SKCAOSF_sig_block, (&MPCAOSF_all_sigset), LPCAOSF_nil_sigset);
+(void)(RKCAOSF_sigprocmask(SKCAOSF_sig_block, (&MPCAOSF_all_sigset), LPCAOSF_nil_sigset));
  /* line 262: */
-KKCAOSF_sigaction(FLCAOSF_sigusr1, (&JPCAOSF_saved_sigaction), KPCAOSF_nil_sigaction);
+(void)(KKCAOSF_sigaction(FLCAOSF_sigusr1, (&JPCAOSF_saved_sigaction), KPCAOSF_nil_sigaction));
  /* line 264: */
  /* line 265: */
-MOBAOSF_enable_garbage_collector();
+(void)(MOBAOSF_enable_garbage_collector());
 } 
 A_PROC_EXIT(sigusr1_handler);
 return;
@@ -748,7 +748,7 @@ return;
 
 A_STATIC A68_VOID  QPCAOSF_osif_handler(A68_INT  Os_signum)
 { 
-A68_102  RPCAOSF_sigusr1_sigset;
+A68_102  RPCAOSF_sigusr1_sigset A_UNUSED = {0};
 A68_53  SPCAOSF;  /* CALL */
 A68_51  TPCAOSF;  /* OPERATORS - vacuum */
 A68_46  UPCAOSF;  /* avoid structure result */
@@ -757,22 +757,22 @@ A_PROC_ENTRY(osif_handler);
  /* line 272: */
 { 
  /* line 273: */
-NKCAOSF_sigemptyset((&RPCAOSF_sigusr1_sigset));
+(void)(NKCAOSF_sigemptyset((&RPCAOSF_sigusr1_sigset)));
  /* line 274: */
-LKCAOSF_sigaddset((&RPCAOSF_sigusr1_sigset), FLCAOSF_sigusr1);
+(void)(LKCAOSF_sigaddset((&RPCAOSF_sigusr1_sigset), FLCAOSF_sigusr1));
  /* line 276: */
-FOBAOSF_disable_garbage_collector();
+(void)(FOBAOSF_disable_garbage_collector());
  /* line 279: */
-RKCAOSF_sigprocmask(SKCAOSF_sig_block, (&RPCAOSF_sigusr1_sigset), LPCAOSF_nil_sigset);
+(void)(RKCAOSF_sigprocmask(SKCAOSF_sig_block, (&RPCAOSF_sigusr1_sigset), LPCAOSF_nil_sigset));
  /* line 282: */
-KKCAOSF_sigaction(FLCAOSF_sigusr1, (&GPCAOSF_sigusr1_sigaction), (&JPCAOSF_saved_sigaction));
+(void)(KKCAOSF_sigaction(FLCAOSF_sigusr1, (&GPCAOSF_sigusr1_sigaction), (&JPCAOSF_saved_sigaction)));
  /* line 284: */
-JKCAOSF_raise(FLCAOSF_sigusr1);
+(void)(JKCAOSF_raise(FLCAOSF_sigusr1));
  /* line 287: */
  /* line 288: */
 SPCAOSF = (*(&A_VINDEX(DPCAOSF_sig_msgprocs,Os_signum))) ;
 XYAAOSF_make_msgno( Os_signum, YOCAOSF_signal_facility, &UPCAOSF );
-A_CALLPROC(SPCAOSF,(UPCAOSF, A_VVAC(TPCAOSF)),(UPCAOSF, A_VVAC(TPCAOSF),(SPCAOSF).nonlocals));
+(void)(A_CALLPROC(SPCAOSF,(UPCAOSF, A_VVAC(TPCAOSF)),(UPCAOSF, A_VVAC(TPCAOSF),(SPCAOSF).nonlocals)));
 } 
 A_PROC_EXIT(osif_handler);
 return;
@@ -783,7 +783,7 @@ return;
 
 A68_VOID  YPCAOSF_set_sigmsgproc(A68_35  Signals, A68_53  Sigmsgproc, A68_53  Msg)
 { 
-A68_INT  ZPCAOSF_s;
+A68_INT  ZPCAOSF_s A_UNUSED = {0};
 A68_INT * AQCAOSF;  /* forall control - []x */
 A68_INT  BQCAOSF;  /* forall loop counter */
 A68_BOOL  CQCAOSF;  /* optbool result */
@@ -813,14 +813,14 @@ if ( ! CQCAOSF )
 CQCAOSF = (KKCAOSF_sigaction(ZPCAOSF_s, (&FPCAOSF_osif_handler_sigaction), KPCAOSF_nil_sigaction)!=0);
 }
  /* line 305: */
-if ( CQCAOSF )
+if (CQCAOSF)
 { 
 DQCAOSF.data[0] = FQCAOSF;
 ROAAOSF_whole( ZPCAOSF_s, 0, &IQCAOSF );
 DQCAOSF.data[1] = A_VC_PLUS(HQCAOSF,IQCAOSF);
  /* line 306: */
  /* line 307: */
-SEBAOSF_osifmessage(99, A_HISVEC(JQCAOSF,DQCAOSF,2,A68_VC ), Msg);
+(void)(SEBAOSF_osifmessage(99, A_HISVEC(JQCAOSF,DQCAOSF,2,A68_VC ), Msg));
 } 
 else
 { 
@@ -838,7 +838,7 @@ return;
 
 A68_VOID  NQCAOSF_set_sigignore(A68_35  Signals, A68_53  Msg)
 { 
-A68_INT  OQCAOSF_s;
+A68_INT  OQCAOSF_s A_UNUSED = {0};
 A68_INT * PQCAOSF;  /* forall control - []x */
 A68_INT  QQCAOSF;  /* forall loop counter */
 A68_BOOL  RQCAOSF;  /* optbool result */
@@ -867,14 +867,14 @@ if ( ! RQCAOSF )
 RQCAOSF = (KKCAOSF_sigaction(OQCAOSF_s, (&HPCAOSF_ignore_sigaction), KPCAOSF_nil_sigaction)!=0);
 }
  /* line 325: */
-if ( RQCAOSF )
+if (RQCAOSF)
 { 
 SQCAOSF.data[0] = UQCAOSF;
 ROAAOSF_whole( OQCAOSF_s, 0, &XQCAOSF );
 SQCAOSF.data[1] = A_VC_PLUS(WQCAOSF,XQCAOSF);
  /* line 326: */
  /* line 327: */
-SEBAOSF_osifmessage(99, A_HISVEC(YQCAOSF,SQCAOSF,2,A68_VC ), Msg);
+(void)(SEBAOSF_osifmessage(99, A_HISVEC(YQCAOSF,SQCAOSF,2,A68_VC ), Msg));
 } 
 }
 A_PROC_EXIT(set_sigignore);
@@ -885,7 +885,7 @@ return;
 
 A68_VOID  BRCAOSF_set_sigdefault(A68_35  Signals, A68_53  Msg)
 { 
-A68_INT  CRCAOSF_s;
+A68_INT  CRCAOSF_s A_UNUSED = {0};
 A68_INT * DRCAOSF;  /* forall control - []x */
 A68_INT  ERCAOSF;  /* forall loop counter */
 A68_BOOL  FRCAOSF;  /* optbool result */
@@ -914,14 +914,14 @@ if ( ! FRCAOSF )
 FRCAOSF = (KKCAOSF_sigaction(CRCAOSF_s, (&IPCAOSF_default_sigaction), KPCAOSF_nil_sigaction)!=0);
 }
  /* line 343: */
-if ( FRCAOSF )
+if (FRCAOSF)
 { 
 GRCAOSF.data[0] = IRCAOSF;
 ROAAOSF_whole( CRCAOSF_s, 0, &LRCAOSF );
 GRCAOSF.data[1] = A_VC_PLUS(KRCAOSF,LRCAOSF);
  /* line 344: */
  /* line 345: */
-SEBAOSF_osifmessage(99, A_HISVEC(MRCAOSF,GRCAOSF,2,A68_VC ), Msg);
+(void)(SEBAOSF_osifmessage(99, A_HISVEC(MRCAOSF,GRCAOSF,2,A68_VC ), Msg));
 } 
 }
 A_PROC_EXIT(set_sigdefault);
@@ -945,12 +945,12 @@ if ( ! QRCAOSF )
 QRCAOSF = (Signal>EMCAOSF_maxsignals);
 }
  /* line 354: */
-if ( QRCAOSF )
+if (QRCAOSF)
 { 
 RRCAOSF.data[0] = TRCAOSF;
 ROAAOSF_whole( Signal, 0, &WRCAOSF );
 RRCAOSF.data[1] = A_VC_PLUS(VRCAOSF,WRCAOSF);
-SEBAOSF_osifmessage(99, A_HISVEC(XRCAOSF,RRCAOSF,2,A68_VC ), Msg);
+(void)(SEBAOSF_osifmessage(99, A_HISVEC(XRCAOSF,RRCAOSF,2,A68_VC ), Msg));
  /* line 355: */
  /* line 356: */
  /* line 357: */
@@ -969,7 +969,7 @@ return;
 
 A68_VOID  ZRCAOSF_init_ossignals(void)
 { 
-A68_53 * ASCAOSF_m;
+A68_53 * ASCAOSF_m A_UNUSED = {0};
 A68_INT  BSCAOSF;  /* forall loop counter */
 A_PROC_ENTRY(init_ossignals);
 { 
@@ -1012,7 +1012,7 @@ static A68_BOOL A_invoked = A68_FALSE;
 static char *A_config_arguments[] = {"/home/vak/Project/Algol/Algol-68RS-Source/src/a68toc","-v","-uname","seedfile","-staredit","59LR","-lib","/home/vak/Project/Algol/Algol-68RS-Source/a68config","-dir","/home/vak/Project/Algol/Algol-68RS-Source/a68config","-dir","/home/vak/Project/Algol/Algol-68RS-Source/liba68prel","ossignals.a68",""};
 static char *A_config_environment[] = {"A68_LIB=/home/vak/Project/Algol/Algol-68RS-Source/a68config","A68_CDIR=","A68_DIR=","A68_STAREDIT=","A68_NAMESEED=nameseed","CTRANS_NAMESEED=",""};
 static char *A_config_modinfo_files[] = {"/home/vak/Project/Algol/Algol-68RS-Source/a68config/a68config.m","/home/vak/Project/Algol/Algol-68RS-Source/liba68prel/usefulops.m","/home/vak/Project/Algol/Algol-68RS-Source/liba68prel/osgc.m","/home/vak/Project/Algol/Algol-68RS-Source/liba68prel/oserrors.m","/home/vak/Project/Algol/Algol-68RS-Source/liba68prel/messageproc.m","/home/vak/Project/Algol/Algol-68RS-Source/liba68prel/cif.m",""};
-static A_CONFIG_INFO A_config;
+static A_CONFIG_INFO A_config A_UNUSED;
 /* --- end of configuration information */
 A68_54  FMCAOSF;  /* collateral clause result */
 A68_48  MMCAOSF;  /* avoid structure result */
@@ -1030,15 +1030,15 @@ ZRAAOSF();   /* USE messageproc */
 BAAAOSF();   /* USE cif */
 /* --- Initialise configuration information */
 A_config.source_file = "/home/vak/Project/Algol/Algol-68RS-Source/liba68prel/ossignals.a68";
-A_config.translation_time = "Thu Nov  5 20:46:56 2026";
+A_config.translation_time = "Thu Nov  5 21:10:59 2026";
 A_config.ctrans_version = "Ctrans_34.6";
 A_config.name_seed = "CKCAOSF (from seed file) ";
-A_config.spec_change_time = "Thu Nov  5 20:46:56 2026";
+A_config.spec_change_time = "Thu Nov  5 21:10:59 2026";
 A_config.arguments = A_config_arguments;
 A_config.environment = A_config_environment;
 A_config.modinfo_files = A_config_modinfo_files;
 A_PROC_ENTRY(DECS ossignals);
-UEAALIB_a68config(LGAALIB_configinfo, HKCAOSF);
+(void)(UEAALIB_a68config(LGAALIB_configinfo, HKCAOSF));
  /* line 66: */
  /* line 68: */
  /* line 70: */
@@ -1136,7 +1136,7 @@ JMCAOSF_generator( A68_TRUE, &MMCAOSF );
 FMCAOSF.Messages = MMCAOSF;
  /* line 186: */
 NMCAOSF = A_LOC(A68_BOOL ) ;
-(*NMCAOSF) = A68_FALSE ;
+(void)((*NMCAOSF) = A68_FALSE) ;
 FMCAOSF.Initialised = NMCAOSF;
  /* line 187: */
 OMCAOSF.data[0].Number = WKCAOSF_sighup;

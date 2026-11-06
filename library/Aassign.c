@@ -48,7 +48,6 @@
 
 #include <algol68/Asupport.h>
 
-static char rcs_id[] = "$Id: Aassign.c,v 1.2 2002-02-01 14:39:52 sian Exp $";
 
 /*	copy vec	*/
 
@@ -295,8 +294,6 @@ A_DIM		dim1[3], dim2[3];
 		     stride20, stride21, stride22;
 	A68_INT 	     oldno11, oldno12;
 
-	d1 = d1;
-	d2 = d2;
 	no10 = dim1[0].upb -dim1[0].lwb;
 	no11 = dim1[1].upb -dim1[1].lwb;
 	no12 = dim1[2].upb -dim1[2].lwb;

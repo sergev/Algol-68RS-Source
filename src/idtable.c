@@ -528,12 +528,12 @@ extern void IKAAOSF(void);   /* usefulops */
 /* --- end of DECS initialisation functions --- */
 static A68_106   SPKACTR = {"$Id: idtable.a68,v 1.1.1.1 2001-05-07 10:16:10 sian Exp $"}; 
 A_GISVEC(A68_VC ,TPKACTR,SPKACTR,57)
-A68_107  UPKACTR_alienidinfo;
-A68_INT  VPKACTR_alienidno;
-A68_110  WPKACTR_ids;
-A68_111  XPKACTR_rds;
-A68_110  YPKACTR_libraryids;
-A68_112  ZPKACTR_labels;
+A68_107  UPKACTR_alienidinfo A_UNUSED;
+A68_INT  VPKACTR_alienidno A_UNUSED;
+A68_110  WPKACTR_ids A_UNUSED;
+A68_111  XPKACTR_rds A_UNUSED;
+A68_110  YPKACTR_libraryids A_UNUSED;
+A68_112  ZPKACTR_labels A_UNUSED;
 #define AQKACTR_idnoflags 0X0U
 #define BQKACTR_ididentityflag 0X1U
 #define CQKACTR_idkeptflag 0X2U
@@ -547,7 +547,7 @@ A68_112  ZPKACTR_labels;
 #define KQKACTR_idkeptgenprocflag 0X200U
 #define LQKACTR_idloadedflag 0X400U
 #define MQKACTR_idforceuseflag 0X800U
-A68_BITS  NQKACTR_idpresetflags;
+A68_BITS  NQKACTR_idpresetflags A_UNUSED;
 #define OQKACTR_rdnoflags 0X0U
 #define PQKACTR_rdkeptflag 0X2U
 #define QQKACTR_rdnonlocalsflag 0X4U
@@ -591,8 +591,8 @@ static A68_131   WWKACTR = {"kept identifiers are:"};
 A_GISVEC(A68_VC ,XWKACTR,WWKACTR,21)
 static A68_132   FXKACTR = {"IDTABLE: kept decno is a label"}; 
 A_GISVEC(A68_VC ,GXKACTR,FXKACTR,30)
-A68_133  LXKACTR_externaldec;
-A68_61  MXKACTR_externalcdec;
+A68_133  LXKACTR_externaldec A_UNUSED;
+A68_61  MXKACTR_externalcdec A_UNUSED;
 typedef struct   /* env of non-global proc */
 {
 A68_INT  No_decnos;
@@ -660,7 +660,7 @@ A68_110  LVKACTR;  /* OPERATORS - dynamic generator */
 { 
 LVKACTR.dim[0].upb = NL(No_decnos) ;
 LVKACTR.dim[0].lwb = GAAACTR_globalidno ;
-A_1INITSTRIDES(LVKACTR) ;
+(void)A_1INITSTRIDES(LVKACTR) ;
 ( GVKACTR_anonymous? A_R1LOC(A68_107 ,LVKACTR): A_R1HEAP(A68_107 ,LVKACTR) );
 KVKACTR = LVKACTR;
 } 
@@ -677,7 +677,7 @@ A68_111  SVKACTR;  /* OPERATORS - dynamic generator */
 { 
 SVKACTR.dim[0].upb = ((JAAACTR_minrdno-1)+NL(No_rdennos)) ;
 SVKACTR.dim[0].lwb = JAAACTR_minrdno ;
-A_1INITSTRIDES(SVKACTR) ;
+(void)A_1INITSTRIDES(SVKACTR) ;
 ( NVKACTR_anonymous? A_R1LOC(A68_108 ,SVKACTR): A_R1HEAP(A68_108 ,SVKACTR) );
 RVKACTR = SVKACTR;
 } 
@@ -694,7 +694,7 @@ A68_110  ZVKACTR;  /* OPERATORS - dynamic generator */
 { 
 ZVKACTR.dim[0].upb = ((LAAACTR_minlibid-1)+NL(No_libinds)) ;
 ZVKACTR.dim[0].lwb = LAAACTR_minlibid ;
-A_1INITSTRIDES(ZVKACTR) ;
+(void)A_1INITSTRIDES(ZVKACTR) ;
 ( UVKACTR_anonymous? A_R1LOC(A68_107 ,ZVKACTR): A_R1HEAP(A68_107 ,ZVKACTR) );
 YVKACTR = ZVKACTR;
 } 
@@ -711,7 +711,7 @@ A68_112  GWKACTR;  /* OPERATORS - dynamic generator */
 { 
 GWKACTR.dim[0].upb = NL(No_labels) ;
 GWKACTR.dim[0].lwb = 1 ;
-A_1INITSTRIDES(GWKACTR) ;
+(void)A_1INITSTRIDES(GWKACTR) ;
 ( BWKACTR_anonymous? A_R1LOC(A68_109 ,GWKACTR): A_R1HEAP(A68_109 ,GWKACTR) );
 FWKACTR = GWKACTR;
 } 
@@ -724,11 +724,11 @@ A68_107 * YQKACTR_get_idinfo(A68_INT  Decno)
 { 
 A68_107 * ZQKACTR;  /* clause result */
 A68_BOOL  ARKACTR;  /* optbool result */
-A68_107 * DRKACTR;  /* OPERATORS - skip to mode */
+A68_107 * DRKACTR = {0};  /* OPERATORS - skip to mode */
 A_PROC_ENTRY(get_idinfo);
  /* line 188: */
  /* line 189: */
-if ( (Decno<=IAAACTR_maxidno) )
+if (Decno<=IAAACTR_maxidno)
 { 
  /* line 190: */
 ZQKACTR = (&A_R1INDEX(WPKACTR_ids,Decno));
@@ -740,14 +740,14 @@ if ( ARKACTR )
 { /* line 191: */
 ARKACTR = (Decno<=MAAACTR_maxlibid);
 }
-if ( ARKACTR )
+if (ARKACTR)
 { 
  /* line 192: */
 ZQKACTR = (&A_R1INDEX(YPKACTR_libraryids,Decno));
 } 
 else
 { 
-WXIACTR_assert(CRKACTR, A68_FALSE);
+(void)(WXIACTR_assert(CRKACTR, A68_FALSE));
  /* line 193: */
 ZQKACTR = DRKACTR;
 } 
@@ -762,10 +762,10 @@ A_STATIC A68_VOID  FRKACTR_debugmessage(A68_VC  M)
 A_PROC_ENTRY(debugmessage);
  /* line 199: */
  /* line 200: */
-if ( (ZCHACTR_tracelevel(HRKACTR)!=0) )
+if (ZCHACTR_tracelevel(HRKACTR)!=0)
 { 
  /* line 201: */
-A_CALLPROC(MSIACTR_list,(A_VC_PLUS(JRKACTR,M)),(A_VC_PLUS(JRKACTR,M),(MSIACTR_list).nonlocals));
+(void)(A_CALLPROC(MSIACTR_list,(A_VC_PLUS(JRKACTR,M)),(A_VC_PLUS(JRKACTR,M),(MSIACTR_list).nonlocals)));
 } 
 A_PROC_EXIT(debugmessage);
 return;
@@ -780,7 +780,7 @@ A_PROC_ENTRY(idname);
  /* line 207: */
  /* line 208: */
  /* line 209: */
-if ( (Idno==VPKACTR_alienidno) )
+if (Idno==VPKACTR_alienidno)
 { 
 MRKACTR = (*(&((&UPKACTR_alienidinfo)->Name)));
 } 
@@ -788,14 +788,14 @@ else
 { 
  /* line 210: */
  /* line 211: */
-if ( ((Idno==NKJACTR_noidno)|(Idno>QAAACTR_minopidno)) )
+if ((Idno==NKJACTR_noidno)|(Idno>QAAACTR_minopidno))
 { 
 MRKACTR = ORKACTR;
 } 
 else
 { 
  /* line 212: */
-if ( (Idno<=IAAACTR_maxidno) )
+if (Idno<=IAAACTR_maxidno)
 { 
  /* line 213: */
 MRKACTR = (*(&((&A_R1INDEX(WPKACTR_ids,Idno))->Name)));
@@ -803,7 +803,7 @@ MRKACTR = (*(&((&A_R1INDEX(WPKACTR_ids,Idno))->Name)));
 else
 { 
  /* line 214: */
-if ( (Idno<=KAAACTR_maxrdno) )
+if (Idno<=KAAACTR_maxrdno)
 { 
  /* line 215: */
 MRKACTR = (*(&((&A_R1INDEX(XPKACTR_rds,Idno))->Name)));
@@ -811,7 +811,7 @@ MRKACTR = (*(&((&A_R1INDEX(XPKACTR_rds,Idno))->Name)));
 else
 { 
  /* line 216: */
-if ( (Idno<=MAAACTR_maxlibid) )
+if (Idno<=MAAACTR_maxlibid)
 { 
  /* line 217: */
 MRKACTR = (*(&((&A_R1INDEX(YPKACTR_libraryids,Idno))->Name)));
@@ -834,7 +834,7 @@ return;
 
 A68_VOID  RRKACTR_afterbang(A68_VC  Name, A68_VC  *ReturnedValue)
 { 
-A68_INT  SRKACTR_upb;
+A68_INT  SRKACTR_upb A_UNUSED = {0};
 A68_BOOL  TRKACTR;  /* optbool result */
 A68_INT  URKACTR;  /* YIELD */
 A68_VC  VRKACTR;  /* clause result */
@@ -849,9 +849,9 @@ if ( TRKACTR )
 {URKACTR = 1 ;
 TRKACTR = ((*(&A_VINDEX(Name,URKACTR)))=='!');
 }
-if ( TRKACTR )
+if (TRKACTR)
 { 
-if ( (SRKACTR_upb>1) )
+if (SRKACTR_upb>1)
 { 
 VRKACTR = A_VTRIM(WRKACTR,(Name),A_VTSCRIPT(&(WRKACTR.upb),(Name).upb,2,(Name).upb));
 } 
@@ -874,7 +874,7 @@ return;
 
 A_STATIC A68_VOID  BSKACTR_rdselectname(A68_INT  Prefix, A68_INT  Rdenno, A68_VC  *ReturnedValue)
 { 
-A68_108 * CSKACTR_rd;
+A68_108 * CSKACTR_rd A_UNUSED = {0};
 A68_VC  DSKACTR;  /* clause result */
 A68_VC  ESKACTR;  /* OPERATORS - istruct -> vector */
 A68_56  FSKACTR;  /* OPERATORS - istruct -> vector */
@@ -913,7 +913,7 @@ JSKACTR = (*(&(CSKACTR_rd->Envprefix))) ;
 DSKACTR = A_HISVEC(ISKACTR,JSKACTR,7,A68_CHAR );
 break;
 default: 
-WXIACTR_assert(LSKACTR, A68_FALSE);
+(void)(WXIACTR_assert(LSKACTR, A68_FALSE));
  /* line 236: */
 DSKACTR = NSKACTR;
 break;
@@ -922,7 +922,7 @@ break;
  /* line 238: */
  /* line 239: */
 OSKACTR = (*(&(CSKACTR_rd->Flags))) ;
-if ( A_LB_GE(OSKACTR,SQKACTR_rdopflag) )
+if (A_LB_GE(OSKACTR,SQKACTR_rdopflag))
 { 
  /* line 240: */
 QSKACTR = RSKACTR;
@@ -943,7 +943,7 @@ return;
 
 A68_VOID  WSKACTR_labelfullname(A68_INT  Labno, A68_VC  *ReturnedValue)
 { 
-A68_109 * XSKACTR_labinfo;
+A68_109 * XSKACTR_labinfo A_UNUSED = {0};
 A68_VC  YSKACTR;  /* clause result */
 A68_VC  ZSKACTR;  /* OPERATORS - istruct -> vector */
 A68_56  ATKACTR;  /* OPERATORS - istruct -> vector */
@@ -965,7 +965,7 @@ return;
 
 A68_VOID  DTKACTR_labelbuffername(A68_INT  Labno, A68_VC  *ReturnedValue)
 { 
-A68_109 * ETKACTR_labinfo;
+A68_109 * ETKACTR_labinfo A_UNUSED = {0};
 A68_VC  FTKACTR;  /* clause result */
 A68_VC  GTKACTR;  /* OPERATORS - istruct -> vector */
 A68_56  HTKACTR;  /* OPERATORS - istruct -> vector */
@@ -1025,9 +1025,9 @@ return;
 A68_VOID  UTKACTR_idfullname(A68_INT  Idno, A68_VC  *ReturnedValue)
 { 
 A68_VC  VTKACTR;  /* clause result */
-A68_107 * YTKACTR_id;
+A68_107 * YTKACTR_id A_UNUSED = {0};
 A68_VC  ZTKACTR;  /* avoid structure result */
-A68_107 * AUKACTR_id;
+A68_107 * AUKACTR_id A_UNUSED = {0};
 A68_VC  BUKACTR;  /* avoid structure result */
 A_PROC_ENTRY(idfullname);
  /* line 270: */
@@ -1035,7 +1035,7 @@ A_PROC_ENTRY(idfullname);
 { 
  /* line 275: */
  /* line 276: */
-if ( (Idno==VPKACTR_alienidno) )
+if (Idno==VPKACTR_alienidno)
 { 
 VTKACTR = (*(&((&UPKACTR_alienidinfo)->Name)));
 } 
@@ -1043,14 +1043,14 @@ else
 { 
  /* line 278: */
  /* line 280: */
-if ( ((Idno==NKJACTR_noidno)|(Idno>QAAACTR_minopidno)) )
+if ((Idno==NKJACTR_noidno)|(Idno>QAAACTR_minopidno))
 { 
 VTKACTR = XTKACTR;
 } 
 else
 { 
  /* line 281: */
-if ( (Idno<=IAAACTR_maxidno) )
+if (Idno<=IAAACTR_maxidno)
 { 
 YTKACTR_id = (&A_R1INDEX(WPKACTR_ids,Idno));
  /* line 282: */
@@ -1060,7 +1060,7 @@ VTKACTR = (*(&(YTKACTR_id->C_name)));
 else
 { 
  /* line 285: */
-if ( (Idno<=KAAACTR_maxrdno) )
+if (Idno<=KAAACTR_maxrdno)
 { 
  /* line 287: */
 BSKACTR_rdselectname( 1, Idno, &ZTKACTR );
@@ -1069,7 +1069,7 @@ VTKACTR = ZTKACTR;
 else
 { 
  /* line 288: */
-if ( (Idno<=MAAACTR_maxlibid) )
+if (Idno<=MAAACTR_maxlibid)
 { 
 AUKACTR_id = (&A_R1INDEX(YPKACTR_libraryids,Idno));
  /* line 289: */
@@ -1103,7 +1103,7 @@ A_PROC_ENTRY(rdfnname);
  /* line 297: */
  /* line 298: */
  /* line 299: */
-if ( ((Rdenno>=JAAACTR_minrdno)&(Rdenno<=KAAACTR_maxrdno)) )
+if ((Rdenno>=JAAACTR_minrdno)&(Rdenno<=KAAACTR_maxrdno))
 { 
  /* line 300: */
 BSKACTR_rdselectname( 2, Rdenno, &FUKACTR );
@@ -1111,7 +1111,7 @@ EUKACTR = FUKACTR;
 } 
 else
 { 
-WXIACTR_assert(HUKACTR, A68_FALSE);
+(void)(WXIACTR_assert(HUKACTR, A68_FALSE));
  /* line 301: */
 EUKACTR = JUKACTR;
 } 
@@ -1129,7 +1129,7 @@ A_PROC_ENTRY(rdenvname);
  /* line 304: */
  /* line 305: */
  /* line 306: */
-if ( ((Rdenno>=JAAACTR_minrdno)&(Rdenno<=KAAACTR_maxrdno)) )
+if ((Rdenno>=JAAACTR_minrdno)&(Rdenno<=KAAACTR_maxrdno))
 { 
  /* line 307: */
 BSKACTR_rdselectname( 3, Rdenno, &NUKACTR );
@@ -1137,7 +1137,7 @@ MUKACTR = NUKACTR;
 } 
 else
 { 
-WXIACTR_assert(PUKACTR, A68_FALSE);
+(void)(WXIACTR_assert(PUKACTR, A68_FALSE));
  /* line 308: */
 MUKACTR = RUKACTR;
 } 
@@ -1155,9 +1155,9 @@ A_PROC_ENTRY(standopsym);
  /* line 314: */
  /* line 315: */
  /* line 316: */
-if ( (Idname.upb<=0) )
+if (Idname.upb<=0)
 { 
-WXIACTR_assert(VUKACTR, A68_FALSE);
+(void)(WXIACTR_assert(VUKACTR, A68_FALSE));
  /* line 317: */
  /* line 318: */
 WUKACTR = A68_FALSE;
@@ -1184,21 +1184,21 @@ A68_128  VVKACTR_generator;   /* proc value of non-global proc */
 A68_110  AWKACTR;  /* avoid structure result */
 A68_130  CWKACTR_generator;   /* proc value of non-global proc */
 A68_112  HWKACTR;  /* avoid structure result */
-A68_107 * IWKACTR_id;
+A68_107 * IWKACTR_id A_UNUSED = {0};
 A68_INT  JWKACTR;  /* forall loop counter */
 A68_BITS * KWKACTR;  /* YIELD */
-A68_108 * LWKACTR_rd;
+A68_108 * LWKACTR_rd A_UNUSED = {0};
 A68_INT  MWKACTR;  /* forall loop counter */
 A68_BITS * NWKACTR;  /* YIELD */
-A68_107 * OWKACTR_id;
+A68_107 * OWKACTR_id A_UNUSED = {0};
 A68_INT  PWKACTR;  /* forall loop counter */
 A68_BITS * QWKACTR;  /* YIELD */
-A68_109 * RWKACTR_lab;
+A68_109 * RWKACTR_lab A_UNUSED = {0};
 A68_INT  SWKACTR;  /* forall loop counter */
 A68_BITS * TWKACTR;  /* YIELD */
 A68_126  UWKACTR;  /* OPERATORS - nil -> mode */
 A68_126  VWKACTR;  /* != */
-A68_INT * YWKACTR_decno;
+A68_INT * YWKACTR_decno A_UNUSED = {0};
 A68_INT  ZWKACTR;  /* forall loop counter */
 A68_VC  AXKACTR;  /* avoid structure result */
 A68_BITS * BXKACTR;  /* YIELD */
@@ -1276,9 +1276,9 @@ TWKACTR = (&(RWKACTR_lab->Flags)) ;
  /* line 343: */
  /* line 344: */
 VWKACTR = A_R1VAC(UWKACTR) ;
-if ( ! A_RSTRUCTCOMP(Keptdecnos,VWKACTR) )
+if (! A_RSTRUCTCOMP(Keptdecnos,VWKACTR))
 { 
-FRKACTR_debugmessage(XWKACTR);
+(void)(FRKACTR_debugmessage(XWKACTR));
  /* line 346: */
  /* line 347: */
 ZWKACTR = Keptdecnos.dim[0].upb - Keptdecnos.dim[0].lwb;
@@ -1289,10 +1289,10 @@ for (;ZWKACTR-- >= 0;
 {
  /* line 348: */
 ROAAOSF_whole( (*YWKACTR_decno), 0, &AXKACTR );
-FRKACTR_debugmessage(AXKACTR);
+(void)(FRKACTR_debugmessage(AXKACTR));
  /* line 349: */
  /* line 350: */
-if ( ((*YWKACTR_decno)<=IAAACTR_maxidno) )
+if ((*YWKACTR_decno)<=IAAACTR_maxidno)
 { 
  /* line 351: */
 BXKACTR = (&((&A_R1INDEX(WPKACTR_ids,(*YWKACTR_decno)))->Flags)) ;
@@ -1301,7 +1301,7 @@ BXKACTR = (&((&A_R1INDEX(WPKACTR_ids,(*YWKACTR_decno)))->Flags)) ;
 else
 { 
  /* line 352: */
-if ( ((*YWKACTR_decno)<=KAAACTR_maxrdno) )
+if ((*YWKACTR_decno)<=KAAACTR_maxrdno)
 { 
  /* line 353: */
 CXKACTR = (&((&A_R1INDEX(XPKACTR_rds,(*YWKACTR_decno)))->Flags)) ;
@@ -1310,7 +1310,7 @@ CXKACTR = (&((&A_R1INDEX(XPKACTR_rds,(*YWKACTR_decno)))->Flags)) ;
 else
 { 
  /* line 354: */
-if ( ((*YWKACTR_decno)<=MAAACTR_maxlibid) )
+if ((*YWKACTR_decno)<=MAAACTR_maxlibid)
 { 
  /* line 355: */
 DXKACTR = (&((&A_R1INDEX(YPKACTR_libraryids,(*YWKACTR_decno)))->Flags)) ;
@@ -1320,19 +1320,19 @@ else
 { 
  /* line 356: */
  /* line 357: */
-if ( ((*YWKACTR_decno)<=TAAACTR_maxkeptgeneratorproc) )
+if ((*YWKACTR_decno)<=TAAACTR_maxkeptgeneratorproc)
 { 
 (*YWKACTR_decno)-=NAAACTR_keptgeneratorproccorrection;
  /* line 358: */
  /* line 360: */
 EXKACTR = (&((&A_R1INDEX(WPKACTR_ids,(*YWKACTR_decno)))->Flags)) ;
-(*EXKACTR) = (A68_BITS )(CQKACTR_idkeptflag|KQKACTR_idkeptgenprocflag);
+(void)((*EXKACTR) = (A68_BITS )(CQKACTR_idkeptflag|KQKACTR_idkeptgenprocflag));
 } 
 else
 { 
  /* line 361: */
  /* line 362: */
-WXIACTR_assert(GXKACTR, A68_FALSE);
+(void)(WXIACTR_assert(GXKACTR, A68_FALSE));
 } 
 } 
 } 
@@ -1369,7 +1369,7 @@ static A68_BOOL A_invoked = A68_FALSE;
 static char *A_config_arguments[] = {"/home/vak/Project/Algol/Algol-68RS-Source/src/a68toc","-v","-uname","seedfile","-staredit","59LR","-lib","/home/vak/Project/Algol/Algol-68RS-Source/a68config","-dir","/home/vak/Project/Algol/Algol-68RS-Source/a68config","-dir","/home/vak/Project/Algol/Algol-68RS-Source/liba68prel","-dir",".","idtable.a68",""};
 static char *A_config_environment[] = {"A68_LIB=/home/vak/Project/Algol/Algol-68RS-Source/a68config","A68_CDIR=","A68_DIR=","A68_STAREDIT=","A68_NAMESEED=nameseed","CTRANS_NAMESEED=",""};
 static char *A_config_modinfo_files[] = {"/home/vak/Project/Algol/Algol-68RS-Source/a68config/a68config.m","./moduletracer.m","./incvalue.m","./incinstallation.m","./incid.m","./incenviron.m","./environment.m","./centities.m","/home/vak/Project/Algol/Algol-68RS-Source/liba68prel/usefulops.m",""};
-static A_CONFIG_INFO A_config;
+static A_CONFIG_INFO A_config A_UNUSED;
 /* --- end of configuration information */
 if( A_invoked ) return;
 A_invoked = A68_TRUE;
@@ -1384,15 +1384,15 @@ THAACTR();   /* USE centities */
 IKAAOSF();   /* USE usefulops */
 /* --- Initialise configuration information */
 A_config.source_file = "/home/vak/Project/Algol/Algol-68RS-Source/src/idtable.a68";
-A_config.translation_time = "Thu Nov  5 20:46:57 2026";
+A_config.translation_time = "Thu Nov  5 21:10:59 2026";
 A_config.ctrans_version = "Ctrans_34.6";
 A_config.name_seed = "OPKACTR (from seed file) ";
-A_config.spec_change_time = "Thu Nov  5 20:46:57 2026";
+A_config.spec_change_time = "Thu Nov  5 21:10:59 2026";
 A_config.arguments = A_config_arguments;
 A_config.environment = A_config_environment;
 A_config.modinfo_files = A_config_modinfo_files;
 A_PROC_ENTRY(DECS idtable);
-UEAALIB_a68config(LGAALIB_configinfo, TPKACTR);
+(void)(UEAALIB_a68config(LGAALIB_configinfo, TPKACTR));
  /* line 95: */
  /* line 124: */
  /* line 142: */

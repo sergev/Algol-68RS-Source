@@ -931,8 +931,8 @@ extern void QMDAOSF(void);   /* putstrings */
 /* --- end of DECS initialisation functions --- */
 static A68_225   WKLAOSF = {"$Id: commandcaller.a68,v 1.1.1.1 2001-05-07 10:16:11 sian Exp $"}; 
 A_GISVEC(A68_VC ,XKLAOSF,WKLAOSF,63)
-A68_BOOL  YKLAOSF_check_syntax;
-A68_BOOL  ZKLAOSF_show_parameters;
+A68_BOOL  YKLAOSF_check_syntax A_UNUSED;
+A68_BOOL  ZKLAOSF_show_parameters A_UNUSED;
 static A68_228   ZMLAOSF = {"CHECKSYNTAX"}; 
 A_GISVEC(A68_VC ,ANLAOSF,ZMLAOSF,11)
 static A68_229   CNLAOSF = {"REMOVEFILE"}; 
@@ -956,17 +956,17 @@ A68_VOID  AMLAOSF_call_command(A68_194 * Env, A68_187 * Command, A68_162  Param,
 
 A68_VOID  BLLAOSF_report_error(A68_102  Lines)
 { 
-A68_52  CLLAOSF;  /* OPERATORS - mode -> union mode */
+A68_52  CLLAOSF = {0};  /* OPERATORS - mode -> union mode */
 A68_56  DLLAOSF;  /* procedure value */
 A68_85  ELLAOSF;  /* OPERATORS - scalar -> [] or VEC[] */
-A68_52  FLLAOSF;  /* OPERATORS - mode -> union mode */
+A68_52  FLLAOSF = {0};  /* OPERATORS - mode -> union mode */
 A68_56  GLLAOSF;  /* procedure value */
 A68_85  HLLAOSF;  /* OPERATORS - scalar -> [] or VEC[] */
-A68_VC * ILLAOSF_line;
+A68_VC * ILLAOSF_line A_UNUSED = {0};
 A68_INT  JLLAOSF;  /* forall loop counter */
 A68_226  KLLAOSF;  /* collateral clause result */
-A68_52  LLLAOSF;  /* OPERATORS - mode -> union mode */
-A68_52  MLLAOSF;  /* OPERATORS - mode -> union mode */
+A68_52  LLLAOSF = {0};  /* OPERATORS - mode -> union mode */
+A68_52  MLLAOSF = {0};  /* OPERATORS - mode -> union mode */
 A68_56  NLLAOSF;  /* procedure value */
 A68_85  OLLAOSF;  /* OPERATORS - istruct -> vector */
 A68_97  PLLAOSF;  /* procedure value */
@@ -976,20 +976,20 @@ A_PROC_ENTRY(report_error);
 { 
 DLLAOSF.fn.fn_global = VSDAOSF_resetindent;
 DLLAOSF.nonlocals = A68_NIL;
-KYDAOSF_put(DREAOSF_screen, A_HVEC(ELLAOSF,A_UNITE(CLLAOSF,mode12,12,DLLAOSF),A68_52 ));
+(void)(KYDAOSF_put(DREAOSF_screen, A_HVEC(ELLAOSF,A_UNITE(CLLAOSF,mode12,12,DLLAOSF),A68_52 )));
  /* line 65: */
-if ( (CIDAOSF_charnumber(DREAOSF_screen)>1) )
+if (CIDAOSF_charnumber(DREAOSF_screen)>1)
 { 
-PKDAOSF_newline(DREAOSF_screen);
+(void)(PKDAOSF_newline(DREAOSF_screen));
 } 
  /* line 66: */
 GLLAOSF.fn.fn_global = VSDAOSF_resetindent;
 GLLAOSF.nonlocals = A68_NIL;
-KYDAOSF_put(EREAOSF_out, A_HVEC(HLLAOSF,A_UNITE(FLLAOSF,mode12,12,GLLAOSF),A68_52 ));
+(void)(KYDAOSF_put(EREAOSF_out, A_HVEC(HLLAOSF,A_UNITE(FLLAOSF,mode12,12,GLLAOSF),A68_52 )));
  /* line 67: */
-if ( (CIDAOSF_charnumber(EREAOSF_out)>1) )
+if (CIDAOSF_charnumber(EREAOSF_out)>1)
 { 
-PKDAOSF_newline(EREAOSF_out);
+(void)(PKDAOSF_newline(EREAOSF_out));
 } 
  /* line 68: */
 JLLAOSF = Lines.upb -1;
@@ -1002,13 +1002,13 @@ KLLAOSF.data[0] = A_UNITE(LLLAOSF,mode7,7,(*ILLAOSF_line));
 NLLAOSF.fn.fn_global = PKDAOSF_newline;
 NLLAOSF.nonlocals = A68_NIL;
 KLLAOSF.data[1] = A_UNITE(MLLAOSF,mode12,12,NLLAOSF);
-KYDAOSF_put(FREAOSF_err, A_HISVEC(OLLAOSF,KLLAOSF,2,A68_52 ));
+(void)(KYDAOSF_put(FREAOSF_err, A_HISVEC(OLLAOSF,KLLAOSF,2,A68_52 )));
 }
  /* line 69: */
  /* line 70: */
 PLLAOSF.fn.fn_global = DSEAOSF_default_msg;
 PLLAOSF.nonlocals = A68_NIL;
-CCLAOSF_io_fault(PLLAOSF);
+(void)(CCLAOSF_io_fault(PLLAOSF));
 } 
 A_PROC_EXIT(report_error);
 return;
@@ -1018,7 +1018,7 @@ return;
 A68_VOID  RLLAOSF_set_default_msg(A68_198  Proc)
 { 
 A68_198  SLLAOSF;  /* united object - for case conformity */
-A68_97  TLLAOSF_msg;
+A68_97  TLLAOSF_msg A_UNUSED = {0};
 A68_97  ULLAOSF;  /* clause result */
 A68_97  VLLAOSF;  /* procedure value */
 A_PROC_ENTRY(set_default_msg);
@@ -1046,51 +1046,51 @@ return;
 A68_VOID  AMLAOSF_call_command(A68_194 * Env, A68_187 * Command, A68_162  Param, A68_97  Msg, A68_179  *ReturnedValue)
 { 
 A68_161  BMLAOSF;  /* avoid structure result */
-A68_161  CMLAOSF_vals;
+A68_161  CMLAOSF_vals A_UNUSED = {0};
 A68_INT  DMLAOSF;  /* YIELD */
-A68_160 * EMLAOSF_v;
+A68_160 * EMLAOSF_v A_UNUSED = {0};
 A68_INT  FMLAOSF;  /* forall loop counter */
 A68_227  GMLAOSF;  /* collateral clause result */
 A68_VC  HMLAOSF;  /* avoid structure result */
 A68_59  IMLAOSF;  /* avoid structure result */
-A68_52  JMLAOSF;  /* OPERATORS - mode -> union mode */
-A68_52  KMLAOSF;  /* OPERATORS - mode -> union mode */
+A68_52  JMLAOSF = {0};  /* OPERATORS - mode -> union mode */
+A68_52  KMLAOSF = {0};  /* OPERATORS - mode -> union mode */
 A68_CHAR  LMLAOSF;  /* YIELD */
 A68_173  MMLAOSF;  /* OPERATORS - simple index */
 A68_INT  NMLAOSF;  /* YIELD */
-A68_52  OMLAOSF;  /* OPERATORS - mode -> union mode */
+A68_52  OMLAOSF = {0};  /* OPERATORS - mode -> union mode */
 A68_VC  PMLAOSF;  /* YIELD */
 A68_60  QMLAOSF;  /* avoid structure result */
-A68_52  RMLAOSF;  /* OPERATORS - mode -> union mode */
-A68_52  SMLAOSF;  /* OPERATORS - mode -> union mode */
+A68_52  RMLAOSF = {0};  /* OPERATORS - mode -> union mode */
+A68_52  SMLAOSF = {0};  /* OPERATORS - mode -> union mode */
 A68_VC  TMLAOSF;  /* YIELD */
-A68_52  UMLAOSF;  /* OPERATORS - mode -> union mode */
+A68_52  UMLAOSF = {0};  /* OPERATORS - mode -> union mode */
 A68_56  VMLAOSF;  /* procedure value */
 A68_85  WMLAOSF;  /* OPERATORS - istruct -> vector */
 A68_BOOL  XMLAOSF;  /* optbool result */
-A68_VC  YMLAOSF_name;
+A68_VC  YMLAOSF_name A_UNUSED = {0};
 A68_BOOL  BNLAOSF;  /* optbool result */
 A68_BOOL  ONLAOSF;  /* clause result */
 A68_179  PNLAOSF;  /* clause result */
 A68_183  QNLAOSF;  /* united object - for case conformity */
-A68_181  RNLAOSF_rvcproc;
+A68_181  RNLAOSF_rvcproc A_UNUSED = {0};
 A68_182  SNLAOSF;  /* CALL */
-A68_184  TNLAOSF_cpproc;
-A68_185  UNLAOSF_vproc;
+A68_184  TNLAOSF_cpproc A_UNUSED = {0};
+A68_185  UNLAOSF_vproc A_UNUSED = {0};
 A68_161  VNLAOSF;  /* avoid structure result */
 A_PROC_ENTRY(call_command);
  /* line 81: */
  /* line 89: */
 { 
  /* line 90: */
-if ( ZKLAOSF_show_parameters )
+if (ZKLAOSF_show_parameters)
 { 
 JMFAOSF_simplify_params( Param, &BMLAOSF );
 CMLAOSF_vals = BMLAOSF;
  /* line 92: */
  /* line 93: */
 DMLAOSF = 1 ;
-if ( ((*(&((&A_VINDEX(CMLAOSF_vals,DMLAOSF))->Sort)))!=0) )
+if ((*(&((&A_VINDEX(CMLAOSF_vals,DMLAOSF))->Sort)))!=0)
 { 
  /* line 94: */
 FMLAOSF = CMLAOSF_vals.upb -1;
@@ -1118,7 +1118,7 @@ VMLAOSF.fn.fn_global = PKDAOSF_newline;
 VMLAOSF.nonlocals = A68_NIL;
 GMLAOSF.data[5] = A_UNITE(UMLAOSF,mode12,12,VMLAOSF);
  /* line 97: */
-KYDAOSF_put(DREAOSF_screen, A_HISVEC(WMLAOSF,GMLAOSF,6,A68_52 ));
+(void)(KYDAOSF_put(DREAOSF_screen, A_HISVEC(WMLAOSF,GMLAOSF,6,A68_52 )));
 }
  /* line 98: */
  /* line 99: */
@@ -1159,7 +1159,7 @@ ONLAOSF = BNLAOSF;
 XMLAOSF = ONLAOSF;
 }
  /* line 108: */
-if ( XMLAOSF )
+if (XMLAOSF)
 { 
 PNLAOSF = SAIAOSF_continue;
 } 
@@ -1174,20 +1174,20 @@ RNLAOSF_rvcproc = (QNLAOSF.data.mode1);
  /* line 110: */
  /* line 111: */
 SNLAOSF = RNLAOSF_rvcproc.Proc ;
-A_CALLPROC(SNLAOSF,(RNLAOSF_rvcproc.Parameter, Param, Msg),(RNLAOSF_rvcproc.Parameter, Param, Msg,(SNLAOSF).nonlocals));
+(void)(A_CALLPROC(SNLAOSF,(RNLAOSF_rvcproc.Parameter, Param, Msg),(RNLAOSF_rvcproc.Parameter, Param, Msg,(SNLAOSF).nonlocals)));
 break;
 case 2: /* PROC(MODE162,MODE97) VOID */
 TNLAOSF_cpproc = (QNLAOSF.data.mode2);
  /* line 112: */
  /* line 113: */
-A_CALLPROC(TNLAOSF_cpproc,(Param, Msg),(Param, Msg,(TNLAOSF_cpproc).nonlocals));
+(void)(A_CALLPROC(TNLAOSF_cpproc,(Param, Msg),(Param, Msg,(TNLAOSF_cpproc).nonlocals)));
 break;
 case 3: /* PROC(REF MODE161,MODE97) VOID */
 UNLAOSF_vproc = (QNLAOSF.data.mode3);
  /* line 114: */
  /* line 115: */
 JMFAOSF_simplify_params( Param, &VNLAOSF );
-A_CALLPROC(UNLAOSF_vproc,(VNLAOSF, Msg),(VNLAOSF, Msg,(UNLAOSF_vproc).nonlocals));
+(void)(A_CALLPROC(UNLAOSF_vproc,(VNLAOSF, Msg),(VNLAOSF, Msg,(UNLAOSF_vproc).nonlocals)));
 break;
 default: 
 A_IMP_SKIP ;
@@ -1216,7 +1216,7 @@ static A68_BOOL A_invoked = A68_FALSE;
 static char *A_config_arguments[] = {"/home/vak/Project/Algol/Algol-68RS-Source/src/a68toc","-v","-uname","seedfile","-staredit","59LR","-lib","/home/vak/Project/Algol/Algol-68RS-Source/a68config","-dir","/home/vak/Project/Algol/Algol-68RS-Source/a68config","-dir","/home/vak/Project/Algol/Algol-68RS-Source/liba68prel","commandcaller.a68",""};
 static char *A_config_environment[] = {"A68_LIB=/home/vak/Project/Algol/Algol-68RS-Source/a68config","A68_CDIR=","A68_DIR=","A68_STAREDIT=","A68_NAMESEED=nameseed","CTRANS_NAMESEED=",""};
 static char *A_config_modinfo_files[] = {"/home/vak/Project/Algol/Algol-68RS-Source/a68config/a68config.m","/home/vak/Project/Algol/Algol-68RS-Source/liba68prel/ioprocs.m","/home/vak/Project/Algol/Algol-68RS-Source/liba68prel/command.m","/home/vak/Project/Algol/Algol-68RS-Source/liba68prel/commandsyntax.m","/home/vak/Project/Algol/Algol-68RS-Source/liba68prel/osinterface.m","/home/vak/Project/Algol/Algol-68RS-Source/liba68prel/messageproc.m","/home/vak/Project/Algol/Algol-68RS-Source/liba68prel/putstrings.m",""};
-static A_CONFIG_INFO A_config;
+static A_CONFIG_INFO A_config A_UNUSED;
 /* --- end of configuration information */
 if( A_invoked ) return;
 A_invoked = A68_TRUE;
@@ -1229,15 +1229,15 @@ ZRAAOSF();   /* USE messageproc */
 QMDAOSF();   /* USE putstrings */
 /* --- Initialise configuration information */
 A_config.source_file = "/home/vak/Project/Algol/Algol-68RS-Source/liba68prel/commandcaller.a68";
-A_config.translation_time = "Thu Nov  5 20:46:57 2026";
+A_config.translation_time = "Thu Nov  5 21:10:59 2026";
 A_config.ctrans_version = "Ctrans_34.6";
 A_config.name_seed = "SKLAOSF (from seed file) ";
-A_config.spec_change_time = "Thu Nov  5 20:46:57 2026";
+A_config.spec_change_time = "Thu Nov  5 21:10:59 2026";
 A_config.arguments = A_config_arguments;
 A_config.environment = A_config_environment;
 A_config.modinfo_files = A_config_modinfo_files;
 A_PROC_ENTRY(DECS commandcaller);
-UEAALIB_a68config(LGAALIB_configinfo, XKLAOSF);
+(void)(UEAALIB_a68config(LGAALIB_configinfo, XKLAOSF));
  /* line 55: */
 YKLAOSF_check_syntax = A68_FALSE;
 ZKLAOSF_show_parameters = A68_FALSE;

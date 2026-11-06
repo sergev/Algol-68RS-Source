@@ -68,10 +68,10 @@ extern void BAAALIB(void);   /* a68config */
 /* --- end of DECS initialisation functions --- */
 static A68_38   DHAACTR = {"$Id: incenviron.a68,v 1.1.1.1 2001-05-07 10:16:10 sian Exp $"}; 
 A_GISVEC(A68_VC ,EHAACTR,DHAACTR,60)
-A68_39 * FHAACTR_emptynonloclist;
-A68_41 * GHAACTR_emptyenvironstack;
-A68_42  IHAACTR_nullenviron;
-static A68_40  KHAACTR_globalenviron;
+A68_39 * FHAACTR_emptynonloclist A_UNUSED;
+A68_41 * GHAACTR_emptyenvironstack A_UNUSED;
+A68_42  IHAACTR_nullenviron A_UNUSED;
+static A68_40  KHAACTR_globalenviron A_UNUSED;
  /* line 1: */
  /* line 3: */
 void AHAACTR(void)   /* initialise DECS incenviron */
@@ -82,7 +82,7 @@ static A68_BOOL A_invoked = A68_FALSE;
 static char *A_config_arguments[] = {"/home/vak/Project/Algol/Algol-68RS-Source/src/a68toc","-v","-uname","seedfile","-staredit","59LR","-lib","/home/vak/Project/Algol/Algol-68RS-Source/a68config","-dir","/home/vak/Project/Algol/Algol-68RS-Source/a68config","-dir","/home/vak/Project/Algol/Algol-68RS-Source/liba68prel","-dir",".","incenviron.a68",""};
 static char *A_config_environment[] = {"A68_LIB=/home/vak/Project/Algol/Algol-68RS-Source/a68config","A68_CDIR=","A68_DIR=","A68_STAREDIT=","A68_NAMESEED=nameseed","CTRANS_NAMESEED=",""};
 static char *A_config_modinfo_files[] = {"/home/vak/Project/Algol/Algol-68RS-Source/a68config/a68config.m",""};
-static A_CONFIG_INFO A_config;
+static A_CONFIG_INFO A_config A_UNUSED;
 /* --- end of configuration information */
 A68_42  HHAACTR;  /* collateral clause result */
 A68_40  JHAACTR;  /* collateral clause result */
@@ -91,15 +91,15 @@ A_invoked = A68_TRUE;
 BAAALIB();   /* USE a68config */
 /* --- Initialise configuration information */
 A_config.source_file = "/home/vak/Project/Algol/Algol-68RS-Source/src/incenviron.a68";
-A_config.translation_time = "Thu Nov  5 20:46:57 2026";
+A_config.translation_time = "Thu Nov  5 21:10:59 2026";
 A_config.ctrans_version = "Ctrans_34.6";
 A_config.name_seed = "ZGAACTR (from seed file) ";
-A_config.spec_change_time = "Thu Nov  5 20:46:57 2026";
+A_config.spec_change_time = "Thu Nov  5 21:10:59 2026";
 A_config.arguments = A_config_arguments;
 A_config.environment = A_config_environment;
 A_config.modinfo_files = A_config_modinfo_files;
 A_PROC_ENTRY(DECS incenviron);
-UEAALIB_a68config(LGAALIB_configinfo, EHAACTR);
+(void)(UEAALIB_a68config(LGAALIB_configinfo, EHAACTR));
  /* line 42: */
  /* line 50: */
  /* line 52: */

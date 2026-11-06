@@ -48,7 +48,6 @@
 
 #include <algol68/Asupport.h>
 
-static char rcs_id[] = "$Id: Acoerce.c,v 1.2 2002-02-01 14:39:52 sian Exp $";
 
 #define  A_WBVB_routine(name,widebits,widesize)\
 A68_VOID  name( A_VBOOL *vec, const widebits bits )\

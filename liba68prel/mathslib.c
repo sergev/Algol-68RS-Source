@@ -71,16 +71,16 @@ A_GISVEC(A68_VC ,JTCAOSF,ITCAOSF,58)
 #include <math.h>
 
 #define STCAOSF_arctan atan
-static A68_REAL  TTCAOSF_hp;
-A68_REAL  WTCAOSF_halfpi;
-A68_REAL  XTCAOSF_pi;
-A68_REAL  YTCAOSF_twopi;
+static A68_REAL  TTCAOSF_hp A_UNUSED;
+A68_REAL  WTCAOSF_halfpi A_UNUSED;
+A68_REAL  XTCAOSF_pi A_UNUSED;
+A68_REAL  YTCAOSF_twopi A_UNUSED;
 
 A_STATIC A68_VOID  UTCAOSF_anonymous(void);
 
 A_STATIC A68_VOID  UTCAOSF_anonymous(void)
 { 
-TTCAOSF_hp = (2.0*STCAOSF_arctan(1.0));
+(void)(TTCAOSF_hp = (2.0*STCAOSF_arctan(1.0)));
 return;
 } 
 #undef NL
@@ -94,7 +94,7 @@ static A68_BOOL A_invoked = A68_FALSE;
 static char *A_config_arguments[] = {"/home/vak/Project/Algol/Algol-68RS-Source/src/a68toc","-v","-uname","seedfile","-staredit","59LR","-lib","/home/vak/Project/Algol/Algol-68RS-Source/a68config","-dir","/home/vak/Project/Algol/Algol-68RS-Source/a68config","-dir","/home/vak/Project/Algol/Algol-68RS-Source/liba68prel","mathslib.a68",""};
 static char *A_config_environment[] = {"A68_LIB=/home/vak/Project/Algol/Algol-68RS-Source/a68config","A68_CDIR=","A68_DIR=","A68_STAREDIT=","A68_NAMESEED=nameseed","CTRANS_NAMESEED=",""};
 static char *A_config_modinfo_files[] = {"/home/vak/Project/Algol/Algol-68RS-Source/a68config/a68config.m",""};
-static A_CONFIG_INFO A_config;
+static A_CONFIG_INFO A_config A_UNUSED;
 /* --- end of configuration information */
 A68_33  VTCAOSF;  /* procedure value */
 if( A_invoked ) return;
@@ -102,15 +102,15 @@ A_invoked = A68_TRUE;
 BAAALIB();   /* USE a68config */
 /* --- Initialise configuration information */
 A_config.source_file = "/home/vak/Project/Algol/Algol-68RS-Source/liba68prel/mathslib.a68";
-A_config.translation_time = "Thu Nov  5 20:46:56 2026";
+A_config.translation_time = "Thu Nov  5 21:10:59 2026";
 A_config.ctrans_version = "Ctrans_34.6";
 A_config.name_seed = "ETCAOSF (from seed file) ";
-A_config.spec_change_time = "Thu Nov  5 20:46:56 2026";
+A_config.spec_change_time = "Thu Nov  5 21:10:59 2026";
 A_config.arguments = A_config_arguments;
 A_config.environment = A_config_environment;
 A_config.modinfo_files = A_config_modinfo_files;
 A_PROC_ENTRY(DECS mathslib);
-UEAALIB_a68config(LGAALIB_configinfo, JTCAOSF);
+(void)(UEAALIB_a68config(LGAALIB_configinfo, JTCAOSF));
  /* line 42: */
  /* line 43: */
  /* line 44: */
@@ -123,7 +123,7 @@ UEAALIB_a68config(LGAALIB_configinfo, JTCAOSF);
  /* line 52: */
 VTCAOSF.fn.fn_global = UTCAOSF_anonymous;
 VTCAOSF.nonlocals = A68_NIL;
-ABAALIB_a68init(VTCAOSF);
+(void)(ABAALIB_a68init(VTCAOSF));
  /* line 54: */
 WTCAOSF_halfpi = TTCAOSF_hp;
 XTCAOSF_pi = (2.0*WTCAOSF_halfpi);

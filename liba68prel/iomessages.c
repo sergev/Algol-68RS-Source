@@ -252,8 +252,8 @@ static A68_80   RRFAOSF = {"$$$Output file width too wide"};
 A_GISVEC(A68_VC ,SRFAOSF,RRFAOSF,29)
 static A68_82   TRFAOSF = {"$$$Output file width is now * characters"}; 
 A_GISVEC(A68_VC ,URFAOSF,TRFAOSF,40)
-static A68_39  WRFAOSF_io_facility;
-static A68_34 * ESFAOSF_message;
+static A68_39  WRFAOSF_io_facility A_UNUSED;
+static A68_34 * ESFAOSF_message A_UNUSED;
 
 A_STATIC A68_VOID  APFAOSF_generator(A68_BOOL  ZOFAOSF_anonymous, A68_33  *ReturnedValue);
 
@@ -307,7 +307,7 @@ static A68_BOOL A_invoked = A68_FALSE;
 static char *A_config_arguments[] = {"/home/vak/Project/Algol/Algol-68RS-Source/src/a68toc","-v","-uname","seedfile","-staredit","59LR","-lib","/home/vak/Project/Algol/Algol-68RS-Source/a68config","-dir","/home/vak/Project/Algol/Algol-68RS-Source/a68config","-dir","/home/vak/Project/Algol/Algol-68RS-Source/liba68prel","iomessages.a68",""};
 static char *A_config_environment[] = {"A68_LIB=/home/vak/Project/Algol/Algol-68RS-Source/a68config","A68_CDIR=","A68_DIR=","A68_STAREDIT=","A68_NAMESEED=nameseed","CTRANS_NAMESEED=",""};
 static char *A_config_modinfo_files[] = {"/home/vak/Project/Algol/Algol-68RS-Source/a68config/a68config.m","/home/vak/Project/Algol/Algol-68RS-Source/liba68prel/messageproc.m",""};
-static A_CONFIG_INFO A_config;
+static A_CONFIG_INFO A_config A_UNUSED;
 /* --- end of configuration information */
 A68_39  WOFAOSF;  /* collateral clause result */
 A68_33  DPFAOSF;  /* avoid structure result */
@@ -327,15 +327,15 @@ BAAALIB();   /* USE a68config */
 ZRAAOSF();   /* USE messageproc */
 /* --- Initialise configuration information */
 A_config.source_file = "/home/vak/Project/Algol/Algol-68RS-Source/liba68prel/iomessages.a68";
-A_config.translation_time = "Thu Nov  5 20:46:56 2026";
+A_config.translation_time = "Thu Nov  5 21:10:59 2026";
 A_config.ctrans_version = "Ctrans_34.6";
 A_config.name_seed = "POFAOSF (from seed file) ";
-A_config.spec_change_time = "Thu Nov  5 20:46:56 2026";
+A_config.spec_change_time = "Thu Nov  5 21:10:59 2026";
 A_config.arguments = A_config_arguments;
 A_config.environment = A_config_environment;
 A_config.modinfo_files = A_config_modinfo_files;
 A_PROC_ENTRY(DECS iomessages);
-UEAALIB_a68config(LGAALIB_configinfo, UOFAOSF);
+(void)(UEAALIB_a68config(LGAALIB_configinfo, UOFAOSF));
  /* line 48: */
  /* line 50: */
 WOFAOSF.Name = YOFAOSF;
@@ -344,7 +344,7 @@ APFAOSF_generator( A68_TRUE, &DPFAOSF );
 WOFAOSF.Messages = DPFAOSF;
  /* line 52: */
 EPFAOSF = A_LOC(A68_BOOL ) ;
-(*EPFAOSF) = A68_FALSE ;
+(void)((*EPFAOSF) = A68_FALSE) ;
 WOFAOSF.Initialised = EPFAOSF;
  /* line 53: */
 FPFAOSF.data[0].Number = 1;

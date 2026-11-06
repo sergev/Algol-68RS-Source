@@ -56,7 +56,13 @@
 
 /*	display of error messages	*/
 
-#define A_ERROR(message)	(A68_ERROR(message),0)
+/* int-valued so it fits in ?: ; a call result may be discarded silently */
+extern void A68_ERROR(const char *message) __attribute__((__noreturn__));
+static inline __attribute__((__noreturn__)) int A_error_value(const char *message)
+{
+	A68_ERROR(message);
+}
+#define A_ERROR(message)	A_error_value(message)
 
 /*	boolean denotations	*/
 #define	A68_TRUE	1
@@ -114,7 +120,7 @@
 /*	struct n amode -> [n]amode	*/
             
 #define  A_GISARR(type,uniq,istruct,upb)\
-static type uniq = { istruct.data, A_GC_MARK(1), {1,upb,1} };
+static type uniq = { istruct.data, A_GC_MARK(1), { {1,upb,1} } };
 
 #define  A_XIS1ARR(row,isdata,size)\
 	(*( A_INITDIM(0,row,1,size,1),\
@@ -125,7 +131,8 @@ static type uniq = { istruct.data, A_GC_MARK(1), {1,upb,1} };
 	 A_XIS1ARR(row,(is)->data,size1)
 
 #define  A_HIS1ARR(row,is,type,size1)\
-	(*(A_XIS1ARR(row,A_R1HEAP(type,row),size1),\
+	(*((void)A_XIS1ARR(row,0,size1),\
+	 A_R1HEAP(type,row),\
 	 memcpy((char *)(row).data,(char *)(is).data,A_INT_size_t(sizeof(type)*size1)),\
 	 &(row)))
 
@@ -141,7 +148,8 @@ static type uniq = { istruct.data, A_GC_MARK(1), {1,upb,1} };
 	 A_XIS2ARR(row,(is)->data,size1,size2)
 
 #define  A_HIS2ARR(row,is,type,size1,size2)\
-	(*(A_XIS2ARR(row,A_R2HEAP(type,row),size1,size2),\
+	(*((void)A_XIS2ARR(row,0,size1,size2),\
+	 A_R2HEAP(type,row),\
 	 memcpy((char *)(row).data,\
 		(char *)(is).data,\
 		A_INT_size_t(sizeof(type)*size1*size2)),\
@@ -160,7 +168,8 @@ static type uniq = { istruct.data, A_GC_MARK(1), {1,upb,1} };
 	 A_XIS3ARR(row,(is)->data,size1,size2,size3)
 
 #define  A_HIS3ARR(row,is,type,size1,size2,size3)\
-	(*(A_XIS3ARR(row, A_R3HEAP(type,row),size1,size2,size3),\
+	(*((void)A_XIS3ARR(row,0,size1,size2,size3),\
+	 A_R3HEAP(type,row),\
 	 memcpy((char *)(row).data,\
 		(char *)(is).data,\
 		A_INT_size_t(sizeof(type)*size1*size2*size3)),\
@@ -200,17 +209,18 @@ static type uniq = { istruct.data, A_GC_MARK(0), upb };
 #define  A_UNITE(name,modename,modenumber,value)\
 	(*((name).mode = modenumber, (name).data.modename = value, &(name)))
 
-/*	union(mode,...) -> union(...,mode,...)  compile-time mode offset */
+/*	union(mode,...) -> union(...,mode,...)  compile-time mode offset
+	(copy only the source data: the target union may be larger) */
 #define  A_UUNITE(temp,offset,value)\
 	(*((temp).mode=(value).mode+offset,\
 	   memcpy((char *)(&((temp).data)),(char *)(&((value).data)),\
-	   sizeof((temp).data)), &(temp)))
+	   sizeof((value).data)), &(temp)))
 
 /*	union(mode,...) -> union(...,mode,...)  run-time table required */
 #define  A_UTABUNITE(temp,table,value)\
 	(*((temp).mode=table[(value).mode],\
 	   memcpy((char *)(&((temp).data)),(char *)(&((value).data)),\
-	   sizeof((temp).data)), &(temp)))
+	   sizeof((value).data)), &(temp)))
                                           
 /*	unite void to union  */
 #define A_EMPTY(temp,modenumber)\

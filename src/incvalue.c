@@ -203,11 +203,11 @@ extern void THAACTR(void);   /* centities */
 /* --- end of DECS initialisation functions --- */
 static A68_53   JKJACTR = {"$Id: incvalue.a68,v 1.1.1.1 2001-05-07 10:16:10 sian Exp $"}; 
 A_GISVEC(A68_VC ,KKJACTR,JKJACTR,58)
-A68_61 * LKJACTR_nilvalue;
-A68_62 * MKJACTR_nilvaluelist;
+A68_61 * LKJACTR_nilvalue A_UNUSED;
+A68_62 * MKJACTR_nilvaluelist A_UNUSED;
 #define NKJACTR_noidno 0
 #define OKJACTR_faultmode 6
-A68_BITS  PKJACTR_defaultinfo;
+A68_BITS  PKJACTR_defaultinfo A_UNUSED;
 #define QKJACTR_constant 0X1U
 #define RKJACTR_atomic 0X2U
 #define SKJACTR_effects 0X4U
@@ -218,7 +218,7 @@ A68_BITS  PKJACTR_defaultinfo;
 #define XKJACTR_fxwarn 0X80U
 static A68_64   ZKJACTR = {"/* SKIP VALUE */"}; 
 A_GISVEC(A68_VC ,ALJACTR,ZKJACTR,16)
-A68_61  DLJACTR_skipvalue;
+A68_61  DLJACTR_skipvalue A_UNUSED;
 #define ELJACTR_voidresult 0
 #define FLJACTR_memoryresult 1
 #define GLJACTR_registerresult 2
@@ -236,10 +236,10 @@ static A68_BOOL A_invoked = A68_FALSE;
 static char *A_config_arguments[] = {"/home/vak/Project/Algol/Algol-68RS-Source/src/a68toc","-v","-uname","seedfile","-staredit","59LR","-lib","/home/vak/Project/Algol/Algol-68RS-Source/a68config","-dir","/home/vak/Project/Algol/Algol-68RS-Source/a68config","-dir","/home/vak/Project/Algol/Algol-68RS-Source/liba68prel","-dir",".","incvalue.a68",""};
 static char *A_config_environment[] = {"A68_LIB=/home/vak/Project/Algol/Algol-68RS-Source/a68config","A68_CDIR=","A68_DIR=","A68_STAREDIT=","A68_NAMESEED=nameseed","CTRANS_NAMESEED=",""};
 static char *A_config_modinfo_files[] = {"/home/vak/Project/Algol/Algol-68RS-Source/a68config/a68config.m","./incinstallation.m","./centities.m",""};
-static A_CONFIG_INFO A_config;
+static A_CONFIG_INFO A_config A_UNUSED;
 /* --- end of configuration information */
 A68_61  YKJACTR;  /* collateral clause result */
-A68_60  BLJACTR;  /* OPERATORS - mode -> union mode */
+A68_60  BLJACTR = {0};  /* OPERATORS - mode -> union mode */
 A68_VC  CLJACTR;  /* YIELD */
 if( A_invoked ) return;
 A_invoked = A68_TRUE;
@@ -248,15 +248,15 @@ ODAACTR();   /* USE incinstallation */
 THAACTR();   /* USE centities */
 /* --- Initialise configuration information */
 A_config.source_file = "/home/vak/Project/Algol/Algol-68RS-Source/src/incvalue.a68";
-A_config.translation_time = "Thu Nov  5 20:46:57 2026";
+A_config.translation_time = "Thu Nov  5 21:10:59 2026";
 A_config.ctrans_version = "Ctrans_34.6";
 A_config.name_seed = "FKJACTR (from seed file) ";
-A_config.spec_change_time = "Thu Nov  5 20:46:57 2026";
+A_config.spec_change_time = "Thu Nov  5 21:10:59 2026";
 A_config.arguments = A_config_arguments;
 A_config.environment = A_config_environment;
 A_config.modinfo_files = A_config_modinfo_files;
 A_PROC_ENTRY(DECS incvalue);
-UEAALIB_a68config(LGAALIB_configinfo, KKJACTR);
+(void)(UEAALIB_a68config(LGAALIB_configinfo, KKJACTR));
  /* line 42: */
  /* line 67: */
  /* line 69: */

@@ -60,8 +60,8 @@ extern void BAAALIB(void);   /* a68config */
 /* --- end of DECS initialisation functions --- */
 static A68_38   XMEAOSF = {"$Id: options.a68,v 1.1.1.1 2001-05-07 10:16:11 sian Exp $"}; 
 A_GISVEC(A68_VC ,YMEAOSF,XMEAOSF,57)
-A68_39  EPEAOSF_ans;
-A68_39  HPEAOSF_null_options;
+A68_39  EPEAOSF_ans A_UNUSED;
+A68_39  HPEAOSF_null_options A_UNUSED;
 
 A68_VOID  BNEAOSF_(A68_39  A, A68_39  B, A68_39  *ReturnedValue);
 
@@ -87,7 +87,7 @@ A68_VOID  YOEAOSF_makeoptions(A68_INT  Nth, A68_39  *ReturnedValue);
 
 A68_VOID  BNEAOSF_(A68_39  A, A68_39  B, A68_39  *ReturnedValue)
 { 
-A68_39  CNEAOSF_ans;
+A68_39  CNEAOSF_ans A_UNUSED = {0};
 A68_BITS * DNEAOSF;  /* YIELD */
 A68_39  ENEAOSF;  /* clause result */
 A_PROC_ENTRY(+);
@@ -97,7 +97,7 @@ A_PROC_ENTRY(+);
 CNEAOSF_ans = A;
  /* line 60: */
 DNEAOSF = (&((&CNEAOSF_ans)->Options)) ;
-(*DNEAOSF) = (A68_BITS )((*(&((&CNEAOSF_ans)->Options)))|B.Options);
+(void)((*DNEAOSF) = (A68_BITS )((*(&((&CNEAOSF_ans)->Options)))|B.Options));
  /* line 61: */
  /* line 62: */
 ENEAOSF = CNEAOSF_ans;
@@ -117,7 +117,7 @@ A_PROC_ENTRY(plusab);
  /* line 66: */
 { 
 INEAOSF = (&(A->Options)) ;
-(*INEAOSF) = (A68_BITS )((*(&(A->Options)))|B.Options);
+(void)((*INEAOSF) = (A68_BITS )((*(&(A->Options)))|B.Options));
  /* line 67: */
  /* line 68: */
 JNEAOSF = A;
@@ -129,7 +129,7 @@ return( JNEAOSF );
 
 A68_VOID  MNEAOSF_(A68_39  A, A68_39  B, A68_39  *ReturnedValue)
 { 
-A68_39  NNEAOSF_ans;
+A68_39  NNEAOSF_ans A_UNUSED = {0};
 A68_BITS * ONEAOSF;  /* YIELD */
 A68_39  PNEAOSF;  /* clause result */
 A_PROC_ENTRY(-);
@@ -139,7 +139,7 @@ A_PROC_ENTRY(-);
 NNEAOSF_ans = A;
  /* line 73: */
 ONEAOSF = (&((&NNEAOSF_ans)->Options)) ;
-(*ONEAOSF) = (A68_BITS )((*(&((&NNEAOSF_ans)->Options)))&~B.Options);
+(void)((*ONEAOSF) = (A68_BITS )((*(&((&NNEAOSF_ans)->Options)))&~B.Options));
  /* line 74: */
  /* line 75: */
 PNEAOSF = NNEAOSF_ans;
@@ -159,7 +159,7 @@ A_PROC_ENTRY(minusab);
  /* line 79: */
 { 
 TNEAOSF = (&(A->Options)) ;
-(*TNEAOSF) = (A68_BITS )((*(&(A->Options)))&~B.Options);
+(void)((*TNEAOSF) = (A68_BITS )((*(&(A->Options)))&~B.Options));
  /* line 80: */
  /* line 81: */
 UNEAOSF = A;
@@ -243,7 +243,7 @@ return( UOEAOSF );
 
 A68_VOID  YOEAOSF_makeoptions(A68_INT  Nth, A68_39  *ReturnedValue)
 { 
-A68_39  ZOEAOSF_ans;
+A68_39  ZOEAOSF_ans A_UNUSED = {0};
 A68_INT  APEAOSF;  /* SHL */
 A68_BITS  BPEAOSF;  /* SHL */
 A68_BITS * CPEAOSF;  /* YIELD */
@@ -256,7 +256,7 @@ A_PROC_ENTRY(makeoptions);
 APEAOSF = (Nth-1) ;
 BPEAOSF = 0X1U ;
 CPEAOSF = (&((&ZOEAOSF_ans)->Options)) ;
-(*CPEAOSF) = A_SHL(BPEAOSF,APEAOSF);
+(void)((*CPEAOSF) = A_SHL(BPEAOSF,APEAOSF));
  /* line 110: */
  /* line 111: */
 DPEAOSF = ZOEAOSF_ans;
@@ -276,7 +276,7 @@ static A68_BOOL A_invoked = A68_FALSE;
 static char *A_config_arguments[] = {"/home/vak/Project/Algol/Algol-68RS-Source/src/a68toc","-v","-uname","seedfile","-staredit","59LR","-lib","/home/vak/Project/Algol/Algol-68RS-Source/a68config","-dir","/home/vak/Project/Algol/Algol-68RS-Source/a68config","-dir","/home/vak/Project/Algol/Algol-68RS-Source/liba68prel","options.a68",""};
 static char *A_config_environment[] = {"A68_LIB=/home/vak/Project/Algol/Algol-68RS-Source/a68config","A68_CDIR=","A68_DIR=","A68_STAREDIT=","A68_NAMESEED=nameseed","CTRANS_NAMESEED=",""};
 static char *A_config_modinfo_files[] = {"/home/vak/Project/Algol/Algol-68RS-Source/a68config/a68config.m",""};
-static A_CONFIG_INFO A_config;
+static A_CONFIG_INFO A_config A_UNUSED;
 /* --- end of configuration information */
 A68_BITS * FPEAOSF;  /* YIELD */
 A68_39  GPEAOSF;  /* clause result */
@@ -285,15 +285,15 @@ A_invoked = A68_TRUE;
 BAAALIB();   /* USE a68config */
 /* --- Initialise configuration information */
 A_config.source_file = "/home/vak/Project/Algol/Algol-68RS-Source/liba68prel/options.a68";
-A_config.translation_time = "Thu Nov  5 20:46:56 2026";
+A_config.translation_time = "Thu Nov  5 21:10:59 2026";
 A_config.ctrans_version = "Ctrans_34.6";
 A_config.name_seed = "TMEAOSF (from seed file) ";
-A_config.spec_change_time = "Thu Nov  5 20:46:56 2026";
+A_config.spec_change_time = "Thu Nov  5 21:10:59 2026";
 A_config.arguments = A_config_arguments;
 A_config.environment = A_config_environment;
 A_config.modinfo_files = A_config_modinfo_files;
 A_PROC_ENTRY(DECS options);
-UEAALIB_a68config(LGAALIB_configinfo, YMEAOSF);
+(void)(UEAALIB_a68config(LGAALIB_configinfo, YMEAOSF));
  /* line 53: */
  /* line 57: */
  /* line 64: */

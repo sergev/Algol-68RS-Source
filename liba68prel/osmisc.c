@@ -309,7 +309,7 @@ static A68_93   QQBAOSF = {"/bin/bash --login"};
 A_GISVEC(A68_VC ,RQBAOSF,QQBAOSF,17)
 static A68_94   SQBAOSF = {"/bin/sh"}; 
 A_GISVEC(A68_VC ,TQBAOSF,SQBAOSF,7)
-A68_LINT  BRBAOSF_clk_tck;
+A68_LINT  BRBAOSF_clk_tck A_UNUSED;
 #include <unistd.h>
 #define SYSCONF(name) A_long_LINT(sysconf(A_INT_int(name)))
 
@@ -410,7 +410,7 @@ A68_VOID  YPBAOSF_local_time_str(A68_LINT  Time, A68_VC  *ReturnedValue)
 { 
 A68_LINT * ZPBAOSF;  /* YIELD */
 A68_VC  AQBAOSF;  /* avoid structure result */
-A68_VC  BQBAOSF_time_str;
+A68_VC  BQBAOSF_time_str A_UNUSED = {0};
 A68_VC  CQBAOSF;  /* clause result */
 A68_VC  DQBAOSF;  /* OPERATORS - trim index */
 A68_VC  EQBAOSF;  /* avoid structure result */
@@ -419,7 +419,7 @@ A_PROC_ENTRY(local_time_str);
  /* line 149: */
 { 
 ZPBAOSF = A_LOC(A68_LINT ) ;
-(*ZPBAOSF) = Time ;
+(void)((*ZPBAOSF) = Time) ;
 MAAAOSF_cstringtorvc( ZOBAOSF_ctime(ZPBAOSF), &AQBAOSF );
 BQBAOSF_time_str = AQBAOSF;
  /* line 150: */
@@ -438,11 +438,11 @@ A68_INT  HQBAOSF_execute_os_command(A68_VC  Command, A68_49  Msg)
 { 
 A68_VC  IQBAOSF;  /* clause result */
 A68_VC  LQBAOSF;  /* avoid structure result */
-A68_VC  MQBAOSF_shell;
+A68_VC  MQBAOSF_shell A_UNUSED = {0};
 A68_BOOL  NQBAOSF;  /* clause result */
-A68_VC  UQBAOSF_program;
+A68_VC  UQBAOSF_program A_UNUSED = {0};
 A68_VC  VQBAOSF;  /* avoid structure result */
-A68_INT  WQBAOSF_result;
+A68_INT  WQBAOSF_result A_UNUSED = {0};
 A68_95  XQBAOSF;  /* collateral clause result */
 A68_VC  YQBAOSF;  /* avoid structure result */
 A68_48  ZQBAOSF;  /* OPERATORS - istruct -> vector */
@@ -454,7 +454,7 @@ A_PROC_ENTRY(execute_os_command);
  /* line 173: */
  /* line 174: */
  /* line 176: */
-if ( (Command.upb>0) )
+if (Command.upb>0)
 { 
  /* line 177: */
 IQBAOSF = Command;
@@ -468,11 +468,11 @@ MQBAOSF_shell = LQBAOSF;
  /* line 179: */
  /* line 180: */
 NQBAOSF = (MQBAOSF_shell.upb>0);
-if ( NQBAOSF )
+if (NQBAOSF)
 { 
  /* line 181: */
  /* line 182: */
-if ( A_VC_EQ(MQBAOSF_shell,PQBAOSF) )
+if (A_VC_EQ(MQBAOSF_shell,PQBAOSF))
 { 
  /* line 183: */
 IQBAOSF = RQBAOSF;
@@ -498,13 +498,13 @@ WQBAOSF_result = BPBAOSF_system(VQBAOSF);
  /* line 190: */
  /* line 191: */
  /* line 192: */
-if ( (WQBAOSF_result<0) )
+if (WQBAOSF_result<0)
 { 
 XQBAOSF.data[0] = Command;
 VHBAOSF_errnotext(  &YQBAOSF );
 XQBAOSF.data[1] = YQBAOSF;
  /* line 193: */
-SEBAOSF_osifmessage(81, A_HISVEC(ZQBAOSF,XQBAOSF,2,A68_VC ), Msg);
+(void)(SEBAOSF_osifmessage(81, A_HISVEC(ZQBAOSF,XQBAOSF,2,A68_VC ), Msg));
 } 
  /* line 195: */
  /* line 196: */
@@ -552,7 +552,7 @@ A_PROC_ENTRY(init_osmisc);
  /* line 229: */
  /* line 231: */
  /* line 232: */
-BRBAOSF_clk_tck = JRBAOSF_sysconf(KRBAOSF_sc_clk_tck);
+(void)(BRBAOSF_clk_tck = JRBAOSF_sysconf(KRBAOSF_sc_clk_tck));
 } 
 A_PROC_EXIT(init_osmisc);
 return;
@@ -568,7 +568,7 @@ static A68_BOOL A_invoked = A68_FALSE;
 static char *A_config_arguments[] = {"/home/vak/Project/Algol/Algol-68RS-Source/src/a68toc","-v","-uname","seedfile","-staredit","59LR","-lib","/home/vak/Project/Algol/Algol-68RS-Source/a68config","-dir","/home/vak/Project/Algol/Algol-68RS-Source/a68config","-dir","/home/vak/Project/Algol/Algol-68RS-Source/liba68prel","osmisc.a68",""};
 static char *A_config_environment[] = {"A68_LIB=/home/vak/Project/Algol/Algol-68RS-Source/a68config","A68_CDIR=","A68_DIR=","A68_STAREDIT=","A68_NAMESEED=nameseed","CTRANS_NAMESEED=",""};
 static char *A_config_modinfo_files[] = {"/home/vak/Project/Algol/Algol-68RS-Source/a68config/a68config.m","/home/vak/Project/Algol/Algol-68RS-Source/liba68prel/usefulops.m","/home/vak/Project/Algol/Algol-68RS-Source/liba68prel/oserrors.m","/home/vak/Project/Algol/Algol-68RS-Source/liba68prel/cif.m",""};
-static A_CONFIG_INFO A_config;
+static A_CONFIG_INFO A_config A_UNUSED;
 /* --- end of configuration information */
 A68_39  LRBAOSF;  /* procedure value */
 if( A_invoked ) return;
@@ -579,15 +579,15 @@ MCBAOSF();   /* USE oserrors */
 BAAAOSF();   /* USE cif */
 /* --- Initialise configuration information */
 A_config.source_file = "/home/vak/Project/Algol/Algol-68RS-Source/liba68prel/osmisc.a68";
-A_config.translation_time = "Thu Nov  5 20:46:56 2026";
+A_config.translation_time = "Thu Nov  5 21:10:59 2026";
 A_config.ctrans_version = "Ctrans_34.6";
 A_config.name_seed = "QOBAOSF (from seed file) ";
-A_config.spec_change_time = "Thu Nov  5 20:46:56 2026";
+A_config.spec_change_time = "Thu Nov  5 21:10:59 2026";
 A_config.arguments = A_config_arguments;
 A_config.environment = A_config_environment;
 A_config.modinfo_files = A_config_modinfo_files;
 A_PROC_ENTRY(DECS osmisc);
-UEAALIB_a68config(LGAALIB_configinfo, VOBAOSF);
+(void)(UEAALIB_a68config(LGAALIB_configinfo, VOBAOSF));
  /* line 61: */
  /* line 62: */
  /* line 63: */
@@ -649,7 +649,7 @@ UEAALIB_a68config(LGAALIB_configinfo, VOBAOSF);
  /* line 240: */
 LRBAOSF.fn.fn_global = IRBAOSF_init_osmisc;
 LRBAOSF.nonlocals = A68_NIL;
-ABAALIB_a68init(LRBAOSF);
+(void)(ABAALIB_a68init(LRBAOSF));
 A_PROC_EXIT(DECS osmisc);
 } 
 #undef NL

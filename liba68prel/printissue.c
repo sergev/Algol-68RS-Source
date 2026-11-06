@@ -590,7 +590,7 @@ A_GISVEC(A68_VC ,ORGAOSF,NRGAOSF,118)
 static A68_157   QRGAOSF = {" software to be copied for personal use, or given to third parties subject to the conditions given in the release notice."}; 
 A_GISVEC(A68_VC ,RRGAOSF,QRGAOSF,121)
 static A68_159   XRGAOSF = 
-{  'T', 'h', 'e', ' ', 'S', 'e', 'c', 'r',
+{{  'T', 'h', 'e', ' ', 'S', 'e', 'c', 'r',
    'e', 't', 'a', 'r', 'y', ' ', 'o', 'f',
    ' ', 'S', 't', 'a', 't', 'e', ' ', 'f',
    'o', 'r', ' ', 'D', 'e', 'f', 'e', 'n',
@@ -641,7 +641,7 @@ static A68_159   XRGAOSF =
    'e', 'n', 'h', 'a', 'n', 'c', 'e', 'm',
    'e', 'n', 't', 's', ' ', 't', 'h', 'e',
    'r', 'e', 'o', 'f', '.' 
-} ; 
+}} ; 
 A_GISVEC(A68_VC ,YRGAOSF,XRGAOSF,405)
 static A68_160   DSGAOSF = {"Any queries, comments or suggestions relating to this Software should be addressed to the ELLA office at DRA Malvern:"}; 
 A_GISVEC(A68_VC ,ESGAOSF,DSGAOSF,117)
@@ -671,11 +671,11 @@ A68_VOID  DUGAOSF_print_issue(void);
 A_STATIC A68_VOID  YPGAOSF_centred(A68_VC  Str)
 { 
 A68_63  ZPGAOSF;  /* avoid structure result */
-A68_52  AQGAOSF;  /* OPERATORS - mode -> union mode */
+A68_52  AQGAOSF = {0};  /* OPERATORS - mode -> union mode */
 A68_85  BQGAOSF;  /* OPERATORS - scalar -> [] or VEC[] */
 A68_146  CQGAOSF;  /* collateral clause result */
-A68_52  DQGAOSF;  /* OPERATORS - mode -> union mode */
-A68_52  EQGAOSF;  /* OPERATORS - mode -> union mode */
+A68_52  DQGAOSF = {0};  /* OPERATORS - mode -> union mode */
+A68_52  EQGAOSF = {0};  /* OPERATORS - mode -> union mode */
 A68_56  FQGAOSF;  /* procedure value */
 A68_85  GQGAOSF;  /* OPERATORS - istruct -> vector */
 A_PROC_ENTRY(centred);
@@ -683,11 +683,11 @@ A_PROC_ENTRY(centred);
  /* line 49: */
 { 
  /* line 50: */
-if ( (Str.upb<((*(&(DREAOSF_screen->Width)))-1)) )
+if (Str.upb<((*(&(DREAOSF_screen->Width)))-1))
 { 
  /* line 51: */
 GSDAOSF_spaces( (((*(&(DREAOSF_screen->Width)))-Str.upb)/2), &ZPGAOSF );
-KYDAOSF_put(DREAOSF_screen, A_HVEC(BQGAOSF,A_UNITE(AQGAOSF,mode19,19,ZPGAOSF),A68_52 ));
+(void)(KYDAOSF_put(DREAOSF_screen, A_HVEC(BQGAOSF,A_UNITE(AQGAOSF,mode19,19,ZPGAOSF),A68_52 )));
 } 
  /* line 52: */
 CQGAOSF.data[0] = A_UNITE(DQGAOSF,mode7,7,Str);
@@ -695,7 +695,7 @@ FQGAOSF.fn.fn_global = PKDAOSF_newline;
 FQGAOSF.nonlocals = A68_NIL;
 CQGAOSF.data[1] = A_UNITE(EQGAOSF,mode12,12,FQGAOSF);
  /* line 53: */
-KYDAOSF_put(DREAOSF_screen, A_HISVEC(GQGAOSF,CQGAOSF,2,A68_52 ));
+(void)(KYDAOSF_put(DREAOSF_screen, A_HISVEC(GQGAOSF,CQGAOSF,2,A68_52 )));
 } 
 A_PROC_EXIT(centred);
 return;
@@ -711,57 +711,57 @@ A68_151  QQGAOSF;  /* collateral clause result */
 A68_133  TQGAOSF;  /* avoid structure result */
 A68_46  UQGAOSF;  /* OPERATORS - istruct -> vector */
 A68_VC  VQGAOSF;  /* avoid structure result */
-A68_VC  YQGAOSF_study;
+A68_VC  YQGAOSF_study A_UNUSED = {0};
 A68_155  BRGAOSF;  /* collateral clause result */
 A68_46  GRGAOSF;  /* OPERATORS - istruct -> vector */
 A68_VC  HRGAOSF;  /* avoid structure result */
 A68_166  IRGAOSF;  /* collateral clause result */
-A68_52  JRGAOSF;  /* OPERATORS - mode -> union mode */
+A68_52  JRGAOSF = {0};  /* OPERATORS - mode -> union mode */
 A68_56  KRGAOSF;  /* procedure value */
 A68_158  LRGAOSF;  /* collateral clause result */
 A68_VC  MRGAOSF;  /* avoid structure result */
 A68_VC  PRGAOSF;  /* avoid structure result */
 A68_46  SRGAOSF;  /* OPERATORS - istruct -> vector */
 A68_VC  TRGAOSF;  /* avoid structure result */
-A68_52  URGAOSF;  /* OPERATORS - mode -> union mode */
+A68_52  URGAOSF = {0};  /* OPERATORS - mode -> union mode */
 A68_64  VRGAOSF;  /* avoid structure result */
-A68_52  WRGAOSF;  /* OPERATORS - mode -> union mode */
-A68_52  ZRGAOSF;  /* OPERATORS - mode -> union mode */
+A68_52  WRGAOSF = {0};  /* OPERATORS - mode -> union mode */
+A68_52  ZRGAOSF = {0};  /* OPERATORS - mode -> union mode */
 A68_VC  ASGAOSF;  /* YIELD */
 A68_64  BSGAOSF;  /* avoid structure result */
-A68_52  CSGAOSF;  /* OPERATORS - mode -> union mode */
-A68_52  FSGAOSF;  /* OPERATORS - mode -> union mode */
+A68_52  CSGAOSF = {0};  /* OPERATORS - mode -> union mode */
+A68_52  FSGAOSF = {0};  /* OPERATORS - mode -> union mode */
 A68_VC  GSGAOSF;  /* YIELD */
 A68_64  HSGAOSF;  /* avoid structure result */
-A68_52  ISGAOSF;  /* OPERATORS - mode -> union mode */
-A68_52  LSGAOSF;  /* OPERATORS - mode -> union mode */
+A68_52  ISGAOSF = {0};  /* OPERATORS - mode -> union mode */
+A68_52  LSGAOSF = {0};  /* OPERATORS - mode -> union mode */
 A68_VC  MSGAOSF;  /* YIELD */
 A68_64  NSGAOSF;  /* avoid structure result */
-A68_52  OSGAOSF;  /* OPERATORS - mode -> union mode */
-A68_52  RSGAOSF;  /* OPERATORS - mode -> union mode */
+A68_52  OSGAOSF = {0};  /* OPERATORS - mode -> union mode */
+A68_52  RSGAOSF = {0};  /* OPERATORS - mode -> union mode */
 A68_VC  SSGAOSF;  /* YIELD */
-A68_52  TSGAOSF;  /* OPERATORS - mode -> union mode */
+A68_52  TSGAOSF = {0};  /* OPERATORS - mode -> union mode */
 A68_56  USGAOSF;  /* procedure value */
-A68_52  XSGAOSF;  /* OPERATORS - mode -> union mode */
+A68_52  XSGAOSF = {0};  /* OPERATORS - mode -> union mode */
 A68_VC  YSGAOSF;  /* YIELD */
-A68_52  ZSGAOSF;  /* OPERATORS - mode -> union mode */
+A68_52  ZSGAOSF = {0};  /* OPERATORS - mode -> union mode */
 A68_56  ATGAOSF;  /* procedure value */
-A68_52  DTGAOSF;  /* OPERATORS - mode -> union mode */
+A68_52  DTGAOSF = {0};  /* OPERATORS - mode -> union mode */
 A68_VC  ETGAOSF;  /* YIELD */
-A68_52  FTGAOSF;  /* OPERATORS - mode -> union mode */
+A68_52  FTGAOSF = {0};  /* OPERATORS - mode -> union mode */
 A68_56  GTGAOSF;  /* procedure value */
-A68_52  JTGAOSF;  /* OPERATORS - mode -> union mode */
+A68_52  JTGAOSF = {0};  /* OPERATORS - mode -> union mode */
 A68_VC  KTGAOSF;  /* YIELD */
-A68_52  LTGAOSF;  /* OPERATORS - mode -> union mode */
+A68_52  LTGAOSF = {0};  /* OPERATORS - mode -> union mode */
 A68_56  MTGAOSF;  /* procedure value */
-A68_52  PTGAOSF;  /* OPERATORS - mode -> union mode */
+A68_52  PTGAOSF = {0};  /* OPERATORS - mode -> union mode */
 A68_VC  QTGAOSF;  /* YIELD */
-A68_52  RTGAOSF;  /* OPERATORS - mode -> union mode */
+A68_52  RTGAOSF = {0};  /* OPERATORS - mode -> union mode */
 A68_56  STGAOSF;  /* procedure value */
-A68_52  VTGAOSF;  /* OPERATORS - mode -> union mode */
+A68_52  VTGAOSF = {0};  /* OPERATORS - mode -> union mode */
 A68_VC  WTGAOSF;  /* YIELD */
 A68_64  XTGAOSF;  /* avoid structure result */
-A68_52  YTGAOSF;  /* OPERATORS - mode -> union mode */
+A68_52  YTGAOSF = {0};  /* OPERATORS - mode -> union mode */
 A68_85  ZTGAOSF;  /* OPERATORS - istruct -> vector */
 A_PROC_ENTRY(title);
  /* line 46: */
@@ -769,21 +769,21 @@ A_PROC_ENTRY(title);
 { 
  /* line 55: */
  /* line 56: */
-if ( (Mode!=2) )
+if (Mode!=2)
 { 
-PKDAOSF_newline(DREAOSF_screen);
+(void)(PKDAOSF_newline(DREAOSF_screen));
  /* line 57: */
-YPGAOSF_centred(IQGAOSF);
+(void)(YPGAOSF_centred(IQGAOSF));
  /* line 58: */
-YPGAOSF_centred(KQGAOSF);
+(void)(YPGAOSF_centred(KQGAOSF));
  /* line 59: */
-YPGAOSF_centred(MQGAOSF);
+(void)(YPGAOSF_centred(MQGAOSF));
  /* line 60: */
 SREAOSF_give_version(  &NQGAOSF );
-YPGAOSF_centred(NQGAOSF);
+(void)(YPGAOSF_centred(NQGAOSF));
  /* line 61: */
  /* line 62: */
-PKDAOSF_newline(DREAOSF_screen);
+(void)(PKDAOSF_newline(DREAOSF_screen));
 } 
  /* line 65: */
 OQGAOSF = (Mode==3);
@@ -792,40 +792,40 @@ if ( OQGAOSF )
 PREAOSF_version(  &PQGAOSF );
 OQGAOSF = (PQGAOSF.Msg.upb>0);
 }
-if ( OQGAOSF )
+if (OQGAOSF)
 { 
 QQGAOSF.data[0] = SQGAOSF;
 PREAOSF_version(  &TQGAOSF );
 QQGAOSF.data[1] = TQGAOSF.Msg;
 JDAAOSF_concat( A_HISVEC(UQGAOSF,QQGAOSF,2,A68_VC ), &VQGAOSF );
-YPGAOSF_centred(VQGAOSF);
+(void)(YPGAOSF_centred(VQGAOSF));
  /* line 67: */
  /* line 68: */
-PKDAOSF_newline(DREAOSF_screen);
+(void)(PKDAOSF_newline(DREAOSF_screen));
 } 
  /* line 70: */
 YQGAOSF_study = XQGAOSF;
  /* line 72: */
  /* line 73: */
-if ( (Mode==1) )
+if (Mode==1)
 { 
-YPGAOSF_centred(YQGAOSF_study);
+(void)(YPGAOSF_centred(YQGAOSF_study));
  /* line 74: */
-YPGAOSF_centred(ARGAOSF);
+(void)(YPGAOSF_centred(ARGAOSF));
  /* line 75: */
  /* line 76: */
-PKDAOSF_newline(DREAOSF_screen);
+(void)(PKDAOSF_newline(DREAOSF_screen));
 } 
 else
 { 
  /* line 77: */
-if ( (Mode==3) )
+if (Mode==3)
 { 
 BRGAOSF.data[0] = DRGAOSF;
 BRGAOSF.data[1] = YQGAOSF_study;
 BRGAOSF.data[2] = FRGAOSF;
 JDAAOSF_concat( A_HISVEC(GRGAOSF,BRGAOSF,3,A68_VC ), &HRGAOSF );
-YPGAOSF_centred(HRGAOSF);
+(void)(YPGAOSF_centred(HRGAOSF));
  /* line 78: */
  /* line 79: */
  /* line 80: */
@@ -907,7 +907,7 @@ LSDAOSF_lines( 2, &XTGAOSF );
 IRGAOSF.data[20] = A_UNITE(YTGAOSF,mode20,20,XTGAOSF);
  /* line 106: */
  /* line 107: */
-KYDAOSF_put(DREAOSF_screen, A_HISVEC(ZTGAOSF,IRGAOSF,21,A68_52 ));
+(void)(KYDAOSF_put(DREAOSF_screen, A_HISVEC(ZTGAOSF,IRGAOSF,21,A68_52 )));
 } 
 } 
 } 
@@ -921,7 +921,7 @@ A68_VOID  BUGAOSF_print_title(A68_BOOL  Silent)
 A68_INT  CUGAOSF;  /* clause result */
 A_PROC_ENTRY(print_title);
  /* line 110: */
-if ( Silent )
+if (Silent)
 { 
 CUGAOSF = 2;
 } 
@@ -929,7 +929,7 @@ else
 { 
 CUGAOSF = 1;
 } 
-VPGAOSF_title(CUGAOSF);
+(void)(VPGAOSF_title(CUGAOSF));
 A_PROC_EXIT(print_title);
 return;
 } 
@@ -939,7 +939,7 @@ A68_VOID  DUGAOSF_print_issue(void)
 { 
 A_PROC_ENTRY(print_issue);
  /* line 115: */
-VPGAOSF_title(3);
+(void)(VPGAOSF_title(3));
 A_PROC_EXIT(print_issue);
 return;
 } 
@@ -954,7 +954,7 @@ static A68_BOOL A_invoked = A68_FALSE;
 static char *A_config_arguments[] = {"/home/vak/Project/Algol/Algol-68RS-Source/src/a68toc","-v","-uname","seedfile","-staredit","59LR","-lib","/home/vak/Project/Algol/Algol-68RS-Source/a68config","-dir","/home/vak/Project/Algol/Algol-68RS-Source/a68config","-dir","/home/vak/Project/Algol/Algol-68RS-Source/liba68prel","printissue.a68",""};
 static char *A_config_environment[] = {"A68_LIB=/home/vak/Project/Algol/Algol-68RS-Source/a68config","A68_CDIR=","A68_DIR=","A68_STAREDIT=","A68_NAMESEED=nameseed","CTRANS_NAMESEED=",""};
 static char *A_config_modinfo_files[] = {"/home/vak/Project/Algol/Algol-68RS-Source/a68config/a68config.m","/home/vak/Project/Algol/Algol-68RS-Source/liba68prel/osinterface.m","/home/vak/Project/Algol/Algol-68RS-Source/liba68prel/putstrings.m",""};
-static A_CONFIG_INFO A_config;
+static A_CONFIG_INFO A_config A_UNUSED;
 /* --- end of configuration information */
 if( A_invoked ) return;
 A_invoked = A68_TRUE;
@@ -963,15 +963,15 @@ IPEAOSF();   /* USE osinterface */
 QMDAOSF();   /* USE putstrings */
 /* --- Initialise configuration information */
 A_config.source_file = "/home/vak/Project/Algol/Algol-68RS-Source/liba68prel/printissue.a68";
-A_config.translation_time = "Thu Nov  5 20:46:56 2026";
+A_config.translation_time = "Thu Nov  5 21:10:59 2026";
 A_config.ctrans_version = "Ctrans_34.6";
 A_config.name_seed = "OPGAOSF (from seed file) ";
-A_config.spec_change_time = "Thu Nov  5 20:46:56 2026";
+A_config.spec_change_time = "Thu Nov  5 21:10:59 2026";
 A_config.arguments = A_config_arguments;
 A_config.environment = A_config_environment;
 A_config.modinfo_files = A_config_modinfo_files;
 A_PROC_ENTRY(DECS printissue);
-UEAALIB_a68config(LGAALIB_configinfo, TPGAOSF);
+(void)(UEAALIB_a68config(LGAALIB_configinfo, TPGAOSF));
  /* line 45: */
  /* line 109: */
  /* line 112: */

@@ -502,9 +502,9 @@ A_GISVEC(A68_VC ,DEEAOSF,CEEAOSF,60)
 #define STRTOD(s,e) (A68_REAL)(strtod(A_VC_charptr(s), (char **)(e)))
 
 #define GEEAOSF_strtod STRTOD
-static A68_38  HEEAOSF_tt;
-A68_38  KEEAOSF_io_badnumber;
-A68_38  NEEAOSF_io_overflow;
+static A68_38  HEEAOSF_tt A_UNUSED;
+A68_38  KEEAOSF_io_badnumber A_UNUSED;
+A68_38  NEEAOSF_io_overflow A_UNUSED;
 
 A68_VOID  PEEAOSF_make_user_status(A68_INT  N, A68_38  *ReturnedValue);
 
@@ -549,7 +549,7 @@ A_PROC_ENTRY(make_user_status);
  /* line 69: */
 { 
 QEEAOSF = (&((&HEEAOSF_tt)->Status)) ;
-(*QEEAOSF) = (100+N);
+(void)((*QEEAOSF) = (100+N));
  /* line 70: */
  /* line 71: */
 REEAOSF = HEEAOSF_tt;
@@ -562,7 +562,7 @@ return;
 
 A68_CHAR  TEEAOSF_getchar(A68_84 * Ch)
 { 
-A68_CHAR  UEEAOSF_result;
+A68_CHAR  UEEAOSF_result A_UNUSED = {0};
 A68_BOOL  VEEAOSF;  /* optbool result */
 A68_VC  WEEAOSF;  /* OPERATORS - simple index */
 A68_INT  XEEAOSF;  /* YIELD */
@@ -581,12 +581,12 @@ if ( VEEAOSF )
 VEEAOSF = AVBAOSF_((*(&(Ch->Status))), OUBAOSF_io_ok);
 }
 if ( !(VEEAOSF) ) break;
-PKDAOSF_newline(Ch);
+(void)(PKDAOSF_newline(Ch));
 }
  /* line 78: */
 WEEAOSF = (*(&(Ch->Buffer))) ;
 XEEAOSF = (*(&(Ch->Charnumber))) ;
-UEEAOSF_result = (*(&A_VINDEX(WEEAOSF,XEEAOSF)));
+(void)(UEEAOSF_result = (*(&A_VINDEX(WEEAOSF,XEEAOSF))));
  /* line 79: */
 YEEAOSF = (&(Ch->Charnumber)) ;
 (*YEEAOSF)+=1;
@@ -601,7 +601,7 @@ return( ZEEAOSF );
 
 A68_VOID  BFEAOSF_skiplayout(A68_84 * Ch)
 { 
-A68_CHAR  CFEAOSF_c;
+A68_CHAR  CFEAOSF_c A_UNUSED = {0};
 A68_BOOL  DFEAOSF;  /* optbool result */
 A68_INT * EFEAOSF;  /* YIELD */
 A_PROC_ENTRY(skiplayout);
@@ -630,7 +630,7 @@ return;
 
 A68_VOID  GFEAOSF_skiptext(A68_84 * Ch)
 { 
-A68_CHAR  HFEAOSF_c;
+A68_CHAR  HFEAOSF_c A_UNUSED = {0};
 A68_INT * IFEAOSF;  /* YIELD */
 A_PROC_ENTRY(skiptext);
  /* line 91: */
@@ -654,7 +654,7 @@ return;
 
 A68_CHAR  KFEAOSF_nextchar(A68_84 * Ch)
 { 
-A68_CHAR  LFEAOSF_c;
+A68_CHAR  LFEAOSF_c A_UNUSED = {0};
 A68_INT * MFEAOSF;  /* YIELD */
 A68_CHAR  NFEAOSF;  /* clause result */
 A_PROC_ENTRY(nextchar);
@@ -687,23 +687,23 @@ return( QFEAOSF );
 A_STATIC A68_INT  TFEAOSF_basicgetint(A68_84 * Ch, A68_INT  Radix)
 { 
 A68_INT  UFEAOSF;  /* clause result */
-A68_CHAR * VFEAOSF_end;
+A68_CHAR * VFEAOSF_end A_UNUSED = {0};
 A68_VC  WFEAOSF;  /* OPERATORS - trim index */
 A68_VC  XFEAOSF;  /* OPERATORS - trim index */
-A68_VC  YFEAOSF_str;
-A68_INT  ZFEAOSF_int;
-A68_INT  AGEAOSF_len;
+A68_VC  YFEAOSF_str A_UNUSED = {0};
+A68_INT  ZFEAOSF_int A_UNUSED = {0};
+A68_INT  AGEAOSF_len A_UNUSED = {0};
 A68_INT * BGEAOSF;  /* YIELD */
 A68_38 * CGEAOSF;  /* YIELD */
 A_PROC_ENTRY(basicgetint);
  /* line 107: */
  /* line 108: */
 { 
-BFEAOSF_skiplayout(Ch);
+(void)(BFEAOSF_skiplayout(Ch));
  /* line 109: */
  /* line 110: */
  /* line 111: */
-if ( EVBAOSF_((*(&(Ch->Status))), OUBAOSF_io_ok) )
+if (EVBAOSF_((*(&(Ch->Status))), OUBAOSF_io_ok))
 { 
 UFEAOSF = 0;
 } 
@@ -721,7 +721,7 @@ AGEAOSF_len = EEEAOSF_diff(YFEAOSF_str, VFEAOSF_end);
 BGEAOSF = (&(Ch->Charnumber)) ;
 (*BGEAOSF)+=AGEAOSF_len;
  /* line 117: */
-if ( (AGEAOSF_len==0) )
+if (AGEAOSF_len==0)
 { 
 CGEAOSF = (&(Ch->Status)) ;
 (*CGEAOSF) = KEEAOSF_io_badnumber;
@@ -770,23 +770,23 @@ return( LGEAOSF );
 A68_REAL  NGEAOSF_getreal(A68_84 * Ch)
 { 
 A68_REAL  OGEAOSF;  /* clause result */
-A68_CHAR * PGEAOSF_end;
+A68_CHAR * PGEAOSF_end A_UNUSED = {0};
 A68_VC  QGEAOSF;  /* OPERATORS - trim index */
 A68_VC  RGEAOSF;  /* OPERATORS - trim index */
-A68_VC  SGEAOSF_str;
-A68_REAL  TGEAOSF_real;
-A68_INT  UGEAOSF_len;
+A68_VC  SGEAOSF_str A_UNUSED = {0};
+A68_REAL  TGEAOSF_real A_UNUSED = {0};
+A68_INT  UGEAOSF_len A_UNUSED = {0};
 A68_INT * VGEAOSF;  /* YIELD */
 A68_38 * WGEAOSF;  /* YIELD */
 A_PROC_ENTRY(getreal);
  /* line 127: */
  /* line 128: */
 { 
-BFEAOSF_skiplayout(Ch);
+(void)(BFEAOSF_skiplayout(Ch));
  /* line 129: */
  /* line 130: */
  /* line 131: */
-if ( EVBAOSF_((*(&(Ch->Status))), OUBAOSF_io_ok) )
+if (EVBAOSF_((*(&(Ch->Status))), OUBAOSF_io_ok))
 { 
 OGEAOSF = 0.0;
 } 
@@ -804,7 +804,7 @@ UGEAOSF_len = EEEAOSF_diff(SGEAOSF_str, PGEAOSF_end);
 VGEAOSF = (&(Ch->Charnumber)) ;
 (*VGEAOSF)+=UGEAOSF_len;
  /* line 137: */
-if ( (UGEAOSF_len==0) )
+if (UGEAOSF_len==0)
 { 
 WGEAOSF = (&(Ch->Status)) ;
 (*WGEAOSF) = KEEAOSF_io_badnumber;
@@ -823,7 +823,7 @@ return( OGEAOSF );
 A68_BOOL  YGEAOSF_getbool(A68_84 * Ch)
 { 
 A68_BOOL  ZGEAOSF;  /* clause result */
-A68_CHAR  AHEAOSF_c;
+A68_CHAR  AHEAOSF_c A_UNUSED = {0};
 A68_BOOL  BHEAOSF;  /* optbool result */
 A68_BOOL  CHEAOSF;  /* optbool result */
 A68_38 * DHEAOSF;  /* YIELD */
@@ -831,10 +831,10 @@ A_PROC_ENTRY(getbool);
  /* line 143: */
  /* line 144: */
 { 
-BFEAOSF_skiplayout(Ch);
+(void)(BFEAOSF_skiplayout(Ch));
  /* line 145: */
  /* line 146: */
-if ( EVBAOSF_((*(&(Ch->Status))), OUBAOSF_io_ok) )
+if (EVBAOSF_((*(&(Ch->Status))), OUBAOSF_io_ok))
 { 
  /* line 147: */
 ZGEAOSF = A68_FALSE;
@@ -848,7 +848,7 @@ if ( ! BHEAOSF )
 { /* line 149: */
 BHEAOSF = (AHEAOSF_c=='t');
 }
-if ( BHEAOSF )
+if (BHEAOSF)
 { 
  /* line 150: */
 ZGEAOSF = A68_TRUE;
@@ -860,7 +860,7 @@ if ( ! CHEAOSF )
 { /* line 151: */
 CHEAOSF = (AHEAOSF_c=='f');
 }
-if ( CHEAOSF )
+if (CHEAOSF)
 { 
  /* line 152: */
 ZGEAOSF = A68_FALSE;
@@ -888,8 +888,8 @@ A68_BOOL  GHEAOSF;  /* optbool result */
 A68_VC  HHEAOSF;  /* clause result */
 A68_VC  IHEAOSF;  /* OPERATORS - trim index */
 A68_VC  JHEAOSF;  /* OPERATORS - trim index */
-A68_INT  KHEAOSF_rem;
-A68_INT  LHEAOSF_start;
+A68_INT  KHEAOSF_rem A_UNUSED = {0};
+A68_INT  LHEAOSF_start A_UNUSED = {0};
 A68_INT * MHEAOSF;  /* YIELD */
 A68_VC  NHEAOSF;  /* OPERATORS - trim index */
 A68_VC  OHEAOSF;  /* OPERATORS - trim index */
@@ -902,14 +902,14 @@ if ( GHEAOSF )
 { /* line 160: */
 GHEAOSF = AVBAOSF_((*(&(Ch->Status))), OUBAOSF_io_ok);
 }
-if ( GHEAOSF )
+if (GHEAOSF)
 { 
  /* line 161: */
-PKDAOSF_newline(Ch);
+(void)(PKDAOSF_newline(Ch));
 } 
  /* line 162: */
  /* line 163: */
-if ( EVBAOSF_((*(&(Ch->Status))), OUBAOSF_io_ok) )
+if (EVBAOSF_((*(&(Ch->Status))), OUBAOSF_io_ok))
 { 
  /* line 164: */
 IHEAOSF = (*(&(Ch->Buffer))) ;
@@ -922,7 +922,7 @@ KHEAOSF_rem = (((*(&(Ch->Width)))+1)-(*(&(Ch->Charnumber))));
 LHEAOSF_start = (*(&(Ch->Charnumber)));
  /* line 166: */
 MHEAOSF = (&(Ch->Charnumber)) ;
-(*MHEAOSF)+=(KHEAOSF_rem+1);
+(void)((*MHEAOSF)+=(KHEAOSF_rem+1));
  /* line 168: */
  /* line 169: */
  /* line 170: */
@@ -949,10 +949,10 @@ if ( RHEAOSF )
 { /* line 175: */
 RHEAOSF = AVBAOSF_((*(&(Ch->Status))), OUBAOSF_io_ok);
 }
-if ( RHEAOSF )
+if (RHEAOSF)
 { 
  /* line 176: */
-PKDAOSF_newline(Ch);
+(void)(PKDAOSF_newline(Ch));
 } 
  /* line 177: */
  /* line 178: */
@@ -966,8 +966,8 @@ return;
 
 A68_VOID  UHEAOSF_strtrim(A68_VC  Str, A68_VC  *ReturnedValue)
 { 
-A68_INT  VHEAOSF_top;
-A68_INT  WHEAOSF_pos;
+A68_INT  VHEAOSF_top A_UNUSED = {0};
+A68_INT  WHEAOSF_pos A_UNUSED = {0};
 A68_BOOL  XHEAOSF;  /* optbool result */
 A68_INT  YHEAOSF;  /* YIELD */
 A68_VC  ZHEAOSF;  /* clause result */
@@ -1001,14 +1001,14 @@ return;
 
 A_STATIC A68_VOID  DIEAOSF_basicgetstring(A68_84 * Ch, A68_RC  Rrc)
 { 
-A68_INT  EIEAOSF_bottom;
-A68_INT  FIEAOSF_top;
-A68_INT  GIEAOSF_rem;
-A68_INT  HIEAOSF_start;
-A68_INT  IIEAOSF_len;
+A68_INT  EIEAOSF_bottom A_UNUSED = {0};
+A68_INT  FIEAOSF_top A_UNUSED = {0};
+A68_INT  GIEAOSF_rem A_UNUSED = {0};
+A68_INT  HIEAOSF_start A_UNUSED = {0};
+A68_INT  IIEAOSF_len A_UNUSED = {0};
 A68_INT  JIEAOSF;  /* clause result */
-A68_INT  KIEAOSF_size;
-A68_INT  LIEAOSF_extent;
+A68_INT  KIEAOSF_size A_UNUSED = {0};
+A68_INT  LIEAOSF_extent A_UNUSED = {0};
 A68_INT * MIEAOSF;  /* YIELD */
 A68_RC  NIEAOSF;  /* OPERATORS - trim index */
 A68_VC  OIEAOSF;  /* OPERATORS - trim index */
@@ -1017,11 +1017,11 @@ A68_VC  QIEAOSF;  /* YIELD */
 A68_RC  RIEAOSF;  /* OPERATORS - vector -> row */
 A68_RC  SIEAOSF;  /* YIELD */
 A68_RC  TIEAOSF;  /* OPERATORS - assign op */
-A68_CHAR * UIEAOSF_tc;
+A68_CHAR * UIEAOSF_tc A_UNUSED = {0};
 A68_RC  VIEAOSF;  /* OPERATORS - trim index */
 A68_RC  WIEAOSF;  /* forall yield */
 A68_INT  XIEAOSF;  /* forall loop counter */
-A68_CHAR * YIEAOSF_tc;
+A68_CHAR * YIEAOSF_tc A_UNUSED = {0};
 A68_RC  ZIEAOSF;  /* OPERATORS - trim index */
 A68_RC  AJEAOSF;  /* forall yield */
 A68_INT  BJEAOSF;  /* forall loop counter */
@@ -1037,7 +1037,7 @@ GIEAOSF_rem = (((*(&(Ch->Width)))+1)-(*(&(Ch->Charnumber))));
 HIEAOSF_start = (*(&(Ch->Charnumber)));
 IIEAOSF_len = ((FIEAOSF_top-EIEAOSF_bottom)+1);
  /* line 192: */
-if ( (IIEAOSF_len<GIEAOSF_rem) )
+if (IIEAOSF_len<GIEAOSF_rem)
 { 
 JIEAOSF = IIEAOSF_len;
 } 
@@ -1048,7 +1048,7 @@ JIEAOSF = GIEAOSF_rem;
 KIEAOSF_size = JIEAOSF;
  /* line 193: */
  /* line 194: */
-if ( (KIEAOSF_size>0) )
+if (KIEAOSF_size>0)
 { 
 LIEAOSF_extent = (KIEAOSF_size-1);
  /* line 195: */
@@ -1060,7 +1060,7 @@ OIEAOSF = (*(&(Ch->Buffer))) ;
 QIEAOSF = A_VTRIM(PIEAOSF,(OIEAOSF),A_VTSCRIPT(&(PIEAOSF.upb),(OIEAOSF).upb,HIEAOSF_start,(HIEAOSF_start+LIEAOSF_extent))) ;
 SIEAOSF = A_R1TRIM(NIEAOSF,(Rrc),A_RTSCRIPT(&(NIEAOSF.dim[0]),&((Rrc).dim[0]),EIEAOSF_bottom,(EIEAOSF_bottom+LIEAOSF_extent),1)) ;
 TIEAOSF = A_VECARR(QIEAOSF,RIEAOSF) ;
-A_R1ASSIGN2(TIEAOSF,SIEAOSF,A68_CHAR );
+(void)(A_R1ASSIGN2(TIEAOSF,SIEAOSF,A68_CHAR ));
  /* line 198: */
 WIEAOSF = A_R1TRIM(VIEAOSF,(Rrc),A_RTSCRIPT(&(VIEAOSF.dim[0]),&((Rrc).dim[0]),(EIEAOSF_bottom+KIEAOSF_size),(Rrc).dim[0].upb,1)) ;
 XIEAOSF = WIEAOSF.dim[0].upb - WIEAOSF.dim[0].lwb;
@@ -1095,45 +1095,45 @@ return;
 
 A68_BOOL  EJEAOSF_get(A68_84 * Ch, A68_115  In)
 { 
-A68_96  FJEAOSF_elem;
+A68_96  FJEAOSF_elem A_UNUSED = {0};
 A68_96 * GJEAOSF;  /* forall control - []x */
 A68_INT  HJEAOSF;  /* forall loop counter */
 A68_96  IJEAOSF;  /* united object - for case conformity */
-A68_INT * JJEAOSF_ri;
-A68_71  KJEAOSF_rvi;
-A68_INT * LJEAOSF_i;
+A68_INT * JJEAOSF_ri A_UNUSED = {0};
+A68_71  KJEAOSF_rvi A_UNUSED = {0};
+A68_INT * LJEAOSF_i A_UNUSED = {0};
 A68_INT  MJEAOSF;  /* forall loop counter */
-A68_97  NJEAOSF_rri;
-A68_INT * OJEAOSF_i;
+A68_97  NJEAOSF_rri A_UNUSED = {0};
+A68_INT * OJEAOSF_i A_UNUSED = {0};
 A68_INT  PJEAOSF;  /* forall loop counter */
-A68_BITS * QJEAOSF_rbt;
-A68_98  RJEAOSF_rvbt;
-A68_BITS * SJEAOSF_bt;
+A68_BITS * QJEAOSF_rbt A_UNUSED = {0};
+A68_98  RJEAOSF_rvbt A_UNUSED = {0};
+A68_BITS * SJEAOSF_bt A_UNUSED = {0};
 A68_INT  TJEAOSF;  /* forall loop counter */
-A68_99  UJEAOSF_rrbt;
-A68_BITS * VJEAOSF_bt;
+A68_99  UJEAOSF_rrbt A_UNUSED = {0};
+A68_BITS * VJEAOSF_bt A_UNUSED = {0};
 A68_INT  WJEAOSF;  /* forall loop counter */
-A68_CHAR * XJEAOSF_rc;
-A68_VC  YJEAOSF_rvc;
+A68_CHAR * XJEAOSF_rc A_UNUSED = {0};
+A68_VC  YJEAOSF_rvc A_UNUSED = {0};
 A68_RC  ZJEAOSF;  /* OPERATORS - vector -> row */
-A68_RC  AKEAOSF_rrc;
-A68_BOOL * BKEAOSF_rbl;
-A68_100  CKEAOSF_rvbl;
-A68_BOOL * DKEAOSF_bb;
+A68_RC  AKEAOSF_rrc A_UNUSED = {0};
+A68_BOOL * BKEAOSF_rbl A_UNUSED = {0};
+A68_100  CKEAOSF_rvbl A_UNUSED = {0};
+A68_BOOL * DKEAOSF_bb A_UNUSED = {0};
 A68_INT  EKEAOSF;  /* forall loop counter */
-A68_101  FKEAOSF_rrbl;
-A68_BOOL * GKEAOSF_bb;
+A68_101  FKEAOSF_rrbl A_UNUSED = {0};
+A68_BOOL * GKEAOSF_bb A_UNUSED = {0};
 A68_INT  HKEAOSF;  /* forall loop counter */
-A68_REAL * IKEAOSF_rr;
-A68_102  JKEAOSF_rrr;
-A68_REAL * KKEAOSF_r;
+A68_REAL * IKEAOSF_rr A_UNUSED = {0};
+A68_102  JKEAOSF_rrr A_UNUSED = {0};
+A68_REAL * KKEAOSF_r A_UNUSED = {0};
 A68_INT  LKEAOSF;  /* forall loop counter */
-A68_103  MKEAOSF_rvr;
-A68_REAL * NKEAOSF_r;
+A68_103  MKEAOSF_rvr A_UNUSED = {0};
+A68_REAL * NKEAOSF_r A_UNUSED = {0};
 A68_INT  OKEAOSF;  /* forall loop counter */
-A68_88  PKEAOSF_proc;
-A68_104  QKEAOSF_struct;
-A68_INT  RKEAOSF_i;
+A68_88  PKEAOSF_proc A_UNUSED = {0};
+A68_104  QKEAOSF_struct A_UNUSED = {0};
+A68_INT  RKEAOSF_i A_UNUSED = {0};
 A68_INT  SKEAOSF;  /* to part of loop */
 A68_104  TKEAOSF;  /* OPERATORS - straight index */
 A68_96  UKEAOSF;  /* OPERATORS - straight index result */
@@ -1160,7 +1160,7 @@ switch ( IJEAOSF.mode )
 case 1: /* REF INT */
 JJEAOSF_ri = (IJEAOSF.data.mode1);
  /* line 209: */
-(*JJEAOSF_ri) = EGEAOSF_getint(Ch);
+(void)((*JJEAOSF_ri) = EGEAOSF_getint(Ch));
 break;
 case 2: /* REF VECTOR [] INT */
 KJEAOSF_rvi = (IJEAOSF.data.mode2);
@@ -1170,7 +1170,7 @@ for (;MJEAOSF-- >= 0;
 (LJEAOSF_i++
 ) )
 {
-(*LJEAOSF_i) = EGEAOSF_getint(Ch);
+(void)((*LJEAOSF_i) = EGEAOSF_getint(Ch));
 }
  /* line 210: */
 break;
@@ -1182,14 +1182,14 @@ for (;PJEAOSF-- >= 0;
 (OJEAOSF_i += NJEAOSF_rri.dim[0].stride
 ) )
 {
-(*OJEAOSF_i) = EGEAOSF_getint(Ch);
+(void)((*OJEAOSF_i) = EGEAOSF_getint(Ch));
 }
  /* line 211: */
 break;
 case 4: /* REF BITS */
 QJEAOSF_rbt = (IJEAOSF.data.mode4);
  /* line 212: */
-(*QJEAOSF_rbt) = (A68_BITS )HGEAOSF_gethex(Ch);
+(void)((*QJEAOSF_rbt) = (A68_BITS )HGEAOSF_gethex(Ch));
 break;
 case 5: /* REF VECTOR [] BITS */
 RJEAOSF_rvbt = (IJEAOSF.data.mode5);
@@ -1199,7 +1199,7 @@ for (;TJEAOSF-- >= 0;
 (SJEAOSF_bt++
 ) )
 {
-(*SJEAOSF_bt) = (A68_BITS )HGEAOSF_gethex(Ch);
+(void)((*SJEAOSF_bt) = (A68_BITS )HGEAOSF_gethex(Ch));
 }
  /* line 213: */
 break;
@@ -1211,29 +1211,29 @@ for (;WJEAOSF-- >= 0;
 (VJEAOSF_bt += UJEAOSF_rrbt.dim[0].stride
 ) )
 {
-(*VJEAOSF_bt) = (A68_BITS )HGEAOSF_gethex(Ch);
+(void)((*VJEAOSF_bt) = (A68_BITS )HGEAOSF_gethex(Ch));
 }
  /* line 214: */
 break;
 case 7: /* REF CHAR */
 XJEAOSF_rc = (IJEAOSF.data.mode7);
  /* line 215: */
-(*XJEAOSF_rc) = TEEAOSF_getchar(Ch);
+(void)((*XJEAOSF_rc) = TEEAOSF_getchar(Ch));
 break;
 case 8: /* REF VECTOR [] CHAR */
 YJEAOSF_rvc = (IJEAOSF.data.mode8);
  /* line 216: */
-DIEAOSF_basicgetstring(Ch, A_VECARR(YJEAOSF_rvc,ZJEAOSF));
+(void)(DIEAOSF_basicgetstring(Ch, A_VECARR(YJEAOSF_rvc,ZJEAOSF)));
 break;
 case 9: /* REF [] CHAR */
 AKEAOSF_rrc = (IJEAOSF.data.mode9);
  /* line 217: */
-DIEAOSF_basicgetstring(Ch, AKEAOSF_rrc);
+(void)(DIEAOSF_basicgetstring(Ch, AKEAOSF_rrc));
 break;
 case 10: /* REF BOOL */
 BKEAOSF_rbl = (IJEAOSF.data.mode10);
  /* line 218: */
-(*BKEAOSF_rbl) = YGEAOSF_getbool(Ch);
+(void)((*BKEAOSF_rbl) = YGEAOSF_getbool(Ch));
 break;
 case 11: /* REF VECTOR [] BOOL */
 CKEAOSF_rvbl = (IJEAOSF.data.mode11);
@@ -1243,7 +1243,7 @@ for (;EKEAOSF-- >= 0;
 (DKEAOSF_bb++
 ) )
 {
-(*DKEAOSF_bb) = YGEAOSF_getbool(Ch);
+(void)((*DKEAOSF_bb) = YGEAOSF_getbool(Ch));
 }
  /* line 219: */
 break;
@@ -1255,14 +1255,14 @@ for (;HKEAOSF-- >= 0;
 (GKEAOSF_bb += FKEAOSF_rrbl.dim[0].stride
 ) )
 {
-(*GKEAOSF_bb) = YGEAOSF_getbool(Ch);
+(void)((*GKEAOSF_bb) = YGEAOSF_getbool(Ch));
 }
  /* line 220: */
 break;
 case 13: /* REF REAL */
 IKEAOSF_rr = (IJEAOSF.data.mode13);
  /* line 221: */
-(*IKEAOSF_rr) = NGEAOSF_getreal(Ch);
+(void)((*IKEAOSF_rr) = NGEAOSF_getreal(Ch));
 break;
 case 14: /* REF VECTOR [] REAL */
 JKEAOSF_rrr = (IJEAOSF.data.mode14);
@@ -1272,7 +1272,7 @@ for (;LKEAOSF-- >= 0;
 (KKEAOSF_r++
 ) )
 {
-(*KKEAOSF_r) = NGEAOSF_getreal(Ch);
+(void)((*KKEAOSF_r) = NGEAOSF_getreal(Ch));
 }
  /* line 222: */
 break;
@@ -1284,14 +1284,14 @@ for (;OKEAOSF-- >= 0;
 (NKEAOSF_r += MKEAOSF_rvr.dim[0].stride
 ) )
 {
-(*NKEAOSF_r) = NGEAOSF_getreal(Ch);
+(void)((*NKEAOSF_r) = NGEAOSF_getreal(Ch));
 }
  /* line 223: */
 break;
 case 16: /* PROC(REF MODE84) VOID */
 PKEAOSF_proc = (IJEAOSF.data.mode16);
  /* line 224: */
-A_CALLPROC(PKEAOSF_proc,(Ch),(Ch,(PKEAOSF_proc).nonlocals));
+(void)(A_CALLPROC(PKEAOSF_proc,(Ch),(Ch,(PKEAOSF_proc).nonlocals)));
 break;
 case 17: /* STRAIGHT MODE96 */
 QKEAOSF_struct = (IJEAOSF.data.mode17);
@@ -1300,7 +1300,7 @@ for ( RKEAOSF_i = 1;
 RKEAOSF_i <= SKEAOSF;
 RKEAOSF_i += 1 )
 { 
-EJEAOSF_get(Ch, A_HVEC(VKEAOSF,A_STRINDEX_RTN(QKEAOSF_struct,RKEAOSF_i,TKEAOSF,UKEAOSF),A68_96 ));
+(void)(EJEAOSF_get(Ch, A_HVEC(VKEAOSF,A_STRINDEX_RTN(QKEAOSF_struct,RKEAOSF_i,TKEAOSF,UKEAOSF),A68_96 )));
 }
  /* line 225: */
  /* line 226: */
@@ -1328,7 +1328,7 @@ static A68_BOOL A_invoked = A68_FALSE;
 static char *A_config_arguments[] = {"/home/vak/Project/Algol/Algol-68RS-Source/src/a68toc","-v","-uname","seedfile","-staredit","59LR","-lib","/home/vak/Project/Algol/Algol-68RS-Source/a68config","-dir","/home/vak/Project/Algol/Algol-68RS-Source/a68config","-dir","/home/vak/Project/Algol/Algol-68RS-Source/liba68prel","getstrings.a68",""};
 static char *A_config_environment[] = {"A68_LIB=/home/vak/Project/Algol/Algol-68RS-Source/a68config","A68_CDIR=","A68_DIR=","A68_STAREDIT=","A68_NAMESEED=nameseed","CTRANS_NAMESEED=",""};
 static char *A_config_modinfo_files[] = {"/home/vak/Project/Algol/Algol-68RS-Source/a68config/a68config.m","/home/vak/Project/Algol/Algol-68RS-Source/liba68prel/iobasics.m","/home/vak/Project/Algol/Algol-68RS-Source/liba68prel/osif.m",""};
-static A_CONFIG_INFO A_config;
+static A_CONFIG_INFO A_config A_UNUSED;
 /* --- end of configuration information */
 A68_INT * IEEAOSF;  /* YIELD */
 A68_38  JEEAOSF;  /* clause result */
@@ -1341,15 +1341,15 @@ KGDAOSF();   /* USE iobasics */
 CSCAOSF();   /* USE osif */
 /* --- Initialise configuration information */
 A_config.source_file = "/home/vak/Project/Algol/Algol-68RS-Source/liba68prel/getstrings.a68";
-A_config.translation_time = "Thu Nov  5 20:46:56 2026";
+A_config.translation_time = "Thu Nov  5 21:10:59 2026";
 A_config.ctrans_version = "Ctrans_34.6";
 A_config.name_seed = "YDEAOSF (from seed file) ";
-A_config.spec_change_time = "Thu Nov  5 20:46:56 2026";
+A_config.spec_change_time = "Thu Nov  5 21:10:59 2026";
 A_config.arguments = A_config_arguments;
 A_config.environment = A_config_environment;
 A_config.modinfo_files = A_config_modinfo_files;
 A_PROC_ENTRY(DECS getstrings);
-UEAALIB_a68config(LGAALIB_configinfo, DEEAOSF);
+(void)(UEAALIB_a68config(LGAALIB_configinfo, DEEAOSF));
  /* line 42: */
  /* line 48: */
  /* line 50: */

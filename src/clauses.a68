@@ -40,6 +40,8 @@ COMMENT
                                   number 2.5 
 29:03:95  34.002  ELLA  Modcprght Change copyright header
 07:10:99  34.002  SL    Phoenix Engineering: spelling errors
+05:11:26  34.003  SV    Wall      Void discarded call results; bracket
+                                  if conditions.
 COMMENT
 
 {
@@ -118,7 +120,28 @@ BEGIN
 			"evaluate no result: mode of value not void"
   			ASSERT mode OF value = void mode;
  			write c stream
-			(( ( ISSKIP value | "" | GETCFRAGMENT value ), ";",
+			(( ( ISSKIP value | ""
+			   | CFRAGMENT f = GETCFRAGMENT value;
+			     PROC is ident = BOOL:
+			     BEGIN
+				BOOL ok := UPB f > 0;
+				FOR i TO UPB f WHILE ok
+				DO CHAR c = f[i];
+				   ok := c = "_" OREL (c >= "a" ANDTH c <= "z")
+					 OREL (c >= "A" ANDTH c <= "Z")
+					 OREL (c >= "0" ANDTH c <= "9")
+				OD;
+				ok
+			     END;
+			     { void a call/macro so its result is not "unused";
+			       a lone identifier (struct result temp) has no effect }
+			     ( is ident
+			     | ""
+			     |: UPB f > 0 ANDTH f[UPB f] = ")"
+			     | "(void)(" + f + ")"
+			     | f
+			     )
+			   ), ";",
 			   cnewline
 			 ),codestream
 			)
@@ -300,15 +323,65 @@ BEGIN
 	SKIP
 END;
 
+PROC	condition = ( CFRAGMENT frag ) CFRAGMENT:
+{
+	C condition text for "if": redundant outer brackets are removed
+	(clang -Wparentheses-equality); a top-level assignment is
+	double-bracketed (gcc -Wparentheses).
+}
+BEGIN
+	CFRAGMENT f = frag;
+	INT lo := 1, hi := UPB f;	{ f[lo:hi] is the condition }
+	{ Scan f[lo:hi] outside C quotes; 'at top' is called for each char
+	  at bracket depth 0 and stops the scan if it yields FALSE }
+	PROC scan = ( PROC( INT )BOOL at top ) VOID:
+	BEGIN
+		INT d := 0, i := lo;
+		CHAR q := " ";		{ " " = not in a quote }
+		WHILE i <= hi
+		DO	CHAR c = f[i];
+			IF	q /= " "
+			THEN	( c = "\" | i +:= 1 |: c = q | q := " " )
+			ELIF	c = "'" OREL c = """"
+			THEN	q := c
+			ELIF	c = "("
+			THEN	d +:= 1
+			ELIF	c = ")"
+			THEN	d -:= 1;
+				( d = 0 | ( NOT at top( i ) | i := hi ) )
+			ELIF	d = 0
+			THEN	( NOT at top( i ) | i := hi )
+			FI;
+			i +:= 1
+		OD
+	END;
+	PROC wholly bracketed = BOOL:
+	IF	hi - lo < 1 OREL f[lo] /= "(" OREL f[hi] /= ")"
+	THEN	FALSE
+	ELSE	{ the first bracket must close at the end }
+		INT first close := 0;
+		scan( ( INT i ) BOOL: ( first close := i; FALSE ) );
+		first close = hi
+	FI;
+	WHILE	wholly bracketed DO lo +:= 1; hi -:= 1 OD;
+	BOOL assignment := FALSE;
+	scan( ( INT i ) BOOL:
+	      ( assignment := i > lo ANDTH i < hi ANDTH f[i] = "="
+			      ANDTH f[i-1] = " " ANDTH f[i+1] = " ";
+		NOT assignment ) );
+	CFRAGMENT c = f[lo:hi];
+	( assignment | "(" + c + ")" | c )
+END;
+
 PROC	then = ( REF VALUE enquiry ) VOID:
 BEGIN
-	CFRAGMENT boolean expr = 
+	CFRAGMENT boolean expr =
 		IF	ISSKIP enquiry
 		THEN    "A_ENQ_SKIP"
-		ELSE    GETCFRAGMENT enquiry
+		ELSE    condition( GETCFRAGMENT enquiry )
 		FI;
 	write c stream
-	(( "if ( ", boolean expr, " )", cnewline,
+	(( "if (", boolean expr, ")", cnewline,
 	   "{ ", cnewline
 	 ),CODESTREAM current level
 	)

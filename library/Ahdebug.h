@@ -82,7 +82,7 @@ extern int Agc_debug_level;
 #ifdef	A_DEBUG
 
 /* We need ASSERT to be an expression so it can freely be used in macros */
-#	define	ASSERT(test,fn_name,mess)	( (test) ? 0 : GC_ERROR(internal error in fn_name -- mess) )
+#	define	ASSERT(test,fn_name,mess)	( (test) ? (void)0 : (void)GC_ERROR(internal error in fn_name -- mess) )
 #	define	ASSERT_DECL(declaration)	declaration;
 #	define	ASSERT_INIT(initialisation)	{initialisation;}
 
@@ -104,7 +104,7 @@ extern int Agc_debug_level;
 
 #else
 
-#	define	ASSERT(test,fn_name,mess)	0	/* most C compilers optimise voided constants out */
+#	define	ASSERT(test,fn_name,mess)	((void)0)
 #	define	ASSERT_DECL(declaration)
 #	define	ASSERT_INIT(initialisation)
 

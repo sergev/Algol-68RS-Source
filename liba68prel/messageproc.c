@@ -182,49 +182,49 @@ extern void BCAAOSF(void);   /* strops */
 /* --- end of DECS initialisation functions --- */
 static A68_42   CSAAOSF = {"$Id: messageproc.a68,v 1.1.1.1 2001-05-07 10:16:12 sian Exp $"}; 
 A_GISVEC(A68_VC ,DSAAOSF,CSAAOSF,61)
-A68_31  ESAAOSF_anonymous;
-A68_52  FSAAOSF_anonymous;
-A68_53  GSAAOSF_anonymous;
+A68_31  ESAAOSF_anonymous A_UNUSED;
+A68_52  FSAAOSF_anonymous A_UNUSED;
+A68_53  GSAAOSF_anonymous A_UNUSED;
 static A68_65   XTAAOSF = {"direct call"}; 
 A_GISVEC(A68_VC ,YTAAOSF,XTAAOSF,11)
-A68_VC  ZTAAOSF_s;
-A68_46  GUAAOSF_nilmsg;
-A68_44  IUAAOSF_system;
-A68_44  KUAAOSF_fatal;
-A68_44  MUAAOSF_user;
-A68_44  OUAAOSF_error;
-A68_44  QUAAOSF_outerr;
-A68_44  SUAAOSF_log;
-A68_44  UUAAOSF_output;
-A68_44  WUAAOSF_logpart;
-A68_44  YUAAOSF_outpart;
-A68_44  AVAAOSF_diag0;
-A68_44  CVAAOSF_diag1;
-A68_44  EVAAOSF_diag2;
-A68_44  GVAAOSF_diag3;
-A68_44  IVAAOSF_diag4;
-A68_BITS  JVAAOSF_system_class;
-A68_BITS  KVAAOSF_fatal_class;
-A68_BITS  LVAAOSF_user_class;
-A68_BITS  MVAAOSF_error_class;
-A68_BITS  NVAAOSF_outerr_class;
-A68_BITS  OVAAOSF_log_class;
-A68_BITS  PVAAOSF_output_class;
-A68_BITS  QVAAOSF_logpart_class;
-A68_BITS  RVAAOSF_outpart_class;
-A68_BITS  SVAAOSF_diag0_class;
-A68_BITS  TVAAOSF_diag1_class;
-A68_BITS  UVAAOSF_diag2_class;
-A68_BITS  VVAAOSF_diag3_class;
-A68_BITS  WVAAOSF_diag4_class;
+A68_VC  ZTAAOSF_s A_UNUSED;
+A68_46  GUAAOSF_nilmsg A_UNUSED;
+A68_44  IUAAOSF_system A_UNUSED;
+A68_44  KUAAOSF_fatal A_UNUSED;
+A68_44  MUAAOSF_user A_UNUSED;
+A68_44  OUAAOSF_error A_UNUSED;
+A68_44  QUAAOSF_outerr A_UNUSED;
+A68_44  SUAAOSF_log A_UNUSED;
+A68_44  UUAAOSF_output A_UNUSED;
+A68_44  WUAAOSF_logpart A_UNUSED;
+A68_44  YUAAOSF_outpart A_UNUSED;
+A68_44  AVAAOSF_diag0 A_UNUSED;
+A68_44  CVAAOSF_diag1 A_UNUSED;
+A68_44  EVAAOSF_diag2 A_UNUSED;
+A68_44  GVAAOSF_diag3 A_UNUSED;
+A68_44  IVAAOSF_diag4 A_UNUSED;
+A68_BITS  JVAAOSF_system_class A_UNUSED;
+A68_BITS  KVAAOSF_fatal_class A_UNUSED;
+A68_BITS  LVAAOSF_user_class A_UNUSED;
+A68_BITS  MVAAOSF_error_class A_UNUSED;
+A68_BITS  NVAAOSF_outerr_class A_UNUSED;
+A68_BITS  OVAAOSF_log_class A_UNUSED;
+A68_BITS  PVAAOSF_output_class A_UNUSED;
+A68_BITS  QVAAOSF_logpart_class A_UNUSED;
+A68_BITS  RVAAOSF_outpart_class A_UNUSED;
+A68_BITS  SVAAOSF_diag0_class A_UNUSED;
+A68_BITS  TVAAOSF_diag1_class A_UNUSED;
+A68_BITS  UVAAOSF_diag2_class A_UNUSED;
+A68_BITS  VVAAOSF_diag3_class A_UNUSED;
+A68_BITS  WVAAOSF_diag4_class A_UNUSED;
 static A68_66   YVAAOSF = {"????"}; 
 A_GISVEC(A68_VC ,ZVAAOSF,YVAAOSF,4)
-static A68_45  BWAAOSF_unsetmsg;
-A68_35  LWAAOSF_nullmsg;
-A68_47  QWAAOSF_no_messages;
-A68_INT  SWAAOSF_diagnostic_level;
+static A68_45  BWAAOSF_unsetmsg A_UNUSED;
+A68_35  LWAAOSF_nullmsg A_UNUSED;
+A68_47  QWAAOSF_no_messages A_UNUSED;
+A68_INT  SWAAOSF_diagnostic_level A_UNUSED;
 #define RYAAOSF_buf_size 2048
-static A68_VC  UYAAOSF_buffer;
+static A68_VC  UYAAOSF_buffer A_UNUSED;
 static A68_78   MABAOSF = {"translate_msg:  "}; 
 A_GISVEC(A68_VC ,NABAOSF,MABAOSF,16)
 static A68_79   OABAOSF = {" - "}; 
@@ -306,7 +306,7 @@ A_STATIC A68_VOID  MBBAOSF_make_sysmsg(A68_VC  Text, void *NonLocals);
 
 A_STATIC A68_VOID  CTAAOSF_generator(A68_BOOL  BTAAOSF_anonymous, A68_50  *ReturnedValue)
 { 
-A68_57  DTAAOSF_anonymous;
+A68_57  DTAAOSF_anonymous A_UNUSED = {0};
 A68_VC  ETAAOSF;  /* avoid structure result */
 A68_54 * FTAAOSF;  /* YIELD */
 A68_50  GTAAOSF;  /* clause result */
@@ -324,8 +324,8 @@ return;
 A_STATIC A68_VOID  YSAAOSF_generator(A68_BOOL  XSAAOSF_anonymous, A68_51  *ReturnedValue)
 { 
 A68_51  ATAAOSF;  /* OPERATORS - dynamic generator */
-A68_58  ZSAAOSF_anonymous;
-A68_57 * HTAAOSF_anonymous;
+A68_58  ZSAAOSF_anonymous A_UNUSED = {0};
+A68_57 * HTAAOSF_anonymous A_UNUSED = {0};
 A68_INT  ITAAOSF;  /* forall loop counter */
 A68_50  JTAAOSF;  /* avoid structure result */
 A68_51  KTAAOSF;  /* clause result */
@@ -411,8 +411,8 @@ return;
 A_STATIC A68_VOID  NSAAOSF_generator(A68_BOOL  MSAAOSF_anonymous, A68_35  *ReturnedValue)
 { 
 A68_35  PSAAOSF;  /* OPERATORS - dynamic generator */
-A68_55  OSAAOSF_anonymous;
-A68_54 * QSAAOSF_anonymous;
+A68_55  OSAAOSF_anonymous A_UNUSED = {0};
+A68_54 * QSAAOSF_anonymous A_UNUSED = {0};
 A68_INT  RSAAOSF;  /* forall loop counter */
 A68_VC  SSAAOSF;  /* avoid structure result */
 A68_35  TSAAOSF;  /* clause result */
@@ -439,7 +439,7 @@ return;
 
 A_STATIC A68_VOID  WSAAOSF_generator(A68_BOOL  VSAAOSF_anonymous, A68_49  *ReturnedValue)
 { 
-A68_60  LTAAOSF_anonymous;
+A68_60  LTAAOSF_anonymous A_UNUSED = {0};
 A68_VC  MTAAOSF;  /* avoid structure result */
 A68_54 * NTAAOSF;  /* YIELD */
 A68_51  OTAAOSF;  /* avoid structure result */
@@ -486,8 +486,8 @@ return;
 A_STATIC A68_VOID  DWAAOSF_generator(A68_BOOL  CWAAOSF_anonymous, A68_35  *ReturnedValue)
 { 
 A68_35  FWAAOSF;  /* OPERATORS - dynamic generator */
-A68_55  EWAAOSF_anonymous;
-A68_54 * GWAAOSF_anonymous;
+A68_55  EWAAOSF_anonymous A_UNUSED = {0};
+A68_54 * GWAAOSF_anonymous A_UNUSED = {0};
 A68_INT  HWAAOSF;  /* forall loop counter */
 A68_VC  IWAAOSF;  /* avoid structure result */
 A68_35  JWAAOSF;  /* clause result */
@@ -528,9 +528,9 @@ return;
 A_STATIC A68_BITS  UWAAOSF_get(A68_68  M)
 { 
 A68_68  VWAAOSF;  /* united object - for case conformity */
-A68_44  WWAAOSF_mno;
+A68_44  WWAAOSF_mno A_UNUSED = {0};
 A68_BITS  XWAAOSF;  /* clause result */
-A68_45  YWAAOSF_msg;
+A68_45  YWAAOSF_msg A_UNUSED = {0};
 A_PROC_ENTRY(get);
  /* line 183: */
 VWAAOSF = M ;
@@ -582,7 +582,7 @@ return( DXAAOSF );
 
 A68_BOOL  FXAAOSF_sysfault_msg(A68_68  Msg)
 { 
-A68_BITS  GXAAOSF_m;
+A68_BITS  GXAAOSF_m A_UNUSED = {0};
 A68_BOOL  HXAAOSF;  /* clause result */
 A_PROC_ENTRY(sysfault_msg);
  /* line 192: */
@@ -597,7 +597,7 @@ return( HXAAOSF );
 
 A68_BOOL  JXAAOSF_error_msg(A68_68  Msg)
 { 
-A68_BITS  KXAAOSF_m;
+A68_BITS  KXAAOSF_m A_UNUSED = {0};
 A68_BOOL  LXAAOSF;  /* optbool result */
 A68_BOOL  MXAAOSF;  /* optbool result */
 A68_BOOL  NXAAOSF;  /* clause result */
@@ -626,7 +626,7 @@ return( NXAAOSF );
 
 A68_BOOL  PXAAOSF_abort_msg(A68_68  Msg)
 { 
-A68_BITS  QXAAOSF_m;
+A68_BITS  QXAAOSF_m A_UNUSED = {0};
 A68_BOOL  RXAAOSF;  /* optbool result */
 A68_BOOL  SXAAOSF;  /* clause result */
 A_PROC_ENTRY(abort_msg);
@@ -646,7 +646,7 @@ return( SXAAOSF );
 
 A68_BOOL  UXAAOSF_cli_msg(A68_68  Msg)
 { 
-A68_BITS  VXAAOSF_m;
+A68_BITS  VXAAOSF_m A_UNUSED = {0};
 A68_BOOL  WXAAOSF;  /* optbool result */
 A68_BOOL  XXAAOSF;  /* clause result */
 A_PROC_ENTRY(cli_msg);
@@ -666,7 +666,7 @@ return( XXAAOSF );
 
 A68_BOOL  ZXAAOSF_log_msg(A68_68  Msg)
 { 
-A68_BITS  AYAAOSF_m;
+A68_BITS  AYAAOSF_m A_UNUSED = {0};
 A68_BOOL  BYAAOSF;  /* optbool result */
 A68_BOOL  CYAAOSF;  /* clause result */
 A_PROC_ENTRY(log_msg);
@@ -686,7 +686,7 @@ return( CYAAOSF );
 
 A68_BOOL  EYAAOSF_out_msg(A68_68  Msg)
 { 
-A68_BITS  FYAAOSF_m;
+A68_BITS  FYAAOSF_m A_UNUSED = {0};
 A68_BOOL  GYAAOSF;  /* optbool result */
 A68_BOOL  HYAAOSF;  /* clause result */
 A_PROC_ENTRY(out_msg);
@@ -738,14 +738,14 @@ return( QYAAOSF );
 
 A68_VOID  XYAAOSF_make_msgno(A68_INT  Number, A68_49  Facility, A68_44  *ReturnedValue)
 { 
-A68_47  YYAAOSF_messages;
-A68_INT  ZYAAOSF_upb;
-A68_45 * AZAAOSF_msg;
+A68_47  YYAAOSF_messages A_UNUSED = {0};
+A68_INT  ZYAAOSF_upb A_UNUSED = {0};
+A68_45 * AZAAOSF_msg A_UNUSED = {0};
 A68_INT  BZAAOSF;  /* forall loop counter */
-A68_46 * CZAAOSF_msgfacility;
+A68_46 * CZAAOSF_msgfacility A_UNUSED = {0};
 A68_46  DZAAOSF;  /* collateral clause result */
 A68_VC  EZAAOSF;  /* avoid structure result */
-A68_50  FZAAOSF_setup;
+A68_50  FZAAOSF_setup A_UNUSED = {0};
 A68_51  GZAAOSF;  /* forall yield */
 A68_50 * HZAAOSF;  /* forall control - []x */
 A68_INT  IZAAOSF;  /* forall loop counter */
@@ -763,7 +763,7 @@ A68_46  QZAAOSF;  /* collateral clause result */
 A68_VC  RZAAOSF;  /* avoid structure result */
 A68_46 * SZAAOSF;  /* YIELD */
 A68_44  TZAAOSF;  /* clause result */
-A68_44  UZAAOSF_no;
+A68_44  UZAAOSF_no A_UNUSED = {0};
 A68_44  VZAAOSF;  /* collateral clause result */
 A_PROC_ENTRY(make_msgno);
  /* line 223: */
@@ -774,7 +774,7 @@ YYAAOSF_messages = Facility.Messages;
 ZYAAOSF_upb = YYAAOSF_messages.upb;
  /* line 227: */
  /* line 228: */
-if ( !(*Facility.Initialised) )
+if (!(*Facility.Initialised))
 { 
 BZAAOSF = YYAAOSF_messages.upb -1;
 AZAAOSF_msg = YYAAOSF_messages.data;
@@ -823,7 +823,7 @@ if ( ! OZAAOSF )
 { /* line 238: */
 OZAAOSF = (Number>ZYAAOSF_upb);
 }
-if ( OZAAOSF )
+if (OZAAOSF)
 { 
 PZAAOSF.Number = Number;
 ZCAAOSF_makervc( Facility.Name, &RZAAOSF );
@@ -831,7 +831,7 @@ QZAAOSF.Name = RZAAOSF;
 QZAAOSF.Messages = YYAAOSF_messages;
  /* line 239: */
 SZAAOSF = A_HEAP(A68_46 ) ;
-(*SZAAOSF) = QZAAOSF ;
+(void)((*SZAAOSF) = QZAAOSF) ;
 PZAAOSF.Facility = SZAAOSF;
  /* line 240: */
 PZAAOSF.Class = IUAAOSF_system.Class;
@@ -842,7 +842,7 @@ else
 UZAAOSF_no = (*(&((&A_VINDEX(YYAAOSF_messages,Number))->Msgno)));
  /* line 241: */
  /* line 242: */
-if ( (UZAAOSF_no.Number<=0) )
+if (UZAAOSF_no.Number<=0)
 { 
 VZAAOSF.Number = UZAAOSF_no.Number;
 VZAAOSF.Facility = UZAAOSF_no.Facility;
@@ -883,23 +883,23 @@ return( ZZAAOSF );
 A68_VOID  EABAOSF_translate_msg(A68_44  Msgno, A68_35  Params, A68_45  *ReturnedValue)
 { 
 A68_77  HABAOSF_fail;   /* proc value of non-global proc */
-A68_46 * TABAOSF_facility;
-A68_47  UABAOSF_messages;
-A68_INT  VABAOSF_number;
+A68_46 * TABAOSF_facility A_UNUSED = {0};
+A68_47  UABAOSF_messages A_UNUSED = {0};
+A68_INT  VABAOSF_number A_UNUSED = {0};
 A68_45  XABAOSF;  /* clause result */
 A68_45  ZABAOSF;  /* avoid structure result */
 A68_BOOL  ABBAOSF;  /* optbool result */
 A68_45  DBBAOSF;  /* avoid structure result */
-A68_45  EBBAOSF_message;
-A68_VC  FBBAOSF_text;
-A68_INT  GBBAOSF_bind;
-A68_INT  HBBAOSF_tind;
-A68_INT  IBBAOSF_pno;
-A68_BOOL  JBBAOSF_failed;
+A68_45  EBBAOSF_message A_UNUSED = {0};
+A68_VC  FBBAOSF_text A_UNUSED = {0};
+A68_INT  GBBAOSF_bind A_UNUSED = {0};
+A68_INT  HBBAOSF_tind A_UNUSED = {0};
+A68_INT  IBBAOSF_pno A_UNUSED = {0};
+A68_BOOL  JBBAOSF_failed A_UNUSED = {0};
 A68_39  LBBAOSF_make_sysmsg;   /* proc value of non-global proc */
 A68_BOOL  PBBAOSF;  /* optbool result */
-A68_VC  SBBAOSF_p;
-A68_INT  VBBAOSF_lwb;
+A68_VC  SBBAOSF_p A_UNUSED = {0};
+A68_INT  VBBAOSF_lwb A_UNUSED = {0};
 A68_VC  WBBAOSF;  /* OPERATORS - trim index */
 A68_VC  XBBAOSF;  /* YIELD */
 A68_CHAR * ACBAOSF;  /* YIELD */
@@ -921,7 +921,7 @@ A_CLOSURE( HABAOSF_fail, IABAOSF_fail, JABAOSF_fail );
 (( JABAOSF_fail * ) ( HABAOSF_fail.nonlocals )) -> Msgno = Msgno;
  /* line 261: */
  /* line 262: */
-if ( (Msgno.Facility!=(&GUAAOSF_nilmsg)) )
+if (Msgno.Facility!=(&GUAAOSF_nilmsg))
 { 
 TABAOSF_facility = Msgno.Facility;
  /* line 263: */
@@ -930,7 +930,7 @@ UABAOSF_messages = (*(&(TABAOSF_facility->Messages)));
 VABAOSF_number = Msgno.Number;
  /* line 265: */
  /* line 266: */
-if ( (VABAOSF_number<0) )
+if (VABAOSF_number<0)
 { 
  /* line 267: */
 A_CALLPROC(HABAOSF_fail,(YABAOSF, &ZABAOSF),(YABAOSF, &ZABAOSF,(HABAOSF_fail).nonlocals));
@@ -943,7 +943,7 @@ if ( ! ABBAOSF )
 { /* line 268: */
 ABBAOSF = (VABAOSF_number>UABAOSF_messages.upb);
 }
-if ( ABBAOSF )
+if (ABBAOSF)
 { 
  /* line 269: */
 A_CALLPROC(HABAOSF_fail,(CBBAOSF, &DBBAOSF),(CBBAOSF, &DBBAOSF,(HABAOSF_fail).nonlocals));
@@ -971,27 +971,27 @@ for ( ;; )
  /* line 278: */
 PBBAOSF = ((HBBAOSF_tind+=1)<=FBBAOSF_text.upb);
 if ( PBBAOSF )
-{PBBAOSF = !JBBAOSF_failed;
+{PBBAOSF = (!JBBAOSF_failed);
 }
 if ( !(PBBAOSF) ) break;
  /* line 279: */
-if ( (A_VINDEX(FBBAOSF_text,HBBAOSF_tind)=='*') )
+if (A_VINDEX(FBBAOSF_text,HBBAOSF_tind)=='*')
 { 
  /* line 280: */
-if ( ((IBBAOSF_pno+=1)>Params.upb) )
+if ((IBBAOSF_pno+=1)>Params.upb)
 { 
  /* line 281: */
-A_CALLPROC(LBBAOSF_make_sysmsg,(RBBAOSF),(RBBAOSF,(LBBAOSF_make_sysmsg).nonlocals));
+(void)(A_CALLPROC(LBBAOSF_make_sysmsg,(RBBAOSF),(RBBAOSF,(LBBAOSF_make_sysmsg).nonlocals)));
 } 
 else
 { 
 SBBAOSF_p = A_VINDEX(Params,IBBAOSF_pno);
  /* line 282: */
  /* line 283: */
-if ( ((GBBAOSF_bind+SBBAOSF_p.upb)>RYAAOSF_buf_size) )
+if ((GBBAOSF_bind+SBBAOSF_p.upb)>RYAAOSF_buf_size)
 { 
  /* line 284: */
-A_CALLPROC(LBBAOSF_make_sysmsg,(UBBAOSF),(UBBAOSF,(LBBAOSF_make_sysmsg).nonlocals));
+(void)(A_CALLPROC(LBBAOSF_make_sysmsg,(UBBAOSF),(UBBAOSF,(LBBAOSF_make_sysmsg).nonlocals)));
 } 
 else
 { 
@@ -1001,38 +1001,38 @@ VBBAOSF_lwb = (GBBAOSF_bind+1);
  /* line 287: */
  /* line 288: */
 XBBAOSF = A_VTRIM(WBBAOSF,(UYAAOSF_buffer),A_VTSCRIPT(&(WBBAOSF.upb),(UYAAOSF_buffer).upb,VBBAOSF_lwb,(GBBAOSF_bind+=SBBAOSF_p.upb))) ;
-A_VASSIGN2(SBBAOSF_p,XBBAOSF,A68_CHAR );
+(void)(A_VASSIGN2(SBBAOSF_p,XBBAOSF,A68_CHAR ));
 } 
 } 
 } 
 else
 { 
  /* line 289: */
-if ( ((GBBAOSF_bind+=1)>RYAAOSF_buf_size) )
+if ((GBBAOSF_bind+=1)>RYAAOSF_buf_size)
 { 
  /* line 290: */
-A_CALLPROC(LBBAOSF_make_sysmsg,(ZBBAOSF),(ZBBAOSF,(LBBAOSF_make_sysmsg).nonlocals));
+(void)(A_CALLPROC(LBBAOSF_make_sysmsg,(ZBBAOSF),(ZBBAOSF,(LBBAOSF_make_sysmsg).nonlocals)));
 } 
 else
 { 
  /* line 291: */
  /* line 292: */
 ACBAOSF = (&A_VINDEX(UYAAOSF_buffer,GBBAOSF_bind)) ;
-(*ACBAOSF) = A_VINDEX(FBBAOSF_text,HBBAOSF_tind);
+(void)((*ACBAOSF) = A_VINDEX(FBBAOSF_text,HBBAOSF_tind));
 } 
 } 
 }
  /* line 293: */
  /* line 294: */
  /* line 295: */
-if ( JBBAOSF_failed )
+if (JBBAOSF_failed)
 { 
 XABAOSF = EBBAOSF_message;
 } 
 else
 { 
  /* line 296: */
-if ( (IBBAOSF_pno<Params.upb) )
+if (IBBAOSF_pno<Params.upb)
 { 
  /* line 297: */
 A_CALLPROC(HABAOSF_fail,(CCBAOSF, &DCBAOSF),(CCBAOSF, &DCBAOSF,(HABAOSF_fail).nonlocals));
@@ -1055,7 +1055,7 @@ XABAOSF = ECBAOSF;
 else
 { 
  /* line 302: */
-if ( (Params.upb==1) )
+if (Params.upb==1)
 { 
 GCBAOSF.Msgno = Msgno;
  /* line 303: */
@@ -1090,7 +1090,7 @@ static A68_BOOL A_invoked = A68_FALSE;
 static char *A_config_arguments[] = {"/home/vak/Project/Algol/Algol-68RS-Source/src/a68toc","-v","-uname","seedfile","-staredit","59LR","-lib","/home/vak/Project/Algol/Algol-68RS-Source/a68config","-dir","/home/vak/Project/Algol/Algol-68RS-Source/a68config","-dir","/home/vak/Project/Algol/Algol-68RS-Source/liba68prel","messageproc.a68",""};
 static char *A_config_environment[] = {"A68_LIB=/home/vak/Project/Algol/Algol-68RS-Source/a68config","A68_CDIR=","A68_DIR=","A68_STAREDIT=","A68_NAMESEED=nameseed","CTRANS_NAMESEED=",""};
 static char *A_config_modinfo_files[] = {"/home/vak/Project/Algol/Algol-68RS-Source/a68config/a68config.m","/home/vak/Project/Algol/Algol-68RS-Source/liba68prel/strops.m",""};
-static A_CONFIG_INFO A_config;
+static A_CONFIG_INFO A_config A_UNUSED;
 /* --- end of configuration information */
 A68_31  LSAAOSF;  /* procedure value */
 A68_52  USAAOSF;  /* procedure value */
@@ -1127,15 +1127,15 @@ BAAALIB();   /* USE a68config */
 BCAAOSF();   /* USE strops */
 /* --- Initialise configuration information */
 A_config.source_file = "/home/vak/Project/Algol/Algol-68RS-Source/liba68prel/messageproc.a68";
-A_config.translation_time = "Thu Nov  5 20:46:56 2026";
+A_config.translation_time = "Thu Nov  5 21:10:59 2026";
 A_config.ctrans_version = "Ctrans_34.6";
 A_config.name_seed = "YRAAOSF (from seed file) ";
-A_config.spec_change_time = "Thu Nov  5 20:46:56 2026";
+A_config.spec_change_time = "Thu Nov  5 21:10:59 2026";
 A_config.arguments = A_config_arguments;
 A_config.environment = A_config_environment;
 A_config.modinfo_files = A_config_modinfo_files;
 A_PROC_ENTRY(DECS messageproc);
-UEAALIB_a68config(LGAALIB_configinfo, DSAAOSF);
+(void)(UEAALIB_a68config(LGAALIB_configinfo, DSAAOSF));
  /* line 78: */
  /* line 83: */
 LSAAOSF.fn.fn_global = ISAAOSF_generator;
@@ -1156,7 +1156,7 @@ GSAAOSF_anonymous = RTAAOSF;
 { 
 ZTAAOSF_s = YTAAOSF;
 BUAAOSF_generator( A68_TRUE, &EUAAOSF );
-A_VASSIGN2(ZTAAOSF_s,EUAAOSF,A68_CHAR ) ;
+(void)(A_VASSIGN2(ZTAAOSF_s,EUAAOSF,A68_CHAR )) ;
 WTAAOSF.Name = EUAAOSF;
 } 
 WTAAOSF.Messages = A_VVAC(FUAAOSF);

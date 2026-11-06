@@ -59,7 +59,6 @@
 **	ported to machines with only 7 character significance in external identifiers.
 */
 
-static char rcs_id[] = "$Id: Ahparam.c,v 1.3 2002-02-23 17:50:44 sian Exp $";
 
 #include <algol68/Asupport.h>
 

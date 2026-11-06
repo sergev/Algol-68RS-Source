@@ -44,6 +44,8 @@ COMMENT
 29:03:95  34.003  ELLA  Modcprght Change copyright header
 05:11:26  34.004  SV    C23       Struct result for straight index only if
                                   element is C struct.
+05:11:26  34.005  SV    Wall      Void discarded results; zeroed SKIP and
+                                  union temps.
 ??:??:??   ?.???  ????
 COMMENT
 
@@ -402,7 +404,7 @@ BEGIN
 	
 	( no of bounds > 1 { ie a row not a vector } 
 	| { Initialise the strides of rows }
-	  emit line(( use macro( "A_"+whole( no of bounds OVER 2, 0 )+"INITSTRIDES",temp), " ;" ))
+	  emit line(( "(void)", use macro( "A_"+whole( no of bounds OVER 2, 0 )+"INITSTRIDES",temp), " ;" ))
 	)                                  
 END;
                
@@ -598,7 +600,7 @@ BEGIN
 		  body
 		)
 	ELSE	{ output the assignment immediately: return an id or temporary }
-		emit line(( body, " ;" ));
+		emit line(( "(void)(", body, ") ;" ));
 		( mode OF root,
 		  ((info OF left OR info OF right) AND (fxwarn OR nonloc))
 		  OR atomic,
@@ -1004,7 +1006,7 @@ BEGIN
 		)
 	FI;
 	CFRAGMENT m = whole( PARAMOF rator, 0 );
-	TEMPORARY t = new( mode OF root, qunite simple );
+	TEMPORARY t = new zeroed( mode OF root, qunite simple );
 	( mode OF root,
 	  info OF op AND fxwarn OR atomic,
 	  ( mode OF op /= void mode
@@ -1028,7 +1030,7 @@ BEGIN
 	  ( mode index > 0
 	  | use macro
 	    ( "A_UUNITE",
-	      ( new( mode OF root, qunite union ), whole(mode index - 1,0), YIELD op)
+	      ( new zeroed( mode OF root, qunite union ), whole(mode index - 1,0), YIELD op)
 	    )
 	  | { run-time table required }
 	    VECTOR [] CHAR table = 
@@ -1039,7 +1041,7 @@ BEGIN
 	      );
 	    use macro
 	    ( "A_UTABUNITE",
-	      ( new(mode OF root, qunite union), """\000"+table+"""", YIELD op )
+	      ( new zeroed(mode OF root, qunite union), """\000"+table+"""", YIELD op )
 	    )
 	  )
 	)
@@ -1156,13 +1158,12 @@ PROC( REF VALUE, TREEOPER )VALUE scalar to vector = scalar to row or vector;
 
 PROC	skip to mode	= ( REF VALUE root, TREEOPER rator ) VALUE:
 {                       
-	Generate a temporary of the required mode.
-	Return the uninitialised value.
+	Generate a zeroed temporary of the required mode and return it.
 }
 BEGIN                                                      
 	REF VALUE op; eval1( root, op );
 	{ NB The result of evaluating (SKIP,,skip) is a comment }
-	( mode OF root, default info, new( mode OF root, qskip to mode ) )
+	( mode OF root, default info, new zeroed( mode OF root, qskip to mode ) )
 END;
 
 PROC	deunite			= ( REF VALUE root, TREEOPER rator ) VALUE:

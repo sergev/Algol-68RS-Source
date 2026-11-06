@@ -42,6 +42,7 @@ COMMENT
 29:03:95  34.003  ELLA  Modcprght Change copyright header
 16:10:99  34.003  SL    Phoenix Engineering SL: A_ELEM macro change
 06:03:00  34.004  SL    Phoenix Engineering SL: REPR cast change
+05:11:26  34.005  SV    Wall      Bracket BOOL NOT.
 COMMENT
 
 { Initialise comment strings }
@@ -162,7 +163,7 @@ BEGIN
 	( mode OF root, 
 	  info OF op AND fxwarn OR atomic,
 	  ( version
-	  | { BOOL }	"!" + bracket c fragment (op),
+	  | { BOOL }	"(!" + bracket c fragment (op) + ")",
 	    { LBITS }	"~" + bracket c fragment (op)
 	  | "ADICOPS - NOT"+qvfault ASSERT FALSE; SKIP
 	  )

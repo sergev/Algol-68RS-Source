@@ -1,4 +1,4 @@
-/* UNAME:GUQACTR */
+/* UNAME:UUQACTR */
 #include <algol68/Asupport.h>
 
 A_PROCEDURE(A68_VOID ,A68t31,(A68_VC ,A68_BOOL ),(A68_VC ,A68_BOOL ,void *));
@@ -487,331 +487,331 @@ extern A68_VOID  WXIACTR_assert(A68_VC ,A68_BOOL );
 
 /* --- DECS initialisation functions --- */
 extern void BAAALIB(void);   /* a68config */
-extern void AUPACTR(void);   /* values */
+extern void OUPACTR(void);   /* values */
 extern void DNMACTR(void);   /* modes */
 extern void HPIACTR(void);   /* environment */
 /* --- end of DECS initialisation functions --- */
-static A68_126   KUQACTR = {"$Id: unionaids.a68,v 1.1.1.1 2001-05-07 10:16:10 sian Exp $"}; 
-A_GISVEC(A68_VC ,LUQACTR,KUQACTR,59)
-static A68_130   NVQACTR = {"UNIONAIDS - find mode: mode not present"}; 
-A_GISVEC(A68_VC ,OVQACTR,NVQACTR,39)
-static A68_133   CXQACTR = {"too many modes in union for table change"}; 
-A_GISVEC(A68_VC ,DXQACTR,CXQACTR,40)
+static A68_126   YUQACTR = {"$Id: unionaids.a68,v 1.1.1.1 2001-05-07 10:16:10 sian Exp $"}; 
+A_GISVEC(A68_VC ,ZUQACTR,YUQACTR,59)
+static A68_130   BWQACTR = {"UNIONAIDS - find mode: mode not present"}; 
+A_GISVEC(A68_VC ,CWQACTR,BWQACTR,39)
+static A68_133   QXQACTR = {"too many modes in union for table change"}; 
+A_GISVEC(A68_VC ,RXQACTR,QXQACTR,40)
 typedef struct   /* env of non-global proc */
 {
 A68_55  U;
-} SUQACTR_generator;
+} GVQACTR_generator;
 typedef struct   /* env of non-global proc */
 {
-A68_INT  JWQACTR_fromlength;
+A68_INT  XWQACTR_fromlength;
 A_PAD_INT(PAD_50)
-} OWQACTR_generator;
+} CXQACTR_generator;
 
-A68_VOID  OUQACTR_findoccurances(A68_INT  Mode, A68_55  U, A68_127  *ReturnedValue);
+A68_VOID  CVQACTR_findoccurances(A68_INT  Mode, A68_55  U, A68_127  *ReturnedValue);
 
-A_STATIC A68_VOID  RUQACTR_generator(A68_BOOL  PUQACTR_anonymous, A68_127  *ReturnedValue, void *NonLocals);
+A_STATIC A68_VOID  FVQACTR_generator(A68_BOOL  DVQACTR_anonymous, A68_127  *ReturnedValue, void *NonLocals);
 
-A68_INT  GVQACTR_findmode(A68_INT  Find, A68_INT  Inmode);
+A68_INT  UVQACTR_findmode(A68_INT  Find, A68_INT  Inmode);
 
-A68_INT  SVQACTR_findints(A68_55  A, A68_55  B);
+A68_INT  GWQACTR_findints(A68_55  A, A68_55  B);
 
-A68_VOID  IWQACTR_uniontouniontable(A68_55  From, A68_55  To, A68_VC  *ReturnedValue);
+A68_VOID  WWQACTR_uniontouniontable(A68_55  From, A68_55  To, A68_VC  *ReturnedValue);
 
-A_STATIC A68_VOID  NWQACTR_generator(A68_BOOL  LWQACTR_anonymous, A68_VC  *ReturnedValue, void *NonLocals);
+A_STATIC A68_VOID  BXQACTR_generator(A68_BOOL  ZWQACTR_anonymous, A68_VC  *ReturnedValue, void *NonLocals);
 
-A_STATIC A68_VOID  RUQACTR_generator(A68_BOOL  PUQACTR_anonymous, A68_127  *ReturnedValue, void *NonLocals)
-#define NL(x) (((SUQACTR_generator *)NonLocals)->x)
+A_STATIC A68_VOID  FVQACTR_generator(A68_BOOL  DVQACTR_anonymous, A68_127  *ReturnedValue, void *NonLocals)
+#define NL(x) (((GVQACTR_generator *)NonLocals)->x)
 { 
-A68_127  TUQACTR;  /* clause result */
-A68_127  UUQACTR;  /* OPERATORS - dynamic generator */
+A68_127  HVQACTR;  /* clause result */
+A68_127  IVQACTR;  /* OPERATORS - dynamic generator */
 { 
-UUQACTR.dim[0].upb = NL(U).upb ;
-UUQACTR.dim[0].lwb = 1 ;
-A_1INITSTRIDES(UUQACTR) ;
-( PUQACTR_anonymous? A_R1LOC(A68_INT ,UUQACTR): A_R1HEAP(A68_INT ,UUQACTR) );
-TUQACTR = UUQACTR;
+IVQACTR.dim[0].upb = NL(U).upb ;
+IVQACTR.dim[0].lwb = 1 ;
+(void)A_1INITSTRIDES(IVQACTR) ;
+( DVQACTR_anonymous? A_R1LOC(A68_INT ,IVQACTR): A_R1HEAP(A68_INT ,IVQACTR) );
+HVQACTR = IVQACTR;
 } 
-*ReturnedValue = (TUQACTR);
+*ReturnedValue = (HVQACTR);
 return;
 } 
 #undef NL
 
-A_STATIC A68_VOID  NWQACTR_generator(A68_BOOL  LWQACTR_anonymous, A68_VC  *ReturnedValue, void *NonLocals)
-#define NL(x) (((OWQACTR_generator *)NonLocals)->x)
+A_STATIC A68_VOID  BXQACTR_generator(A68_BOOL  ZWQACTR_anonymous, A68_VC  *ReturnedValue, void *NonLocals)
+#define NL(x) (((CXQACTR_generator *)NonLocals)->x)
 { 
-A68_VC  PWQACTR;  /* clause result */
-A68_VC  QWQACTR;  /* OPERATORS - dynamic generator */
+A68_VC  DXQACTR;  /* clause result */
+A68_VC  EXQACTR;  /* OPERATORS - dynamic generator */
 { 
-QWQACTR.upb = NL(JWQACTR_fromlength) ;
-( LWQACTR_anonymous? A_VLOC(A68_CHAR ,QWQACTR): A_VHEAP(A68_CHAR ,QWQACTR) );
-PWQACTR = QWQACTR;
+EXQACTR.upb = NL(XWQACTR_fromlength) ;
+( ZWQACTR_anonymous? A_VLOC(A68_CHAR ,EXQACTR): A_VHEAP(A68_CHAR ,EXQACTR) );
+DXQACTR = EXQACTR;
 } 
-*ReturnedValue = (PWQACTR);
+*ReturnedValue = (DXQACTR);
 return;
 } 
 #undef NL
 
-A68_VOID  OUQACTR_findoccurances(A68_INT  Mode, A68_55  U, A68_127  *ReturnedValue)
+A68_VOID  CVQACTR_findoccurances(A68_INT  Mode, A68_55  U, A68_127  *ReturnedValue)
 { 
-A68_129  QUQACTR_generator;   /* proc value of non-global proc */
-A68_127  WUQACTR;  /* avoid structure result */
-A68_127  VUQACTR_indicies;
-A68_INT  XUQACTR_numberindicies;
-A68_INT  YUQACTR_i;
-A68_INT  ZUQACTR;  /* to part of loop */
-A68_INT  AVQACTR;  /* YIELD */
-A68_INT * BVQACTR;  /* YIELD */
-A68_127  CVQACTR;  /* clause result */
-A68_127  DVQACTR;  /* OPERATORS - trim index */
+A68_129  EVQACTR_generator;   /* proc value of non-global proc */
+A68_127  KVQACTR;  /* avoid structure result */
+A68_127  JVQACTR_indicies A_UNUSED = {0};
+A68_INT  LVQACTR_numberindicies A_UNUSED = {0};
+A68_INT  MVQACTR_i A_UNUSED = {0};
+A68_INT  NVQACTR;  /* to part of loop */
+A68_INT  OVQACTR;  /* YIELD */
+A68_INT * PVQACTR;  /* YIELD */
+A68_127  QVQACTR;  /* clause result */
+A68_127  RVQACTR;  /* OPERATORS - trim index */
 A_PROC_ENTRY(findoccurances);
  /* line 57: */
  /* line 58: */
 { 
-A_CLOSURE( QUQACTR_generator, RUQACTR_generator, SUQACTR_generator );
-(( SUQACTR_generator * ) ( QUQACTR_generator.nonlocals )) -> U = U;
-A_CALLPROC(QUQACTR_generator,(A68_TRUE, &WUQACTR),(A68_TRUE, &WUQACTR,(QUQACTR_generator).nonlocals));
-VUQACTR_indicies = WUQACTR;
+A_CLOSURE( EVQACTR_generator, FVQACTR_generator, GVQACTR_generator );
+(( GVQACTR_generator * ) ( EVQACTR_generator.nonlocals )) -> U = U;
+A_CALLPROC(EVQACTR_generator,(A68_TRUE, &KVQACTR),(A68_TRUE, &KVQACTR,(EVQACTR_generator).nonlocals));
+JVQACTR_indicies = KVQACTR;
  /* line 59: */
-XUQACTR_numberindicies = 0;
+LVQACTR_numberindicies = 0;
  /* line 60: */
  /* line 61: */
-ZUQACTR = U.upb;
-for ( YUQACTR_i = 1;
-YUQACTR_i <= ZUQACTR;
-YUQACTR_i += 1 )
+NVQACTR = U.upb;
+for ( MVQACTR_i = 1;
+MVQACTR_i <= NVQACTR;
+MVQACTR_i += 1 )
 { 
  /* line 62: */
  /* line 63: */
-if ( (Mode==(*(&A_VINDEX(U,YUQACTR_i)))) )
+if (Mode==(*(&A_VINDEX(U,MVQACTR_i))))
 { 
  /* line 64: */
  /* line 65: */
-AVQACTR = XUQACTR_numberindicies+=1 ;
-BVQACTR = (&A_R1INDEX(VUQACTR_indicies,AVQACTR)) ;
-(*BVQACTR) = YUQACTR_i;
+OVQACTR = LVQACTR_numberindicies+=1 ;
+PVQACTR = (&A_R1INDEX(JVQACTR_indicies,OVQACTR)) ;
+(*PVQACTR) = MVQACTR_i;
 } 
 }
  /* line 66: */
  /* line 67: */
-CVQACTR = A_R1TRIM(DVQACTR,(VUQACTR_indicies),A_RTSCRIPT(&(DVQACTR.dim[0]),&((VUQACTR_indicies).dim[0]),(VUQACTR_indicies).dim[0].lwb,XUQACTR_numberindicies,1));
+QVQACTR = A_R1TRIM(RVQACTR,(JVQACTR_indicies),A_RTSCRIPT(&(RVQACTR.dim[0]),&((JVQACTR_indicies).dim[0]),(JVQACTR_indicies).dim[0].lwb,LVQACTR_numberindicies,1));
 } 
 A_PROC_EXIT(findoccurances);
-*ReturnedValue = (CVQACTR);
+*ReturnedValue = (QVQACTR);
 return;
 } 
 #undef NL
 
-A68_INT  GVQACTR_findmode(A68_INT  Find, A68_INT  Inmode)
+A68_INT  UVQACTR_findmode(A68_INT  Find, A68_INT  Inmode)
 { 
-A68_55  HVQACTR;  /* avoid structure result */
-A68_127  IVQACTR;  /* OPERATORS - vector -> row */
-A68_127  JVQACTR_a;
-A68_INT  KVQACTR_pos;
-A68_INT  LVQACTR_i;
-A68_INT  MVQACTR;  /* to part of loop */
-A68_INT  PVQACTR;  /* clause result */
+A68_55  VVQACTR;  /* avoid structure result */
+A68_127  WVQACTR;  /* OPERATORS - vector -> row */
+A68_127  XVQACTR_a A_UNUSED = {0};
+A68_INT  YVQACTR_pos A_UNUSED = {0};
+A68_INT  ZVQACTR_i A_UNUSED = {0};
+A68_INT  AWQACTR;  /* to part of loop */
+A68_INT  DWQACTR;  /* clause result */
 A_PROC_ENTRY(findmode);
  /* line 70: */
  /* line 71: */
 { 
-A_CALLPROC(YVMACTR_constituents,(Inmode, &HVQACTR),(Inmode, &HVQACTR,(YVMACTR_constituents).nonlocals));
-JVQACTR_a = A_VECARR(HVQACTR,IVQACTR);
+A_CALLPROC(YVMACTR_constituents,(Inmode, &VVQACTR),(Inmode, &VVQACTR,(YVMACTR_constituents).nonlocals));
+XVQACTR_a = A_VECARR(VVQACTR,WVQACTR);
  /* line 72: */
-KVQACTR_pos = 1;
+YVQACTR_pos = 1;
  /* line 73: */
-MVQACTR = JVQACTR_a.dim[0].upb;
-for ( LVQACTR_i = 1;
-LVQACTR_i <= MVQACTR;
-LVQACTR_i += 1 )
+AWQACTR = XVQACTR_a.dim[0].upb;
+for ( ZVQACTR_i = 1;
+ZVQACTR_i <= AWQACTR;
+ZVQACTR_i += 1 )
 { 
-if ( !((A_R1INDEX(JVQACTR_a,LVQACTR_i)!=Find)) ) break;
-KVQACTR_pos+=1;
+if ( !((A_R1INDEX(XVQACTR_a,ZVQACTR_i)!=Find)) ) break;
+YVQACTR_pos+=1;
 }
  /* line 74: */
-WXIACTR_assert(OVQACTR, (KVQACTR_pos<=JVQACTR_a.dim[0].upb));
+(void)(WXIACTR_assert(CWQACTR, (YVQACTR_pos<=XVQACTR_a.dim[0].upb)));
  /* line 75: */
  /* line 76: */
-PVQACTR = KVQACTR_pos;
+DWQACTR = YVQACTR_pos;
 } 
 A_PROC_EXIT(findmode);
-return( PVQACTR );
+return( DWQACTR );
 } 
 #undef NL
 
-A68_INT  SVQACTR_findints(A68_55  A, A68_55  B)
+A68_INT  GWQACTR_findints(A68_55  A, A68_55  B)
 { 
-A68_INT  TVQACTR_lengtha;
-A68_INT  UVQACTR_lengthb;
-A68_INT  VVQACTR_find;
-A68_INT  WVQACTR_i;
-A68_INT  XVQACTR;  /* to part of loop */
-A68_BOOL  YVQACTR_equal;
-A68_INT  ZVQACTR_j;
-A68_INT  AWQACTR;  /* to part of loop */
-A68_127  BWQACTR;  /* avoid structure result */
-A68_INT  CWQACTR;  /* YIELD */
-A68_BOOL  DWQACTR;  /* clause result */
-A68_BOOL  EWQACTR;  /* clause result */
-A68_INT  FWQACTR;  /* clause result */
+A68_INT  HWQACTR_lengtha A_UNUSED = {0};
+A68_INT  IWQACTR_lengthb A_UNUSED = {0};
+A68_INT  JWQACTR_find A_UNUSED = {0};
+A68_INT  KWQACTR_i A_UNUSED = {0};
+A68_INT  LWQACTR;  /* to part of loop */
+A68_BOOL  MWQACTR_equal A_UNUSED = {0};
+A68_INT  NWQACTR_j A_UNUSED = {0};
+A68_INT  OWQACTR;  /* to part of loop */
+A68_127  PWQACTR;  /* avoid structure result */
+A68_INT  QWQACTR;  /* YIELD */
+A68_BOOL  RWQACTR;  /* clause result */
+A68_BOOL  SWQACTR;  /* clause result */
+A68_INT  TWQACTR;  /* clause result */
 A_PROC_ENTRY(findints);
  /* line 85: */
  /* line 86: */
 { 
-TVQACTR_lengtha = A.upb;
-UVQACTR_lengthb = B.upb;
+HWQACTR_lengtha = A.upb;
+IWQACTR_lengthb = B.upb;
  /* line 87: */
-VVQACTR_find = 0;
+JWQACTR_find = 0;
  /* line 88: */
  /* line 89: */
-XVQACTR = ((UVQACTR_lengthb-TVQACTR_lengtha)+1);
-for ( WVQACTR_i = 1;
-WVQACTR_i <= XVQACTR;
-WVQACTR_i += 1 )
+LWQACTR = ((IWQACTR_lengthb-HWQACTR_lengtha)+1);
+for ( KWQACTR_i = 1;
+KWQACTR_i <= LWQACTR;
+KWQACTR_i += 1 )
 { 
  /* line 90: */
-YVQACTR_equal = A68_FALSE;
+MWQACTR_equal = A68_FALSE;
  /* line 91: */
  /* line 92: */
-AWQACTR = TVQACTR_lengtha;
-for ( ZVQACTR_j = 1;
-ZVQACTR_j <= AWQACTR;
-ZVQACTR_j += 1 )
+OWQACTR = HWQACTR_lengtha;
+for ( NWQACTR_j = 1;
+NWQACTR_j <= OWQACTR;
+NWQACTR_j += 1 )
 { 
  /* line 93: */
  /* line 94: */
  /* line 95: */
  /* line 96: */
-OUQACTR_findoccurances( (*(&A_VINDEX(A,ZVQACTR_j))), B, &BWQACTR );
-CWQACTR = 1 ;
-if ( !(YVQACTR_equal = (A_R1INDEX(BWQACTR,CWQACTR)==((WVQACTR_i+ZVQACTR_j)-1))) ) break;
+CVQACTR_findoccurances( (*(&A_VINDEX(A,NWQACTR_j))), B, &PWQACTR );
+QWQACTR = 1 ;
+if ( !(MWQACTR_equal = (A_R1INDEX(PWQACTR,QWQACTR)==((KWQACTR_i+NWQACTR_j)-1))) ) break;
 /*SKIP*/;
 }
  /* line 97: */
  /* line 98: */
-if ( YVQACTR_equal )
+if (MWQACTR_equal)
 { 
-VVQACTR_find = WVQACTR_i;
+JWQACTR_find = KWQACTR_i;
  /* line 99: */
-DWQACTR = A68_FALSE;
+RWQACTR = A68_FALSE;
 } 
 else
 { 
  /* line 100: */
  /* line 101: */
-DWQACTR = A68_TRUE;
+RWQACTR = A68_TRUE;
 } 
  /* line 102: */
-EWQACTR = DWQACTR;
-if ( !EWQACTR ) break;
+SWQACTR = RWQACTR;
+if ( !SWQACTR ) break;
 /*SKIP*/;
 }
  /* line 103: */
  /* line 104: */
-FWQACTR = VVQACTR_find;
+TWQACTR = JWQACTR_find;
 } 
 A_PROC_EXIT(findints);
-return( FWQACTR );
+return( TWQACTR );
 } 
 #undef NL
 
-A68_VOID  IWQACTR_uniontouniontable(A68_55  From, A68_55  To, A68_VC  *ReturnedValue)
+A68_VOID  WWQACTR_uniontouniontable(A68_55  From, A68_55  To, A68_VC  *ReturnedValue)
 { 
-A68_INT  JWQACTR_fromlength;
-A68_INT  KWQACTR_tolength;
-A68_121  MWQACTR_generator;   /* proc value of non-global proc */
-A68_VC  RWQACTR;  /* avoid structure result */
-A68_VC  SWQACTR_table;
-A68_INT  TWQACTR_i;
-A68_INT  UWQACTR;  /* to part of loop */
-A68_CHAR * VWQACTR;  /* YIELD */
-A68_INT  WWQACTR_fromi;
-A68_INT  XWQACTR;  /* to part of loop */
-A68_INT  YWQACTR_frommode;
-A68_INT  ZWQACTR_toi;
-A68_INT  AXQACTR;  /* to part of loop */
-A68_INT  BXQACTR_tomode;
-A68_CHAR * EXQACTR;  /* YIELD */
-A68_BOOL  FXQACTR;  /* clause result */
-A68_BOOL  GXQACTR;  /* clause result */
-A68_VC  HXQACTR;  /* clause result */
+A68_INT  XWQACTR_fromlength A_UNUSED = {0};
+A68_INT  YWQACTR_tolength A_UNUSED = {0};
+A68_121  AXQACTR_generator;   /* proc value of non-global proc */
+A68_VC  FXQACTR;  /* avoid structure result */
+A68_VC  GXQACTR_table A_UNUSED = {0};
+A68_INT  HXQACTR_i A_UNUSED = {0};
+A68_INT  IXQACTR;  /* to part of loop */
+A68_CHAR * JXQACTR;  /* YIELD */
+A68_INT  KXQACTR_fromi A_UNUSED = {0};
+A68_INT  LXQACTR;  /* to part of loop */
+A68_INT  MXQACTR_frommode A_UNUSED = {0};
+A68_INT  NXQACTR_toi A_UNUSED = {0};
+A68_INT  OXQACTR;  /* to part of loop */
+A68_INT  PXQACTR_tomode A_UNUSED = {0};
+A68_CHAR * SXQACTR;  /* YIELD */
+A68_BOOL  TXQACTR;  /* clause result */
+A68_BOOL  UXQACTR;  /* clause result */
+A68_VC  VXQACTR;  /* clause result */
 A_PROC_ENTRY(uniontouniontable);
  /* line 119: */
  /* line 120: */
 { 
-JWQACTR_fromlength = From.upb;
-KWQACTR_tolength = To.upb;
+XWQACTR_fromlength = From.upb;
+YWQACTR_tolength = To.upb;
  /* line 121: */
-A_CLOSURE( MWQACTR_generator, NWQACTR_generator, OWQACTR_generator );
-(( OWQACTR_generator * ) ( MWQACTR_generator.nonlocals )) -> JWQACTR_fromlength = JWQACTR_fromlength;
-A_CALLPROC(MWQACTR_generator,(A68_FALSE, &RWQACTR),(A68_FALSE, &RWQACTR,(MWQACTR_generator).nonlocals));
-SWQACTR_table = RWQACTR;
+A_CLOSURE( AXQACTR_generator, BXQACTR_generator, CXQACTR_generator );
+(( CXQACTR_generator * ) ( AXQACTR_generator.nonlocals )) -> XWQACTR_fromlength = XWQACTR_fromlength;
+A_CALLPROC(AXQACTR_generator,(A68_FALSE, &FXQACTR),(A68_FALSE, &FXQACTR,(AXQACTR_generator).nonlocals));
+GXQACTR_table = FXQACTR;
  /* line 122: */
  /* line 123: */
-UWQACTR = JWQACTR_fromlength;
-for ( TWQACTR_i = 1;
-TWQACTR_i <= UWQACTR;
-TWQACTR_i += 1 )
+IXQACTR = XWQACTR_fromlength;
+for ( HXQACTR_i = 1;
+HXQACTR_i <= IXQACTR;
+HXQACTR_i += 1 )
 { 
  /* line 124: */
-VWQACTR = (&A_VINDEX(SWQACTR_table,TWQACTR_i)) ;
-(*VWQACTR) = (A68_SSBITS)0;
+JXQACTR = (&A_VINDEX(GXQACTR_table,HXQACTR_i)) ;
+(*JXQACTR) = (A68_SSBITS)0;
 }
  /* line 125: */
  /* line 126: */
-XWQACTR = JWQACTR_fromlength;
-for ( WWQACTR_fromi = 1;
-WWQACTR_fromi <= XWQACTR;
-WWQACTR_fromi += 1 )
+LXQACTR = XWQACTR_fromlength;
+for ( KXQACTR_fromi = 1;
+KXQACTR_fromi <= LXQACTR;
+KXQACTR_fromi += 1 )
 { 
  /* line 127: */
-YWQACTR_frommode = (*(&A_VINDEX(From,WWQACTR_fromi)));
+MXQACTR_frommode = (*(&A_VINDEX(From,KXQACTR_fromi)));
  /* line 128: */
  /* line 129: */
-AXQACTR = KWQACTR_tolength;
-for ( ZWQACTR_toi = 1;
-ZWQACTR_toi <= AXQACTR;
-ZWQACTR_toi += 1 )
+OXQACTR = YWQACTR_tolength;
+for ( NXQACTR_toi = 1;
+NXQACTR_toi <= OXQACTR;
+NXQACTR_toi += 1 )
 { 
  /* line 130: */
-BXQACTR_tomode = (*(&A_VINDEX(To,ZWQACTR_toi)));
+PXQACTR_tomode = (*(&A_VINDEX(To,NXQACTR_toi)));
  /* line 131: */
  /* line 132: */
  /* line 133: */
-if ( (YWQACTR_frommode==BXQACTR_tomode) )
+if (MXQACTR_frommode==PXQACTR_tomode)
 { 
-WXIACTR_assert(DXQACTR, (ZWQACTR_toi<256));
+(void)(WXIACTR_assert(RXQACTR, (NXQACTR_toi<256)));
  /* line 134: */
-EXQACTR = (&A_VINDEX(SWQACTR_table,WWQACTR_fromi)) ;
-(*EXQACTR) = (A68_SSBITS)ZWQACTR_toi;
+SXQACTR = (&A_VINDEX(GXQACTR_table,KXQACTR_fromi)) ;
+(*SXQACTR) = (A68_SSBITS)NXQACTR_toi;
  /* line 135: */
  /* line 136: */
-FXQACTR = A68_FALSE;
+TXQACTR = A68_FALSE;
 } 
 else
 { 
  /* line 137: */
  /* line 138: */
-FXQACTR = A68_TRUE;
+TXQACTR = A68_TRUE;
 } 
  /* line 139: */
-GXQACTR = FXQACTR;
-if ( !GXQACTR ) break;
+UXQACTR = TXQACTR;
+if ( !UXQACTR ) break;
 /*SKIP*/;
 }
  /* line 140: */
 }
  /* line 141: */
  /* line 142: */
-HXQACTR = SWQACTR_table;
+VXQACTR = GXQACTR_table;
 } 
 A_PROC_EXIT(uniontouniontable);
-*ReturnedValue = (HXQACTR);
+*ReturnedValue = (VXQACTR);
 return;
 } 
 #undef NL
  /* line 1: */
  /* line 3: */
-void HUQACTR(void)   /* initialise DECS unionaids */
+void VUQACTR(void)   /* initialise DECS unionaids */
 { 
 static A68_BOOL A_invoked = A68_FALSE;
 
@@ -819,25 +819,25 @@ static A68_BOOL A_invoked = A68_FALSE;
 static char *A_config_arguments[] = {"/home/vak/Project/Algol/Algol-68RS-Source/src/a68toc","-v","-uname","seedfile","-staredit","59LR","-lib","/home/vak/Project/Algol/Algol-68RS-Source/a68config","-dir","/home/vak/Project/Algol/Algol-68RS-Source/a68config","-dir","/home/vak/Project/Algol/Algol-68RS-Source/liba68prel","-dir",".","unionaids.a68",""};
 static char *A_config_environment[] = {"A68_LIB=/home/vak/Project/Algol/Algol-68RS-Source/a68config","A68_CDIR=","A68_DIR=","A68_STAREDIT=","A68_NAMESEED=nameseed","CTRANS_NAMESEED=",""};
 static char *A_config_modinfo_files[] = {"/home/vak/Project/Algol/Algol-68RS-Source/a68config/a68config.m","./values.m","./modes.m","./environment.m",""};
-static A_CONFIG_INFO A_config;
+static A_CONFIG_INFO A_config A_UNUSED;
 /* --- end of configuration information */
 if( A_invoked ) return;
 A_invoked = A68_TRUE;
 BAAALIB();   /* USE a68config */
-AUPACTR();   /* USE values */
+OUPACTR();   /* USE values */
 DNMACTR();   /* USE modes */
 HPIACTR();   /* USE environment */
 /* --- Initialise configuration information */
 A_config.source_file = "/home/vak/Project/Algol/Algol-68RS-Source/src/unionaids.a68";
-A_config.translation_time = "Thu Nov  5 20:46:57 2026";
+A_config.translation_time = "Thu Nov  5 21:11:00 2026";
 A_config.ctrans_version = "Ctrans_34.6";
-A_config.name_seed = "GUQACTR (from seed file) ";
-A_config.spec_change_time = "Thu Nov  5 20:46:57 2026";
+A_config.name_seed = "UUQACTR (from seed file) ";
+A_config.spec_change_time = "Thu Nov  5 21:11:00 2026";
 A_config.arguments = A_config_arguments;
 A_config.environment = A_config_environment;
 A_config.modinfo_files = A_config_modinfo_files;
 A_PROC_ENTRY(DECS unionaids);
-UEAALIB_a68config(LGAALIB_configinfo, LUQACTR);
+(void)(UEAALIB_a68config(LGAALIB_configinfo, ZUQACTR));
  /* line 51: */
  /* line 53: */
  /* line 69: */

@@ -733,12 +733,12 @@ extern void CSCAOSF(void);   /* osif */
 /* --- end of DECS initialisation functions --- */
 static A68_169   ALEAOSF = {"$Id: iolib.a68,v 1.1.1.1 2001-05-07 10:16:11 sian Exp $"}; 
 A_GISVEC(A68_VC ,BLEAOSF,ALEAOSF,55)
-A68_99 * CLEAOSF_stdoutchan;
-A68_99 * DLEAOSF_stderrchan;
-A68_99 * ELEAOSF_stdinchan;
-static A68_170  FLEAOSF_outbuff;
-static A68_170  GLEAOSF_errbuff;
-static A68_170  HLEAOSF_inbuff;
+A68_99 * CLEAOSF_stdoutchan A_UNUSED;
+A68_99 * DLEAOSF_stderrchan A_UNUSED;
+A68_99 * ELEAOSF_stdinchan A_UNUSED;
+static A68_170  FLEAOSF_outbuff A_UNUSED;
+static A68_170  GLEAOSF_errbuff A_UNUSED;
+static A68_170  HLEAOSF_inbuff A_UNUSED;
 
 A68_VOID  JLEAOSF_print(A68_146  Line);
 
@@ -757,7 +757,7 @@ A_STATIC A68_VOID  AMEAOSF_init_oslib(void);
 A68_VOID  JLEAOSF_print(A68_146  Line)
 { 
 A_PROC_ENTRY(print);
-KYDAOSF_put(CLEAOSF_stdoutchan, Line);
+(void)(KYDAOSF_put(CLEAOSF_stdoutchan, Line));
 A_PROC_EXIT(print);
 return;
 } 
@@ -766,7 +766,7 @@ return;
 A68_VOID  LLEAOSF_printerr(A68_146  Line)
 { 
 A_PROC_ENTRY(printerr);
-KYDAOSF_put(DLEAOSF_stderrchan, Line);
+(void)(KYDAOSF_put(DLEAOSF_stderrchan, Line));
 A_PROC_EXIT(printerr);
 return;
 } 
@@ -787,7 +787,7 @@ A_STATIC A68_VOID  QLEAOSF_put_stdout_line(A68_VC  S)
 A68_38  RLEAOSF;  /* avoid structure result */
 A_PROC_ENTRY(put_stdout_line);
 UXBAOSF_write_buffer( USBAOSF_stdout, S, TIBAOSF_global_msg, &RLEAOSF );
-RLEAOSF;
+;
 A_PROC_EXIT(put_stdout_line);
 return;
 } 
@@ -798,7 +798,7 @@ A_STATIC A68_VOID  TLEAOSF_put_stderr_line(A68_VC  S)
 A68_38  ULEAOSF;  /* avoid structure result */
 A_PROC_ENTRY(put_stderr_line);
 UXBAOSF_write_buffer( VSBAOSF_stderr, S, TIBAOSF_global_msg, &ULEAOSF );
-ULEAOSF;
+;
 A_PROC_EXIT(put_stderr_line);
 return;
 } 
@@ -820,23 +820,23 @@ return;
 
 A_STATIC A68_VOID  AMEAOSF_init_oslib(void)
 { 
-A68_149  BMEAOSF;  /* OPERATORS - mode -> union mode */
+A68_149  BMEAOSF = {0};  /* OPERATORS - mode -> union mode */
 A68_77  CMEAOSF;  /* YIELD */
 A68_77  DMEAOSF;  /* procedure value */
 A68_VC  EMEAOSF;  /* OPERATORS - istruct -> vector */
-A68_148  FMEAOSF;  /* OPERATORS - mode -> union mode */
+A68_148  FMEAOSF = {0};  /* OPERATORS - mode -> union mode */
 A68_VC  GMEAOSF;  /* YIELD */
-A68_149  HMEAOSF;  /* OPERATORS - mode -> union mode */
+A68_149  HMEAOSF = {0};  /* OPERATORS - mode -> union mode */
 A68_77  IMEAOSF;  /* YIELD */
 A68_77  JMEAOSF;  /* procedure value */
 A68_VC  KMEAOSF;  /* OPERATORS - istruct -> vector */
-A68_148  LMEAOSF;  /* OPERATORS - mode -> union mode */
+A68_148  LMEAOSF = {0};  /* OPERATORS - mode -> union mode */
 A68_VC  MMEAOSF;  /* YIELD */
-A68_149  NMEAOSF;  /* OPERATORS - mode -> union mode */
+A68_149  NMEAOSF = {0};  /* OPERATORS - mode -> union mode */
 A68_100  OMEAOSF;  /* YIELD */
 A68_100  PMEAOSF;  /* procedure value */
 A68_VC  QMEAOSF;  /* OPERATORS - istruct -> vector */
-A68_148  RMEAOSF;  /* OPERATORS - mode -> union mode */
+A68_148  RMEAOSF = {0};  /* OPERATORS - mode -> union mode */
 A68_VC  SMEAOSF;  /* YIELD */
 A_PROC_ENTRY(init_oslib);
 { 
@@ -844,19 +844,19 @@ DMEAOSF.fn.fn_global = QLEAOSF_put_stdout_line;
 DMEAOSF.nonlocals = A68_NIL;
 CMEAOSF = DMEAOSF ;
 GMEAOSF = A_ISVEC(EMEAOSF,(&FLEAOSF_outbuff),1024,A68_CHAR ) ;
-CLEAOSF_stdoutchan = BJDAOSF_make_channel(A_UNITE(FMEAOSF,mode2,2,GMEAOSF), A_UNITE(BMEAOSF,mode1,1,CMEAOSF));
+(void)(CLEAOSF_stdoutchan = BJDAOSF_make_channel(A_UNITE(FMEAOSF,mode2,2,GMEAOSF), A_UNITE(BMEAOSF,mode1,1,CMEAOSF)));
  /* line 56: */
 JMEAOSF.fn.fn_global = TLEAOSF_put_stderr_line;
 JMEAOSF.nonlocals = A68_NIL;
 IMEAOSF = JMEAOSF ;
 MMEAOSF = A_ISVEC(KMEAOSF,(&GLEAOSF_errbuff),1024,A68_CHAR ) ;
-DLEAOSF_stderrchan = BJDAOSF_make_channel(A_UNITE(LMEAOSF,mode2,2,MMEAOSF), A_UNITE(HMEAOSF,mode1,1,IMEAOSF));
+(void)(DLEAOSF_stderrchan = BJDAOSF_make_channel(A_UNITE(LMEAOSF,mode2,2,MMEAOSF), A_UNITE(HMEAOSF,mode1,1,IMEAOSF)));
  /* line 57: */
 PMEAOSF.fn.fn_global = XLEAOSF_get_stdin_line;
 PMEAOSF.nonlocals = A68_NIL;
 OMEAOSF = PMEAOSF ;
 SMEAOSF = A_ISVEC(QMEAOSF,(&HLEAOSF_inbuff),1024,A68_CHAR ) ;
-ELEAOSF_stdinchan = BJDAOSF_make_channel(A_UNITE(RMEAOSF,mode2,2,SMEAOSF), A_UNITE(NMEAOSF,mode2,2,OMEAOSF));
+(void)(ELEAOSF_stdinchan = BJDAOSF_make_channel(A_UNITE(RMEAOSF,mode2,2,SMEAOSF), A_UNITE(NMEAOSF,mode2,2,OMEAOSF)));
  /* line 58: */
  /* line 59: */
 /*SKIP*/;
@@ -875,7 +875,7 @@ static A68_BOOL A_invoked = A68_FALSE;
 static char *A_config_arguments[] = {"/home/vak/Project/Algol/Algol-68RS-Source/src/a68toc","-v","-uname","seedfile","-staredit","59LR","-lib","/home/vak/Project/Algol/Algol-68RS-Source/a68config","-dir","/home/vak/Project/Algol/Algol-68RS-Source/a68config","-dir","/home/vak/Project/Algol/Algol-68RS-Source/liba68prel","iolib.a68",""};
 static char *A_config_environment[] = {"A68_LIB=/home/vak/Project/Algol/Algol-68RS-Source/a68config","A68_CDIR=","A68_DIR=","A68_STAREDIT=","A68_NAMESEED=nameseed","CTRANS_NAMESEED=",""};
 static char *A_config_modinfo_files[] = {"/home/vak/Project/Algol/Algol-68RS-Source/a68config/a68config.m","/home/vak/Project/Algol/Algol-68RS-Source/liba68prel/getstrings.m","/home/vak/Project/Algol/Algol-68RS-Source/liba68prel/putstrings.m","/home/vak/Project/Algol/Algol-68RS-Source/liba68prel/messageproc.m","/home/vak/Project/Algol/Algol-68RS-Source/liba68prel/osif.m",""};
-static A_CONFIG_INFO A_config;
+static A_CONFIG_INFO A_config A_UNUSED;
 /* --- end of configuration information */
 A68_74  TMEAOSF;  /* procedure value */
 if( A_invoked ) return;
@@ -887,15 +887,15 @@ ZRAAOSF();   /* USE messageproc */
 CSCAOSF();   /* USE osif */
 /* --- Initialise configuration information */
 A_config.source_file = "/home/vak/Project/Algol/Algol-68RS-Source/liba68prel/iolib.a68";
-A_config.translation_time = "Thu Nov  5 20:46:56 2026";
+A_config.translation_time = "Thu Nov  5 21:10:59 2026";
 A_config.ctrans_version = "Ctrans_34.6";
 A_config.name_seed = "WKEAOSF (from seed file) ";
-A_config.spec_change_time = "Thu Nov  5 20:46:56 2026";
+A_config.spec_change_time = "Thu Nov  5 21:10:59 2026";
 A_config.arguments = A_config_arguments;
 A_config.environment = A_config_environment;
 A_config.modinfo_files = A_config_modinfo_files;
 A_PROC_ENTRY(DECS iolib);
-UEAALIB_a68config(LGAALIB_configinfo, BLEAOSF);
+(void)(UEAALIB_a68config(LGAALIB_configinfo, BLEAOSF));
  /* line 42: */
  /* line 43: */
  /* line 45: */
@@ -912,7 +912,7 @@ UEAALIB_a68config(LGAALIB_configinfo, BLEAOSF);
  /* line 65: */
 TMEAOSF.fn.fn_global = AMEAOSF_init_oslib;
 TMEAOSF.nonlocals = A68_NIL;
-ABAALIB_a68init(TMEAOSF);
+(void)(ABAALIB_a68init(TMEAOSF));
 A_PROC_EXIT(DECS iolib);
 } 
 #undef NL

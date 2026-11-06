@@ -46,7 +46,6 @@
 #include <stdlib.h>
 #include <unistd.h>
 
-static char rcs_id[] = "$Id: Aerror.c,v 1.2 2002-02-01 14:39:52 sian Exp $";
 
 A68_VOID A68_ERROR(const char *message)
 {

@@ -67,21 +67,21 @@ A68_VOID  JYCAOSF_clear(A68_41  Any);
 A68_VOID  JYCAOSF_clear(A68_41  Any)
 { 
 A68_41  KYCAOSF;  /* united object - for case conformity */
-A68_CHAR * LYCAOSF_c;
-A68_VC  MYCAOSF_str;
-A68_CHAR * NYCAOSF_c;
+A68_CHAR * LYCAOSF_c A_UNUSED = {0};
+A68_VC  MYCAOSF_str A_UNUSED = {0};
+A68_CHAR * NYCAOSF_c A_UNUSED = {0};
 A68_INT  OYCAOSF;  /* forall loop counter */
-A68_INT * PYCAOSF_i;
-A68_40  QYCAOSF_vi;
-A68_INT * RYCAOSF_i;
+A68_INT * PYCAOSF_i A_UNUSED = {0};
+A68_40  QYCAOSF_vi A_UNUSED = {0};
+A68_INT * RYCAOSF_i A_UNUSED = {0};
 A68_INT  SYCAOSF;  /* forall loop counter */
-A68_REAL * TYCAOSF_r;
-A68_42  UYCAOSF_vr;
-A68_REAL * VYCAOSF_r;
+A68_REAL * TYCAOSF_r A_UNUSED = {0};
+A68_42  UYCAOSF_vr A_UNUSED = {0};
+A68_REAL * VYCAOSF_r A_UNUSED = {0};
 A68_INT  WYCAOSF;  /* forall loop counter */
-A68_BOOL * XYCAOSF_b;
-A68_43  YYCAOSF_ct;
-A68_INT  ZYCAOSF_i;
+A68_BOOL * XYCAOSF_b A_UNUSED = {0};
+A68_43  YYCAOSF_ct A_UNUSED = {0};
+A68_INT  ZYCAOSF_i A_UNUSED = {0};
 A68_INT  AZCAOSF;  /* to part of loop */
 A68_43  BZCAOSF;  /* OPERATORS - straight index */
 A68_41  CZCAOSF;  /* OPERATORS - straight index result */
@@ -154,7 +154,7 @@ for ( ZYCAOSF_i = 1;
 ZYCAOSF_i <= AZCAOSF;
 ZYCAOSF_i += 1 )
 { 
-JYCAOSF_clear(A_STRINDEX_RTN(YYCAOSF_ct,ZYCAOSF_i,BZCAOSF,CZCAOSF));
+(void)(JYCAOSF_clear(A_STRINDEX_RTN(YYCAOSF_ct,ZYCAOSF_i,BZCAOSF,CZCAOSF)));
 }
  /* line 58: */
 break;
@@ -176,22 +176,22 @@ static A68_BOOL A_invoked = A68_FALSE;
 static char *A_config_arguments[] = {"/home/vak/Project/Algol/Algol-68RS-Source/src/a68toc","-v","-uname","seedfile","-staredit","59LR","-lib","/home/vak/Project/Algol/Algol-68RS-Source/a68config","-dir","/home/vak/Project/Algol/Algol-68RS-Source/a68config","-dir","/home/vak/Project/Algol/Algol-68RS-Source/liba68prel","clear.a68",""};
 static char *A_config_environment[] = {"A68_LIB=/home/vak/Project/Algol/Algol-68RS-Source/a68config","A68_CDIR=","A68_DIR=","A68_STAREDIT=","A68_NAMESEED=nameseed","CTRANS_NAMESEED=",""};
 static char *A_config_modinfo_files[] = {"/home/vak/Project/Algol/Algol-68RS-Source/a68config/a68config.m",""};
-static A_CONFIG_INFO A_config;
+static A_CONFIG_INFO A_config A_UNUSED;
 /* --- end of configuration information */
 if( A_invoked ) return;
 A_invoked = A68_TRUE;
 BAAALIB();   /* USE a68config */
 /* --- Initialise configuration information */
 A_config.source_file = "/home/vak/Project/Algol/Algol-68RS-Source/liba68prel/clear.a68";
-A_config.translation_time = "Thu Nov  5 20:46:56 2026";
+A_config.translation_time = "Thu Nov  5 21:10:59 2026";
 A_config.ctrans_version = "Ctrans_34.6";
 A_config.name_seed = "CYCAOSF (from seed file) ";
-A_config.spec_change_time = "Thu Nov  5 20:46:56 2026";
+A_config.spec_change_time = "Thu Nov  5 21:10:59 2026";
 A_config.arguments = A_config_arguments;
 A_config.environment = A_config_environment;
 A_config.modinfo_files = A_config_modinfo_files;
 A_PROC_ENTRY(DECS clear);
-UEAALIB_a68config(LGAALIB_configinfo, HYCAOSF);
+(void)(UEAALIB_a68config(LGAALIB_configinfo, HYCAOSF));
  /* line 41: */
  /* line 45: */
  /* line 47: */

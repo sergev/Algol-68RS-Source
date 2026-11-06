@@ -49,11 +49,11 @@ A_GISVEC(A68_VC ,FAAACTR,EAAACTR,55)
 #define MAAACTR_maxlibid 6000
 #define NAAACTR_keptgeneratorproccorrection 6000
 #define OAAACTR_minlab 16384
-A68_INT  PAAACTR_maxlab;
+A68_INT  PAAACTR_maxlab A_UNUSED;
 #define QAAACTR_minopidno 32768
 #define RAAACTR_maxopidno 65536
-A68_INT  SAAACTR_minkeptgeneratorproc;
-A68_INT  TAAACTR_maxkeptgeneratorproc;
+A68_INT  SAAACTR_minkeptgeneratorproc A_UNUSED;
+A68_INT  TAAACTR_maxkeptgeneratorproc A_UNUSED;
  /* line 1: */
  /* line 3: */
 void BAAACTR(void)   /* initialise DECS incid */
@@ -64,22 +64,22 @@ static A68_BOOL A_invoked = A68_FALSE;
 static char *A_config_arguments[] = {"/home/vak/Project/Algol/Algol-68RS-Source/src/a68toc","-v","-uname","seedfile","-staredit","59LR","-lib","/home/vak/Project/Algol/Algol-68RS-Source/a68config","-dir","/home/vak/Project/Algol/Algol-68RS-Source/a68config","-dir","/home/vak/Project/Algol/Algol-68RS-Source/liba68prel","-dir",".","incid.a68",""};
 static char *A_config_environment[] = {"A68_LIB=/home/vak/Project/Algol/Algol-68RS-Source/a68config","A68_CDIR=","A68_DIR=","A68_STAREDIT=","A68_NAMESEED=nameseed","CTRANS_NAMESEED=",""};
 static char *A_config_modinfo_files[] = {"/home/vak/Project/Algol/Algol-68RS-Source/a68config/a68config.m",""};
-static A_CONFIG_INFO A_config;
+static A_CONFIG_INFO A_config A_UNUSED;
 /* --- end of configuration information */
 if( A_invoked ) return;
 A_invoked = A68_TRUE;
 BAAALIB();   /* USE a68config */
 /* --- Initialise configuration information */
 A_config.source_file = "/home/vak/Project/Algol/Algol-68RS-Source/src/incid.a68";
-A_config.translation_time = "Thu Nov  5 20:46:57 2026";
+A_config.translation_time = "Thu Nov  5 21:10:59 2026";
 A_config.ctrans_version = "Ctrans_34.6";
 A_config.name_seed = "AAAACTR (from seed file) ";
-A_config.spec_change_time = "Thu Nov  5 20:46:57 2026";
+A_config.spec_change_time = "Thu Nov  5 21:10:59 2026";
 A_config.arguments = A_config_arguments;
 A_config.environment = A_config_environment;
 A_config.modinfo_files = A_config_modinfo_files;
 A_PROC_ENTRY(DECS incid);
-UEAALIB_a68config(LGAALIB_configinfo, FAAACTR);
+(void)(UEAALIB_a68config(LGAALIB_configinfo, FAAACTR));
  /* line 42: */
  /* line 43: */
  /* line 44: */

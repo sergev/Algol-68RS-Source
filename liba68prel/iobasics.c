@@ -410,20 +410,20 @@ extern void CSCAOSF(void);   /* osif */
 /* --- end of DECS initialisation functions --- */
 static A68_86   NGDAOSF = {"$Id: iobasics.a68,v 1.1.1.1 2001-05-07 10:16:11 sian Exp $"}; 
 A_GISVEC(A68_VC ,OGDAOSF,NGDAOSF,58)
-A68_82  PGDAOSF_anonymous;
-A68_87  QGDAOSF_anonymous;
-A68_VC  CHDAOSF_nilstr;
-A68_VC  IHDAOSF_nullstr;
-A68_71  KHDAOSF_nilints;
-A68_71  QHDAOSF_nullints;
-A68_88 * RHDAOSF_nilchannel;
-A68_CHAR  SHDAOSF_end_of_file_char;
-A68_CHAR  THDAOSF_newline_char;
-static A68_CHAR  UHDAOSF_cr_char;
-A68_CHAR  VHDAOSF_newpage_char;
-A68_CHAR  WHDAOSF_null_char;
-A68_VC  YHDAOSF_space_str;
-A68_VC  AIDAOSF_newline_str;
+A68_82  PGDAOSF_anonymous A_UNUSED;
+A68_87  QGDAOSF_anonymous A_UNUSED;
+A68_VC  CHDAOSF_nilstr A_UNUSED;
+A68_VC  IHDAOSF_nullstr A_UNUSED;
+A68_71  KHDAOSF_nilints A_UNUSED;
+A68_71  QHDAOSF_nullints A_UNUSED;
+A68_88 * RHDAOSF_nilchannel A_UNUSED;
+A68_CHAR  SHDAOSF_end_of_file_char A_UNUSED;
+A68_CHAR  THDAOSF_newline_char A_UNUSED;
+static A68_CHAR  UHDAOSF_cr_char A_UNUSED;
+A68_CHAR  VHDAOSF_newpage_char A_UNUSED;
+A68_CHAR  WHDAOSF_null_char A_UNUSED;
+A68_VC  YHDAOSF_space_str A_UNUSED;
+A68_VC  AIDAOSF_newline_str A_UNUSED;
 typedef struct   /* env of non-global proc */
 {
 A68_INT  RJDAOSF_width;
@@ -595,7 +595,7 @@ if ( NIDAOSF )
 { /* line 85: */
 NIDAOSF = (Width>((*(&(Ch->Buffer))).upb-1));
 }
-if ( NIDAOSF )
+if (NIDAOSF)
 { 
  /* line 86: */
 OIDAOSF = ((*(&(Ch->Buffer))).upb-1);
@@ -608,7 +608,7 @@ if ( PIDAOSF )
 PIDAOSF = (Width>(*(&(Ch->Buffer))).upb);
 }
  /* line 88: */
-if ( PIDAOSF )
+if (PIDAOSF)
 { 
  /* line 89: */
 OIDAOSF = (*(&(Ch->Buffer))).upb;
@@ -637,7 +637,7 @@ return;
 A68_VOID  WIDAOSF_nullgetbuffer(A68_VC  Rvc, A68_INT * I, A68_38  *ReturnedValue)
 { 
 A68_38  XIDAOSF;  /* clause result */
-A68_38  YIDAOSF;  /* OPERATORS - skip to mode */
+A68_38  YIDAOSF = {0};  /* OPERATORS - skip to mode */
 A_PROC_ENTRY(nullgetbuffer);
 XIDAOSF = YIDAOSF;
 A_PROC_EXIT(nullgetbuffer);
@@ -649,29 +649,29 @@ return;
 
 A68_88 * BJDAOSF_make_channel(A68_92  Intbuff, A68_93  Putgetbuffer)
 { 
-A68_88 * CJDAOSF_ch;
+A68_88 * CJDAOSF_ch A_UNUSED = {0};
 A68_93  DJDAOSF;  /* united object - for case conformity */
-A68_77  EJDAOSF_putbuffer;
+A68_77  EJDAOSF_putbuffer A_UNUSED = {0};
 A68_77 * FJDAOSF;  /* YIELD */
 A68_89 * GJDAOSF;  /* YIELD */
 A68_89  HJDAOSF;  /* procedure value */
 A68_INT * IJDAOSF;  /* YIELD */
 A68_BOOL * JJDAOSF;  /* YIELD */
-A68_89  KJDAOSF_getbuffer;
+A68_89  KJDAOSF_getbuffer A_UNUSED = {0};
 A68_77 * LJDAOSF;  /* YIELD */
 A68_77  MJDAOSF;  /* procedure value */
 A68_89 * NJDAOSF;  /* YIELD */
 A68_INT * OJDAOSF;  /* YIELD */
 A68_BOOL * PJDAOSF;  /* YIELD */
 A68_92  QJDAOSF;  /* united object - for case conformity */
-A68_INT  RJDAOSF_width;
+A68_INT  RJDAOSF_width A_UNUSED = {0};
 A68_INT * SJDAOSF;  /* YIELD */
 A68_82  UJDAOSF_generator;   /* proc value of non-global proc */
 A68_VC  ZJDAOSF;  /* avoid structure result */
 A68_VC * AKDAOSF;  /* YIELD */
 A68_VC * BKDAOSF;  /* YIELD */
 A68_BOOL * CKDAOSF;  /* YIELD */
-A68_VC  DKDAOSF_rvc;
+A68_VC  DKDAOSF_rvc A_UNUSED = {0};
 A68_VC * EKDAOSF;  /* YIELD */
 A68_INT * FKDAOSF;  /* YIELD */
 A68_BOOL * GKDAOSF;  /* YIELD */
@@ -751,7 +751,7 @@ SJDAOSF = (&(CJDAOSF_ch->Width)) ;
 (*SJDAOSF) = RJDAOSF_width;
  /* line 130: */
  /* line 131: */
-if ( (*(&(CJDAOSF_ch->Input))) )
+if (*(&(CJDAOSF_ch->Input)))
 { 
 A_CLOSURE( UJDAOSF_generator, VJDAOSF_generator, WJDAOSF_generator );
 (( WJDAOSF_generator * ) ( UJDAOSF_generator.nonlocals )) -> RJDAOSF_width = RJDAOSF_width;
@@ -780,7 +780,7 @@ EKDAOSF = (&(CJDAOSF_ch->Buffer)) ;
 (*EKDAOSF) = DKDAOSF_rvc;
  /* line 138: */
 FKDAOSF = (&(CJDAOSF_ch->Width)) ;
-(*FKDAOSF) = (DKDAOSF_rvc.upb-1);
+(void)((*FKDAOSF) = (DKDAOSF_rvc.upb-1));
  /* line 139: */
  /* line 140: */
  /* line 141: */
@@ -794,14 +794,14 @@ break;
 } 
  /* line 142: */
 HKDAOSF = (&(CJDAOSF_ch->Sizeincr)) ;
-(*HKDAOSF) = (*(&(CJDAOSF_ch->Width)));
+(void)((*HKDAOSF) = (*(&(CJDAOSF_ch->Width))));
  /* line 143: */
  /* line 144: */
-if ( (*(&(CJDAOSF_ch->Input))) )
+if (*(&(CJDAOSF_ch->Input)))
 { 
  /* line 146: */
 IKDAOSF = (&(CJDAOSF_ch->Charnumber)) ;
-(*IKDAOSF) = ((*(&(CJDAOSF_ch->Width)))+2);
+(void)((*IKDAOSF) = ((*(&(CJDAOSF_ch->Width)))+2));
 } 
 else
 { 
@@ -829,9 +829,9 @@ return( NKDAOSF );
 
 A68_VOID  PKDAOSF_newline(A68_88 * Ch)
 { 
-A68_INT  QKDAOSF_blow;
-A68_INT  RKDAOSF_bhigh;
-A68_INT  SKDAOSF_len;
+A68_INT  QKDAOSF_blow A_UNUSED = {0};
+A68_INT  RKDAOSF_bhigh A_UNUSED = {0};
+A68_INT  SKDAOSF_len A_UNUSED = {0};
 A68_INT * TKDAOSF;  /* YIELD */
 A68_INT * UKDAOSF;  /* YIELD */
 A68_89  VKDAOSF;  /* CALL */
@@ -842,7 +842,7 @@ A68_38 * ZKDAOSF;  /* YIELD */
 A68_INT * ALDAOSF;  /* YIELD */
 A68_BOOL  BLDAOSF;  /* optbool result */
 A68_BOOL  CLDAOSF;  /* clause result */
-A68_VC  DLDAOSF_old;
+A68_VC  DLDAOSF_old A_UNUSED = {0};
 A68_82  FLDAOSF_generator;   /* proc value of non-global proc */
 A68_VC  KLDAOSF;  /* avoid structure result */
 A68_VC * LLDAOSF;  /* YIELD */
@@ -855,7 +855,7 @@ A68_INT * RLDAOSF;  /* YIELD */
 A68_VC  SLDAOSF;  /* OPERATORS - simple index */
 A68_INT  TLDAOSF;  /* YIELD */
 A68_CHAR * ULDAOSF;  /* YIELD */
-A68_CHAR  VLDAOSF_c;
+A68_CHAR  VLDAOSF_c A_UNUSED = {0};
 A68_BOOL  WLDAOSF;  /* optbool result */
 A68_VC  XLDAOSF;  /* OPERATORS - simple index */
 A68_INT  YLDAOSF;  /* YIELD */
@@ -880,7 +880,7 @@ A_PROC_ENTRY(newline);
  /* line 160: */
  /* line 161: */
  /* line 162: */
-if ( (*(&(Ch->Input))) )
+if (*(&(Ch->Input)))
 { 
 QKDAOSF_blow = 1;
  /* line 163: */
@@ -893,7 +893,7 @@ UKDAOSF = (&(Ch->Charnumber)) ;
 for ( ;; )
 { 
  /* line 166: */
-RKDAOSF_bhigh = ((*(&(Ch->Buffer))).upb-1);
+(void)(RKDAOSF_bhigh = ((*(&(Ch->Buffer))).upb-1));
  /* line 167: */
 VKDAOSF = (*(&(Ch->Getbuffer))) ;
 WKDAOSF = (*(&(Ch->Buffer))) ;
@@ -922,14 +922,14 @@ LLDAOSF = (&(Ch->Buffer)) ;
 MLDAOSF = (*(&(Ch->Buffer))) ;
 PLDAOSF = A_VTRIM(NLDAOSF,(MLDAOSF),A_VTSCRIPT(&(NLDAOSF.upb),(MLDAOSF).upb,1,RKDAOSF_bhigh)) ;
 QLDAOSF = A_VTRIM(OLDAOSF,(DLDAOSF_old),A_VTSCRIPT(&(OLDAOSF.upb),(DLDAOSF_old).upb,1,RKDAOSF_bhigh)) ;
-A_VASSIGN2(QLDAOSF,PLDAOSF,A68_CHAR );
+(void)(A_VASSIGN2(QLDAOSF,PLDAOSF,A68_CHAR ));
  /* line 173: */
  /* line 174: */
-QKDAOSF_blow = (RKDAOSF_bhigh+1);
+(void)(QKDAOSF_blow = (RKDAOSF_bhigh+1));
 }
  /* line 175: */
  /* line 176: */
-if ( EVBAOSF_((*(&(Ch->Status))), OUBAOSF_io_ok) )
+if (EVBAOSF_((*(&(Ch->Status))), OUBAOSF_io_ok))
 { 
 RLDAOSF = (&(Ch->Width)) ;
 (*RLDAOSF) = 0;
@@ -978,7 +978,7 @@ EMDAOSF = (&(Ch->Linenumber)) ;
 else
 { 
  /* line 189: */
-if ( (*(&(Ch->Buffered))) )
+if (*(&(Ch->Buffered)))
 { 
 FMDAOSF = (*(&(Ch->Buffer))) ;
 GMDAOSF = (*(&(Ch->Charnumber))) ;
@@ -988,13 +988,13 @@ HMDAOSF = (&A_VINDEX(FMDAOSF,GMDAOSF)) ;
  /* line 191: */
 IMDAOSF = (*(&(Ch->Putbuffer))) ;
 JMDAOSF = (*(&(Ch->Buffer))) ;
-A_CALLPROC(IMDAOSF,(A_VTRIM(KMDAOSF,(JMDAOSF),A_VTSCRIPT(&(KMDAOSF.upb),(JMDAOSF).upb,1,(*(&(Ch->Charnumber)))))),(A_VTRIM(KMDAOSF,(JMDAOSF),A_VTSCRIPT(&(KMDAOSF.upb),(JMDAOSF).upb,1,(*(&(Ch->Charnumber))))),(IMDAOSF).nonlocals));
+(void)(A_CALLPROC(IMDAOSF,(A_VTRIM(KMDAOSF,(JMDAOSF),A_VTSCRIPT(&(KMDAOSF.upb),(JMDAOSF).upb,1,(*(&(Ch->Charnumber)))))),(A_VTRIM(KMDAOSF,(JMDAOSF),A_VTSCRIPT(&(KMDAOSF.upb),(JMDAOSF).upb,1,(*(&(Ch->Charnumber))))),(IMDAOSF).nonlocals)));
 } 
 else
 { 
  /* line 192: */
 LMDAOSF = (*(&(Ch->Putbuffer))) ;
-A_CALLPROC(LMDAOSF,(A_HVEC(MMDAOSF,THDAOSF_newline_char,A68_CHAR )),(A_HVEC(MMDAOSF,THDAOSF_newline_char,A68_CHAR ),(LMDAOSF).nonlocals));
+(void)(A_CALLPROC(LMDAOSF,(A_HVEC(MMDAOSF,THDAOSF_newline_char,A68_CHAR )),(A_HVEC(MMDAOSF,THDAOSF_newline_char,A68_CHAR ),(LMDAOSF).nonlocals)));
 } 
  /* line 193: */
 NMDAOSF = (&(Ch->Charnumber)) ;
@@ -1021,7 +1021,7 @@ static A68_BOOL A_invoked = A68_FALSE;
 static char *A_config_arguments[] = {"/home/vak/Project/Algol/Algol-68RS-Source/src/a68toc","-v","-uname","seedfile","-staredit","59LR","-lib","/home/vak/Project/Algol/Algol-68RS-Source/a68config","-dir","/home/vak/Project/Algol/Algol-68RS-Source/a68config","-dir","/home/vak/Project/Algol/Algol-68RS-Source/liba68prel","iobasics.a68",""};
 static char *A_config_environment[] = {"A68_LIB=/home/vak/Project/Algol/Algol-68RS-Source/a68config","A68_CDIR=","A68_DIR=","A68_STAREDIT=","A68_NAMESEED=nameseed","CTRANS_NAMESEED=",""};
 static char *A_config_modinfo_files[] = {"/home/vak/Project/Algol/Algol-68RS-Source/a68config/a68config.m","/home/vak/Project/Algol/Algol-68RS-Source/liba68prel/osif.m",""};
-static A_CONFIG_INFO A_config;
+static A_CONFIG_INFO A_config A_UNUSED;
 /* --- end of configuration information */
 A68_82  VGDAOSF;  /* procedure value */
 A68_87  AHDAOSF;  /* procedure value */
@@ -1037,15 +1037,15 @@ BAAALIB();   /* USE a68config */
 CSCAOSF();   /* USE osif */
 /* --- Initialise configuration information */
 A_config.source_file = "/home/vak/Project/Algol/Algol-68RS-Source/liba68prel/iobasics.a68";
-A_config.translation_time = "Thu Nov  5 20:46:56 2026";
+A_config.translation_time = "Thu Nov  5 21:10:59 2026";
 A_config.ctrans_version = "Ctrans_34.6";
 A_config.name_seed = "JGDAOSF (from seed file) ";
-A_config.spec_change_time = "Thu Nov  5 20:46:56 2026";
+A_config.spec_change_time = "Thu Nov  5 21:10:59 2026";
 A_config.arguments = A_config_arguments;
 A_config.environment = A_config_environment;
 A_config.modinfo_files = A_config_modinfo_files;
 A_PROC_ENTRY(DECS iobasics);
-UEAALIB_a68config(LGAALIB_configinfo, OGDAOSF);
+(void)(UEAALIB_a68config(LGAALIB_configinfo, OGDAOSF));
  /* line 43: */
 VGDAOSF.fn.fn_global = SGDAOSF_generator;
 VGDAOSF.nonlocals = A68_NIL;

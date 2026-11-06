@@ -48,7 +48,6 @@
 **     
 */
 
-static char rcs_id[] = "$Id: Ahpolicy.c,v 1.2 2002-02-23 17:50:44 sian Exp $";
 
 #include <algol68/linux/Ahswitch.h>
 #include "Ahbasic.h"

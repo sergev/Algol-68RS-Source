@@ -135,10 +135,10 @@ extern void ODAACTR(void);   /* incinstallation */
 /* --- end of DECS initialisation functions --- */
 static A68_50   WHAACTR = {"$Id: centities.a68,v 1.1.1.1 2001-05-07 10:16:10 sian Exp $"}; 
 A_GISVEC(A68_VC ,XHAACTR,WHAACTR,59)
-A68_43  YHAACTR_anonymous;
-A68_SINT  EIAACTR_cnewline;
+A68_43  YHAACTR_anonymous A_UNUSED;
+A68_SINT  EIAACTR_cnewline A_UNUSED;
 static A68_33   GIAACTR = {"*UNSET*"}; 
-A68_51  HIAACTR_unsetlabel;
+A68_51  HIAACTR_unsetlabel A_UNUSED;
 typedef struct   /* env of non-global proc */
 {
 A68_VC  S;
@@ -191,9 +191,9 @@ A68_VOID  JIAACTR_bracket(A68_VC  S, A68_VC  *ReturnedValue)
 A68_BOOL  KIAACTR;  /* optbool result */
 A68_INT  LIAACTR;  /* YIELD */
 A68_INT  MIAACTR;  /* YIELD */
-A68_INT  NIAACTR_count;
-A68_INT  OIAACTR_ind;
-A68_CHAR  PIAACTR_c;
+A68_INT  NIAACTR_count A_UNUSED = {0};
+A68_INT  OIAACTR_ind A_UNUSED = {0};
+A68_CHAR  PIAACTR_c A_UNUSED = {0};
 A68_VC  QIAACTR;  /* OPERATORS - trim index */
 A68_VC  RIAACTR;  /* forall yield */
 A68_CHAR * SIAACTR;  /* forall control - []x */
@@ -202,7 +202,7 @@ A68_BOOL  UIAACTR;  /* clause result */
 A68_VC  VIAACTR;  /* clause result */
 A68_43  XIAACTR_generator;   /* proc value of non-global proc */
 A68_VC  DJAACTR;  /* avoid structure result */
-A68_VC  CJAACTR_result;
+A68_VC  CJAACTR_result A_UNUSED = {0};
 A68_INT  EJAACTR;  /* YIELD */
 A68_CHAR * FJAACTR;  /* YIELD */
 A68_VC  GJAACTR;  /* OPERATORS - trim index */
@@ -238,14 +238,14 @@ PIAACTR_c = *SIAACTR;
 if ( !((NIAACTR_count>0)) ) break;
 OIAACTR_ind+=1;
  /* line 69: */
-if ( (PIAACTR_c=='(') )
+if (PIAACTR_c=='(')
 { 
  /* line 70: */
 NIAACTR_count+=1;
 } 
 else
 { 
-if ( (PIAACTR_c==')') )
+if (PIAACTR_c==')')
 { 
  /* line 71: */
  /* line 72: */
@@ -261,7 +261,7 @@ UIAACTR = (OIAACTR_ind==S.upb);
 KIAACTR = UIAACTR;
 }
  /* line 76: */
-if ( KIAACTR )
+if (KIAACTR)
 { 
 VIAACTR = S;
 } 
@@ -277,7 +277,7 @@ FJAACTR = (&A_VINDEX(CJAACTR_result,EJAACTR)) ;
 (*FJAACTR) = '(';
  /* line 78: */
 HJAACTR = A_VTRIM(GJAACTR,(CJAACTR_result),A_VTSCRIPT(&(GJAACTR.upb),(CJAACTR_result).upb,2,(S.upb+1))) ;
-A_VASSIGN2(S,HJAACTR,A68_CHAR );
+(void)(A_VASSIGN2(S,HJAACTR,A68_CHAR ));
  /* line 79: */
 IJAACTR = CJAACTR_result.upb ;
 JJAACTR = (&A_VINDEX(CJAACTR_result,IJAACTR)) ;
@@ -343,7 +343,7 @@ static A68_BOOL A_invoked = A68_FALSE;
 static char *A_config_arguments[] = {"/home/vak/Project/Algol/Algol-68RS-Source/src/a68toc","-v","-uname","seedfile","-staredit","59LR","-lib","/home/vak/Project/Algol/Algol-68RS-Source/a68config","-dir","/home/vak/Project/Algol/Algol-68RS-Source/a68config","-dir","/home/vak/Project/Algol/Algol-68RS-Source/liba68prel","-dir",".","centities.a68",""};
 static char *A_config_environment[] = {"A68_LIB=/home/vak/Project/Algol/Algol-68RS-Source/a68config","A68_CDIR=","A68_DIR=","A68_STAREDIT=","A68_NAMESEED=nameseed","CTRANS_NAMESEED=",""};
 static char *A_config_modinfo_files[] = {"/home/vak/Project/Algol/Algol-68RS-Source/a68config/a68config.m","./incinstallation.m",""};
-static A_CONFIG_INFO A_config;
+static A_CONFIG_INFO A_config A_UNUSED;
 /* --- end of configuration information */
 A68_43  DIAACTR;  /* procedure value */
 A68_51  FIAACTR;  /* collateral clause result */
@@ -353,15 +353,15 @@ BAAALIB();   /* USE a68config */
 ODAACTR();   /* USE incinstallation */
 /* --- Initialise configuration information */
 A_config.source_file = "/home/vak/Project/Algol/Algol-68RS-Source/src/centities.a68";
-A_config.translation_time = "Thu Nov  5 20:46:57 2026";
+A_config.translation_time = "Thu Nov  5 21:10:59 2026";
 A_config.ctrans_version = "Ctrans_34.6";
 A_config.name_seed = "SHAACTR (from seed file) ";
-A_config.spec_change_time = "Thu Nov  5 20:46:57 2026";
+A_config.spec_change_time = "Thu Nov  5 21:10:59 2026";
 A_config.arguments = A_config_arguments;
 A_config.environment = A_config_environment;
 A_config.modinfo_files = A_config_modinfo_files;
 A_PROC_ENTRY(DECS centities);
-UEAALIB_a68config(LGAALIB_configinfo, XHAACTR);
+(void)(UEAALIB_a68config(LGAALIB_configinfo, XHAACTR));
  /* line 46: */
 DIAACTR.fn.fn_global = AIAACTR_generator;
 DIAACTR.nonlocals = A68_NIL;

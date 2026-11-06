@@ -40,6 +40,8 @@ COMMENT
 25:08:94  33.001  ELLA  NewConFig Entered in new config system previous version
                                   number 2.19 
 29:03:95  34.002  ELLA  Modcprght Change copyright header
+05:11:26  34.003  SV    Wall      Zero-initialise local variables; mark
+                                  variables and labels A_UNUSED.
 ??:??:??   ?.???  ????
 COMMENT
 
@@ -281,8 +283,9 @@ BEGIN
 		  | "static "
 		  ),
 		  cvartype(cvariabletype OF idinfo) , " " ,
-		  idfullname(decno) , ";",
-		  ( flags OF idinfo >= id op flag 
+		  idfullname(decno) , " A_UNUSED",
+		  ( global | ";" | " = {0};" ),  { locals start zeroed }
+		  ( flags OF idinfo >= id op flag
 		  | " /* OP " + name OF idinfo + " */"
 		  | ""
 		  ),
@@ -886,7 +889,7 @@ BEGIN
 		set OF label OF labinfo := TRUE;
 		{ emit the label name on the code stream }
 		write c stream
-		( ( label full name( labno ), ":", cnewline
+		( ( label full name( labno ), ": A_UNUSED;", cnewline
 		  ),CODESTREAM current level
 		)
 	FI                

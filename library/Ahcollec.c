@@ -48,7 +48,6 @@
  *		Richard Wendland	Tue May  2 22:30:35 BST 1989
  */
 
-static char rcs_id[] = "$Id: Ahcollec.c,v 1.3 2002-02-23 17:50:44 sian Exp $";
 
 /*
  * Edited for Objective-C demo.

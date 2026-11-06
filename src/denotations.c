@@ -317,10 +317,10 @@ extern void IKAAOSF(void);   /* usefulops */
 /* --- end of DECS initialisation functions --- */
 static A68_93   OLJACTR = {"$Id: denotations.a68,v 1.1.1.1 2001-05-07 10:16:10 sian Exp $"}; 
 A_GISVEC(A68_VC ,PLJACTR,OLJACTR,61)
-static A68_BITS  QLJACTR_allbits;
-static A68_INT  RLJACTR_maxintoverten;
-static A68_LBITS  SLJACTR_alllongbits;
-static A68_LINT  TLJACTR_longmaxintoverten;
+static A68_BITS  QLJACTR_allbits A_UNUSED;
+static A68_INT  RLJACTR_maxintoverten A_UNUSED;
+static A68_LBITS  SLJACTR_alllongbits A_UNUSED;
+static A68_LINT  TLJACTR_longmaxintoverten A_UNUSED;
 #define ULJACTR_absspace 32
 #define VLJACTR_abs0 48
 #define WLJACTR_absa 97
@@ -445,10 +445,10 @@ A_STATIC A68_VOID  LOJACTR_longbitstohex(A68_LBITS  B, A68_VC  *ReturnedValue)
 { 
 A68_69  NOJACTR_generator;   /* proc value of non-global proc */
 A68_VC  TOJACTR;  /* avoid structure result */
-A68_VC  SOJACTR_c;
-A68_LBITS  UOJACTR_i;
-A68_INT  VOJACTR_next;
-A68_INT  WOJACTR_digit;
+A68_VC  SOJACTR_c A_UNUSED = {0};
+A68_LBITS  UOJACTR_i A_UNUSED = {0};
+A68_INT  VOJACTR_next A_UNUSED = {0};
+A68_INT  WOJACTR_digit A_UNUSED = {0};
 A68_INT  XOJACTR;  /* clause result */
 A68_CHAR * YOJACTR;  /* YIELD */
 A68_INT  ZOJACTR;  /* SHR */
@@ -471,7 +471,7 @@ for ( ;; )
 { 
 WOJACTR_digit = (A68_INT )(A68_BITS )(A68_LBITS )(UOJACTR_i&0XfU);
  /* line 264: */
-if ( (WOJACTR_digit>9) )
+if (WOJACTR_digit>9)
 { 
 XOJACTR = (WLJACTR_absa-10);
 } 
@@ -480,10 +480,10 @@ else
 XOJACTR = VLJACTR_abs0;
 } 
 YOJACTR = (&A_VINDEX(SOJACTR_c,VOJACTR_next)) ;
-(*YOJACTR) = (A68_SSBITS)(WOJACTR_digit+XOJACTR);
+(void)((*YOJACTR) = (A68_SSBITS)(WOJACTR_digit+XOJACTR));
  /* line 265: */
 ZOJACTR = 4 ;
-UOJACTR_i = A_SHR(UOJACTR_i,ZOJACTR);
+(void)(UOJACTR_i = A_SHR(UOJACTR_i,ZOJACTR));
  /* line 266: */
  /* line 267: */
  /* line 268: */
@@ -504,7 +504,7 @@ return;
 
 A_STATIC A68_VOID  GPJACTR_change(A68_VC  C, A68_CHAR  From, A68_VC  To, A68_VC  *ReturnedValue)
 { 
-A68_INT  HPJACTR_i;
+A68_INT  HPJACTR_i A_UNUSED = {0};
 A68_VC  IPJACTR;  /* clause result */
 A68_VC  JPJACTR;  /* OPERATORS - trim index */
 A68_VC  KPJACTR;  /* OPERATORS - trim index */
@@ -513,7 +513,7 @@ A_PROC_ENTRY(change);
 { 
  /* line 274: */
  /* line 275: */
-if ( QRAAOSF_charinstring(From, (&HPJACTR_i), C) )
+if (QRAAOSF_charinstring(From, (&HPJACTR_i), C))
 { 
  /* line 276: */
  /* line 277: */
@@ -533,7 +533,7 @@ return;
 
 A_STATIC A68_VOID  NPJACTR_suppress(A68_VC  C, A68_BOOL  Real, A68_VC  *ReturnedValue)
 { 
-A68_INT  OPJACTR_i;
+A68_INT  OPJACTR_i A_UNUSED = {0};
 A68_BOOL  PPJACTR;  /* optbool result */
 A68_BOOL  QPJACTR;  /* clause result */
 A68_INT  RPJACTR;  /* YIELD */
@@ -554,7 +554,7 @@ if ( PPJACTR )
 PPJACTR = (A_VINDEX(C,OPJACTR_i)=='0');
 }
 if ( PPJACTR )
-{if ( Real )
+{if (Real)
 { 
 RPJACTR = (OPJACTR_i+1) ;
 QPJACTR = (A_VINDEX(C,RPJACTR)=='0');
@@ -585,8 +585,8 @@ A_STATIC A68_VOID  HRJACTR_octalbyte(A68_INT  I, A68_VC  *ReturnedValue, void *N
 { 
 A68_69  KRJACTR_generator;   /* proc value of non-global proc */
 A68_VC  QRJACTR;  /* avoid structure result */
-A68_VC  PRJACTR_octal;
-A68_INT  RRJACTR_j;
+A68_VC  PRJACTR_octal A_UNUSED = {0};
+A68_INT  RRJACTR_j A_UNUSED = {0};
 A68_INT  SRJACTR;  /* to part of loop */
 A68_INT  TRJACTR;  /* YIELD */
 A68_INT  URJACTR;  /* ADICOPS - ** */
@@ -612,7 +612,7 @@ TRJACTR = ((ERJACTR_escsize-RRJACTR_j)+1) ;
 URJACTR = 8 ;
 VRJACTR = (RRJACTR_j-1) ;
 WRJACTR = (&A_VINDEX(PRJACTR_octal,TRJACTR)) ;
-(*WRJACTR) = (A68_SSBITS)((A68_INT )(A68_BITS )((A68_BITS )(I/A_LI_POWER(URJACTR,VRJACTR,(A68_INT )))&07U)+VLJACTR_abs0);
+(void)((*WRJACTR) = (A68_SSBITS)((A68_INT )(A68_BITS )((A68_BITS )(I/A_LI_POWER(URJACTR,VRJACTR,(A68_INT )))&07U)+VLJACTR_abs0));
 }
  /* line 322: */
  /* line 323: */
@@ -642,12 +642,12 @@ return;
 A_STATIC A68_LBITS  YLJACTR_charstolongbits(A68_VC  Chars)
 { 
 A68_INT  BMJACTR;  /* YIELD */
-A68_INT  CMJACTR_width;
-A68_LBITS  DMJACTR_safetoshift;
-A68_LBITS  EMJACTR_answer;
-A68_INT  FMJACTR_hexdigit;
-A68_INT  GMJACTR_x;
-A68_CHAR * HMJACTR_char;
+A68_INT  CMJACTR_width A_UNUSED = {0};
+A68_LBITS  DMJACTR_safetoshift A_UNUSED = {0};
+A68_LBITS  EMJACTR_answer A_UNUSED = {0};
+A68_INT  FMJACTR_hexdigit A_UNUSED = {0};
+A68_INT  GMJACTR_x A_UNUSED = {0};
+A68_CHAR * HMJACTR_char A_UNUSED = {0};
 A68_VC  IMJACTR;  /* OPERATORS - trim index */
 A68_VC  JMJACTR;  /* forall yield */
 A68_INT  KMJACTR;  /* forall loop counter */
@@ -662,9 +662,9 @@ A_PROC_ENTRY(charstolongbits);
 BMJACTR = 1 ;
 CMJACTR_width = BMAAOSF_charinvec((*(&A_VINDEX(Chars,BMJACTR))), AMJACTR);
  /* line 65: */
-if ( (CMJACTR_width<=0) )
+if (CMJACTR_width<=0)
 { 
-PXIACTR_error(633);
+(void)(PXIACTR_error(633));
 } 
  /* line 66: */
 DMJACTR_safetoshift = A_SHR(SLJACTR_alllongbits,CMJACTR_width);
@@ -682,11 +682,11 @@ for (;KMJACTR-- >= 0;
 {
  /* line 71: */
  /* line 72: */
-if ( A_LB_LE(EMJACTR_answer,DMJACTR_safetoshift) )
+if (A_LB_LE(EMJACTR_answer,DMJACTR_safetoshift))
 { 
-GMJACTR_x = (A68_INT)(unsigned char)(*HMJACTR_char);
+(void)(GMJACTR_x = (A68_INT)(unsigned char)(*HMJACTR_char));
  /* line 73: */
-if ( (GMJACTR_x>=WLJACTR_absa) )
+if (GMJACTR_x>=WLJACTR_absa)
 { 
 LMJACTR = ((GMJACTR_x-WLJACTR_absa)+10);
 } 
@@ -696,15 +696,15 @@ LMJACTR = (GMJACTR_x-VLJACTR_abs0);
 } 
 FMJACTR_hexdigit = LMJACTR;
  /* line 74: */
-WXIACTR_assert(NMJACTR, (FMJACTR_hexdigit<=15));
+(void)(WXIACTR_assert(NMJACTR, (FMJACTR_hexdigit<=15)));
  /* line 75: */
-EMJACTR_answer = (A68_LBITS )(A_SHL(EMJACTR_answer,CMJACTR_width)|(A68_LBITS )(A68_BITS )FMJACTR_hexdigit);
+(void)(EMJACTR_answer = (A68_LBITS )(A_SHL(EMJACTR_answer,CMJACTR_width)|(A68_LBITS )(A68_BITS )FMJACTR_hexdigit));
  /* line 76: */
 OMJACTR = A68_TRUE;
 } 
 else
 { 
-PXIACTR_error(301);
+(void)(PXIACTR_error(301));
  /* line 77: */
  /* line 78: */
 OMJACTR = A68_FALSE;
@@ -726,16 +726,16 @@ return( QMJACTR );
 A_STATIC A68_LINT  SMJACTR_charstolongint(A68_VC  Chars)
 { 
 A68_INT  TMJACTR;  /* YIELD */
-A68_LINT  XMJACTR_answer;
-A68_INT  YMJACTR_digit;
-A68_INT  ZMJACTR_i;
+A68_LINT  XMJACTR_answer A_UNUSED = {0};
+A68_INT  YMJACTR_digit A_UNUSED = {0};
+A68_INT  ZMJACTR_i A_UNUSED = {0};
 A68_INT  ANJACTR;  /* to part of loop */
 A68_LINT  DNJACTR;  /* clause result */
 A_PROC_ENTRY(charstolongint);
  /* line 87: */
  /* line 88: */
 TMJACTR = 1 ;
-if ( ((*(&A_VINDEX(Chars,TMJACTR)))=='a') )
+if ((*(&A_VINDEX(Chars,TMJACTR)))=='a')
 { 
 { 
 XMJACTR_answer = 0;
@@ -749,7 +749,7 @@ ZMJACTR_i += 1 )
 { 
  /* line 92: */
  /* line 93: */
-if ( (XMJACTR_answer>TLJACTR_longmaxintoverten) )
+if (XMJACTR_answer>TLJACTR_longmaxintoverten)
 { 
  /* line 94: */
 goto WMJACTR_overflowed;
@@ -757,12 +757,12 @@ goto WMJACTR_overflowed;
  /* line 95: */
 XMJACTR_answer*=10;
  /* line 96: */
-YMJACTR_digit = ((A68_INT)(unsigned char)(*(&A_VINDEX(Chars,ZMJACTR_i)))-VLJACTR_abs0);
+(void)(YMJACTR_digit = ((A68_INT)(unsigned char)(*(&A_VINDEX(Chars,ZMJACTR_i)))-VLJACTR_abs0));
  /* line 97: */
-WXIACTR_assert(CNJACTR, (YMJACTR_digit<=9));
+(void)(WXIACTR_assert(CNJACTR, (YMJACTR_digit<=9)));
  /* line 98: */
  /* line 99: */
-if ( (XMJACTR_answer>(YBAAOSF_longmaxint-(A68_LINT )YMJACTR_digit)) )
+if (XMJACTR_answer>(YBAAOSF_longmaxint-(A68_LINT )YMJACTR_digit))
 { 
  /* line 100: */
 goto WMJACTR_overflowed;
@@ -776,9 +776,9 @@ XMJACTR_answer+=(A68_LINT )YMJACTR_digit;
  /* line 105: */
 DNJACTR = XMJACTR_answer;
 goto UMJACTR;
-WMJACTR_overflowed:
+WMJACTR_overflowed: A_UNUSED;
  /* line 106: */
-PXIACTR_error(302);
+(void)(PXIACTR_error(302));
  /* line 107: */
  /* line 108: */
  /* line 109: */
@@ -802,13 +802,13 @@ A68_VOID  GNJACTR_convertradixstring(A68_VC  Radixstring, A68_INT  Radix, A68_VC
 A68_VC  INJACTR;  /* clause result */
 A68_69  LNJACTR_generator;   /* proc value of non-global proc */
 A68_VC  RNJACTR;  /* avoid structure result */
-A68_VC  QNJACTR_converted;
-A68_INT  SNJACTR_convertedposition;
-A68_INT  TNJACTR_sum;
-A68_INT  UNJACTR_base;
-A68_INT  VNJACTR_hexdigit;
-A68_INT  WNJACTR_x;
-A68_CHAR * XNJACTR_c;
+A68_VC  QNJACTR_converted A_UNUSED = {0};
+A68_INT  SNJACTR_convertedposition A_UNUSED = {0};
+A68_INT  TNJACTR_sum A_UNUSED = {0};
+A68_INT  UNJACTR_base A_UNUSED = {0};
+A68_INT  VNJACTR_hexdigit A_UNUSED = {0};
+A68_INT  WNJACTR_x A_UNUSED = {0};
+A68_CHAR * XNJACTR_c A_UNUSED = {0};
 A68_INT  YNJACTR;  /* forall loop counter */
 A68_INT  ZNJACTR;  /* YIELD */
 A68_CHAR * AOJACTR;  /* YIELD */
@@ -820,7 +820,7 @@ A_PROC_ENTRY(convertradixstring);
  /* line 223: */
  /* line 224: */
  /* line 225: */
-if ( (Radixstring.upb==0) )
+if (Radixstring.upb==0)
 { 
 INJACTR = JNJACTR;
 } 
@@ -828,7 +828,7 @@ else
 { 
  /* line 226: */
  /* line 227: */
-if ( (Radix==0) )
+if (Radix==0)
 { 
 INJACTR = Radixstring;
 } 
@@ -851,10 +851,10 @@ for (;YNJACTR-- >= 0;
 (XNJACTR_c++
 ) )
 {
-WNJACTR_x = (A68_INT)(unsigned char)(*XNJACTR_c);
+(void)(WNJACTR_x = (A68_INT)(unsigned char)(*XNJACTR_c));
  /* line 233: */
  /* line 235: */
-if ( (WNJACTR_x<=ULJACTR_absspace) )
+if (WNJACTR_x<=ULJACTR_absspace)
 { 
 ZNJACTR = SNJACTR_convertedposition+=1 ;
 AOJACTR = (&A_VINDEX(QNJACTR_converted,ZNJACTR)) ;
@@ -866,7 +866,7 @@ UNJACTR_base = Radix;
 } 
 else
 { 
-if ( (WNJACTR_x>=WLJACTR_absa) )
+if (WNJACTR_x>=WLJACTR_absa)
 { 
 BOJACTR = ((WNJACTR_x-WLJACTR_absa)+10);
 } 
@@ -877,15 +877,15 @@ BOJACTR = (WNJACTR_x-VLJACTR_abs0);
 VNJACTR_hexdigit = BOJACTR;
  /* line 241: */
  /* line 242: */
-WXIACTR_assert(DOJACTR, ((VNJACTR_hexdigit<=15)&(VNJACTR_hexdigit>=0)));
+(void)(WXIACTR_assert(DOJACTR, ((VNJACTR_hexdigit<=15)&(VNJACTR_hexdigit>=0))));
  /* line 243: */
-TNJACTR_sum = ((TNJACTR_sum*UNJACTR_base)+VNJACTR_hexdigit);
+(void)(TNJACTR_sum = ((TNJACTR_sum*UNJACTR_base)+VNJACTR_hexdigit));
  /* line 244: */
  /* line 245: */
  /* line 246: */
-if ( (TNJACTR_sum>ZBAAOSF_maxabschar) )
+if (TNJACTR_sum>ZBAAOSF_maxabschar)
 { 
-PXIACTR_error(305);
+(void)(PXIACTR_error(305));
  /* line 247: */
  /* line 248: */
  /* line 249: */
@@ -912,7 +912,7 @@ return;
 A68_VOID  IOJACTR_translatedenotation(A68_VC  Chars, A68_VC  *ReturnedValue)
 { 
 A68_INT  UPJACTR;  /* YIELD */
-A68_CHAR  VPJACTR_basesymbol;
+A68_CHAR  VPJACTR_basesymbol A_UNUSED = {0};
 A68_VC  WPJACTR;  /* clause result */
 A68_VC  XPJACTR;  /* OPERATORS - trim index */
 A68_VC  YPJACTR;  /* avoid structure result */
@@ -950,7 +950,7 @@ UPJACTR = 1 ;
 VPJACTR_basesymbol = (*(&A_VINDEX(Chars,UPJACTR)));
  /* line 295: */
  /* line 296: */
-if ( (VPJACTR_basesymbol=='a') )
+if (VPJACTR_basesymbol=='a')
 { 
  /* line 297: */
 NPJACTR_suppress( A_VTRIM(XPJACTR,(Chars),A_VTSCRIPT(&(XPJACTR.upb),(Chars).upb,2,(Chars).upb)), A68_FALSE, &YPJACTR );
@@ -960,7 +960,7 @@ else
 { 
  /* line 298: */
  /* line 299: */
-if ( (VPJACTR_basesymbol=='r') )
+if (VPJACTR_basesymbol=='r')
 { 
  /* line 300: */
  /* line 301: */
@@ -976,7 +976,7 @@ else
 { 
  /* line 304: */
  /* line 305: */
-if ( (VPJACTR_basesymbol=='8') )
+if (VPJACTR_basesymbol=='8')
 { 
 IQJACTR.data[0] = A_HVEC(JQJACTR,'0',A68_CHAR );
 IQJACTR.data[1] = A_VTRIM(KQJACTR,(Chars),A_VTSCRIPT(&(KQJACTR.upb),(Chars).upb,2,(Chars).upb));
@@ -988,7 +988,7 @@ WPJACTR = NQJACTR;
 else
 { 
  /* line 307: */
-if ( (VPJACTR_basesymbol=='g') )
+if (VPJACTR_basesymbol=='g')
 { 
 OQJACTR.data[0] = QQJACTR;
 OQJACTR.data[1] = A_VTRIM(RQJACTR,(Chars),A_VTSCRIPT(&(RQJACTR.upb),(Chars).upb,2,(Chars).upb));
@@ -1022,13 +1022,13 @@ return;
 A68_VOID  DRJACTR_replacecontrolchars(A68_VC  String, A68_VC  *ReturnedValue)
 { 
 A68_48  GRJACTR_octalbyte;   /* proc value of non-global proc */
-A68_INT  YRJACTR_pos;
+A68_INT  YRJACTR_pos A_UNUSED = {0};
 A68_69  ASJACTR_generator;   /* proc value of non-global proc */
 A68_VC  FSJACTR;  /* avoid structure result */
-A68_VC  GSJACTR_escapeseq;
-A68_INT  HSJACTR_i;
+A68_VC  GSJACTR_escapeseq A_UNUSED = {0};
+A68_INT  HSJACTR_i A_UNUSED = {0};
 A68_INT  ISJACTR;  /* to part of loop */
-A68_CHAR  JSJACTR_c;
+A68_CHAR  JSJACTR_c A_UNUSED = {0};
 A68_BOOL  KSJACTR;  /* optbool result */
 A68_INT  LSJACTR;  /* YIELD */
 A68_BOOL  MSJACTR;  /* optbool result */
@@ -1096,12 +1096,12 @@ MSJACTR = ((A68_INT)(unsigned char)(*(&A_VINDEX(String,NSJACTR)))>(A68_INT)(unsi
 KSJACTR = MSJACTR;
 }
  /* line 333: */
-if ( KSJACTR )
+if (KSJACTR)
 { 
 QSJACTR = A_VTRIM(PSJACTR,(GSJACTR_escapeseq),A_VTSCRIPT(&(PSJACTR.upb),(GSJACTR_escapeseq).upb,YRJACTR_pos,(GSJACTR_escapeseq).upb)) ;
 TSJACTR = A_VTRIM(RSJACTR,(QSJACTR),A_VTSCRIPT(&(RSJACTR.upb),(QSJACTR).upb,1,2)) ;
 USJACTR = SSJACTR ;
-A_VASSIGN2(USJACTR,TSJACTR,A68_CHAR );
+(void)(A_VASSIGN2(USJACTR,TSJACTR,A68_CHAR ));
  /* line 334: */
  /* line 335: */
 YRJACTR_pos+=2;
@@ -1113,12 +1113,12 @@ if ( ! VSJACTR )
 { /* line 336: */
 VSJACTR = ((A68_INT)(unsigned char)JSJACTR_c>126);
 }
-if ( VSJACTR )
+if (VSJACTR)
 { 
 A_CALLPROC(GRJACTR_octalbyte,((A68_INT)(unsigned char)JSJACTR_c, &YSJACTR),((A68_INT)(unsigned char)JSJACTR_c, &YSJACTR,(GRJACTR_octalbyte).nonlocals));
 ZSJACTR = A_VTRIM(WSJACTR,(GSJACTR_escapeseq),A_VTSCRIPT(&(WSJACTR.upb),(GSJACTR_escapeseq).upb,YRJACTR_pos,(YRJACTR_pos+ERJACTR_escsize))) ;
 ATJACTR = A_VC_PLUS(A_HVEC(XSJACTR,'\\',A68_CHAR ),YSJACTR) ;
-A_VASSIGN2(ATJACTR,ZSJACTR,A68_CHAR );
+(void)(A_VASSIGN2(ATJACTR,ZSJACTR,A68_CHAR ));
  /* line 337: */
  /* line 338: */
 YRJACTR_pos+=4;
@@ -1126,11 +1126,11 @@ YRJACTR_pos+=4;
 else
 { 
  /* line 339: */
-if ( (JSJACTR_c=='\\') )
+if (JSJACTR_c=='\\')
 { 
 ETJACTR = A_VTRIM(CTJACTR,(GSJACTR_escapeseq),A_VTSCRIPT(&(CTJACTR.upb),(GSJACTR_escapeseq).upb,YRJACTR_pos,(YRJACTR_pos+1))) ;
 FTJACTR = DTJACTR ;
-A_VASSIGN2(FTJACTR,ETJACTR,A68_CHAR );
+(void)(A_VASSIGN2(FTJACTR,ETJACTR,A68_CHAR ));
  /* line 340: */
  /* line 341: */
 YRJACTR_pos+=2;
@@ -1138,11 +1138,11 @@ YRJACTR_pos+=2;
 else
 { 
  /* line 342: */
-if ( (JSJACTR_c=='\"') )
+if (JSJACTR_c=='\"')
 { 
 JTJACTR = A_VTRIM(HTJACTR,(GSJACTR_escapeseq),A_VTSCRIPT(&(HTJACTR.upb),(GSJACTR_escapeseq).upb,YRJACTR_pos,(YRJACTR_pos+1))) ;
 KTJACTR = ITJACTR ;
-A_VASSIGN2(KTJACTR,JTJACTR,A68_CHAR );
+(void)(A_VASSIGN2(KTJACTR,JTJACTR,A68_CHAR ));
  /* line 343: */
  /* line 344: */
 YRJACTR_pos+=2;
@@ -1150,11 +1150,11 @@ YRJACTR_pos+=2;
 else
 { 
  /* line 345: */
-if ( ((String.upb==1)&(JSJACTR_c=='\'')) )
+if ((String.upb==1)&(JSJACTR_c=='\''))
 { 
 OTJACTR = A_VTRIM(MTJACTR,(GSJACTR_escapeseq),A_VTSCRIPT(&(MTJACTR.upb),(GSJACTR_escapeseq).upb,YRJACTR_pos,(YRJACTR_pos+1))) ;
 PTJACTR = NTJACTR ;
-A_VASSIGN2(PTJACTR,OTJACTR,A68_CHAR );
+(void)(A_VASSIGN2(PTJACTR,OTJACTR,A68_CHAR ));
  /* line 346: */
  /* line 347: */
 YRJACTR_pos+=2;
@@ -1194,7 +1194,7 @@ static A68_BOOL A_invoked = A68_FALSE;
 static char *A_config_arguments[] = {"/home/vak/Project/Algol/Algol-68RS-Source/src/a68toc","-v","-uname","seedfile","-staredit","59LR","-lib","/home/vak/Project/Algol/Algol-68RS-Source/a68config","-dir","/home/vak/Project/Algol/Algol-68RS-Source/a68config","-dir","/home/vak/Project/Algol/Algol-68RS-Source/liba68prel","-dir",".","denotations.a68",""};
 static char *A_config_environment[] = {"A68_LIB=/home/vak/Project/Algol/Algol-68RS-Source/a68config","A68_CDIR=","A68_DIR=","A68_STAREDIT=","A68_NAMESEED=nameseed","CTRANS_NAMESEED=",""};
 static char *A_config_modinfo_files[] = {"/home/vak/Project/Algol/Algol-68RS-Source/a68config/a68config.m","./environment.m","./centities.m","/home/vak/Project/Algol/Algol-68RS-Source/liba68prel/cif.m","/home/vak/Project/Algol/Algol-68RS-Source/liba68prel/usefulops.m",""};
-static A_CONFIG_INFO A_config;
+static A_CONFIG_INFO A_config A_UNUSED;
 /* --- end of configuration information */
 if( A_invoked ) return;
 A_invoked = A68_TRUE;
@@ -1205,15 +1205,15 @@ BAAAOSF();   /* USE cif */
 IKAAOSF();   /* USE usefulops */
 /* --- Initialise configuration information */
 A_config.source_file = "/home/vak/Project/Algol/Algol-68RS-Source/src/denotations.a68";
-A_config.translation_time = "Thu Nov  5 20:46:57 2026";
+A_config.translation_time = "Thu Nov  5 21:10:59 2026";
 A_config.ctrans_version = "Ctrans_34.6";
 A_config.name_seed = "KLJACTR (from seed file) ";
-A_config.spec_change_time = "Thu Nov  5 20:46:57 2026";
+A_config.spec_change_time = "Thu Nov  5 21:10:59 2026";
 A_config.arguments = A_config_arguments;
 A_config.environment = A_config_environment;
 A_config.modinfo_files = A_config_modinfo_files;
 A_PROC_ENTRY(DECS denotations);
-UEAALIB_a68config(LGAALIB_configinfo, PLJACTR);
+(void)(UEAALIB_a68config(LGAALIB_configinfo, PLJACTR));
  /* line 44: */
 QLJACTR_allbits = ~(A68_BITS )0;
  /* line 45: */

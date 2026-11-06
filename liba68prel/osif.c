@@ -525,21 +525,21 @@ A_STATIC A68_VOID  CTCAOSF_init_osif(void);
 A68_VOID  JSCAOSF_generic_msg(A68_46  Msgno, A68_51  Params)
 { 
 A68_49  KSCAOSF;  /* avoid structure result */
-A68_49  LSCAOSF_message;
-A68_63  MSCAOSF;  /* OPERATORS - mode -> union mode */
+A68_49  LSCAOSF_message A_UNUSED = {0};
+A68_63  MSCAOSF = {0};  /* OPERATORS - mode -> union mode */
 A68_69  NSCAOSF;  /* avoid structure result */
-A68_63  OSCAOSF;  /* OPERATORS - mode -> union mode */
+A68_63  OSCAOSF = {0};  /* OPERATORS - mode -> union mode */
 A68_VC  PSCAOSF;  /* OPERATORS - scalar -> [] or VEC[] */
 A68_69  QSCAOSF;  /* avoid structure result */
-A68_63  RSCAOSF;  /* OPERATORS - mode -> union mode */
+A68_63  RSCAOSF = {0};  /* OPERATORS - mode -> union mode */
 A68_BOOL  SSCAOSF;  /* optbool result */
-A68_63  TSCAOSF;  /* OPERATORS - mode -> union mode */
-A68_63  USCAOSF;  /* OPERATORS - mode -> union mode */
-A68_63  VSCAOSF;  /* OPERATORS - mode -> union mode */
+A68_63  TSCAOSF = {0};  /* OPERATORS - mode -> union mode */
+A68_63  USCAOSF = {0};  /* OPERATORS - mode -> union mode */
+A68_63  VSCAOSF = {0};  /* OPERATORS - mode -> union mode */
 A68_BOOL  WSCAOSF;  /* optbool result */
-A68_63  XSCAOSF;  /* OPERATORS - mode -> union mode */
+A68_63  XSCAOSF = {0};  /* OPERATORS - mode -> union mode */
 A68_69  YSCAOSF;  /* avoid structure result */
-A68_63  ZSCAOSF;  /* OPERATORS - mode -> union mode */
+A68_63  ZSCAOSF = {0};  /* OPERATORS - mode -> union mode */
 A68_VC  ATCAOSF;  /* OPERATORS - scalar -> [] or VEC[] */
 A68_69  BTCAOSF;  /* avoid structure result */
 A_PROC_ENTRY(generic_msg);
@@ -550,17 +550,17 @@ EABAOSF_translate_msg( Msgno, Params, &KSCAOSF );
 LSCAOSF_message = KSCAOSF;
  /* line 66: */
  /* line 67: */
-if ( JXAAOSF_error_msg(A_UNITE(MSCAOSF,mode2,2,LSCAOSF_message)) )
+if (JXAAOSF_error_msg(A_UNITE(MSCAOSF,mode2,2,LSCAOSF_message)))
 { 
 UXBAOSF_write_buffer( VSBAOSF_stderr, LSCAOSF_message.Text, RIBAOSF_ignore_msg, &NSCAOSF );
-NSCAOSF;
+;
  /* line 68: */
  /* line 69: */
-if ( JYAAOSF_newline_msg(A_UNITE(OSCAOSF,mode2,2,LSCAOSF_message)) )
+if (JYAAOSF_newline_msg(A_UNITE(OSCAOSF,mode2,2,LSCAOSF_message)))
 { 
  /* line 70: */
 UXBAOSF_write_buffer( VSBAOSF_stderr, A_HVEC(PSCAOSF,GVBAOSF_newline_char,A68_CHAR ), RIBAOSF_ignore_msg, &QSCAOSF );
-QSCAOSF;
+;
 } 
  /* line 72: */
 SSCAOSF = UXAAOSF_cli_msg(A_UNITE(RSCAOSF,mode2,2,LSCAOSF_message));
@@ -568,19 +568,19 @@ if ( ! SSCAOSF )
 { /* line 73: */
 SSCAOSF = PXAAOSF_abort_msg(A_UNITE(TSCAOSF,mode2,2,LSCAOSF_message));
 }
-if ( SSCAOSF )
+if (SSCAOSF)
 { 
  /* line 74: */
-APBAOSF_exit((-2));
+(void)(APBAOSF_exit((-2)));
 } 
 else
 { 
  /* line 75: */
-if ( FXAAOSF_sysfault_msg(A_UNITE(USCAOSF,mode2,2,LSCAOSF_message)) )
+if (FXAAOSF_sysfault_msg(A_UNITE(USCAOSF,mode2,2,LSCAOSF_message)))
 { 
  /* line 76: */
  /* line 77: */
-APBAOSF_exit((-1));
+(void)(APBAOSF_exit((-1)));
 } 
 } 
 } 
@@ -591,19 +591,19 @@ if ( ! WSCAOSF )
 { /* line 78: */
 WSCAOSF = ZXAAOSF_log_msg(A_UNITE(XSCAOSF,mode2,2,LSCAOSF_message));
 }
-if ( WSCAOSF )
+if (WSCAOSF)
 { 
 UXBAOSF_write_buffer( USBAOSF_stdout, LSCAOSF_message.Text, RIBAOSF_ignore_msg, &YSCAOSF );
-YSCAOSF;
+;
  /* line 79: */
  /* line 80: */
-if ( JYAAOSF_newline_msg(A_UNITE(ZSCAOSF,mode2,2,LSCAOSF_message)) )
+if (JYAAOSF_newline_msg(A_UNITE(ZSCAOSF,mode2,2,LSCAOSF_message)))
 { 
  /* line 81: */
  /* line 82: */
  /* line 83: */
 UXBAOSF_write_buffer( USBAOSF_stdout, A_HVEC(ATCAOSF,GVBAOSF_newline_char,A68_CHAR ), RIBAOSF_ignore_msg, &BTCAOSF );
-BTCAOSF;
+;
 } 
 } 
 } 
@@ -623,7 +623,7 @@ DTCAOSF.nonlocals = A68_NIL;
 TIBAOSF_global_msg = DTCAOSF;
  /* line 92: */
  /* line 93: */
-ZRCAOSF_init_ossignals();
+(void)(ZRCAOSF_init_ossignals());
 } 
 A_PROC_EXIT(init_osif);
 return;
@@ -640,7 +640,7 @@ static A68_BOOL A_invoked = A68_FALSE;
 static char *A_config_arguments[] = {"/home/vak/Project/Algol/Algol-68RS-Source/src/a68toc","-v","-uname","seedfile","-staredit","59LR","-lib","/home/vak/Project/Algol/Algol-68RS-Source/a68config","-dir","/home/vak/Project/Algol/Algol-68RS-Source/a68config","-dir","/home/vak/Project/Algol/Algol-68RS-Source/liba68prel","osif.a68",""};
 static char *A_config_environment[] = {"A68_LIB=/home/vak/Project/Algol/Algol-68RS-Source/a68config","A68_CDIR=","A68_DIR=","A68_STAREDIT=","A68_NAMESEED=nameseed","CTRANS_NAMESEED=",""};
 static char *A_config_modinfo_files[] = {"/home/vak/Project/Algol/Algol-68RS-Source/a68config/a68config.m","/home/vak/Project/Algol/Algol-68RS-Source/liba68prel/osgc.m","/home/vak/Project/Algol/Algol-68RS-Source/liba68prel/osshell.m","/home/vak/Project/Algol/Algol-68RS-Source/liba68prel/osmisc.m","/home/vak/Project/Algol/Algol-68RS-Source/liba68prel/ossignals.m","/home/vak/Project/Algol/Algol-68RS-Source/liba68prel/oserrors.m","/home/vak/Project/Algol/Algol-68RS-Source/liba68prel/osfiles.m","/home/vak/Project/Algol/Algol-68RS-Source/liba68prel/messageproc.m","/home/vak/Project/Algol/Algol-68RS-Source/liba68prel/cif.m",""};
-static A_CONFIG_INFO A_config;
+static A_CONFIG_INFO A_config A_UNUSED;
 /* --- end of configuration information */
 A68_39  ETCAOSF;  /* procedure value */
 if( A_invoked ) return;
@@ -656,15 +656,15 @@ ZRAAOSF();   /* USE messageproc */
 BAAAOSF();   /* USE cif */
 /* --- Initialise configuration information */
 A_config.source_file = "/home/vak/Project/Algol/Algol-68RS-Source/liba68prel/osif.a68";
-A_config.translation_time = "Thu Nov  5 20:46:56 2026";
+A_config.translation_time = "Thu Nov  5 21:10:59 2026";
 A_config.ctrans_version = "Ctrans_34.6";
 A_config.name_seed = "BSCAOSF (from seed file) ";
-A_config.spec_change_time = "Thu Nov  5 20:46:56 2026";
+A_config.spec_change_time = "Thu Nov  5 21:10:59 2026";
 A_config.arguments = A_config_arguments;
 A_config.environment = A_config_environment;
 A_config.modinfo_files = A_config_modinfo_files;
 A_PROC_ENTRY(DECS osif);
-UEAALIB_a68config(LGAALIB_configinfo, GSCAOSF);
+(void)(UEAALIB_a68config(LGAALIB_configinfo, GSCAOSF));
  /* line 62: */
  /* line 87: */
  /* line 88: */
@@ -674,7 +674,7 @@ UEAALIB_a68config(LGAALIB_configinfo, GSCAOSF);
  /* line 177: */
 ETCAOSF.fn.fn_global = CTCAOSF_init_osif;
 ETCAOSF.nonlocals = A68_NIL;
-ABAALIB_a68init(ETCAOSF);
+(void)(ABAALIB_a68init(ETCAOSF));
 A_PROC_EXIT(DECS osif);
 } 
 #undef NL

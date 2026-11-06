@@ -237,8 +237,8 @@ static A68_71   ILBAOSF = {"Invalid call to exclusive_close_file"};
 A_GISVEC(A68_VC ,JLBAOSF,ILBAOSF,36)
 static A68_80   KLBAOSF = {"Invalid call to truncate_file"}; 
 A_GISVEC(A68_VC ,LLBAOSF,KLBAOSF,29)
-static A68_39  NLBAOSF_os_facility;
-static A68_34 * VLBAOSF_message;
+static A68_39  NLBAOSF_os_facility A_UNUSED;
+static A68_34 * VLBAOSF_message A_UNUSED;
 
 A_STATIC A68_VOID  EJBAOSF_generator(A68_BOOL  DJBAOSF_anonymous, A68_33  *ReturnedValue);
 
@@ -292,7 +292,7 @@ static A68_BOOL A_invoked = A68_FALSE;
 static char *A_config_arguments[] = {"/home/vak/Project/Algol/Algol-68RS-Source/src/a68toc","-v","-uname","seedfile","-staredit","59LR","-lib","/home/vak/Project/Algol/Algol-68RS-Source/a68config","-dir","/home/vak/Project/Algol/Algol-68RS-Source/a68config","-dir","/home/vak/Project/Algol/Algol-68RS-Source/liba68prel","osmessages.a68",""};
 static char *A_config_environment[] = {"A68_LIB=/home/vak/Project/Algol/Algol-68RS-Source/a68config","A68_CDIR=","A68_DIR=","A68_STAREDIT=","A68_NAMESEED=nameseed","CTRANS_NAMESEED=",""};
 static char *A_config_modinfo_files[] = {"/home/vak/Project/Algol/Algol-68RS-Source/a68config/a68config.m","/home/vak/Project/Algol/Algol-68RS-Source/liba68prel/messageproc.m",""};
-static A_CONFIG_INFO A_config;
+static A_CONFIG_INFO A_config A_UNUSED;
 /* --- end of configuration information */
 A68_39  AJBAOSF;  /* collateral clause result */
 A68_33  HJBAOSF;  /* avoid structure result */
@@ -309,15 +309,15 @@ BAAALIB();   /* USE a68config */
 ZRAAOSF();   /* USE messageproc */
 /* --- Initialise configuration information */
 A_config.source_file = "/home/vak/Project/Algol/Algol-68RS-Source/liba68prel/osmessages.a68";
-A_config.translation_time = "Thu Nov  5 20:46:56 2026";
+A_config.translation_time = "Thu Nov  5 21:10:59 2026";
 A_config.ctrans_version = "Ctrans_34.6";
 A_config.name_seed = "TIBAOSF (from seed file) ";
-A_config.spec_change_time = "Thu Nov  5 20:46:56 2026";
+A_config.spec_change_time = "Thu Nov  5 21:10:59 2026";
 A_config.arguments = A_config_arguments;
 A_config.environment = A_config_environment;
 A_config.modinfo_files = A_config_modinfo_files;
 A_PROC_ENTRY(DECS osmessages);
-UEAALIB_a68config(LGAALIB_configinfo, YIBAOSF);
+(void)(UEAALIB_a68config(LGAALIB_configinfo, YIBAOSF));
  /* line 66: */
  /* line 68: */
  /* line 69: */
@@ -327,7 +327,7 @@ EJBAOSF_generator( A68_TRUE, &HJBAOSF );
 AJBAOSF.Messages = HJBAOSF;
  /* line 71: */
 IJBAOSF = A_LOC(A68_BOOL ) ;
-(*IJBAOSF) = A68_FALSE ;
+(void)((*IJBAOSF) = A68_FALSE) ;
 AJBAOSF.Initialised = IJBAOSF;
  /* line 73: */
 JJBAOSF.data[0].Number = 1;

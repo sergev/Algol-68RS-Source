@@ -51,12 +51,15 @@
 #include <setjmp.h>
 #include <algol68/linux/Ahostenv.h>
 
+/*	generated declarations may legitimately be unused	*/
+#define	A_UNUSED	__attribute__((__unused__))
+
 /*	storage class for C static functions - make global for debugging */
 
 #ifdef	A_DEBUG
-#define	A_STATIC
+#define	A_STATIC	A_UNUSED
 #else
-#define A_STATIC	static
+#define A_STATIC	static A_UNUSED
 #endif
 
 /*

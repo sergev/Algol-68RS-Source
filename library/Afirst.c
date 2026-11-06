@@ -50,7 +50,6 @@
 **	unless another similar pointer is within the area, or on the stack.
 */
 
-static char rcs_id[] = "$Id: Afirst.c,v 1.1.1.1 2001-05-07 10:16:11 sian Exp $";
 
 /* uninitialised static */
 static int _Agc_stat;

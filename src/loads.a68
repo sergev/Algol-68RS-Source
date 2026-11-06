@@ -40,6 +40,7 @@ COMMENT
 25:08:94  33.001  ELLA  NewConFig Entered in new config system previous version
                                   number 2.9 
 29:03:95  34.002  ELLA  Modcprght Change copyright header
+05:11:26  34.003  SV    Wall      Braces around long string initialisers.
 ??:??:??   ?.???  ????
 COMMENT
 
@@ -231,7 +232,7 @@ BEGIN	{ Use a static initialiser to make the string an istruct }
 		( curly( double quote( replace control chars(string) ) ),
 		  stream
 		)
-	ELSE	write c stream((c newline,"{ "), stream );
+	ELSE	write c stream((c newline,"{{ "), stream );
 		FOR i	TO UPB string
 		DO     	REF VECTOR[]CHAR rvc = string[i];
 			write c stream
@@ -243,7 +244,7 @@ BEGIN	{ Use a static initialiser to make the string an istruct }
 			THEN    write c stream((c newline,"  "), stream )
 			FI	{ this is just a beutification }
 		OD;
-		write c stream( ( cnewline, "} "), stream )
+		write c stream( ( cnewline, "}} "), stream )
 	FI;
 	write c stream(( "; ", cnewline ), stream );
 	( mode OF s, constant, TEMPORARY( name, mode OF s ) )

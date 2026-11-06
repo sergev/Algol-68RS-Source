@@ -75,22 +75,22 @@
 /*	copy to flex	*/
 #define	A_VCOPY(src,dest,elemtype)\
 	( dest = src, A_VHEAP(elemtype,dest),\
-	  A_VASSIGN2(src,dest,elemtype), dest)
+	  (void)A_VASSIGN2(src,dest,elemtype), dest)
 
 /*	copy []		*/
 #define	A_R1COPY(src,dest,elemtype)\
-	( dest=src,A_1INITSTRIDES(dest),A_R1HEAP(elemtype,dest),\
-	  A_R1ASSIGN2(src,dest,elemtype),dest)
+	( dest=src,(void)A_1INITSTRIDES(dest),A_R1HEAP(elemtype,dest),\
+	  (void)A_R1ASSIGN2(src,dest,elemtype),dest)
 
 /*	copy [,]		*/
 #define	A_R2COPY(src,dest,elemtype)\
-	( dest=src,A_2INITSTRIDES(dest),A_R2HEAP(elemtype,dest),\
-	  A_R2ASSIGN2(src,dest,elemtype),dest)
+	( dest=src,(void)A_2INITSTRIDES(dest),A_R2HEAP(elemtype,dest),\
+	  (void)A_R2ASSIGN2(src,dest,elemtype),dest)
 
 /*	copy [,,]		*/
 #define	A_R3COPY(src,dest,elemtype)\
-	( dest=src,A_3INITSTRIDES(dest),A_R3HEAP(elemtype,dest),\
-	  A_R3ASSIGN2(src,dest,elemtype),dest)
+	( dest=src,(void)A_3INITSTRIDES(dest),A_R3HEAP(elemtype,dest),\
+	  (void)A_R3ASSIGN2(src,dest,elemtype),dest)
 
 /*	union copy	*/
 #define	A_UNCPY(dest,src)\

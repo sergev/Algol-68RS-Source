@@ -1,4 +1,4 @@
-/* UNAME:ABTACTR */
+/* UNAME:WBTACTR */
 #include <algol68/Asupport.h>
 
 A_PROCEDURE(A68_INT *,A68t31,(A68_INT *,A68_VC ),(A68_INT *,A68_VC ,void *));
@@ -694,14 +694,14 @@ static A68_VC  A_configinfo;
 
 
 /* --- Imports from values --- */
-extern A68_VOID  GZPACTR_getcfragment(struct A68t95 *,A68_VC *);
+extern A68_VOID  UZPACTR_getcfragment(struct A68t95 *,A68_VC *);
 #define RKJACTR_atomic 0X2U
 #define XKJACTR_fxwarn 0X80U
 extern A68_95  DLJACTR_skipvalue;
-extern A68_VOID  NDQACTR_bracketcfragment(struct A68t95 *,A68_VC *);
-extern A68_VOID  EOQACTR_usemacro(A68_VC ,struct A68t170 ,A68_VC *);
-extern A68_VOID  JOQACTR_emitline(struct A68t170 );
-extern A68_95 * KPQACTR_yield(struct A68t95 *);
+extern A68_VOID  BEQACTR_bracketcfragment(struct A68t95 *,A68_VC *);
+extern A68_VOID  SOQACTR_usemacro(A68_VC ,struct A68t170 ,A68_VC *);
+extern A68_VOID  XOQACTR_emitline(struct A68t170 );
+extern A68_95 * YPQACTR_yield(struct A68t95 *);
 /* --- End of imports from values --- */
 
 
@@ -713,7 +713,7 @@ extern A68_56  QIMACTR_newuniquename(void);
 /* --- Imports from modes --- */
 extern A68_VOID  XKNACTR_ctype(A68_INT ,A68_VC *);
 extern A68_BOOL  XRMACTR_isistruct(A68_INT );
-extern A68_125  KMOACTR_new;
+extern A68_125  TMOACTR_new;
 extern A68_VOID  FLNACTR_cast(A68_INT ,A68_VC *);
 /* --- End of imports from modes --- */
 
@@ -732,7 +732,7 @@ extern A68_VOID  FLNACTR_cast(A68_INT ,A68_VC *);
 
 
 /* --- Imports from evalbase --- */
-extern A68_VOID  QXQACTR_eval1(struct A68t95 *,struct A68t95 **);
+extern A68_VOID  EYQACTR_eval1(struct A68t95 *,struct A68t95 **);
 /* --- End of imports from evalbase --- */
 
 
@@ -767,329 +767,329 @@ extern A68_VOID  ROAAOSF_whole(A68_INT ,A68_INT ,A68_VC *);
 
 /* --- DECS initialisation functions --- */
 extern void BAAALIB(void);   /* a68config */
-extern void AUPACTR(void);   /* values */
+extern void OUPACTR(void);   /* values */
 extern void RHMACTR(void);   /* uniquenameserver */
 extern void DNMACTR(void);   /* modes */
 extern void ZDAACTR(void);   /* incmode */
 extern void PPKACTR(void);   /* idtable */
 extern void XFAACTR(void);   /* incoperfn */
-extern void IXQACTR(void);   /* evalbase */
+extern void WXQACTR(void);   /* evalbase */
 extern void HPIACTR(void);   /* environment */
 extern void BPLACTR(void);   /* environ */
 extern void PTLACTR(void);   /* coutput */
 extern void THAACTR(void);   /* centities */
 extern void IKAAOSF(void);   /* usefulops */
 /* --- end of DECS initialisation functions --- */
-static A68_179   EBTACTR = {"$Id: biops.a68,v 1.1.1.1 2001-05-07 10:16:10 sian Exp $"}; 
-A_GISVEC(A68_VC ,FBTACTR,EBTACTR,55)
-static A68_180   GBTACTR = {"BIOPS - "}; 
-A_GISVEC(A68_VC ,HBTACTR,GBTACTR,8)
-static A68_VC  IBTACTR_modulename;
-static A68_56   TBTACTR = {"union {"}; 
-A_GISVEC(A68_VC ,UBTACTR,TBTACTR,7)
-static A68_182   XBTACTR = {"  /* BIOP 99 */"}; 
-A_GISVEC(A68_VC ,YBTACTR,XBTACTR,15)
-static A68_183   BCTACTR = {""}; 
-A_GISVEC(A68_VC ,CCTACTR,BCTACTR,0)
-static A68_184   ICTACTR = {"  source;"}; 
-A_GISVEC(A68_VC ,JCTACTR,ICTACTR,9)
-static A68_185   PCTACTR = {"  destination;"}; 
-A_GISVEC(A68_VC ,QCTACTR,PCTACTR,14)
-static A68_186   UCTACTR = {"} "}; 
-A_GISVEC(A68_VC ,VCTACTR,UCTACTR,2)
-static A68_186   ZCTACTR = {"; "}; 
-A_GISVEC(A68_VC ,ADTACTR,ZCTACTR,2)
-static A68_188   HDTACTR = {".source = "}; 
-A_GISVEC(A68_VC ,IDTACTR,HDTACTR,10)
-static A68_186   NDTACTR = {" ;"}; 
-A_GISVEC(A68_VC ,ODTACTR,NDTACTR,2)
-static A68_190   SDTACTR = {".destination"}; 
-A_GISVEC(A68_VC ,TDTACTR,SDTACTR,12)
-static A68_192   PETACTR = {".data"}; 
-A_GISVEC(A68_VC ,TETACTR,PETACTR,5)
-static A68_40   EFTACTR = {"BIOP"}; 
-A_GISVEC(A68_VC ,FFTACTR,EFTACTR,4)
-static A68_193   JFTACTR = {"A_M"}; 
-static A68_194   CGTACTR = {"invalid generic biop"}; 
-A_GISVEC(A68_VC ,DGTACTR,CGTACTR,20)
-A_GISVEC(A68_VC ,FGTACTR,JFTACTR,3)
+static A68_179   ACTACTR = {"$Id: biops.a68,v 1.1.1.1 2001-05-07 10:16:10 sian Exp $"}; 
+A_GISVEC(A68_VC ,BCTACTR,ACTACTR,55)
+static A68_180   CCTACTR = {"BIOPS - "}; 
+A_GISVEC(A68_VC ,DCTACTR,CCTACTR,8)
+static A68_VC  ECTACTR_modulename A_UNUSED;
+static A68_56   PCTACTR = {"union {"}; 
+A_GISVEC(A68_VC ,QCTACTR,PCTACTR,7)
+static A68_182   TCTACTR = {"  /* BIOP 99 */"}; 
+A_GISVEC(A68_VC ,UCTACTR,TCTACTR,15)
+static A68_183   XCTACTR = {""}; 
+A_GISVEC(A68_VC ,YCTACTR,XCTACTR,0)
+static A68_184   EDTACTR = {"  source;"}; 
+A_GISVEC(A68_VC ,FDTACTR,EDTACTR,9)
+static A68_185   LDTACTR = {"  destination;"}; 
+A_GISVEC(A68_VC ,MDTACTR,LDTACTR,14)
+static A68_186   QDTACTR = {"} "}; 
+A_GISVEC(A68_VC ,RDTACTR,QDTACTR,2)
+static A68_186   VDTACTR = {"; "}; 
+A_GISVEC(A68_VC ,WDTACTR,VDTACTR,2)
+static A68_188   DETACTR = {".source = "}; 
+A_GISVEC(A68_VC ,EETACTR,DETACTR,10)
+static A68_186   JETACTR = {" ;"}; 
+A_GISVEC(A68_VC ,KETACTR,JETACTR,2)
+static A68_190   OETACTR = {".destination"}; 
+A_GISVEC(A68_VC ,PETACTR,OETACTR,12)
+static A68_192   LFTACTR = {".data"}; 
+A_GISVEC(A68_VC ,PFTACTR,LFTACTR,5)
+static A68_40   AGTACTR = {"BIOP"}; 
+A_GISVEC(A68_VC ,BGTACTR,AGTACTR,4)
+static A68_193   FGTACTR = {"A_M"}; 
+static A68_194   YGTACTR = {"invalid generic biop"}; 
+A_GISVEC(A68_VC ,ZGTACTR,YGTACTR,20)
+A_GISVEC(A68_VC ,BHTACTR,FGTACTR,3)
 
-A68_VOID  KBTACTR_biop99(A68_95 * Root, A68_95  *ReturnedValue);
+A68_VOID  GCTACTR_biop99(A68_95 * Root, A68_95  *ReturnedValue);
 
-A_STATIC A68_VOID  ZDTACTR_cast_biop(A68_95 * Root, A68_INT  Biop, A68_95  *ReturnedValue);
+A_STATIC A68_VOID  VETACTR_cast_biop(A68_95 * Root, A68_INT  Biop, A68_95  *ReturnedValue);
 
-A_STATIC A68_VOID  JETACTR_istruct_to_amode(A68_95 * Root, A68_INT  Biop, A68_95  *ReturnedValue);
+A_STATIC A68_VOID  FFTACTR_istruct_to_amode(A68_95 * Root, A68_INT  Biop, A68_95  *ReturnedValue);
 
-A_STATIC A68_VOID  CFTACTR_generic_monadic_biop(A68_95 * Root, A68_INT  Biop, A68_95  *ReturnedValue);
+A_STATIC A68_VOID  YFTACTR_generic_monadic_biop(A68_95 * Root, A68_INT  Biop, A68_95  *ReturnedValue);
 
-A68_VOID  LGTACTR_monadicbiopsemantics(A68_95 * Root, A68_INT  Biop, A68_95  *ReturnedValue);
+A68_VOID  HHTACTR_monadicbiopsemantics(A68_95 * Root, A68_INT  Biop, A68_95  *ReturnedValue);
 
-A68_VOID  KBTACTR_biop99(A68_95 * Root, A68_95  *ReturnedValue)
+A68_VOID  GCTACTR_biop99(A68_95 * Root, A68_95  *ReturnedValue)
 { 
-A68_95 * LBTACTR_op;
-A68_95  MBTACTR;  /* collateral clause result */
-A68_VC  NBTACTR;  /* avoid structure result */
-A68_96  OBTACTR;  /* OPERATORS - mode -> union mode */
-A68_VC  PBTACTR;  /* OPERATORS - istruct -> vector */
-A68_56  QBTACTR;  /* OPERATORS - istruct -> vector */
-A68_VC  RBTACTR_temp;
-A68_187  SBTACTR;  /* collateral clause result */
-A68_66  VBTACTR;  /* OPERATORS - mode -> union mode */
-A68_VC  WBTACTR;  /* YIELD */
-A68_66  ZBTACTR;  /* OPERATORS - mode -> union mode */
-A68_VC  ACTACTR;  /* YIELD */
-A68_66  DCTACTR;  /* OPERATORS - mode -> union mode */
-A68_VC  ECTACTR;  /* YIELD */
-A68_66  FCTACTR;  /* OPERATORS - mode -> union mode */
-A68_VC  GCTACTR;  /* avoid structure result */
-A68_66  HCTACTR;  /* OPERATORS - mode -> union mode */
-A68_66  KCTACTR;  /* OPERATORS - mode -> union mode */
-A68_VC  LCTACTR;  /* YIELD */
-A68_66  MCTACTR;  /* OPERATORS - mode -> union mode */
-A68_VC  NCTACTR;  /* avoid structure result */
-A68_66  OCTACTR;  /* OPERATORS - mode -> union mode */
-A68_66  RCTACTR;  /* OPERATORS - mode -> union mode */
+A68_95 * HCTACTR_op A_UNUSED = {0};
+A68_95  ICTACTR;  /* collateral clause result */
+A68_VC  JCTACTR;  /* avoid structure result */
+A68_96  KCTACTR = {0};  /* OPERATORS - mode -> union mode */
+A68_VC  LCTACTR;  /* OPERATORS - istruct -> vector */
+A68_56  MCTACTR;  /* OPERATORS - istruct -> vector */
+A68_VC  NCTACTR_temp A_UNUSED = {0};
+A68_187  OCTACTR;  /* collateral clause result */
+A68_66  RCTACTR = {0};  /* OPERATORS - mode -> union mode */
 A68_VC  SCTACTR;  /* YIELD */
-A68_66  TCTACTR;  /* OPERATORS - mode -> union mode */
-A68_66  WCTACTR;  /* OPERATORS - mode -> union mode */
-A68_VC  XCTACTR;  /* YIELD */
-A68_66  YCTACTR;  /* OPERATORS - mode -> union mode */
-A68_66  BDTACTR;  /* OPERATORS - mode -> union mode */
-A68_VC  CDTACTR;  /* YIELD */
-A68_66  DDTACTR;  /* OPERATORS - mode -> union mode */
-A68_65  EDTACTR;  /* OPERATORS - istruct -> vector */
-A68_189  FDTACTR;  /* collateral clause result */
-A68_167  GDTACTR;  /* OPERATORS - mode -> union mode */
-A68_167  JDTACTR;  /* OPERATORS - mode -> union mode */
-A68_VC  KDTACTR;  /* YIELD */
-A68_VC  LDTACTR;  /* avoid structure result */
-A68_167  MDTACTR;  /* OPERATORS - mode -> union mode */
-A68_167  PDTACTR;  /* OPERATORS - mode -> union mode */
-A68_VC  QDTACTR;  /* YIELD */
-A68_170  RDTACTR;  /* OPERATORS - istruct -> vector */
-A68_VC  UDTACTR;  /* avoid structure result */
-A68_96  VDTACTR;  /* OPERATORS - mode -> union mode */
-A68_95  WDTACTR;  /* clause result */
+A68_66  VCTACTR = {0};  /* OPERATORS - mode -> union mode */
+A68_VC  WCTACTR;  /* YIELD */
+A68_66  ZCTACTR = {0};  /* OPERATORS - mode -> union mode */
+A68_VC  ADTACTR;  /* YIELD */
+A68_66  BDTACTR = {0};  /* OPERATORS - mode -> union mode */
+A68_VC  CDTACTR;  /* avoid structure result */
+A68_66  DDTACTR = {0};  /* OPERATORS - mode -> union mode */
+A68_66  GDTACTR = {0};  /* OPERATORS - mode -> union mode */
+A68_VC  HDTACTR;  /* YIELD */
+A68_66  IDTACTR = {0};  /* OPERATORS - mode -> union mode */
+A68_VC  JDTACTR;  /* avoid structure result */
+A68_66  KDTACTR = {0};  /* OPERATORS - mode -> union mode */
+A68_66  NDTACTR = {0};  /* OPERATORS - mode -> union mode */
+A68_VC  ODTACTR;  /* YIELD */
+A68_66  PDTACTR = {0};  /* OPERATORS - mode -> union mode */
+A68_66  SDTACTR = {0};  /* OPERATORS - mode -> union mode */
+A68_VC  TDTACTR;  /* YIELD */
+A68_66  UDTACTR = {0};  /* OPERATORS - mode -> union mode */
+A68_66  XDTACTR = {0};  /* OPERATORS - mode -> union mode */
+A68_VC  YDTACTR;  /* YIELD */
+A68_66  ZDTACTR = {0};  /* OPERATORS - mode -> union mode */
+A68_65  AETACTR;  /* OPERATORS - istruct -> vector */
+A68_189  BETACTR;  /* collateral clause result */
+A68_167  CETACTR = {0};  /* OPERATORS - mode -> union mode */
+A68_167  FETACTR = {0};  /* OPERATORS - mode -> union mode */
+A68_VC  GETACTR;  /* YIELD */
+A68_VC  HETACTR;  /* avoid structure result */
+A68_167  IETACTR = {0};  /* OPERATORS - mode -> union mode */
+A68_167  LETACTR = {0};  /* OPERATORS - mode -> union mode */
+A68_VC  METACTR;  /* YIELD */
+A68_170  NETACTR;  /* OPERATORS - istruct -> vector */
+A68_VC  QETACTR;  /* avoid structure result */
+A68_96  RETACTR = {0};  /* OPERATORS - mode -> union mode */
+A68_95  SETACTR;  /* clause result */
 A_PROC_ENTRY(biop99);
  /* line 49: */
  /* line 50: */
 { 
-QXQACTR_eval1(Root, (&LBTACTR_op));
+(void)(EYQACTR_eval1(Root, (&HCTACTR_op)));
  /* line 51: */
  /* line 52: */
-MBTACTR.Mode = (*(&(Root->Mode)));
+ICTACTR.Mode = (*(&(Root->Mode)));
  /* line 53: */
-MBTACTR.Info = (A68_BITS )((A68_BITS )((*(&(LBTACTR_op->Info)))&XKJACTR_fxwarn)|RKJACTR_atomic);
+ICTACTR.Info = (A68_BITS )((A68_BITS )((*(&(HCTACTR_op->Info)))&XKJACTR_fxwarn)|RKJACTR_atomic);
  /* line 54: */
  /* line 55: */
  /* line 57: */
-if ( ((*(&(Root->Mode)))==(*(&(LBTACTR_op->Mode)))) )
+if ((*(&(Root->Mode)))==(*(&(HCTACTR_op->Mode))))
 { 
  /* line 58: */
-GZPACTR_getcfragment( LBTACTR_op, &NBTACTR );
-MBTACTR.Extra = A_UNITE(OBTACTR,mode6,6,NBTACTR);
+UZPACTR_getcfragment( HCTACTR_op, &JCTACTR );
+ICTACTR.Extra = A_UNITE(KCTACTR,mode6,6,JCTACTR);
 } 
 else
 { 
-QBTACTR = QIMACTR_newuniquename() ;
-RBTACTR_temp = A_HISVEC(PBTACTR,QBTACTR,7,A68_CHAR );
+MCTACTR = QIMACTR_newuniquename() ;
+NCTACTR_temp = A_HISVEC(LCTACTR,MCTACTR,7,A68_CHAR );
  /* line 59: */
  /* line 60: */
  /* line 61: */
-WBTACTR = UBTACTR ;
-SBTACTR.data[0] = A_UNITE(VBTACTR,mode2,2,WBTACTR);
-if ( AQIACTR_verboseoption )
+SCTACTR = QCTACTR ;
+OCTACTR.data[0] = A_UNITE(RCTACTR,mode2,2,SCTACTR);
+if (AQIACTR_verboseoption)
 { 
-ACTACTR = YBTACTR ;
-SBTACTR.data[1] = A_UNITE(ZBTACTR,mode2,2,ACTACTR);
+WCTACTR = UCTACTR ;
+OCTACTR.data[1] = A_UNITE(VCTACTR,mode2,2,WCTACTR);
 } 
 else
 { 
-ECTACTR = CCTACTR ;
-SBTACTR.data[1] = A_UNITE(DCTACTR,mode2,2,ECTACTR);
+ADTACTR = YCTACTR ;
+OCTACTR.data[1] = A_UNITE(ZCTACTR,mode2,2,ADTACTR);
 } 
  /* line 62: */
-SBTACTR.data[2] = A_UNITE(FCTACTR,mode4,4,EIAACTR_cnewline);
-XKNACTR_ctype( (*(&(LBTACTR_op->Mode))), &GCTACTR );
-SBTACTR.data[3] = A_UNITE(HCTACTR,mode2,2,GCTACTR);
-LCTACTR = JCTACTR ;
-SBTACTR.data[4] = A_UNITE(KCTACTR,mode2,2,LCTACTR);
+OCTACTR.data[2] = A_UNITE(BDTACTR,mode4,4,EIAACTR_cnewline);
+XKNACTR_ctype( (*(&(HCTACTR_op->Mode))), &CDTACTR );
+OCTACTR.data[3] = A_UNITE(DDTACTR,mode2,2,CDTACTR);
+HDTACTR = FDTACTR ;
+OCTACTR.data[4] = A_UNITE(GDTACTR,mode2,2,HDTACTR);
  /* line 63: */
-SBTACTR.data[5] = A_UNITE(MCTACTR,mode4,4,EIAACTR_cnewline);
-XKNACTR_ctype( (*(&(Root->Mode))), &NCTACTR );
-SBTACTR.data[6] = A_UNITE(OCTACTR,mode2,2,NCTACTR);
-SCTACTR = QCTACTR ;
-SBTACTR.data[7] = A_UNITE(RCTACTR,mode2,2,SCTACTR);
+OCTACTR.data[5] = A_UNITE(IDTACTR,mode4,4,EIAACTR_cnewline);
+XKNACTR_ctype( (*(&(Root->Mode))), &JDTACTR );
+OCTACTR.data[6] = A_UNITE(KDTACTR,mode2,2,JDTACTR);
+ODTACTR = MDTACTR ;
+OCTACTR.data[7] = A_UNITE(NDTACTR,mode2,2,ODTACTR);
  /* line 64: */
-SBTACTR.data[8] = A_UNITE(TCTACTR,mode4,4,EIAACTR_cnewline);
-XCTACTR = VCTACTR ;
-SBTACTR.data[9] = A_UNITE(WCTACTR,mode2,2,XCTACTR);
-SBTACTR.data[10] = A_UNITE(YCTACTR,mode2,2,RBTACTR_temp);
+OCTACTR.data[8] = A_UNITE(PDTACTR,mode4,4,EIAACTR_cnewline);
+TDTACTR = RDTACTR ;
+OCTACTR.data[9] = A_UNITE(SDTACTR,mode2,2,TDTACTR);
+OCTACTR.data[10] = A_UNITE(UDTACTR,mode2,2,NCTACTR_temp);
  /* line 65: */
-CDTACTR = ADTACTR ;
-SBTACTR.data[11] = A_UNITE(BDTACTR,mode2,2,CDTACTR);
-SBTACTR.data[12] = A_UNITE(DDTACTR,mode4,4,EIAACTR_cnewline);
-MDMACTR_writecstream(A_HISVEC(EDTACTR,SBTACTR,13,A68_66 ), QSLACTR_locdecstream(VRLACTR_currentlevel()));
+YDTACTR = WDTACTR ;
+OCTACTR.data[11] = A_UNITE(XDTACTR,mode2,2,YDTACTR);
+OCTACTR.data[12] = A_UNITE(ZDTACTR,mode4,4,EIAACTR_cnewline);
+(void)(MDMACTR_writecstream(A_HISVEC(AETACTR,OCTACTR,13,A68_66 ), QSLACTR_locdecstream(VRLACTR_currentlevel())));
  /* line 66: */
-FDTACTR.data[0] = A_UNITE(GDTACTR,mode2,2,RBTACTR_temp);
-KDTACTR = IDTACTR ;
-FDTACTR.data[1] = A_UNITE(JDTACTR,mode2,2,KDTACTR);
-GZPACTR_getcfragment( LBTACTR_op, &LDTACTR );
-FDTACTR.data[2] = A_UNITE(MDTACTR,mode2,2,LDTACTR);
-QDTACTR = ODTACTR ;
-FDTACTR.data[3] = A_UNITE(PDTACTR,mode2,2,QDTACTR);
-JOQACTR_emitline(A_HISVEC(RDTACTR,FDTACTR,4,A68_167 ));
+BETACTR.data[0] = A_UNITE(CETACTR,mode2,2,NCTACTR_temp);
+GETACTR = EETACTR ;
+BETACTR.data[1] = A_UNITE(FETACTR,mode2,2,GETACTR);
+UZPACTR_getcfragment( HCTACTR_op, &HETACTR );
+BETACTR.data[2] = A_UNITE(IETACTR,mode2,2,HETACTR);
+METACTR = KETACTR ;
+BETACTR.data[3] = A_UNITE(LETACTR,mode2,2,METACTR);
+(void)(XOQACTR_emitline(A_HISVEC(NETACTR,BETACTR,4,A68_167 )));
  /* line 67: */
  /* line 68: */
  /* line 69: */
  /* line 70: */
-JIAACTR_bracket( A_VC_PLUS(RBTACTR_temp,TDTACTR), &UDTACTR );
-MBTACTR.Extra = A_UNITE(VDTACTR,mode6,6,UDTACTR);
+JIAACTR_bracket( A_VC_PLUS(NCTACTR_temp,PETACTR), &QETACTR );
+ICTACTR.Extra = A_UNITE(RETACTR,mode6,6,QETACTR);
 } 
-WDTACTR = MBTACTR;
+SETACTR = ICTACTR;
 } 
 A_PROC_EXIT(biop99);
-*ReturnedValue = (WDTACTR);
+*ReturnedValue = (SETACTR);
 return;
 } 
 #undef NL
 
-A_STATIC A68_VOID  ZDTACTR_cast_biop(A68_95 * Root, A68_INT  Biop, A68_95  *ReturnedValue)
+A_STATIC A68_VOID  VETACTR_cast_biop(A68_95 * Root, A68_INT  Biop, A68_95  *ReturnedValue)
 { 
-A68_95 * AETACTR_op;
-A68_95  BETACTR;  /* collateral clause result */
-A68_VC  CETACTR;  /* avoid structure result */
-A68_VC  DETACTR;  /* avoid structure result */
-A68_96  EETACTR;  /* OPERATORS - mode -> union mode */
-A68_VC  FETACTR;  /* YIELD */
-A68_95  GETACTR;  /* clause result */
+A68_95 * WETACTR_op A_UNUSED = {0};
+A68_95  XETACTR;  /* collateral clause result */
+A68_VC  YETACTR;  /* avoid structure result */
+A68_VC  ZETACTR;  /* avoid structure result */
+A68_96  AFTACTR = {0};  /* OPERATORS - mode -> union mode */
+A68_VC  BFTACTR;  /* YIELD */
+A68_95  CFTACTR;  /* clause result */
 A_PROC_ENTRY(cast_biop);
  /* line 73: */
  /* line 74: */
 { 
-QXQACTR_eval1(Root, (&AETACTR_op));
+(void)(EYQACTR_eval1(Root, (&WETACTR_op)));
  /* line 75: */
  /* line 76: */
-BETACTR.Mode = (*(&(Root->Mode)));
+XETACTR.Mode = (*(&(Root->Mode)));
  /* line 77: */
-BETACTR.Info = (A68_BITS )((A68_BITS )((*(&(AETACTR_op->Info)))&XKJACTR_fxwarn)|RKJACTR_atomic);
+XETACTR.Info = (A68_BITS )((A68_BITS )((*(&(WETACTR_op->Info)))&XKJACTR_fxwarn)|RKJACTR_atomic);
  /* line 78: */
  /* line 79: */
-FLNACTR_cast( (*(&(Root->Mode))), &CETACTR );
-NDQACTR_bracketcfragment( KPQACTR_yield(AETACTR_op), &DETACTR );
-FETACTR = A_VC_PLUS(CETACTR,DETACTR) ;
-BETACTR.Extra = A_UNITE(EETACTR,mode6,6,FETACTR);
-GETACTR = BETACTR;
+FLNACTR_cast( (*(&(Root->Mode))), &YETACTR );
+BEQACTR_bracketcfragment( YPQACTR_yield(WETACTR_op), &ZETACTR );
+BFTACTR = A_VC_PLUS(YETACTR,ZETACTR) ;
+XETACTR.Extra = A_UNITE(AFTACTR,mode6,6,BFTACTR);
+CFTACTR = XETACTR;
 } 
 A_PROC_EXIT(cast_biop);
-*ReturnedValue = (GETACTR);
+*ReturnedValue = (CFTACTR);
 return;
 } 
 #undef NL
 
-A_STATIC A68_VOID  JETACTR_istruct_to_amode(A68_95 * Root, A68_INT  Biop, A68_95  *ReturnedValue)
+A_STATIC A68_VOID  FFTACTR_istruct_to_amode(A68_95 * Root, A68_INT  Biop, A68_95  *ReturnedValue)
 { 
-A68_95 * KETACTR_op;
-A68_INT  LETACTR_opmode;
-A68_BOOL  METACTR;  /* optbool result */
-A68_BOOL  NETACTR;  /* clause result */
-A68_95  OETACTR;  /* collateral clause result */
-A68_VC  QETACTR;  /* OPERATORS - scalar -> [] or VEC[] */
-A68_VC  RETACTR;  /* avoid structure result */
-A68_VC  SETACTR;  /* avoid structure result */
-A68_VC  UETACTR;  /* avoid structure result */
-A68_VC  VETACTR;  /* avoid structure result */
-A68_96  WETACTR;  /* OPERATORS - mode -> union mode */
-A68_95  XETACTR;  /* clause result */
-A68_VC  YETACTR;  /* avoid structure result */
-A68_82  ZETACTR;  /* OPERATORS - scalar -> [] or VEC[] */
+A68_95 * GFTACTR_op A_UNUSED = {0};
+A68_INT  HFTACTR_opmode A_UNUSED = {0};
+A68_BOOL  IFTACTR;  /* optbool result */
+A68_BOOL  JFTACTR;  /* clause result */
+A68_95  KFTACTR;  /* collateral clause result */
+A68_VC  MFTACTR;  /* OPERATORS - scalar -> [] or VEC[] */
+A68_VC  NFTACTR;  /* avoid structure result */
+A68_VC  OFTACTR;  /* avoid structure result */
+A68_VC  QFTACTR;  /* avoid structure result */
+A68_VC  RFTACTR;  /* avoid structure result */
+A68_96  SFTACTR = {0};  /* OPERATORS - mode -> union mode */
+A68_95  TFTACTR;  /* clause result */
+A68_VC  UFTACTR;  /* avoid structure result */
+A68_82  VFTACTR;  /* OPERATORS - scalar -> [] or VEC[] */
 A_PROC_ENTRY(istruct_to_amode);
  /* line 82: */
  /* line 83: */
 { 
-QXQACTR_eval1(Root, (&KETACTR_op));
+(void)(EYQACTR_eval1(Root, (&GFTACTR_op)));
  /* line 84: */
-LETACTR_opmode = (*(&(KETACTR_op->Mode)));
+HFTACTR_opmode = (*(&(GFTACTR_op->Mode)));
  /* line 85: */
-METACTR = (LETACTR_opmode<VFAACTR_refmark);
-if ( METACTR )
+IFTACTR = (HFTACTR_opmode<VFAACTR_refmark);
+if ( IFTACTR )
 { /* line 86: */
-METACTR = XRMACTR_isistruct(LETACTR_opmode);
+IFTACTR = XRMACTR_isistruct(HFTACTR_opmode);
 }
  /* line 87: */
-NETACTR = METACTR;
-if ( NETACTR )
+JFTACTR = IFTACTR;
+if (JFTACTR)
 { 
  /* line 88: */
-OETACTR.Mode = (*(&(Root->Mode)));
+KFTACTR.Mode = (*(&(Root->Mode)));
  /* line 89: */
-OETACTR.Info = (A68_BITS )((A68_BITS )((*(&(KETACTR_op->Info)))&XKJACTR_fxwarn)|RKJACTR_atomic);
+KFTACTR.Info = (A68_BITS )((A68_BITS )((*(&(GFTACTR_op->Info)))&XKJACTR_fxwarn)|RKJACTR_atomic);
  /* line 90: */
  /* line 91: */
  /* line 92: */
-FLNACTR_cast( ((*(&(Root->Mode)))+VFAACTR_refmark), &RETACTR );
-GZPACTR_getcfragment( KPQACTR_yield(KETACTR_op), &SETACTR );
-JIAACTR_bracket( A_VC_PLUS(SETACTR,TETACTR), &UETACTR );
-JIAACTR_bracket( A_VC_PLUS(A_VC_PLUS(A_HVEC(QETACTR,'*',A68_CHAR ),RETACTR),UETACTR), &VETACTR );
-OETACTR.Extra = A_UNITE(WETACTR,mode6,6,VETACTR);
-XETACTR = OETACTR;
+FLNACTR_cast( ((*(&(Root->Mode)))+VFAACTR_refmark), &NFTACTR );
+UZPACTR_getcfragment( YPQACTR_yield(GFTACTR_op), &OFTACTR );
+JIAACTR_bracket( A_VC_PLUS(OFTACTR,PFTACTR), &QFTACTR );
+JIAACTR_bracket( A_VC_PLUS(A_VC_PLUS(A_HVEC(MFTACTR,'*',A68_CHAR ),NFTACTR),QFTACTR), &RFTACTR );
+KFTACTR.Extra = A_UNITE(SFTACTR,mode6,6,RFTACTR);
+TFTACTR = KFTACTR;
 } 
 else
 { 
-ROAAOSF_whole( Biop, 0, &YETACTR );
-A_CALLPROC(OWIACTR_perror,(214, A_HARR(ZETACTR,YETACTR,A68_VC )),(214, A_HARR(ZETACTR,YETACTR,A68_VC ),(OWIACTR_perror).nonlocals));
+ROAAOSF_whole( Biop, 0, &UFTACTR );
+(void)(A_CALLPROC(OWIACTR_perror,(214, A_HARR(VFTACTR,UFTACTR,A68_VC )),(214, A_HARR(VFTACTR,UFTACTR,A68_VC ),(OWIACTR_perror).nonlocals)));
  /* line 93: */
  /* line 94: */
-XETACTR = DLJACTR_skipvalue;
+TFTACTR = DLJACTR_skipvalue;
 } 
 } 
 A_PROC_EXIT(istruct_to_amode);
-*ReturnedValue = (XETACTR);
+*ReturnedValue = (TFTACTR);
 return;
 } 
 #undef NL
 
-A_STATIC A68_VOID  CFTACTR_generic_monadic_biop(A68_95 * Root, A68_INT  Biop, A68_95  *ReturnedValue)
+A_STATIC A68_VOID  YFTACTR_generic_monadic_biop(A68_95 * Root, A68_INT  Biop, A68_95  *ReturnedValue)
 { 
-A68_95 * DFTACTR_op;
-A68_VC  GFTACTR;  /* avoid structure result */
-A68_VC  HFTACTR_biopstr;
-A68_95  IFTACTR;  /* collateral clause result */
-A68_170  KFTACTR;  /* clause result */
-A68_167  LFTACTR;  /* OPERATORS - mode -> union mode */
-A68_95 * MFTACTR;  /* YIELD */
-A68_170  NFTACTR;  /* OPERATORS - scalar -> [] or VEC[] */
-A68_195  OFTACTR;  /* collateral clause result */
-A68_167  PFTACTR;  /* OPERATORS - mode -> union mode */
-A68_95 * QFTACTR;  /* YIELD */
-A68_99  RFTACTR;  /* avoid structure result */
-A68_167  SFTACTR;  /* OPERATORS - mode -> union mode */
-A68_170  TFTACTR;  /* OPERATORS - istruct -> vector */
-A68_196  UFTACTR;  /* collateral clause result */
-A68_167  VFTACTR;  /* OPERATORS - mode -> union mode */
-A68_95 * WFTACTR;  /* YIELD */
-A68_99  XFTACTR;  /* avoid structure result */
-A68_167  YFTACTR;  /* OPERATORS - mode -> union mode */
-A68_99  ZFTACTR;  /* avoid structure result */
-A68_167  AGTACTR;  /* OPERATORS - mode -> union mode */
-A68_170  BGTACTR;  /* OPERATORS - istruct -> vector */
-A68_170  EGTACTR;  /* OPERATORS - skip to mode */
-A68_VC  GGTACTR;  /* avoid structure result */
-A68_96  HGTACTR;  /* OPERATORS - mode -> union mode */
-A68_95  IGTACTR;  /* clause result */
+A68_95 * ZFTACTR_op A_UNUSED = {0};
+A68_VC  CGTACTR;  /* avoid structure result */
+A68_VC  DGTACTR_biopstr A_UNUSED = {0};
+A68_95  EGTACTR;  /* collateral clause result */
+A68_170  GGTACTR;  /* clause result */
+A68_167  HGTACTR = {0};  /* OPERATORS - mode -> union mode */
+A68_95 * IGTACTR;  /* YIELD */
+A68_170  JGTACTR;  /* OPERATORS - scalar -> [] or VEC[] */
+A68_195  KGTACTR;  /* collateral clause result */
+A68_167  LGTACTR = {0};  /* OPERATORS - mode -> union mode */
+A68_95 * MGTACTR;  /* YIELD */
+A68_99  NGTACTR;  /* avoid structure result */
+A68_167  OGTACTR = {0};  /* OPERATORS - mode -> union mode */
+A68_170  PGTACTR;  /* OPERATORS - istruct -> vector */
+A68_196  QGTACTR;  /* collateral clause result */
+A68_167  RGTACTR = {0};  /* OPERATORS - mode -> union mode */
+A68_95 * SGTACTR;  /* YIELD */
+A68_99  TGTACTR;  /* avoid structure result */
+A68_167  UGTACTR = {0};  /* OPERATORS - mode -> union mode */
+A68_99  VGTACTR;  /* avoid structure result */
+A68_167  WGTACTR = {0};  /* OPERATORS - mode -> union mode */
+A68_170  XGTACTR;  /* OPERATORS - istruct -> vector */
+A68_170  AHTACTR = {0};  /* OPERATORS - skip to mode */
+A68_VC  CHTACTR;  /* avoid structure result */
+A68_96  DHTACTR = {0};  /* OPERATORS - mode -> union mode */
+A68_95  EHTACTR;  /* clause result */
 A_PROC_ENTRY(generic_monadic_biop);
  /* line 109: */
  /* line 110: */
 { 
-QXQACTR_eval1(Root, (&DFTACTR_op));
+(void)(EYQACTR_eval1(Root, (&ZFTACTR_op)));
  /* line 111: */
-ROAAOSF_whole( Biop, 0, &GFTACTR );
-HFTACTR_biopstr = A_VC_PLUS(FFTACTR,GFTACTR);
+ROAAOSF_whole( Biop, 0, &CGTACTR );
+DGTACTR_biopstr = A_VC_PLUS(BGTACTR,CGTACTR);
  /* line 112: */
  /* line 113: */
-IFTACTR.Mode = (*(&(Root->Mode)));
+EGTACTR.Mode = (*(&(Root->Mode)));
  /* line 114: */
-IFTACTR.Info = (A68_BITS )((A68_BITS )((*(&(DFTACTR_op->Info)))&XKJACTR_fxwarn)|RKJACTR_atomic);
+EGTACTR.Info = (A68_BITS )((A68_BITS )((*(&(ZFTACTR_op->Info)))&XKJACTR_fxwarn)|RKJACTR_atomic);
  /* line 115: */
  /* line 116: */
  /* line 118: */
@@ -1097,106 +1097,106 @@ switch ( (Biop/1000) )
 { 
 case 1: 
  /* line 120: */
-MFTACTR = KPQACTR_yield(DFTACTR_op) ;
-KFTACTR = A_HVEC(NFTACTR,A_UNITE(LFTACTR,mode1,1,MFTACTR),A68_167 );
+IGTACTR = YPQACTR_yield(ZFTACTR_op) ;
+GGTACTR = A_HVEC(JGTACTR,A_UNITE(HGTACTR,mode1,1,IGTACTR),A68_167 );
 break;
 case 2: 
-QFTACTR = KPQACTR_yield(DFTACTR_op) ;
-OFTACTR.data[0] = A_UNITE(PFTACTR,mode1,1,QFTACTR);
+MGTACTR = YPQACTR_yield(ZFTACTR_op) ;
+KGTACTR.data[0] = A_UNITE(LGTACTR,mode1,1,MGTACTR);
  /* line 122: */
-A_CALLPROC(KMOACTR_new,((*(&(Root->Mode))), HFTACTR_biopstr, &RFTACTR),((*(&(Root->Mode))), HFTACTR_biopstr, &RFTACTR,(KMOACTR_new).nonlocals));
-OFTACTR.data[1] = A_UNITE(SFTACTR,mode3,3,RFTACTR);
-KFTACTR = A_HISVEC(TFTACTR,OFTACTR,2,A68_167 );
+A_CALLPROC(TMOACTR_new,((*(&(Root->Mode))), DGTACTR_biopstr, &NGTACTR),((*(&(Root->Mode))), DGTACTR_biopstr, &NGTACTR,(TMOACTR_new).nonlocals));
+KGTACTR.data[1] = A_UNITE(OGTACTR,mode3,3,NGTACTR);
+GGTACTR = A_HISVEC(PGTACTR,KGTACTR,2,A68_167 );
 break;
 case 3: 
-WFTACTR = KPQACTR_yield(DFTACTR_op) ;
-UFTACTR.data[0] = A_UNITE(VFTACTR,mode1,1,WFTACTR);
-A_CALLPROC(KMOACTR_new,((*(&(Root->Mode))), HFTACTR_biopstr, &XFTACTR),((*(&(Root->Mode))), HFTACTR_biopstr, &XFTACTR,(KMOACTR_new).nonlocals));
-UFTACTR.data[1] = A_UNITE(YFTACTR,mode3,3,XFTACTR);
+SGTACTR = YPQACTR_yield(ZFTACTR_op) ;
+QGTACTR.data[0] = A_UNITE(RGTACTR,mode1,1,SGTACTR);
+A_CALLPROC(TMOACTR_new,((*(&(Root->Mode))), DGTACTR_biopstr, &TGTACTR),((*(&(Root->Mode))), DGTACTR_biopstr, &TGTACTR,(TMOACTR_new).nonlocals));
+QGTACTR.data[1] = A_UNITE(UGTACTR,mode3,3,TGTACTR);
  /* line 123: */
  /* line 124: */
-A_CALLPROC(KMOACTR_new,((*(&(DFTACTR_op->Mode))), HFTACTR_biopstr, &ZFTACTR),((*(&(DFTACTR_op->Mode))), HFTACTR_biopstr, &ZFTACTR,(KMOACTR_new).nonlocals));
-UFTACTR.data[2] = A_UNITE(AGTACTR,mode3,3,ZFTACTR);
-KFTACTR = A_HISVEC(BGTACTR,UFTACTR,3,A68_167 );
+A_CALLPROC(TMOACTR_new,((*(&(ZFTACTR_op->Mode))), DGTACTR_biopstr, &VGTACTR),((*(&(ZFTACTR_op->Mode))), DGTACTR_biopstr, &VGTACTR,(TMOACTR_new).nonlocals));
+QGTACTR.data[2] = A_UNITE(WGTACTR,mode3,3,VGTACTR);
+GGTACTR = A_HISVEC(XGTACTR,QGTACTR,3,A68_167 );
 break;
 default: 
-WXIACTR_assert(DGTACTR, A68_FALSE);
+(void)(WXIACTR_assert(ZGTACTR, A68_FALSE));
  /* line 125: */
  /* line 126: */
-KFTACTR = EGTACTR;
+GGTACTR = AHTACTR;
 break;
 } 
  /* line 127: */
  /* line 128: */
-EOQACTR_usemacro( A_VC_PLUS(FGTACTR,HFTACTR_biopstr), KFTACTR, &GGTACTR );
-IFTACTR.Extra = A_UNITE(HGTACTR,mode6,6,GGTACTR);
-IGTACTR = IFTACTR;
+SOQACTR_usemacro( A_VC_PLUS(BHTACTR,DGTACTR_biopstr), GGTACTR, &CHTACTR );
+EGTACTR.Extra = A_UNITE(DHTACTR,mode6,6,CHTACTR);
+EHTACTR = EGTACTR;
 } 
 A_PROC_EXIT(generic_monadic_biop);
-*ReturnedValue = (IGTACTR);
+*ReturnedValue = (EHTACTR);
 return;
 } 
 #undef NL
 
-A68_VOID  LGTACTR_monadicbiopsemantics(A68_95 * Root, A68_INT  Biop, A68_95  *ReturnedValue)
+A68_VOID  HHTACTR_monadicbiopsemantics(A68_95 * Root, A68_INT  Biop, A68_95  *ReturnedValue)
 { 
-A68_95  MGTACTR;  /* clause result */
-A68_95  NGTACTR;  /* avoid structure result */
-A68_95  OGTACTR;  /* avoid structure result */
-A68_BOOL  PGTACTR;  /* optbool result */
-A68_95  QGTACTR;  /* avoid structure result */
-A68_VC  RGTACTR;  /* avoid structure result */
-A68_82  SGTACTR;  /* OPERATORS - scalar -> [] or VEC[] */
+A68_95  IHTACTR;  /* clause result */
+A68_95  JHTACTR;  /* avoid structure result */
+A68_95  KHTACTR;  /* avoid structure result */
+A68_BOOL  LHTACTR;  /* optbool result */
+A68_95  MHTACTR;  /* avoid structure result */
+A68_VC  NHTACTR;  /* avoid structure result */
+A68_82  OHTACTR;  /* OPERATORS - scalar -> [] or VEC[] */
 A_PROC_ENTRY(monadicbiopsemantics);
  /* line 131: */
  /* line 132: */
  /* line 133: */
  /* line 134: */
-if ( (Biop==9999) )
+if (Biop==9999)
 { 
  /* line 135: */
  /* line 136: */
-ZDTACTR_cast_biop( Root, Biop, &NGTACTR );
-MGTACTR = NGTACTR;
+VETACTR_cast_biop( Root, Biop, &JHTACTR );
+IHTACTR = JHTACTR;
 } 
 else
 { 
  /* line 137: */
  /* line 138: */
-if ( (Biop==5001) )
+if (Biop==5001)
 { 
  /* line 139: */
  /* line 140: */
-JETACTR_istruct_to_amode( Root, Biop, &OGTACTR );
-MGTACTR = OGTACTR;
+FFTACTR_istruct_to_amode( Root, Biop, &KHTACTR );
+IHTACTR = KHTACTR;
 } 
 else
 { 
-PGTACTR = (Biop>1000);
-if ( PGTACTR )
+LHTACTR = (Biop>1000);
+if ( LHTACTR )
 { /* line 141: */
-PGTACTR = (Biop<4000);
+LHTACTR = (Biop<4000);
 }
  /* line 142: */
-if ( PGTACTR )
+if (LHTACTR)
 { 
  /* line 143: */
  /* line 144: */
-CFTACTR_generic_monadic_biop( Root, Biop, &QGTACTR );
-MGTACTR = QGTACTR;
+YFTACTR_generic_monadic_biop( Root, Biop, &MHTACTR );
+IHTACTR = MHTACTR;
 } 
 else
 { 
-ROAAOSF_whole( Biop, 0, &RGTACTR );
-A_CALLPROC(OWIACTR_perror,(213, A_HARR(SGTACTR,RGTACTR,A68_VC )),(213, A_HARR(SGTACTR,RGTACTR,A68_VC ),(OWIACTR_perror).nonlocals));
+ROAAOSF_whole( Biop, 0, &NHTACTR );
+(void)(A_CALLPROC(OWIACTR_perror,(213, A_HARR(OHTACTR,NHTACTR,A68_VC )),(213, A_HARR(OHTACTR,NHTACTR,A68_VC ),(OWIACTR_perror).nonlocals)));
  /* line 145: */
  /* line 146: */
-MGTACTR = DLJACTR_skipvalue;
+IHTACTR = DLJACTR_skipvalue;
 } 
 } 
 } 
 A_PROC_EXIT(monadicbiopsemantics);
-*ReturnedValue = (MGTACTR);
+*ReturnedValue = (IHTACTR);
 return;
 } 
 #undef NL
@@ -1205,7 +1205,7 @@ return;
  /* line 3: */
  /* line 4: */
  /* line 6: */
-void BBTACTR(void)   /* initialise DECS biops */
+void XBTACTR(void)   /* initialise DECS biops */
 { 
 static A68_BOOL A_invoked = A68_FALSE;
 
@@ -1213,18 +1213,18 @@ static A68_BOOL A_invoked = A68_FALSE;
 static char *A_config_arguments[] = {"/home/vak/Project/Algol/Algol-68RS-Source/src/a68toc","-v","-uname","seedfile","-staredit","59LR","-lib","/home/vak/Project/Algol/Algol-68RS-Source/a68config","-dir","/home/vak/Project/Algol/Algol-68RS-Source/a68config","-dir","/home/vak/Project/Algol/Algol-68RS-Source/liba68prel","-dir",".","biops.a68",""};
 static char *A_config_environment[] = {"A68_LIB=/home/vak/Project/Algol/Algol-68RS-Source/a68config","A68_CDIR=","A68_DIR=","A68_STAREDIT=","A68_NAMESEED=nameseed","CTRANS_NAMESEED=",""};
 static char *A_config_modinfo_files[] = {"/home/vak/Project/Algol/Algol-68RS-Source/a68config/a68config.m","./values.m","./uniquenameserver.m","./modes.m","./incmode.m","./idtable.m","./incoperfn.m","./evalbase.m","./environment.m","./environ.m","./coutput.m","./centities.m","/home/vak/Project/Algol/Algol-68RS-Source/liba68prel/usefulops.m",""};
-static A_CONFIG_INFO A_config;
+static A_CONFIG_INFO A_config A_UNUSED;
 /* --- end of configuration information */
 if( A_invoked ) return;
 A_invoked = A68_TRUE;
 BAAALIB();   /* USE a68config */
-AUPACTR();   /* USE values */
+OUPACTR();   /* USE values */
 RHMACTR();   /* USE uniquenameserver */
 DNMACTR();   /* USE modes */
 ZDAACTR();   /* USE incmode */
 PPKACTR();   /* USE idtable */
 XFAACTR();   /* USE incoperfn */
-IXQACTR();   /* USE evalbase */
+WXQACTR();   /* USE evalbase */
 HPIACTR();   /* USE environment */
 BPLACTR();   /* USE environ */
 PTLACTR();   /* USE coutput */
@@ -1232,17 +1232,17 @@ THAACTR();   /* USE centities */
 IKAAOSF();   /* USE usefulops */
 /* --- Initialise configuration information */
 A_config.source_file = "/home/vak/Project/Algol/Algol-68RS-Source/src/biops.a68";
-A_config.translation_time = "Thu Nov  5 20:46:57 2026";
+A_config.translation_time = "Thu Nov  5 21:11:00 2026";
 A_config.ctrans_version = "Ctrans_34.6";
-A_config.name_seed = "ABTACTR (from seed file) ";
-A_config.spec_change_time = "Thu Nov  5 20:46:57 2026";
+A_config.name_seed = "WBTACTR (from seed file) ";
+A_config.spec_change_time = "Thu Nov  5 21:11:00 2026";
 A_config.arguments = A_config_arguments;
 A_config.environment = A_config_environment;
 A_config.modinfo_files = A_config_modinfo_files;
 A_PROC_ENTRY(DECS biops);
-UEAALIB_a68config(LGAALIB_configinfo, FBTACTR);
+(void)(UEAALIB_a68config(LGAALIB_configinfo, BCTACTR));
  /* line 46: */
-IBTACTR_modulename = HBTACTR;
+ECTACTR_modulename = DCTACTR;
  /* line 48: */
  /* line 72: */
  /* line 81: */

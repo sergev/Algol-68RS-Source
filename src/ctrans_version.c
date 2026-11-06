@@ -44,7 +44,7 @@ static A68_38   OHAACTR = {"$Id: ctrans_version.a68,v 1.2 2002-02-23 17:50:45 si
 A_GISVEC(A68_VC ,PHAACTR,OHAACTR,60)
 static A68_39   QHAACTR = {"Ctrans_34.6"}; 
 A_GISVEC(A68_VC ,RHAACTR,QHAACTR,11)
-A68_VC  SHAACTR_ctrans_version;
+A68_VC  SHAACTR_ctrans_version A_UNUSED;
  /* line 1: */
  /* line 3: */
 void LHAACTR(void)   /* initialise DECS ctrans_version */
@@ -55,22 +55,22 @@ static A68_BOOL A_invoked = A68_FALSE;
 static char *A_config_arguments[] = {"/home/vak/Project/Algol/Algol-68RS-Source/src/a68toc","-v","-uname","seedfile","-staredit","59LR","-lib","/home/vak/Project/Algol/Algol-68RS-Source/a68config","-dir","/home/vak/Project/Algol/Algol-68RS-Source/a68config","-dir","/home/vak/Project/Algol/Algol-68RS-Source/liba68prel","-dir",".","ctrans_version.a68",""};
 static char *A_config_environment[] = {"A68_LIB=/home/vak/Project/Algol/Algol-68RS-Source/a68config","A68_CDIR=","A68_DIR=","A68_STAREDIT=","A68_NAMESEED=nameseed","CTRANS_NAMESEED=",""};
 static char *A_config_modinfo_files[] = {"/home/vak/Project/Algol/Algol-68RS-Source/a68config/a68config.m",""};
-static A_CONFIG_INFO A_config;
+static A_CONFIG_INFO A_config A_UNUSED;
 /* --- end of configuration information */
 if( A_invoked ) return;
 A_invoked = A68_TRUE;
 BAAALIB();   /* USE a68config */
 /* --- Initialise configuration information */
 A_config.source_file = "/home/vak/Project/Algol/Algol-68RS-Source/src/ctrans_version.a68";
-A_config.translation_time = "Thu Nov  5 20:46:57 2026";
+A_config.translation_time = "Thu Nov  5 21:10:59 2026";
 A_config.ctrans_version = "Ctrans_34.6";
 A_config.name_seed = "KHAACTR (from seed file) ";
-A_config.spec_change_time = "Thu Nov  5 20:46:57 2026";
+A_config.spec_change_time = "Thu Nov  5 21:10:59 2026";
 A_config.arguments = A_config_arguments;
 A_config.environment = A_config_environment;
 A_config.modinfo_files = A_config_modinfo_files;
 A_PROC_ENTRY(DECS ctrans_version);
-UEAALIB_a68config(LGAALIB_configinfo, PHAACTR);
+(void)(UEAALIB_a68config(LGAALIB_configinfo, PHAACTR));
  /* line 50: */
  /* line 52: */
 SHAACTR_ctrans_version = RHAACTR;

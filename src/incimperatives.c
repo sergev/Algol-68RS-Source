@@ -297,7 +297,7 @@ A_GISVEC(A68_VC ,YAAACTR,XAAACTR,64)
 #define ZAAACTR_emptyfn 1
 #define ABAACTR_skipfn 2
 #define BBAACTR_nilfn 3
-A68_INT  CBAACTR_routinefn;
+A68_INT  CBAACTR_routinefn A_UNUSED;
 #define DBAACTR_decsfn 0
 #define EBAACTR_iffn 1
 #define FBAACTR_casefn 2
@@ -320,7 +320,7 @@ A68_INT  CBAACTR_routinefn;
 #define WBAACTR_semifn 11
 #define XBAACTR_dofn 12
 #define YBAACTR_whilefn 13
-A68_INT  ZBAACTR_terminatoroffset;
+A68_INT  ZBAACTR_terminatoroffset A_UNUSED;
 #define ACAACTR_fifn 1
 #define BCAACTR_esacfn 2
 #define CCAACTR_esacufn 3
@@ -359,7 +359,7 @@ A68_INT  ZBAACTR_terminatoroffset;
 #define JDAACTR_frompartbit 002U
 #define KDAACTR_bypartbit 004U
 #define LDAACTR_topartbit 010U
-A68_BITS  MDAACTR_dybits;
+A68_BITS  MDAACTR_dybits A_UNUSED;
 #define NDAACTR_dummydec 8
  /* line 1: */
  /* line 3: */
@@ -371,22 +371,22 @@ static A68_BOOL A_invoked = A68_FALSE;
 static char *A_config_arguments[] = {"/home/vak/Project/Algol/Algol-68RS-Source/src/a68toc","-v","-uname","seedfile","-staredit","59LR","-lib","/home/vak/Project/Algol/Algol-68RS-Source/a68config","-dir","/home/vak/Project/Algol/Algol-68RS-Source/a68config","-dir","/home/vak/Project/Algol/Algol-68RS-Source/liba68prel","-dir",".","incimperatives.a68",""};
 static char *A_config_environment[] = {"A68_LIB=/home/vak/Project/Algol/Algol-68RS-Source/a68config","A68_CDIR=","A68_DIR=","A68_STAREDIT=","A68_NAMESEED=nameseed","CTRANS_NAMESEED=",""};
 static char *A_config_modinfo_files[] = {"/home/vak/Project/Algol/Algol-68RS-Source/a68config/a68config.m",""};
-static A_CONFIG_INFO A_config;
+static A_CONFIG_INFO A_config A_UNUSED;
 /* --- end of configuration information */
 if( A_invoked ) return;
 A_invoked = A68_TRUE;
 BAAALIB();   /* USE a68config */
 /* --- Initialise configuration information */
 A_config.source_file = "/home/vak/Project/Algol/Algol-68RS-Source/src/incimperatives.a68";
-A_config.translation_time = "Thu Nov  5 20:46:57 2026";
+A_config.translation_time = "Thu Nov  5 21:10:59 2026";
 A_config.ctrans_version = "Ctrans_34.6";
 A_config.name_seed = "TAAACTR (from seed file) ";
-A_config.spec_change_time = "Thu Nov  5 20:46:57 2026";
+A_config.spec_change_time = "Thu Nov  5 21:10:59 2026";
 A_config.arguments = A_config_arguments;
 A_config.environment = A_config_environment;
 A_config.modinfo_files = A_config_modinfo_files;
 A_PROC_ENTRY(DECS incimperatives);
-UEAALIB_a68config(LGAALIB_configinfo, YAAACTR);
+(void)(UEAALIB_a68config(LGAALIB_configinfo, YAAACTR));
  /* line 45: */
  /* line 96: */
  /* line 100: */

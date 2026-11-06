@@ -178,7 +178,7 @@ extern void HPIACTR(void);   /* environment */
 /* --- end of DECS initialisation functions --- */
 static A68_56   WTJACTR = {"$Id: lookup.a68,v 1.1.1.1 2001-05-07 10:16:10 sian Exp $"}; 
 A_GISVEC(A68_VC ,XTJACTR,WTJACTR,56)
-static A68_58  YTJACTR_anonymous;
+static A68_58  YTJACTR_anonymous A_UNUSED;
 static A68_63   PUJACTR = {"of"}; 
 A_GISVEC(A68_VC ,QUJACTR,PUJACTR,2)
 static A68_63   RUJACTR = {"co"}; 
@@ -401,7 +401,7 @@ static A68_42   JDKACTR = {"pragmat"};
 A_GISVEC(A68_VC ,KDKACTR,JDKACTR,7)
 static A68_68   NDKACTR = {"straight"}; 
 A_GISVEC(A68_VC ,ODKACTR,NDKACTR,8)
-static A68_62  RDKACTR_longlongboldset;
+static A68_62  RDKACTR_longlongboldset A_UNUSED;
 static A68_63   XDKACTR = {"of"}; 
 A_GISVEC(A68_VC ,YDKACTR,XDKACTR,2)
 static A68_63   ZDKACTR = {"co"}; 
@@ -624,7 +624,7 @@ static A68_42   RMKACTR = {"pragmat"};
 A_GISVEC(A68_VC ,SMKACTR,RMKACTR,7)
 static A68_68   VMKACTR = {"straight"}; 
 A_GISVEC(A68_VC ,WMKACTR,VMKACTR,8)
-static A68_62  ZMKACTR_shortshortboldset;
+static A68_62  ZMKACTR_shortshortboldset A_UNUSED;
 static A68_63   DNKACTR = {":="}; 
 A_GISVEC(A68_VC ,ENKACTR,DNKACTR,2)
 static A68_63   FNKACTR = {"/="}; 
@@ -657,7 +657,7 @@ static A68_65   JOKACTR = {":/=:"};
 A_GISVEC(A68_VC ,KOKACTR,JOKACTR,4)
 static A68_65   LOKACTR = {"%*:="}; 
 A_GISVEC(A68_VC ,MOKACTR,LOKACTR,4)
-static A68_62  POKACTR_symbolset;
+static A68_62  POKACTR_symbolset A_UNUSED;
 static A68_63   JPKACTR = {"or"}; 
 A_GISVEC(A68_VC ,KPKACTR,JPKACTR,2)
 static A68_64   NPKACTR = {"and"}; 
@@ -687,7 +687,7 @@ return;
 
 A_STATIC A68_VOID  AUJACTR_generator(A68_BOOL  ZTJACTR_anonymous, A68_57  *ReturnedValue)
 { 
-A68_60  FUJACTR_anonymous;
+A68_60  FUJACTR_anonymous A_UNUSED = {0};
 A68_VC  GUJACTR;  /* avoid structure result */
 A68_59 * HUJACTR;  /* YIELD */
 A68_57  IUJACTR;  /* clause result */
@@ -705,9 +705,9 @@ return;
 A68_INT  SOKACTR_lookup(A68_VC  Word, A68_BOOL  Bold)
 { 
 A68_62  WOKACTR;  /* clause result */
-A68_62  XOKACTR_set;
-A68_INT  YOKACTR_answer;
-A68_57  ZOKACTR_pair;
+A68_62  XOKACTR_set A_UNUSED = {0};
+A68_INT  YOKACTR_answer A_UNUSED = {0};
+A68_57  ZOKACTR_pair A_UNUSED = {0};
 A68_INT  APKACTR;  /* YIELD */
 A68_61  BPKACTR;  /* forall yield */
 A68_57 * CPKACTR;  /* forall control - []x */
@@ -718,10 +718,10 @@ A_PROC_ENTRY(lookup);
  /* line 347: */
 { 
  /* line 348: */
-if ( Bold )
+if (Bold)
 { 
  /* line 349: */
-if ( MQIACTR_longlongoption )
+if (MQIACTR_longlongoption)
 { 
 WOKACTR = RDKACTR_longlongboldset;
 } 
@@ -741,7 +741,7 @@ XOKACTR_set = WOKACTR;
  /* line 355: */
  /* line 356: */
  /* line 358: */
-if ( (Word.upb<=XOKACTR_set.dim[0].upb) )
+if (Word.upb<=XOKACTR_set.dim[0].upb)
 { 
  /* line 359: */
 APKACTR = Word.upb ;
@@ -756,7 +756,7 @@ ZOKACTR_pair = *CPKACTR;
  /* line 360: */
  /* line 361: */
  /* line 363: */
-if ( A_VC_EQ(Word,ZOKACTR_pair.Word) )
+if (A_VC_EQ(Word,ZOKACTR_pair.Word))
 { 
 YOKACTR_answer = ZOKACTR_pair.Value;
  /* line 364: */
@@ -768,7 +768,7 @@ goto VOKACTR_foundit;
  /* line 367: */
 } 
  /* line 372: */
-if ( Bold )
+if (Bold)
 { 
 EPKACTR = 156;
 } 
@@ -779,7 +779,7 @@ else
 EPKACTR = 176;
 } 
 goto TOKACTR;
-VOKACTR_foundit:
+VOKACTR_foundit: A_UNUSED;
  /* line 377: */
 EPKACTR = YOKACTR_answer;
 TOKACTR: ;
@@ -802,7 +802,7 @@ if ( IPKACTR )
 IPKACTR = A_VC_EQ(Word,KPKACTR);
 }
  /* line 390: */
-if ( IPKACTR )
+if (IPKACTR)
 { 
 LPKACTR = 205;
 } 
@@ -814,7 +814,7 @@ if ( MPKACTR )
 MPKACTR = A_VC_EQ(Word,OPKACTR);
 }
  /* line 393: */
-if ( MPKACTR )
+if (MPKACTR)
 { 
  /* line 394: */
 LPKACTR = 204;
@@ -839,7 +839,7 @@ static A68_BOOL A_invoked = A68_FALSE;
 static char *A_config_arguments[] = {"/home/vak/Project/Algol/Algol-68RS-Source/src/a68toc","-v","-uname","seedfile","-staredit","59LR","-lib","/home/vak/Project/Algol/Algol-68RS-Source/a68config","-dir","/home/vak/Project/Algol/Algol-68RS-Source/a68config","-dir","/home/vak/Project/Algol/Algol-68RS-Source/liba68prel","-dir",".","lookup.a68",""};
 static char *A_config_environment[] = {"A68_LIB=/home/vak/Project/Algol/Algol-68RS-Source/a68config","A68_CDIR=","A68_DIR=","A68_STAREDIT=","A68_NAMESEED=nameseed","CTRANS_NAMESEED=",""};
 static char *A_config_modinfo_files[] = {"/home/vak/Project/Algol/Algol-68RS-Source/a68config/a68config.m","./environment.m",""};
-static A_CONFIG_INFO A_config;
+static A_CONFIG_INFO A_config A_UNUSED;
 /* --- end of configuration information */
 A68_58  JUJACTR;  /* procedure value */
 A68_69  KUJACTR;  /* collateral clause result */
@@ -895,15 +895,15 @@ BAAALIB();   /* USE a68config */
 HPIACTR();   /* USE environment */
 /* --- Initialise configuration information */
 A_config.source_file = "/home/vak/Project/Algol/Algol-68RS-Source/src/lookup.a68";
-A_config.translation_time = "Thu Nov  5 20:46:57 2026";
+A_config.translation_time = "Thu Nov  5 21:10:59 2026";
 A_config.ctrans_version = "Ctrans_34.6";
 A_config.name_seed = "STJACTR (from seed file) ";
-A_config.spec_change_time = "Thu Nov  5 20:46:57 2026";
+A_config.spec_change_time = "Thu Nov  5 21:10:59 2026";
 A_config.arguments = A_config_arguments;
 A_config.environment = A_config_environment;
 A_config.modinfo_files = A_config_modinfo_files;
 A_PROC_ENTRY(DECS lookup);
-UEAALIB_a68config(LGAALIB_configinfo, XTJACTR);
+(void)(UEAALIB_a68config(LGAALIB_configinfo, XTJACTR));
  /* line 47: */
 JUJACTR.fn.fn_global = AUJACTR_generator;
 JUJACTR.nonlocals = A68_NIL;

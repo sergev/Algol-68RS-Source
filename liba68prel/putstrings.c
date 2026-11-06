@@ -650,15 +650,15 @@ A_GISVEC(A68_VC ,UMDAOSF,TMDAOSF,60)
 #define OPDAOSF_mask 0XfU
 static A68_112   ZPDAOSF = {"0123456789ABCDEF"}; 
 A_GISVEC(A68_VC ,AQDAOSF,ZPDAOSF,16)
-A68_127  GQDAOSF_anonymous;
-A68_128  HQDAOSF_anonymous;
-static A68_132  WQDAOSF_sp;
-A68_CHAR * XQDAOSF_ss;
+A68_127  GQDAOSF_anonymous A_UNUSED;
+A68_128  HQDAOSF_anonymous A_UNUSED;
+static A68_132  WQDAOSF_sp A_UNUSED;
+A68_CHAR * XQDAOSF_ss A_UNUSED;
 static A68_146   RVDAOSF = {"0987654321"}; 
 static A68_146   TVDAOSF = {"0123456789"}; 
 static A68_112   KXDAOSF = {"0123456789ABCDEF"}; 
 A_GISVEC(A68_VC ,OXDAOSF,KXDAOSF,16)
-A68_77  FCEAOSF_null_strproc;
+A68_77  FCEAOSF_null_strproc A_UNUSED;
 typedef struct   /* env of non-global proc */
 {
 A68_71  Ints;
@@ -895,10 +895,10 @@ SDEAOSF = (&(NL(GDEAOSF_ch)->Buffer)) ;
 (*SDEAOSF) = RDEAOSF;
  /* line 601: */
 TDEAOSF = (&(NL(GDEAOSF_ch)->Width)) ;
-(*TDEAOSF) = ((*(&(NL(GDEAOSF_ch)->Buffer))).upb-1);
+(void)((*TDEAOSF) = ((*(&(NL(GDEAOSF_ch)->Buffer))).upb-1));
  /* line 602: */
  /* line 603: */
-siglongjmp(NL(ZCEAOSF_restart).label,1);
+(void)(siglongjmp(NL(ZCEAOSF_restart).label,1));
 } 
 A_PROC_EXIT(putbuffer);
 return;
@@ -914,7 +914,7 @@ A_PROC_ENTRY(makervi);
 A_CLOSURE( YMDAOSF_generator, ZMDAOSF_generator, ANDAOSF_generator );
 (( ANDAOSF_generator * ) ( YMDAOSF_generator.nonlocals )) -> Ints = Ints;
 A_CALLPROC(YMDAOSF_generator,(A68_FALSE, &ENDAOSF),(A68_FALSE, &ENDAOSF,(YMDAOSF_generator).nonlocals));
-A_VASSIGN2(Ints,ENDAOSF,A68_INT ) ;
+(void)(A_VASSIGN2(Ints,ENDAOSF,A68_INT )) ;
 DNDAOSF = ENDAOSF;
 A_PROC_EXIT(makervi);
 *ReturnedValue = (DNDAOSF);
@@ -933,7 +933,7 @@ A_PROC_ENTRY(makervi);
 A_CLOSURE( INDAOSF_generator, JNDAOSF_generator, KNDAOSF_generator );
 A_CALLPROC(INDAOSF_generator,(A68_FALSE, &ONDAOSF),(A68_FALSE, &ONDAOSF,(INDAOSF_generator).nonlocals));
 QNDAOSF = A_HVEC(PNDAOSF,I,A68_INT ) ;
-A_VASSIGN2(QNDAOSF,ONDAOSF,A68_INT ) ;
+(void)(A_VASSIGN2(QNDAOSF,ONDAOSF,A68_INT )) ;
 NNDAOSF = ONDAOSF;
 A_PROC_EXIT(makervi);
 *ReturnedValue = (NNDAOSF);
@@ -943,7 +943,7 @@ return;
 
 A68_VOID  SNDAOSF_clear(A68_VC  Line)
 { 
-A68_CHAR * TNDAOSF_c;
+A68_CHAR * TNDAOSF_c A_UNUSED = {0};
 A68_INT  UNDAOSF;  /* forall loop counter */
 A_PROC_ENTRY(clear);
 UNDAOSF = Line.upb -1;
@@ -961,7 +961,7 @@ return;
 
 A68_VOID  WNDAOSF_clear(A68_71  Ints)
 { 
-A68_INT * XNDAOSF_i;
+A68_INT * XNDAOSF_i A_UNUSED = {0};
 A68_INT  YNDAOSF;  /* forall loop counter */
 A_PROC_ENTRY(clear);
 YNDAOSF = Ints.upb -1;
@@ -981,8 +981,8 @@ A68_VOID  BODAOSF_(A68_VC  A, A68_INT  N, A68_VC  *ReturnedValue)
 { 
 A68_82  DODAOSF_generator;   /* proc value of non-global proc */
 A68_VC  JODAOSF;  /* avoid structure result */
-A68_VC  IODAOSF_ans;
-A68_INT  KODAOSF_i;
+A68_VC  IODAOSF_ans A_UNUSED = {0};
+A68_INT  KODAOSF_i A_UNUSED = {0};
 A68_INT  LODAOSF;  /* to part of loop */
 A68_VC  MODAOSF;  /* OPERATORS - trim index */
 A68_VC  NODAOSF;  /* YIELD */
@@ -1003,7 +1003,7 @@ KODAOSF_i <= LODAOSF;
 KODAOSF_i += 1 )
 { 
 NODAOSF = A_VTRIM(MODAOSF,(IODAOSF_ans),A_VTSCRIPT(&(MODAOSF.upb),(IODAOSF_ans).upb,(((N-1)*A.upb)+1),(N*A.upb))) ;
-A_VASSIGN2(A,NODAOSF,A68_CHAR );
+(void)(A_VASSIGN2(A,NODAOSF,A68_CHAR ));
 }
  /* line 254: */
  /* line 255: */
@@ -1019,8 +1019,8 @@ A68_VOID  RODAOSF_(A68_CHAR  A, A68_INT  N, A68_VC  *ReturnedValue)
 { 
 A68_82  TODAOSF_generator;   /* proc value of non-global proc */
 A68_VC  ZODAOSF;  /* avoid structure result */
-A68_VC  YODAOSF_ans;
-A68_CHAR * APDAOSF_c;
+A68_VC  YODAOSF_ans A_UNUSED = {0};
+A68_CHAR * APDAOSF_c A_UNUSED = {0};
 A68_INT  BPDAOSF;  /* forall loop counter */
 A68_VC  CPDAOSF;  /* clause result */
 A_PROC_ENTRY(*);
@@ -1052,19 +1052,19 @@ return;
 
 A68_VOID  EPDAOSF_hexchars(A68_110  B, A68_VC  *ReturnedValue)
 { 
-A68_BITS  FPDAOSF_n;
+A68_BITS  FPDAOSF_n A_UNUSED = {0};
 A68_110  GPDAOSF;  /* united object - for case conformity */
-A68_BITS  HPDAOSF_b;
+A68_BITS  HPDAOSF_b A_UNUSED = {0};
 A68_INT  IPDAOSF;  /* clause result */
-A68_INT  JPDAOSF_i;
-A68_SBITS  KPDAOSF_sb;
-A68_SINT  LPDAOSF_si;
-A68_CHAR  MPDAOSF_c;
-A68_INT  NPDAOSF_n_digits;
+A68_INT  JPDAOSF_i A_UNUSED = {0};
+A68_SBITS  KPDAOSF_sb A_UNUSED = {0};
+A68_SINT  LPDAOSF_si A_UNUSED = {0};
+A68_CHAR  MPDAOSF_c A_UNUSED = {0};
+A68_INT  NPDAOSF_n_digits A_UNUSED = {0};
 A68_82  QPDAOSF_generator;   /* proc value of non-global proc */
 A68_VC  WPDAOSF;  /* avoid structure result */
-A68_VC  VPDAOSF_ans;
-A68_INT  XPDAOSF_i;
+A68_VC  VPDAOSF_ans A_UNUSED = {0};
+A68_INT  XPDAOSF_i A_UNUSED = {0};
 A68_INT  YPDAOSF;  /* by part of loop */
 A68_VC  BQDAOSF;  /* OPERATORS - simple index */
 A68_INT  CQDAOSF;  /* YIELD */
@@ -1143,11 +1143,11 @@ XPDAOSF_i += YPDAOSF )
 BQDAOSF = AQDAOSF ;
 CQDAOSF = ((A68_INT )(A68_BITS )(FPDAOSF_n&OPDAOSF_mask)+1) ;
 DQDAOSF = (&A_VINDEX(VPDAOSF_ans,XPDAOSF_i)) ;
-(*DQDAOSF) = A_VINDEX(BQDAOSF,CQDAOSF);
+(void)((*DQDAOSF) = A_VINDEX(BQDAOSF,CQDAOSF));
  /* line 279: */
  /* line 280: */
 EQDAOSF = 4 ;
-FPDAOSF_n = A_SHR(FPDAOSF_n,EQDAOSF);
+(void)(FPDAOSF_n = A_SHR(FPDAOSF_n,EQDAOSF));
 }
  /* line 281: */
  /* line 282: */
@@ -1161,7 +1161,7 @@ return;
 
 A_STATIC A68_VOID  JQDAOSF_generator(A68_BOOL  IQDAOSF_anonymous, A68_114  *ReturnedValue)
 { 
-A68_130  KQDAOSF_anonymous;
+A68_130  KQDAOSF_anonymous A_UNUSED = {0};
 A68_VC  LQDAOSF;  /* avoid structure result */
 A68_129 * MQDAOSF;  /* YIELD */
 A68_114  NQDAOSF;  /* clause result */
@@ -1178,7 +1178,7 @@ return;
 
 A_STATIC A68_VOID  QQDAOSF_generator(A68_BOOL  PQDAOSF_anonymous, A68_115  *ReturnedValue)
 { 
-A68_131  RQDAOSF_anonymous;
+A68_131  RQDAOSF_anonymous A_UNUSED = {0};
 A68_VC  SQDAOSF;  /* avoid structure result */
 A68_129 * TQDAOSF;  /* YIELD */
 A68_115  UQDAOSF;  /* clause result */
@@ -1237,7 +1237,7 @@ return;
 
 A68_VOID  RRDAOSF_tab(A68_INT  I, A68_116  *ReturnedValue)
 { 
-A68_116  SRDAOSF_t;
+A68_116  SRDAOSF_t A_UNUSED = {0};
 A68_INT * TRDAOSF;  /* YIELD */
 A68_116  URDAOSF;  /* clause result */
 A_PROC_ENTRY(tab);
@@ -1254,7 +1254,7 @@ return;
 
 A68_VOID  WRDAOSF_pos(A68_INT  I, A68_117  *ReturnedValue)
 { 
-A68_117  XRDAOSF_p;
+A68_117  XRDAOSF_p A_UNUSED = {0};
 A68_INT * YRDAOSF;  /* YIELD */
 A68_117  ZRDAOSF;  /* clause result */
 A_PROC_ENTRY(pos);
@@ -1271,7 +1271,7 @@ return;
 
 A68_VOID  BSDAOSF_after(A68_INT  I, A68_118  *ReturnedValue)
 { 
-A68_118  CSDAOSF_a;
+A68_118  CSDAOSF_a A_UNUSED = {0};
 A68_INT * DSDAOSF;  /* YIELD */
 A68_118  ESDAOSF;  /* clause result */
 A_PROC_ENTRY(after);
@@ -1288,7 +1288,7 @@ return;
 
 A68_VOID  GSDAOSF_spaces(A68_INT  I, A68_119  *ReturnedValue)
 { 
-A68_119  HSDAOSF_s;
+A68_119  HSDAOSF_s A_UNUSED = {0};
 A68_INT * ISDAOSF;  /* YIELD */
 A68_119  JSDAOSF;  /* clause result */
 A_PROC_ENTRY(spaces);
@@ -1305,7 +1305,7 @@ return;
 
 A68_VOID  LSDAOSF_lines(A68_INT  I, A68_120  *ReturnedValue)
 { 
-A68_120  MSDAOSF_l;
+A68_120  MSDAOSF_l A_UNUSED = {0};
 A68_INT * NSDAOSF;  /* YIELD */
 A68_120  OSDAOSF;  /* clause result */
 A_PROC_ENTRY(lines);
@@ -1322,7 +1322,7 @@ return;
 
 A68_VOID  QSDAOSF_setindent(A68_INT  N, A68_121  *ReturnedValue)
 { 
-A68_121  RSDAOSF_i;
+A68_121  RSDAOSF_i A_UNUSED = {0};
 A68_INT * SSDAOSF;  /* YIELD */
 A68_121  TSDAOSF;  /* clause result */
 A_PROC_ENTRY(setindent);
@@ -1362,11 +1362,11 @@ A68_BOOL * HTDAOSF;  /* YIELD */
 A_PROC_ENTRY(writeline);
  /* line 329: */
  /* line 330: */
-if ( (*(&(Ch->Buffered))) )
+if (*(&(Ch->Buffered)))
 { 
 ZSDAOSF = (*(&(Ch->Putbuffer))) ;
 ATDAOSF = (*(&(Ch->Buffer))) ;
-A_CALLPROC(ZSDAOSF,(A_VTRIM(BTDAOSF,(ATDAOSF),A_VTSCRIPT(&(BTDAOSF.upb),(ATDAOSF).upb,1,((*(&(Ch->Charnumber)))-1)))),(A_VTRIM(BTDAOSF,(ATDAOSF),A_VTSCRIPT(&(BTDAOSF.upb),(ATDAOSF).upb,1,((*(&(Ch->Charnumber)))-1))),(ZSDAOSF).nonlocals));
+(void)(A_CALLPROC(ZSDAOSF,(A_VTRIM(BTDAOSF,(ATDAOSF),A_VTSCRIPT(&(BTDAOSF.upb),(ATDAOSF).upb,1,((*(&(Ch->Charnumber)))-1)))),(A_VTRIM(BTDAOSF,(ATDAOSF),A_VTSCRIPT(&(BTDAOSF.upb),(ATDAOSF).upb,1,((*(&(Ch->Charnumber)))-1))),(ZSDAOSF).nonlocals)));
  /* line 331: */
 CTDAOSF = (&(Ch->Charnumber)) ;
 (*CTDAOSF) = 1;
@@ -1398,10 +1398,10 @@ return;
 
 A68_VOID  KTDAOSF_putstr(A68_92 * Ch, A68_VC  Str)
 { 
-A68_INT  LTDAOSF_t;
+A68_INT  LTDAOSF_t A_UNUSED = {0};
 A68_BOOL * MTDAOSF;  /* YIELD */
-A68_INT * NTDAOSF_pos;
-A68_INT  OTDAOSF_indent;
+A68_INT * NTDAOSF_pos A_UNUSED = {0};
+A68_INT  OTDAOSF_indent A_UNUSED = {0};
 A68_VC  PTDAOSF;  /* OPERATORS - trim index */
 A68_VC  QTDAOSF;  /* OPERATORS - trim index */
 A68_VC  RTDAOSF;  /* OPERATORS - istruct -> vector */
@@ -1413,7 +1413,7 @@ A68_77  WTDAOSF;  /* CALL */
 A68_VC  XTDAOSF;  /* OPERATORS - istruct -> vector */
 A68_VC  YTDAOSF;  /* OPERATORS - trim index */
 A68_VC  ZTDAOSF;  /* OPERATORS - trim index */
-A68_INT  AUDAOSF_maxsize;
+A68_INT  AUDAOSF_maxsize A_UNUSED = {0};
 A68_VC  BUDAOSF;  /* OPERATORS - trim index */
 A68_VC  CUDAOSF;  /* OPERATORS - trim index */
 A68_VC  DUDAOSF;  /* YIELD */
@@ -1426,7 +1426,7 @@ A68_VC  JUDAOSF;  /* OPERATORS - assign op */
 A68_77  KUDAOSF;  /* CALL */
 A68_VC  LUDAOSF;  /* OPERATORS - trim index */
 A68_VC  MUDAOSF;  /* OPERATORS - trim index */
-A68_INT  NUDAOSF_second;
+A68_INT  NUDAOSF_second A_UNUSED = {0};
 A68_BOOL  OUDAOSF;  /* optbool result */
 A68_VC  PUDAOSF;  /* OPERATORS - trim index */
 A68_VC  QUDAOSF;  /* OPERATORS - trim index */
@@ -1444,7 +1444,7 @@ A_PROC_ENTRY(putstr);
  /* line 345: */
  /* line 346: */
  /* line 347: */
-if ( (Str.upb>0) )
+if (Str.upb>0)
 { 
 MTDAOSF = (&(Ch->Separate)) ;
 (*MTDAOSF) = A68_FALSE;
@@ -1452,51 +1452,51 @@ MTDAOSF = (&(Ch->Separate)) ;
 NTDAOSF_pos = (&(Ch->Charnumber));
  /* line 350: */
  /* line 351: */
-if ( ((*NTDAOSF_pos)<=(*(&(Ch->Indent)))) )
+if ((*NTDAOSF_pos)<=(*(&(Ch->Indent))))
 { 
 OTDAOSF_indent = (*(&(Ch->Indent)));
  /* line 352: */
  /* line 353: */
-if ( (*(&(Ch->Buffered))) )
+if (*(&(Ch->Buffered)))
 { 
  /* line 354: */
 PTDAOSF = (*(&(Ch->Buffer))) ;
 STDAOSF = A_ISVEC(RTDAOSF,(&WQDAOSF_sp),512,A68_CHAR ) ;
 UTDAOSF = A_VTRIM(QTDAOSF,(PTDAOSF),A_VTSCRIPT(&(QTDAOSF.upb),(PTDAOSF).upb,(*NTDAOSF_pos),OTDAOSF_indent)) ;
 VTDAOSF = A_VTRIM(TTDAOSF,(STDAOSF),A_VTSCRIPT(&(TTDAOSF.upb),(STDAOSF).upb,1,((OTDAOSF_indent-(*NTDAOSF_pos))+1))) ;
-A_VASSIGN2(VTDAOSF,UTDAOSF,A68_CHAR );
+(void)(A_VASSIGN2(VTDAOSF,UTDAOSF,A68_CHAR ));
 } 
 else
 { 
  /* line 355: */
 WTDAOSF = (*(&(Ch->Putbuffer))) ;
 YTDAOSF = A_ISVEC(XTDAOSF,(&WQDAOSF_sp),512,A68_CHAR ) ;
-A_CALLPROC(WTDAOSF,(A_VTRIM(ZTDAOSF,(YTDAOSF),A_VTSCRIPT(&(ZTDAOSF.upb),(YTDAOSF).upb,1,((OTDAOSF_indent-(*NTDAOSF_pos))+1)))),(A_VTRIM(ZTDAOSF,(YTDAOSF),A_VTSCRIPT(&(ZTDAOSF.upb),(YTDAOSF).upb,1,((OTDAOSF_indent-(*NTDAOSF_pos))+1))),(WTDAOSF).nonlocals));
+(void)(A_CALLPROC(WTDAOSF,(A_VTRIM(ZTDAOSF,(YTDAOSF),A_VTSCRIPT(&(ZTDAOSF.upb),(YTDAOSF).upb,1,((OTDAOSF_indent-(*NTDAOSF_pos))+1)))),(A_VTRIM(ZTDAOSF,(YTDAOSF),A_VTSCRIPT(&(ZTDAOSF.upb),(YTDAOSF).upb,1,((OTDAOSF_indent-(*NTDAOSF_pos))+1))),(WTDAOSF).nonlocals)));
 } 
  /* line 356: */
  /* line 357: */
-(*NTDAOSF_pos) = (OTDAOSF_indent+1);
+(void)((*NTDAOSF_pos) = (OTDAOSF_indent+1));
 } 
  /* line 359: */
 AUDAOSF_maxsize = (((*(&(Ch->Width)))-(*NTDAOSF_pos))+1);
  /* line 360: */
  /* line 361: */
  /* line 362: */
-if ( (Str.upb<=AUDAOSF_maxsize) )
+if (Str.upb<=AUDAOSF_maxsize)
 { 
  /* line 363: */
-if ( (*(&(Ch->Buffered))) )
+if (*(&(Ch->Buffered)))
 { 
  /* line 364: */
 BUDAOSF = (*(&(Ch->Buffer))) ;
 DUDAOSF = A_VTRIM(CUDAOSF,(BUDAOSF),A_VTSCRIPT(&(CUDAOSF.upb),(BUDAOSF).upb,(*NTDAOSF_pos),(((*NTDAOSF_pos)+Str.upb)-1))) ;
-A_VASSIGN2(Str,DUDAOSF,A68_CHAR );
+(void)(A_VASSIGN2(Str,DUDAOSF,A68_CHAR ));
 } 
 else
 { 
  /* line 365: */
 EUDAOSF = (*(&(Ch->Putbuffer))) ;
-A_CALLPROC(EUDAOSF,(Str),(Str,(EUDAOSF).nonlocals));
+(void)(A_CALLPROC(EUDAOSF,(Str),(Str,(EUDAOSF).nonlocals)));
 } 
  /* line 366: */
  /* line 367: */
@@ -1505,13 +1505,13 @@ A_CALLPROC(EUDAOSF,(Str),(Str,(EUDAOSF).nonlocals));
 else
 { 
  /* line 368: */
-if ( (AUDAOSF_maxsize==0) )
+if (AUDAOSF_maxsize==0)
 { 
-PKDAOSF_newline(Ch);
+(void)(PKDAOSF_newline(Ch));
  /* line 369: */
  /* line 370: */
  /* line 371: */
-KTDAOSF_putstr(Ch, Str);
+(void)(KTDAOSF_putstr(Ch, Str));
 } 
 else
 { 
@@ -1521,9 +1521,9 @@ for ( ;; )
 { 
  /* line 373: */
 if ( !((LTDAOSF_t>0)) ) break;
-if ( (A_VINDEX(Str,LTDAOSF_t)==' ') )
+if (A_VINDEX(Str,LTDAOSF_t)==' ')
 { 
-LTDAOSF_t = (-LTDAOSF_t);
+(void)(LTDAOSF_t = (-LTDAOSF_t));
 } 
 else
 { 
@@ -1533,52 +1533,52 @@ LTDAOSF_t-=1;
  /* line 374: */
  /* line 375: */
  /* line 376: */
-if ( (LTDAOSF_t==0) )
+if (LTDAOSF_t==0)
 { 
  /* line 377: */
  /* line 378: */
-if ( ((*NTDAOSF_pos)==((*(&(Ch->Indent)))+1)) )
+if ((*NTDAOSF_pos)==((*(&(Ch->Indent)))+1))
 { 
  /* line 379: */
-if ( (*(&(Ch->Buffered))) )
+if (*(&(Ch->Buffered)))
 { 
  /* line 380: */
  /* line 381: */
 FUDAOSF = (*(&(Ch->Buffer))) ;
 IUDAOSF = A_VTRIM(GUDAOSF,(FUDAOSF),A_VTSCRIPT(&(GUDAOSF.upb),(FUDAOSF).upb,(*NTDAOSF_pos),(((*NTDAOSF_pos)+AUDAOSF_maxsize)-1))) ;
 JUDAOSF = A_VTRIM(HUDAOSF,(Str),A_VTSCRIPT(&(HUDAOSF.upb),(Str).upb,1,AUDAOSF_maxsize)) ;
-A_VASSIGN2(JUDAOSF,IUDAOSF,A68_CHAR );
+(void)(A_VASSIGN2(JUDAOSF,IUDAOSF,A68_CHAR ));
 } 
 else
 { 
  /* line 382: */
 KUDAOSF = (*(&(Ch->Putbuffer))) ;
-A_CALLPROC(KUDAOSF,(A_VTRIM(LUDAOSF,(Str),A_VTSCRIPT(&(LUDAOSF.upb),(Str).upb,1,AUDAOSF_maxsize))),(A_VTRIM(LUDAOSF,(Str),A_VTSCRIPT(&(LUDAOSF.upb),(Str).upb,1,AUDAOSF_maxsize)),(KUDAOSF).nonlocals));
+(void)(A_CALLPROC(KUDAOSF,(A_VTRIM(LUDAOSF,(Str),A_VTSCRIPT(&(LUDAOSF.upb),(Str).upb,1,AUDAOSF_maxsize))),(A_VTRIM(LUDAOSF,(Str),A_VTSCRIPT(&(LUDAOSF.upb),(Str).upb,1,AUDAOSF_maxsize)),(KUDAOSF).nonlocals)));
 } 
  /* line 383: */
 (*NTDAOSF_pos)+=AUDAOSF_maxsize;
  /* line 384: */
-PKDAOSF_newline(Ch);
+(void)(PKDAOSF_newline(Ch));
  /* line 385: */
  /* line 386: */
  /* line 387: */
-KTDAOSF_putstr(Ch, A_VTRIM(MUDAOSF,(Str),A_VTSCRIPT(&(MUDAOSF.upb),(Str).upb,(AUDAOSF_maxsize+1),(Str).upb)));
+(void)(KTDAOSF_putstr(Ch, A_VTRIM(MUDAOSF,(Str),A_VTSCRIPT(&(MUDAOSF.upb),(Str).upb,(AUDAOSF_maxsize+1),(Str).upb))));
 } 
 else
 { 
-PKDAOSF_newline(Ch);
+(void)(PKDAOSF_newline(Ch));
  /* line 388: */
  /* line 389: */
  /* line 390: */
  /* line 391: */
-KTDAOSF_putstr(Ch, Str);
+(void)(KTDAOSF_putstr(Ch, Str));
 } 
 } 
 else
 { 
 NUDAOSF_second = (-LTDAOSF_t);
  /* line 392: */
-LTDAOSF_t = (-LTDAOSF_t);
+(void)(LTDAOSF_t = (-LTDAOSF_t));
  /* line 393: */
 for ( ;; )
 { 
@@ -1592,19 +1592,19 @@ if ( !(OUDAOSF) ) break;
 }
  /* line 395: */
  /* line 396: */
-if ( (*(&(Ch->Buffered))) )
+if (*(&(Ch->Buffered)))
 { 
  /* line 397: */
 PUDAOSF = (*(&(Ch->Buffer))) ;
 SUDAOSF = A_VTRIM(QUDAOSF,(PUDAOSF),A_VTSCRIPT(&(QUDAOSF.upb),(PUDAOSF).upb,(*NTDAOSF_pos),(((*NTDAOSF_pos)+LTDAOSF_t)-1))) ;
 TUDAOSF = A_VTRIM(RUDAOSF,(Str),A_VTSCRIPT(&(RUDAOSF.upb),(Str).upb,1,LTDAOSF_t)) ;
-A_VASSIGN2(TUDAOSF,SUDAOSF,A68_CHAR );
+(void)(A_VASSIGN2(TUDAOSF,SUDAOSF,A68_CHAR ));
 } 
 else
 { 
  /* line 398: */
 UUDAOSF = (*(&(Ch->Putbuffer))) ;
-A_CALLPROC(UUDAOSF,(A_VTRIM(VUDAOSF,(Str),A_VTSCRIPT(&(VUDAOSF.upb),(Str).upb,1,LTDAOSF_t))),(A_VTRIM(VUDAOSF,(Str),A_VTSCRIPT(&(VUDAOSF.upb),(Str).upb,1,LTDAOSF_t)),(UUDAOSF).nonlocals));
+(void)(A_CALLPROC(UUDAOSF,(A_VTRIM(VUDAOSF,(Str),A_VTSCRIPT(&(VUDAOSF.upb),(Str).upb,1,LTDAOSF_t))),(A_VTRIM(VUDAOSF,(Str),A_VTSCRIPT(&(VUDAOSF.upb),(Str).upb,1,LTDAOSF_t)),(UUDAOSF).nonlocals)));
 } 
  /* line 399: */
 (*NTDAOSF_pos)+=LTDAOSF_t;
@@ -1622,13 +1622,13 @@ if ( !(WUDAOSF) ) break;
 /*SKIP*/;
 }
  /* line 403: */
-PKDAOSF_newline(Ch);
+(void)(PKDAOSF_newline(Ch));
  /* line 404: */
  /* line 405: */
  /* line 406: */
  /* line 407: */
  /* line 408: */
-KTDAOSF_putstr(Ch, A_VTRIM(XUDAOSF,(Str),A_VTSCRIPT(&(XUDAOSF.upb),(Str).upb,LTDAOSF_t,(Str).upb)));
+(void)(KTDAOSF_putstr(Ch, A_VTRIM(XUDAOSF,(Str),A_VTSCRIPT(&(XUDAOSF.upb),(Str).upb,LTDAOSF_t,(Str).upb))));
 } 
 } 
 } 
@@ -1645,10 +1645,10 @@ A_PROC_ENTRY(putline);
  /* line 412: */
  /* line 413: */
 { 
-KTDAOSF_putstr(Ch, Line);
+(void)(KTDAOSF_putstr(Ch, Line));
  /* line 414: */
  /* line 415: */
-PKDAOSF_newline(Ch);
+(void)(PKDAOSF_newline(Ch));
 } 
 A_PROC_EXIT(putline);
 return;
@@ -1657,9 +1657,9 @@ return;
 
 A68_VOID  FVDAOSF_add_real(A68_92 * Ch, A68_REAL  Re, A68_INT  Width, A68_INT  Digits)
 { 
-A68_88  GVDAOSF;  /* OPERATORS - mode -> union mode */
+A68_88  GVDAOSF = {0};  /* OPERATORS - mode -> union mode */
 A68_VC  HVDAOSF;  /* avoid structure result */
-A68_VC  IVDAOSF_realstr;
+A68_VC  IVDAOSF_realstr A_UNUSED = {0};
 A68_BOOL  JVDAOSF;  /* optbool result */
 A68_INT  KVDAOSF;  /* YIELD */
 A68_BOOL * LVDAOSF;  /* YIELD */
@@ -1679,13 +1679,13 @@ JVDAOSF = ((*(&A_VINDEX(IVDAOSF_realstr,KVDAOSF)))!=' ');
 if ( JVDAOSF )
 {JVDAOSF = (*(&(Ch->Separate)));
 }
-if ( JVDAOSF )
+if (JVDAOSF)
 { 
  /* line 425: */
-KTDAOSF_putstr(Ch, YHDAOSF_space_str);
+(void)(KTDAOSF_putstr(Ch, YHDAOSF_space_str));
 } 
  /* line 426: */
-KTDAOSF_putstr(Ch, IVDAOSF_realstr);
+(void)(KTDAOSF_putstr(Ch, IVDAOSF_realstr));
  /* line 427: */
  /* line 428: */
 LVDAOSF = (&(Ch->Separate)) ;
@@ -1698,11 +1698,11 @@ return;
 
 A68_VOID  PVDAOSF_add_number(A68_92 * Ch, A68_INT  Int, A68_INT  Width)
 { 
-A68_145  QVDAOSF_line;
+A68_145  QVDAOSF_line A_UNUSED = {0};
 A68_146  SVDAOSF;  /* clause result */
-A68_146  UVDAOSF_chars;
-A68_INT  VVDAOSF_n;
-A68_INT  WVDAOSF_l;
+A68_146  UVDAOSF_chars A_UNUSED = {0};
+A68_INT  VVDAOSF_n A_UNUSED = {0};
+A68_INT  WVDAOSF_l A_UNUSED = {0};
 A68_VC  XVDAOSF;  /* OPERATORS - istruct -> vector */
 A68_VC  YVDAOSF;  /* OPERATORS - simple index */
 A68_INT  ZVDAOSF;  /* YIELD */
@@ -1720,7 +1720,7 @@ A68_VC  KWDAOSF;  /* OPERATORS - istruct -> vector */
 A68_VC  LWDAOSF;  /* OPERATORS - simple index */
 A68_INT  MWDAOSF;  /* YIELD */
 A68_CHAR * NWDAOSF;  /* YIELD */
-A68_INT  OWDAOSF_sp;
+A68_INT  OWDAOSF_sp A_UNUSED = {0};
 A68_INT  PWDAOSF;  /* to part of loop */
 A68_INT  QWDAOSF;  /* loop control */
 A68_VC  RWDAOSF;  /* OPERATORS - istruct -> vector */
@@ -1741,7 +1741,7 @@ A_PROC_ENTRY(add_number);
 { 
  /* line 436: */
  /* line 437: */
-if ( (Int<0) )
+if (Int<0)
 { 
 SVDAOSF = RVDAOSF;
 } 
@@ -1755,7 +1755,7 @@ VVDAOSF_n = Int;
 WVDAOSF_l = 33;
  /* line 439: */
  /* line 440: */
-if ( (VVDAOSF_n==0) )
+if (VVDAOSF_n==0)
 { 
  /* line 441: */
 YVDAOSF = A_ISVEC(XVDAOSF,(&QVDAOSF_line),32,A68_CHAR ) ;
@@ -1775,13 +1775,13 @@ FWDAOSF = A_HISVEC(EWDAOSF,UVDAOSF_chars,10,A68_CHAR ) ;
 HWDAOSF = 10 ;
 IWDAOSF = (A_MOD(VVDAOSF_n,HWDAOSF,GWDAOSF)+1) ;
 JWDAOSF = (&A_VINDEX(CWDAOSF,DWDAOSF)) ;
-(*JWDAOSF) = A_VINDEX(FWDAOSF,IWDAOSF);
+(void)((*JWDAOSF) = A_VINDEX(FWDAOSF,IWDAOSF));
  /* line 443: */
  /* line 444: */
 VVDAOSF_n/=10;
 }
  /* line 445: */
-if ( (Int<0) )
+if (Int<0)
 { 
  /* line 446: */
 LWDAOSF = A_ISVEC(KWDAOSF,(&QVDAOSF_line),32,A68_CHAR ) ;
@@ -1794,7 +1794,7 @@ NWDAOSF = (&A_VINDEX(LWDAOSF,MWDAOSF)) ;
 OWDAOSF_sp = ((Width-33)+WVDAOSF_l);
  /* line 448: */
  /* line 449: */
-if ( (OWDAOSF_sp>0) )
+if (OWDAOSF_sp>0)
 { 
 PWDAOSF = OWDAOSF_sp;
 for ( QWDAOSF = 1;
@@ -1810,7 +1810,7 @@ UWDAOSF = (&A_VINDEX(SWDAOSF,TWDAOSF)) ;
 } 
 else
 { 
-if ( (*(&(Ch->Separate))) )
+if (*(&(Ch->Separate)))
 { 
  /* line 451: */
 WWDAOSF = A_ISVEC(VWDAOSF,(&QVDAOSF_line),32,A68_CHAR ) ;
@@ -1821,7 +1821,7 @@ YWDAOSF = (&A_VINDEX(WWDAOSF,XWDAOSF)) ;
 } 
  /* line 452: */
 AXDAOSF = A_ISVEC(ZWDAOSF,(&QVDAOSF_line),32,A68_CHAR ) ;
-KTDAOSF_putstr(Ch, A_VTRIM(BXDAOSF,(AXDAOSF),A_VTSCRIPT(&(BXDAOSF.upb),(AXDAOSF).upb,WVDAOSF_l,(AXDAOSF).upb)));
+(void)(KTDAOSF_putstr(Ch, A_VTRIM(BXDAOSF,(AXDAOSF),A_VTSCRIPT(&(BXDAOSF.upb),(AXDAOSF).upb,WVDAOSF_l,(AXDAOSF).upb))));
  /* line 453: */
  /* line 454: */
 CXDAOSF = (&(Ch->Separate)) ;
@@ -1834,9 +1834,9 @@ return;
 
 A68_VOID  GXDAOSF_add_bits(A68_92 * Ch, A68_BITS  B, A68_INT  Leng)
 { 
-A68_145  HXDAOSF_line;
-A68_INT  IXDAOSF_l;
-A68_BITS  JXDAOSF_n;
+A68_145  HXDAOSF_line A_UNUSED = {0};
+A68_INT  IXDAOSF_l A_UNUSED = {0};
+A68_BITS  JXDAOSF_n A_UNUSED = {0};
 A68_VC  LXDAOSF;  /* OPERATORS - istruct -> vector */
 A68_VC  MXDAOSF;  /* OPERATORS - simple index */
 A68_INT  NXDAOSF;  /* YIELD */
@@ -1876,7 +1876,7 @@ NXDAOSF = IXDAOSF_l-=1 ;
 PXDAOSF = OXDAOSF ;
 QXDAOSF = ((A68_INT )(A68_BITS )(JXDAOSF_n&0XfU)+1) ;
 RXDAOSF = (&A_VINDEX(MXDAOSF,NXDAOSF)) ;
-(*RXDAOSF) = A_VINDEX(PXDAOSF,QXDAOSF);
+(void)((*RXDAOSF) = A_VINDEX(PXDAOSF,QXDAOSF));
  /* line 464: */
  /* line 465: */
 TXDAOSF = 4 ;
@@ -1896,7 +1896,7 @@ ZXDAOSF = (&A_VINDEX(XXDAOSF,YXDAOSF)) ;
 (*ZXDAOSF) = '0';
 }
  /* line 467: */
-if ( (*(&(Ch->Separate))) )
+if (*(&(Ch->Separate)))
 { 
 BYDAOSF = A_ISVEC(AYDAOSF,(&HXDAOSF_line),32,A68_CHAR ) ;
 CYDAOSF = IXDAOSF_l-=1 ;
@@ -1905,7 +1905,7 @@ DYDAOSF = (&A_VINDEX(BYDAOSF,CYDAOSF)) ;
 } 
  /* line 468: */
 FYDAOSF = A_ISVEC(EYDAOSF,(&HXDAOSF_line),32,A68_CHAR ) ;
-KTDAOSF_putstr(Ch, A_VTRIM(GYDAOSF,(FYDAOSF),A_VTSCRIPT(&(GYDAOSF.upb),(FYDAOSF).upb,IXDAOSF_l,(FYDAOSF).upb)));
+(void)(KTDAOSF_putstr(Ch, A_VTRIM(GYDAOSF,(FYDAOSF),A_VTSCRIPT(&(GYDAOSF.upb),(FYDAOSF).upb,IXDAOSF_l,(FYDAOSF).upb))));
  /* line 469: */
  /* line 470: */
 HYDAOSF = (&(Ch->Separate)) ;
@@ -1918,95 +1918,95 @@ return;
 
 A68_VOID  KYDAOSF_put(A68_92 * Ch, A68_148  Out)
 { 
-A68_122  LYDAOSF_elem;
+A68_122  LYDAOSF_elem A_UNUSED = {0};
 A68_122 * MYDAOSF;  /* forall control - []x */
 A68_INT  NYDAOSF;  /* forall loop counter */
 A68_122  OYDAOSF;  /* united object - for case conformity */
-A68_INT  PYDAOSF_n;
-A68_71  QYDAOSF_vi;
-A68_INT  RYDAOSF_i;
+A68_INT  PYDAOSF_n A_UNUSED = {0};
+A68_71  QYDAOSF_vi A_UNUSED = {0};
+A68_INT  RYDAOSF_i A_UNUSED = {0};
 A68_INT * SYDAOSF;  /* forall control - []x */
 A68_INT  TYDAOSF;  /* forall loop counter */
-A68_BITS  UYDAOSF_bits;
-A68_123  VYDAOSF_vb;
-A68_BITS  WYDAOSF_b;
+A68_BITS  UYDAOSF_bits A_UNUSED = {0};
+A68_123  VYDAOSF_vb A_UNUSED = {0};
+A68_BITS  WYDAOSF_b A_UNUSED = {0};
 A68_BITS * XYDAOSF;  /* forall control - []x */
 A68_INT  YYDAOSF;  /* forall loop counter */
-A68_SBITS  ZYDAOSF_sb;
-A68_REAL  AZDAOSF_re;
-A68_125  BZDAOSF_vr;
-A68_REAL  CZDAOSF_r;
+A68_SBITS  ZYDAOSF_sb A_UNUSED = {0};
+A68_REAL  AZDAOSF_re A_UNUSED = {0};
+A68_125  BZDAOSF_vr A_UNUSED = {0};
+A68_REAL  CZDAOSF_r A_UNUSED = {0};
 A68_REAL * DZDAOSF;  /* forall control - []x */
 A68_INT  EZDAOSF;  /* forall loop counter */
-A68_CHAR  FZDAOSF_c;
+A68_CHAR  FZDAOSF_c A_UNUSED = {0};
 A68_VC  GZDAOSF;  /* OPERATORS - scalar -> [] or VEC[] */
-A68_VC  HZDAOSF_vc;
-A68_BOOL  IZDAOSF_bool;
+A68_VC  HZDAOSF_vc A_UNUSED = {0};
+A68_BOOL  IZDAOSF_bool A_UNUSED = {0};
 A68_VC  JZDAOSF;  /* clause result */
 A68_VC  KZDAOSF;  /* OPERATORS - scalar -> [] or VEC[] */
 A68_VC  LZDAOSF;  /* OPERATORS - scalar -> [] or VEC[] */
-A68_124  MZDAOSF_vecbool;
-A68_BOOL  NZDAOSF_bool;
+A68_124  MZDAOSF_vecbool A_UNUSED = {0};
+A68_BOOL  NZDAOSF_bool A_UNUSED = {0};
 A68_BOOL * OZDAOSF;  /* forall control - []x */
 A68_INT  PZDAOSF;  /* forall loop counter */
 A68_VC  QZDAOSF;  /* clause result */
 A68_VC  RZDAOSF;  /* OPERATORS - scalar -> [] or VEC[] */
 A68_VC  SZDAOSF;  /* OPERATORS - scalar -> [] or VEC[] */
-A68_113  TZDAOSF_iw;
-A68_114  UZDAOSF_sw;
-A68_INT  VZDAOSF_gap;
+A68_113  TZDAOSF_iw A_UNUSED = {0};
+A68_114  UZDAOSF_sw A_UNUSED = {0};
+A68_INT  VZDAOSF_gap A_UNUSED = {0};
 A68_BOOL  WZDAOSF;  /* optbool result */
-A68_INT  XZDAOSF_ss;
+A68_INT  XZDAOSF_ss A_UNUSED = {0};
 A68_119  YZDAOSF;  /* avoid structure result */
-A68_122  ZZDAOSF;  /* OPERATORS - mode -> union mode */
+A68_122  ZZDAOSF = {0};  /* OPERATORS - mode -> union mode */
 A68_148  AAEAOSF;  /* OPERATORS - scalar -> [] or VEC[] */
-A68_115  BAEAOSF_j;
-A68_INT  CAEAOSF_ss;
+A68_115  BAEAOSF_j A_UNUSED = {0};
+A68_INT  CAEAOSF_ss A_UNUSED = {0};
 A68_119  DAEAOSF;  /* avoid structure result */
-A68_122  EAEAOSF;  /* OPERATORS - mode -> union mode */
+A68_122  EAEAOSF = {0};  /* OPERATORS - mode -> union mode */
 A68_148  FAEAOSF;  /* OPERATORS - scalar -> [] or VEC[] */
-A68_116  GAEAOSF_t;
+A68_116  GAEAOSF_t A_UNUSED = {0};
 A68_INT  HAEAOSF;  /* clause result */
 A68_INT  IAEAOSF;  /* ADICOPS - MOD */
 A68_INT  JAEAOSF;  /* ADICOPS - MOD */
 A68_INT  KAEAOSF;  /* ADICOPS - MOD */
-A68_INT  LAEAOSF_tab;
+A68_INT  LAEAOSF_tab A_UNUSED = {0};
 A68_VC  MAEAOSF;  /* OPERATORS - istruct -> vector */
 A68_VC  NAEAOSF;  /* OPERATORS - trim index */
 A68_VC  OAEAOSF;  /* OPERATORS - trim index */
-A68_117  PAEAOSF_p;
+A68_117  PAEAOSF_p A_UNUSED = {0};
 A68_INT  QAEAOSF;  /* ADICOPS - MOD */
 A68_INT  RAEAOSF;  /* ADICOPS - MOD */
 A68_INT  SAEAOSF;  /* ADICOPS - MOD */
-A68_INT  TAEAOSF_pos;
+A68_INT  TAEAOSF_pos A_UNUSED = {0};
 A68_116  UAEAOSF;  /* avoid structure result */
-A68_122  VAEAOSF;  /* OPERATORS - mode -> union mode */
+A68_122  VAEAOSF = {0};  /* OPERATORS - mode -> union mode */
 A68_148  WAEAOSF;  /* OPERATORS - scalar -> [] or VEC[] */
-A68_118  XAEAOSF_a;
+A68_118  XAEAOSF_a A_UNUSED = {0};
 A68_116  YAEAOSF;  /* avoid structure result */
-A68_122  ZAEAOSF;  /* OPERATORS - mode -> union mode */
+A68_122  ZAEAOSF = {0};  /* OPERATORS - mode -> union mode */
 A68_148  ABEAOSF;  /* OPERATORS - scalar -> [] or VEC[] */
-A68_119  BBEAOSF_s;
+A68_119  BBEAOSF_s A_UNUSED = {0};
 A68_VC  CBEAOSF;  /* OPERATORS - istruct -> vector */
 A68_VC  DBEAOSF;  /* OPERATORS - istruct -> vector */
 A68_VC  EBEAOSF;  /* OPERATORS - trim index */
 A68_VC  FBEAOSF;  /* OPERATORS - trim index */
 A68_82  HBEAOSF_generator;   /* proc value of non-global proc */
 A68_VC  NBEAOSF;  /* avoid structure result */
-A68_VC  MBEAOSF_lsp;
-A68_CHAR * OBEAOSF_sc;
+A68_VC  MBEAOSF_lsp A_UNUSED = {0};
+A68_CHAR * OBEAOSF_sc A_UNUSED = {0};
 A68_INT  PBEAOSF;  /* forall loop counter */
-A68_120  QBEAOSF_l;
+A68_120  QBEAOSF_l A_UNUSED = {0};
 A68_INT  RBEAOSF;  /* to part of loop */
 A68_INT  SBEAOSF;  /* loop control */
-A68_121  TBEAOSF_in;
+A68_121  TBEAOSF_in A_UNUSED = {0};
 A68_INT  UBEAOSF;  /* clause result */
 A68_VC  VBEAOSF;  /* OPERATORS - istruct -> vector */
 A68_VC  WBEAOSF;  /* OPERATORS - istruct -> vector */
 A68_INT * XBEAOSF;  /* YIELD */
-A68_96  YBEAOSF_proc;
-A68_126  ZBEAOSF_struct;
-A68_INT  ACEAOSF_i;
+A68_96  YBEAOSF_proc A_UNUSED = {0};
+A68_126  ZBEAOSF_struct A_UNUSED = {0};
+A68_INT  ACEAOSF_i A_UNUSED = {0};
 A68_INT  BCEAOSF;  /* to part of loop */
 A68_126  CCEAOSF;  /* OPERATORS - straight index */
 A68_122  DCEAOSF;  /* OPERATORS - straight index result */
@@ -2029,7 +2029,7 @@ case 1: /* INT */
 PYDAOSF_n = (OYDAOSF.data.mode1);
  /* line 477: */
  /* line 478: */
-PVDAOSF_add_number(Ch, PYDAOSF_n, 0);
+(void)(PVDAOSF_add_number(Ch, PYDAOSF_n, 0));
 break;
 case 2: /* VECTOR [] INT */
 QYDAOSF_vi = (OYDAOSF.data.mode2);
@@ -2041,7 +2041,7 @@ for (;TYDAOSF-- >= 0;
 ) )
 {
 RYDAOSF_i = *SYDAOSF;
-PVDAOSF_add_number(Ch, RYDAOSF_i, 0);
+(void)(PVDAOSF_add_number(Ch, RYDAOSF_i, 0));
 }
  /* line 480: */
 break;
@@ -2049,7 +2049,7 @@ case 3: /* BITS */
 UYDAOSF_bits = (OYDAOSF.data.mode3);
  /* line 481: */
  /* line 482: */
-GXDAOSF_add_bits(Ch, UYDAOSF_bits, 8);
+(void)(GXDAOSF_add_bits(Ch, UYDAOSF_bits, 8));
 break;
 case 4: /* VECTOR [] BITS */
 VYDAOSF_vb = (OYDAOSF.data.mode4);
@@ -2061,7 +2061,7 @@ for (;YYDAOSF-- >= 0;
 ) )
 {
 WYDAOSF_b = *XYDAOSF;
-GXDAOSF_add_bits(Ch, WYDAOSF_b, 8);
+(void)(GXDAOSF_add_bits(Ch, WYDAOSF_b, 8));
 }
  /* line 484: */
 break;
@@ -2069,13 +2069,13 @@ case 5: /* SHORT BITS */
 ZYDAOSF_sb = (OYDAOSF.data.mode5);
  /* line 485: */
  /* line 486: */
-GXDAOSF_add_bits(Ch, (A68_BITS )ZYDAOSF_sb, 4);
+(void)(GXDAOSF_add_bits(Ch, (A68_BITS )ZYDAOSF_sb, 4));
 break;
 case 10: /* REAL */
 AZDAOSF_re = (OYDAOSF.data.mode10);
  /* line 487: */
  /* line 488: */
-FVDAOSF_add_real(Ch, AZDAOSF_re, (-12), 5);
+(void)(FVDAOSF_add_real(Ch, AZDAOSF_re, (-12), 5));
 break;
 case 11: /* VECTOR [] REAL */
 BZDAOSF_vr = (OYDAOSF.data.mode11);
@@ -2087,7 +2087,7 @@ for (;EZDAOSF-- >= 0;
 ) )
 {
 CZDAOSF_r = *DZDAOSF;
-FVDAOSF_add_real(Ch, CZDAOSF_r, (-12), 5);
+(void)(FVDAOSF_add_real(Ch, CZDAOSF_r, (-12), 5));
 }
  /* line 490: */
 break;
@@ -2095,18 +2095,18 @@ case 6: /* CHAR */
 FZDAOSF_c = (OYDAOSF.data.mode6);
  /* line 491: */
  /* line 492: */
-KTDAOSF_putstr(Ch, A_HVEC(GZDAOSF,FZDAOSF_c,A68_CHAR ));
+(void)(KTDAOSF_putstr(Ch, A_HVEC(GZDAOSF,FZDAOSF_c,A68_CHAR )));
 break;
 case 7: /* VECTOR [] CHAR */
 HZDAOSF_vc = (OYDAOSF.data.mode7);
  /* line 493: */
  /* line 494: */
-KTDAOSF_putstr(Ch, HZDAOSF_vc);
+(void)(KTDAOSF_putstr(Ch, HZDAOSF_vc));
 break;
 case 8: /* BOOL */
 IZDAOSF_bool = (OYDAOSF.data.mode8);
  /* line 495: */
-if ( IZDAOSF_bool )
+if (IZDAOSF_bool)
 { 
 JZDAOSF = A_HVEC(KZDAOSF,'T',A68_CHAR );
 } 
@@ -2115,7 +2115,7 @@ else
 JZDAOSF = A_HVEC(LZDAOSF,'F',A68_CHAR );
 } 
  /* line 496: */
-KTDAOSF_putstr(Ch, JZDAOSF);
+(void)(KTDAOSF_putstr(Ch, JZDAOSF));
 break;
 case 9: /* VECTOR [] BOOL */
 MZDAOSF_vecbool = (OYDAOSF.data.mode9);
@@ -2128,7 +2128,7 @@ for (;PZDAOSF-- >= 0;
 ) )
 {
 NZDAOSF_bool = *OZDAOSF;
-if ( NZDAOSF_bool )
+if (NZDAOSF_bool)
 { 
 QZDAOSF = A_HVEC(RZDAOSF,'T',A68_CHAR );
 } 
@@ -2136,7 +2136,7 @@ else
 { 
 QZDAOSF = A_HVEC(SZDAOSF,'F',A68_CHAR );
 } 
-KTDAOSF_putstr(Ch, QZDAOSF);
+(void)(KTDAOSF_putstr(Ch, QZDAOSF));
 }
  /* line 499: */
 break;
@@ -2144,7 +2144,7 @@ case 13: /* STRUCT(INT,INT)  */
 TZDAOSF_iw = (OYDAOSF.data.mode13);
  /* line 500: */
  /* line 501: */
-PVDAOSF_add_number(Ch, TZDAOSF_iw.Int, TZDAOSF_iw.Width);
+(void)(PVDAOSF_add_number(Ch, TZDAOSF_iw.Int, TZDAOSF_iw.Width));
 break;
 case 14: /* STRUCT(MODE26,INT)  */
 UZDAOSF_sw = (OYDAOSF.data.mode14);
@@ -2152,24 +2152,24 @@ UZDAOSF_sw = (OYDAOSF.data.mode14);
 { 
 VZDAOSF_gap = (((*(&(Ch->Width)))-(*(&(Ch->Charnumber))))-1);
  /* line 503: */
-KTDAOSF_putstr(Ch, UZDAOSF_sw.Str);
+(void)(KTDAOSF_putstr(Ch, UZDAOSF_sw.Str));
  /* line 504: */
 WZDAOSF = (VZDAOSF_gap>=UZDAOSF_sw.Width);
 if ( ! WZDAOSF )
 { /* line 505: */
 WZDAOSF = (VZDAOSF_gap<UZDAOSF_sw.Str.upb);
 }
-if ( WZDAOSF )
+if (WZDAOSF)
 { 
 XZDAOSF_ss = (UZDAOSF_sw.Width-UZDAOSF_sw.Str.upb);
  /* line 506: */
-if ( (XZDAOSF_ss>0) )
+if (XZDAOSF_ss>0)
 { 
  /* line 507: */
  /* line 508: */
  /* line 509: */
 GSDAOSF_spaces( XZDAOSF_ss, &YZDAOSF );
-KYDAOSF_put(Ch, A_HVEC(AAEAOSF,A_UNITE(ZZDAOSF,mode19,19,YZDAOSF),A68_122 ));
+(void)(KYDAOSF_put(Ch, A_HVEC(AAEAOSF,A_UNITE(ZZDAOSF,mode19,19,YZDAOSF),A68_122 )));
 } 
 } 
 } 
@@ -2179,23 +2179,23 @@ BAEAOSF_j = (OYDAOSF.data.mode15);
  /* line 510: */
 { 
  /* line 511: */
-if ( (BAEAOSF_j.Justify>=((*(&(Ch->Width)))-(*(&(Ch->Charnumber))))) )
+if (BAEAOSF_j.Justify>=((*(&(Ch->Width)))-(*(&(Ch->Charnumber)))))
 { 
  /* line 512: */
-PKDAOSF_newline(Ch);
+(void)(PKDAOSF_newline(Ch));
 } 
  /* line 513: */
 CAEAOSF_ss = (BAEAOSF_j.Justify-BAEAOSF_j.Str.upb);
  /* line 514: */
-if ( (CAEAOSF_ss>0) )
+if (CAEAOSF_ss>0)
 { 
 GSDAOSF_spaces( CAEAOSF_ss, &DAEAOSF );
-KYDAOSF_put(Ch, A_HVEC(FAEAOSF,A_UNITE(EAEAOSF,mode19,19,DAEAOSF),A68_122 ));
+(void)(KYDAOSF_put(Ch, A_HVEC(FAEAOSF,A_UNITE(EAEAOSF,mode19,19,DAEAOSF),A68_122 )));
 } 
  /* line 515: */
  /* line 516: */
  /* line 517: */
-KTDAOSF_putstr(Ch, BAEAOSF_j.Str);
+(void)(KTDAOSF_putstr(Ch, BAEAOSF_j.Str));
 } 
 break;
 case 16: /* STRUCT(INT)  */
@@ -2203,7 +2203,7 @@ GAEAOSF_t = (OYDAOSF.data.mode16);
  /* line 518: */
 { 
  /* line 519: */
-if ( (GAEAOSF_t.Tab>1) )
+if (GAEAOSF_t.Tab>1)
 { 
  /* line 520: */
  /* line 521: */
@@ -2218,10 +2218,10 @@ HAEAOSF = 0;
 LAEAOSF_tab = HAEAOSF;
  /* line 522: */
  /* line 523: */
-if ( (((*(&(Ch->Charnumber)))+LAEAOSF_tab)>(*(&(Ch->Width)))) )
+if (((*(&(Ch->Charnumber)))+LAEAOSF_tab)>(*(&(Ch->Width))))
 { 
  /* line 524: */
-PKDAOSF_newline(Ch);
+(void)(PKDAOSF_newline(Ch));
 } 
 else
 { 
@@ -2229,7 +2229,7 @@ else
  /* line 526: */
  /* line 527: */
 NAEAOSF = A_ISVEC(MAEAOSF,(&WQDAOSF_sp),512,A68_CHAR ) ;
-KTDAOSF_putstr(Ch, A_VTRIM(OAEAOSF,(NAEAOSF),A_VTSCRIPT(&(OAEAOSF.upb),(NAEAOSF).upb,1,LAEAOSF_tab)));
+(void)(KTDAOSF_putstr(Ch, A_VTRIM(OAEAOSF,(NAEAOSF),A_VTSCRIPT(&(OAEAOSF.upb),(NAEAOSF).upb,1,LAEAOSF_tab))));
 } 
 } 
 break;
@@ -2242,18 +2242,18 @@ SAEAOSF = (*(&(Ch->Width))) ;
 TAEAOSF_pos = A_MOD(RAEAOSF,SAEAOSF,QAEAOSF);
  /* line 529: */
  /* line 530: */
-if ( ((*(&(Ch->Charnumber)))!=(TAEAOSF_pos+1)) )
+if ((*(&(Ch->Charnumber)))!=(TAEAOSF_pos+1))
 { 
-if ( ((*(&(Ch->Charnumber)))>(TAEAOSF_pos+1)) )
+if ((*(&(Ch->Charnumber)))>(TAEAOSF_pos+1))
 { 
-PKDAOSF_newline(Ch);
+(void)(PKDAOSF_newline(Ch));
 } 
  /* line 531: */
  /* line 532: */
  /* line 533: */
  /* line 534: */
 RRDAOSF_tab( TAEAOSF_pos, &UAEAOSF );
-KYDAOSF_put(Ch, A_HVEC(WAEAOSF,A_UNITE(VAEAOSF,mode16,16,UAEAOSF),A68_122 ));
+(void)(KYDAOSF_put(Ch, A_HVEC(WAEAOSF,A_UNITE(VAEAOSF,mode16,16,UAEAOSF),A68_122 )));
 } 
 } 
 break;
@@ -2262,21 +2262,21 @@ XAEAOSF_a = (OYDAOSF.data.mode18);
  /* line 535: */
 { 
  /* line 536: */
-if ( ((*(&(Ch->Charnumber)))<XAEAOSF_a.After) )
+if ((*(&(Ch->Charnumber)))<XAEAOSF_a.After)
 { 
  /* line 537: */
 RRDAOSF_tab( XAEAOSF_a.After, &YAEAOSF );
-KYDAOSF_put(Ch, A_HVEC(ABEAOSF,A_UNITE(ZAEAOSF,mode16,16,YAEAOSF),A68_122 ));
+(void)(KYDAOSF_put(Ch, A_HVEC(ABEAOSF,A_UNITE(ZAEAOSF,mode16,16,YAEAOSF),A68_122 )));
 } 
 else
 { 
  /* line 538: */
-if ( ((*(&(Ch->Charnumber)))<=(*(&(Ch->Width)))) )
+if ((*(&(Ch->Charnumber)))<=(*(&(Ch->Width))))
 { 
  /* line 539: */
  /* line 540: */
  /* line 541: */
-KTDAOSF_putstr(Ch, YHDAOSF_space_str);
+(void)(KTDAOSF_putstr(Ch, YHDAOSF_space_str));
 } 
 } 
 } 
@@ -2286,19 +2286,19 @@ BBEAOSF_s = (OYDAOSF.data.mode19);
  /* line 542: */
 { 
  /* line 543: */
-if ( ((BBEAOSF_s.Spaces+(*(&(Ch->Charnumber))))>(*(&(Ch->Width)))) )
+if ((BBEAOSF_s.Spaces+(*(&(Ch->Charnumber))))>(*(&(Ch->Width))))
 { 
  /* line 544: */
-PKDAOSF_newline(Ch);
+(void)(PKDAOSF_newline(Ch));
 } 
 else
 { 
  /* line 545: */
-if ( (BBEAOSF_s.Spaces<=A_HISVEC(CBEAOSF,WQDAOSF_sp,512,A68_CHAR ).upb) )
+if (BBEAOSF_s.Spaces<=A_HISVEC(CBEAOSF,WQDAOSF_sp,512,A68_CHAR ).upb)
 { 
  /* line 546: */
 EBEAOSF = A_ISVEC(DBEAOSF,(&WQDAOSF_sp),512,A68_CHAR ) ;
-KTDAOSF_putstr(Ch, A_VTRIM(FBEAOSF,(EBEAOSF),A_VTSCRIPT(&(FBEAOSF.upb),(EBEAOSF).upb,1,BBEAOSF_s.Spaces)));
+(void)(KTDAOSF_putstr(Ch, A_VTRIM(FBEAOSF,(EBEAOSF),A_VTSCRIPT(&(FBEAOSF.upb),(EBEAOSF).upb,1,BBEAOSF_s.Spaces))));
 } 
 else
 { 
@@ -2319,7 +2319,7 @@ for (;PBEAOSF-- >= 0;
  /* line 549: */
  /* line 550: */
  /* line 551: */
-KTDAOSF_putstr(Ch, MBEAOSF_lsp);
+(void)(KTDAOSF_putstr(Ch, MBEAOSF_lsp));
 } 
 } 
 } 
@@ -2332,7 +2332,7 @@ for ( SBEAOSF = 1;
 SBEAOSF <= RBEAOSF;
 SBEAOSF += 1 )
 { 
-PKDAOSF_newline(Ch);
+(void)(PKDAOSF_newline(Ch));
 }
  /* line 553: */
 break;
@@ -2340,7 +2340,7 @@ case 21: /* STRUCT(INT)  */
 TBEAOSF_in = (OYDAOSF.data.mode21);
  /* line 554: */
  /* line 555: */
-if ( (TBEAOSF_in.Indent>((*(&(Ch->Width)))-20)) )
+if (TBEAOSF_in.Indent>((*(&(Ch->Width)))-20))
 { 
  /* line 556: */
 UBEAOSF = ((*(&(Ch->Width)))-20);
@@ -2349,7 +2349,7 @@ else
 { 
  /* line 557: */
  /* line 558: */
-if ( (TBEAOSF_in.Indent>A_HISVEC(VBEAOSF,WQDAOSF_sp,512,A68_CHAR ).upb) )
+if (TBEAOSF_in.Indent>A_HISVEC(VBEAOSF,WQDAOSF_sp,512,A68_CHAR ).upb)
 { 
  /* line 559: */
 UBEAOSF = A_HISVEC(WBEAOSF,WQDAOSF_sp,512,A68_CHAR ).upb;
@@ -2367,7 +2367,7 @@ case 12: /* PROC(REF MODE92) VOID */
 YBEAOSF_proc = (OYDAOSF.data.mode12);
  /* line 561: */
  /* line 562: */
-A_CALLPROC(YBEAOSF_proc,(Ch),(Ch,(YBEAOSF_proc).nonlocals));
+(void)(A_CALLPROC(YBEAOSF_proc,(Ch),(Ch,(YBEAOSF_proc).nonlocals)));
 break;
 case 22: /* STRAIGHT MODE122 */
 ZBEAOSF_struct = (OYDAOSF.data.mode22);
@@ -2377,7 +2377,7 @@ for ( ACEAOSF_i = 1;
 ACEAOSF_i <= BCEAOSF;
 ACEAOSF_i += 1 )
 { 
-KYDAOSF_put(Ch, A_HVEC(ECEAOSF,A_STRINDEX_RTN(ZBEAOSF_struct,ACEAOSF_i,CCEAOSF,DCEAOSF),A68_122 ));
+(void)(KYDAOSF_put(Ch, A_HVEC(ECEAOSF,A_STRINDEX_RTN(ZBEAOSF_struct,ACEAOSF_i,CCEAOSF,DCEAOSF),A68_122 )));
 }
  /* line 564: */
  /* line 565: */
@@ -2397,7 +2397,7 @@ A68_VOID  JCEAOSF_putb(A68_VC  Buffer, A68_148  Line, A68_VC  *ReturnedValue)
 A68_92  KCEAOSF;  /* collateral clause result */
 A68_77  LCEAOSF;  /* procedure value */
 A68_93  MCEAOSF;  /* procedure value */
-A68_92  NCEAOSF_ch;
+A68_92  NCEAOSF_ch A_UNUSED = {0};
 A68_VC  OCEAOSF;  /* clause result */
 A68_VC  PCEAOSF;  /* OPERATORS - trim index */
 A_PROC_ENTRY(putb);
@@ -2423,7 +2423,7 @@ MCEAOSF.nonlocals = A68_NIL;
 KCEAOSF.Getbuffer = MCEAOSF;
 NCEAOSF_ch = KCEAOSF;
  /* line 578: */
-KYDAOSF_put((&NCEAOSF_ch), Line);
+(void)(KYDAOSF_put((&NCEAOSF_ch), Line));
  /* line 579: */
  /* line 580: */
 OCEAOSF = A_VTRIM(PCEAOSF,(Buffer),A_VTSCRIPT(&(PCEAOSF.upb),(Buffer).upb,1,((*(&((&NCEAOSF_ch)->Charnumber)))-1)));
@@ -2438,7 +2438,7 @@ A68_VOID  RCEAOSF_endput(A68_92 * Ch, A68_VC  *ReturnedValue)
 { 
 A68_VC  SCEAOSF;  /* OPERATORS - trim index */
 A68_VC  TCEAOSF;  /* OPERATORS - trim index */
-A68_VC  UCEAOSF_ans;
+A68_VC  UCEAOSF_ans A_UNUSED = {0};
 A68_INT * VCEAOSF;  /* YIELD */
 A68_VC  WCEAOSF;  /* clause result */
 A_PROC_ENTRY(endput);
@@ -2462,12 +2462,12 @@ return;
 
 A68_VOID  YCEAOSF_oneline(A68_148  Out, A68_VC  *ReturnedValue)
 { 
-A68_153  BDEAOSF_buff;
+A68_153  BDEAOSF_buff A_UNUSED = {0};
 A68_92  CDEAOSF;  /* collateral clause result */
 A68_VC  DDEAOSF;  /* OPERATORS - istruct -> vector */
 A68_77  EDEAOSF;  /* procedure value */
 A68_93  FDEAOSF;  /* procedure value */
-A68_92  GDEAOSF_ch;
+A68_92  GDEAOSF_ch A_UNUSED = {0};
 A68_77  IDEAOSF_putbuffer;   /* proc value of non-global proc */
 A68_jmp_buf ZCEAOSF_restart;
 A68_77 * UDEAOSF;  /* YIELD */
@@ -2507,9 +2507,9 @@ A_CLOSURE( IDEAOSF_putbuffer, JDEAOSF_putbuffer, KDEAOSF_putbuffer );
 UDEAOSF = (&((&GDEAOSF_ch)->Putbuffer)) ;
 (*UDEAOSF) = IDEAOSF_putbuffer;
  /* line 607: */
-ADEAOSF_restart:
+ADEAOSF_restart: A_UNUSED;
  /* line 608: */
-KYDAOSF_put((&GDEAOSF_ch), Out);
+(void)(KYDAOSF_put((&GDEAOSF_ch), Out));
  /* line 609: */
  /* line 610: */
 WDEAOSF = (*(&((&GDEAOSF_ch)->Buffer))) ;
@@ -2531,7 +2531,7 @@ static A68_BOOL A_invoked = A68_FALSE;
 static char *A_config_arguments[] = {"/home/vak/Project/Algol/Algol-68RS-Source/src/a68toc","-v","-uname","seedfile","-staredit","59LR","-lib","/home/vak/Project/Algol/Algol-68RS-Source/a68config","-dir","/home/vak/Project/Algol/Algol-68RS-Source/a68config","-dir","/home/vak/Project/Algol/Algol-68RS-Source/liba68prel","putstrings.a68",""};
 static char *A_config_environment[] = {"A68_LIB=/home/vak/Project/Algol/Algol-68RS-Source/a68config","A68_CDIR=","A68_DIR=","A68_STAREDIT=","A68_NAMESEED=nameseed","CTRANS_NAMESEED=",""};
 static char *A_config_modinfo_files[] = {"/home/vak/Project/Algol/Algol-68RS-Source/a68config/a68config.m","/home/vak/Project/Algol/Algol-68RS-Source/liba68prel/iobasics.m","/home/vak/Project/Algol/Algol-68RS-Source/liba68prel/numberstr.m","/home/vak/Project/Algol/Algol-68RS-Source/liba68prel/strops.m","/home/vak/Project/Algol/Algol-68RS-Source/liba68prel/osif.m",""};
-static A_CONFIG_INFO A_config;
+static A_CONFIG_INFO A_config A_UNUSED;
 /* --- end of configuration information */
 A68_127  OQDAOSF;  /* procedure value */
 A68_128  VQDAOSF;  /* procedure value */
@@ -2548,15 +2548,15 @@ BCAAOSF();   /* USE strops */
 CSCAOSF();   /* USE osif */
 /* --- Initialise configuration information */
 A_config.source_file = "/home/vak/Project/Algol/Algol-68RS-Source/liba68prel/putstrings.a68";
-A_config.translation_time = "Thu Nov  5 20:46:56 2026";
+A_config.translation_time = "Thu Nov  5 21:10:59 2026";
 A_config.ctrans_version = "Ctrans_34.6";
 A_config.name_seed = "PMDAOSF (from seed file) ";
-A_config.spec_change_time = "Thu Nov  5 20:46:56 2026";
+A_config.spec_change_time = "Thu Nov  5 21:10:59 2026";
 A_config.arguments = A_config_arguments;
 A_config.environment = A_config_environment;
 A_config.modinfo_files = A_config_modinfo_files;
 A_PROC_ENTRY(DECS putstrings);
-UEAALIB_a68config(LGAALIB_configinfo, UMDAOSF);
+(void)(UEAALIB_a68config(LGAALIB_configinfo, UMDAOSF));
  /* line 218: */
  /* line 219: */
  /* line 226: */

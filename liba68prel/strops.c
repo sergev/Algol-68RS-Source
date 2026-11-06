@@ -53,7 +53,7 @@ extern void BAAALIB(void);   /* a68config */
 /* --- end of DECS initialisation functions --- */
 static A68_38   ECAAOSF = {"$Id: strops.a68,v 1.1.1.1 2001-05-07 10:16:12 sian Exp $"}; 
 A_GISVEC(A68_VC ,FCAAOSF,ECAAOSF,56)
-A68_31  GCAAOSF_anonymous;
+A68_31  GCAAOSF_anonymous A_UNUSED;
 static A68_43   GEAAOSF = {"0987654321"}; 
 static A68_43   IEAAOSF = {"0123456789"}; 
 typedef struct   /* env of non-global proc */
@@ -179,7 +179,7 @@ A_PROC_ENTRY(makervc);
 A_CLOSURE( PCAAOSF_generator, QCAAOSF_generator, RCAAOSF_generator );
 A_CALLPROC(PCAAOSF_generator,(A68_FALSE, &VCAAOSF),(A68_FALSE, &VCAAOSF,(PCAAOSF_generator).nonlocals));
 XCAAOSF = A_HVEC(WCAAOSF,C,A68_CHAR ) ;
-A_VASSIGN2(XCAAOSF,VCAAOSF,A68_CHAR ) ;
+(void)(A_VASSIGN2(XCAAOSF,VCAAOSF,A68_CHAR )) ;
 UCAAOSF = VCAAOSF;
 A_PROC_EXIT(makervc);
 *ReturnedValue = (UCAAOSF);
@@ -196,7 +196,7 @@ A_PROC_ENTRY(makervc);
 A_CLOSURE( BDAAOSF_generator, CDAAOSF_generator, DDAAOSF_generator );
 (( DDAAOSF_generator * ) ( BDAAOSF_generator.nonlocals )) -> S = S;
 A_CALLPROC(BDAAOSF_generator,(A68_FALSE, &HDAAOSF),(A68_FALSE, &HDAAOSF,(BDAAOSF_generator).nonlocals));
-A_VASSIGN2(S,HDAAOSF,A68_CHAR ) ;
+(void)(A_VASSIGN2(S,HDAAOSF,A68_CHAR )) ;
 GDAAOSF = HDAAOSF;
 A_PROC_EXIT(makervc);
 *ReturnedValue = (GDAAOSF);
@@ -206,18 +206,18 @@ return;
 
 A68_VOID  JDAAOSF_concat(A68_40  Strs, A68_VC  *ReturnedValue)
 { 
-A68_INT  KDAAOSF_l;
-A68_VC  LDAAOSF_st;
+A68_INT  KDAAOSF_l A_UNUSED = {0};
+A68_VC  LDAAOSF_st A_UNUSED = {0};
 A68_VC * MDAAOSF;  /* forall control - []x */
 A68_INT  NDAAOSF;  /* forall loop counter */
 A68_31  PDAAOSF_generator;   /* proc value of non-global proc */
 A68_VC  UDAAOSF;  /* avoid structure result */
-A68_VC  VDAAOSF_ans;
-A68_VC  WDAAOSF_str;
+A68_VC  VDAAOSF_ans A_UNUSED = {0};
+A68_VC  WDAAOSF_str A_UNUSED = {0};
 A68_VC * XDAAOSF;  /* forall control - []x */
 A68_INT  YDAAOSF;  /* forall loop counter */
-A68_INT  ZDAAOSF_lwb;
-A68_INT  AEAAOSF_upb;
+A68_INT  ZDAAOSF_lwb A_UNUSED = {0};
+A68_INT  AEAAOSF_upb A_UNUSED = {0};
 A68_VC  BEAAOSF;  /* OPERATORS - trim index */
 A68_VC  CEAAOSF;  /* YIELD */
 A68_VC  DEAAOSF;  /* clause result */
@@ -257,7 +257,7 @@ AEAAOSF_upb = (KDAAOSF_l+=WDAAOSF_str.upb);
  /* line 63: */
  /* line 64: */
 CEAAOSF = A_VTRIM(BEAAOSF,(VDAAOSF_ans),A_VTSCRIPT(&(BEAAOSF.upb),(VDAAOSF_ans).upb,ZDAAOSF_lwb,AEAAOSF_upb)) ;
-A_VASSIGN2(WDAAOSF_str,CEAAOSF,A68_CHAR );
+(void)(A_VASSIGN2(WDAAOSF_str,CEAAOSF,A68_CHAR ));
 }
  /* line 65: */
  /* line 66: */
@@ -272,17 +272,17 @@ return;
 A68_VOID  FEAAOSF_intchars(A68_INT  I, A68_VC  *ReturnedValue)
 { 
 A68_43  HEAAOSF;  /* clause result */
-A68_43  JEAAOSF_chars;
-A68_INT  KEAAOSF_n;
-A68_INT  LEAAOSF_l;
+A68_43  JEAAOSF_chars A_UNUSED = {0};
+A68_INT  KEAAOSF_n A_UNUSED = {0};
+A68_INT  LEAAOSF_l A_UNUSED = {0};
 A68_INT  MEAAOSF;  /* clause result */
-A68_INT  NEAAOSF_e;
+A68_INT  NEAAOSF_e A_UNUSED = {0};
 A68_VC  OEAAOSF;  /* clause result */
 A68_VC  PEAAOSF;  /* OPERATORS - scalar -> [] or VEC[] */
 A68_31  REAAOSF_generator;   /* proc value of non-global proc */
 A68_VC  XEAAOSF;  /* avoid structure result */
-A68_VC  WEAAOSF_line;
-A68_INT  YEAAOSF_i;
+A68_VC  WEAAOSF_line A_UNUSED = {0};
+A68_INT  YEAAOSF_i A_UNUSED = {0};
 A68_INT  ZEAAOSF;  /* to part of loop */
 A68_INT  AFAAOSF;  /* by part of loop */
 A68_VC  BFAAOSF;  /* OPERATORS - istruct -> vector */
@@ -297,7 +297,7 @@ A_PROC_ENTRY(intchars);
  /* line 70: */
  /* line 71: */
 { 
-if ( (I<0) )
+if (I<0)
 { 
 HEAAOSF = GEAAOSF;
 } 
@@ -310,7 +310,7 @@ JEAAOSF_chars = HEAAOSF;
 KEAAOSF_n = I;
 LEAAOSF_l = 0;
  /* line 73: */
-if ( (I<0) )
+if (I<0)
 { 
 MEAAOSF = 1;
 } 
@@ -329,7 +329,7 @@ LEAAOSF_l+=1;
  /* line 75: */
  /* line 76: */
  /* line 77: */
-if ( (LEAAOSF_l==0) )
+if (LEAAOSF_l==0)
 { 
 OEAAOSF = A_HVEC(PEAAOSF,'0',A68_CHAR );
 } 
@@ -356,13 +356,13 @@ CFAAOSF = A_HISVEC(BFAAOSF,JEAAOSF_chars,10,A68_CHAR ) ;
 EFAAOSF = 10 ;
 FFAAOSF = (A_MOD(KEAAOSF_n,EFAAOSF,DFAAOSF)+1) ;
 GFAAOSF = (&A_VINDEX(WEAAOSF_line,YEAAOSF_i)) ;
-(*GFAAOSF) = A_VINDEX(CFAAOSF,FFAAOSF);
+(void)((*GFAAOSF) = A_VINDEX(CFAAOSF,FFAAOSF));
  /* line 81: */
  /* line 82: */
 KEAAOSF_n/=10;
 }
  /* line 83: */
-if ( (NEAAOSF_e==1) )
+if (NEAAOSF_e==1)
 { 
 HFAAOSF = 1 ;
 IFAAOSF = (&A_VINDEX(WEAAOSF_line,HFAAOSF)) ;
@@ -390,7 +390,7 @@ static A68_BOOL A_invoked = A68_FALSE;
 static char *A_config_arguments[] = {"/home/vak/Project/Algol/Algol-68RS-Source/src/a68toc","-v","-uname","seedfile","-staredit","59LR","-lib","/home/vak/Project/Algol/Algol-68RS-Source/a68config","-dir","/home/vak/Project/Algol/Algol-68RS-Source/a68config","-dir","/home/vak/Project/Algol/Algol-68RS-Source/liba68prel","strops.a68",""};
 static char *A_config_environment[] = {"A68_LIB=/home/vak/Project/Algol/Algol-68RS-Source/a68config","A68_CDIR=","A68_DIR=","A68_STAREDIT=","A68_NAMESEED=nameseed","CTRANS_NAMESEED=",""};
 static char *A_config_modinfo_files[] = {"/home/vak/Project/Algol/Algol-68RS-Source/a68config/a68config.m",""};
-static A_CONFIG_INFO A_config;
+static A_CONFIG_INFO A_config A_UNUSED;
 /* --- end of configuration information */
 A68_31  LCAAOSF;  /* procedure value */
 if( A_invoked ) return;
@@ -398,15 +398,15 @@ A_invoked = A68_TRUE;
 BAAALIB();   /* USE a68config */
 /* --- Initialise configuration information */
 A_config.source_file = "/home/vak/Project/Algol/Algol-68RS-Source/liba68prel/strops.a68";
-A_config.translation_time = "Thu Nov  5 20:46:56 2026";
+A_config.translation_time = "Thu Nov  5 21:10:59 2026";
 A_config.ctrans_version = "Ctrans_34.6";
 A_config.name_seed = "ACAAOSF (from seed file) ";
-A_config.spec_change_time = "Thu Nov  5 20:46:56 2026";
+A_config.spec_change_time = "Thu Nov  5 21:10:59 2026";
 A_config.arguments = A_config_arguments;
 A_config.environment = A_config_environment;
 A_config.modinfo_files = A_config_modinfo_files;
 A_PROC_ENTRY(DECS strops);
-UEAALIB_a68config(LGAALIB_configinfo, FCAAOSF);
+(void)(UEAALIB_a68config(LGAALIB_configinfo, FCAAOSF));
  /* line 48: */
 LCAAOSF.fn.fn_global = ICAAOSF_generator;
 LCAAOSF.nonlocals = A68_NIL;

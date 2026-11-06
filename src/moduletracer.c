@@ -127,7 +127,7 @@ extern void IKAAOSF(void);   /* usefulops */
 static A68_60   ECHACTR = {"$Id: moduletracer.a68,v 1.1.1.1 2001-05-07 10:16:10 sian Exp $"}; 
 A_GISVEC(A68_VC ,FCHACTR,ECHACTR,62)
 #define GCHACTR_niltraceinfo (A68_61 *)A68_NIL
-static A68_61 * HCHACTR_traceinfo;
+static A68_61 * HCHACTR_traceinfo A_UNUSED;
 static A68_63   OCHACTR = {"all"}; 
 A_GISVEC(A68_VC ,PCHACTR,OCHACTR,3)
 
@@ -139,8 +139,8 @@ A68_INT  ZCHACTR_tracelevel(A68_VC  Keyword);
 
 A_STATIC A68_61 * JCHACTR_findtraceinfo(A68_VC  Keyword)
 { 
-A68_61 * KCHACTR_t;
-A68_BOOL  LCHACTR_found;
+A68_61 * KCHACTR_t A_UNUSED = {0};
+A68_BOOL  LCHACTR_found A_UNUSED = {0};
 A68_BOOL  MCHACTR;  /* optbool result */
 A68_BOOL  NCHACTR;  /* optbool result */
 A68_61 * QCHACTR;  /* clause result */
@@ -157,7 +157,7 @@ for ( ;; )
  /* line 62: */
 MCHACTR = (KCHACTR_t!=GCHACTR_niltraceinfo);
 if ( MCHACTR )
-{MCHACTR = !LCHACTR_found;
+{MCHACTR = (!LCHACTR_found);
 }
  /* line 63: */
 if ( !(MCHACTR) ) break;
@@ -166,7 +166,7 @@ if ( ! NCHACTR )
 { /* line 64: */
 NCHACTR = A_VC_EQ((*(&(KCHACTR_t->Name))),PCHACTR);
 }
-if ( NCHACTR )
+if (NCHACTR)
 { 
  /* line 65: */
 LCHACTR_found = A68_TRUE;
@@ -175,7 +175,7 @@ else
 { 
  /* line 66: */
  /* line 67: */
-KCHACTR_t = (*(&(KCHACTR_t->Next)));
+(void)(KCHACTR_t = (*(&(KCHACTR_t->Next))));
 } 
 }
  /* line 69: */
@@ -202,7 +202,7 @@ UCHACTR.Name = VCHACTR;
 UCHACTR.Tracelevel = Level;
 UCHACTR.Next = HCHACTR_traceinfo;
 WCHACTR = A_HEAP(A68_61 ) ;
-(*WCHACTR) = UCHACTR ;
+(void)((*WCHACTR) = UCHACTR) ;
 HCHACTR_traceinfo = WCHACTR;
  /* line 75: */
  /* line 76: */
@@ -215,7 +215,7 @@ return( XCHACTR );
 
 A68_INT  ZCHACTR_tracelevel(A68_VC  Keyword)
 { 
-A68_61 * ADHACTR_t;
+A68_61 * ADHACTR_t A_UNUSED = {0};
 A68_BOOL  BDHACTR;  /* clause result */
 A68_INT  CDHACTR;  /* clause result */
 A_PROC_ENTRY(tracelevel);
@@ -227,7 +227,7 @@ ADHACTR_t = JCHACTR_findtraceinfo(Keyword);
  /* line 82: */
  /* line 83: */
 BDHACTR = (ADHACTR_t==GCHACTR_niltraceinfo);
-if ( BDHACTR )
+if (BDHACTR)
 { 
  /* line 84: */
 CDHACTR = 0;
@@ -251,7 +251,7 @@ static A68_BOOL A_invoked = A68_FALSE;
 static char *A_config_arguments[] = {"/home/vak/Project/Algol/Algol-68RS-Source/src/a68toc","-v","-uname","seedfile","-staredit","59LR","-lib","/home/vak/Project/Algol/Algol-68RS-Source/a68config","-dir","/home/vak/Project/Algol/Algol-68RS-Source/a68config","-dir","/home/vak/Project/Algol/Algol-68RS-Source/liba68prel","-dir",".","moduletracer.a68",""};
 static char *A_config_environment[] = {"A68_LIB=/home/vak/Project/Algol/Algol-68RS-Source/a68config","A68_CDIR=","A68_DIR=","A68_STAREDIT=","A68_NAMESEED=nameseed","CTRANS_NAMESEED=",""};
 static char *A_config_modinfo_files[] = {"/home/vak/Project/Algol/Algol-68RS-Source/a68config/a68config.m","/home/vak/Project/Algol/Algol-68RS-Source/liba68prel/usefulops.m",""};
-static A_CONFIG_INFO A_config;
+static A_CONFIG_INFO A_config A_UNUSED;
 /* --- end of configuration information */
 if( A_invoked ) return;
 A_invoked = A68_TRUE;
@@ -259,15 +259,15 @@ BAAALIB();   /* USE a68config */
 IKAAOSF();   /* USE usefulops */
 /* --- Initialise configuration information */
 A_config.source_file = "/home/vak/Project/Algol/Algol-68RS-Source/src/moduletracer.a68";
-A_config.translation_time = "Thu Nov  5 20:46:57 2026";
+A_config.translation_time = "Thu Nov  5 21:10:59 2026";
 A_config.ctrans_version = "Ctrans_34.6";
 A_config.name_seed = "ACHACTR (from seed file) ";
-A_config.spec_change_time = "Thu Nov  5 20:46:57 2026";
+A_config.spec_change_time = "Thu Nov  5 21:10:59 2026";
 A_config.arguments = A_config_arguments;
 A_config.environment = A_config_environment;
 A_config.modinfo_files = A_config_modinfo_files;
 A_PROC_ENTRY(DECS moduletracer);
-UEAALIB_a68config(LGAALIB_configinfo, FCHACTR);
+(void)(UEAALIB_a68config(LGAALIB_configinfo, FCHACTR));
  /* line 44: */
  /* line 49: */
  /* line 51: */

@@ -773,20 +773,20 @@ extern void IKAAOSF(void);   /* usefulops */
 /* --- end of DECS initialisation functions --- */
 static A68_161   UHMACTR = {"$Id: uniquenameserver.a68,v 1.1.1.1 2001-05-07 10:16:10 sian Exp $"}; 
 A_GISVEC(A68_VC ,VHMACTR,UHMACTR,66)
-static A68_58  AIMACTR_num;
+static A68_58  AIMACTR_num A_UNUSED;
 static A68_163   CIMACTR = {"ABCDEFGHIJKLMNOPQRSTUVWXYZ"}; 
 A_GISVEC(A68_VC ,DIMACTR,CIMACTR,26)
-static A68_VC  EIMACTR_idchars;
-static A68_INT  FIMACTR_upbidchars;
-static A68_INT  GIMACTR_upbnum;
+static A68_VC  EIMACTR_idchars A_UNUSED;
+static A68_INT  FIMACTR_upbidchars A_UNUSED;
+static A68_INT  GIMACTR_upbnum A_UNUSED;
 static A68_165   ZIMACTR = {"/* UNAME:"}; 
 A_GISVEC(A68_VC ,AJMACTR,ZIMACTR,9)
-static A68_VC  BJMACTR_c_prologue;
+static A68_VC  BJMACTR_c_prologue A_UNUSED;
 static A68_167   FJMACTR = {".c"}; 
 A_GISVEC(A68_VC ,GJMACTR,FJMACTR,2)
 static A68_169   MKMACTR = {" */"}; 
 A_GISVEC(A68_VC ,NKMACTR,MKMACTR,3)
-A68_171  SKMACTR_initialiseuniquenameserver;
+A68_171  SKMACTR_initialiseuniquenameserver A_UNUSED;
 static A68_116   ZLMACTR = {"AAAAAAA"}; 
 static A68_172   AMMACTR = {"invalid name seed origin"}; 
 A_GISVEC(A68_VC ,BMMACTR,AMMACTR,24)
@@ -858,7 +858,7 @@ A_STATIC A68_VOID  HIMACTR_incrementnum(void)
 { 
 A68_INT  IIMACTR;  /* YIELD */
 A68_INT * JIMACTR;  /* YIELD */
-A68_INT  KIMACTR_i;
+A68_INT  KIMACTR_i A_UNUSED = {0};
 A68_INT  LIMACTR;  /* to part of loop */
 A68_INT  MIMACTR;  /* YIELD */
 A68_INT * NIMACTR;  /* YIELD */
@@ -880,7 +880,7 @@ KIMACTR_i += 1 )
  /* line 65: */
  /* line 66: */
  /* line 67: */
-if ( ((*(&A_VINDEX(AIMACTR_num,KIMACTR_i)))>FIMACTR_upbidchars) )
+if ((*(&A_VINDEX(AIMACTR_num,KIMACTR_i)))>FIMACTR_upbidchars)
 { 
 MIMACTR = (KIMACTR_i+1) ;
 NIMACTR = (&A_VINDEX(AIMACTR_num,MIMACTR)) ;
@@ -896,9 +896,9 @@ OIMACTR = (&A_VINDEX(AIMACTR_num,KIMACTR_i)) ;
  /* line 73: */
  /* line 74: */
  /* line 75: */
-if ( ((*(&A_VINDEX(AIMACTR_num,GIMACTR_upbnum)))>FIMACTR_upbidchars) )
+if ((*(&A_VINDEX(AIMACTR_num,GIMACTR_upbnum)))>FIMACTR_upbidchars)
 { 
-JXIACTR_warning(800);
+(void)(JXIACTR_warning(800));
  /* line 76: */
  /* line 77: */
  /* line 78: */
@@ -913,8 +913,8 @@ return;
 
 A68_116  QIMACTR_newuniquename(void)
 { 
-A68_116  RIMACTR_result;
-A68_INT  SIMACTR_i;
+A68_116  RIMACTR_result A_UNUSED = {0};
+A68_INT  SIMACTR_i A_UNUSED = {0};
 A68_INT  TIMACTR;  /* to part of loop */
 A68_VC  UIMACTR;  /* OPERATORS - istruct -> vector */
 A68_VC  VIMACTR;  /* OPERATORS - simple index */
@@ -924,7 +924,7 @@ A68_116  YIMACTR;  /* clause result */
 A_PROC_ENTRY(newuniquename);
 { 
  /* line 86: */
-HIMACTR_incrementnum();
+(void)(HIMACTR_incrementnum());
  /* line 87: */
  /* line 88: */
 TIMACTR = WDAACTR_maxuname;
@@ -937,7 +937,7 @@ SIMACTR_i += 1 )
 VIMACTR = A_ISVEC(UIMACTR,(&RIMACTR_result),7,A68_CHAR ) ;
 WIMACTR = (*(&A_VINDEX(AIMACTR_num,SIMACTR_i))) ;
 XIMACTR = (&A_VINDEX(VIMACTR,SIMACTR_i)) ;
-(*XIMACTR) = A_VINDEX(EIMACTR_idchars,WIMACTR);
+(void)((*XIMACTR) = A_VINDEX(EIMACTR_idchars,WIMACTR));
 }
  /* line 91: */
  /* line 92: */
@@ -950,14 +950,14 @@ return( YIMACTR );
 
 A_STATIC A68_BOOL  DJMACTR_read_cfile_uname(A68_116 * Uname)
 { 
-A68_VC  EJMACTR_full_filename;
-A68_74 * HJMACTR_cfile;
+A68_VC  EJMACTR_full_filename A_UNUSED = {0};
+A68_74 * HJMACTR_cfile A_UNUSED = {0};
 A68_BOOL  IJMACTR;  /* clause result */
 A68_BOOL  JJMACTR;  /* clause result */
 A68_114  LJMACTR_generator;   /* proc value of non-global proc */
 A68_VC  RJMACTR;  /* avoid structure result */
-A68_VC  QJMACTR_buffer;
-A68_INT  SJMACTR_charsread;
+A68_VC  QJMACTR_buffer A_UNUSED = {0};
+A68_INT  SJMACTR_charsread A_UNUSED = {0};
 A68_75  TJMACTR;  /* avoid structure result */
 A68_BOOL  UJMACTR;  /* optbool result */
 A68_VC  VJMACTR;  /* OPERATORS - trim index */
@@ -980,9 +980,9 @@ HJMACTR_cfile = BJJACTR_find_and_open_file(A_VC_PLUS(YQIACTR_basenamesourcefile,
  /* line 102: */
  /* line 103: */
 IJMACTR = (HJMACTR_cfile==SSBAOSF_nil_file);
-if ( IJMACTR )
+if (IJMACTR)
 { 
-JXIACTR_warning(812);
+(void)(JXIACTR_warning(812));
  /* line 104: */
  /* line 105: */
  /* line 106: */
@@ -997,9 +997,9 @@ QJMACTR_buffer = RJMACTR;
  /* line 107: */
  /* line 108: */
 SWBAOSF_read_buffer( HJMACTR_cfile, QJMACTR_buffer, (&SJMACTR_charsread), RIBAOSF_ignore_msg, &TJMACTR );
-TJMACTR;
+;
  /* line 109: */
-IWBAOSF_close_file(HJMACTR_cfile, RIBAOSF_ignore_msg);
+(void)(IWBAOSF_close_file(HJMACTR_cfile, RIBAOSF_ignore_msg));
  /* line 110: */
 UJMACTR = (SJMACTR_charsread!=QJMACTR_buffer.upb);
 if ( ! UJMACTR )
@@ -1008,9 +1008,9 @@ UJMACTR = A_VC_NE(A_VTRIM(VJMACTR,(QJMACTR_buffer),A_VTSCRIPT(&(VJMACTR.upb),(QJ
 }
  /* line 112: */
 WJMACTR = UJMACTR;
-if ( WJMACTR )
+if (WJMACTR)
 { 
-JXIACTR_warning(815);
+(void)(JXIACTR_warning(815));
  /* line 113: */
  /* line 114: */
  /* line 115: */
@@ -1022,7 +1022,7 @@ YJMACTR = A_ISVEC(XJMACTR,Uname,7,A68_CHAR ) ;
 BKMACTR = A_VTRIM(AKMACTR,(QJMACTR_buffer),A_VTSCRIPT(&(AKMACTR.upb),(QJMACTR_buffer).upb,(BJMACTR_c_prologue.upb+1),(QJMACTR_buffer).upb)) ;
 DKMACTR = A_VTRIM(ZJMACTR,(YJMACTR),A_VTSCRIPT(&(ZJMACTR.upb),(YJMACTR).upb,1,WDAACTR_maxuname)) ;
 EKMACTR = A_VTRIM(CKMACTR,(BKMACTR),A_VTSCRIPT(&(CKMACTR.upb),(BKMACTR).upb,1,WDAACTR_maxuname)) ;
-A_VASSIGN2(EKMACTR,DKMACTR,A68_CHAR );
+(void)(A_VASSIGN2(EKMACTR,DKMACTR,A68_CHAR ));
  /* line 116: */
  /* line 117: */
 JJMACTR = A68_TRUE;
@@ -1038,13 +1038,13 @@ return( JJMACTR );
 A68_VOID  GKMACTR_write_cfile_uname(A68_116  Uname)
 { 
 A68_170  HKMACTR;  /* collateral clause result */
-A68_123  IKMACTR;  /* OPERATORS - mode -> union mode */
+A68_123  IKMACTR = {0};  /* OPERATORS - mode -> union mode */
 A68_VC  JKMACTR;  /* OPERATORS - istruct -> vector */
-A68_123  KKMACTR;  /* OPERATORS - mode -> union mode */
+A68_123  KKMACTR = {0};  /* OPERATORS - mode -> union mode */
 A68_VC  LKMACTR;  /* YIELD */
-A68_123  OKMACTR;  /* OPERATORS - mode -> union mode */
+A68_123  OKMACTR = {0};  /* OPERATORS - mode -> union mode */
 A68_VC  PKMACTR;  /* YIELD */
-A68_123  QKMACTR;  /* OPERATORS - mode -> union mode */
+A68_123  QKMACTR = {0};  /* OPERATORS - mode -> union mode */
 A68_122  RKMACTR;  /* OPERATORS - istruct -> vector */
 A_PROC_ENTRY(write_cfile_uname);
  /* line 120: */
@@ -1056,7 +1056,7 @@ HKMACTR.data[1] = A_UNITE(KKMACTR,mode2,2,LKMACTR);
 PKMACTR = NKMACTR ;
 HKMACTR.data[2] = A_UNITE(OKMACTR,mode2,2,PKMACTR);
 HKMACTR.data[3] = A_UNITE(QKMACTR,mode4,4,EIAACTR_cnewline);
-MDMACTR_writecstream(A_HISVEC(RKMACTR,HKMACTR,4,A68_123 ), ESLACTR_preamblestream);
+(void)(MDMACTR_writecstream(A_HISVEC(RKMACTR,HKMACTR,4,A68_123 ), ESLACTR_preamblestream));
 A_PROC_EXIT(write_cfile_uname);
 return;
 } 
@@ -1064,14 +1064,14 @@ return;
 
 A_STATIC A68_VOID  UKMACTR_initnum(A68_116  Uname)
 { 
-A68_BOOL  VKMACTR_ok;
-A68_INT * WKMACTR_i;
-A68_CHAR  XKMACTR_c;
+A68_BOOL  VKMACTR_ok A_UNUSED = {0};
+A68_INT * WKMACTR_i A_UNUSED = {0};
+A68_CHAR  XKMACTR_c A_UNUSED = {0};
 A68_VC  YKMACTR;  /* OPERATORS - istruct -> vector */
 A68_VC  ZKMACTR;  /* forall yield */
 A68_CHAR * ALMACTR;  /* forall control - []x */
 A68_INT  BLMACTR;  /* forall loop counter */
-A68_152  CLMACTR;  /* OPERATORS - mode -> union mode */
+A68_152  CLMACTR = {0};  /* OPERATORS - mode -> union mode */
 A68_116 * DLMACTR;  /* YIELD */
 A_PROC_ENTRY(initnum);
  /* line 128: */
@@ -1096,18 +1096,18 @@ XKMACTR_c = *ALMACTR;
  /* line 134: */
 if ( !(VKMACTR_ok) ) break;
  /* line 135: */
-VKMACTR_ok = QRAAOSF_charinstring(XKMACTR_c, WKMACTR_i, EIMACTR_idchars);
+(void)(VKMACTR_ok = QRAAOSF_charinstring(XKMACTR_c, WKMACTR_i, EIMACTR_idchars));
 }
  /* line 137: */
  /* line 138: */
  /* line 139: */
-if ( !VKMACTR_ok )
+if (!VKMACTR_ok)
 { 
-JXIACTR_warning(803);
+(void)(JXIACTR_warning(803));
  /* line 140: */
  /* line 141: */
  /* line 142: */
-A_CALLPROC(SKMACTR_initialiseuniquenameserver,(A_EMPTY(CLMACTR,4)),(A_EMPTY(CLMACTR,4),(SKMACTR_initialiseuniquenameserver).nonlocals));
+(void)(A_CALLPROC(SKMACTR_initialiseuniquenameserver,(A_EMPTY(CLMACTR,4)),(A_EMPTY(CLMACTR,4),(SKMACTR_initialiseuniquenameserver).nonlocals)));
 } 
 else
 { 
@@ -1126,23 +1126,23 @@ A_STATIC A68_VOID  FLMACTR_anonymous(A68_152  Origin)
 { 
 A68_152 * GLMACTR;  /* YIELD */
 A68_152  HLMACTR;  /* united object - for case conformity */
-A68_116  ILMACTR_uname;
-A68_74 * JLMACTR_ufile;
-A68_116  KLMACTR_init;
-A68_INT  LLMACTR_charsread;
+A68_116  ILMACTR_uname A_UNUSED = {0};
+A68_74 * JLMACTR_ufile A_UNUSED = {0};
+A68_116  KLMACTR_init A_UNUSED = {0};
+A68_INT  LLMACTR_charsread A_UNUSED = {0};
 A68_VC  MLMACTR;  /* OPERATORS - nil -> mode */
 A68_VC  NLMACTR;  /* == */
 A68_BOOL  OLMACTR;  /* optbool result */
 A68_BOOL  PLMACTR;  /* clause result */
-A68_152  QLMACTR;  /* OPERATORS - mode -> union mode */
+A68_152  QLMACTR = {0};  /* OPERATORS - mode -> union mode */
 A68_VC  RLMACTR;  /* OPERATORS - istruct -> vector */
 A68_75  SLMACTR;  /* avoid structure result */
 A68_BOOL  TLMACTR;  /* clause result */
 A68_VC  ULMACTR;  /* OPERATORS - istruct -> vector */
-A68_152  VLMACTR;  /* OPERATORS - mode -> union mode */
-A68_116  WLMACTR_init;
+A68_152  VLMACTR = {0};  /* OPERATORS - mode -> union mode */
+A68_116  WLMACTR_init A_UNUSED = {0};
 A68_BOOL  XLMACTR;  /* clause result */
-A68_152  YLMACTR;  /* OPERATORS - mode -> union mode */
+A68_152  YLMACTR = {0};  /* OPERATORS - mode -> union mode */
  /* line 153: */
  /* line 154: */
 GLMACTR = (&((&IYIACTR_config_info)->Nameseedorigin)) ;
@@ -1153,7 +1153,7 @@ case 3: /* STRUCT 7 CHAR */
 ILMACTR_uname = (HLMACTR.data.mode3);
  /* line 155: */
  /* line 157: */
-UKMACTR_initnum(ILMACTR_uname);
+(void)(UKMACTR_initnum(ILMACTR_uname));
 break;
 case 2: /* STRUCT(INT)  */
  /* line 158: */
@@ -1169,37 +1169,37 @@ OLMACTR = ((JLMACTR_ufile = QVBAOSF_open_file(ARIACTR_seedfilename, ATBAOSF_read
 }
  /* line 165: */
 PLMACTR = OLMACTR;
-if ( PLMACTR )
+if (PLMACTR)
 { 
-JXIACTR_warning(801);
+(void)(JXIACTR_warning(801));
  /* line 166: */
  /* line 167: */
  /* line 168: */
-A_CALLPROC(SKMACTR_initialiseuniquenameserver,(A_EMPTY(QLMACTR,4)),(A_EMPTY(QLMACTR,4),(SKMACTR_initialiseuniquenameserver).nonlocals));
+(void)(A_CALLPROC(SKMACTR_initialiseuniquenameserver,(A_EMPTY(QLMACTR,4)),(A_EMPTY(QLMACTR,4),(SKMACTR_initialiseuniquenameserver).nonlocals)));
 } 
 else
 { 
 SWBAOSF_read_buffer( JLMACTR_ufile, A_ISVEC(RLMACTR,(&KLMACTR_init),7,A68_CHAR ), (&LLMACTR_charsread), RIBAOSF_ignore_msg, &SLMACTR );
-SLMACTR;
+;
  /* line 169: */
-IWBAOSF_close_file(JLMACTR_ufile, RIBAOSF_ignore_msg);
+(void)(IWBAOSF_close_file(JLMACTR_ufile, RIBAOSF_ignore_msg));
  /* line 170: */
  /* line 171: */
  /* line 172: */
 TLMACTR = (LLMACTR_charsread!=A_HISVEC(ULMACTR,KLMACTR_init,7,A68_CHAR ).upb);
-if ( TLMACTR )
+if (TLMACTR)
 { 
-JXIACTR_warning(814);
+(void)(JXIACTR_warning(814));
  /* line 173: */
  /* line 174: */
  /* line 175: */
-A_CALLPROC(SKMACTR_initialiseuniquenameserver,(A_EMPTY(VLMACTR,4)),(A_EMPTY(VLMACTR,4),(SKMACTR_initialiseuniquenameserver).nonlocals));
+(void)(A_CALLPROC(SKMACTR_initialiseuniquenameserver,(A_EMPTY(VLMACTR,4)),(A_EMPTY(VLMACTR,4),(SKMACTR_initialiseuniquenameserver).nonlocals)));
 } 
 else
 { 
  /* line 176: */
  /* line 179: */
-UKMACTR_initnum(KLMACTR_init);
+(void)(UKMACTR_initnum(KLMACTR_init));
 } 
 } 
 } 
@@ -1212,34 +1212,34 @@ case 1: /* STRUCT(INT)  */
  /* line 183: */
  /* line 184: */
 XLMACTR = DJMACTR_read_cfile_uname((&WLMACTR_init));
-if ( XLMACTR )
+if (XLMACTR)
 { 
  /* line 185: */
  /* line 186: */
-UKMACTR_initnum(WLMACTR_init);
+(void)(UKMACTR_initnum(WLMACTR_init));
 } 
 else
 { 
  /* line 187: */
  /* line 189: */
-A_CALLPROC(SKMACTR_initialiseuniquenameserver,(A_EMPTY(YLMACTR,4)),(A_EMPTY(YLMACTR,4),(SKMACTR_initialiseuniquenameserver).nonlocals));
+(void)(A_CALLPROC(SKMACTR_initialiseuniquenameserver,(A_EMPTY(YLMACTR,4)),(A_EMPTY(YLMACTR,4),(SKMACTR_initialiseuniquenameserver).nonlocals)));
 } 
 } 
 break;
 case 4: /* VOID */
  /* line 190: */
 { 
-JXIACTR_warning(813);
+(void)(JXIACTR_warning(813));
  /* line 191: */
  /* line 192: */
  /* line 193: */
  /* line 194: */
-UKMACTR_initnum(ZLMACTR);
+(void)(UKMACTR_initnum(ZLMACTR));
 } 
 break;
 default: 
  /* line 195: */
-WXIACTR_assert(BMMACTR, A68_FALSE);
+(void)(WXIACTR_assert(BMMACTR, A68_FALSE));
 break;
 } 
 return;
@@ -1250,7 +1250,7 @@ A68_VOID  EMMACTR_nameseedoriginstring(A68_152  Nameseed, A68_VC  *ReturnedValue
 { 
 A68_152  FMMACTR;  /* united object - for case conformity */
 A68_VC  HMMACTR;  /* clause result */
-A68_VC  RMMACTR;  /* OPERATORS - skip to mode */
+A68_VC  RMMACTR = {0};  /* OPERATORS - skip to mode */
 A_PROC_ENTRY(nameseedoriginstring);
  /* line 198: */
  /* line 199: */
@@ -1275,7 +1275,7 @@ case 4: /* VOID */
 HMMACTR = OMMACTR;
 break;
 default: 
-WXIACTR_assert(QMMACTR, A68_FALSE);
+(void)(WXIACTR_assert(QMMACTR, A68_FALSE));
  /* line 205: */
 HMMACTR = RMMACTR;
 break;
@@ -1289,12 +1289,12 @@ return;
 A68_VOID  SMMACTR_closedownuniquenameserver(void)
 { 
 A68_152  TMMACTR;  /* united object - for case conformity */
-A68_74 * UMMACTR_ufile;
+A68_74 * UMMACTR_ufile A_UNUSED = {0};
 A68_VC  VMMACTR;  /* OPERATORS - nil -> mode */
 A68_VC  WMMACTR;  /* == */
 A68_BOOL  XMMACTR;  /* optbool result */
 A68_BOOL  YMMACTR;  /* clause result */
-A68_INT * ZMMACTR_i;
+A68_INT * ZMMACTR_i A_UNUSED = {0};
 A68_INT  ANMACTR;  /* forall loop counter */
 A68_VC  BNMACTR;  /* OPERATORS - scalar -> [] or VEC[] */
 A68_75  CNMACTR;  /* avoid structure result */
@@ -1313,16 +1313,16 @@ WMMACTR = A_VVAC(VMMACTR) ;
 XMMACTR = A_VSTRUCTCOMP(ARIACTR_seedfilename,WMMACTR);
 if ( ! XMMACTR )
 { /* line 218: */
-UMMACTR_ufile = QVBAOSF_open_file(ARIACTR_seedfilename, ETBAOSF_write_access, RIBAOSF_ignore_msg) ;
+(void)(UMMACTR_ufile = QVBAOSF_open_file(ARIACTR_seedfilename, ETBAOSF_write_access, RIBAOSF_ignore_msg)) ;
 XMMACTR = ((&UMMACTR_ufile)==(A68_74 **)A68_NIL);
 }
  /* line 219: */
 YMMACTR = XMMACTR;
-if ( YMMACTR )
+if (YMMACTR)
 { 
  /* line 220: */
  /* line 221: */
-JXIACTR_warning(802);
+(void)(JXIACTR_warning(802));
 } 
 else
 { 
@@ -1336,12 +1336,12 @@ for (;ANMACTR-- >= 0;
  /* line 223: */
  /* line 224: */
 UXBAOSF_write_buffer( UMMACTR_ufile, A_HVEC(BNMACTR,A_VINDEX(EIMACTR_idchars,(*ZMMACTR_i)),A68_CHAR ), RIBAOSF_ignore_msg, &CNMACTR );
-CNMACTR;
+;
 }
  /* line 225: */
  /* line 226: */
  /* line 229: */
-IWBAOSF_close_file(UMMACTR_ufile, RIBAOSF_ignore_msg);
+(void)(IWBAOSF_close_file(UMMACTR_ufile, RIBAOSF_ignore_msg));
 } 
 } 
 break;
@@ -1365,7 +1365,7 @@ static A68_BOOL A_invoked = A68_FALSE;
 static char *A_config_arguments[] = {"/home/vak/Project/Algol/Algol-68RS-Source/src/a68toc","-v","-uname","seedfile","-staredit","59LR","-lib","/home/vak/Project/Algol/Algol-68RS-Source/a68config","-dir","/home/vak/Project/Algol/Algol-68RS-Source/a68config","-dir","/home/vak/Project/Algol/Algol-68RS-Source/liba68prel","-dir",".","uniquenameserver.a68",""};
 static char *A_config_environment[] = {"A68_LIB=/home/vak/Project/Algol/Algol-68RS-Source/a68config","A68_CDIR=","A68_DIR=","A68_STAREDIT=","A68_NAMESEED=nameseed","CTRANS_NAMESEED=",""};
 static char *A_config_modinfo_files[] = {"/home/vak/Project/Algol/Algol-68RS-Source/a68config/a68config.m","./environment.m","./incinstallation.m","./environ.m","./coutput.m","./centities.m","/home/vak/Project/Algol/Algol-68RS-Source/liba68prel/osif.m","/home/vak/Project/Algol/Algol-68RS-Source/liba68prel/cif.m","/home/vak/Project/Algol/Algol-68RS-Source/liba68prel/usefulops.m",""};
-static A_CONFIG_INFO A_config;
+static A_CONFIG_INFO A_config A_UNUSED;
 /* --- end of configuration information */
 A68_58  BIMACTR;  /* avoid structure result */
 A68_171  CMMACTR;  /* procedure value */
@@ -1382,15 +1382,15 @@ BAAAOSF();   /* USE cif */
 IKAAOSF();   /* USE usefulops */
 /* --- Initialise configuration information */
 A_config.source_file = "/home/vak/Project/Algol/Algol-68RS-Source/src/uniquenameserver.a68";
-A_config.translation_time = "Thu Nov  5 20:46:57 2026";
+A_config.translation_time = "Thu Nov  5 21:11:00 2026";
 A_config.ctrans_version = "Ctrans_34.6";
 A_config.name_seed = "QHMACTR (from seed file) ";
-A_config.spec_change_time = "Thu Nov  5 20:46:57 2026";
+A_config.spec_change_time = "Thu Nov  5 21:11:00 2026";
 A_config.arguments = A_config_arguments;
 A_config.environment = A_config_environment;
 A_config.modinfo_files = A_config_modinfo_files;
 A_PROC_ENTRY(DECS uniquenameserver);
-UEAALIB_a68config(LGAALIB_configinfo, VHMACTR);
+(void)(UEAALIB_a68config(LGAALIB_configinfo, VHMACTR));
  /* line 45: */
 XHMACTR_generator( A68_TRUE, &BIMACTR );
 AIMACTR_num = BIMACTR;

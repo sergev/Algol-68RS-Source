@@ -687,14 +687,14 @@ extern void QMDAOSF(void);   /* putstrings */
 static A68_163   FFHAOSF = {"$Id: basics.a68,v 1.1.1.1 2001-05-07 10:16:11 sian Exp $"}; 
 A_GISVEC(A68_VC ,GFHAOSF,FFHAOSF,56)
 #define HFHAOSF_maxid 255
-static A68_INT  IFHAOSF_zero;
-A68_VC  GGHAOSF_nilid;
-A68_VC  MGHAOSF_nullid;
+static A68_INT  IFHAOSF_zero A_UNUSED;
+A68_VC  GGHAOSF_nilid A_UNUSED;
+A68_VC  MGHAOSF_nullid A_UNUSED;
 #define IIHAOSF_bitsperchar 8
 #define JIHAOSF_charsperint 4
-A68_INT  LIHAOSF_maxchar;
-static A68_INT  MIHAOSF_maxintinchar;
-static A68_INT  NIHAOSF_intmask;
+A68_INT  LIHAOSF_maxchar A_UNUSED;
+static A68_INT  MIHAOSF_maxintinchar A_UNUSED;
+static A68_INT  NIHAOSF_intmask A_UNUSED;
 static A68_174   CKHAOSF = {"left justify: "}; 
 A_GISVEC(A68_VC ,DKHAOSF,CKHAOSF,14)
 static A68_176   BLHAOSF = {"right justify: "}; 
@@ -723,7 +723,7 @@ static A68_180   COHAOSF = {"Nov"};
 A_GISVEC(A68_VC ,DOHAOSF,COHAOSF,3)
 static A68_180   EOHAOSF = {"Dec"}; 
 A_GISVEC(A68_VC ,FOHAOSF,EOHAOSF,3)
-static A68_46  HOHAOSF_months;
+static A68_46  HOHAOSF_months A_UNUSED;
 static A68_182   LOHAOSF = {"date_str:  Illegal time"}; 
 A_GISVEC(A68_VC ,MOHAOSF,LOHAOSF,23)
 static A68_185   BRHAOSF = {".00  "}; 
@@ -741,53 +741,53 @@ A_GISVEC(A68_VC ,TSHAOSF,SSHAOSF,0)
 #define XUHAOSF_lastnoneutyear 1982
 static A68_192   HVHAOSF = {"date_time_to_eut fault, CASE failure"}; 
 A_GISVEC(A68_VC ,IVHAOSF,HVHAOSF,36)
-A68_INT  TVHAOSF_maxint;
-A68_INT  UVHAOSF_w;
-A68_BITS  VVHAOSF_b;
-A68_INT  YVHAOSF_bitswidth;
-A68_INT  ZVHAOSF_byteswidth;
-A68_INT  AWHAOSF_largeint;
-A68_INT  BWHAOSF_minint;
-A68_INT  CWHAOSF_largeminint;
+A68_INT  TVHAOSF_maxint A_UNUSED;
+A68_INT  UVHAOSF_w A_UNUSED;
+A68_BITS  VVHAOSF_b A_UNUSED;
+A68_INT  YVHAOSF_bitswidth A_UNUSED;
+A68_INT  ZVHAOSF_byteswidth A_UNUSED;
+A68_INT  AWHAOSF_largeint A_UNUSED;
+A68_INT  BWHAOSF_minint A_UNUSED;
+A68_INT  CWHAOSF_largeminint A_UNUSED;
 static A68_114   LXHAOSF = {".ell"}; 
 A_GISVEC(A68_VC ,MXHAOSF,LXHAOSF,4)
-A68_VC  NXHAOSF_library_type;
+A68_VC  NXHAOSF_library_type A_UNUSED;
 static A68_114   OXHAOSF = {".elx"}; 
 A_GISVEC(A68_VC ,PXHAOSF,OXHAOSF,4)
-A68_VC  QXHAOSF_simfile_type;
+A68_VC  QXHAOSF_simfile_type A_UNUSED;
 static A68_114   RXHAOSF = {".elh"}; 
 A_GISVEC(A68_VC ,SXHAOSF,RXHAOSF,4)
-A68_VC  TXHAOSF_history_type;
+A68_VC  TXHAOSF_history_type A_UNUSED;
 static A68_114   UXHAOSF = {".elt"}; 
 A_GISVEC(A68_VC ,VXHAOSF,UXHAOSF,4)
-A68_VC  WXHAOSF_source_type;
+A68_VC  WXHAOSF_source_type A_UNUSED;
 static A68_114   XXHAOSF = {".els"}; 
 A_GISVEC(A68_VC ,YXHAOSF,XXHAOSF,4)
-A68_VC  ZXHAOSF_savefile_type;
+A68_VC  ZXHAOSF_savefile_type A_UNUSED;
 static A68_114   AYHAOSF = {".eln"}; 
 A_GISVEC(A68_VC ,BYHAOSF,AYHAOSF,4)
-A68_VC  CYHAOSF_ellanet_type;
+A68_VC  CYHAOSF_ellanet_type A_UNUSED;
 static A68_114   DYHAOSF = {".elg"}; 
 A_GISVEC(A68_VC ,EYHAOSF,DYHAOSF,4)
-A68_VC  FYHAOSF_logfile_type;
+A68_VC  FYHAOSF_logfile_type A_UNUSED;
 static A68_114   GYHAOSF = {".eli"}; 
 A_GISVEC(A68_VC ,HYHAOSF,GYHAOSF,4)
-A68_VC  IYHAOSF_infile_type;
+A68_VC  IYHAOSF_infile_type A_UNUSED;
 static A68_114   JYHAOSF = {".elo"}; 
 A_GISVEC(A68_VC ,KYHAOSF,JYHAOSF,4)
-A68_VC  LYHAOSF_outfile_type;
+A68_VC  LYHAOSF_outfile_type A_UNUSED;
 static A68_114   MYHAOSF = {".dmp"}; 
 A_GISVEC(A68_VC ,NYHAOSF,MYHAOSF,4)
-A68_VC  OYHAOSF_codedump_type;
+A68_VC  OYHAOSF_codedump_type A_UNUSED;
 static A68_114   PYHAOSF = {".ela"}; 
 A_GISVEC(A68_VC ,QYHAOSF,PYHAOSF,4)
-A68_VC  RYHAOSF_assfile_type;
+A68_VC  RYHAOSF_assfile_type A_UNUSED;
 static A68_114   SYHAOSF = {".eld"}; 
 A_GISVEC(A68_VC ,TYHAOSF,SYHAOSF,4)
-static A68_VC  UYHAOSF_download_type;
+static A68_VC  UYHAOSF_download_type A_UNUSED;
 static A68_186   VYHAOSF = {"ellasysdir"}; 
 A_GISVEC(A68_VC ,WYHAOSF,VYHAOSF,10)
-A68_VC  XYHAOSF_ellasysdir_var;
+A68_VC  XYHAOSF_ellasysdir_var A_UNUSED;
 typedef struct   /* env of non-global proc */
 {
 A68_VC  Str;
@@ -1056,7 +1056,7 @@ A_STATIC A68_VOID  FVHAOSF_casefault(void *NonLocals)
 { 
 A68_46  JVHAOSF;  /* OPERATORS - scalar -> [] or VEC[] */
 A_PROC_ENTRY(casefault);
-A_CALLPROC(NL(Msg),(IUAAOSF_system, A_HVEC(JVHAOSF,IVHAOSF,A68_VC )),(IUAAOSF_system, A_HVEC(JVHAOSF,IVHAOSF,A68_VC ),(NL(Msg)).nonlocals));
+(void)(A_CALLPROC(NL(Msg),(IUAAOSF_system, A_HVEC(JVHAOSF,IVHAOSF,A68_VC )),(IUAAOSF_system, A_HVEC(JVHAOSF,IVHAOSF,A68_VC ),(NL(Msg)).nonlocals)));
 A_PROC_EXIT(casefault);
 return;
 } 
@@ -1071,7 +1071,7 @@ A_PROC_ENTRY(makeid);
 A_CLOSURE( MFHAOSF_generator, NFHAOSF_generator, OFHAOSF_generator );
 (( OFHAOSF_generator * ) ( MFHAOSF_generator.nonlocals )) -> Str = Str;
 A_CALLPROC(MFHAOSF_generator,(A68_FALSE, &SFHAOSF),(A68_FALSE, &SFHAOSF,(MFHAOSF_generator).nonlocals));
-A_VASSIGN2(Str,SFHAOSF,A68_CHAR ) ;
+(void)(A_VASSIGN2(Str,SFHAOSF,A68_CHAR )) ;
 RFHAOSF = SFHAOSF;
 A_PROC_EXIT(makeid);
 *ReturnedValue = (RFHAOSF);
@@ -1090,7 +1090,7 @@ A_PROC_ENTRY(makeid);
 A_CLOSURE( WFHAOSF_generator, XFHAOSF_generator, YFHAOSF_generator );
 A_CALLPROC(WFHAOSF_generator,(A68_FALSE, &CGHAOSF),(A68_FALSE, &CGHAOSF,(WFHAOSF_generator).nonlocals));
 EGHAOSF = A_HVEC(DGHAOSF,C,A68_CHAR ) ;
-A_VASSIGN2(EGHAOSF,CGHAOSF,A68_CHAR ) ;
+(void)(A_VASSIGN2(EGHAOSF,CGHAOSF,A68_CHAR )) ;
 BGHAOSF = CGHAOSF;
 A_PROC_EXIT(makeid);
 *ReturnedValue = (BGHAOSF);
@@ -1115,17 +1115,17 @@ return;
 A68_VOID  OGHAOSF_clear(A68_165  Vec)
 { 
 A68_165  PGHAOSF;  /* united object - for case conformity */
-A68_VC  QGHAOSF_chars;
-A68_CHAR * RGHAOSF_c;
+A68_VC  QGHAOSF_chars A_UNUSED = {0};
+A68_CHAR * RGHAOSF_c A_UNUSED = {0};
 A68_INT  SGHAOSF;  /* forall loop counter */
-A68_32  TGHAOSF_ints;
-A68_INT * UGHAOSF_i;
+A68_32  TGHAOSF_ints A_UNUSED = {0};
+A68_INT * UGHAOSF_i A_UNUSED = {0};
 A68_INT  VGHAOSF;  /* forall loop counter */
-A68_54  WGHAOSF_bools;
-A68_BOOL * XGHAOSF_b;
+A68_54  WGHAOSF_bools A_UNUSED = {0};
+A68_BOOL * XGHAOSF_b A_UNUSED = {0};
 A68_INT  YGHAOSF;  /* forall loop counter */
-A68_53  ZGHAOSF_bits;
-A68_BITS * AHHAOSF_u;
+A68_53  ZGHAOSF_bits A_UNUSED = {0};
+A68_BITS * AHHAOSF_u A_UNUSED = {0};
 A68_INT  BHHAOSF;  /* forall loop counter */
 A_PROC_ENTRY(clear);
  /* line 112: */
@@ -1192,7 +1192,7 @@ return;
 
 A68_VOID  DHHAOSF_uppercase(A68_VC  Str)
 { 
-A68_CHAR * EHHAOSF_c;
+A68_CHAR * EHHAOSF_c A_UNUSED = {0};
 A68_INT  FHHAOSF;  /* forall loop counter */
 A68_BOOL  GHHAOSF;  /* optbool result */
 A_PROC_ENTRY(uppercase);
@@ -1208,9 +1208,9 @@ GHHAOSF = ((*EHHAOSF_c)>='a');
 if ( GHHAOSF )
 {GHHAOSF = ((*EHHAOSF_c)<='z');
 }
-if ( GHHAOSF )
+if (GHHAOSF)
 { 
-(*EHHAOSF_c) = (A68_SSBITS)((A68_INT)(unsigned char)(*EHHAOSF_c)-32);
+(void)((*EHHAOSF_c) = (A68_SSBITS)((A68_INT)(unsigned char)(*EHHAOSF_c)-32));
 } 
 }
 A_PROC_EXIT(uppercase);
@@ -1221,7 +1221,7 @@ return;
 A68_VOID  IHHAOSF_uppercase(A68_VC  Str, A68_VC  *ReturnedValue)
 { 
 A68_VC  JHHAOSF;  /* avoid structure result */
-A68_VC  KHHAOSF_ans;
+A68_VC  KHHAOSF_ans A_UNUSED = {0};
 A68_VC  LHHAOSF;  /* clause result */
 A_PROC_ENTRY(uppercase);
  /* line 125: */
@@ -1230,7 +1230,7 @@ A_PROC_ENTRY(uppercase);
 ZCAAOSF_makervc( Str, &JHHAOSF );
 KHHAOSF_ans = JHHAOSF;
  /* line 127: */
-DHHAOSF_uppercase(KHHAOSF_ans);
+(void)(DHHAOSF_uppercase(KHHAOSF_ans));
  /* line 128: */
  /* line 129: */
 LHHAOSF = KHHAOSF_ans;
@@ -1243,7 +1243,7 @@ return;
 
 A68_VOID  NHHAOSF_lowercase(A68_VC  Str)
 { 
-A68_CHAR * OHHAOSF_c;
+A68_CHAR * OHHAOSF_c A_UNUSED = {0};
 A68_INT  PHHAOSF;  /* forall loop counter */
 A68_BOOL  QHHAOSF;  /* optbool result */
 A_PROC_ENTRY(lowercase);
@@ -1259,9 +1259,9 @@ QHHAOSF = ((*OHHAOSF_c)>='A');
 if ( QHHAOSF )
 {QHHAOSF = ((*OHHAOSF_c)<='Z');
 }
-if ( QHHAOSF )
+if (QHHAOSF)
 { 
-(*OHHAOSF_c) = (A68_SSBITS)((A68_INT)(unsigned char)(*OHHAOSF_c)+32);
+(void)((*OHHAOSF_c) = (A68_SSBITS)((A68_INT)(unsigned char)(*OHHAOSF_c)+32));
 } 
 }
 A_PROC_EXIT(lowercase);
@@ -1272,7 +1272,7 @@ return;
 A68_VOID  SHHAOSF_lowercase(A68_VC  Str, A68_VC  *ReturnedValue)
 { 
 A68_VC  THHAOSF;  /* avoid structure result */
-A68_VC  UHHAOSF_ans;
+A68_VC  UHHAOSF_ans A_UNUSED = {0};
 A68_VC  VHHAOSF;  /* clause result */
 A_PROC_ENTRY(lowercase);
  /* line 136: */
@@ -1281,7 +1281,7 @@ A_PROC_ENTRY(lowercase);
 ZCAAOSF_makervc( Str, &THHAOSF );
 UHHAOSF_ans = THHAOSF;
  /* line 138: */
-NHHAOSF_lowercase(UHHAOSF_ans);
+(void)(NHHAOSF_lowercase(UHHAOSF_ans));
  /* line 139: */
  /* line 140: */
 VHHAOSF = UHHAOSF_ans;
@@ -1296,7 +1296,7 @@ A68_INT  YHHAOSF_max(A68_INT  A, A68_INT  B)
 { 
 A68_INT  ZHHAOSF;  /* clause result */
 A_PROC_ENTRY(max);
-if ( (A>B) )
+if (A>B)
 { 
 ZHHAOSF = A;
 } 
@@ -1313,7 +1313,7 @@ A68_INT  CIHAOSF_min(A68_INT  A, A68_INT  B)
 { 
 A68_INT  DIHAOSF;  /* clause result */
 A_PROC_ENTRY(min);
-if ( (A<B) )
+if (A<B)
 { 
 DIHAOSF = A;
 } 
@@ -1338,9 +1338,9 @@ return( HIHAOSF );
 
 A68_INT  QIHAOSF_charstoint(A68_VC  Str, A68_BOOL * Error)
 { 
-A68_INT  RIHAOSF_index;
-A68_INT  SIHAOSF_ans;
-A68_BOOL  TIHAOSF_neg;
+A68_INT  RIHAOSF_index A_UNUSED = {0};
+A68_INT  SIHAOSF_ans A_UNUSED = {0};
+A68_BOOL  TIHAOSF_neg A_UNUSED = {0};
 A68_BOOL  UIHAOSF;  /* optbool result */
 A68_BOOL  VIHAOSF;  /* optbool result */
 A68_INT  WIHAOSF;  /* clause result */
@@ -1365,16 +1365,16 @@ RIHAOSF_index+=1;
  /* line 170: */
  /* line 171: */
  /* line 172: */
-if ( (RIHAOSF_index<=Str.upb) )
+if (RIHAOSF_index<=Str.upb)
 { 
-if ( (A_VINDEX(Str,RIHAOSF_index)=='+') )
+if (A_VINDEX(Str,RIHAOSF_index)=='+')
 { 
  /* line 173: */
 RIHAOSF_index+=1;
 } 
 else
 { 
-if ( (A_VINDEX(Str,RIHAOSF_index)=='-') )
+if (A_VINDEX(Str,RIHAOSF_index)=='-')
 { 
 RIHAOSF_index+=1;
  /* line 174: */
@@ -1398,7 +1398,7 @@ VIHAOSF = (A_VINDEX(Str,RIHAOSF_index)>='0');
  /* line 180: */
 if ( !(VIHAOSF) ) break;
 SIHAOSF_ans*=10 ;
-SIHAOSF_ans-=((A68_INT)(unsigned char)A_VINDEX(Str,RIHAOSF_index)-IFHAOSF_zero);
+(void)(SIHAOSF_ans-=((A68_INT)(unsigned char)A_VINDEX(Str,RIHAOSF_index)-IFHAOSF_zero));
  /* line 181: */
  /* line 182: */
 RIHAOSF_index+=1;
@@ -1412,12 +1412,12 @@ else
 (*Error) = A68_TRUE;
 } 
  /* line 186: */
-if ( (RIHAOSF_index<Str.upb) )
+if (RIHAOSF_index<Str.upb)
 { 
 (*Error) = A68_TRUE;
 } 
  /* line 187: */
-if ( TIHAOSF_neg )
+if (TIHAOSF_neg)
 { 
 WIHAOSF = SIHAOSF_ans;
 } 
@@ -1437,13 +1437,13 @@ A68_VOID  ZIHAOSF_outilint(A68_170  Outintchar, A68_INT  Int)
 A68_BOOL  AJHAOSF;  /* optbool result */
 A68_31  CJHAOSF_generator;   /* proc value of non-global proc */
 A68_VC  IJHAOSF;  /* avoid structure result */
-A68_VC  HJHAOSF_line;
-A68_INT  JJHAOSF_l;
-A68_BITS  KJHAOSF_i;
+A68_VC  HJHAOSF_line A_UNUSED = {0};
+A68_INT  JJHAOSF_l A_UNUSED = {0};
+A68_BITS  KJHAOSF_i A_UNUSED = {0};
 A68_INT  LJHAOSF;  /* YIELD */
 A68_CHAR * MJHAOSF;  /* YIELD */
 A68_BOOL  NJHAOSF;  /* clause result */
-A68_INT  OJHAOSF_i;
+A68_INT  OJHAOSF_i A_UNUSED = {0};
 A68_INT  PJHAOSF;  /* to part of loop */
 A_PROC_ENTRY(outilint);
  /* line 191: */
@@ -1454,10 +1454,10 @@ if ( AJHAOSF )
 { /* line 193: */
 AJHAOSF = (Int>=0);
 }
-if ( AJHAOSF )
+if (AJHAOSF)
 { 
  /* line 194: */
-A_CALLPROC(Outintchar,((A68_SSBITS)Int),((A68_SSBITS)Int,(Outintchar).nonlocals));
+(void)(A_CALLPROC(Outintchar,((A68_SSBITS)Int),((A68_SSBITS)Int,(Outintchar).nonlocals)));
 } 
 else
 { 
@@ -1473,23 +1473,23 @@ for ( ;; )
 { 
 LJHAOSF = JJHAOSF_l-=1 ;
 MJHAOSF = (&A_VINDEX(HJHAOSF_line,LJHAOSF)) ;
-(*MJHAOSF) = (A68_SSBITS)(A68_INT )(A68_BITS )(KJHAOSF_i&(A68_BITS )NIHAOSF_intmask);
+(void)((*MJHAOSF) = (A68_SSBITS)(A68_INT )(A68_BITS )(KJHAOSF_i&(A68_BITS )NIHAOSF_intmask));
  /* line 198: */
-KJHAOSF_i = A_SHR(KJHAOSF_i,IIHAOSF_bitsperchar);
+(void)(KJHAOSF_i = A_SHR(KJHAOSF_i,IIHAOSF_bitsperchar));
  /* line 199: */
 NJHAOSF = (KJHAOSF_i!=00U);
 if ( !NJHAOSF ) break;
 /*SKIP*/;
 }
  /* line 200: */
-A_CALLPROC(Outintchar,((A68_SSBITS)(LIHAOSF_maxchar-JJHAOSF_l)),((A68_SSBITS)(LIHAOSF_maxchar-JJHAOSF_l),(Outintchar).nonlocals));
+(void)(A_CALLPROC(Outintchar,((A68_SSBITS)(LIHAOSF_maxchar-JJHAOSF_l)),((A68_SSBITS)(LIHAOSF_maxchar-JJHAOSF_l),(Outintchar).nonlocals)));
  /* line 201: */
 PJHAOSF = JIHAOSF_charsperint;
 for ( OJHAOSF_i = JJHAOSF_l;
 OJHAOSF_i <= PJHAOSF;
 OJHAOSF_i += 1 )
 { 
-A_CALLPROC(Outintchar,((*(&A_VINDEX(HJHAOSF_line,OJHAOSF_i)))),((*(&A_VINDEX(HJHAOSF_line,OJHAOSF_i))),(Outintchar).nonlocals));
+(void)(A_CALLPROC(Outintchar,((*(&A_VINDEX(HJHAOSF_line,OJHAOSF_i)))),((*(&A_VINDEX(HJHAOSF_line,OJHAOSF_i))),(Outintchar).nonlocals)));
 }
  /* line 202: */
  /* line 203: */
@@ -1502,8 +1502,8 @@ return;
 
 A68_INT  RJHAOSF_inilint(A68_172  Inintchar)
 { 
-A68_INT  SJHAOSF_int;
-A68_INT  TJHAOSF_i;
+A68_INT  SJHAOSF_int A_UNUSED = {0};
+A68_INT  TJHAOSF_i A_UNUSED = {0};
 A68_INT  UJHAOSF;  /* to part of loop */
 A68_INT  VJHAOSF;  /* loop control */
 A68_BITS  WJHAOSF;  /* SHL */
@@ -1515,7 +1515,7 @@ A_PROC_ENTRY(inilint);
 SJHAOSF_int = (A68_INT)(unsigned char)A_CALLPROC(Inintchar,(),((Inintchar).nonlocals));
  /* line 209: */
  /* line 210: */
-if ( (SJHAOSF_int>MIHAOSF_maxintinchar) )
+if (SJHAOSF_int>MIHAOSF_maxintinchar)
 { 
 TJHAOSF_i = (SJHAOSF_int-MIHAOSF_maxintinchar);
  /* line 211: */
@@ -1527,7 +1527,7 @@ VJHAOSF <= UJHAOSF;
 VJHAOSF += 1 )
 { 
 WJHAOSF = (A68_BITS )SJHAOSF_int ;
-SJHAOSF_int = ((A68_INT )A_SHL(WJHAOSF,IIHAOSF_bitsperchar)+(A68_INT)(unsigned char)A_CALLPROC(Inintchar,(),((Inintchar).nonlocals)));
+(void)(SJHAOSF_int = ((A68_INT )A_SHL(WJHAOSF,IIHAOSF_bitsperchar)+(A68_INT)(unsigned char)A_CALLPROC(Inintchar,(),((Inintchar).nonlocals))));
 }
  /* line 213: */
 } 
@@ -1543,17 +1543,17 @@ return( XJHAOSF );
 A68_VOID  AKHAOSF_leftjustify(A68_VC  Param, A68_INT  Width, A68_VC  *ReturnedValue)
 { 
 A68_175  BKHAOSF;  /* collateral clause result */
-A68_52  EKHAOSF;  /* OPERATORS - mode -> union mode */
+A68_52  EKHAOSF = {0};  /* OPERATORS - mode -> union mode */
 A68_VC  FKHAOSF;  /* YIELD */
-A68_52  GKHAOSF;  /* OPERATORS - mode -> union mode */
+A68_52  GKHAOSF = {0};  /* OPERATORS - mode -> union mode */
 A68_INT  HKHAOSF;  /* YIELD */
 A68_85  IKHAOSF;  /* OPERATORS - istruct -> vector */
 A68_VC  JKHAOSF;  /* avoid structure result */
 A68_46  KKHAOSF;  /* OPERATORS - scalar -> [] or VEC[] */
 A68_31  MKHAOSF_generator;   /* proc value of non-global proc */
 A68_VC  SKHAOSF;  /* avoid structure result */
-A68_VC  RKHAOSF_answer;
-A68_165  TKHAOSF;  /* OPERATORS - mode -> union mode */
+A68_VC  RKHAOSF_answer A_UNUSED = {0};
+A68_165  TKHAOSF = {0};  /* OPERATORS - mode -> union mode */
 A68_VC  UKHAOSF;  /* OPERATORS - trim index */
 A68_VC  VKHAOSF;  /* YIELD */
 A68_VC  WKHAOSF;  /* clause result */
@@ -1562,7 +1562,7 @@ A_PROC_ENTRY(leftjustify);
  /* line 224: */
 { 
  /* line 225: */
-if ( (Param.upb>Width) )
+if (Param.upb>Width)
 { 
 FKHAOSF = DKHAOSF ;
 BKHAOSF.data[0] = A_UNITE(EKHAOSF,mode7,7,FKHAOSF);
@@ -1570,7 +1570,7 @@ HKHAOSF = Param.upb ;
 BKHAOSF.data[1] = A_UNITE(GKHAOSF,mode1,1,HKHAOSF);
  /* line 226: */
 YCEAOSF_oneline( A_HISVEC(IKHAOSF,BKHAOSF,2,A68_52 ), &JKHAOSF );
-A_CALLPROC(TIBAOSF_global_msg,(IUAAOSF_system, A_HVEC(KKHAOSF,JKHAOSF,A68_VC )),(IUAAOSF_system, A_HVEC(KKHAOSF,JKHAOSF,A68_VC ),(TIBAOSF_global_msg).nonlocals));
+(void)(A_CALLPROC(TIBAOSF_global_msg,(IUAAOSF_system, A_HVEC(KKHAOSF,JKHAOSF,A68_VC )),(IUAAOSF_system, A_HVEC(KKHAOSF,JKHAOSF,A68_VC ),(TIBAOSF_global_msg).nonlocals)));
 } 
  /* line 227: */
 A_CLOSURE( MKHAOSF_generator, NKHAOSF_generator, OKHAOSF_generator );
@@ -1578,12 +1578,12 @@ A_CLOSURE( MKHAOSF_generator, NKHAOSF_generator, OKHAOSF_generator );
 A_CALLPROC(MKHAOSF_generator,(A68_TRUE, &SKHAOSF),(A68_TRUE, &SKHAOSF,(MKHAOSF_generator).nonlocals));
 RKHAOSF_answer = SKHAOSF;
  /* line 228: */
-OGHAOSF_clear(A_UNITE(TKHAOSF,mode1,1,RKHAOSF_answer));
+(void)(OGHAOSF_clear(A_UNITE(TKHAOSF,mode1,1,RKHAOSF_answer)));
  /* line 229: */
-if ( (Param.upb>0) )
+if (Param.upb>0)
 { 
 VKHAOSF = A_VTRIM(UKHAOSF,(RKHAOSF_answer),A_VTSCRIPT(&(UKHAOSF.upb),(RKHAOSF_answer).upb,1,Param.upb)) ;
-A_VASSIGN2(Param,VKHAOSF,A68_CHAR );
+(void)(A_VASSIGN2(Param,VKHAOSF,A68_CHAR ));
 } 
  /* line 230: */
  /* line 231: */
@@ -1598,17 +1598,17 @@ return;
 A68_VOID  ZKHAOSF_rightjustify(A68_VC  Param, A68_INT  Width, A68_VC  *ReturnedValue)
 { 
 A68_175  ALHAOSF;  /* collateral clause result */
-A68_52  DLHAOSF;  /* OPERATORS - mode -> union mode */
+A68_52  DLHAOSF = {0};  /* OPERATORS - mode -> union mode */
 A68_VC  ELHAOSF;  /* YIELD */
-A68_52  FLHAOSF;  /* OPERATORS - mode -> union mode */
+A68_52  FLHAOSF = {0};  /* OPERATORS - mode -> union mode */
 A68_INT  GLHAOSF;  /* YIELD */
 A68_85  HLHAOSF;  /* OPERATORS - istruct -> vector */
 A68_VC  ILHAOSF;  /* avoid structure result */
 A68_46  JLHAOSF;  /* OPERATORS - scalar -> [] or VEC[] */
 A68_31  LLHAOSF_generator;   /* proc value of non-global proc */
 A68_VC  RLHAOSF;  /* avoid structure result */
-A68_VC  QLHAOSF_answer;
-A68_165  SLHAOSF;  /* OPERATORS - mode -> union mode */
+A68_VC  QLHAOSF_answer A_UNUSED = {0};
+A68_165  SLHAOSF = {0};  /* OPERATORS - mode -> union mode */
 A68_VC  TLHAOSF;  /* OPERATORS - trim index */
 A68_VC  ULHAOSF;  /* YIELD */
 A68_VC  VLHAOSF;  /* clause result */
@@ -1617,7 +1617,7 @@ A_PROC_ENTRY(rightjustify);
  /* line 235: */
 { 
  /* line 236: */
-if ( (Param.upb>Width) )
+if (Param.upb>Width)
 { 
 ELHAOSF = CLHAOSF ;
 ALHAOSF.data[0] = A_UNITE(DLHAOSF,mode7,7,ELHAOSF);
@@ -1625,7 +1625,7 @@ GLHAOSF = Param.upb ;
 ALHAOSF.data[1] = A_UNITE(FLHAOSF,mode1,1,GLHAOSF);
  /* line 237: */
 YCEAOSF_oneline( A_HISVEC(HLHAOSF,ALHAOSF,2,A68_52 ), &ILHAOSF );
-A_CALLPROC(TIBAOSF_global_msg,(IUAAOSF_system, A_HVEC(JLHAOSF,ILHAOSF,A68_VC )),(IUAAOSF_system, A_HVEC(JLHAOSF,ILHAOSF,A68_VC ),(TIBAOSF_global_msg).nonlocals));
+(void)(A_CALLPROC(TIBAOSF_global_msg,(IUAAOSF_system, A_HVEC(JLHAOSF,ILHAOSF,A68_VC )),(IUAAOSF_system, A_HVEC(JLHAOSF,ILHAOSF,A68_VC ),(TIBAOSF_global_msg).nonlocals)));
 } 
  /* line 238: */
 A_CLOSURE( LLHAOSF_generator, MLHAOSF_generator, NLHAOSF_generator );
@@ -1633,12 +1633,12 @@ A_CLOSURE( LLHAOSF_generator, MLHAOSF_generator, NLHAOSF_generator );
 A_CALLPROC(LLHAOSF_generator,(A68_TRUE, &RLHAOSF),(A68_TRUE, &RLHAOSF,(LLHAOSF_generator).nonlocals));
 QLHAOSF_answer = RLHAOSF;
  /* line 239: */
-OGHAOSF_clear(A_UNITE(SLHAOSF,mode1,1,QLHAOSF_answer));
+(void)(OGHAOSF_clear(A_UNITE(SLHAOSF,mode1,1,QLHAOSF_answer)));
  /* line 240: */
-if ( (Param.upb>0) )
+if (Param.upb>0)
 { 
 ULHAOSF = A_VTRIM(TLHAOSF,(QLHAOSF_answer),A_VTSCRIPT(&(TLHAOSF.upb),(QLHAOSF_answer).upb,((Width-Param.upb)+1),(QLHAOSF_answer).upb)) ;
-A_VASSIGN2(Param,ULHAOSF,A68_CHAR );
+(void)(A_VASSIGN2(Param,ULHAOSF,A68_CHAR ));
 } 
  /* line 241: */
  /* line 242: */
@@ -1674,15 +1674,15 @@ A_STATIC A68_VOID  DMHAOSF_time_proc(A68_INT  Seconds, A68_VC  Ans)
 { 
 A68_INT  EMHAOSF;  /* ADICOPS - MOD */
 A68_INT  FMHAOSF;  /* ADICOPS - MOD */
-A68_INT  GMHAOSF_dsecs;
-A68_INT  HMHAOSF_dmins;
-A68_INT  IMHAOSF_hrs;
+A68_INT  GMHAOSF_dsecs A_UNUSED = {0};
+A68_INT  HMHAOSF_dmins A_UNUSED = {0};
+A68_INT  IMHAOSF_hrs A_UNUSED = {0};
 A68_INT  JMHAOSF;  /* ADICOPS - MOD */
 A68_INT  KMHAOSF;  /* ADICOPS - MOD */
-A68_INT  LMHAOSF_mins;
+A68_INT  LMHAOSF_mins A_UNUSED = {0};
 A68_INT  MMHAOSF;  /* ADICOPS - MOD */
 A68_INT  NMHAOSF;  /* ADICOPS - MOD */
-A68_INT  OMHAOSF_secs;
+A68_INT  OMHAOSF_secs A_UNUSED = {0};
 A68_178  PMHAOSF;  /* collateral clause result */
 A68_INT  QMHAOSF;  /* ADICOPS - MOD */
 A68_INT  RMHAOSF;  /* ADICOPS - MOD */
@@ -1722,7 +1722,7 @@ PMHAOSF.data[6] = (A68_SSBITS)(IFHAOSF_zero+(OMHAOSF_secs/10));
  /* line 265: */
 PMHAOSF.data[7] = (A68_SSBITS)(IFHAOSF_zero+(OMHAOSF_secs/10));
 VMHAOSF = A_HISVEC(UMHAOSF,PMHAOSF,8,A68_CHAR ) ;
-A_VASSIGN2(VMHAOSF,Ans,A68_CHAR );
+(void)(A_VASSIGN2(VMHAOSF,Ans,A68_CHAR ));
 } 
 A_PROC_EXIT(time_proc);
 return;
@@ -1733,7 +1733,7 @@ A68_VOID  XMHAOSF_time(A68_INT  Seconds, A68_VC  *ReturnedValue)
 { 
 A68_31  ZMHAOSF_generator;   /* proc value of non-global proc */
 A68_VC  ENHAOSF;  /* avoid structure result */
-A68_VC  FNHAOSF_ans;
+A68_VC  FNHAOSF_ans A_UNUSED = {0};
 A68_VC  GNHAOSF;  /* clause result */
 A_PROC_ENTRY(time);
  /* line 268: */
@@ -1741,7 +1741,7 @@ A_PROC_ENTRY(time);
 A_CLOSURE( ZMHAOSF_generator, ANHAOSF_generator, BNHAOSF_generator );
 A_CALLPROC(ZMHAOSF_generator,(A68_FALSE, &ENHAOSF),(A68_FALSE, &ENHAOSF,(ZMHAOSF_generator).nonlocals));
 FNHAOSF_ans = ENHAOSF;
-DMHAOSF_time_proc(Seconds, FNHAOSF_ans);
+(void)(DMHAOSF_time_proc(Seconds, FNHAOSF_ans));
 GNHAOSF = FNHAOSF_ans;
 } 
 A_PROC_EXIT(time);
@@ -1753,22 +1753,22 @@ return;
 A_STATIC A68_VOID  KOHAOSF_date_proc(A68_INT  Seconds, A68_VC  Ans)
 { 
 A68_46  NOHAOSF;  /* OPERATORS - scalar -> [] or VEC[] */
-A68_INT  OOHAOSF_days;
-A68_INT  POHAOSF_year;
-A68_BOOL  QOHAOSF_leap;
+A68_INT  OOHAOSF_days A_UNUSED = {0};
+A68_INT  POHAOSF_year A_UNUSED = {0};
+A68_BOOL  QOHAOSF_leap A_UNUSED = {0};
 A68_INT  ROHAOSF;  /* ADICOPS - MOD */
 A68_INT  SOHAOSF;  /* ADICOPS - MOD */
 A68_BOOL  TOHAOSF;  /* optbool result */
 A68_INT  UOHAOSF;  /* ADICOPS - MOD */
 A68_INT  VOHAOSF;  /* ADICOPS - MOD */
-A68_INT  WOHAOSF_month;
+A68_INT  WOHAOSF_month A_UNUSED = {0};
 A68_183  XOHAOSF;  /* collateral clause result */
-A68_183  YOHAOSF_mnths;
+A68_183  YOHAOSF_mnths A_UNUSED = {0};
 A68_32  ZOHAOSF;  /* OPERATORS - istruct -> vector */
 A68_32  APHAOSF;  /* OPERATORS - simple index */
 A68_32  BPHAOSF;  /* OPERATORS - istruct -> vector */
 A68_32  CPHAOSF;  /* OPERATORS - simple index */
-A68_INT  DPHAOSF_dten;
+A68_INT  DPHAOSF_dten A_UNUSED = {0};
 A68_CHAR  EPHAOSF;  /* clause result */
 A68_INT  FPHAOSF;  /* YIELD */
 A68_CHAR * GPHAOSF;  /* YIELD */
@@ -1783,7 +1783,7 @@ A68_CHAR * OPHAOSF;  /* YIELD */
 A68_VC  PPHAOSF;  /* OPERATORS - trim index */
 A68_VC  QPHAOSF;  /* YIELD */
 A68_VC  RPHAOSF;  /* OPERATORS - assign op */
-A68_INT  SPHAOSF_i;
+A68_INT  SPHAOSF_i A_UNUSED = {0};
 A68_INT  TPHAOSF;  /* by part of loop */
 A68_INT  UPHAOSF;  /* ADICOPS - MOD */
 A68_INT  VPHAOSF;  /* ADICOPS - MOD */
@@ -1792,9 +1792,9 @@ A_PROC_ENTRY(date_proc);
  /* line 274: */
  /* line 275: */
 { 
-if ( (Seconds<0) )
+if (Seconds<0)
 { 
-A_CALLPROC(TIBAOSF_global_msg,(IUAAOSF_system, A_HVEC(NOHAOSF,MOHAOSF,A68_VC )),(IUAAOSF_system, A_HVEC(NOHAOSF,MOHAOSF,A68_VC ),(TIBAOSF_global_msg).nonlocals));
+(void)(A_CALLPROC(TIBAOSF_global_msg,(IUAAOSF_system, A_HVEC(NOHAOSF,MOHAOSF,A68_VC )),(IUAAOSF_system, A_HVEC(NOHAOSF,MOHAOSF,A68_VC ),(TIBAOSF_global_msg).nonlocals)));
 } 
  /* line 276: */
 OOHAOSF_days = ((Seconds/86400)+1);
@@ -1809,7 +1809,7 @@ for ( ;; )
 if ( !((OOHAOSF_days>366)) ) break;
  /* line 282: */
 SOHAOSF = 4 ;
-if ( QOHAOSF_leap = (A_MOD(POHAOSF_year,SOHAOSF,ROHAOSF)==0) )
+if ((QOHAOSF_leap = (A_MOD(POHAOSF_year,SOHAOSF,ROHAOSF)==0)))
 { 
  /* line 283: */
 OOHAOSF_days-=366;
@@ -1824,24 +1824,24 @@ OOHAOSF_days-=365;
 POHAOSF_year+=1;
 }
  /* line 287: */
-TOHAOSF = !QOHAOSF_leap;
+TOHAOSF = (!QOHAOSF_leap);
 if ( TOHAOSF )
 {TOHAOSF = (OOHAOSF_days==366);
 }
-if ( TOHAOSF )
+if (TOHAOSF)
 { 
 POHAOSF_year+=1;
 OOHAOSF_days = 1;
 } 
  /* line 288: */
 VOHAOSF = 4 ;
-QOHAOSF_leap = (A_MOD(POHAOSF_year,VOHAOSF,UOHAOSF)==0);
+(void)(QOHAOSF_leap = (A_MOD(POHAOSF_year,VOHAOSF,UOHAOSF)==0));
  /* line 289: */
 WOHAOSF_month = 1;
  /* line 290: */
  /* line 291: */
 XOHAOSF.data[0] = 31;
-if ( QOHAOSF_leap )
+if (QOHAOSF_leap)
 { 
 XOHAOSF.data[1] = 29;
 } 
@@ -1867,13 +1867,13 @@ for ( ;; )
 APHAOSF = A_HISVEC(ZOHAOSF,YOHAOSF_mnths,12,A68_INT ) ;
 if ( !((OOHAOSF_days>A_VINDEX(APHAOSF,WOHAOSF_month))) ) break;
 CPHAOSF = A_HISVEC(BPHAOSF,YOHAOSF_mnths,12,A68_INT ) ;
-OOHAOSF_days-=A_VINDEX(CPHAOSF,WOHAOSF_month);
+(void)(OOHAOSF_days-=A_VINDEX(CPHAOSF,WOHAOSF_month));
 WOHAOSF_month+=1;
 }
  /* line 294: */
 DPHAOSF_dten = (OOHAOSF_days/10);
  /* line 295: */
-if ( (DPHAOSF_dten==0) )
+if (DPHAOSF_dten==0)
 { 
 EPHAOSF = ' ';
 } 
@@ -1888,7 +1888,7 @@ GPHAOSF = (&A_VINDEX(Ans,FPHAOSF)) ;
 HPHAOSF = 2 ;
 JPHAOSF = 10 ;
 KPHAOSF = (&A_VINDEX(Ans,HPHAOSF)) ;
-(*KPHAOSF) = (A68_SSBITS)(IFHAOSF_zero+A_MOD(OOHAOSF_days,JPHAOSF,IPHAOSF));
+(void)((*KPHAOSF) = (A68_SSBITS)(IFHAOSF_zero+A_MOD(OOHAOSF_days,JPHAOSF,IPHAOSF)));
  /* line 297: */
 LPHAOSF = 3 ;
 MPHAOSF = 7 ;
@@ -1898,7 +1898,7 @@ OPHAOSF = (&A_VINDEX(Ans,LPHAOSF)) ;
  /* line 298: */
 QPHAOSF = A_VTRIM(PPHAOSF,(Ans),A_VTSCRIPT(&(PPHAOSF.upb),(Ans).upb,4,6)) ;
 RPHAOSF = A_VINDEX(HOHAOSF_months,WOHAOSF_month) ;
-A_VASSIGN2(RPHAOSF,QPHAOSF,A68_CHAR );
+(void)(A_VASSIGN2(RPHAOSF,QPHAOSF,A68_CHAR ));
  /* line 299: */
  /* line 300: */
 TPHAOSF = (-1);
@@ -1910,7 +1910,7 @@ SPHAOSF_i += TPHAOSF )
 { 
 VPHAOSF = 10 ;
 WPHAOSF = (&A_VINDEX(Ans,SPHAOSF_i)) ;
-(*WPHAOSF) = (A68_SSBITS)(IFHAOSF_zero+A_MOD(POHAOSF_year,VPHAOSF,UPHAOSF));
+(void)((*WPHAOSF) = (A68_SSBITS)(IFHAOSF_zero+A_MOD(POHAOSF_year,VPHAOSF,UPHAOSF)));
  /* line 301: */
  /* line 302: */
 POHAOSF_year/=10;
@@ -1926,7 +1926,7 @@ A68_VOID  YPHAOSF_date(A68_INT  Seconds, A68_VC  *ReturnedValue)
 { 
 A68_31  AQHAOSF_generator;   /* proc value of non-global proc */
 A68_VC  FQHAOSF;  /* avoid structure result */
-A68_VC  GQHAOSF_ans;
+A68_VC  GQHAOSF_ans A_UNUSED = {0};
 A68_VC  HQHAOSF;  /* clause result */
 A_PROC_ENTRY(date);
  /* line 306: */
@@ -1934,7 +1934,7 @@ A_PROC_ENTRY(date);
 A_CLOSURE( AQHAOSF_generator, BQHAOSF_generator, CQHAOSF_generator );
 A_CALLPROC(AQHAOSF_generator,(A68_FALSE, &FQHAOSF),(A68_FALSE, &FQHAOSF,(AQHAOSF_generator).nonlocals));
 GQHAOSF_ans = FQHAOSF;
-KOHAOSF_date_proc(Seconds, GQHAOSF_ans);
+(void)(KOHAOSF_date_proc(Seconds, GQHAOSF_ans));
 HQHAOSF = GQHAOSF_ans;
 } 
 A_PROC_EXIT(date);
@@ -1947,7 +1947,7 @@ A68_VOID  JQHAOSF_date_time(A68_INT  Seconds, A68_VC  *ReturnedValue)
 { 
 A68_31  LQHAOSF_generator;   /* proc value of non-global proc */
 A68_VC  QQHAOSF;  /* avoid structure result */
-A68_VC  RQHAOSF_ans;
+A68_VC  RQHAOSF_ans A_UNUSED = {0};
 A68_INT  SQHAOSF;  /* YIELD */
 A68_INT  TQHAOSF;  /* YIELD */
 A68_CHAR * UQHAOSF;  /* YIELD */
@@ -1969,9 +1969,9 @@ UQHAOSF = (&A_VINDEX(RQHAOSF_ans,TQHAOSF)) ;
 VQHAOSF = (&A_VINDEX(RQHAOSF_ans,SQHAOSF)) ;
 (*VQHAOSF) = (*UQHAOSF) = ' ';
  /* line 312: */
-KOHAOSF_date_proc(Seconds, A_VTRIM(WQHAOSF,(RQHAOSF_ans),A_VTSCRIPT(&(WQHAOSF.upb),(RQHAOSF_ans).upb,1,11)));
+(void)(KOHAOSF_date_proc(Seconds, A_VTRIM(WQHAOSF,(RQHAOSF_ans),A_VTSCRIPT(&(WQHAOSF.upb),(RQHAOSF_ans).upb,1,11))));
  /* line 313: */
-DMHAOSF_time_proc(Seconds, A_VTRIM(XQHAOSF,(RQHAOSF_ans),A_VTSCRIPT(&(XQHAOSF.upb),(RQHAOSF_ans).upb,14,21)));
+(void)(DMHAOSF_time_proc(Seconds, A_VTRIM(XQHAOSF,(RQHAOSF_ans),A_VTSCRIPT(&(XQHAOSF.upb),(RQHAOSF_ans).upb,14,21))));
  /* line 314: */
  /* line 315: */
 YQHAOSF = RQHAOSF_ans;
@@ -1984,16 +1984,16 @@ return;
 
 A68_VOID  ZQHAOSF_time_str(A68_VC  *ReturnedValue)
 { 
-A68_INT  ARHAOSF_cpu;
-A68_185  CRHAOSF_fr;
-A68_INT  DRHAOSF_i;
+A68_INT  ARHAOSF_cpu A_UNUSED = {0};
+A68_185  CRHAOSF_fr A_UNUSED = {0};
+A68_INT  DRHAOSF_i A_UNUSED = {0};
 A68_INT  ERHAOSF;  /* by part of loop */
 A68_VC  FRHAOSF;  /* OPERATORS - istruct -> vector */
 A68_VC  GRHAOSF;  /* OPERATORS - simple index */
 A68_INT  HRHAOSF;  /* ADICOPS - MOD */
 A68_INT  IRHAOSF;  /* ADICOPS - MOD */
 A68_CHAR * JRHAOSF;  /* YIELD */
-A68_186  KRHAOSF_time;
+A68_186  KRHAOSF_time A_UNUSED = {0};
 A68_VC  LRHAOSF;  /* OPERATORS - istruct -> vector */
 A68_VC  MRHAOSF;  /* OPERATORS - trim index */
 A68_VC  NRHAOSF;  /* OPERATORS - trim index */
@@ -2029,7 +2029,7 @@ DRHAOSF_i += ERHAOSF )
 GRHAOSF = A_ISVEC(FRHAOSF,(&CRHAOSF_fr),5,A68_CHAR ) ;
 IRHAOSF = 10 ;
 JRHAOSF = (&A_VINDEX(GRHAOSF,DRHAOSF_i)) ;
-(*JRHAOSF) = (A68_SSBITS)(IFHAOSF_zero+A_MOD(ARHAOSF_cpu,IRHAOSF,HRHAOSF));
+(void)((*JRHAOSF) = (A68_SSBITS)(IFHAOSF_zero+A_MOD(ARHAOSF_cpu,IRHAOSF,HRHAOSF)));
  /* line 324: */
  /* line 325: */
 ARHAOSF_cpu/=10;
@@ -2037,7 +2037,7 @@ ARHAOSF_cpu/=10;
  /* line 326: */
  /* line 327: */
 MRHAOSF = A_ISVEC(LRHAOSF,(&KRHAOSF_time),10,A68_CHAR ) ;
-DMHAOSF_time_proc(TEHAOSF_testmode_seconds((A68_INT )VPBAOSF_get_time()), A_VTRIM(NRHAOSF,(MRHAOSF),A_VTSCRIPT(&(NRHAOSF.upb),(MRHAOSF).upb,1,8)));
+(void)(DMHAOSF_time_proc(TEHAOSF_testmode_seconds((A68_INT )VPBAOSF_get_time()), A_VTRIM(NRHAOSF,(MRHAOSF),A_VTSCRIPT(&(NRHAOSF.upb),(MRHAOSF).upb,1,8))));
  /* line 328: */
 PRHAOSF = A_ISVEC(ORHAOSF,(&KRHAOSF_time),10,A68_CHAR ) ;
 QRHAOSF = 9 ;
@@ -2065,9 +2065,9 @@ return;
 A_STATIC A68_VOID  FSHAOSF_extractchars(A68_VC * Input, A68_CHAR  Terminatingchar, A68_VC  *ReturnedValue)
 { 
 A68_VC  JSHAOSF;  /* avoid structure result */
-A68_VC  HSHAOSF_ans;
-A68_BOOL  KSHAOSF_found;
-A68_INT  LSHAOSF_i;
+A68_VC  HSHAOSF_ans A_UNUSED = {0};
+A68_BOOL  KSHAOSF_found A_UNUSED = {0};
+A68_INT  LSHAOSF_i A_UNUSED = {0};
 A68_BOOL  MSHAOSF;  /* optbool result */
 A68_VC  NSHAOSF;  /* OPERATORS - trim index */
 A68_VC  OSHAOSF;  /* avoid structure result */
@@ -2085,7 +2085,7 @@ HSHAOSF_ans = JSHAOSF;
  /* line 349: */
  /* line 350: */
  /* line 353: */
-if ( ((*Input).upb>0) )
+if ((*Input).upb>0)
 { 
 KSHAOSF_found = A68_FALSE;
  /* line 354: */
@@ -2097,13 +2097,13 @@ for ( ;; )
  /* line 357: */
 MSHAOSF = (LSHAOSF_i<=(*Input).upb);
 if ( MSHAOSF )
-{MSHAOSF = !KSHAOSF_found;
+{MSHAOSF = (!KSHAOSF_found);
 }
  /* line 358: */
 if ( !(MSHAOSF) ) break;
  /* line 359: */
  /* line 360: */
-if ( ((*(&A_VINDEX((*Input),LSHAOSF_i)))==Terminatingchar) )
+if ((*(&A_VINDEX((*Input),LSHAOSF_i)))==Terminatingchar)
 { 
  /* line 361: */
  /* line 362: */
@@ -2119,7 +2119,7 @@ LSHAOSF_i+=1;
  /* line 367: */
  /* line 368: */
  /* line 369: */
-if ( (LSHAOSF_i>1) )
+if (LSHAOSF_i>1)
 { 
  /* line 370: */
 ZCAAOSF_makervc( A_VTRIM(NSHAOSF,((*Input)),A_VTSCRIPT(&(NSHAOSF.upb),((*Input)).upb,1,(LSHAOSF_i-1))), &OSHAOSF );
@@ -2142,7 +2142,7 @@ LSHAOSF_i+=1;
  /* line 381: */
  /* line 382: */
  /* line 383: */
-if ( (LSHAOSF_i<=(*Input).upb) )
+if (LSHAOSF_i<=(*Input).upb)
 { 
  /* line 384: */
  /* line 385: */
@@ -2175,31 +2175,31 @@ return;
 
 A_STATIC A68_BOOL  DTHAOSF_parsedateandtimestring(A68_VC  Input, A68_INT * Year, A68_INT * Month, A68_INT * Day, A68_INT * Hour, A68_INT * Min, A68_INT * Sec)
 { 
-A68_BOOL  HTHAOSF_success;
+A68_BOOL  HTHAOSF_success A_UNUSED = {0};
 A68_31  JTHAOSF_generator;   /* proc value of non-global proc */
 A68_VC  PTHAOSF;  /* avoid structure result */
-A68_VC  OTHAOSF_dateandtimestring;
-A68_BOOL  QTHAOSF_error;
+A68_VC  OTHAOSF_dateandtimestring A_UNUSED = {0};
+A68_BOOL  QTHAOSF_error A_UNUSED = {0};
 A68_VC  RTHAOSF;  /* avoid structure result */
 A68_BOOL  STHAOSF;  /* optbool result */
 A68_BOOL  TTHAOSF;  /* clause result */
 A68_VC  VTHAOSF;  /* avoid structure result */
-A68_VC  UTHAOSF_monthchars;
-A68_BOOL  WTHAOSF_found;
-A68_INT  XTHAOSF_i;
+A68_VC  UTHAOSF_monthchars A_UNUSED = {0};
+A68_BOOL  WTHAOSF_found A_UNUSED = {0};
+A68_INT  XTHAOSF_i A_UNUSED = {0};
 A68_INT  YTHAOSF;  /* to part of loop */
-A68_BOOL  ZTHAOSF_error;
+A68_BOOL  ZTHAOSF_error A_UNUSED = {0};
 A68_VC  AUHAOSF;  /* avoid structure result */
 A68_BOOL  BUHAOSF;  /* clause result */
-A68_BOOL  CUHAOSF_error;
+A68_BOOL  CUHAOSF_error A_UNUSED = {0};
 A68_VC  DUHAOSF;  /* avoid structure result */
 A68_BOOL  EUHAOSF;  /* optbool result */
 A68_BOOL  FUHAOSF;  /* clause result */
-A68_BOOL  GUHAOSF_error;
+A68_BOOL  GUHAOSF_error A_UNUSED = {0};
 A68_VC  HUHAOSF;  /* avoid structure result */
 A68_BOOL  IUHAOSF;  /* optbool result */
 A68_BOOL  JUHAOSF;  /* clause result */
-A68_BOOL  KUHAOSF_error;
+A68_BOOL  KUHAOSF_error A_UNUSED = {0};
 A68_VC  LUHAOSF;  /* avoid structure result */
 A68_BOOL  MUHAOSF;  /* optbool result */
 A68_BOOL  NUHAOSF;  /* clause result */
@@ -2216,7 +2216,7 @@ HTHAOSF_success = A68_FALSE;
 A_CLOSURE( JTHAOSF_generator, KTHAOSF_generator, LTHAOSF_generator );
 (( LTHAOSF_generator * ) ( JTHAOSF_generator.nonlocals )) -> Input = Input;
 A_CALLPROC(JTHAOSF_generator,(A68_TRUE, &PTHAOSF),(A68_TRUE, &PTHAOSF,(JTHAOSF_generator).nonlocals));
-A_VASSIGN2(Input,PTHAOSF,A68_CHAR ) ;
+(void)(A_VASSIGN2(Input,PTHAOSF,A68_CHAR )) ;
 OTHAOSF_dateandtimestring = PTHAOSF;
  /* line 422: */
 { 
@@ -2224,10 +2224,10 @@ QTHAOSF_error = A68_FALSE;
  /* line 423: */
  /* line 424: */
 FSHAOSF_extractchars( (&OTHAOSF_dateandtimestring), ETHAOSF_dateseparator, &RTHAOSF );
-(*Day) = QIHAOSF_charstoint(RTHAOSF, (&QTHAOSF_error));
+(void)((*Day) = QIHAOSF_charstoint(RTHAOSF, (&QTHAOSF_error)));
  /* line 425: */
  /* line 426: */
-STHAOSF = !QTHAOSF_error;
+STHAOSF = (!QTHAOSF_error);
 if ( STHAOSF )
 {STHAOSF = ((*Day)>0);
 }
@@ -2237,14 +2237,14 @@ STHAOSF = ((*Day)<32);
 }
  /* line 430: */
 TTHAOSF = STHAOSF;
-if ( TTHAOSF )
+if (TTHAOSF)
 { 
 FSHAOSF_extractchars( (&OTHAOSF_dateandtimestring), ETHAOSF_dateseparator, &VTHAOSF );
 UTHAOSF_monthchars = VTHAOSF;
  /* line 431: */
  /* line 432: */
  /* line 435: */
-if ( (UTHAOSF_monthchars.upb==3) )
+if (UTHAOSF_monthchars.upb==3)
 { 
 WTHAOSF_found = A68_FALSE;
  /* line 436: */
@@ -2256,10 +2256,10 @@ XTHAOSF_i += 1 )
 { 
  /* line 438: */
  /* line 439: */
-if ( !(!WTHAOSF_found) ) break;
+if ( !((!WTHAOSF_found)) ) break;
  /* line 440: */
  /* line 441: */
-if ( A_VC_EQ(UTHAOSF_monthchars,A_VINDEX(HOHAOSF_months,XTHAOSF_i)) )
+if (A_VC_EQ(UTHAOSF_monthchars,A_VINDEX(HOHAOSF_months,XTHAOSF_i)))
 { 
 (*Month) = XTHAOSF_i;
  /* line 442: */
@@ -2271,67 +2271,67 @@ WTHAOSF_found = A68_TRUE;
  /* line 445: */
  /* line 446: */
  /* line 448: */
-if ( WTHAOSF_found )
+if (WTHAOSF_found)
 { 
 { 
 ZTHAOSF_error = A68_FALSE;
  /* line 449: */
  /* line 450: */
 FSHAOSF_extractchars( (&OTHAOSF_dateandtimestring), GTHAOSF_spacechar, &AUHAOSF );
-(*Year) = QIHAOSF_charstoint(AUHAOSF, (&ZTHAOSF_error));
+(void)((*Year) = QIHAOSF_charstoint(AUHAOSF, (&ZTHAOSF_error)));
  /* line 451: */
  /* line 452: */
  /* line 454: */
-BUHAOSF = !ZTHAOSF_error;
-if ( BUHAOSF )
+BUHAOSF = (!ZTHAOSF_error);
+if (BUHAOSF)
 { 
 { 
 CUHAOSF_error = A68_FALSE;
  /* line 455: */
  /* line 456: */
 FSHAOSF_extractchars( (&OTHAOSF_dateandtimestring), FTHAOSF_timeseparator, &DUHAOSF );
-(*Hour) = QIHAOSF_charstoint(DUHAOSF, (&CUHAOSF_error));
+(void)((*Hour) = QIHAOSF_charstoint(DUHAOSF, (&CUHAOSF_error)));
  /* line 457: */
-EUHAOSF = !CUHAOSF_error;
+EUHAOSF = (!CUHAOSF_error);
 if ( EUHAOSF )
 { /* line 458: */
 EUHAOSF = ((*Hour)<24);
 }
  /* line 460: */
 FUHAOSF = EUHAOSF;
-if ( FUHAOSF )
+if (FUHAOSF)
 { 
 { 
 GUHAOSF_error = A68_FALSE;
  /* line 461: */
  /* line 462: */
 FSHAOSF_extractchars( (&OTHAOSF_dateandtimestring), FTHAOSF_timeseparator, &HUHAOSF );
-(*Min) = QIHAOSF_charstoint(HUHAOSF, (&GUHAOSF_error));
+(void)((*Min) = QIHAOSF_charstoint(HUHAOSF, (&GUHAOSF_error)));
  /* line 463: */
-IUHAOSF = !GUHAOSF_error;
+IUHAOSF = (!GUHAOSF_error);
 if ( IUHAOSF )
 { /* line 464: */
 IUHAOSF = ((*Min)<60);
 }
  /* line 466: */
 JUHAOSF = IUHAOSF;
-if ( JUHAOSF )
+if (JUHAOSF)
 { 
 { 
 KUHAOSF_error = A68_FALSE;
  /* line 467: */
  /* line 468: */
 FSHAOSF_extractchars( (&OTHAOSF_dateandtimestring), GTHAOSF_spacechar, &LUHAOSF );
-(*Sec) = QIHAOSF_charstoint(LUHAOSF, (&KUHAOSF_error));
+(void)((*Sec) = QIHAOSF_charstoint(LUHAOSF, (&KUHAOSF_error)));
  /* line 469: */
-MUHAOSF = !KUHAOSF_error;
+MUHAOSF = (!KUHAOSF_error);
 if ( MUHAOSF )
 { /* line 470: */
 MUHAOSF = ((*Sec)<60);
 }
  /* line 472: */
 NUHAOSF = MUHAOSF;
-if ( NUHAOSF )
+if (NUHAOSF)
 { 
  /* line 473: */
  /* line 478: */
@@ -2362,15 +2362,15 @@ return( OUHAOSF );
 
 A68_BOOL  SUHAOSF_datetimetoeut(A68_VC  String, A68_INT * Seconds, A68_97  Msg)
 { 
-A68_INT  YUHAOSF_year;
-A68_INT  ZUHAOSF_month;
-A68_INT  AVHAOSF_day;
-A68_INT  BVHAOSF_hour;
-A68_INT  CVHAOSF_min;
-A68_INT  DVHAOSF_sec;
+A68_INT  YUHAOSF_year A_UNUSED = {0};
+A68_INT  ZUHAOSF_month A_UNUSED = {0};
+A68_INT  AVHAOSF_day A_UNUSED = {0};
+A68_INT  BVHAOSF_hour A_UNUSED = {0};
+A68_INT  CVHAOSF_min A_UNUSED = {0};
+A68_INT  DVHAOSF_sec A_UNUSED = {0};
 A68_142  EVHAOSF_casefault;   /* proc value of non-global proc */
 A68_BOOL  KVHAOSF;  /* clause result */
-A68_INT  LVHAOSF_time;
+A68_INT  LVHAOSF_time A_UNUSED = {0};
 A68_INT  MVHAOSF;  /* ADICOPS - MOD */
 A68_INT  NVHAOSF;  /* ADICOPS - MOD */
 A68_INT  OVHAOSF;  /* ADICOPS - MOD */
@@ -2392,13 +2392,13 @@ A_CLOSURE( EVHAOSF_casefault, FVHAOSF_casefault, GVHAOSF_casefault );
  /* line 507: */
  /* line 508: */
  /* line 510: */
-if ( DTHAOSF_parsedateandtimestring(String, (&YUHAOSF_year), (&ZUHAOSF_month), (&AVHAOSF_day), (&BVHAOSF_hour), (&CVHAOSF_min), (&DVHAOSF_sec)) )
+if (DTHAOSF_parsedateandtimestring(String, (&YUHAOSF_year), (&ZUHAOSF_month), (&AVHAOSF_day), (&BVHAOSF_hour), (&CVHAOSF_min), (&DVHAOSF_sec)))
 { 
 YUHAOSF_year-=XUHAOSF_lastnoneutyear;
  /* line 511: */
  /* line 514: */
 KVHAOSF = (YUHAOSF_year>0);
-if ( KVHAOSF )
+if (KVHAOSF)
 { 
  /* line 477: */
  /* line 515: */
@@ -2412,7 +2412,7 @@ LVHAOSF_time = (((YUHAOSF_year-1)*WUHAOSF_daysinnonleapyear)+((YUHAOSF_year+1)/4
  /* line 522: */
 NVHAOSF = (YUHAOSF_year+2) ;
 OVHAOSF = 4 ;
-if ( (A_MOD(NVHAOSF,OVHAOSF,MVHAOSF)==0) )
+if (A_MOD(NVHAOSF,OVHAOSF,MVHAOSF)==0)
 { 
  /* line 523: */
 switch ( ZUHAOSF_month )
@@ -2455,7 +2455,7 @@ case 12:
 PVHAOSF = 335;
 break;
 default: 
-A_CALLPROC(EVHAOSF_casefault,(),((EVHAOSF_casefault).nonlocals));
+(void)(A_CALLPROC(EVHAOSF_casefault,(),((EVHAOSF_casefault).nonlocals)));
  /* line 525: */
  /* line 526: */
  /* line 527: */
@@ -2506,20 +2506,20 @@ case 12:
 PVHAOSF = 334;
 break;
 default: 
-A_CALLPROC(EVHAOSF_casefault,(),((EVHAOSF_casefault).nonlocals));
+(void)(A_CALLPROC(EVHAOSF_casefault,(),((EVHAOSF_casefault).nonlocals)));
  /* line 530: */
  /* line 531: */
 PVHAOSF = 0;
 break;
 } 
 } 
-LVHAOSF_time = ((((LVHAOSF_time+PVHAOSF)+AVHAOSF_day)-1)*VUHAOSF_hoursinday);
+(void)(LVHAOSF_time = ((((LVHAOSF_time+PVHAOSF)+AVHAOSF_day)-1)*VUHAOSF_hoursinday));
  /* line 534: */
-LVHAOSF_time = ((LVHAOSF_time+BVHAOSF_hour)*UUHAOSF_minutesinhour);
+(void)(LVHAOSF_time = ((LVHAOSF_time+BVHAOSF_hour)*UUHAOSF_minutesinhour));
  /* line 537: */
-LVHAOSF_time = ((LVHAOSF_time+CVHAOSF_min)*TUHAOSF_secondsinminute);
+(void)(LVHAOSF_time = ((LVHAOSF_time+CVHAOSF_min)*TUHAOSF_secondsinminute));
  /* line 540: */
-(*Seconds) = (LVHAOSF_time+DVHAOSF_sec);
+(void)((*Seconds) = (LVHAOSF_time+DVHAOSF_sec));
  /* line 541: */
  /* line 542: */
  /* line 544: */
@@ -2566,7 +2566,7 @@ if ( IWHAOSF )
 HWHAOSF = IWHAOSF;
 }
  /* line 574: */
-if ( HWHAOSF )
+if (HWHAOSF)
 { 
 (*Overflowed) = A68_TRUE;
  /* line 575: */
@@ -2605,7 +2605,7 @@ if ( PWHAOSF )
 OWHAOSF = PWHAOSF;
 }
  /* line 585: */
-if ( OWHAOSF )
+if (OWHAOSF)
 { 
 (*Overflowed) = A68_TRUE;
  /* line 586: */
@@ -2642,7 +2642,7 @@ VWHAOSF = (A<0);
 if ( VWHAOSF )
 {VWHAOSF = (B<0);
 }
-if ( VWHAOSF )
+if (VWHAOSF)
 { 
 WWHAOSF = (A<(TVHAOSF_maxint/B));
 if ( ! WWHAOSF )
@@ -2657,7 +2657,7 @@ YWHAOSF = (A<0);
 if ( YWHAOSF )
 {YWHAOSF = (B>0);
 }
-if ( YWHAOSF )
+if (YWHAOSF)
 { 
 ZWHAOSF = (A<(((-TVHAOSF_maxint)-1)/B));
 if ( ! ZWHAOSF )
@@ -2672,7 +2672,7 @@ AXHAOSF = (A>0);
 if ( AXHAOSF )
 {AXHAOSF = (B<0);
 }
-if ( AXHAOSF )
+if (AXHAOSF)
 { 
 BXHAOSF = (A>(((-TVHAOSF_maxint)-1)/B));
 if ( ! BXHAOSF )
@@ -2687,7 +2687,7 @@ CXHAOSF = (A>0);
 if ( CXHAOSF )
 {CXHAOSF = (B>0);
 }
-if ( CXHAOSF )
+if (CXHAOSF)
 { 
 DXHAOSF = (A>(TVHAOSF_maxint/B));
 if ( ! DXHAOSF )
@@ -2706,7 +2706,7 @@ XWHAOSF = A68_FALSE;
 } 
 } 
 } 
-if ( XWHAOSF )
+if (XWHAOSF)
 { 
 (*Overflowed) = A68_TRUE;
  /* line 601: */
@@ -2728,7 +2728,7 @@ A68_VOID  GXHAOSF_sysfault(A68_VC  Message)
 { 
 A68_46  HXHAOSF;  /* OPERATORS - scalar -> [] or VEC[] */
 A_PROC_ENTRY(sysfault);
-A_CALLPROC(TIBAOSF_global_msg,(IUAAOSF_system, A_HVEC(HXHAOSF,Message,A68_VC )),(IUAAOSF_system, A_HVEC(HXHAOSF,Message,A68_VC ),(TIBAOSF_global_msg).nonlocals));
+(void)(A_CALLPROC(TIBAOSF_global_msg,(IUAAOSF_system, A_HVEC(HXHAOSF,Message,A68_VC )),(IUAAOSF_system, A_HVEC(HXHAOSF,Message,A68_VC ),(TIBAOSF_global_msg).nonlocals)));
 A_PROC_EXIT(sysfault);
 return;
 } 
@@ -2738,7 +2738,7 @@ A68_VOID  JXHAOSF_abort(A68_VC  Message)
 { 
 A68_46  KXHAOSF;  /* OPERATORS - scalar -> [] or VEC[] */
 A_PROC_ENTRY(abort);
-A_CALLPROC(TIBAOSF_global_msg,(KUAAOSF_fatal, A_HVEC(KXHAOSF,Message,A68_VC )),(KUAAOSF_fatal, A_HVEC(KXHAOSF,Message,A68_VC ),(TIBAOSF_global_msg).nonlocals));
+(void)(A_CALLPROC(TIBAOSF_global_msg,(KUAAOSF_fatal, A_HVEC(KXHAOSF,Message,A68_VC )),(KUAAOSF_fatal, A_HVEC(KXHAOSF,Message,A68_VC ),(TIBAOSF_global_msg).nonlocals)));
 A_PROC_EXIT(abort);
 return;
 } 
@@ -2754,7 +2754,7 @@ static A68_BOOL A_invoked = A68_FALSE;
 static char *A_config_arguments[] = {"/home/vak/Project/Algol/Algol-68RS-Source/src/a68toc","-v","-uname","seedfile","-staredit","59LR","-lib","/home/vak/Project/Algol/Algol-68RS-Source/a68config","-dir","/home/vak/Project/Algol/Algol-68RS-Source/a68config","-dir","/home/vak/Project/Algol/Algol-68RS-Source/liba68prel","basics.a68",""};
 static char *A_config_environment[] = {"A68_LIB=/home/vak/Project/Algol/Algol-68RS-Source/a68config","A68_CDIR=","A68_DIR=","A68_STAREDIT=","A68_NAMESEED=nameseed","CTRANS_NAMESEED=",""};
 static char *A_config_modinfo_files[] = {"/home/vak/Project/Algol/Algol-68RS-Source/a68config/a68config.m","/home/vak/Project/Algol/Algol-68RS-Source/liba68prel/testmode.m","/home/vak/Project/Algol/Algol-68RS-Source/liba68prel/osinterface.m","/home/vak/Project/Algol/Algol-68RS-Source/liba68prel/messageproc.m","/home/vak/Project/Algol/Algol-68RS-Source/liba68prel/putstrings.m",""};
-static A_CONFIG_INFO A_config;
+static A_CONFIG_INFO A_config A_UNUSED;
 /* --- end of configuration information */
 A68_VC  FGHAOSF;  /* OPERATORS - nil -> mode */
 A68_VC  LGHAOSF;  /* avoid structure result */
@@ -2774,15 +2774,15 @@ ZRAAOSF();   /* USE messageproc */
 QMDAOSF();   /* USE putstrings */
 /* --- Initialise configuration information */
 A_config.source_file = "/home/vak/Project/Algol/Algol-68RS-Source/liba68prel/basics.a68";
-A_config.translation_time = "Thu Nov  5 20:46:56 2026";
+A_config.translation_time = "Thu Nov  5 21:10:59 2026";
 A_config.ctrans_version = "Ctrans_34.6";
 A_config.name_seed = "BFHAOSF (from seed file) ";
-A_config.spec_change_time = "Thu Nov  5 20:46:56 2026";
+A_config.spec_change_time = "Thu Nov  5 21:10:59 2026";
 A_config.arguments = A_config_arguments;
 A_config.environment = A_config_environment;
 A_config.modinfo_files = A_config_modinfo_files;
 A_PROC_ENTRY(DECS basics);
-UEAALIB_a68config(LGAALIB_configinfo, GFHAOSF);
+(void)(UEAALIB_a68config(LGAALIB_configinfo, GFHAOSF));
  /* line 97: */
  /* line 98: */
 IFHAOSF_zero = (A68_INT)(unsigned char)'0';
@@ -2864,7 +2864,7 @@ for ( ;; )
 { 
 if ( !((VVHAOSF_b!=0X0U)) ) break;
 WVHAOSF = 1 ;
-VVHAOSF_b = A_SHR(VVHAOSF_b,WVHAOSF);
+(void)(VVHAOSF_b = A_SHR(VVHAOSF_b,WVHAOSF));
 UVHAOSF_w+=1;
 }
  /* line 562: */

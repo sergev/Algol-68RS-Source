@@ -27,6 +27,10 @@ sudo make install    # /usr (or /usr/local on macOS)
   prelude). Delete them (or `make dist-clean`) to force a rebuild.
 - GC: system libgc via `pkg-config bdw-gc` (`libgc-dev` / Homebrew `bdw-gc`) is required,
   giving `GC_CFLAGS`/`GC_LIBS`. `make install` bakes the GC flags into the installed `ca`.
+- C is compiled with `-O2 -Wall -Werror` (forced via `override CFLAGS`). Generated C must stay
+  warning-free under gcc and clang: the backend voids discarded call results, zero-initialises
+  locals/SKIP/union temporaries, and marks declarations `A_UNUSED`. Changing that output needs a
+  bootstrap through C that is not yet clean, so drop `-Werror` temporarily for that step.
 - Build order matters: `library` → `a68config` → `liba68prel` → `src`, then `qad`.
 - Self-hosting check: `make check` (see Tests below).
 - Debian package: `dpkg-buildpackage -F`. Docs (`doc/`, `d-stamp`) are not built by default.
@@ -47,7 +51,7 @@ make -C examples/tests test     # separate compilation of DECS modules into a li
 make -C examples/logic logic68  # diffs expected.output; Makefile needs Algol W's awe.mk
 ```
 
-`scripts/ca` is the user-level driver: runs `a68toc` → `gcc -O0 -DA68_CHECK` → links with
+`scripts/ca` is the user-level driver: runs `a68toc` → `gcc -O2 -DA68_CHECK` → links with
 `Afirst.o -la68s -la68 -lgc -lm`. A file containing `PROGRAM ` is linked into an executable;
 otherwise it is a `DECS` module, archived into `-M dir`/`-m lib` with its `.m` moved to `dir/m/`.
 

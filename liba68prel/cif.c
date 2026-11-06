@@ -114,7 +114,7 @@ A_GISVEC(A68_VC ,FAAAOSF,EAAAOSF,53)
 #include <stdio.h>
 
 #define IAAAOSF_nullccharptr NULL
-A68_BITS * KAAAOSF_nilfuncptr;
+A68_BITS * KAAAOSF_nilfuncptr A_UNUSED;
 #include <string.h>
 #define STRLEN(s) strlen((char *)s)
 
@@ -182,7 +182,7 @@ A_PROC_ENTRY(cstringtorvc);
  /* line 113: */
  /* line 114: */
  /* line 115: */
-if ( (S==(A68_40 *)A68_NIL) )
+if (S==(A68_40 *)A68_NIL)
 { 
 OAAAOSF = A_VVAC(PAAAOSF);
 } 
@@ -237,14 +237,14 @@ union {  /* BIOP 99 */
 A68_CHAR *  source;
 A68_40 *  destination;
 } DBAAOSF; 
-A68_40 * EBAAOSF_ptr;
+A68_40 * EBAAOSF_ptr A_UNUSED = {0};
 A68_VC  FBAAOSF;  /* OPERATORS - istruct -> vector */
 A68_VC  GBAAOSF;  /* OPERATORS - simple index */
 A68_INT  HBAAOSF;  /* YIELD */
 A68_VC  IBAAOSF;  /* clause result */
 A68_31  KBAAOSF_generator;   /* proc value of non-global proc */
 A68_VC  QBAAOSF;  /* avoid structure result */
-A68_VC  PBAAOSF_ans;
+A68_VC  PBAAOSF_ans A_UNUSED = {0};
 A68_VC  RBAAOSF;  /* OPERATORS - trim index */
 A68_VC  SBAAOSF;  /* YIELD */
 A68_INT  TBAAOSF;  /* YIELD */
@@ -260,7 +260,7 @@ EBAAOSF_ptr = (DBAAOSF.destination);
  /* line 150: */
 GBAAOSF = A_ISVEC(FBAAOSF,EBAAOSF_ptr,16000000,A68_CHAR ) ;
 HBAAOSF = (Str.upb+1) ;
-if ( ((*(&A_VINDEX(GBAAOSF,HBAAOSF)))==HAAAOSF_null_char) )
+if ((*(&A_VINDEX(GBAAOSF,HBAAOSF)))==HAAAOSF_null_char)
 { 
 IBAAOSF = Str;
 } 
@@ -272,7 +272,7 @@ A_CALLPROC(KBAAOSF_generator,(A68_TRUE, &QBAAOSF),(A68_TRUE, &QBAAOSF,(KBAAOSF_g
 PBAAOSF_ans = QBAAOSF;
  /* line 151: */
 SBAAOSF = A_VTRIM(RBAAOSF,(PBAAOSF_ans),A_VTSCRIPT(&(RBAAOSF.upb),(PBAAOSF_ans).upb,1,Str.upb)) ;
-A_VASSIGN2(Str,SBAAOSF,A68_CHAR );
+(void)(A_VASSIGN2(Str,SBAAOSF,A68_CHAR ));
  /* line 152: */
 TBAAOSF = PBAAOSF_ans.upb ;
 UBAAOSF = (&A_VINDEX(PBAAOSF_ans,TBAAOSF)) ;
@@ -298,7 +298,7 @@ static A68_BOOL A_invoked = A68_FALSE;
 static char *A_config_arguments[] = {"/home/vak/Project/Algol/Algol-68RS-Source/src/a68toc","-v","-uname","seedfile","-staredit","59LR","-lib","/home/vak/Project/Algol/Algol-68RS-Source/a68config","-dir","/home/vak/Project/Algol/Algol-68RS-Source/a68config","-dir","/home/vak/Project/Algol/Algol-68RS-Source/liba68prel","cif.a68",""};
 static char *A_config_environment[] = {"A68_LIB=/home/vak/Project/Algol/Algol-68RS-Source/a68config","A68_CDIR=","A68_DIR=","A68_STAREDIT=","A68_NAMESEED=nameseed","CTRANS_NAMESEED=",""};
 static char *A_config_modinfo_files[] = {"/home/vak/Project/Algol/Algol-68RS-Source/a68config/a68config.m",""};
-static A_CONFIG_INFO A_config;
+static A_CONFIG_INFO A_config A_UNUSED;
 /* --- end of configuration information */
 union {  /* BIOP 99 */
 A68_INT   source;
@@ -309,15 +309,15 @@ A_invoked = A68_TRUE;
 BAAALIB();   /* USE a68config */
 /* --- Initialise configuration information */
 A_config.source_file = "/home/vak/Project/Algol/Algol-68RS-Source/liba68prel/cif.a68";
-A_config.translation_time = "Thu Nov  5 20:46:56 2026";
+A_config.translation_time = "Thu Nov  5 21:10:59 2026";
 A_config.ctrans_version = "Ctrans_34.6";
 A_config.name_seed = "AAAAOSF (from seed file) ";
-A_config.spec_change_time = "Thu Nov  5 20:46:56 2026";
+A_config.spec_change_time = "Thu Nov  5 21:10:59 2026";
 A_config.arguments = A_config_arguments;
 A_config.environment = A_config_environment;
 A_config.modinfo_files = A_config_modinfo_files;
 A_PROC_ENTRY(DECS cif);
-UEAALIB_a68config(LGAALIB_configinfo, FAAAOSF);
+(void)(UEAALIB_a68config(LGAALIB_configinfo, FAAAOSF));
  /* line 60: */
  /* line 66: */
  /* line 75: */

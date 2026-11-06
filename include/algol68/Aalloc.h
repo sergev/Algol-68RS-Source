@@ -201,8 +201,8 @@
 */
 #define GC_DEBUG
 #include "gc.h"
-#define	A_GC_SETMARK(desc,dims) (0)
-/* #define	A_GC_SETMARK(desc,dims)	((desc).gc = A_GC_MARK(dims)) */
+/* unused by BDW, but keeps descriptors fully initialised */
+#define	A_GC_SETMARK(desc,dims)	((desc).gc = A_GC_MARK(dims))
 
 #define	A_GC_NALLOC(size,elems)	         GC_debug_malloc((elems)*( (size) <= 0 ? 1 : (size) ),"",0)
 #define	A_GC_1ALLOC(size)	         GC_debug_malloc(size,"",0)
@@ -221,7 +221,7 @@
 */
 /* #warning A_NO_GARBAGE_COLLECT configured for no GC */
 
-#define	A_GC_SETMARK(desc,dims) (0)
+#define	A_GC_SETMARK(desc,dims) ((void)0)
 
 /*
 ** calloc is described in malloc(3)

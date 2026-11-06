@@ -73,7 +73,7 @@ extern void BAAALIB(void);   /* a68config */
 /* --- end of DECS initialisation functions --- */
 static A68_38   CUCAOSF = {"$Id: numberstr.a68,v 1.1.1.1 2001-05-07 10:16:11 sian Exp $"}; 
 A_GISVEC(A68_VC ,DUCAOSF,CUCAOSF,59)
-static A68_31  EUCAOSF_anonymous;
+static A68_31  EUCAOSF_anonymous A_UNUSED;
 #include <string.h>
 #define STRLEN(s) A_int_INT(strlen(A_VC_charptr(s)))
 
@@ -201,17 +201,17 @@ return;
 A68_VOID  PUCAOSF_whole(A68_39  Number, A68_INT  Width, A68_VC  *ReturnedValue)
 { 
 A68_39  QUCAOSF;  /* united object - for case conformity */
-A68_SINT  RUCAOSF_s;
+A68_SINT  RUCAOSF_s A_UNUSED = {0};
 A68_LINT  SUCAOSF;  /* clause result */
-A68_INT  TUCAOSF_i;
-A68_LINT  UUCAOSF_l;
-A68_REAL  VUCAOSF_r;
+A68_INT  TUCAOSF_i A_UNUSED = {0};
+A68_LINT  UUCAOSF_l A_UNUSED = {0};
+A68_REAL  VUCAOSF_r A_UNUSED = {0};
 double WUCAOSF;/*ADICOPS - ROUND*/
-A68_LINT  XUCAOSF_value;
-A68_44  YUCAOSF_stackbuff;
+A68_LINT  XUCAOSF_value A_UNUSED = {0};
+A68_44  YUCAOSF_stackbuff A_UNUSED = {0};
 A68_VC  ZUCAOSF;  /* OPERATORS - istruct -> vector */
-A68_VC  AVCAOSF_buffer;
-A68_INT  HVCAOSF_l;
+A68_VC  AVCAOSF_buffer A_UNUSED = {0};
+A68_INT  HVCAOSF_l A_UNUSED = {0};
 A68_31  JVCAOSF_generator;   /* proc value of non-global proc */
 A68_VC  OVCAOSF;  /* clause result */
 A68_VC  PVCAOSF;  /* avoid structure result */
@@ -254,22 +254,22 @@ XUCAOSF_value = SUCAOSF;
  /* line 116: */
 AVCAOSF_buffer = A_ISVEC(ZUCAOSF,(&YUCAOSF_stackbuff),100,A68_CHAR );
  /* line 117: */
-if ( (Width==0) )
+if (Width==0)
 { 
  /* line 118: */
-LUCAOSF_sprintfw(AVCAOSF_buffer, CVCAOSF, 1, XUCAOSF_value);
+(void)(LUCAOSF_sprintfw(AVCAOSF_buffer, CVCAOSF, 1, XUCAOSF_value));
 } 
 else
 { 
-if ( (Width<0) )
+if (Width<0)
 { 
  /* line 119: */
-LUCAOSF_sprintfw(AVCAOSF_buffer, EVCAOSF, (-Width), XUCAOSF_value);
+(void)(LUCAOSF_sprintfw(AVCAOSF_buffer, EVCAOSF, (-Width), XUCAOSF_value));
 } 
 else
 { 
  /* line 120: */
-LUCAOSF_sprintfw(AVCAOSF_buffer, GVCAOSF, Width, XUCAOSF_value);
+(void)(LUCAOSF_sprintfw(AVCAOSF_buffer, GVCAOSF, Width, XUCAOSF_value));
 } 
 } 
  /* line 121: */
@@ -280,7 +280,7 @@ A_CLOSURE( JVCAOSF_generator, KVCAOSF_generator, LVCAOSF_generator );
  /* line 123: */
 A_CALLPROC(JVCAOSF_generator,(A68_FALSE, &PVCAOSF),(A68_FALSE, &PVCAOSF,(JVCAOSF_generator).nonlocals));
 RVCAOSF = A_VTRIM(QVCAOSF,(AVCAOSF_buffer),A_VTSCRIPT(&(QVCAOSF.upb),(AVCAOSF_buffer).upb,1,HVCAOSF_l)) ;
-A_VASSIGN2(RVCAOSF,PVCAOSF,A68_CHAR ) ;
+(void)(A_VASSIGN2(RVCAOSF,PVCAOSF,A68_CHAR )) ;
 OVCAOSF = PVCAOSF;
 } 
 A_PROC_EXIT(whole);
@@ -292,16 +292,16 @@ return;
 A68_VOID  VVCAOSF_fixed(A68_39  Number, A68_INT  Width, A68_INT  Digits, A68_VC  *ReturnedValue)
 { 
 A68_39  WVCAOSF;  /* united object - for case conformity */
-A68_SINT  XVCAOSF_s;
+A68_SINT  XVCAOSF_s A_UNUSED = {0};
 A68_REAL  YVCAOSF;  /* clause result */
-A68_INT  ZVCAOSF_i;
-A68_LINT  AWCAOSF_l;
-A68_REAL  BWCAOSF_r;
-A68_REAL  CWCAOSF_value;
-A68_44  DWCAOSF_stackbuff;
+A68_INT  ZVCAOSF_i A_UNUSED = {0};
+A68_LINT  AWCAOSF_l A_UNUSED = {0};
+A68_REAL  BWCAOSF_r A_UNUSED = {0};
+A68_REAL  CWCAOSF_value A_UNUSED = {0};
+A68_44  DWCAOSF_stackbuff A_UNUSED = {0};
 A68_VC  EWCAOSF;  /* OPERATORS - istruct -> vector */
-A68_VC  FWCAOSF_buffer;
-A68_INT  MWCAOSF_l;
+A68_VC  FWCAOSF_buffer A_UNUSED = {0};
+A68_INT  MWCAOSF_l A_UNUSED = {0};
 A68_31  OWCAOSF_generator;   /* proc value of non-global proc */
 A68_VC  TWCAOSF;  /* clause result */
 A68_VC  UWCAOSF;  /* avoid structure result */
@@ -344,22 +344,22 @@ CWCAOSF_value = YVCAOSF;
  /* line 135: */
 FWCAOSF_buffer = A_ISVEC(EWCAOSF,(&DWCAOSF_stackbuff),100,A68_CHAR );
  /* line 136: */
-if ( (Width==0) )
+if (Width==0)
 { 
  /* line 137: */
-MUCAOSF_sprintff(FWCAOSF_buffer, HWCAOSF, 1, Digits, CWCAOSF_value);
+(void)(MUCAOSF_sprintff(FWCAOSF_buffer, HWCAOSF, 1, Digits, CWCAOSF_value));
 } 
 else
 { 
-if ( (Width<0) )
+if (Width<0)
 { 
  /* line 138: */
-MUCAOSF_sprintff(FWCAOSF_buffer, JWCAOSF, (-Width), Digits, CWCAOSF_value);
+(void)(MUCAOSF_sprintff(FWCAOSF_buffer, JWCAOSF, (-Width), Digits, CWCAOSF_value));
 } 
 else
 { 
  /* line 139: */
-MUCAOSF_sprintff(FWCAOSF_buffer, LWCAOSF, Width, Digits, CWCAOSF_value);
+(void)(MUCAOSF_sprintff(FWCAOSF_buffer, LWCAOSF, Width, Digits, CWCAOSF_value));
 } 
 } 
  /* line 140: */
@@ -370,7 +370,7 @@ A_CLOSURE( OWCAOSF_generator, PWCAOSF_generator, QWCAOSF_generator );
  /* line 142: */
 A_CALLPROC(OWCAOSF_generator,(A68_FALSE, &UWCAOSF),(A68_FALSE, &UWCAOSF,(OWCAOSF_generator).nonlocals));
 WWCAOSF = A_VTRIM(VWCAOSF,(FWCAOSF_buffer),A_VTSCRIPT(&(VWCAOSF.upb),(FWCAOSF_buffer).upb,1,MWCAOSF_l)) ;
-A_VASSIGN2(WWCAOSF,UWCAOSF,A68_CHAR ) ;
+(void)(A_VASSIGN2(WWCAOSF,UWCAOSF,A68_CHAR )) ;
 TWCAOSF = UWCAOSF;
 } 
 A_PROC_EXIT(fixed);
@@ -382,16 +382,16 @@ return;
 A68_VOID  BXCAOSF_float(A68_39  Number, A68_INT  Width, A68_INT  Digits, A68_INT  Expdigits, A68_VC  *ReturnedValue)
 { 
 A68_39  CXCAOSF;  /* united object - for case conformity */
-A68_SINT  DXCAOSF_s;
+A68_SINT  DXCAOSF_s A_UNUSED = {0};
 A68_REAL  EXCAOSF;  /* clause result */
-A68_INT  FXCAOSF_i;
-A68_LINT  GXCAOSF_l;
-A68_REAL  HXCAOSF_r;
-A68_REAL  IXCAOSF_value;
-A68_44  JXCAOSF_stackbuff;
+A68_INT  FXCAOSF_i A_UNUSED = {0};
+A68_LINT  GXCAOSF_l A_UNUSED = {0};
+A68_REAL  HXCAOSF_r A_UNUSED = {0};
+A68_REAL  IXCAOSF_value A_UNUSED = {0};
+A68_44  JXCAOSF_stackbuff A_UNUSED = {0};
 A68_VC  KXCAOSF;  /* OPERATORS - istruct -> vector */
-A68_VC  LXCAOSF_buffer;
-A68_INT  SXCAOSF_l;
+A68_VC  LXCAOSF_buffer A_UNUSED = {0};
+A68_INT  SXCAOSF_l A_UNUSED = {0};
 A68_31  UXCAOSF_generator;   /* proc value of non-global proc */
 A68_VC  ZXCAOSF;  /* clause result */
 A68_VC  AYCAOSF;  /* avoid structure result */
@@ -434,22 +434,22 @@ IXCAOSF_value = EXCAOSF;
  /* line 158: */
 LXCAOSF_buffer = A_ISVEC(KXCAOSF,(&JXCAOSF_stackbuff),100,A68_CHAR );
  /* line 159: */
-if ( (Width==0) )
+if (Width==0)
 { 
  /* line 160: */
-MUCAOSF_sprintff(LXCAOSF_buffer, NXCAOSF, 1, Digits, IXCAOSF_value);
+(void)(MUCAOSF_sprintff(LXCAOSF_buffer, NXCAOSF, 1, Digits, IXCAOSF_value));
 } 
 else
 { 
-if ( (Width<0) )
+if (Width<0)
 { 
  /* line 161: */
-MUCAOSF_sprintff(LXCAOSF_buffer, PXCAOSF, (-Width), Digits, IXCAOSF_value);
+(void)(MUCAOSF_sprintff(LXCAOSF_buffer, PXCAOSF, (-Width), Digits, IXCAOSF_value));
 } 
 else
 { 
  /* line 162: */
-MUCAOSF_sprintff(LXCAOSF_buffer, RXCAOSF, Width, Digits, IXCAOSF_value);
+(void)(MUCAOSF_sprintff(LXCAOSF_buffer, RXCAOSF, Width, Digits, IXCAOSF_value));
 } 
 } 
  /* line 163: */
@@ -461,7 +461,7 @@ A_CLOSURE( UXCAOSF_generator, VXCAOSF_generator, WXCAOSF_generator );
  /* line 168: */
 A_CALLPROC(UXCAOSF_generator,(A68_FALSE, &AYCAOSF),(A68_FALSE, &AYCAOSF,(UXCAOSF_generator).nonlocals));
 CYCAOSF = A_VTRIM(BYCAOSF,(LXCAOSF_buffer),A_VTSCRIPT(&(BYCAOSF.upb),(LXCAOSF_buffer).upb,1,SXCAOSF_l)) ;
-A_VASSIGN2(CYCAOSF,AYCAOSF,A68_CHAR ) ;
+(void)(A_VASSIGN2(CYCAOSF,AYCAOSF,A68_CHAR )) ;
 ZXCAOSF = AYCAOSF;
 } 
 A_PROC_EXIT(float);
@@ -479,7 +479,7 @@ static A68_BOOL A_invoked = A68_FALSE;
 static char *A_config_arguments[] = {"/home/vak/Project/Algol/Algol-68RS-Source/src/a68toc","-v","-uname","seedfile","-staredit","59LR","-lib","/home/vak/Project/Algol/Algol-68RS-Source/a68config","-dir","/home/vak/Project/Algol/Algol-68RS-Source/a68config","-dir","/home/vak/Project/Algol/Algol-68RS-Source/liba68prel","numberstr.a68",""};
 static char *A_config_environment[] = {"A68_LIB=/home/vak/Project/Algol/Algol-68RS-Source/a68config","A68_CDIR=","A68_DIR=","A68_STAREDIT=","A68_NAMESEED=nameseed","CTRANS_NAMESEED=",""};
 static char *A_config_modinfo_files[] = {"/home/vak/Project/Algol/Algol-68RS-Source/a68config/a68config.m",""};
-static A_CONFIG_INFO A_config;
+static A_CONFIG_INFO A_config A_UNUSED;
 /* --- end of configuration information */
 A68_31  JUCAOSF;  /* procedure value */
 if( A_invoked ) return;
@@ -487,15 +487,15 @@ A_invoked = A68_TRUE;
 BAAALIB();   /* USE a68config */
 /* --- Initialise configuration information */
 A_config.source_file = "/home/vak/Project/Algol/Algol-68RS-Source/liba68prel/numberstr.a68";
-A_config.translation_time = "Thu Nov  5 20:46:56 2026";
+A_config.translation_time = "Thu Nov  5 21:10:59 2026";
 A_config.ctrans_version = "Ctrans_34.6";
 A_config.name_seed = "YTCAOSF (from seed file) ";
-A_config.spec_change_time = "Thu Nov  5 20:46:56 2026";
+A_config.spec_change_time = "Thu Nov  5 21:10:59 2026";
 A_config.arguments = A_config_arguments;
 A_config.environment = A_config_environment;
 A_config.modinfo_files = A_config_modinfo_files;
 A_PROC_ENTRY(DECS numberstr);
-UEAALIB_a68config(LGAALIB_configinfo, DUCAOSF);
+(void)(UEAALIB_a68config(LGAALIB_configinfo, DUCAOSF));
  /* line 86: */
 JUCAOSF.fn.fn_global = GUCAOSF_generator;
 JUCAOSF.nonlocals = A68_NIL;

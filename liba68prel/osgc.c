@@ -260,10 +260,10 @@ A_GISVEC(A68_VC ,EMBAOSF,DMBAOSF,50)
 #include <algol68/Alibrary.h>
 
 #define GMBAOSF_garbage_collect Agc_collect
-A68_48  IMBAOSF_gc_diag_options;
+A68_48  IMBAOSF_gc_diag_options A_UNUSED;
 static A68_84   NMBAOSF = {"gc_statistics"}; 
 A_GISVEC(A68_VC ,OMBAOSF,NMBAOSF,13)
-A68_86  QMBAOSF_anonymous;
+A68_86  QMBAOSF_anonymous A_UNUSED;
 static A68_62   INBAOSF = {"SET "}; 
 A_GISVEC(A68_VC ,JNBAOSF,INBAOSF,4)
 static A68_84   MNBAOSF = {"set_gc_params"}; 
@@ -281,7 +281,7 @@ A_GISVEC(A68_VC ,YNBAOSF,XNBAOSF,12)
 #include <algol68/Alibrary.h>
 
 #define DOBAOSF_defaultpolicy A_DEFAULT_POLICY
-static A68_INT  EOBAOSF_savedpolicy;
+static A68_INT  EOBAOSF_savedpolicy A_UNUSED;
 static A68_94   GOBAOSF = {"THRESHOLD FUNCTION"}; 
 A_GISVEC(A68_VC ,HOBAOSF,GOBAOSF,18)
 static A68_94   JOBAOSF = {"THRESHOLD FUNCTION"}; 
@@ -335,7 +335,7 @@ A68_48  PMBAOSF;  /* OPERATORS - scalar -> [] or VEC[] */
 A_PROC_ENTRY(gc_statistics);
  /* line 78: */
 { 
-SEBAOSF_osifmessage(100, A_HVEC(PMBAOSF,OMBAOSF,A68_VC ), TIBAOSF_global_msg);
+(void)(SEBAOSF_osifmessage(100, A_HVEC(PMBAOSF,OMBAOSF,A68_VC ), TIBAOSF_global_msg));
 /*SKIP*/;
 } 
 A_PROC_EXIT(gc_statistics);
@@ -345,7 +345,7 @@ return;
 
 A_STATIC A68_VOID  SMBAOSF_generator(A68_BOOL  RMBAOSF_anonymous, A68_85  *ReturnedValue)
 { 
-A68_88  XMBAOSF_anonymous;
+A68_88  XMBAOSF_anonymous A_UNUSED = {0};
 A68_VC  YMBAOSF;  /* avoid structure result */
 A68_87 * ZMBAOSF;  /* YIELD */
 A68_85  ANBAOSF;  /* clause result */
@@ -362,7 +362,7 @@ return;
 
 A68_VOID  ENBAOSF_set_gc_params(A68_89  Gcparams, A68_49  Msg)
 { 
-A68_85  FNBAOSF_p;
+A68_85  FNBAOSF_p A_UNUSED = {0};
 A68_85 * GNBAOSF;  /* forall control - []x */
 A68_INT  HNBAOSF;  /* forall loop counter */
 A68_VC  KNBAOSF;  /* OPERATORS - scalar -> [] or VEC[] */
@@ -382,13 +382,13 @@ FNBAOSF_p = *GNBAOSF;
  /* line 89: */
  /* line 90: */
  /* line 91: */
-if ( (FMBAOSF_gc_param(A_VC_PLUS(A_VC_PLUS(JNBAOSF,FNBAOSF_p.Name),A_HVEC(KNBAOSF,'\000',A68_CHAR )), FNBAOSF_p.Value)!=FNBAOSF_p.Value) )
+if (FMBAOSF_gc_param(A_VC_PLUS(A_VC_PLUS(JNBAOSF,FNBAOSF_p.Name),A_HVEC(KNBAOSF,'\000',A68_CHAR )), FNBAOSF_p.Value)!=FNBAOSF_p.Value)
 { 
 LNBAOSF.data[0] = NNBAOSF;
 LNBAOSF.data[1] = FNBAOSF_p.Name;
  /* line 92: */
  /* line 93: */
-SEBAOSF_osifmessage(99, A_HISVEC(ONBAOSF,LNBAOSF,2,A68_VC ), Msg);
+(void)(SEBAOSF_osifmessage(99, A_HISVEC(ONBAOSF,LNBAOSF,2,A68_VC ), Msg));
 } 
 }
 A_PROC_EXIT(set_gc_params);
@@ -399,7 +399,7 @@ return;
 A68_INT  RNBAOSF_get_gc_param(A68_VC  Name, A68_49  Msg)
 { 
 A68_VC  UNBAOSF;  /* OPERATORS - scalar -> [] or VEC[] */
-A68_INT  VNBAOSF_value;
+A68_INT  VNBAOSF_value A_UNUSED = {0};
 A68_91  WNBAOSF;  /* collateral clause result */
 A68_48  ZNBAOSF;  /* OPERATORS - istruct -> vector */
 A68_INT  AOBAOSF;  /* clause result */
@@ -412,12 +412,12 @@ VNBAOSF_value = FMBAOSF_gc_param(A_VC_PLUS(A_VC_PLUS(TNBAOSF,Name),A_HVEC(UNBAOS
  /* line 99: */
  /* line 100: */
  /* line 101: */
-if ( (VNBAOSF_value==(-1)) )
+if (VNBAOSF_value==(-1))
 { 
 WNBAOSF.data[0] = YNBAOSF;
 WNBAOSF.data[1] = Name;
  /* line 102: */
-SEBAOSF_osifmessage(99, A_HISVEC(ZNBAOSF,WNBAOSF,2,A68_VC ), Msg);
+(void)(SEBAOSF_osifmessage(99, A_HISVEC(ZNBAOSF,WNBAOSF,2,A68_VC ), Msg));
 } 
  /* line 103: */
  /* line 104: */
@@ -434,12 +434,12 @@ A68_85  IOBAOSF;  /* collateral clause result */
 A68_89  LOBAOSF;  /* OPERATORS - scalar -> [] or VEC[] */
 A_PROC_ENTRY(disable_garbage_collector);
 { 
-EOBAOSF_savedpolicy = RNBAOSF_get_gc_param(HOBAOSF, TIBAOSF_global_msg);
+(void)(EOBAOSF_savedpolicy = RNBAOSF_get_gc_param(HOBAOSF, TIBAOSF_global_msg));
  /* line 115: */
 IOBAOSF.Name = KOBAOSF;
 IOBAOSF.Value = COBAOSF_alwaysgrowheap;
  /* line 116: */
-ENBAOSF_set_gc_params(A_HVEC(LOBAOSF,IOBAOSF,A68_85 ), TIBAOSF_global_msg);
+(void)(ENBAOSF_set_gc_params(A_HVEC(LOBAOSF,IOBAOSF,A68_85 ), TIBAOSF_global_msg));
 } 
 A_PROC_EXIT(disable_garbage_collector);
 return;
@@ -453,7 +453,7 @@ A68_89  QOBAOSF;  /* OPERATORS - scalar -> [] or VEC[] */
 A_PROC_ENTRY(enable_garbage_collector);
 NOBAOSF.Name = POBAOSF;
 NOBAOSF.Value = EOBAOSF_savedpolicy;
-ENBAOSF_set_gc_params(A_HVEC(QOBAOSF,NOBAOSF,A68_85 ), TIBAOSF_global_msg);
+(void)(ENBAOSF_set_gc_params(A_HVEC(QOBAOSF,NOBAOSF,A68_85 ), TIBAOSF_global_msg));
 A_PROC_EXIT(enable_garbage_collector);
 return;
 } 
@@ -468,7 +468,7 @@ static A68_BOOL A_invoked = A68_FALSE;
 static char *A_config_arguments[] = {"/home/vak/Project/Algol/Algol-68RS-Source/src/a68toc","-v","-uname","seedfile","-staredit","59LR","-lib","/home/vak/Project/Algol/Algol-68RS-Source/a68config","-dir","/home/vak/Project/Algol/Algol-68RS-Source/a68config","-dir","/home/vak/Project/Algol/Algol-68RS-Source/liba68prel","osgc.a68",""};
 static char *A_config_environment[] = {"A68_LIB=/home/vak/Project/Algol/Algol-68RS-Source/a68config","A68_CDIR=","A68_DIR=","A68_STAREDIT=","A68_NAMESEED=nameseed","CTRANS_NAMESEED=",""};
 static char *A_config_modinfo_files[] = {"/home/vak/Project/Algol/Algol-68RS-Source/a68config/a68config.m","/home/vak/Project/Algol/Algol-68RS-Source/liba68prel/usefulops.m","/home/vak/Project/Algol/Algol-68RS-Source/liba68prel/oserrors.m","/home/vak/Project/Algol/Algol-68RS-Source/liba68prel/cif.m",""};
-static A_CONFIG_INFO A_config;
+static A_CONFIG_INFO A_config A_UNUSED;
 /* --- end of configuration information */
 A68_48  HMBAOSF;  /* OPERATORS - vacuum */
 A68_86  BNBAOSF;  /* procedure value */
@@ -480,15 +480,15 @@ MCBAOSF();   /* USE oserrors */
 BAAAOSF();   /* USE cif */
 /* --- Initialise configuration information */
 A_config.source_file = "/home/vak/Project/Algol/Algol-68RS-Source/liba68prel/osgc.a68";
-A_config.translation_time = "Thu Nov  5 20:46:56 2026";
+A_config.translation_time = "Thu Nov  5 21:10:59 2026";
 A_config.ctrans_version = "Ctrans_34.6";
 A_config.name_seed = "ZLBAOSF (from seed file) ";
-A_config.spec_change_time = "Thu Nov  5 20:46:56 2026";
+A_config.spec_change_time = "Thu Nov  5 21:10:59 2026";
 A_config.arguments = A_config_arguments;
 A_config.environment = A_config_environment;
 A_config.modinfo_files = A_config_modinfo_files;
 A_PROC_ENTRY(DECS osgc);
-UEAALIB_a68config(LGAALIB_configinfo, EMBAOSF);
+(void)(UEAALIB_a68config(LGAALIB_configinfo, EMBAOSF));
  /* line 55: */
  /* line 56: */
  /* line 57: */

@@ -374,7 +374,7 @@ static A68_109   JEBAOSF = {"error in '*' ('*')"};
 A_GISVEC(A68_VC ,KEBAOSF,JEBAOSF,18)
 static A68_110   LEBAOSF = {"'*' not yet implemented"}; 
 A_GISVEC(A68_VC ,MEBAOSF,LEBAOSF,23)
-static A68_54  OEBAOSF_osiffacility;
+static A68_54  OEBAOSF_osiffacility A_UNUSED;
 static int errornos [] =
    { E2BIG,       EACCES,       EAGAIN,       EBADF,      EBUSY,
      ECHILD,      EDEADLK,      EDOM,         EEXIST,     EFAULT,
@@ -463,11 +463,11 @@ static A68_123   PHBAOSF = {"no such process"};
 A_GISVEC(A68_VC ,QHBAOSF,PHBAOSF,15)
 static A68_75   RHBAOSF = {"XDEV"}; 
 A_GISVEC(A68_VC ,SHBAOSF,RHBAOSF,4)
-static A68_51  UHBAOSF_errorstrs;
+static A68_51  UHBAOSF_errorstrs A_UNUSED;
 static A68_122   IIBAOSF = {"failed with \"errno\" = "}; 
 A_GISVEC(A68_VC ,JIBAOSF,IIBAOSF,22)
-A68_53  RIBAOSF_ignore_msg;
-A68_53  TIBAOSF_global_msg;
+A68_53  RIBAOSF_ignore_msg A_UNUSED;
+A68_53  TIBAOSF_global_msg A_UNUSED;
 
 A_STATIC A68_VOID  XCBAOSF_generator(A68_BOOL  WCBAOSF_anonymous, A68_48  *ReturnedValue);
 
@@ -501,7 +501,7 @@ A_PROC_ENTRY(osifmessage);
  /* line 108: */
  /* line 109: */
 XYAAOSF_make_msgno( Osifevent, OEBAOSF_osiffacility, &TEBAOSF );
-A_CALLPROC(Msg,(TEBAOSF, Params),(TEBAOSF, Params,(Msg).nonlocals));
+(void)(A_CALLPROC(Msg,(TEBAOSF, Params),(TEBAOSF, Params,(Msg).nonlocals)));
 A_PROC_EXIT(osifmessage);
 return;
 } 
@@ -509,10 +509,10 @@ return;
 
 A68_VOID  VHBAOSF_errnotext(A68_VC  *ReturnedValue)
 { 
-A68_INT * WHBAOSF_ptr;
+A68_INT * WHBAOSF_ptr A_UNUSED = {0};
 A68_VC  YHBAOSF;  /* OPERATORS - nil -> mode */
-A68_VC  XHBAOSF_ans;
-A68_VC  ZHBAOSF_str;
+A68_VC  XHBAOSF_ans A_UNUSED = {0};
+A68_VC  ZHBAOSF_str A_UNUSED = {0};
 A68_VC * AIBAOSF;  /* forall control - []x */
 A68_INT  BIBAOSF;  /* forall loop counter */
 A68_VC  CIBAOSF;  /* OPERATORS - nil -> mode */
@@ -544,16 +544,16 @@ ZHBAOSF_str = *AIBAOSF;
  /* line 190: */
 DIBAOSF = A_VVAC(CIBAOSF) ;
 if ( !(A_VSTRUCTCOMP(XHBAOSF_ans,DIBAOSF)) ) break;
-if ( ((*VEBAOSF_inc(WHBAOSF_ptr))==RCBAOSF_errno) )
+if ((*VEBAOSF_inc(WHBAOSF_ptr))==RCBAOSF_errno)
 { 
 EIBAOSF.source = ZHBAOSF_str ;
-XHBAOSF_ans = (EIBAOSF.destination);
+(void)(XHBAOSF_ans = (EIBAOSF.destination));
 } 
 }
  /* line 191: */
  /* line 192: */
 GIBAOSF = A_VVAC(FIBAOSF) ;
-if ( A_VSTRUCTCOMP(XHBAOSF_ans,GIBAOSF) )
+if (A_VSTRUCTCOMP(XHBAOSF_ans,GIBAOSF))
 { 
 HIBAOSF.data[0] = JIBAOSF;
 ROAAOSF_whole( RCBAOSF_errno, 0, &KIBAOSF );
@@ -591,7 +591,7 @@ static A68_BOOL A_invoked = A68_FALSE;
 static char *A_config_arguments[] = {"/home/vak/Project/Algol/Algol-68RS-Source/src/a68toc","-v","-uname","seedfile","-staredit","59LR","-lib","/home/vak/Project/Algol/Algol-68RS-Source/a68config","-dir","/home/vak/Project/Algol/Algol-68RS-Source/a68config","-dir","/home/vak/Project/Algol/Algol-68RS-Source/liba68prel","oserrors.a68",""};
 static char *A_config_environment[] = {"A68_LIB=/home/vak/Project/Algol/Algol-68RS-Source/a68config","A68_CDIR=","A68_DIR=","A68_STAREDIT=","A68_NAMESEED=nameseed","CTRANS_NAMESEED=",""};
 static char *A_config_modinfo_files[] = {"/home/vak/Project/Algol/Algol-68RS-Source/a68config/a68config.m","/home/vak/Project/Algol/Algol-68RS-Source/liba68prel/usefulops.m","/home/vak/Project/Algol/Algol-68RS-Source/liba68prel/messageproc.m","/home/vak/Project/Algol/Algol-68RS-Source/liba68prel/cif.m",""};
-static A_CONFIG_INFO A_config;
+static A_CONFIG_INFO A_config A_UNUSED;
 /* --- end of configuration information */
 A68_54  TCBAOSF;  /* collateral clause result */
 A68_48  ADBAOSF;  /* avoid structure result */
@@ -609,15 +609,15 @@ ZRAAOSF();   /* USE messageproc */
 BAAAOSF();   /* USE cif */
 /* --- Initialise configuration information */
 A_config.source_file = "/home/vak/Project/Algol/Algol-68RS-Source/liba68prel/oserrors.a68";
-A_config.translation_time = "Thu Nov  5 20:46:56 2026";
+A_config.translation_time = "Thu Nov  5 21:10:59 2026";
 A_config.ctrans_version = "Ctrans_34.6";
 A_config.name_seed = "LCBAOSF (from seed file) ";
-A_config.spec_change_time = "Thu Nov  5 20:46:56 2026";
+A_config.spec_change_time = "Thu Nov  5 21:10:59 2026";
 A_config.arguments = A_config_arguments;
 A_config.environment = A_config_environment;
 A_config.modinfo_files = A_config_modinfo_files;
 A_PROC_ENTRY(DECS oserrors);
-UEAALIB_a68config(LGAALIB_configinfo, QCBAOSF);
+(void)(UEAALIB_a68config(LGAALIB_configinfo, QCBAOSF));
  /* line 61: */
  /* line 63: */
  /* line 65: */
@@ -629,7 +629,7 @@ XCBAOSF_generator( A68_TRUE, &ADBAOSF );
 TCBAOSF.Messages = ADBAOSF;
  /* line 69: */
 BDBAOSF = A_LOC(A68_BOOL ) ;
-(*BDBAOSF) = A68_FALSE ;
+(void)((*BDBAOSF) = A68_FALSE) ;
 TCBAOSF.Initialised = BDBAOSF;
  /* line 71: */
 CDBAOSF.data[0].Number = 1;

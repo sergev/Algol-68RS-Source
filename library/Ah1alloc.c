@@ -54,7 +54,6 @@
 ** It is assumed that allocations are rounded up to at least the next word boundary.
 */
 
-static char rcs_id[] = "$Id: Ah1alloc.c,v 1.3 2002-02-23 17:50:44 sian Exp $";
 #include <algol68/Alibrary.h>
 
 #ifdef A_MAX_CACHE

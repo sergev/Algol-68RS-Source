@@ -435,28 +435,28 @@ static A68_118   GCHAOSF = {"Suppress file version numbers"};
 A_GISVEC(A68_VC ,HCHAOSF,GCHAOSF,29)
 static A68_117   ICHAOSF = {"Suppress garbage collector diagnostics"}; 
 A_GISVEC(A68_VC ,JCHAOSF,ICHAOSF,38)
-A68_35  LCHAOSF_testmode_options;
-A68_56  MCHAOSF_o;
-A68_56  PCHAOSF_testmode_noerror;
-A68_56  QCHAOSF_o;
-A68_56  TCHAOSF_testmode_noversions;
-A68_56  UCHAOSF_o;
-A68_56  XCHAOSF_testmode_nodates;
-A68_56  YCHAOSF_o;
-A68_56  BDHAOSF_testmode_nofilenames;
-A68_56  CDHAOSF_o;
-A68_56  FDHAOSF_testmode_nogarbage;
+A68_35  LCHAOSF_testmode_options A_UNUSED;
+A68_56  MCHAOSF_o A_UNUSED;
+A68_56  PCHAOSF_testmode_noerror A_UNUSED;
+A68_56  QCHAOSF_o A_UNUSED;
+A68_56  TCHAOSF_testmode_noversions A_UNUSED;
+A68_56  UCHAOSF_o A_UNUSED;
+A68_56  XCHAOSF_testmode_nodates A_UNUSED;
+A68_56  YCHAOSF_o A_UNUSED;
+A68_56  BDHAOSF_testmode_nofilenames A_UNUSED;
+A68_56  CDHAOSF_o A_UNUSED;
+A68_56  FDHAOSF_testmode_nogarbage A_UNUSED;
 #define GDHAOSF_testmode_on A68_TRUE
 #define HDHAOSF_testmode_off A68_FALSE
 static A68_120   IDHAOSF = {"*file*"}; 
 A_GISVEC(A68_VC ,JDHAOSF,IDHAOSF,6)
-static A68_VC  KDHAOSF_fn;
-static A68_VC  RDHAOSF_dummy_filename;
-A68_56  SDHAOSF_testmode;
-static A68_BOOL  TDHAOSF_stop_on_input_error;
-static A68_BOOL  UDHAOSF_show_version_numbers;
-static A68_BOOL  VDHAOSF_show_dates;
-static A68_BOOL  WDHAOSF_show_file_names;
+static A68_VC  KDHAOSF_fn A_UNUSED;
+static A68_VC  RDHAOSF_dummy_filename A_UNUSED;
+A68_56  SDHAOSF_testmode A_UNUSED;
+static A68_BOOL  TDHAOSF_stop_on_input_error A_UNUSED;
+static A68_BOOL  UDHAOSF_show_version_numbers A_UNUSED;
+static A68_BOOL  VDHAOSF_show_dates A_UNUSED;
+static A68_BOOL  WDHAOSF_show_file_names A_UNUSED;
 static A68_123   HEHAOSF = {"Options supplied by text not implemented"}; 
 A_GISVEC(A68_VC ,IEHAOSF,HEHAOSF,40)
 static A68_66   QEHAOSF = {"*VN*"}; 
@@ -493,13 +493,13 @@ return;
 A68_VOID  YDHAOSF_set_testmode(A68_121  Mode)
 { 
 A68_121  ZDHAOSF;  /* united object - for case conformity */
-A68_BOOL  AEHAOSF_state;
+A68_BOOL  AEHAOSF_state A_UNUSED = {0};
 A68_56  BEHAOSF;  /* avoid structure result */
 A68_56  CEHAOSF;  /* avoid structure result */
 A68_56  DEHAOSF;  /* avoid structure result */
 A68_56  EEHAOSF;  /* avoid structure result */
-A68_56  FEHAOSF_opt;
-A68_VC  GEHAOSF_topts;
+A68_56  FEHAOSF_opt A_UNUSED = {0};
+A68_VC  GEHAOSF_topts A_UNUSED = {0};
 A68_35  JEHAOSF;  /* OPERATORS - scalar -> [] or VEC[] */
 A_PROC_ENTRY(set_testmode);
  /* line 79: */
@@ -513,7 +513,7 @@ case 1: /* BOOL */
 AEHAOSF_state = (ZDHAOSF.data.mode1);
  /* line 82: */
  /* line 83: */
-if ( AEHAOSF_state )
+if (AEHAOSF_state)
 { 
  /* line 84: */
  /* line 86: */
@@ -539,24 +539,24 @@ case 3: /* VECTOR [] CHAR */
 GEHAOSF_topts = (ZDHAOSF.data.mode3);
  /* line 90: */
  /* line 91: */
-A_CALLPROC(TIBAOSF_global_msg,(IUAAOSF_system, A_HVEC(JEHAOSF,IEHAOSF,A68_VC )),(IUAAOSF_system, A_HVEC(JEHAOSF,IEHAOSF,A68_VC ),(TIBAOSF_global_msg).nonlocals));
+(void)(A_CALLPROC(TIBAOSF_global_msg,(IUAAOSF_system, A_HVEC(JEHAOSF,IEHAOSF,A68_VC )),(IUAAOSF_system, A_HVEC(JEHAOSF,IEHAOSF,A68_VC ),(TIBAOSF_global_msg).nonlocals)));
 break;
 default: 
 A_IMP_SKIP ;
 break;
 } 
  /* line 92: */
-TDHAOSF_stop_on_input_error = !FOEAOSF_includes(SDHAOSF_testmode, PCHAOSF_testmode_noerror);
+(void)(TDHAOSF_stop_on_input_error = (!FOEAOSF_includes(SDHAOSF_testmode, PCHAOSF_testmode_noerror)));
  /* line 93: */
-UDHAOSF_show_version_numbers = !FOEAOSF_includes(SDHAOSF_testmode, TCHAOSF_testmode_noversions);
+(void)(UDHAOSF_show_version_numbers = (!FOEAOSF_includes(SDHAOSF_testmode, TCHAOSF_testmode_noversions)));
  /* line 94: */
-VDHAOSF_show_dates = !FOEAOSF_includes(SDHAOSF_testmode, XCHAOSF_testmode_nodates);
+(void)(VDHAOSF_show_dates = (!FOEAOSF_includes(SDHAOSF_testmode, XCHAOSF_testmode_nodates)));
  /* line 95: */
-WDHAOSF_show_file_names = !FOEAOSF_includes(SDHAOSF_testmode, BDHAOSF_testmode_nofilenames);
+(void)(WDHAOSF_show_file_names = (!FOEAOSF_includes(SDHAOSF_testmode, BDHAOSF_testmode_nofilenames)));
  /* line 96: */
-if ( FOEAOSF_includes(SDHAOSF_testmode, FDHAOSF_testmode_nogarbage) )
+if (FOEAOSF_includes(SDHAOSF_testmode, FDHAOSF_testmode_nogarbage))
 { 
-KMBAOSF_set_gc_diagnostics(0X0U);
+(void)(KMBAOSF_set_gc_diagnostics(0X0U));
 } 
  /* line 97: */
  /* line 98: */
@@ -571,7 +571,7 @@ A68_BOOL  KEHAOSF_continue_on_error(void)
 { 
 A68_BOOL  LEHAOSF;  /* clause result */
 A_PROC_ENTRY(continue_on_error);
-LEHAOSF = !TDHAOSF_stop_on_input_error;
+LEHAOSF = (!TDHAOSF_stop_on_input_error);
 A_PROC_EXIT(continue_on_error);
 return( LEHAOSF );
 } 
@@ -583,7 +583,7 @@ A68_VC  OEHAOSF;  /* clause result */
 A68_VC  PEHAOSF;  /* avoid structure result */
 A_PROC_ENTRY(version_str);
  /* line 103: */
-if ( UDHAOSF_show_version_numbers )
+if (UDHAOSF_show_version_numbers)
 { 
 FEAAOSF_intchars( Verno, &PEHAOSF );
 OEHAOSF = PEHAOSF;
@@ -602,7 +602,7 @@ A68_INT  TEHAOSF_testmode_seconds(A68_INT  S)
 { 
 A68_INT  UEHAOSF;  /* clause result */
 A_PROC_ENTRY(testmode_seconds);
-if ( VDHAOSF_show_dates )
+if (VDHAOSF_show_dates)
 { 
 UEHAOSF = S;
 } 
@@ -622,7 +622,7 @@ A68_VC  YEHAOSF;  /* avoid structure result */
 A_PROC_ENTRY(testmode_file_name);
  /* line 108: */
  /* line 109: */
-if ( WDHAOSF_show_file_names )
+if (WDHAOSF_show_file_names)
 { 
  /* line 110: */
  /* line 111: */
@@ -646,7 +646,7 @@ A_PROC_ENTRY(testmode_fname);
  /* line 114: */
  /* line 115: */
  /* line 116: */
-if ( WDHAOSF_show_file_names )
+if (WDHAOSF_show_file_names)
 { 
  /* line 117: */
 BFHAOSF = Fname;
@@ -671,7 +671,7 @@ static A68_BOOL A_invoked = A68_FALSE;
 static char *A_config_arguments[] = {"/home/vak/Project/Algol/Algol-68RS-Source/src/a68toc","-v","-uname","seedfile","-staredit","59LR","-lib","/home/vak/Project/Algol/Algol-68RS-Source/a68config","-dir","/home/vak/Project/Algol/Algol-68RS-Source/a68config","-dir","/home/vak/Project/Algol/Algol-68RS-Source/liba68prel","testmode.a68",""};
 static char *A_config_environment[] = {"A68_LIB=/home/vak/Project/Algol/Algol-68RS-Source/a68config","A68_CDIR=","A68_DIR=","A68_STAREDIT=","A68_NAMESEED=nameseed","CTRANS_NAMESEED=",""};
 static char *A_config_modinfo_files[] = {"/home/vak/Project/Algol/Algol-68RS-Source/a68config/a68config.m","/home/vak/Project/Algol/Algol-68RS-Source/liba68prel/osinterface.m","/home/vak/Project/Algol/Algol-68RS-Source/liba68prel/options.m","/home/vak/Project/Algol/Algol-68RS-Source/liba68prel/messageproc.m","/home/vak/Project/Algol/Algol-68RS-Source/liba68prel/strops.m",""};
-static A_CONFIG_INFO A_config;
+static A_CONFIG_INFO A_config A_UNUSED;
 /* --- end of configuration information */
 A68_119  ZBHAOSF;  /* collateral clause result */
 A68_35  KCHAOSF;  /* OPERATORS - istruct -> vector */
@@ -696,15 +696,15 @@ ZRAAOSF();   /* USE messageproc */
 BCAAOSF();   /* USE strops */
 /* --- Initialise configuration information */
 A_config.source_file = "/home/vak/Project/Algol/Algol-68RS-Source/liba68prel/testmode.a68";
-A_config.translation_time = "Thu Nov  5 20:46:56 2026";
+A_config.translation_time = "Thu Nov  5 21:10:59 2026";
 A_config.ctrans_version = "Ctrans_34.6";
 A_config.name_seed = "TBHAOSF (from seed file) ";
-A_config.spec_change_time = "Thu Nov  5 20:46:56 2026";
+A_config.spec_change_time = "Thu Nov  5 21:10:59 2026";
 A_config.arguments = A_config_arguments;
 A_config.environment = A_config_environment;
 A_config.modinfo_files = A_config_modinfo_files;
 A_PROC_ENTRY(DECS testmode);
-UEAALIB_a68config(LGAALIB_configinfo, YBHAOSF);
+(void)(UEAALIB_a68config(LGAALIB_configinfo, YBHAOSF));
  /* line 50: */
  /* line 51: */
  /* line 52: */
@@ -758,7 +758,7 @@ FDHAOSF_testmode_nogarbage = EDHAOSF;
 { 
 KDHAOSF_fn = JDHAOSF;
 MDHAOSF_generator( A68_FALSE, &QDHAOSF );
-A_VASSIGN2(KDHAOSF_fn,QDHAOSF,A68_CHAR ) ;
+(void)(A_VASSIGN2(KDHAOSF_fn,QDHAOSF,A68_CHAR )) ;
 PDHAOSF = QDHAOSF;
 } 
 RDHAOSF_dummy_filename = PDHAOSF;

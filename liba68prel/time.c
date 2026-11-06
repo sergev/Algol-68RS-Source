@@ -461,7 +461,7 @@ extern void BCAAOSF(void);   /* strops */
 /* --- end of DECS initialisation functions --- */
 static A68_103   GZCAOSF = {"$Id: time.a68,v 1.1.1.1 2001-05-07 10:16:11 sian Exp $"}; 
 A_GISVEC(A68_VC ,HZCAOSF,GZCAOSF,54)
-static A68_INT  IZCAOSF_zero;
+static A68_INT  IZCAOSF_zero A_UNUSED;
 static A68_108   VADAOSF = {"Jan"}; 
 A_GISVEC(A68_VC ,WADAOSF,VADAOSF,3)
 static A68_108   XADAOSF = {"Feb"}; 
@@ -486,7 +486,7 @@ static A68_108   PBDAOSF = {"Nov"};
 A_GISVEC(A68_VC ,QBDAOSF,PBDAOSF,3)
 static A68_108   RBDAOSF = {"Dec"}; 
 A_GISVEC(A68_VC ,SBDAOSF,RBDAOSF,3)
-static A68_35  UBDAOSF_months;
+static A68_35  UBDAOSF_months A_UNUSED;
 static A68_110   YBDAOSF = {"date_str:  Illegal time"}; 
 A_GISVEC(A68_VC ,ZBDAOSF,YBDAOSF,23)
 static A68_108   PEDAOSF = {".00"}; 
@@ -599,15 +599,15 @@ A_STATIC A68_VOID  QZCAOSF_time_proc(A68_INT  Seconds, A68_VC  Ans)
 { 
 A68_INT  RZCAOSF;  /* ADICOPS - MOD */
 A68_INT  SZCAOSF;  /* ADICOPS - MOD */
-A68_INT  TZCAOSF_dsecs;
-A68_INT  UZCAOSF_dmins;
-A68_INT  VZCAOSF_hrs;
+A68_INT  TZCAOSF_dsecs A_UNUSED = {0};
+A68_INT  UZCAOSF_dmins A_UNUSED = {0};
+A68_INT  VZCAOSF_hrs A_UNUSED = {0};
 A68_INT  WZCAOSF;  /* ADICOPS - MOD */
 A68_INT  XZCAOSF;  /* ADICOPS - MOD */
-A68_INT  YZCAOSF_mins;
+A68_INT  YZCAOSF_mins A_UNUSED = {0};
 A68_INT  ZZCAOSF;  /* ADICOPS - MOD */
 A68_INT  AADAOSF;  /* ADICOPS - MOD */
-A68_INT  BADAOSF_secs;
+A68_INT  BADAOSF_secs A_UNUSED = {0};
 A68_106  CADAOSF;  /* collateral clause result */
 A68_INT  DADAOSF;  /* ADICOPS - MOD */
 A68_INT  EADAOSF;  /* ADICOPS - MOD */
@@ -647,7 +647,7 @@ CADAOSF.data[6] = (A68_SSBITS)(IZCAOSF_zero+(BADAOSF_secs/10));
  /* line 59: */
 CADAOSF.data[7] = (A68_SSBITS)(IZCAOSF_zero+(BADAOSF_secs/10));
 IADAOSF = A_HISVEC(HADAOSF,CADAOSF,8,A68_CHAR ) ;
-A_VASSIGN2(IADAOSF,Ans,A68_CHAR );
+(void)(A_VASSIGN2(IADAOSF,Ans,A68_CHAR ));
 } 
 A_PROC_EXIT(time_proc);
 return;
@@ -658,7 +658,7 @@ A68_VOID  KADAOSF_time(A68_INT  Seconds, A68_VC  *ReturnedValue)
 { 
 A68_31  MADAOSF_generator;   /* proc value of non-global proc */
 A68_VC  RADAOSF;  /* avoid structure result */
-A68_VC  SADAOSF_ans;
+A68_VC  SADAOSF_ans A_UNUSED = {0};
 A68_VC  TADAOSF;  /* clause result */
 A_PROC_ENTRY(time);
  /* line 62: */
@@ -666,7 +666,7 @@ A_PROC_ENTRY(time);
 A_CLOSURE( MADAOSF_generator, NADAOSF_generator, OADAOSF_generator );
 A_CALLPROC(MADAOSF_generator,(A68_FALSE, &RADAOSF),(A68_FALSE, &RADAOSF,(MADAOSF_generator).nonlocals));
 SADAOSF_ans = RADAOSF;
-QZCAOSF_time_proc(Seconds, SADAOSF_ans);
+(void)(QZCAOSF_time_proc(Seconds, SADAOSF_ans));
 TADAOSF = SADAOSF_ans;
 } 
 A_PROC_EXIT(time);
@@ -678,22 +678,22 @@ return;
 A_STATIC A68_VOID  XBDAOSF_date_proc(A68_INT  Seconds, A68_VC  Ans)
 { 
 A68_35  ACDAOSF;  /* OPERATORS - scalar -> [] or VEC[] */
-A68_INT  BCDAOSF_days;
-A68_INT  CCDAOSF_year;
-A68_BOOL  DCDAOSF_leap;
+A68_INT  BCDAOSF_days A_UNUSED = {0};
+A68_INT  CCDAOSF_year A_UNUSED = {0};
+A68_BOOL  DCDAOSF_leap A_UNUSED = {0};
 A68_INT  ECDAOSF;  /* ADICOPS - MOD */
 A68_INT  FCDAOSF;  /* ADICOPS - MOD */
 A68_BOOL  GCDAOSF;  /* optbool result */
 A68_INT  HCDAOSF;  /* ADICOPS - MOD */
 A68_INT  ICDAOSF;  /* ADICOPS - MOD */
-A68_INT  JCDAOSF_month;
+A68_INT  JCDAOSF_month A_UNUSED = {0};
 A68_111  KCDAOSF;  /* collateral clause result */
-A68_111  LCDAOSF_mnths;
+A68_111  LCDAOSF_mnths A_UNUSED = {0};
 A68_90  MCDAOSF;  /* OPERATORS - istruct -> vector */
 A68_90  NCDAOSF;  /* OPERATORS - simple index */
 A68_90  OCDAOSF;  /* OPERATORS - istruct -> vector */
 A68_90  PCDAOSF;  /* OPERATORS - simple index */
-A68_INT  QCDAOSF_dten;
+A68_INT  QCDAOSF_dten A_UNUSED = {0};
 A68_CHAR  RCDAOSF;  /* clause result */
 A68_INT  SCDAOSF;  /* YIELD */
 A68_CHAR * TCDAOSF;  /* YIELD */
@@ -708,7 +708,7 @@ A68_CHAR * BDDAOSF;  /* YIELD */
 A68_VC  CDDAOSF;  /* OPERATORS - trim index */
 A68_VC  DDDAOSF;  /* YIELD */
 A68_VC  EDDAOSF;  /* OPERATORS - assign op */
-A68_INT  FDDAOSF_i;
+A68_INT  FDDAOSF_i A_UNUSED = {0};
 A68_INT  GDDAOSF;  /* by part of loop */
 A68_INT  HDDAOSF;  /* ADICOPS - MOD */
 A68_INT  IDDAOSF;  /* ADICOPS - MOD */
@@ -717,9 +717,9 @@ A_PROC_ENTRY(date_proc);
  /* line 68: */
  /* line 69: */
 { 
-if ( (Seconds<0) )
+if (Seconds<0)
 { 
-A_CALLPROC(TIBAOSF_global_msg,(IUAAOSF_system, A_HVEC(ACDAOSF,ZBDAOSF,A68_VC )),(IUAAOSF_system, A_HVEC(ACDAOSF,ZBDAOSF,A68_VC ),(TIBAOSF_global_msg).nonlocals));
+(void)(A_CALLPROC(TIBAOSF_global_msg,(IUAAOSF_system, A_HVEC(ACDAOSF,ZBDAOSF,A68_VC )),(IUAAOSF_system, A_HVEC(ACDAOSF,ZBDAOSF,A68_VC ),(TIBAOSF_global_msg).nonlocals)));
 } 
  /* line 70: */
 BCDAOSF_days = ((Seconds/86400)+1);
@@ -734,7 +734,7 @@ for ( ;; )
 if ( !((BCDAOSF_days>366)) ) break;
  /* line 76: */
 FCDAOSF = 4 ;
-if ( DCDAOSF_leap = (A_MOD(CCDAOSF_year,FCDAOSF,ECDAOSF)==0) )
+if ((DCDAOSF_leap = (A_MOD(CCDAOSF_year,FCDAOSF,ECDAOSF)==0)))
 { 
  /* line 77: */
 BCDAOSF_days-=366;
@@ -749,24 +749,24 @@ BCDAOSF_days-=365;
 CCDAOSF_year+=1;
 }
  /* line 81: */
-GCDAOSF = !DCDAOSF_leap;
+GCDAOSF = (!DCDAOSF_leap);
 if ( GCDAOSF )
 {GCDAOSF = (BCDAOSF_days==366);
 }
-if ( GCDAOSF )
+if (GCDAOSF)
 { 
 CCDAOSF_year+=1;
 BCDAOSF_days = 1;
 } 
  /* line 82: */
 ICDAOSF = 4 ;
-DCDAOSF_leap = (A_MOD(CCDAOSF_year,ICDAOSF,HCDAOSF)==0);
+(void)(DCDAOSF_leap = (A_MOD(CCDAOSF_year,ICDAOSF,HCDAOSF)==0));
  /* line 83: */
 JCDAOSF_month = 1;
  /* line 84: */
  /* line 85: */
 KCDAOSF.data[0] = 31;
-if ( DCDAOSF_leap )
+if (DCDAOSF_leap)
 { 
 KCDAOSF.data[1] = 29;
 } 
@@ -792,13 +792,13 @@ for ( ;; )
 NCDAOSF = A_HISVEC(MCDAOSF,LCDAOSF_mnths,12,A68_INT ) ;
 if ( !((BCDAOSF_days>A_VINDEX(NCDAOSF,JCDAOSF_month))) ) break;
 PCDAOSF = A_HISVEC(OCDAOSF,LCDAOSF_mnths,12,A68_INT ) ;
-BCDAOSF_days-=A_VINDEX(PCDAOSF,JCDAOSF_month);
+(void)(BCDAOSF_days-=A_VINDEX(PCDAOSF,JCDAOSF_month));
 JCDAOSF_month+=1;
 }
  /* line 88: */
 QCDAOSF_dten = (BCDAOSF_days/10);
  /* line 89: */
-if ( (QCDAOSF_dten==0) )
+if (QCDAOSF_dten==0)
 { 
 RCDAOSF = ' ';
 } 
@@ -813,7 +813,7 @@ TCDAOSF = (&A_VINDEX(Ans,SCDAOSF)) ;
 UCDAOSF = 2 ;
 WCDAOSF = 10 ;
 XCDAOSF = (&A_VINDEX(Ans,UCDAOSF)) ;
-(*XCDAOSF) = (A68_SSBITS)(IZCAOSF_zero+A_MOD(BCDAOSF_days,WCDAOSF,VCDAOSF));
+(void)((*XCDAOSF) = (A68_SSBITS)(IZCAOSF_zero+A_MOD(BCDAOSF_days,WCDAOSF,VCDAOSF)));
  /* line 91: */
 YCDAOSF = 3 ;
 ZCDAOSF = 7 ;
@@ -823,7 +823,7 @@ BDDAOSF = (&A_VINDEX(Ans,YCDAOSF)) ;
  /* line 92: */
 DDDAOSF = A_VTRIM(CDDAOSF,(Ans),A_VTSCRIPT(&(CDDAOSF.upb),(Ans).upb,4,6)) ;
 EDDAOSF = A_VINDEX(UBDAOSF_months,JCDAOSF_month) ;
-A_VASSIGN2(EDDAOSF,DDDAOSF,A68_CHAR );
+(void)(A_VASSIGN2(EDDAOSF,DDDAOSF,A68_CHAR ));
  /* line 93: */
  /* line 94: */
 GDDAOSF = (-1);
@@ -835,7 +835,7 @@ FDDAOSF_i += GDDAOSF )
 { 
 IDDAOSF = 10 ;
 JDDAOSF = (&A_VINDEX(Ans,FDDAOSF_i)) ;
-(*JDDAOSF) = (A68_SSBITS)(IZCAOSF_zero+A_MOD(CCDAOSF_year,IDDAOSF,HDDAOSF));
+(void)((*JDDAOSF) = (A68_SSBITS)(IZCAOSF_zero+A_MOD(CCDAOSF_year,IDDAOSF,HDDAOSF)));
  /* line 95: */
  /* line 96: */
 CCDAOSF_year/=10;
@@ -851,7 +851,7 @@ A68_VOID  LDDAOSF_date(A68_INT  Seconds, A68_VC  *ReturnedValue)
 { 
 A68_31  NDDAOSF_generator;   /* proc value of non-global proc */
 A68_VC  SDDAOSF;  /* avoid structure result */
-A68_VC  TDDAOSF_ans;
+A68_VC  TDDAOSF_ans A_UNUSED = {0};
 A68_VC  UDDAOSF;  /* clause result */
 A_PROC_ENTRY(date);
  /* line 100: */
@@ -859,7 +859,7 @@ A_PROC_ENTRY(date);
 A_CLOSURE( NDDAOSF_generator, ODDAOSF_generator, PDDAOSF_generator );
 A_CALLPROC(NDDAOSF_generator,(A68_FALSE, &SDDAOSF),(A68_FALSE, &SDDAOSF,(NDDAOSF_generator).nonlocals));
 TDDAOSF_ans = SDDAOSF;
-XBDAOSF_date_proc(Seconds, TDDAOSF_ans);
+(void)(XBDAOSF_date_proc(Seconds, TDDAOSF_ans));
 UDDAOSF = TDDAOSF_ans;
 } 
 A_PROC_EXIT(date);
@@ -872,7 +872,7 @@ A68_VOID  WDDAOSF_date_time(A68_INT  Seconds, A68_VC  *ReturnedValue)
 { 
 A68_31  YDDAOSF_generator;   /* proc value of non-global proc */
 A68_VC  DEDAOSF;  /* avoid structure result */
-A68_VC  EEDAOSF_ans;
+A68_VC  EEDAOSF_ans A_UNUSED = {0};
 A68_INT  FEDAOSF;  /* YIELD */
 A68_INT  GEDAOSF;  /* YIELD */
 A68_CHAR * HEDAOSF;  /* YIELD */
@@ -894,9 +894,9 @@ HEDAOSF = (&A_VINDEX(EEDAOSF_ans,GEDAOSF)) ;
 IEDAOSF = (&A_VINDEX(EEDAOSF_ans,FEDAOSF)) ;
 (*IEDAOSF) = (*HEDAOSF) = ' ';
  /* line 106: */
-XBDAOSF_date_proc(Seconds, A_VTRIM(JEDAOSF,(EEDAOSF_ans),A_VTSCRIPT(&(JEDAOSF.upb),(EEDAOSF_ans).upb,1,11)));
+(void)(XBDAOSF_date_proc(Seconds, A_VTRIM(JEDAOSF,(EEDAOSF_ans),A_VTSCRIPT(&(JEDAOSF.upb),(EEDAOSF_ans).upb,1,11))));
  /* line 107: */
-QZCAOSF_time_proc(Seconds, A_VTRIM(KEDAOSF,(EEDAOSF_ans),A_VTSCRIPT(&(KEDAOSF.upb),(EEDAOSF_ans).upb,14,21)));
+(void)(QZCAOSF_time_proc(Seconds, A_VTRIM(KEDAOSF,(EEDAOSF_ans),A_VTSCRIPT(&(KEDAOSF.upb),(EEDAOSF_ans).upb,14,21))));
  /* line 108: */
  /* line 109: */
 LEDAOSF = EEDAOSF_ans;
@@ -909,11 +909,11 @@ return;
 
 A68_VOID  NEDAOSF_centichars(A68_INT  I, A68_VC  *ReturnedValue)
 { 
-A68_INT  OEDAOSF_centi;
+A68_INT  OEDAOSF_centi A_UNUSED = {0};
 A68_108 * QEDAOSF;  /* YIELD */
 A68_VC  REDAOSF;  /* OPERATORS - istruct -> vector */
-A68_VC  SEDAOSF_fr;
-A68_INT  TEDAOSF_i;
+A68_VC  SEDAOSF_fr A_UNUSED = {0};
+A68_INT  TEDAOSF_i A_UNUSED = {0};
 A68_INT  UEDAOSF;  /* by part of loop */
 A68_INT  VEDAOSF;  /* ADICOPS - MOD */
 A68_INT  WEDAOSF;  /* ADICOPS - MOD */
@@ -930,7 +930,7 @@ A_PROC_ENTRY(centichars);
 OEDAOSF_centi = I;
  /* line 115: */
 QEDAOSF = A_LOC(A68_108 ) ;
-(*QEDAOSF) = PEDAOSF ;
+(void)((*QEDAOSF) = PEDAOSF) ;
 SEDAOSF_fr = A_ISVEC(REDAOSF,QEDAOSF,3,A68_CHAR );
  /* line 116: */
  /* line 117: */
@@ -943,7 +943,7 @@ TEDAOSF_i += UEDAOSF )
 { 
 WEDAOSF = 10 ;
 XEDAOSF = (&A_VINDEX(SEDAOSF_fr,TEDAOSF_i)) ;
-(*XEDAOSF) = (A68_SSBITS)(IZCAOSF_zero+A_MOD(OEDAOSF_centi,WEDAOSF,VEDAOSF));
+(void)((*XEDAOSF) = (A68_SSBITS)(IZCAOSF_zero+A_MOD(OEDAOSF_centi,WEDAOSF,VEDAOSF)));
  /* line 118: */
  /* line 119: */
 OEDAOSF_centi/=10;
@@ -977,16 +977,16 @@ return;
 
 A68_VOID  GFDAOSF_time_str(A68_VC  *ReturnedValue)
 { 
-A68_INT  HFDAOSF_cpu;
-A68_114  JFDAOSF_fr;
-A68_INT  KFDAOSF_i;
+A68_INT  HFDAOSF_cpu A_UNUSED = {0};
+A68_114  JFDAOSF_fr A_UNUSED = {0};
+A68_INT  KFDAOSF_i A_UNUSED = {0};
 A68_INT  LFDAOSF;  /* by part of loop */
 A68_VC  MFDAOSF;  /* OPERATORS - istruct -> vector */
 A68_VC  NFDAOSF;  /* OPERATORS - simple index */
 A68_INT  OFDAOSF;  /* ADICOPS - MOD */
 A68_INT  PFDAOSF;  /* ADICOPS - MOD */
 A68_CHAR * QFDAOSF;  /* YIELD */
-A68_115  RFDAOSF_time;
+A68_115  RFDAOSF_time A_UNUSED = {0};
 A68_VC  SFDAOSF;  /* OPERATORS - istruct -> vector */
 A68_VC  TFDAOSF;  /* OPERATORS - trim index */
 A68_VC  UFDAOSF;  /* OPERATORS - trim index */
@@ -1022,7 +1022,7 @@ KFDAOSF_i += LFDAOSF )
 NFDAOSF = A_ISVEC(MFDAOSF,(&JFDAOSF_fr),5,A68_CHAR ) ;
 PFDAOSF = 10 ;
 QFDAOSF = (&A_VINDEX(NFDAOSF,KFDAOSF_i)) ;
-(*QFDAOSF) = (A68_SSBITS)(IZCAOSF_zero+A_MOD(HFDAOSF_cpu,PFDAOSF,OFDAOSF));
+(void)((*QFDAOSF) = (A68_SSBITS)(IZCAOSF_zero+A_MOD(HFDAOSF_cpu,PFDAOSF,OFDAOSF)));
  /* line 133: */
  /* line 134: */
 HFDAOSF_cpu/=10;
@@ -1030,7 +1030,7 @@ HFDAOSF_cpu/=10;
  /* line 135: */
  /* line 136: */
 TFDAOSF = A_ISVEC(SFDAOSF,(&RFDAOSF_time),10,A68_CHAR ) ;
-QZCAOSF_time_proc((A68_INT )VPBAOSF_get_time(), A_VTRIM(UFDAOSF,(TFDAOSF),A_VTSCRIPT(&(UFDAOSF.upb),(TFDAOSF).upb,1,8)));
+(void)(QZCAOSF_time_proc((A68_INT )VPBAOSF_get_time(), A_VTRIM(UFDAOSF,(TFDAOSF),A_VTSCRIPT(&(UFDAOSF.upb),(TFDAOSF).upb,1,8))));
  /* line 137: */
 WFDAOSF = A_ISVEC(VFDAOSF,(&RFDAOSF_time),10,A68_CHAR ) ;
 XFDAOSF = 9 ;
@@ -1064,7 +1064,7 @@ static A68_BOOL A_invoked = A68_FALSE;
 static char *A_config_arguments[] = {"/home/vak/Project/Algol/Algol-68RS-Source/src/a68toc","-v","-uname","seedfile","-staredit","59LR","-lib","/home/vak/Project/Algol/Algol-68RS-Source/a68config","-dir","/home/vak/Project/Algol/Algol-68RS-Source/a68config","-dir","/home/vak/Project/Algol/Algol-68RS-Source/liba68prel","time.a68",""};
 static char *A_config_environment[] = {"A68_LIB=/home/vak/Project/Algol/Algol-68RS-Source/a68config","A68_CDIR=","A68_DIR=","A68_STAREDIT=","A68_NAMESEED=nameseed","CTRANS_NAMESEED=",""};
 static char *A_config_modinfo_files[] = {"/home/vak/Project/Algol/Algol-68RS-Source/a68config/a68config.m","/home/vak/Project/Algol/Algol-68RS-Source/liba68prel/osif.m","/home/vak/Project/Algol/Algol-68RS-Source/liba68prel/messageproc.m","/home/vak/Project/Algol/Algol-68RS-Source/liba68prel/strops.m",""};
-static A_CONFIG_INFO A_config;
+static A_CONFIG_INFO A_config A_UNUSED;
 /* --- end of configuration information */
 A68_109  UADAOSF;  /* collateral clause result */
 A68_35  TBDAOSF;  /* OPERATORS - istruct -> vector */
@@ -1076,15 +1076,15 @@ ZRAAOSF();   /* USE messageproc */
 BCAAOSF();   /* USE strops */
 /* --- Initialise configuration information */
 A_config.source_file = "/home/vak/Project/Algol/Algol-68RS-Source/liba68prel/time.a68";
-A_config.translation_time = "Thu Nov  5 20:46:56 2026";
+A_config.translation_time = "Thu Nov  5 21:10:59 2026";
 A_config.ctrans_version = "Ctrans_34.6";
 A_config.name_seed = "CZCAOSF (from seed file) ";
-A_config.spec_change_time = "Thu Nov  5 20:46:56 2026";
+A_config.spec_change_time = "Thu Nov  5 21:10:59 2026";
 A_config.arguments = A_config_arguments;
 A_config.environment = A_config_environment;
 A_config.modinfo_files = A_config_modinfo_files;
 A_PROC_ENTRY(DECS time);
-UEAALIB_a68config(LGAALIB_configinfo, HZCAOSF);
+(void)(UEAALIB_a68config(LGAALIB_configinfo, HZCAOSF));
  /* line 42: */
 IZCAOSF_zero = (A68_INT)(unsigned char)'0';
  /* line 44: */

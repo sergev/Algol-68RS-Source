@@ -233,15 +233,15 @@ typedef _bit_type       *BITMAPPTR;
 #ifndef SETMARKS
 #define SETMARKS(bitmap,from,n)                                                                          \
 { SIZE temp;                                                                                             \
-    BCHECK(from,SETMARKS,start);                                                                         \
-    BCHECK((from)+(n)-1,SETMARKS,end);                                                                   \
+    (void)BCHECK(from,SETMARKS,start);                                                                         \
+    (void)BCHECK((from)+(n)-1,SETMARKS,end);                                                                   \
     for(temp=(from)+(n)-1; temp>=(from); temp--) _bit_set(bitmap,temp);                                  \
   }
 #endif
 #define CLRMARKS(bitmap,from,n)                                                                          \
   { SIZE temp;                                                                                           \
-    BCHECK(from,CLRMARKS,start);                                                                         \
-    BCHECK((from)+(n)-1,CLRMARKS,end);                                                                   \
+    (void)BCHECK(from,CLRMARKS,start);                                                                         \
+    (void)BCHECK((from)+(n)-1,CLRMARKS,end);                                                                   \
     for(temp=(from)+(n)-1; temp>=(from); temp--) _bit_clear(bitmap,temp);                                \
   }
 
@@ -257,8 +257,8 @@ typedef _bit_type       *BITMAPPTR;
 #define CALCTSTMARKS(bitmap,from,n,temp)        /* n > 1 */                                              \
   {                                                                                                      \
     ASSERT((n)>1,CALCTSTMARKS,n<=1);                                                                     \
-    BCHECK(from,CALCTSTMARKS,start);                                                                     \
-    BCHECK((from)+(n)-1,CALCTSTMARKS,end);                                                               \
+    (void)BCHECK(from,CALCTSTMARKS,start);                                                                     \
+    (void)BCHECK((from)+(n)-1,CALCTSTMARKS,end);                                                               \
     for(temp=(from)+(n)-1; temp>=(from) && _bit_test(bitmap,temp); temp--) ;                             \
   }
 #endif
@@ -274,8 +274,8 @@ typedef _bit_type       *BITMAPPTR;
 #define SCAN_TO_CLR(answerp_LVALUE,segctlp,bitmap,fromp,limitp)                                          \
   {                                                                                                      \
     SIZE answer, limit = ELNUM( limitp, segctlp );                                                       \
-    BCHECK(ELNUM(fromp,segctlp),SCAN_TO_CLR,from);                                                       \
-    BCHECK(limit,SCAN_TO_CLR,limit);                                                                     \
+    (void)BCHECK(ELNUM(fromp,segctlp),SCAN_TO_CLR,from);                                                       \
+    (void)BCHECK(limit,SCAN_TO_CLR,limit);                                                                     \
     ASSERT(limitp>=fromp,SCAN_TO_CLR,limit < from);                                                      \
     for ( answer = ELNUM(fromp,segctlp); answer != limit && _bit_test(bitmap,answer); )                  \
     {                                                                                                    \
@@ -289,7 +289,7 @@ typedef _bit_type       *BITMAPPTR;
       else                                                                                               \
         answer++;                                                                                        \
     }                                                                                                    \
-    BCHECK(answer,SCAN_TO_CLR,answer);                                                                   \
+    (void)BCHECK(answer,SCAN_TO_CLR,answer);                                                                   \
     (answerp_LVALUE) = ELNUMTOPTR(answer,segctlp);                                                       \
     ASSERT((answerp_LVALUE)<=(limitp),SCAN_TO_CLR,answerp > limitp);                                     \
   }
@@ -299,8 +299,8 @@ typedef _bit_type       *BITMAPPTR;
 #define SCAN_TO_SET(answerp_LVALUE,segctlp,bitmap,fromp,limitp)                                          \
   {                                                                                                      \
     SIZE answer, limit = ELNUM( limitp, segctlp );                                                       \
-    BCHECK(ELNUM(fromp,segctlp),SCAN_TO_SET,from);                                                       \
-    BCHECK(limit,SCAN_TO_SET,limit);                                                                     \
+    (void)BCHECK(ELNUM(fromp,segctlp),SCAN_TO_SET,from);                                                       \
+    (void)BCHECK(limit,SCAN_TO_SET,limit);                                                                     \
     ASSERT(limitp>=fromp,SCAN_TO_SET,limit < from);                                                      \
     for ( answer = ELNUM(fromp,segctlp); answer != limit && !_bit_test(bitmap,answer); )                 \
     {                                                                                                    \
@@ -314,7 +314,7 @@ typedef _bit_type       *BITMAPPTR;
       else                                                                                               \
         answer++;                                                                                        \
     }                                                                                                    \
-    BCHECK(answer,SCAN_TO_SET,answer);                                                                   \
+    (void)BCHECK(answer,SCAN_TO_SET,answer);                                                                   \
     (answerp_LVALUE) = ELNUMTOPTR(answer,segctlp);                                                       \
     ASSERT((answerp_LVALUE)<=(limitp),SCAN_TO_SET,answerp > limitp);                                     \
   }
