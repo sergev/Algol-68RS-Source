@@ -120,10 +120,7 @@ QADFLAGS=-v -s -uname seedfile -staredit $(QADSTAR)
 #------------ Programs -----------
 ALGOL=$(CTD)/a68toc
 SHELL=/bin/sh
-INSTALL=$(shell which install) -g root -o root
-ifeq ($(OS), "Darwin")
-INSTALL=$(shell which install) -g wheel -o root
-endif
+INSTALL=$(shell which install)
 INSTALLDATA=$(INSTALL) -m 644
 INSTALLPROG=$(INSTALL) -m 555
 
