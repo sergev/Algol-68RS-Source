@@ -23,12 +23,10 @@ sudo make install    # /usr (or /usr/local on macOS)
 
 - Sub-make failures propagate to the top-level exit status. Per-directory builds are serial
   (`.NOTPARALLEL` in `Algol68.mk`), because modules need each other's `.m` files and share `nameseed`.
-- Progress is tracked by stamp files `g-stamp` (bdwgc), `c-stamp` (C dirs), `q-stamp` (QAD
+- Progress is tracked by stamp files `c-stamp` (C dirs), `q-stamp` (QAD
   prelude). Delete them (or `make dist-clean`) to force a rebuild.
-- GC: system libgc via `pkg-config bdw-gc` (`libgc-dev` / Homebrew `bdw-gc`), giving
-  `GC_CFLAGS`/`GC_LIBS`. Without it (or with `SYSTEM_GC=no`), `bdwgc.tar.gz` is extracted to
-  `bdwgc/`, built into `library/liba68gc.a`, headers copied to `include/algol68/gc/` (both
-  git-ignored). `make install` bakes the GC flags into the installed `ca`.
+- GC: system libgc via `pkg-config bdw-gc` (`libgc-dev` / Homebrew `bdw-gc`) is required,
+  giving `GC_CFLAGS`/`GC_LIBS`. `make install` bakes the GC flags into the installed `ca`.
 - Build order matters: `library` → `a68config` → `liba68prel` → `src`, then `qad`.
 - Self-hosting check: `make check` (see Tests below).
 - Debian package: `dpkg-buildpackage -F`. Docs (`doc/`, `d-stamp`) are not built by default.
@@ -50,7 +48,7 @@ make -C examples/logic logic68  # diffs expected.output; Makefile needs Algol W'
 ```
 
 `scripts/ca` is the user-level driver: runs `a68toc` → `gcc -O0 -DA68_CHECK` → links with
-`Afirst.o -la68s -la68 -la68gc -lm`. A file containing `PROGRAM ` is linked into an executable;
+`Afirst.o -la68s -la68 -lgc -lm`. A file containing `PROGRAM ` is linked into an executable;
 otherwise it is a `DECS` module, archived into `-M dir`/`-m lib` with its `.m` moved to `dir/m/`.
 
 ## Architecture

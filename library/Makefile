@@ -33,6 +33,3 @@ clean :
 install :
 	$(INSTALLDATA) -p Afirst.o $(PKGDIR)
 	$(INSTALLDATA) -p liba68.a $(LIBDIR)
-ifneq ($(SYSTEM_GC),yes)
-	$(INSTALLDATA) -p liba68gc.a $(LIBDIR)
-endif

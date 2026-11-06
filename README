@@ -41,8 +41,8 @@ both 32-bit and 64-bit forms on the Linux operating system
 and on Intel 64-bit on macOS.
 
 Support for macOS has been made possible by the integration of the
-Boehm-Demers-Weiser Garbage Collector (bdwgc), normally the system
-libgc package (a fallback copy is contained in this repository), and is a compile-time option for
+Boehm-Demers-Weiser Garbage Collector (bdwgc), the system
+libgc package, and is a compile-time option for
 the Linux variants, being set as the default for all 64-bit systems.
 
 Further example programs have been added to this repository including

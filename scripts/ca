@@ -52,7 +52,7 @@ INCLUDES=${CA_INCLUDES:-$INCLUDES}
 
 # Garbage collector flags; make install sets the defaults.
 GC_CFLAGS=${CA_GC_CFLAGS-""}
-GC_LIBS=${CA_GC_LIBS-"-la68gc"}
+GC_LIBS=${CA_GC_LIBS-"-lgc"}
 
 A68DIRS="-dir ${ROOT}"
 CHECK=-DA68_CHECK

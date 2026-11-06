@@ -73,23 +73,18 @@ EXD=$(TOP)/examples
 LBD=$(TOP)/library
 LPD=$(TOP)/liba68prel
 QAD=$(TOP)/qad
-GCD=$(TOP)/bdwgc
 
 ADIRS=a68config liba68prel src qad
 CDIRS=library a68config liba68prel src
 DDIRS=doc data examples scripts
 
 #------------ Garbage collector ------------
-# System libgc (pkg-config bdw-gc) if present, else bundled bdwgc.tar.gz.
-# Force the bundled one with: make SYSTEM_GC=no
-SYSTEM_GC:=$(shell pkg-config --exists bdw-gc && echo yes || echo no)
-ifeq ($(SYSTEM_GC),yes)
+# System libgc (libgc-dev, Homebrew bdw-gc), found via pkg-config.
+ifneq ($(shell pkg-config --exists bdw-gc && echo yes),yes)
+$(error Boehm GC not found: install libgc-dev (or bdw-gc) and pkg-config)
+endif
 GC_CFLAGS:=$(shell pkg-config --cflags bdw-gc)
 GC_LIBS:=$(shell pkg-config --libs bdw-gc)
-else
-GC_CFLAGS:=
-GC_LIBS:=-la68gc
-endif
 INCS:=-I $(VPATH) $(GC_CFLAGS)
 
 #------------- a68toc environment --------------
@@ -127,8 +122,8 @@ export
 .PHONY : clean info uninstall check resetseed gc-vars
 
 #-----Don't remake the documentation all the time----
-#all : g-stamp c-stamp q-stamp d-stamp
-all : g-stamp c-stamp q-stamp
+#all : c-stamp q-stamp d-stamp
+all : c-stamp q-stamp
 
 remove :
 	for d in $(ADIRS); do $(RM) $$d/*.c $$d/*.m; done
@@ -136,23 +131,7 @@ remove :
 Translate : remove resetseed
 	for d in $(ADIRS); do $(MAKE) -C $$d Translate || exit 1; done
 
-ifeq ($(SYSTEM_GC),yes)
-g-stamp:
-	$(RM) -r include/algol68/gc library/liba68gc.a
-	touch g-stamp
-else
-g-stamp: $(GCD)/gc.a
-	mkdir -p include/algol68/gc
-	cp -r $(GCD)/include/* include/algol68/gc
-	cp $(GCD)/gc.a library/liba68gc.a
-	touch g-stamp
-endif
-
-$(GCD)/gc.a:
-	tar zxvf bdwgc.tar.gz
-	$(MAKE) -C $(GCD) -f Makefile.direct check
-
-c-stamp: g-stamp
+c-stamp:
 	for d in $(CDIRS); do $(MAKE) -C $$d || exit 1; done
 	touch c-stamp
 
@@ -165,15 +144,10 @@ d-stamp :
 	touch d-stamp
 
 #install : c-stamp q-stamp d-stamp
-install : g-stamp c-stamp q-stamp
+install : c-stamp q-stamp
 	$(INSTALL) -m 755 -d $(PKGDIR)
 	$(INSTALL) -m 755 -d $(INCDIR)
 	$(INSTALL) -m 755 -d $(INCDIR)/linux
-ifneq ($(SYSTEM_GC),yes)
-	$(INSTALL) -m 755 -d $(INCDIR)/gc
-	$(INSTALL) -m 755 -d $(INCDIR)/gc/extra
-	$(INSTALL) -m 755 -d $(INCDIR)/gc/private
-endif
 	$(INSTALL) -m 755 -d $(BINDIR)
 	$(INSTALL) -m 755 -d $(LIBDIR)
 	$(INSTALL) -m 755 -d $(INFODIR)
@@ -194,13 +168,12 @@ uninstall :
 	-$(RM) $(BINDIR)/a68toc $(BINDIR)/resetseed $(BINDIR)/ca
 	-install-info --quiet --remove $(INFODIR)/ctrans.info.gz $(INFODIR)/dir
 	-$(RM) -rf $(PKGDIR) $(DOCDIR) $(INCDIR)
-	-$(RM) $(INFODIR)/ctrans.info.gz $(LIBDIR)/liba68.a $(LIBDIR)/liba68s.a $(LIBDIR)/liba68gc.a \
+	-$(RM) $(INFODIR)/ctrans.info.gz $(LIBDIR)/liba68.a $(LIBDIR)/liba68s.a \
 		$(MANDIR)/a68toc.1.gz $(MANDIR)/ca.1.gz
 
 dist-clean: clean
-	-$(RM) -v c-stamp q-stamp d-stamp g-stamp
+	-$(RM) -v c-stamp q-stamp d-stamp
 	-$(RM) -r debian/tmp debian/algol68toc
-	-$(RM) -rf bdwgc include/algol68/gc
 
 nameseed : a68config/rctr liba68prel/rctr src/rctr qad/rctr
 	for d in $(ADIRS); do cp $$d/rctr $$d/nameseed; done
@@ -210,7 +183,7 @@ resetseed :
 	for d in $(ADIRS); do cp $$d/rctr $$d/nameseed; done
 
 # Self-hosting fixed point and examples, using the build tree.
-check : g-stamp c-stamp q-stamp
+check : c-stamp q-stamp
 	$(SHELL) scripts/check
 
 savepoint:
@@ -223,7 +196,6 @@ clean:
 	find $(TOP) \( -name '*~' -o -name '*.asv' -o -name '*##' \) \
 		-exec $(RM) -v '{}' ';'
 	-for d in $(ADIRS) $(DDIRS) library; do $(MAKE) -C $$d clean; done
-	-$(MAKE) -C $(GCD) -f Makefile.direct clean
 
 realclean:
 	find $(TOP) \( -name '*~' -o -name '*.asv' -o -name '*##' \) \

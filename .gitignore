@@ -4,8 +4,5 @@ qad/*.c
 qad/*.m
 nameseed
 c-stamp
-g-stamp
 q-stamp
-bdwgc/
-include/algol68/gc/
 src/a68toc

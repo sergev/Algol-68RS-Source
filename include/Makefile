@@ -20,10 +20,3 @@ all : $(algol68_inc) $(linux_inc)
 install :
 	$(INSTALLDATA) -p $(algol68_inc) $(INCDIR)
 	$(INSTALLDATA) -p $(linux_inc) $(INCDIR)/linux
-ifeq ($(SYSTEM_GC),yes)
-	$(RM) -r $(INCDIR)/gc
-else
-	$(INSTALLDATA) -p algol68/gc/extra/* $(INCDIR)/gc/extra
-	$(INSTALLDATA) -p algol68/gc/private/* $(INCDIR)/gc/private
-	-$(INSTALLDATA) -p algol68/gc/* $(INCDIR)/gc
-endif

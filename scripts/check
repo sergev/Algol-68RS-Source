@@ -61,7 +61,7 @@ make -C "$T" >"$WORK/build3.log" 2>&1 || fail "stage-3 build" "$WORK/build3.log"
 R=$WORK/root
 mkdir "$R"
 for f in a68config/a68config.m qad/standard.m qad/liba68s.a \
-         library/Afirst.o library/liba68.a library/liba68gc.a; do
+         library/Afirst.o library/liba68.a; do
     if [ -e "$T/$f" ]; then ln -s "$T/$f" "$R/"; fi
 done
 eval "export $(make -s -C "$T" gc-vars)"
