@@ -55,7 +55,7 @@ A68_UNAMESEED=-uname $(shell cat nameseed)
 A68_FLAGS=-s -v
 #
 
-GCC=gcc -std=gnu17
+GCC=gcc
 
 %.a68: %.w68
 	web68 $<

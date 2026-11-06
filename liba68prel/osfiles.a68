@@ -47,6 +47,8 @@ COMMENT
 05:12:94  33.002  DJS   CmplxNos   Add comment regarding declarations of
                                    IOSTATUS`s in other modules. 
 29:03:95  34.003  ELLA  Modcprght Change copyright header
+05:11:26  34.004  SV    C23       Use <stdio.h> instead of old-style extern
+                                  declarations; prototype for A_readdir.
 ??:??:??   ?.???  ????
 COMMENT
 
@@ -80,12 +82,7 @@ CO was "extern int fclose(); /* #include <stdio.h> */"
 
 PROC (REF VECTOR [] CHAR,INT,INT,FILEPTR) INT fread =
   ALIEN "FREAD"
-        "#ifdef sunosgcc"
-        "   #include <sys/stdtypes.h>"
-        "#else"
-        "   #include <sys/types.h>"
-        "#endif"
-        "extern size_t fread(); /* #include <stdio.h>*/ "
+        "#include <stdio.h>"
         "#define FREAD(ptr,size,nmemb,stream) \"
         "  A_size_t_INT(fread(A_VC_charptr(ptr),A_INT_size_t(size),A_INT_size_t(nmemb),A_FILEPTR_fileptr(stream)))";
 
@@ -106,18 +103,13 @@ PROC (VECTOR [] CHAR,INT,FILEPTR) CSTRING fgets =
 
 PROC (VECTOR [] CHAR,INT,INT,FILEPTR) INT fwrite =
   ALIEN "FWRITE"
-        "#ifdef sunosgcc"
-        "   #include <sys/stdtypes.h>"
-        "#else"
-        "   #include <sys/types.h>"
-        "#endif"
-        "extern size_t fwrite(); /* #include <stdio.h> */"
+        "#include <stdio.h>"
         "#define FWRITE(ptr,size,nmemb,stream) \"
         "  A_size_t_INT(fwrite(A_VC_charptr(ptr),A_INT_size_t(size),A_INT_size_t(nmemb),A_FILEPTR_fileptr(stream)))";
 
 PROC (FILEPTR,LONG INT,INT) INT fseek =
   ALIEN "FSEEK"
-        "extern int fseek(); /* #include <stdio.h> */"
+        "#include <stdio.h>"
         "#define FSEEK(stream,offset,whence) \"
 CO      "  A_int_INT(fseek(A_FILEPTR_fileptr(stream),A_LINT_long(offset),A_INT_int(whence)))";
         New definition for Linux (see include/Atypes.h for long long int) CO
@@ -134,7 +126,7 @@ INT seek_set =
 
 PROC (FILEPTR) INT fflush =
   ALIEN "FFLUSH"
-        "extern int fflush(); /* #include <stdio.h> */"
+        "#include <stdio.h>"
         "#define FFLUSH(stream) A_int_INT(fflush(A_FILEPTR_fileptr(stream)))";
 
 PROC (VECTOR [] CHAR) INT unlink =
@@ -185,7 +177,7 @@ PROC (DIRPTR) CSTRING readdir =
   ALIEN "READDIR"
         "#include <sys/types.h>"
         "#include <dirent.h>"
-        "A_STATIC char * A_readdir(dir) DIR *dir;"
+        "A_STATIC char * A_readdir(DIR *dir)"
         "{ struct dirent *d =  readdir(dir);"
         "  if( d == (struct dirent *)NULL ) return (char *)NULL;"
         "  return d->d_name;"

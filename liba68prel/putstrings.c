@@ -380,7 +380,8 @@ A_VECTOR(A68_BOOL ,A68t124);
 typedef struct A68t124  A68_124 ;    /* VECTOR [] BOOL */
 A_VECTOR(A68_REAL ,A68t125);
 typedef struct A68t125  A68_125 ;    /* VECTOR [] REAL */
-A_STRAIGHT(A68_VOID,A68t126);
+struct A68t122 ;
+A_STRAIGHT(A68_VOID,A68t126,(A68_INT,char *,struct A68t122 *));
 typedef struct A68t126  A68_126 ;    /* STRAIGHT MODE122 */
 struct A68t122 { A68_INT mode; union {
 A68_INT  mode1;
@@ -2527,9 +2528,9 @@ void QMDAOSF(void)   /* initialise DECS putstrings */
 static A68_BOOL A_invoked = A68_FALSE;
 
 /* --- Configuration information for this module */
-static char *A_config_arguments[] = {"/home/neil/Algol-68RS/algol68toc-1.21/src/a68toc","-v","-uname","seedfile","-staredit","59LR","-lib","/home/neil/Algol-68RS/algol68toc-1.21/a68config","-dir","/home/neil/Algol-68RS/algol68toc-1.21/a68config","-dir","/home/neil/Algol-68RS/algol68toc-1.21/liba68prel","putstrings.a68",""};
-static char *A_config_environment[] = {"A68_LIB=/home/neil/Algol-68RS/algol68toc-1.21/a68config","A68_CDIR=","A68_DIR=","A68_STAREDIT=","A68_NAMESEED=nameseed","CTRANS_NAMESEED=",""};
-static char *A_config_modinfo_files[] = {"/home/neil/Algol-68RS/algol68toc-1.21/a68config/a68config.m","/home/neil/Algol-68RS/algol68toc-1.21/liba68prel/iobasics.m","/home/neil/Algol-68RS/algol68toc-1.21/liba68prel/numberstr.m","/home/neil/Algol-68RS/algol68toc-1.21/liba68prel/strops.m","/home/neil/Algol-68RS/algol68toc-1.21/liba68prel/osif.m",""};
+static char *A_config_arguments[] = {"/home/vak/Project/Algol/Algol-68RS-Source/src/a68toc","-v","-uname","seedfile","-staredit","59LR","-lib","/home/vak/Project/Algol/Algol-68RS-Source/a68config","-dir","/home/vak/Project/Algol/Algol-68RS-Source/a68config","-dir","/home/vak/Project/Algol/Algol-68RS-Source/liba68prel","putstrings.a68",""};
+static char *A_config_environment[] = {"A68_LIB=/home/vak/Project/Algol/Algol-68RS-Source/a68config","A68_CDIR=","A68_DIR=","A68_STAREDIT=","A68_NAMESEED=nameseed","CTRANS_NAMESEED=",""};
+static char *A_config_modinfo_files[] = {"/home/vak/Project/Algol/Algol-68RS-Source/a68config/a68config.m","/home/vak/Project/Algol/Algol-68RS-Source/liba68prel/iobasics.m","/home/vak/Project/Algol/Algol-68RS-Source/liba68prel/numberstr.m","/home/vak/Project/Algol/Algol-68RS-Source/liba68prel/strops.m","/home/vak/Project/Algol/Algol-68RS-Source/liba68prel/osif.m",""};
 static A_CONFIG_INFO A_config;
 /* --- end of configuration information */
 A68_127  OQDAOSF;  /* procedure value */
@@ -2546,11 +2547,11 @@ ZTCAOSF();   /* USE numberstr */
 BCAAOSF();   /* USE strops */
 CSCAOSF();   /* USE osif */
 /* --- Initialise configuration information */
-A_config.source_file = "/home/neil/Algol-68RS/algol68toc-1.21/liba68prel/putstrings.a68";
-A_config.translation_time = "Wed May  5 17:38:59 2021";
+A_config.source_file = "/home/vak/Project/Algol/Algol-68RS-Source/liba68prel/putstrings.a68";
+A_config.translation_time = "Thu Nov  5 20:30:30 2026";
 A_config.ctrans_version = "Ctrans_34.6";
 A_config.name_seed = "PMDAOSF (from seed file) ";
-A_config.spec_change_time = "Wed May  5 17:38:59 2021";
+A_config.spec_change_time = "Thu Nov  5 20:30:30 2026";
 A_config.arguments = A_config_arguments;
 A_config.environment = A_config_environment;
 A_config.modinfo_files = A_config_modinfo_files;

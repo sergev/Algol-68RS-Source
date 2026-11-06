@@ -41,6 +41,8 @@ COMMENT
 05:12:94  33.002  DJS   CmplxNos   No account of "no struct result option" in
                                    A_STRAIGHT. 
 29:03:95  34.003  ELLA  Modcprght Change copyright header
+05:11:26  34.004  SV    C23       Emit prototype for A_STRAIGHT index proc;
+                                  struct result only if element is C struct.
 ??:??:??   ?.???  ????
 COMMENT
 
@@ -1117,14 +1119,19 @@ THEN
      emit incomplete type
    ELSE
       INT elem mode = element mode( mode );
+      BOOL rtn = no struct result option ANDTH is c struct( elem mode );
+
+      write c typedef( elem mode, stream, TRUE );
 
       write c stream
          ( ( "A_STRAIGHT(" +
-             {returnmode (*index)()}
-                IF no struct result option THEN "A68_VOID"
-                                           ELSE  ctagged type(elem mode)
-                FI,  ",",
-             {struct straightmode{...}} ctag (mode), ");",
+             {returnmode (*index)(params)}
+                ( rtn | "A68_VOID" | ctagged type(elem mode) ),  ",",
+             {struct straightmode{...}} ctag (mode), ",",
+             "(A68_INT,char *",
+                ( rtn | "," | "" ),
+                ( rtn | ctagged type(elem mode) | "" ),
+                ( rtn | "*" | "" ), "));",
              cnewline
            ), stream
          );

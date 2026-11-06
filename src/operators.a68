@@ -42,6 +42,8 @@ COMMENT
                                    result option", REAL -> complex coerecion
                                    added. 
 29:03:95  34.003  ELLA  Modcprght Change copyright header
+05:11:26  34.004  SV    C23       Struct result for straight index only if
+                                  element is C struct.
 ??:??:??   ?.???  ????
 COMMENT
 
@@ -452,9 +454,9 @@ BEGIN
 	REF VALUE left, right;  eval2( root, left, right );
 	( mode OF root,
 	  (info OF left AND fxwarn) OR (info OF right AND fxwarn) OR atomic,
-          IF no struct result option
-          THEN  { Take account of "no struct return option".  DCT  18:03:94
-                  result of index is always a struct (ALGOL UNION) }
+          IF no struct result option ANDTH
+             is c struct( element mode( mode OF left ) )
+          THEN  { Take account of "no struct return option".  DCT  18:03:94 }
                 use macro( "A_STRINDEX_RTN",
                            ( left, right,
                              new( mode OF left, "OPERATORS - straight index" ),
@@ -498,7 +500,8 @@ NOTE[2] It is not always necessary to use a temp here, but in cases when the
 
 #define	A_OPSTRAIGHT(c,i,u,str)\
 	((str).composite = (char *) (c),\
-	 (str).index = (i).fn, (str).upb.fn_global = (u), (str))
+	 (str).index = (__typeof__((str).index)) (i).fn.fn_global,\
+	 (str).upb = (u), (str))
 }
 BEGIN
 	REF VALUE left, right; eval2( root, left, right );

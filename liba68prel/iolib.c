@@ -385,7 +385,8 @@ A68_INT  Indent;
 A_PAD_INT(PAD_35)
 };
 typedef struct A68t126  A68_126 ;    /* STRUCT(INT)  */
-A_STRAIGHT(A68_VOID,A68t127);
+struct A68t113 ;
+A_STRAIGHT(A68_VOID,A68t127,(A68_INT,char *,struct A68t113 *));
 typedef struct A68t127  A68_127 ;    /* STRAIGHT MODE113 */
 struct A68t113 { A68_INT mode; union {
 A68_INT  mode1;
@@ -501,7 +502,8 @@ A_ROW(A68_BOOL ,A68t156,1);
 typedef struct A68t156  A68_156 ;    /* [] BOOL */
 A_ROW(A68_REAL ,A68t157,1);
 typedef struct A68t157  A68_157 ;    /* [] REAL */
-A_STRAIGHT(A68_VOID,A68t158);
+struct A68t153 ;
+A_STRAIGHT(A68_VOID,A68t158,(A68_INT,char *,struct A68t153 *));
 typedef struct A68t158  A68_158 ;    /* STRAIGHT MODE153 */
 struct A68t153 { A68_INT mode; union {
 A68_INT * mode1;
@@ -870,9 +872,9 @@ void XKEAOSF(void)   /* initialise DECS iolib */
 static A68_BOOL A_invoked = A68_FALSE;
 
 /* --- Configuration information for this module */
-static char *A_config_arguments[] = {"/home/neil/Algol-68RS/algol68toc-1.21/src/a68toc","-v","-uname","seedfile","-staredit","59LR","-lib","/home/neil/Algol-68RS/algol68toc-1.21/a68config","-dir","/home/neil/Algol-68RS/algol68toc-1.21/a68config","-dir","/home/neil/Algol-68RS/algol68toc-1.21/liba68prel","iolib.a68",""};
-static char *A_config_environment[] = {"A68_LIB=/home/neil/Algol-68RS/algol68toc-1.21/a68config","A68_CDIR=","A68_DIR=","A68_STAREDIT=","A68_NAMESEED=nameseed","CTRANS_NAMESEED=",""};
-static char *A_config_modinfo_files[] = {"/home/neil/Algol-68RS/algol68toc-1.21/a68config/a68config.m","/home/neil/Algol-68RS/algol68toc-1.21/liba68prel/getstrings.m","/home/neil/Algol-68RS/algol68toc-1.21/liba68prel/putstrings.m","/home/neil/Algol-68RS/algol68toc-1.21/liba68prel/messageproc.m","/home/neil/Algol-68RS/algol68toc-1.21/liba68prel/osif.m",""};
+static char *A_config_arguments[] = {"/home/vak/Project/Algol/Algol-68RS-Source/src/a68toc","-v","-uname","seedfile","-staredit","59LR","-lib","/home/vak/Project/Algol/Algol-68RS-Source/a68config","-dir","/home/vak/Project/Algol/Algol-68RS-Source/a68config","-dir","/home/vak/Project/Algol/Algol-68RS-Source/liba68prel","iolib.a68",""};
+static char *A_config_environment[] = {"A68_LIB=/home/vak/Project/Algol/Algol-68RS-Source/a68config","A68_CDIR=","A68_DIR=","A68_STAREDIT=","A68_NAMESEED=nameseed","CTRANS_NAMESEED=",""};
+static char *A_config_modinfo_files[] = {"/home/vak/Project/Algol/Algol-68RS-Source/a68config/a68config.m","/home/vak/Project/Algol/Algol-68RS-Source/liba68prel/getstrings.m","/home/vak/Project/Algol/Algol-68RS-Source/liba68prel/putstrings.m","/home/vak/Project/Algol/Algol-68RS-Source/liba68prel/messageproc.m","/home/vak/Project/Algol/Algol-68RS-Source/liba68prel/osif.m",""};
 static A_CONFIG_INFO A_config;
 /* --- end of configuration information */
 A68_74  TMEAOSF;  /* procedure value */
@@ -884,11 +886,11 @@ QMDAOSF();   /* USE putstrings */
 ZRAAOSF();   /* USE messageproc */
 CSCAOSF();   /* USE osif */
 /* --- Initialise configuration information */
-A_config.source_file = "/home/neil/Algol-68RS/algol68toc-1.21/liba68prel/iolib.a68";
-A_config.translation_time = "Wed May  5 17:38:59 2021";
+A_config.source_file = "/home/vak/Project/Algol/Algol-68RS-Source/liba68prel/iolib.a68";
+A_config.translation_time = "Thu Nov  5 20:30:30 2026";
 A_config.ctrans_version = "Ctrans_34.6";
 A_config.name_seed = "WKEAOSF (from seed file) ";
-A_config.spec_change_time = "Wed May  5 17:38:59 2021";
+A_config.spec_change_time = "Thu Nov  5 20:30:30 2026";
 A_config.arguments = A_config_arguments;
 A_config.environment = A_config_environment;
 A_config.modinfo_files = A_config_modinfo_files;

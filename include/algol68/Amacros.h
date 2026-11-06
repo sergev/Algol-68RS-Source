@@ -372,7 +372,7 @@ register A_DIM		*dim;
 /*	create a straight	*/
 #define	A_OPSTRAIGHT(c,i,u,str)\
 	((str).composite = (char *) (c),\
-	 (str).index = (i).fn.fn_global, (str).upb = (u), (str))
+	 (str).index = (__typeof__((str).index)) (i).fn.fn_global, (str).upb = (u), (str))
 
 /*	vector trim	*/
 

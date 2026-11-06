@@ -1,4 +1,4 @@
-/* UNAME:KTZACTR */
+/* UNAME:LUZACTR */
 #include <algol68/Asupport.h>
 
 A_PROCEDURE(A68_VOID ,A68t31,(A68_VC ,A68_BOOL ),(A68_VC ,A68_BOOL ,void *));
@@ -830,7 +830,7 @@ static A68_VC  A_configinfo;
 
 
 /* --- Imports from identifiers --- */
-extern A68_VOID  YVWACTR_initialiseidentifiers(void);
+extern A68_VOID  ZWWACTR_initialiseidentifiers(void);
 /* --- End of imports from identifiers --- */
 
 
@@ -840,13 +840,13 @@ extern A68_VOID  FVKACTR_initialiseids(A68_INT ,A68_INT ,A68_INT ,A68_INT ,struc
 
 
 /* --- Imports from tracer --- */
-extern A68_51  YEVACTR_calltrace;
-extern A68_VOID  ZXYACTR_trace(struct A68t64 ,struct A68t52 *,A68_BOOL );
+extern A68_51  ZFVACTR_calltrace;
+extern A68_VOID  AZYACTR_trace(struct A68t64 ,struct A68t52 *,A68_BOOL );
 /* --- End of imports from tracer --- */
 
 
 /* --- Imports from evaluator --- */
-extern A68_VOID  JKVACTR_initialiseevaluator(void);
+extern A68_VOID  KLVACTR_initialiseevaluator(void);
 /* --- End of imports from evaluator --- */
 
 
@@ -859,45 +859,45 @@ extern A68_VOID  NJJACTR_initialisetrace(void);
 extern void BAAALIB(void);   /* a68config */
 extern void UAAACTR(void);   /* incimperatives */
 extern void GKJACTR(void);   /* incvalue */
-extern void NKVACTR(void);   /* identifiers */
+extern void OLVACTR(void);   /* identifiers */
 extern void PPKACTR(void);   /* idtable */
-extern void HUYACTR(void);   /* tracer */
-extern void KEVACTR(void);   /* evaluator */
+extern void IVYACTR(void);   /* tracer */
+extern void LFVACTR(void);   /* evaluator */
 extern void HPIACTR(void);   /* environment */
 /* --- end of DECS initialisation functions --- */
-static A68_155   OTZACTR = {"$Id: initialiser.a68,v 1.1.1.1 2001-05-07 10:16:10 sian Exp $"}; 
-A_GISVEC(A68_VC ,PTZACTR,OTZACTR,61)
-static A68_64 * QTZACTR_traceimperative;
+static A68_155   PUZACTR = {"$Id: initialiser.a68,v 1.1.1.1 2001-05-07 10:16:10 sian Exp $"}; 
+A_GISVEC(A68_VC ,QUZACTR,PUZACTR,61)
+static A68_64 * RUZACTR_traceimperative;
 
-A68_VOID  UTZACTR_initialise(A68_142 * Xsizes, A68_64 * Currentimperative, A68_87  Keptdecnos);
+A68_VOID  VUZACTR_initialise(A68_142 * Xsizes, A68_64 * Currentimperative, A68_87  Keptdecnos);
 
-A_STATIC A68_VOID  XTZACTR_anonymous(A68_52 * Root, A68_BOOL  Aftereval);
+A_STATIC A68_VOID  YUZACTR_anonymous(A68_52 * Root, A68_BOOL  Aftereval);
 
-A_STATIC A68_VOID  XTZACTR_anonymous(A68_52 * Root, A68_BOOL  Aftereval)
+A_STATIC A68_VOID  YUZACTR_anonymous(A68_52 * Root, A68_BOOL  Aftereval)
 { 
  /* line 55: */
-ZXYACTR_trace((*QTZACTR_traceimperative), Root, Aftereval);
+AZYACTR_trace((*RUZACTR_traceimperative), Root, Aftereval);
 return;
 } 
 #undef NL
  /* line 51: */
 
-A68_VOID  UTZACTR_initialise(A68_142 * Xsizes, A68_64 * Currentimperative, A68_87  Keptdecnos)
+A68_VOID  VUZACTR_initialise(A68_142 * Xsizes, A68_64 * Currentimperative, A68_87  Keptdecnos)
 { 
-A68_51  YTZACTR;  /* procedure value */
+A68_51  ZUZACTR;  /* procedure value */
 A_PROC_ENTRY(initialise);
  /* line 52: */
  /* line 53: */
 { 
-QTZACTR_traceimperative = Currentimperative;
+RUZACTR_traceimperative = Currentimperative;
  /* line 54: */
-YTZACTR.fn.fn_global = XTZACTR_anonymous;
-YTZACTR.nonlocals = A68_NIL;
-YEVACTR_calltrace = YTZACTR;
+ZUZACTR.fn.fn_global = YUZACTR_anonymous;
+ZUZACTR.nonlocals = A68_NIL;
+ZFVACTR_calltrace = ZUZACTR;
  /* line 57: */
 NJJACTR_initialisetrace();
  /* line 58: */
-JKVACTR_initialiseevaluator();
+KLVACTR_initialiseevaluator();
  /* line 59: */
  /* line 60: */
  /* line 61: */
@@ -908,7 +908,7 @@ FVKACTR_initialiseids((*(&(Xsizes->Nodecnos))), (*(&(Xsizes->Nolibinds))), (*(&(
  /* line 66: */
  /* line 67: */
  /* line 69: */
-YVWACTR_initialiseidentifiers();
+ZWWACTR_initialiseidentifiers();
 } 
 A_PROC_EXIT(initialise);
 return;
@@ -917,14 +917,14 @@ return;
  /* line 1: */
  /* line 2: */
  /* line 4: */
-void LTZACTR(void)   /* initialise DECS initialiser */
+void MUZACTR(void)   /* initialise DECS initialiser */
 { 
 static A68_BOOL A_invoked = A68_FALSE;
 
 /* --- Configuration information for this module */
-static char *A_config_arguments[] = {"/home/neil/Algol-68RS/algol68toc-1.21/src/a68toc","-v","-uname","seedfile","-staredit","59LR","-lib","/home/neil/Algol-68RS/algol68toc-1.21/a68config","-dir","/home/neil/Algol-68RS/algol68toc-1.21/a68config","-dir","/home/neil/Algol-68RS/algol68toc-1.21/liba68prel","-dir",".","initialiser.a68",""};
-static char *A_config_environment[] = {"A68_LIB=/home/neil/Algol-68RS/algol68toc-1.21/a68config","A68_CDIR=","A68_DIR=","A68_STAREDIT=","A68_NAMESEED=nameseed","CTRANS_NAMESEED=",""};
-static char *A_config_modinfo_files[] = {"/home/neil/Algol-68RS/algol68toc-1.21/a68config/a68config.m","./incimperatives.m","./incvalue.m","./common.m","./identifiers.m","./idtable.m","./tracer.m","./evaluator.m","./environment.m",""};
+static char *A_config_arguments[] = {"/home/vak/Project/Algol/Algol-68RS-Source/src/a68toc","-v","-uname","seedfile","-staredit","59LR","-lib","/home/vak/Project/Algol/Algol-68RS-Source/a68config","-dir","/home/vak/Project/Algol/Algol-68RS-Source/a68config","-dir","/home/vak/Project/Algol/Algol-68RS-Source/liba68prel","-dir",".","initialiser.a68",""};
+static char *A_config_environment[] = {"A68_LIB=/home/vak/Project/Algol/Algol-68RS-Source/a68config","A68_CDIR=","A68_DIR=","A68_STAREDIT=","A68_NAMESEED=nameseed","CTRANS_NAMESEED=",""};
+static char *A_config_modinfo_files[] = {"/home/vak/Project/Algol/Algol-68RS-Source/a68config/a68config.m","./incimperatives.m","./incvalue.m","./common.m","./identifiers.m","./idtable.m","./tracer.m","./evaluator.m","./environment.m",""};
 static A_CONFIG_INFO A_config;
 /* --- end of configuration information */
 if( A_invoked ) return;
@@ -932,22 +932,22 @@ A_invoked = A68_TRUE;
 BAAALIB();   /* USE a68config */
 UAAACTR();   /* USE incimperatives */
 GKJACTR();   /* USE incvalue */
-NKVACTR();   /* USE identifiers */
+OLVACTR();   /* USE identifiers */
 PPKACTR();   /* USE idtable */
-HUYACTR();   /* USE tracer */
-KEVACTR();   /* USE evaluator */
+IVYACTR();   /* USE tracer */
+LFVACTR();   /* USE evaluator */
 HPIACTR();   /* USE environment */
 /* --- Initialise configuration information */
-A_config.source_file = "/home/neil/Algol-68RS/algol68toc-1.21/src/initialiser.a68";
-A_config.translation_time = "Wed May  5 17:39:00 2021";
+A_config.source_file = "/home/vak/Project/Algol/Algol-68RS-Source/src/initialiser.a68";
+A_config.translation_time = "Thu Nov  5 20:30:31 2026";
 A_config.ctrans_version = "Ctrans_34.6";
-A_config.name_seed = "KTZACTR (from seed file) ";
-A_config.spec_change_time = "Wed May  5 17:39:00 2021";
+A_config.name_seed = "LUZACTR (from seed file) ";
+A_config.spec_change_time = "Thu Nov  5 20:30:31 2026";
 A_config.arguments = A_config_arguments;
 A_config.environment = A_config_environment;
 A_config.modinfo_files = A_config_modinfo_files;
 A_PROC_ENTRY(DECS initialiser);
-UEAALIB_a68config(LGAALIB_configinfo, PTZACTR);
+UEAALIB_a68config(LGAALIB_configinfo, QUZACTR);
  /* line 48: */
  /* line 50: */
  /* line 71: */

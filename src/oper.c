@@ -1,4 +1,4 @@
-/* UNAME:BPQACTR */
+/* UNAME:BQQACTR */
 #include <algol68/Asupport.h>
 
 A_PROCEDURE(A68_VOID ,A68t31,(A68_VC ,A68_BOOL ),(A68_VC ,A68_BOOL ,void *));
@@ -585,140 +585,140 @@ extern A68_VOID  WXIACTR_assert(A68_VC ,A68_BOOL );
 
 /* --- DECS initialisation functions --- */
 extern void BAAALIB(void);   /* a68config */
-extern void ATPACTR(void);   /* values */
+extern void AUPACTR(void);   /* values */
 extern void XFAACTR(void);   /* incoperfn */
 extern void ZDAACTR(void);   /* incmode */
 extern void UAAACTR(void);   /* incimperatives */
 extern void HPIACTR(void);   /* environment */
 /* --- end of DECS initialisation functions --- */
-static A68_121   FPQACTR = {"$Id: oper.a68,v 1.1.1.1 2001-05-07 10:16:10 sian Exp $"}; 
-A_GISVEC(A68_VC ,GPQACTR,FPQACTR,54)
-#define HPQACTR_oneop 1
-#define IPQACTR_twoop 2
-#define JPQACTR_paramop 3
-#define KPQACTR_paramplusoneop 4
-#define LPQACTR_defaultbound 5
-#define MPQACTR_boundpack 6
-#define NPQACTR_trim 7
-#define OPQACTR_parameterpack 8
-#define PPQACTR_call 9
-#define QPQACTR_nullop 10
-#define RPQACTR_zeroop 11
-#define SPQACTR_formatop 12
-static A68_54  VPQACTR_opertype;
-static A68_123  XPQACTR_noparameterinfo;
-static A68_123  YPQACTR_parameters;
-static A68_132   WSQACTR = {"parampack without call"}; 
-A_GISVEC(A68_VC ,XSQACTR,WSQACTR,22)
-static A68_133   ATQACTR = {"wrong parampack for a call"}; 
-A_GISVEC(A68_VC ,BTQACTR,ATQACTR,26)
-static A68_134   FTQACTR = {"invalid type in oper"}; 
-A_GISVEC(A68_VC ,GTQACTR,FTQACTR,20)
+static A68_121   FQQACTR = {"$Id: oper.a68,v 1.1.1.1 2001-05-07 10:16:10 sian Exp $"}; 
+A_GISVEC(A68_VC ,GQQACTR,FQQACTR,54)
+#define HQQACTR_oneop 1
+#define IQQACTR_twoop 2
+#define JQQACTR_paramop 3
+#define KQQACTR_paramplusoneop 4
+#define LQQACTR_defaultbound 5
+#define MQQACTR_boundpack 6
+#define NQQACTR_trim 7
+#define OQQACTR_parameterpack 8
+#define PQQACTR_call 9
+#define QQQACTR_nullop 10
+#define RQQACTR_zeroop 11
+#define SQQACTR_formatop 12
+static A68_54  VQQACTR_opertype;
+static A68_123  XQQACTR_noparameterinfo;
+static A68_123  YQQACTR_parameters;
+static A68_132   WTQACTR = {"parampack without call"}; 
+A_GISVEC(A68_VC ,XTQACTR,WTQACTR,22)
+static A68_133   AUQACTR = {"wrong parampack for a call"}; 
+A_GISVEC(A68_VC ,BUQACTR,AUQACTR,26)
+static A68_134   FUQACTR = {"invalid type in oper"}; 
+A_GISVEC(A68_VC ,GUQACTR,FUQACTR,20)
 typedef struct   /* env of non-global proc */
 {
 A68_87 ** Valuestack;
 A68_87 * Newspace;
-} UQQACTR_newstackitem;
+} URQACTR_newstackitem;
 typedef struct   /* env of non-global proc */
 {
-A68_126  SQQACTR_newstackitem;
-} ZRQACTR_simpleoper;
+A68_126  SRQACTR_newstackitem;
+} ZSQACTR_simpleoper;
 
-A_STATIC A68_87 * DQQACTR_breakvaluelist(A68_87 * List, A68_87 * Newbackoffrontlist, A68_INT  Index, A68_87 ** Backlistpointer);
+A_STATIC A68_87 * DRQACTR_breakvaluelist(A68_87 * List, A68_87 * Newbackoffrontlist, A68_INT  Index, A68_87 ** Backlistpointer);
 
-A68_VOID  MQQACTR_oper(A68_70  Oper, A68_87 ** Valuestack, A68_87 * Newspace);
+A68_VOID  MRQACTR_oper(A68_70  Oper, A68_87 ** Valuestack, A68_87 * Newspace);
 
-A_STATIC A68_VOID  TQQACTR_newstackitem(A68_INT  Mode, A68_INT  Fn, A68_INT  Param, A68_87 * Operands, void *NonLocals);
+A_STATIC A68_VOID  TRQACTR_newstackitem(A68_INT  Mode, A68_INT  Fn, A68_INT  Param, A68_87 * Operands, void *NonLocals);
 
-A_STATIC A68_87 * ARQACTR_assignment(A68_87 * YQQACTR_anonymous, A68_87  ZQQACTR_anonymous);
+A_STATIC A68_87 * ASQACTR_assignment(A68_87 * YRQACTR_anonymous, A68_87  ZRQACTR_anonymous);
 
-A_STATIC A68_81 * DRQACTR_assignment(A68_81 * BRQACTR_anonymous, A68_81  CRQACTR_anonymous);
+A_STATIC A68_81 * DSQACTR_assignment(A68_81 * BSQACTR_anonymous, A68_81  CSQACTR_anonymous);
 
-A_STATIC A68_82 * IRQACTR_assignment(A68_82 * GRQACTR_anonymous, A68_82  HRQACTR_anonymous);
+A_STATIC A68_82 * ISQACTR_assignment(A68_82 * GSQACTR_anonymous, A68_82  HSQACTR_anonymous);
 
-A_STATIC A68_VOID  YRQACTR_simpleoper(A68_87 ** Valuestack, A68_INT  Mode, A68_INT  Operfn, A68_INT  Numberoperands, A68_BITS  Param, A68_87 * Newspace, void *NonLocals);
+A_STATIC A68_VOID  YSQACTR_simpleoper(A68_87 ** Valuestack, A68_INT  Mode, A68_INT  Operfn, A68_INT  Numberoperands, A68_BITS  Param, A68_87 * Newspace, void *NonLocals);
 
-A_STATIC A68_82 * IRQACTR_assignment(A68_82 * GRQACTR_anonymous, A68_82  HRQACTR_anonymous)
+A_STATIC A68_82 * ISQACTR_assignment(A68_82 * GSQACTR_anonymous, A68_82  HSQACTR_anonymous)
 { 
-A68_82  JRQACTR;  /* united object - for case conformity */
-A68_VC  KRQACTR_anonymous;
-A68_VC  LRQACTR;  /* OPERATORS - copy to flex */
-A68_130 * MRQACTR;  /* YIELD */
-A68_82 * NRQACTR;  /* clause result */
+A68_82  JSQACTR;  /* united object - for case conformity */
+A68_VC  KSQACTR_anonymous;
+A68_VC  LSQACTR;  /* OPERATORS - copy to flex */
+A68_130 * MSQACTR;  /* YIELD */
+A68_82 * NSQACTR;  /* clause result */
 { 
-(*GRQACTR_anonymous) = HRQACTR_anonymous;
-JRQACTR = HRQACTR_anonymous ;
-switch ( JRQACTR.mode )
+(*GSQACTR_anonymous) = HSQACTR_anonymous;
+JSQACTR = HSQACTR_anonymous ;
+switch ( JSQACTR.mode )
 { 
 case 6: /* VECTOR [] CHAR */
-KRQACTR_anonymous = (JRQACTR.data.mode6);
-MRQACTR = &(GRQACTR_anonymous-> data.mode6) ;
-(*MRQACTR) = A_VCOPY(KRQACTR_anonymous,LRQACTR,A68_CHAR );
+KSQACTR_anonymous = (JSQACTR.data.mode6);
+MSQACTR = &(GSQACTR_anonymous-> data.mode6) ;
+(*MSQACTR) = A_VCOPY(KSQACTR_anonymous,LSQACTR,A68_CHAR );
 break;
 default: 
 /*SKIP*/;
 break;
 } 
-NRQACTR = GRQACTR_anonymous;
+NSQACTR = GSQACTR_anonymous;
 } 
-return( NRQACTR );
-} 
-#undef NL
-
-A_STATIC A68_81 * DRQACTR_assignment(A68_81 * BRQACTR_anonymous, A68_81  CRQACTR_anonymous)
-{ 
-A68_INT * ERQACTR;  /* YIELD */
-A68_BITS * FRQACTR;  /* YIELD */
-A68_81 * ORQACTR;  /* clause result */
-{ 
-ERQACTR = (&(BRQACTR_anonymous->Mode)) ;
-(*ERQACTR) = CRQACTR_anonymous.Mode;
-FRQACTR = (&(BRQACTR_anonymous->Info)) ;
-(*FRQACTR) = CRQACTR_anonymous.Info;
-IRQACTR_assignment((&(BRQACTR_anonymous->Extra)), CRQACTR_anonymous.Extra);
-ORQACTR = BRQACTR_anonymous;
-} 
-return( ORQACTR );
+return( NSQACTR );
 } 
 #undef NL
 
-A_STATIC A68_87 * ARQACTR_assignment(A68_87 * YQQACTR_anonymous, A68_87  ZQQACTR_anonymous)
+A_STATIC A68_81 * DSQACTR_assignment(A68_81 * BSQACTR_anonymous, A68_81  CSQACTR_anonymous)
 { 
-A68_87 ** PRQACTR;  /* YIELD */
-A68_87 * QRQACTR;  /* clause result */
+A68_INT * ESQACTR;  /* YIELD */
+A68_BITS * FSQACTR;  /* YIELD */
+A68_81 * OSQACTR;  /* clause result */
 { 
-DRQACTR_assignment((&(YQQACTR_anonymous->Value)), ZQQACTR_anonymous.Value);
-PRQACTR = (&(YQQACTR_anonymous->Rest)) ;
-(*PRQACTR) = ZQQACTR_anonymous.Rest;
-QRQACTR = YQQACTR_anonymous;
+ESQACTR = (&(BSQACTR_anonymous->Mode)) ;
+(*ESQACTR) = CSQACTR_anonymous.Mode;
+FSQACTR = (&(BSQACTR_anonymous->Info)) ;
+(*FSQACTR) = CSQACTR_anonymous.Info;
+ISQACTR_assignment((&(BSQACTR_anonymous->Extra)), CSQACTR_anonymous.Extra);
+OSQACTR = BSQACTR_anonymous;
 } 
-return( QRQACTR );
+return( OSQACTR );
 } 
 #undef NL
 
-A_STATIC A68_VOID  TQQACTR_newstackitem(A68_INT  Mode, A68_INT  Fn, A68_INT  Param, A68_87 * Operands, void *NonLocals)
-#define NL(x) (((UQQACTR_newstackitem *)NonLocals)->x)
+A_STATIC A68_87 * ASQACTR_assignment(A68_87 * YRQACTR_anonymous, A68_87  ZRQACTR_anonymous)
 { 
-A68_87  VQQACTR;  /* collateral clause result */
-A68_86  WQQACTR;  /* collateral clause result */
-A68_82  XQQACTR;  /* OPERATORS - mode -> union mode */
+A68_87 ** PSQACTR;  /* YIELD */
+A68_87 * QSQACTR;  /* clause result */
+{ 
+DSQACTR_assignment((&(YRQACTR_anonymous->Value)), ZRQACTR_anonymous.Value);
+PSQACTR = (&(YRQACTR_anonymous->Rest)) ;
+(*PSQACTR) = ZRQACTR_anonymous.Rest;
+QSQACTR = YRQACTR_anonymous;
+} 
+return( QSQACTR );
+} 
+#undef NL
+
+A_STATIC A68_VOID  TRQACTR_newstackitem(A68_INT  Mode, A68_INT  Fn, A68_INT  Param, A68_87 * Operands, void *NonLocals)
+#define NL(x) (((URQACTR_newstackitem *)NonLocals)->x)
+{ 
+A68_87  VRQACTR;  /* collateral clause result */
+A68_86  WRQACTR;  /* collateral clause result */
+A68_82  XRQACTR;  /* OPERATORS - mode -> union mode */
 A_PROC_ENTRY(newstackitem);
  /* line 171: */
  /* line 172: */
  /* line 173: */
  /* line 174: */
-VQQACTR.Value.Mode = Mode;
+VRQACTR.Value.Mode = Mode;
  /* line 175: */
-VQQACTR.Value.Info = PKJACTR_defaultinfo;
-WQQACTR.Fn = Fn;
-WQQACTR.Param = Param;
+VRQACTR.Value.Info = PKJACTR_defaultinfo;
+WRQACTR.Fn = Fn;
+WRQACTR.Param = Param;
  /* line 176: */
-WQQACTR.Operands = Operands;
+WRQACTR.Operands = Operands;
  /* line 178: */
-VQQACTR.Value.Extra = A_UNITE(XQQACTR,mode9,9,WQQACTR);
+VRQACTR.Value.Extra = A_UNITE(XRQACTR,mode9,9,WRQACTR);
  /* line 179: */
-VQQACTR.Rest = (*NL(Valuestack));
-(*NL(Valuestack)) = ARQACTR_assignment(NL(Newspace), VQQACTR);
+VRQACTR.Rest = (*NL(Valuestack));
+(*NL(Valuestack)) = ASQACTR_assignment(NL(Newspace), VRQACTR);
 A_PROC_EXIT(newstackitem);
 return;
 } 
@@ -727,41 +727,41 @@ return;
  /* line 184: */
  /* line 186: */
 
-A_STATIC A68_VOID  YRQACTR_simpleoper(A68_87 ** Valuestack, A68_INT  Mode, A68_INT  Operfn, A68_INT  Numberoperands, A68_BITS  Param, A68_87 * Newspace, void *NonLocals)
-#define NL(x) (((ZRQACTR_simpleoper *)NonLocals)->x)
+A_STATIC A68_VOID  YSQACTR_simpleoper(A68_87 ** Valuestack, A68_INT  Mode, A68_INT  Operfn, A68_INT  Numberoperands, A68_BITS  Param, A68_87 * Newspace, void *NonLocals)
+#define NL(x) (((ZSQACTR_simpleoper *)NonLocals)->x)
 { 
-A68_87 * ASQACTR_operands;
-A68_87 ** BSQACTR_breakpoint;
-A68_INT  CSQACTR;  /* to part of loop */
-A68_INT  DSQACTR;  /* loop control */
-A68_BITS  ESQACTR;  /* SHL */
+A68_87 * ATQACTR_operands;
+A68_87 ** BTQACTR_breakpoint;
+A68_INT  CTQACTR;  /* to part of loop */
+A68_INT  DTQACTR;  /* loop control */
+A68_BITS  ETQACTR;  /* SHL */
 A_PROC_ENTRY(simpleoper);
  /* line 191: */
  /* line 193: */
 { 
-ASQACTR_operands = (*Valuestack);
+ATQACTR_operands = (*Valuestack);
  /* line 194: */
-BSQACTR_breakpoint = Valuestack;
+BTQACTR_breakpoint = Valuestack;
  /* line 195: */
-CSQACTR = Numberoperands;
-for ( DSQACTR = 1;
-DSQACTR <= CSQACTR;
-DSQACTR += 1 )
+CTQACTR = Numberoperands;
+for ( DTQACTR = 1;
+DTQACTR <= CTQACTR;
+DTQACTR += 1 )
 { 
-BSQACTR_breakpoint = (&((*BSQACTR_breakpoint)->Rest));
+BTQACTR_breakpoint = (&((*BTQACTR_breakpoint)->Rest));
 }
  /* line 196: */
-(*Valuestack) = (*BSQACTR_breakpoint);
+(*Valuestack) = (*BTQACTR_breakpoint);
  /* line 197: */
-(*BSQACTR_breakpoint) = (A68_87 *)A68_NIL;
+(*BTQACTR_breakpoint) = (A68_87 *)A68_NIL;
  /* line 199: */
  /* line 200: */
  /* line 201: */
  /* line 202: */
  /* line 204: */
  /* line 205: */
-ESQACTR = (A68_BITS )Numberoperands ;
-A_CALLPROC(NL(SQQACTR_newstackitem),(Mode, Operfn, (A68_INT )(A68_BITS )(A_SHL(ESQACTR,WGAACTR_operandsshift)|Param), ASQACTR_operands),(Mode, Operfn, (A68_INT )(A68_BITS )(A_SHL(ESQACTR,WGAACTR_operandsshift)|Param), ASQACTR_operands,(NL(SQQACTR_newstackitem)).nonlocals));
+ETQACTR = (A68_BITS )Numberoperands ;
+A_CALLPROC(NL(SRQACTR_newstackitem),(Mode, Operfn, (A68_INT )(A68_BITS )(A_SHL(ETQACTR,WGAACTR_operandsshift)|Param), ATQACTR_operands),(Mode, Operfn, (A68_INT )(A68_BITS )(A_SHL(ETQACTR,WGAACTR_operandsshift)|Param), ATQACTR_operands,(NL(SRQACTR_newstackitem)).nonlocals));
 } 
 A_PROC_EXIT(simpleoper);
 return;
@@ -770,100 +770,100 @@ return;
  /* line 120: */
  /* line 122: */
 
-A_STATIC A68_87 * DQQACTR_breakvaluelist(A68_87 * List, A68_87 * Newbackoffrontlist, A68_INT  Index, A68_87 ** Backlistpointer)
+A_STATIC A68_87 * DRQACTR_breakvaluelist(A68_87 * List, A68_87 * Newbackoffrontlist, A68_INT  Index, A68_87 ** Backlistpointer)
 { 
-A68_87 * EQQACTR_front;
-A68_87 ** FQQACTR_breakpoint;
-A68_INT  GQQACTR;  /* to part of loop */
-A68_INT  HQQACTR;  /* loop control */
-A68_87 * IQQACTR;  /* clause result */
+A68_87 * ERQACTR_front;
+A68_87 ** FRQACTR_breakpoint;
+A68_INT  GRQACTR;  /* to part of loop */
+A68_INT  HRQACTR;  /* loop control */
+A68_87 * IRQACTR;  /* clause result */
 A_PROC_ENTRY(breakvaluelist);
  /* line 131: */
  /* line 132: */
 { 
-EQQACTR_front = List;
+ERQACTR_front = List;
  /* line 133: */
-FQQACTR_breakpoint = (&EQQACTR_front);
+FRQACTR_breakpoint = (&ERQACTR_front);
  /* line 134: */
-GQQACTR = Index;
-for ( HQQACTR = 1;
-HQQACTR <= GQQACTR;
-HQQACTR += 1 )
+GRQACTR = Index;
+for ( HRQACTR = 1;
+HRQACTR <= GRQACTR;
+HRQACTR += 1 )
 { 
-FQQACTR_breakpoint = (&((*FQQACTR_breakpoint)->Rest));
+FRQACTR_breakpoint = (&((*FRQACTR_breakpoint)->Rest));
 }
  /* line 135: */
-(*Backlistpointer) = (*FQQACTR_breakpoint);
+(*Backlistpointer) = (*FRQACTR_breakpoint);
  /* line 136: */
-(*FQQACTR_breakpoint) = Newbackoffrontlist;
+(*FRQACTR_breakpoint) = Newbackoffrontlist;
  /* line 137: */
  /* line 138: */
-IQQACTR = EQQACTR_front;
+IRQACTR = ERQACTR_front;
 } 
 A_PROC_EXIT(breakvaluelist);
-return( IQQACTR );
+return( IRQACTR );
 } 
 #undef NL
  /* line 142: */
  /* line 144: */
 
-A68_VOID  MQQACTR_oper(A68_70  Oper, A68_87 ** Valuestack, A68_87 * Newspace)
+A68_VOID  MRQACTR_oper(A68_70  Oper, A68_87 ** Valuestack, A68_87 * Newspace)
 { 
-A68_126  SQQACTR_newstackitem;   /* proc value of non-global proc */
-A68_131  XRQACTR_simpleoper;   /* proc value of non-global proc */
-A68_BITS  FSQACTR_param;
-A68_INT  GSQACTR_operfn;
-A68_INT  HSQACTR_opermode;
-A68_87 * ISQACTR_operands;
-A68_87 ** JSQACTR;  /* YIELD */
-A68_BITS  KSQACTR;  /* SHL */
-A68_87 * LSQACTR_operands;
-A68_87 ** MSQACTR;  /* YIELD */
-A68_BITS  NSQACTR;  /* SHL */
-A68_87 * OSQACTR_operands;
-A68_87 * PSQACTR_operands;
-A68_BITS  QSQACTR;  /* SHL */
-A68_81  RSQACTR;  /* collateral clause result */
-A68_82  SSQACTR;  /* OPERATORS - mode -> union mode */
-A68_LBITS  TSQACTR;  /* YIELD */
-A68_87 * USQACTR_operands;
-A68_87 * VSQACTR_operands;
-A68_123  YSQACTR;  /* collateral clause result */
-A68_INT * ZSQACTR_procmode;
-A68_87 * CTQACTR_operands;
-A68_BITS  DTQACTR;  /* SHL */
-A68_INT  ETQACTR;  /* clause result */
+A68_126  SRQACTR_newstackitem;   /* proc value of non-global proc */
+A68_131  XSQACTR_simpleoper;   /* proc value of non-global proc */
+A68_BITS  FTQACTR_param;
+A68_INT  GTQACTR_operfn;
+A68_INT  HTQACTR_opermode;
+A68_87 * ITQACTR_operands;
+A68_87 ** JTQACTR;  /* YIELD */
+A68_BITS  KTQACTR;  /* SHL */
+A68_87 * LTQACTR_operands;
+A68_87 ** MTQACTR;  /* YIELD */
+A68_BITS  NTQACTR;  /* SHL */
+A68_87 * OTQACTR_operands;
+A68_87 * PTQACTR_operands;
+A68_BITS  QTQACTR;  /* SHL */
+A68_81  RTQACTR;  /* collateral clause result */
+A68_82  STQACTR;  /* OPERATORS - mode -> union mode */
+A68_LBITS  TTQACTR;  /* YIELD */
+A68_87 * UTQACTR_operands;
+A68_87 * VTQACTR_operands;
+A68_123  YTQACTR;  /* collateral clause result */
+A68_INT * ZTQACTR_procmode;
+A68_87 * CUQACTR_operands;
+A68_BITS  DUQACTR;  /* SHL */
+A68_INT  EUQACTR;  /* clause result */
 A_PROC_ENTRY(oper);
  /* line 167: */
  /* line 169: */
 { 
  /* line 170: */
-A_CLOSURE( SQQACTR_newstackitem, TQQACTR_newstackitem, UQQACTR_newstackitem );
-(( UQQACTR_newstackitem * ) ( SQQACTR_newstackitem.nonlocals )) -> Valuestack = Valuestack;
-(( UQQACTR_newstackitem * ) ( SQQACTR_newstackitem.nonlocals )) -> Newspace = Newspace;
+A_CLOSURE( SRQACTR_newstackitem, TRQACTR_newstackitem, URQACTR_newstackitem );
+(( URQACTR_newstackitem * ) ( SRQACTR_newstackitem.nonlocals )) -> Valuestack = Valuestack;
+(( URQACTR_newstackitem * ) ( SRQACTR_newstackitem.nonlocals )) -> Newspace = Newspace;
  /* line 181: */
  /* line 182: */
-A_CLOSURE( XRQACTR_simpleoper, YRQACTR_simpleoper, ZRQACTR_simpleoper );
-(( ZRQACTR_simpleoper * ) ( XRQACTR_simpleoper.nonlocals )) -> SQQACTR_newstackitem = SQQACTR_newstackitem;
+A_CLOSURE( XSQACTR_simpleoper, YSQACTR_simpleoper, ZSQACTR_simpleoper );
+(( ZSQACTR_simpleoper * ) ( XSQACTR_simpleoper.nonlocals )) -> SRQACTR_newstackitem = SRQACTR_newstackitem;
  /* line 206: */
-FSQACTR_param = (A68_BITS )((A68_BITS )Oper.Param&ZGAACTR_parammask);
+FTQACTR_param = (A68_BITS )((A68_BITS )Oper.Param&ZGAACTR_parammask);
  /* line 207: */
-GSQACTR_operfn = Oper.Fn;
-HSQACTR_opermode = Oper.Mode;
+GTQACTR_operfn = Oper.Fn;
+HTQACTR_opermode = Oper.Mode;
  /* line 208: */
  /* line 209: */
  /* line 211: */
-switch ( A_R1INDEX(VPQACTR_opertype,GSQACTR_operfn) )
+switch ( A_R1INDEX(VQQACTR_opertype,GTQACTR_operfn) )
 { 
 case 1: 
  /* line 212: */
 { 
-ISQACTR_operands = (*Valuestack);
+ITQACTR_operands = (*Valuestack);
  /* line 213: */
 (*Valuestack) = (*(&((*Valuestack)->Rest)));
  /* line 214: */
-JSQACTR = (&(ISQACTR_operands->Rest)) ;
-(*JSQACTR) = (A68_87 *)A68_NIL;
+JTQACTR = (&(ITQACTR_operands->Rest)) ;
+(*JTQACTR) = (A68_87 *)A68_NIL;
  /* line 216: */
  /* line 217: */
  /* line 218: */
@@ -872,19 +872,19 @@ JSQACTR = (&(ISQACTR_operands->Rest)) ;
  /* line 222: */
  /* line 223: */
  /* line 225: */
-KSQACTR = 01U ;
-A_CALLPROC(SQQACTR_newstackitem,(HSQACTR_opermode, GSQACTR_operfn, (A68_INT )(A68_BITS )(A_SHL(KSQACTR,WGAACTR_operandsshift)|FSQACTR_param), ISQACTR_operands),(HSQACTR_opermode, GSQACTR_operfn, (A68_INT )(A68_BITS )(A_SHL(KSQACTR,WGAACTR_operandsshift)|FSQACTR_param), ISQACTR_operands,(SQQACTR_newstackitem).nonlocals));
+KTQACTR = 01U ;
+A_CALLPROC(SRQACTR_newstackitem,(HTQACTR_opermode, GTQACTR_operfn, (A68_INT )(A68_BITS )(A_SHL(KTQACTR,WGAACTR_operandsshift)|FTQACTR_param), ITQACTR_operands),(HTQACTR_opermode, GTQACTR_operfn, (A68_INT )(A68_BITS )(A_SHL(KTQACTR,WGAACTR_operandsshift)|FTQACTR_param), ITQACTR_operands,(SRQACTR_newstackitem).nonlocals));
 } 
 break;
 case 2: 
  /* line 226: */
 { 
-LSQACTR_operands = (*Valuestack);
+LTQACTR_operands = (*Valuestack);
  /* line 227: */
 (*Valuestack) = (*(&((*(&((*Valuestack)->Rest)))->Rest)));
  /* line 228: */
-MSQACTR = (&((*(&(LSQACTR_operands->Rest)))->Rest)) ;
-(*MSQACTR) = (A68_87 *)A68_NIL;
+MTQACTR = (&((*(&(LTQACTR_operands->Rest)))->Rest)) ;
+(*MTQACTR) = (A68_87 *)A68_NIL;
  /* line 229: */
  /* line 230: */
  /* line 231: */
@@ -893,14 +893,14 @@ MSQACTR = (&((*(&(LSQACTR_operands->Rest)))->Rest)) ;
  /* line 235: */
  /* line 236: */
  /* line 238: */
-NSQACTR = 02U ;
-A_CALLPROC(SQQACTR_newstackitem,(HSQACTR_opermode, GSQACTR_operfn, (A68_INT )(A68_BITS )(A_SHL(NSQACTR,WGAACTR_operandsshift)|FSQACTR_param), LSQACTR_operands),(HSQACTR_opermode, GSQACTR_operfn, (A68_INT )(A68_BITS )(A_SHL(NSQACTR,WGAACTR_operandsshift)|FSQACTR_param), LSQACTR_operands,(SQQACTR_newstackitem).nonlocals));
+NTQACTR = 02U ;
+A_CALLPROC(SRQACTR_newstackitem,(HTQACTR_opermode, GTQACTR_operfn, (A68_INT )(A68_BITS )(A_SHL(NTQACTR,WGAACTR_operandsshift)|FTQACTR_param), LTQACTR_operands),(HTQACTR_opermode, GTQACTR_operfn, (A68_INT )(A68_BITS )(A_SHL(NTQACTR,WGAACTR_operandsshift)|FTQACTR_param), LTQACTR_operands,(SRQACTR_newstackitem).nonlocals));
 } 
 break;
 case 3: 
  /* line 240: */
 { 
-OSQACTR_operands = DQQACTR_breakvaluelist((*Valuestack), (A68_87 *)A68_NIL, (A68_INT )FSQACTR_param, Valuestack);
+OTQACTR_operands = DRQACTR_breakvaluelist((*Valuestack), (A68_87 *)A68_NIL, (A68_INT )FTQACTR_param, Valuestack);
  /* line 241: */
  /* line 242: */
  /* line 243: */
@@ -909,13 +909,13 @@ OSQACTR_operands = DQQACTR_breakvaluelist((*Valuestack), (A68_87 *)A68_NIL, (A68
  /* line 247: */
  /* line 248: */
  /* line 250: */
-A_CALLPROC(SQQACTR_newstackitem,(HSQACTR_opermode, GSQACTR_operfn, (A68_INT )(A68_BITS )(A_SHL(FSQACTR_param,WGAACTR_operandsshift)|FSQACTR_param), OSQACTR_operands),(HSQACTR_opermode, GSQACTR_operfn, (A68_INT )(A68_BITS )(A_SHL(FSQACTR_param,WGAACTR_operandsshift)|FSQACTR_param), OSQACTR_operands,(SQQACTR_newstackitem).nonlocals));
+A_CALLPROC(SRQACTR_newstackitem,(HTQACTR_opermode, GTQACTR_operfn, (A68_INT )(A68_BITS )(A_SHL(FTQACTR_param,WGAACTR_operandsshift)|FTQACTR_param), OTQACTR_operands),(HTQACTR_opermode, GTQACTR_operfn, (A68_INT )(A68_BITS )(A_SHL(FTQACTR_param,WGAACTR_operandsshift)|FTQACTR_param), OTQACTR_operands,(SRQACTR_newstackitem).nonlocals));
 } 
 break;
 case 4: 
  /* line 252: */
 { 
-PSQACTR_operands = DQQACTR_breakvaluelist((*Valuestack), (A68_87 *)A68_NIL, ((A68_INT )FSQACTR_param+1), Valuestack);
+PTQACTR_operands = DRQACTR_breakvaluelist((*Valuestack), (A68_87 *)A68_NIL, ((A68_INT )FTQACTR_param+1), Valuestack);
  /* line 253: */
  /* line 254: */
  /* line 255: */
@@ -924,29 +924,29 @@ PSQACTR_operands = DQQACTR_breakvaluelist((*Valuestack), (A68_87 *)A68_NIL, ((A6
  /* line 259: */
  /* line 260: */
  /* line 262: */
-QSQACTR = (A68_BITS )((A68_INT )FSQACTR_param+1) ;
-A_CALLPROC(SQQACTR_newstackitem,(HSQACTR_opermode, GSQACTR_operfn, (A68_INT )(A68_BITS )(A_SHL(QSQACTR,WGAACTR_operandsshift)|FSQACTR_param), PSQACTR_operands),(HSQACTR_opermode, GSQACTR_operfn, (A68_INT )(A68_BITS )(A_SHL(QSQACTR,WGAACTR_operandsshift)|FSQACTR_param), PSQACTR_operands,(SQQACTR_newstackitem).nonlocals));
+QTQACTR = (A68_BITS )((A68_INT )FTQACTR_param+1) ;
+A_CALLPROC(SRQACTR_newstackitem,(HTQACTR_opermode, GTQACTR_operfn, (A68_INT )(A68_BITS )(A_SHL(QTQACTR,WGAACTR_operandsshift)|FTQACTR_param), PTQACTR_operands),(HTQACTR_opermode, GTQACTR_operfn, (A68_INT )(A68_BITS )(A_SHL(QTQACTR,WGAACTR_operandsshift)|FTQACTR_param), PTQACTR_operands,(SRQACTR_newstackitem).nonlocals));
 } 
 break;
 case 5: 
  /* line 263: */
 { 
-RSQACTR.Mode = EFAACTR_intmode;
-RSQACTR.Info = PKJACTR_defaultinfo;
-TSQACTR = (A68_LBITS )0X1U ;
-RSQACTR.Extra = A_UNITE(SSQACTR,mode1,1,TSQACTR);
-DRQACTR_assignment((&(Newspace->Value)), RSQACTR);
+RTQACTR.Mode = EFAACTR_intmode;
+RTQACTR.Info = PKJACTR_defaultinfo;
+TTQACTR = (A68_LBITS )0X1U ;
+RTQACTR.Extra = A_UNITE(STQACTR,mode1,1,TTQACTR);
+DSQACTR_assignment((&(Newspace->Value)), RTQACTR);
  /* line 264: */
  /* line 265: */
  /* line 266: */
  /* line 268: */
-DQQACTR_breakvaluelist((*Valuestack), Newspace, 1, (&(Newspace->Rest)));
+DRQACTR_breakvaluelist((*Valuestack), Newspace, 1, (&(Newspace->Rest)));
 } 
 break;
 case 6: 
  /* line 270: */
 { 
-USQACTR_operands = DQQACTR_breakvaluelist((*Valuestack), (A68_87 *)A68_NIL, (A68_INT )FSQACTR_param, Valuestack);
+UTQACTR_operands = DRQACTR_breakvaluelist((*Valuestack), (A68_87 *)A68_NIL, (A68_INT )FTQACTR_param, Valuestack);
  /* line 271: */
  /* line 272: */
  /* line 273: */
@@ -955,13 +955,13 @@ USQACTR_operands = DQQACTR_breakvaluelist((*Valuestack), (A68_87 *)A68_NIL, (A68
  /* line 277: */
  /* line 278: */
  /* line 280: */
-A_CALLPROC(SQQACTR_newstackitem,(VEAACTR_faultmode, EGAACTR_boundpackfn, (A68_INT )(A68_BITS )(A_SHL(FSQACTR_param,WGAACTR_operandsshift)|FSQACTR_param), USQACTR_operands),(VEAACTR_faultmode, EGAACTR_boundpackfn, (A68_INT )(A68_BITS )(A_SHL(FSQACTR_param,WGAACTR_operandsshift)|FSQACTR_param), USQACTR_operands,(SQQACTR_newstackitem).nonlocals));
+A_CALLPROC(SRQACTR_newstackitem,(VEAACTR_faultmode, EGAACTR_boundpackfn, (A68_INT )(A68_BITS )(A_SHL(FTQACTR_param,WGAACTR_operandsshift)|FTQACTR_param), UTQACTR_operands),(VEAACTR_faultmode, EGAACTR_boundpackfn, (A68_INT )(A68_BITS )(A_SHL(FTQACTR_param,WGAACTR_operandsshift)|FTQACTR_param), UTQACTR_operands,(SRQACTR_newstackitem).nonlocals));
 } 
 break;
 case 7: 
  /* line 282: */
 { 
-VSQACTR_operands = DQQACTR_breakvaluelist((*Valuestack), (A68_87 *)A68_NIL, (A68_INT )FSQACTR_param, Valuestack);
+VTQACTR_operands = DRQACTR_breakvaluelist((*Valuestack), (A68_87 *)A68_NIL, (A68_INT )FTQACTR_param, Valuestack);
  /* line 283: */
  /* line 284: */
  /* line 285: */
@@ -970,37 +970,37 @@ VSQACTR_operands = DQQACTR_breakvaluelist((*Valuestack), (A68_87 *)A68_NIL, (A68
  /* line 289: */
  /* line 290: */
  /* line 292: */
-A_CALLPROC(SQQACTR_newstackitem,(VEAACTR_faultmode, DGAACTR_trimfn, (A68_INT )(A68_BITS )(A_SHL(FSQACTR_param,WGAACTR_operandsshift)|(A68_BITS )HSQACTR_opermode), VSQACTR_operands),(VEAACTR_faultmode, DGAACTR_trimfn, (A68_INT )(A68_BITS )(A_SHL(FSQACTR_param,WGAACTR_operandsshift)|(A68_BITS )HSQACTR_opermode), VSQACTR_operands,(SQQACTR_newstackitem).nonlocals));
+A_CALLPROC(SRQACTR_newstackitem,(VEAACTR_faultmode, DGAACTR_trimfn, (A68_INT )(A68_BITS )(A_SHL(FTQACTR_param,WGAACTR_operandsshift)|(A68_BITS )HTQACTR_opermode), VTQACTR_operands),(VEAACTR_faultmode, DGAACTR_trimfn, (A68_INT )(A68_BITS )(A_SHL(FTQACTR_param,WGAACTR_operandsshift)|(A68_BITS )HTQACTR_opermode), VTQACTR_operands,(SRQACTR_newstackitem).nonlocals));
 } 
 break;
 case 8: 
  /* line 294: */
 { 
-WXIACTR_assert(XSQACTR, ((*(&((&YPQACTR_parameters)->Parameters)))==(A68_87 *)A68_NIL));
+WXIACTR_assert(XTQACTR, ((*(&((&YQQACTR_parameters)->Parameters)))==(A68_87 *)A68_NIL));
  /* line 295: */
  /* line 296: */
  /* line 297: */
-YSQACTR.Number = (A68_INT )FSQACTR_param;
+YTQACTR.Number = (A68_INT )FTQACTR_param;
  /* line 298: */
-YSQACTR.Procmode = HSQACTR_opermode;
+YTQACTR.Procmode = HTQACTR_opermode;
  /* line 299: */
  /* line 300: */
-YSQACTR.Parameters = DQQACTR_breakvaluelist((*Valuestack), (A68_87 *)A68_NIL, (A68_INT )FSQACTR_param, Valuestack);
+YTQACTR.Parameters = DRQACTR_breakvaluelist((*Valuestack), (A68_87 *)A68_NIL, (A68_INT )FTQACTR_param, Valuestack);
  /* line 301: */
  /* line 303: */
-YPQACTR_parameters = YSQACTR;
+YQQACTR_parameters = YTQACTR;
 } 
 break;
 case 9: 
  /* line 304: */
 { 
-ZSQACTR_procmode = (&((&((*Valuestack)->Value))->Mode));
+ZTQACTR_procmode = (&((&((*Valuestack)->Value))->Mode));
  /* line 305: */
  /* line 307: */
-if ( ((*ZSQACTR_procmode)==OFAACTR_longlongcomplmode) )
+if ( ((*ZTQACTR_procmode)==OFAACTR_longlongcomplmode) )
 { 
  /* line 308: */
-(*ZSQACTR_procmode) = (*(&((&YPQACTR_parameters)->Procmode)));
+(*ZTQACTR_procmode) = (*(&((&YQQACTR_parameters)->Procmode)));
 } 
 else
 { 
@@ -1010,21 +1010,21 @@ else
  /* line 312: */
  /* line 313: */
  /* line 315: */
-WXIACTR_assert(BTQACTR, ((((((*(&((&YPQACTR_parameters)->Procmode)))==PEAACTR_nomode)|((*(&((&YPQACTR_parameters)->Procmode)))==(*ZSQACTR_procmode)))|(FSQACTR_param==01U))|(FSQACTR_param==02U))|(FSQACTR_param==03U)));
+WXIACTR_assert(BUQACTR, ((((((*(&((&YQQACTR_parameters)->Procmode)))==PEAACTR_nomode)|((*(&((&YQQACTR_parameters)->Procmode)))==(*ZTQACTR_procmode)))|(FTQACTR_param==01U))|(FTQACTR_param==02U))|(FTQACTR_param==03U)));
 } 
  /* line 316: */
-CTQACTR_operands = DQQACTR_breakvaluelist((*Valuestack), (*(&((&YPQACTR_parameters)->Parameters))), 1, Valuestack);
+CUQACTR_operands = DRQACTR_breakvaluelist((*Valuestack), (*(&((&YQQACTR_parameters)->Parameters))), 1, Valuestack);
  /* line 317: */
  /* line 318: */
  /* line 319: */
  /* line 320: */
  /* line 322: */
-DTQACTR = (A68_BITS )((*(&((&YPQACTR_parameters)->Number)))+1) ;
-A_CALLPROC(SQQACTR_newstackitem,(HSQACTR_opermode, KGAACTR_callfn, (A68_INT )(A68_BITS )(A_SHL(DTQACTR,WGAACTR_operandsshift)|FSQACTR_param), CTQACTR_operands),(HSQACTR_opermode, KGAACTR_callfn, (A68_INT )(A68_BITS )(A_SHL(DTQACTR,WGAACTR_operandsshift)|FSQACTR_param), CTQACTR_operands,(SQQACTR_newstackitem).nonlocals));
+DUQACTR = (A68_BITS )((*(&((&YQQACTR_parameters)->Number)))+1) ;
+A_CALLPROC(SRQACTR_newstackitem,(HTQACTR_opermode, KGAACTR_callfn, (A68_INT )(A68_BITS )(A_SHL(DUQACTR,WGAACTR_operandsshift)|FTQACTR_param), CUQACTR_operands),(HTQACTR_opermode, KGAACTR_callfn, (A68_INT )(A68_BITS )(A_SHL(DUQACTR,WGAACTR_operandsshift)|FTQACTR_param), CUQACTR_operands,(SRQACTR_newstackitem).nonlocals));
  /* line 323: */
  /* line 324: */
  /* line 327: */
-YPQACTR_parameters = XPQACTR_noparameterinfo;
+YQQACTR_parameters = XQQACTR_noparameterinfo;
 } 
 break;
 case 10: 
@@ -1036,7 +1036,7 @@ case 11:
  /* line 332: */
  /* line 334: */
  /* line 338: */
-A_CALLPROC(SQQACTR_newstackitem,(HSQACTR_opermode, GSQACTR_operfn, (A68_INT )FSQACTR_param, (A68_87 *)A68_NIL),(HSQACTR_opermode, GSQACTR_operfn, (A68_INT )FSQACTR_param, (A68_87 *)A68_NIL,(SQQACTR_newstackitem).nonlocals));
+A_CALLPROC(SRQACTR_newstackitem,(HTQACTR_opermode, GTQACTR_operfn, (A68_INT )FTQACTR_param, (A68_87 *)A68_NIL),(HTQACTR_opermode, GTQACTR_operfn, (A68_INT )FTQACTR_param, (A68_87 *)A68_NIL,(SRQACTR_newstackitem).nonlocals));
 break;
 case 12: 
  /* line 339: */
@@ -1044,25 +1044,25 @@ case 12:
  /* line 341: */
  /* line 342: */
  /* line 343: */
-if ( (FSQACTR_param==0X0U) )
+if ( (FTQACTR_param==0X0U) )
 { 
  /* line 344: */
-ETQACTR = 2;
+EUQACTR = 2;
 } 
 else
 { 
-ETQACTR = 3;
+EUQACTR = 3;
 } 
  /* line 345: */
  /* line 347: */
  /* line 348: */
-A_CALLPROC(XRQACTR_simpleoper,(Valuestack, HSQACTR_opermode, GSQACTR_operfn, ETQACTR, FSQACTR_param, Newspace),(Valuestack, HSQACTR_opermode, GSQACTR_operfn, ETQACTR, FSQACTR_param, Newspace,(XRQACTR_simpleoper).nonlocals));
+A_CALLPROC(XSQACTR_simpleoper,(Valuestack, HTQACTR_opermode, GTQACTR_operfn, EUQACTR, FTQACTR_param, Newspace),(Valuestack, HTQACTR_opermode, GTQACTR_operfn, EUQACTR, FTQACTR_param, Newspace,(XSQACTR_simpleoper).nonlocals));
 break;
 default: 
  /* line 349: */
  /* line 351: */
  /* line 353: */
-WXIACTR_assert(GTQACTR, A68_FALSE);
+WXIACTR_assert(GUQACTR, A68_FALSE);
 break;
 } 
 } 
@@ -1073,38 +1073,38 @@ return;
  /* line 1: */
  /* line 2: */
  /* line 4: */
-void CPQACTR(void)   /* initialise DECS oper */
+void CQQACTR(void)   /* initialise DECS oper */
 { 
 static A68_BOOL A_invoked = A68_FALSE;
 
 /* --- Configuration information for this module */
-static char *A_config_arguments[] = {"/home/neil/Algol-68RS/algol68toc-1.21/src/a68toc","-v","-uname","seedfile","-staredit","59LR","-lib","/home/neil/Algol-68RS/algol68toc-1.21/a68config","-dir","/home/neil/Algol-68RS/algol68toc-1.21/a68config","-dir","/home/neil/Algol-68RS/algol68toc-1.21/liba68prel","-dir",".","oper.a68",""};
-static char *A_config_environment[] = {"A68_LIB=/home/neil/Algol-68RS/algol68toc-1.21/a68config","A68_CDIR=","A68_DIR=","A68_STAREDIT=","A68_NAMESEED=nameseed","CTRANS_NAMESEED=",""};
-static char *A_config_modinfo_files[] = {"/home/neil/Algol-68RS/algol68toc-1.21/a68config/a68config.m","./values.m","./incoperfn.m","./incmode.m","./incimperatives.m","./environment.m",""};
+static char *A_config_arguments[] = {"/home/vak/Project/Algol/Algol-68RS-Source/src/a68toc","-v","-uname","seedfile","-staredit","59LR","-lib","/home/vak/Project/Algol/Algol-68RS-Source/a68config","-dir","/home/vak/Project/Algol/Algol-68RS-Source/a68config","-dir","/home/vak/Project/Algol/Algol-68RS-Source/liba68prel","-dir",".","oper.a68",""};
+static char *A_config_environment[] = {"A68_LIB=/home/vak/Project/Algol/Algol-68RS-Source/a68config","A68_CDIR=","A68_DIR=","A68_STAREDIT=","A68_NAMESEED=nameseed","CTRANS_NAMESEED=",""};
+static char *A_config_modinfo_files[] = {"/home/vak/Project/Algol/Algol-68RS-Source/a68config/a68config.m","./values.m","./incoperfn.m","./incmode.m","./incimperatives.m","./environment.m",""};
 static A_CONFIG_INFO A_config;
 /* --- end of configuration information */
-A68_122  TPQACTR;  /* collateral clause result */
-A68_54  UPQACTR;  /* OPERATORS - istruct to row */
-A68_123  WPQACTR;  /* collateral clause result */
+A68_122  TQQACTR;  /* collateral clause result */
+A68_54  UQQACTR;  /* OPERATORS - istruct to row */
+A68_123  WQQACTR;  /* collateral clause result */
 if( A_invoked ) return;
 A_invoked = A68_TRUE;
 BAAALIB();   /* USE a68config */
-ATPACTR();   /* USE values */
+AUPACTR();   /* USE values */
 XFAACTR();   /* USE incoperfn */
 ZDAACTR();   /* USE incmode */
 UAAACTR();   /* USE incimperatives */
 HPIACTR();   /* USE environment */
 /* --- Initialise configuration information */
-A_config.source_file = "/home/neil/Algol-68RS/algol68toc-1.21/src/oper.a68";
-A_config.translation_time = "Wed May  5 17:38:59 2021";
+A_config.source_file = "/home/vak/Project/Algol/Algol-68RS-Source/src/oper.a68";
+A_config.translation_time = "Thu Nov  5 20:30:31 2026";
 A_config.ctrans_version = "Ctrans_34.6";
-A_config.name_seed = "BPQACTR (from seed file) ";
-A_config.spec_change_time = "Wed May  5 17:38:59 2021";
+A_config.name_seed = "BQQACTR (from seed file) ";
+A_config.spec_change_time = "Thu Nov  5 20:30:31 2026";
 A_config.arguments = A_config_arguments;
 A_config.environment = A_config_environment;
 A_config.modinfo_files = A_config_modinfo_files;
 A_PROC_ENTRY(DECS oper);
-UEAALIB_a68config(LGAALIB_configinfo, GPQACTR);
+UEAALIB_a68config(LGAALIB_configinfo, GQQACTR);
  /* line 43: */
  /* line 44: */
  /* line 45: */
@@ -1121,115 +1121,115 @@ UEAALIB_a68config(LGAALIB_configinfo, GPQACTR);
  /* line 57: */
  /* line 58: */
  /* line 59: */
-TPQACTR.data[0] = HPQACTR_oneop;
+TQQACTR.data[0] = HQQACTR_oneop;
  /* line 60: */
-TPQACTR.data[1] = OPQACTR_parameterpack;
+TQQACTR.data[1] = OQQACTR_parameterpack;
  /* line 61: */
-TPQACTR.data[2] = HPQACTR_oneop;
+TQQACTR.data[2] = HQQACTR_oneop;
  /* line 62: */
-TPQACTR.data[3] = HPQACTR_oneop;
+TQQACTR.data[3] = HQQACTR_oneop;
  /* line 63: */
-TPQACTR.data[4] = NPQACTR_trim;
+TQQACTR.data[4] = NQQACTR_trim;
  /* line 64: */
-TPQACTR.data[5] = KPQACTR_paramplusoneop;
+TQQACTR.data[5] = KQQACTR_paramplusoneop;
  /* line 65: */
-TPQACTR.data[6] = KPQACTR_paramplusoneop;
+TQQACTR.data[6] = KQQACTR_paramplusoneop;
  /* line 66: */
-TPQACTR.data[7] = IPQACTR_twoop;
+TQQACTR.data[7] = IQQACTR_twoop;
  /* line 67: */
-TPQACTR.data[8] = MPQACTR_boundpack;
+TQQACTR.data[8] = MQQACTR_boundpack;
  /* line 68: */
-TPQACTR.data[9] = IPQACTR_twoop;
+TQQACTR.data[9] = IQQACTR_twoop;
  /* line 69: */
-TPQACTR.data[10] = HPQACTR_oneop;
+TQQACTR.data[10] = HQQACTR_oneop;
  /* line 70: */
-TPQACTR.data[11] = IPQACTR_twoop;
+TQQACTR.data[11] = IQQACTR_twoop;
  /* line 71: */
-TPQACTR.data[12] = QPQACTR_nullop;
+TQQACTR.data[12] = QQQACTR_nullop;
  /* line 72: */
-TPQACTR.data[13] = IPQACTR_twoop;
+TQQACTR.data[13] = IQQACTR_twoop;
  /* line 73: */
-TPQACTR.data[14] = IPQACTR_twoop;
+TQQACTR.data[14] = IQQACTR_twoop;
  /* line 74: */
-TPQACTR.data[15] = LPQACTR_defaultbound;
+TQQACTR.data[15] = LQQACTR_defaultbound;
  /* line 75: */
-TPQACTR.data[16] = HPQACTR_oneop;
+TQQACTR.data[16] = HQQACTR_oneop;
  /* line 76: */
-TPQACTR.data[17] = PPQACTR_call;
+TQQACTR.data[17] = PQQACTR_call;
  /* line 77: */
-TPQACTR.data[18] = HPQACTR_oneop;
+TQQACTR.data[18] = HQQACTR_oneop;
  /* line 78: */
-TPQACTR.data[19] = HPQACTR_oneop;
+TQQACTR.data[19] = HQQACTR_oneop;
  /* line 79: */
-TPQACTR.data[20] = HPQACTR_oneop;
+TQQACTR.data[20] = HQQACTR_oneop;
  /* line 80: */
-TPQACTR.data[21] = HPQACTR_oneop;
+TQQACTR.data[21] = HQQACTR_oneop;
  /* line 81: */
-TPQACTR.data[22] = HPQACTR_oneop;
+TQQACTR.data[22] = HQQACTR_oneop;
  /* line 82: */
-TPQACTR.data[23] = HPQACTR_oneop;
+TQQACTR.data[23] = HQQACTR_oneop;
  /* line 83: */
-TPQACTR.data[24] = HPQACTR_oneop;
+TQQACTR.data[24] = HQQACTR_oneop;
  /* line 84: */
-TPQACTR.data[25] = HPQACTR_oneop;
+TQQACTR.data[25] = HQQACTR_oneop;
  /* line 85: */
-TPQACTR.data[26] = HPQACTR_oneop;
+TQQACTR.data[26] = HQQACTR_oneop;
  /* line 86: */
-TPQACTR.data[27] = HPQACTR_oneop;
+TQQACTR.data[27] = HQQACTR_oneop;
  /* line 87: */
-TPQACTR.data[28] = HPQACTR_oneop;
+TQQACTR.data[28] = HQQACTR_oneop;
  /* line 88: */
-TPQACTR.data[29] = HPQACTR_oneop;
+TQQACTR.data[29] = HQQACTR_oneop;
  /* line 89: */
-TPQACTR.data[30] = HPQACTR_oneop;
+TQQACTR.data[30] = HQQACTR_oneop;
  /* line 90: */
-TPQACTR.data[31] = HPQACTR_oneop;
+TQQACTR.data[31] = HQQACTR_oneop;
  /* line 91: */
-TPQACTR.data[32] = HPQACTR_oneop;
+TQQACTR.data[32] = HQQACTR_oneop;
  /* line 92: */
-TPQACTR.data[33] = HPQACTR_oneop;
+TQQACTR.data[33] = HQQACTR_oneop;
  /* line 93: */
-TPQACTR.data[34] = HPQACTR_oneop;
+TQQACTR.data[34] = HQQACTR_oneop;
  /* line 94: */
-TPQACTR.data[35] = HPQACTR_oneop;
+TQQACTR.data[35] = HQQACTR_oneop;
  /* line 95: */
-TPQACTR.data[36] = HPQACTR_oneop;
+TQQACTR.data[36] = HQQACTR_oneop;
  /* line 96: */
-TPQACTR.data[37] = HPQACTR_oneop;
+TQQACTR.data[37] = HQQACTR_oneop;
  /* line 97: */
-TPQACTR.data[38] = HPQACTR_oneop;
+TQQACTR.data[38] = HQQACTR_oneop;
  /* line 98: */
-TPQACTR.data[39] = HPQACTR_oneop;
+TQQACTR.data[39] = HQQACTR_oneop;
  /* line 99: */
-TPQACTR.data[40] = 999;
+TQQACTR.data[40] = 999;
  /* line 100: */
-TPQACTR.data[41] = 999;
+TQQACTR.data[41] = 999;
  /* line 101: */
-TPQACTR.data[42] = 999;
+TQQACTR.data[42] = 999;
  /* line 102: */
-TPQACTR.data[43] = 999;
+TQQACTR.data[43] = 999;
  /* line 103: */
-TPQACTR.data[44] = 999;
+TQQACTR.data[44] = 999;
  /* line 104: */
-TPQACTR.data[45] = 999;
+TQQACTR.data[45] = 999;
  /* line 105: */
-TPQACTR.data[46] = 999;
+TQQACTR.data[46] = 999;
  /* line 106: */
-TPQACTR.data[47] = 999;
+TQQACTR.data[47] = 999;
  /* line 108: */
-TPQACTR.data[48] = 999;
+TQQACTR.data[48] = 999;
  /* line 110: */
-TPQACTR.data[49] = RPQACTR_zeroop;
-TPQACTR.data[50] = SPQACTR_formatop;
-VPQACTR_opertype = A_HIS1ARR(UPQACTR,TPQACTR,A68_INT ,51);
+TQQACTR.data[49] = RQQACTR_zeroop;
+TQQACTR.data[50] = SQQACTR_formatop;
+VQQACTR_opertype = A_HIS1ARR(UQQACTR,TQQACTR,A68_INT ,51);
  /* line 112: */
  /* line 114: */
-WPQACTR.Number = 0;
-WPQACTR.Procmode = PEAACTR_nomode;
-WPQACTR.Parameters = (A68_87 *)A68_NIL;
-XPQACTR_noparameterinfo = WPQACTR;
+WQQACTR.Number = 0;
+WQQACTR.Procmode = PEAACTR_nomode;
+WQQACTR.Parameters = (A68_87 *)A68_NIL;
+XQQACTR_noparameterinfo = WQQACTR;
  /* line 116: */
-YPQACTR_parameters = XPQACTR_noparameterinfo;
+YQQACTR_parameters = XQQACTR_noparameterinfo;
  /* line 118: */
  /* line 119: */
  /* line 140: */

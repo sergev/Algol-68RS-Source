@@ -301,9 +301,9 @@ typedef A_VECTOR(A68_BOOL,) A_VBOOL;
 
 /*	straight	*/
 
-#define	A_STRAIGHT(r,s)\
+#define	A_STRAIGHT(r,s,params)\
 	struct s {char    *composite;\
-		  r       (*index)();\
+		  r       (*index)params;\
 		  A68_INT upb;}
 
 /*	indexable structure of amode	*/
@@ -315,11 +315,6 @@ typedef A_VECTOR(A68_BOOL,) A_VBOOL;
     struct{ char x[sizeof(int)-(sizeof(mode)&(sizeof(int)-1))];} u##_a;
 
 /*	proc returning amode	*/
-
-/* redundant for ANSI C */
-#define	A_PROC(amode,tag)\
-	struct tag { amode (*fn)(); char *nonlocals; }
-
 
 #define A_PROCEDURE(amode,tag,PGLOB,PNONGLOB) \
   struct tag { \

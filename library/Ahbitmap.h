@@ -189,7 +189,7 @@
 typedef _bit_type       *BITMAPPTR;
 
 #ifdef  A_ALLOCA_BITMAP
-extern char *   alloca();
+#include <alloca.h>
 #define BMAP_ALLOC(bitmap_LVALUE,n)     ((bitmap_LVALUE) = (BITMAPPTR)alloca((size_t)(n)))
 #define BMAP_FREE(n)
 #else
