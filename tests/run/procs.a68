@@ -1,0 +1,37 @@
+PROGRAM procs CONTEXT VOID
+USE standard
+BEGIN
+   PROC fact = (INT n) LONG INT: IF n <= 1 THEN LONG 1 ELSE LENG n * fact(n - 1) FI;
+   print(("20! = ", whole(fact(20), 0), newline));
+   PROC ack = (INT m, n) INT:
+      IF m = 0 THEN n + 1
+      ELIF n = 0 THEN ack(m - 1, 1)
+      ELSE ack(m - 1, ack(m, n - 1))
+      FI;
+   print(("ack(2,3) = ", whole(ack(2, 3), 0), newline));
+   PROC twice = (PROC(INT)INT f, INT x) INT: f(f(x));
+   print(("twice square 3 = ", whole(twice((INT x)INT: x * x, 3), 0), newline));
+   INT counter := 0;
+   PROC bump = VOID: counter +:= 1;
+   TO 5 DO bump OD;
+   print(("counter ", whole(counter, 0), newline));
+   PROC (INT)INT op := (INT x)INT: x + 1;
+   print(("op 1: ", whole(op(10), 0)));
+   op := (INT x)INT: x * 10;
+   print((", op 2: ", whole(op(10), 0), newline));
+   PRIO PLUS = 6;
+   OP PLUS = (INT a, b) INT: a + b + 1000;
+   OP DOUBLE = (INT a) INT: a * 2;
+   print(("ops ", whole(2 PLUS 3 * 4, 0), " ", whole(DOUBLE 21, 0), newline));
+   MODE POINT = STRUCT(INT x, y);
+   OP + = (POINT a, b) POINT: (x OF a + x OF b, y OF a + y OF b);
+   POINT p = POINT (1, 2) + POINT (30, 40);
+   print(("point ", whole(x OF p, 0), ",", whole(y OF p, 0), newline));
+   PROC swap = (REF INT a, b) VOID: (INT t = a; a := b; b := t);
+   INT u := 1, v := 2;
+   swap(u, v);
+   print(("swapped ", whole(u, 0), " ", whole(v, 0), newline));
+   PROC fib = (INT n) INT: IF n < 2 THEN n ELSE fib(n - 1) + fib(n - 2) FI;
+   print(("fib 25 = ", whole(fib(25), 0), newline))
+END
+FINISH

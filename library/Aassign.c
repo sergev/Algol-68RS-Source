@@ -63,6 +63,8 @@ A68_VOID A_PVASSIGN( const void *p_d1, void *p_d2, A68_INT upb1, const A68_INT u
   char *d2 = p_d2;
 	if (upb1 != upb2)
 		A_ERROR("A_PVASSIGN: bounds do not match in VECTOR[] assignment");
+	if (upb1 <= 0)
+		return;		/* empty: data may be NULL */
 	if (d2 >= d1 && d2 <= d1 +upb1 *length)
 	{
 		d1 += (upb1 -1) *length;

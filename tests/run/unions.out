@@ -1,0 +1,9 @@
+int 42
+real 2.50
+string text
+true
+something else
+widened int 7
+widened real 1.25
+is int T F
+16 9 4 1 

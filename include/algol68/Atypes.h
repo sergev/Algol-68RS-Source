@@ -54,6 +54,16 @@
 /*	generated declarations may legitimately be unused	*/
 #define	A_UNUSED	__attribute__((__unused__))
 
+/*	functions calling sigsetjmp: locals are not volatile, so do not
+	keep them in registers across siglongjmp	*/
+#if defined(__clang__)
+#define	A_SETJMP_FN	__attribute__((__optnone__, __noinline__))
+#elif defined(__GNUC__)
+#define	A_SETJMP_FN	__attribute__((__optimize__("O0")))
+#else
+#define	A_SETJMP_FN
+#endif
+
 /*	storage class for C static functions - make global for debugging */
 
 #ifdef	A_DEBUG

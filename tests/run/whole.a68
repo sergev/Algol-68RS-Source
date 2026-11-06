@@ -1,0 +1,23 @@
+PROGRAM whole CONTEXT VOID
+USE standard
+BEGIN
+   # whole: width 0 = minimal, > 0 = signed, < 0 = sign only if negative #
+   PROC w = (INT v, INT width) VOID:
+      print(("whole(", whole(v, 0), ",", whole(width, 0), ") = [",
+             whole(v, width), "]", newline));
+   []INT values = (0, 1, -1, 42, -42, max int, -max int - 1);
+   []INT widths = (0, 6, -6, 2, -2, 12, -12);
+   FOR i TO UPB values DO
+      FOR j TO UPB widths DO w(values[i], widths[j]) OD
+   OD;
+   PROC lw = (LONG INT v, INT width) VOID:
+      print(("long [", whole(v, width), "]", newline));
+   lw(LONG 0, 3);
+   lw(long max int, 0);
+   lw(-long max int - LONG 1, 0);
+   lw(-long max int - LONG 1, 21);
+   lw(LONG 123456789012, -15);
+   SHORT INT s = SHORTEN 1234;
+   print(("short [", whole(s, 6), "]", newline))
+END
+FINISH

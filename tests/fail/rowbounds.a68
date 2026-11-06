@@ -1,0 +1,9 @@
+PROGRAM rowbounds CONTEXT VOID
+USE standard
+BEGIN
+   [2,3]INT m;
+   INT j := 0;
+   m[1,j] := 7;
+   print((m[1,1], newline))
+END
+FINISH

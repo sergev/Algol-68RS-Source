@@ -119,11 +119,9 @@ BEGIN
 			evaluate ( value );
 			"evaluate no result: mode of value not void"
   			ASSERT mode OF value = void mode;
- 			write c stream
-			(( ( ISSKIP value | ""
-			   | CFRAGMENT f = GETCFRAGMENT value;
-			     PROC is ident = BOOL:
-			     BEGIN
+			CFRAGMENT f = IF ISSKIP value THEN "" ELSE GETCFRAGMENT value FI;
+			PROC is ident = BOOL:
+			BEGIN
 				BOOL ok := UPB f > 0;
 				FOR i TO UPB f WHILE ok
 				DO CHAR c = f[i];
@@ -132,19 +130,17 @@ BEGIN
 					 OREL (c >= "0" ANDTH c <= "9")
 				OD;
 				ok
-			     END;
-			     { void a call/macro so its result is not "unused";
-			       a lone identifier (struct result temp) has no effect }
-			     ( is ident
-			     | ""
-			     |: UPB f > 0 ANDTH f[UPB f] = ")"
-			     | "(void)(" + f + ")"
-			     | f
-			     )
-			   ), ";",
-			   cnewline
-			 ),codestream
-			)
+			END;
+			{ void a call/macro so its result is not "unused";
+			  a lone identifier (struct result temp) has no effect }
+			CFRAGMENT statement =
+				IF	is ident
+				THEN	""
+				ELIF	UPB f > 0 ANDTH f[UPB f] = ")"
+				THEN	"(void)(" + f + ")"
+				ELSE	f
+				FI;
+ 			write c stream(( statement, ";", cnewline ), codestream )
 		FI;
 		IF	TRACELEVEL "clauses" /= 0
 		ANDTH	(valuestack ISNT nil value list)
@@ -341,16 +337,16 @@ BEGIN
 		WHILE i <= hi
 		DO	CHAR c = f[i];
 			IF	q /= " "
-			THEN	( c = "\" | i +:= 1 |: c = q | q := " " )
+			THEN	IF c = "\" THEN i +:= 1 ELIF c = q THEN q := " " FI
 			ELIF	c = "'" OREL c = """"
 			THEN	q := c
 			ELIF	c = "("
 			THEN	d +:= 1
 			ELIF	c = ")"
 			THEN	d -:= 1;
-				( d = 0 | ( NOT at top( i ) | i := hi ) )
-			ELIF	d = 0
-			THEN	( NOT at top( i ) | i := hi )
+				IF d = 0 ANDTH NOT at top( i ) THEN i := hi FI
+			ELIF	d = 0 ANDTH NOT at top( i )
+			THEN	i := hi
 			FI;
 			i +:= 1
 		OD
@@ -370,7 +366,7 @@ BEGIN
 			      ANDTH f[i-1] = " " ANDTH f[i+1] = " ";
 		NOT assignment ) );
 	CFRAGMENT c = f[lo:hi];
-	( assignment | "(" + c + ")" | c )
+	IF assignment THEN "(" + c + ")" ELSE c FI
 END;
 
 PROC	then = ( REF VALUE enquiry ) VOID:

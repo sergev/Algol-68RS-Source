@@ -2,6 +2,9 @@ DECS spaliens CONTEXT VOID
 USE spmodes:
 
 COMMENT
+   2026-11-05 SV  prbs step, long prbs step: random steps without
+                  signed overflow.
+
    $Log: spaliens.a68,v $
    Revision 1.8  2012/01/04 17:23:31  sian
    Replaced the ALIENs for ROUND and ENTIER
@@ -368,11 +371,22 @@ PROC fe get round = INT:
   INT CODE "RESULT=fegetround();";
 PROC(REAL)INT lrint = ALIEN "lrint" "/**/";
 
+# Random number steps: c1 * ABS r + c2, wrapping like two's complement.
+  Done in unsigned C arithmetic: signed overflow is undefined. #
+PROC(INT,INT,INT)INT prbs step = ALIEN "A_PRBS_STEP"
+  "#define A_PRBS_STEP(c1,r,c2) ((A68_INT)((unsigned)(c1) * \"
+  "  ((r) < 0 ? 0u - (unsigned)(r) : (unsigned)(r)) + (unsigned)(c2)))";
+PROC(LONG INT,LONG INT,LONG INT)LONG INT long prbs step = ALIEN "A_LPRBS_STEP"
+  "#define A_LPRBS_STEP(c1,r,c2) ((A68_LINT)((unsigned long long)(c1) * \"
+  "  ((r) < 0 ? 0ull - (unsigned long long)(r) : (unsigned long long)(r)) + \"
+  "  (unsigned long long)(c2)))";
+
 SKIP
 
 KEEP
 fe to nearest, fe downward,
 fe set round, fe get round, lrint,
+prbs step, long prbs step,
 
 null c charptr, max abs char,
 max int, short max int, short short max int,

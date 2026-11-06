@@ -3632,6 +3632,7 @@ A_STATIC A68_VOID  QBCACTR_outmess(A68_INT  N, void *NonLocals);
 A_STATIC A68_VOID  ZBCACTR_outint(A68_INT  I, void *NonLocals);
 
 A_STATIC A68_VOID  KCCACTR_outmode(A68_INT  Mode, A68_BOOL  High, void *NonLocals);
+A_SETJMP_FN A_STATIC A68_VOID  QZBACTR_faultp(A68_INT  Messno, A68_INT  M1, A68_INT  M2, A68_31 * Id, void *NonLocals);
 
 A_STATIC A68_INT  WECACTR_marker(A68_INT  Mode, void *NonLocals);
 
@@ -3696,6 +3697,7 @@ A_STATIC A68_BOOL  CIDACTR_equality(A68_INT  I, A68_INT  J, A68_INT  Lastdone, v
 A_STATIC A68_VOID  LIDACTR_f(A68_INT  I, A68_INT  J, void *NonLocals);
 
 A_STATIC A68_VOID  CJDACTR_generator(A68_BOOL  AJDACTR_anonymous, A68_198  *ReturnedValue, void *NonLocals);
+A_SETJMP_FN A_STATIC A68_BOOL  CIDACTR_equality(A68_INT  I, A68_INT  J, A68_INT  Lastdone, void *NonLocals);
 
 A_STATIC A68_BOOL  QLDACTR_mcond(A68_INT  A, A68_54 * Ml, A68_INT  X, void *NonLocals);
 
@@ -3840,6 +3842,8 @@ A_STATIC A68_VOID  VNGACTR_generator(A68_BOOL  TNGACTR_anonymous, A68_128  *Retu
 A_STATIC A68_VOID  TQGACTR_generator(A68_BOOL  RQGACTR_anonymous, A68_128  *ReturnedValue, void *NonLocals);
 
 A_STATIC A68_VOID  WVGACTR_generator(A68_BOOL  UVGACTR_anonymous, A68_127  *ReturnedValue, void *NonLocals);
+A_SETJMP_FN A_STATIC A68_VOID  HFFACTR_range(A68_126 * External, A68_67 * Rdname, A68_110 * Indname, A68_BOOL * Saveexit, A68_124  *ReturnedValue, void *NonLocals);
+A_SETJMP_FN A68_BOOL  URAACTR_compile(A68_134  Input, A68_135  Output, A68_136  Flt, A68_137  Message, A68_138  Givemoduledetails, A68_139  Givespec, A68_140  Lookup, A68_142  Charset);
 
 A_STATIC A68_VOID  CJDACTR_generator(A68_BOOL  AJDACTR_anonymous, A68_198  *ReturnedValue, void *NonLocals)
 #define NL(x) (((DJDACTR_generator *)NonLocals)->x)
@@ -32009,10 +32013,10 @@ ODAACTR();   /* USE incinstallation */
 BAAACTR();   /* USE incid */
 /* --- Initialise configuration information */
 A_config.source_file = "/home/vak/Project/Algol/Algol-68RS-Source/src/rscompiler.a68";
-A_config.translation_time = "Thu Nov  5 21:10:59 2026";
+A_config.translation_time = "Thu Nov  5 21:38:57 2026";
 A_config.ctrans_version = "Ctrans_34.6";
 A_config.name_seed = "YJAACTR (from seed file) ";
-A_config.spec_change_time = "Thu Nov  5 21:10:59 2026";
+A_config.spec_change_time = "Thu Nov  5 21:38:57 2026";
 A_config.arguments = A_config_arguments;
 A_config.environment = A_config_environment;
 A_config.modinfo_files = A_config_modinfo_files;

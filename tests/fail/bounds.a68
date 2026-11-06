@@ -1,0 +1,8 @@
+PROGRAM bounds CONTEXT VOID
+USE standard
+BEGIN
+   [3]INT a := (1, 2, 3);
+   INT i := 4;
+   print((a[i], newline))
+END
+FINISH

@@ -1,0 +1,38 @@
+PROGRAM arrays CONTEXT VOID
+USE standard
+BEGIN
+   [5]INT a := (10, 20, 30, 40, 50);
+   print(("a ", LWB a, UPB a, newline));
+   [0:4]INT b;
+   FOR i FROM LWB b TO UPB b DO b[i] := i * i OD;
+   print(("b ", b, newline));
+   []INT slice = a[2:4];
+   print(("slice ", LWB slice, UPB slice, slice, newline));
+   []INT shifted = a[2:4 AT 0];
+   print(("at 0 ", LWB shifted, UPB shifted, newline));
+   [3,4]INT m;
+   FOR i TO 3 DO FOR j TO 4 DO m[i,j] := i * 10 + j OD OD;
+   print(("row 2 ", m[2,], newline));
+   print(("col 3 ", m[,3], newline));
+   print(("sub ", m[2:3, 2:3], newline));
+   print(("bounds ", 1 LWB m, 1 UPB m, 2 LWB m, 2 UPB m, newline));
+   FLEX [1:0]INT f;
+   FOR i TO 5 DO
+      [UPB f + 1]INT g;
+      g[:UPB f] := f;
+      g[UPB g] := i * 3;
+      f := g
+   OD;
+   print(("flex ", UPB f, f, newline));
+   [][]INT jagged = ((1), (2, 3), (4, 5, 6));
+   INT total := 0;
+   FOR i TO UPB jagged DO FOR j TO UPB jagged[i] DO total +:= jagged[i][j] OD OD;
+   print(("jagged total ", total, newline));
+   [3]REAL r := (1.5, 2.5, 3.0);
+   REAL sum := 0;
+   FOR i TO UPB r DO sum +:= r[i] OD;
+   print(("real sum ", fixed(sum, 0, 1), newline));
+   a[2:3] := (99, 98);
+   print(("assigned ", a, newline))
+END
+FINISH

@@ -41,6 +41,7 @@ COMMENT
 29:03:95  34.002  ELLA  Modcprght Change copyright header
 10:06:03  34.003  SL    Phoenix Engineering SL: changed main header and macro
 05:11:26  34.004  SV    Wall      A_config may be unused.
+05:11:26  34.005  SV    Setjmp    Note C function prototypes per level.
 ??:??:??   ?.???  ????
 COMMENT
 
@@ -70,6 +71,7 @@ BEGIN
 	    	label stream  = LABELSTREAM  current level;
 
 	write c stream( ( "} ", cnewline, "#undef NL", cnewline ), code stream );
+	end routine prototype( current level );
 	write c stream( label stream, locdec stream ); { go to label stream }
 	write c stream( code stream, label stream ) { go back to code stream }
 END;
@@ -227,6 +229,8 @@ CO Next but one line changed by Phoenix Engineering SL BP65-06-10
    (("int main(int argc, char *argv[], char *envp[])", cnewline
 	 ),code stream
 	);
+	note routine prototype( current level,
+				"int main(int argc, char *argv[], char *envp[])" );
 
 	write initial open curly;
 
@@ -269,6 +273,7 @@ BEGIN
 	   cnewline
 	 ),code stream
 	);
+	note routine prototype( current level, "void " + uniquename + "(void)" );
 
 	write initial open curly;
 

@@ -1,0 +1,8 @@
+Proc 1 registered
+Proc 1o registered
+Proc 2 registered
+Proc 2o registered
+Called with value 0, Proc 2o elaborated
+Proc 2 elaborated
+Called with value 0, Proc 1o elaborated
+Proc 1 elaborated

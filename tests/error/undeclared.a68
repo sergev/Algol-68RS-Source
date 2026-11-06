@@ -1,0 +1,6 @@
+PROGRAM undeclared CONTEXT VOID
+USE standard
+BEGIN
+   print((y, newline))
+END
+FINISH

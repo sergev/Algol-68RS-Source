@@ -1,0 +1,19 @@
+7 OVER 2 = 3
+-7 OVER 2 = -3
+7 MOD 3 = 1
+-7 MOD 3 = 2
+7 MOD -3 = 1
+ABS -5 = 5
+SIGN -5 = -1
+SIGN 0 = 0
+2 ** 10 = 1024
+max int = 2147483647
+-max int - 1 = -2147483648
+ODD 3 T, ODD 4 F
+17 MIN 4 = 4
+17 MAX 4 = 17
+LENG max int * 4 = 8589934588
+long max int = 9223372036854775807
+-long max int - 1 = -9223372036854775808
+SHORTEN LONG 12345 = 12345
+a = 2

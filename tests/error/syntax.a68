@@ -1,0 +1,7 @@
+PROGRAM syntax CONTEXT VOID
+USE standard
+BEGIN
+   INT x := 1 +;
+   print((x, newline))
+END
+FINISH

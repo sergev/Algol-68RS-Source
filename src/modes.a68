@@ -1127,12 +1127,12 @@ THEN
       write c stream
          ( ( "A_STRAIGHT(" +
              {returnmode (*index)(params)}
-                ( rtn | "A68_VOID" | ctagged type(elem mode) ),  ",",
+                IF rtn THEN "A68_VOID" ELSE ctagged type(elem mode) FI,  ",",
              {struct straightmode{...}} ctag (mode), ",",
              "(A68_INT,char *",
-                ( rtn | "," | "" ),
-                ( rtn | ctagged type(elem mode) | "" ),
-                ( rtn | "*" | "" ), "));",
+                IF rtn THEN "," ELSE "" FI,
+                IF rtn THEN ctagged type(elem mode) ELSE "" FI,
+                IF rtn THEN "*" ELSE "" FI, "));",
              cnewline
            ), stream
          );
@@ -1466,7 +1466,7 @@ BEGIN
    name OF new temp := new unique name;
    mode OF new temp := cvt;
    write c stream
-   ( cvartype( cvt ) + " " + name OF new temp + ( zeroed | " = {0};" | ";" ),
+   ( cvartype( cvt ) + " " + name OF new temp + IF zeroed THEN " = {0};" ELSE ";" FI,
      locdecstream
    );
    IF verbose option ANDTH UPB comment text > 0

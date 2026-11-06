@@ -39,12 +39,23 @@ sudo make install    # /usr (or /usr/local on macOS)
 
 ## Tests / examples
 
-`make check` runs `scripts/check` on a scratch copy of the tree. It verifies the self-hosting fixed point
-(stage-1 and stage-2 compilers produce the same C, ignoring timestamps), compiles every `examples/*.a68`,
-and runs `examples/tests` and the `logic68` part of `examples/logic`. It needs no install: the
-`CA_A68TOC`, `CA_ROOT`, `CA_LIBDIR` and `CA_INCLUDES` variables point `ca` at the build tree.
+`make check` runs `scripts/check` on a scratch copy of the tree: the self-hosting fixed point
+(stage-1 and stage-2 compilers produce the same C, ignoring timestamps), then `scripts/runtests`.
+`make test` runs only `scripts/runtests` against the current build (work files in `tests/work`).
+`make SANITIZE=undefined check` builds everything, including test programs, with UBSan.
+No install is needed: `CA_A68TOC`, `CA_ROOT`, `CA_LIBDIR`, `CA_INCLUDES` (and `CA_CC`) point `ca`
+at the build tree.
 
-There is no unit-test suite. The examples can also be run by hand. Those runs use
+`scripts/runtests` covers:
+- `tests/run/NAME.a68`: must exit 0 with stdout equal to `NAME.out`;
+- `tests/fail/NAME.a68`: must fail at run time with stderr equal to `NAME.err`;
+- `tests/error/NAME.a68`: must not compile; diagnostics equal to `NAME.err`;
+- `examples/*.a68`: all compiled; run and diffed when `NAME.out` exists (`NAME.args`, `NAME.in`
+  optional); plus `examples/tests` and the `logic68` part of `examples/logic`.
+
+Expected outputs must be checked by hand for correctness, not just recorded.
+
+The examples can also be run by hand. Those runs use
 the **installed** `ca` driver (`/usr/bin/ca`, `/usr/share/algol68toc`), so install first:
 
 ```sh

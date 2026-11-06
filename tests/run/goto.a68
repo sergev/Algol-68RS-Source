@@ -1,0 +1,29 @@
+PROGRAM goto CONTEXT VOID
+USE standard
+BEGIN
+   # Non-local jumps: out of nested procedures, back into an enclosing
+     routine whose locals were changed after its label was set up. #
+   INT depth := 0;
+
+   PROC dive = (INT n) VOID:
+      IF n = 0 THEN GOTO bottom ELSE depth +:= 1; dive(n - 1) FI;
+
+   PROC search = (INT target) INT:
+   BEGIN
+      INT found := -1, steps := 0;
+      PROC look = (INT i) VOID:
+         IF i = target THEN found := i; GOTO done FI;
+      FOR i FROM 0 TO 100 DO steps +:= 1; look(i) OD;
+   done:
+      found * 1000 + steps
+   END;
+
+   dive(5);
+   print(("not reached", newline));
+bottom:
+   print(("depth ", whole(depth, 0), newline));
+   print(("search ", whole(search(7), 0), newline));
+   print(("search ", whole(search(42), 0), newline));
+   print(("search ", whole(search(500), 0), newline))
+END
+FINISH

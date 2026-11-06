@@ -1,0 +1,1 @@
+"noop.a68", line 5: ERROR (147) op * not declared for REF BOOL and INT (at character 18)

@@ -32,6 +32,14 @@ ifeq ($(CC), "none")
 $(error Cannot determine C compiler to use)
 endif
 
+#------------ Sanitizers --------------
+# e.g. make SANITIZE=undefined check: the compiler, libraries and test
+# programs (via ca) are built with -fsanitize=..., and abort on any report.
+ifneq ($(SANITIZE),)
+CC += -fsanitize=$(SANITIZE) -fno-sanitize-recover=all
+CA_CC := $(CC)
+endif
+
 #------------ Debug value -------------
 DEBUG=yes
 #------------ Debian values -----------
@@ -119,7 +127,7 @@ INSTALLPROG=$(INSTALL) -m 555
 export
 
 #-------------- Rules --------------
-.PHONY : clean info uninstall check resetseed gc-vars
+.PHONY : clean info uninstall check test resetseed gc-vars
 
 #-----Don't remake the documentation all the time----
 #all : c-stamp q-stamp d-stamp
@@ -183,9 +191,14 @@ nameseed : a68config/rctr liba68prel/rctr src/rctr qad/rctr
 resetseed :
 	for d in $(ADIRS); do cp $$d/rctr $$d/nameseed; done
 
-# Self-hosting fixed point and examples, using the build tree.
+# Self-hosting fixed point and all tests, using the build tree.
 check : c-stamp q-stamp
 	$(SHELL) scripts/check
+
+# Tests only, against this build tree; keeps going after failures.
+# Work files are left in tests/work for inspection.
+test : c-stamp q-stamp
+	$(SHELL) scripts/runtests -k $(TOP) $(TOP)/tests/work
 
 savepoint:
 	COPYFILE_DISABLE=1 tar zcvf ../$(HERE).save.a68.tar.gz .

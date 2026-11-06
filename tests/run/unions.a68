@@ -1,0 +1,31 @@
+PROGRAM unions CONTEXT VOID
+USE standard
+BEGIN
+   MODE NUM = UNION(INT, REAL);
+   MODE ANY = UNION(INT, REAL, STRING, BOOL, CHAR);
+   PROC describe = (ANY x) STRING:
+      CASE x IN
+         (INT i): "int " + whole(i, 0),
+         (REAL r): "real " + fixed(r, 0, 2),
+         (STRING s): "string " + s,
+         (BOOL b): IF b THEN "true" ELSE "false" FI
+      OUT "something else"
+      ESAC;
+   []ANY things = (42, 2.5, "text", TRUE, "c");
+   FOR i TO UPB things DO print((describe(things[i]), newline)) OD;
+   NUM n := 7;
+   ANY widened := n;           # union to a larger union #
+   print(("widened ", describe(widened), newline));
+   n := 1.25;
+   widened := n;
+   print(("widened ", describe(widened), newline));
+   PROC is int = (NUM x) BOOL: CASE x IN (INT): TRUE OUT FALSE ESAC;
+   print(("is int ", is int(3), " ", is int(3.0), newline));
+   MODE NODE = STRUCT(INT value, REF NODE next);
+   REF NODE list := NIL;
+   FOR i TO 4 DO list := HEAP NODE := (i * i, list) OD;
+   REF NODE p := list;
+   WHILE REF NODE (p) ISNT NIL DO print((whole(value OF p, 0), " ")); p := next OF p OD;
+   print(newline)
+END
+FINISH

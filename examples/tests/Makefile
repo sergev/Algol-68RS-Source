@@ -15,6 +15,9 @@
 
 .PHONY: test clean dist 
 
+# 'test' cleans first, and modules share one library and nameseed.
+.NOTPARALLEL:
+
 PROGRAM=tests
 MODULES=bytes printf utf8
 LIBRARY=utils

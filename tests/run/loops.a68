@@ -1,0 +1,22 @@
+PROGRAM loops CONTEXT VOID
+USE standard
+BEGIN
+   INT s := 0;
+   FOR i TO 10 DO s +:= i OD;
+   print(("sum 1..10 = ", whole(s, 0), newline));
+   s := 0;
+   FOR i FROM 10 BY -3 TO -5 DO s +:= i; print((whole(i, 0), " ")) OD;
+   print(("sum = ", whole(s, 0), newline));
+   s := 0;
+   TO 4 DO s +:= 2 OD;
+   print(("TO 4: ", whole(s, 0), newline));
+   INT n := 27, steps := 0;
+   WHILE n /= 1 DO n := IF ODD n THEN 3 * n + 1 ELSE n OVER 2 FI; steps +:= 1 OD;
+   print(("collatz 27: ", whole(steps, 0), newline));
+   FOR i FROM 5 TO 1 DO print(("never", newline)) OD;
+   FOR i TO 3 WHILE i < 3 DO print(("while ", whole(i, 0), newline)) OD;
+   INT total := 0;
+   FOR i TO 4 DO FOR j FROM i TO 4 DO total +:= i * j OD OD;
+   print(("nested ", whole(total, 0), newline))
+END
+FINISH

@@ -34,6 +34,7 @@ case $ARCH in
 	exit 1
 	;;
 esac
+CC=${CA_CC:-$CC}	# e.g. a sanitizer build (see make SANITIZE=)
 
 if [ "$OS" = "Darwin" ]; then
 PROGRAM=/usr/local/bin/a68toc

@@ -1,0 +1,30 @@
+PROGRAM strings CONTEXT VOID
+USE standard
+BEGIN
+   STRING s := "Hello";
+   s +:= ", world";
+   print((s, " (", whole(UPB s, 0), ")", newline));
+   print((s[1:5], "|", s[8:], "|", s[UPB s], newline));
+   STRING t := "abc" + "def";
+   print((t, " ", t < "abd", " ", t = "abcdef", " ", "b" > "a", newline));
+   print((3 * "ab", " ", "x" * 2, newline));
+   print((ABS "A", " ", REPR 66, newline));
+   STRING r := "";
+   FOR i FROM UPB s BY -1 TO 1 DO r +:= s[i] OD;
+   print((r, newline));
+   INT vowels := 0;
+   FOR i TO UPB s DO
+      IF s[i] = "a" OR s[i] = "e" OR s[i] = "i" OR s[i] = "o" OR s[i] = "u"
+      THEN vowels +:= 1
+      FI
+   OD;
+   print(("vowels ", whole(vowels, 0), newline));
+   s[1] := "J";
+   print((s, newline));
+   STRING empty = "";
+   print(("empty ", whole(UPB empty, 0), " [", empty, "]", newline));
+   CHAR c = "q";
+   STRING one = c;
+   print((one, " ", whole(UPB one, 0), newline))
+END
+FINISH

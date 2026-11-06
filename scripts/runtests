@@ -1,0 +1,150 @@
+#!/bin/sh
+#
+# Run the test programs against a build tree, without installing.
+#  usage: runtests [-k] build-tree work-dir
+#   -k  keep going after a failure
+#
+#  tests/run/NAME.a68    must exit 0; stdout must equal NAME.out
+#  tests/fail/NAME.a68   must exit non-zero; stderr must equal NAME.err
+#  tests/error/NAME.a68  must not compile; diagnostics must equal NAME.err
+#  NAME.args             optional command line arguments
+#  NAME.in               optional standard input
+#  examples/NAME.a68     compiled; run and compared if NAME.out exists
+#
+# CA_CC overrides the C compiler used by ca (e.g. for sanitizers).
+
+KEEP=n
+[ "$1" = "-k" ] && { KEEP=y; shift; }
+T=$(cd "$1" && pwd) || exit 1
+W=$2
+mkdir -p "$W" && W=$(cd "$W" && pwd) || exit 1
+
+# Point ca at the build tree instead of the installed files.
+R=$W/root
+rm -rf "$R"; mkdir "$R"
+for f in a68config/a68config.m qad/standard.m qad/liba68s.a \
+         library/Afirst.o library/liba68.a; do
+    ln -s "$T/$f" "$R/" || exit 1
+done
+eval "export $(make -s -C "$T" gc-vars)"
+export CA_A68TOC="$T/src/a68toc"
+export CA_ROOT="$R"
+export CA_LIBDIR="$R"
+export CA_INCLUDES="-I$T/include/algol68 -I$T/include"
+PATH=$T/scripts:$PATH
+export PATH
+
+PASS=0
+FAILED=""
+
+pass() { PASS=$((PASS + 1)); }
+fail() {
+    echo "runtests: FAILED: $1" >&2
+    [ -f "$2" ] && tail -n 20 "$2" >&2
+    FAILED="$FAILED $1"
+    [ $KEEP = y ] || exit 1
+}
+
+# Copy a test with its data files to a fresh directory: $1 = source dir,
+# $2 = name.  Leaves cwd there.
+setup() {
+    D=$W/$(basename "$1")/$2
+    rm -rf "$D"; mkdir -p "$D"
+    cp "$1/$2".* "$D"/
+    cd "$D" || exit 1
+}
+
+# Run ./$1 with its .args/.in files: stdout to out, stderr to err.
+run() {
+    ARGS=
+    [ -f "$1.args" ] && ARGS=$(cat "$1.args")
+    IN=/dev/null
+    [ -f "$1.in" ] && IN=$1.in
+    # shellcheck disable=SC2086
+    "./$1" $ARGS <"$IN" >out 2>err
+}
+
+for f in "$T"/tests/run/*.a68; do
+    n=$(basename "$f" .a68)
+    setup "$T/tests/run" "$n"
+    if ! ca -u AAAAAAA "$n.a68" >build.log 2>&1; then
+        fail "run/$n: build" build.log
+    elif ! run "$n"; then
+        fail "run/$n: exit status $?" err
+    elif ! diff "$n.out" out >diff.log; then
+        fail "run/$n: output" diff.log
+    else
+        pass
+    fi
+done
+
+for f in "$T"/tests/fail/*.a68; do
+    n=$(basename "$f" .a68)
+    setup "$T/tests/fail" "$n"
+    if ! ca -u AAAAAAA "$n.a68" >build.log 2>&1; then
+        fail "fail/$n: build" build.log
+    elif run "$n"; then
+        fail "fail/$n: exit status 0" out
+    elif ! grep -v -e '^Aborted' -e 'core dumped' err |
+           diff "$n.err" - >diff.log; then
+        fail "fail/$n: stderr" diff.log
+    else
+        pass
+    fi
+done
+
+for f in "$T"/tests/error/*.a68; do
+    n=$(basename "$f" .a68)
+    setup "$T/tests/error" "$n"
+    if ca -u AAAAAAA "$n.a68" >build.log 2>&1; then
+        fail "error/$n: compiled" build.log
+    elif ! grep '^"' build.log | diff "$n.err" - >diff.log; then
+        fail "error/$n: diagnostics" diff.log
+    else
+        pass
+    fi
+done
+
+# Examples: build all, run those with expected output.
+D=$W/examples
+rm -rf "$D"; cp -r "$T/examples" "$D"
+cd "$D" || exit 1
+for f in *.a68; do
+    n=$(basename "$f" .a68)
+    if ! ca -u AAAAAAA "$f" >"$n.log" 2>&1; then
+        fail "examples/$n: build" "$n.log"
+    elif [ -f "$n.out" ]; then
+        if ! run "$n"; then
+            fail "examples/$n: exit status" err
+        elif ! diff "$n.out" out >"$n.diff"; then
+            fail "examples/$n: output" "$n.diff"
+        else
+            pass
+        fi
+    else
+        pass
+    fi
+done
+
+if make -C "$D/tests" test >"$W/tests.log" 2>&1; then
+    pass
+else
+    fail "examples/tests" "$W/tests.log"
+fi
+
+# Its Makefile needs Algol W (awe.mk), so run the logic68 steps here.
+if (cd "$D/logic" &&
+    ca -u AAAAAAA logic68.a68 &&
+    sh tests.sh ./logic68 &&
+    ./logic68 '~a \/ b, a -> b' >actual.output &&
+    diff expected.output actual.output) >"$W/logic.log" 2>&1; then
+    pass
+else
+    fail "examples/logic" "$W/logic.log"
+fi
+
+if [ -n "$FAILED" ]; then
+    echo "runtests: $PASS passed, failed:$FAILED" >&2
+    exit 1
+fi
+echo "runtests: all $PASS passed"

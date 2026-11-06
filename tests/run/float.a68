@@ -1,0 +1,14 @@
+PROGRAM float CONTEXT VOID
+USE standard
+BEGIN
+   PROC f = (REAL v, INT width, after, exp) VOID:
+      print(("[", float(v, width, after, exp), "]", newline));
+   []REAL values = (0.0, 1.0, -1.0, 123.456, -0.000123456, 1.0e10, 6.02e23);
+   FOR i TO UPB values DO
+      f(values[i], 12, 4, 3);
+      f(values[i], -12, 4, 3);
+      f(values[i], 10, 2, -2)
+   OD;
+   print((1.5, newline, -2.25, newline, 0.1, newline))
+END
+FINISH

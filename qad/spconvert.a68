@@ -3,6 +3,8 @@ USE spmodes, spaliens, spplain, spops:
 
 COMMENT
    2026-11-05 SV  subwhole: no overflow on the most negative integer.
+   2026-11-05 SV  fixed: "+" for zero with positive width, no blank
+                  with zero width.
 
    $Log: spconvert.a68,v $
    Revision 1.2  2003-05-30 21:20:47  sian
@@ -135,7 +137,7 @@ PROC {?} subwhole =
       (LONG INT  x):
          BEGIN
             { Keep n <= 0: ABS of the most negative value overflows }
-            LONG INT n:= (x > LONG 0 | -x | x);
+            LONG INT n:= IF x > LONG 0 THEN -x ELSE x FI;
             INT f = first; first:= upb + 1;
             WHILE
                LONG INT q = n OVER LONG 10;
@@ -152,7 +154,7 @@ PROC {?} subwhole =
                        (SHORT INT       i): LENG i,
                        (SHORT SHORT INT i): LENG LENG i);
             { Keep n <= 0: ABS of the most negative value overflows }
-            INT sign = SIGN n;  (n > 0 | n:= -n);
+            INT sign = SIGN n;  IF n > 0 THEN n:= -n FI;
             INT f = first; first:= upb + 1;
 
             WHILE
@@ -410,9 +412,12 @@ ELIF
    	`s[point]' = ".", s[0] = "0" CO
 	sign = 0
 THEN #v was 0.0#
-	IF after > 0
-	THEN (abs width-after-3)*blank+(poswidth|"+"|blank)+"0."+after*"0"
-	ELSE (abs width-1)*blank+"0"
+	STRING digits = IF after > 0 THEN "0." + after*"0" ELSE "0" FI;
+	IF zerowidth
+	THEN digits
+	ELIF poswidth
+	THEN (abs width - UPB digits - 1)*blank + "+" + digits
+	ELSE (abs width - UPB digits)*blank + digits
 	FI
 ELIF
    INT last:= point + aft, first:= 1, rp;

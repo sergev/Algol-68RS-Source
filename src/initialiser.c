@@ -1,4 +1,4 @@
-/* UNAME:DYZACTR */
+/* UNAME:ZYZACTR */
 #include <algol68/Asupport.h>
 
 A_PROCEDURE(A68_VOID ,A68t31,(A68_VC ,A68_BOOL ),(A68_VC ,A68_BOOL ,void *));
@@ -455,30 +455,33 @@ typedef struct A68t103  A68_103 ;    /* PROC(MODE26) BOOL */
 A_PROCEDURE(A68_VOID ,A68t104,(A68_INT ,struct A68t90 *),(A68_INT ,struct A68t90 *,void *));
 typedef struct A68t104  A68_104 ;    /* PROC(INT) MODE90 */
 
-A_PROCEDURE(A68_VOID ,A68t105,(struct A68t71 ,struct A68t52 *,A68_INT ),(struct A68t71 ,struct A68t52 *,A68_INT ,void *));
-typedef struct A68t105  A68_105 ;    /* PROC(MODE71,REF MODE52,INT) VOID */
+A_PROCEDURE(A68_VOID ,A68t105,(A68_INT ,A68_VC ),(A68_INT ,A68_VC ,void *));
+typedef struct A68t105  A68_105 ;    /* PROC(INT,MODE26) VOID */
 
-A_PROCEDURE(A68_VOID ,A68t106,(A68_INT ,A68_INT ),(A68_INT ,A68_INT ,void *));
-typedef struct A68t106  A68_106 ;    /* PROC(INT,INT) VOID */
+A_PROCEDURE(A68_VOID ,A68t106,(struct A68t71 ,struct A68t52 *,A68_INT ),(struct A68t71 ,struct A68t52 *,A68_INT ,void *));
+typedef struct A68t106  A68_106 ;    /* PROC(MODE71,REF MODE52,INT) VOID */
 
-A_PROCEDURE(A68_VOID ,A68t107,(struct A68t71 ,struct A68t60 **),(struct A68t71 ,struct A68t60 **,void *));
-typedef struct A68t107  A68_107 ;    /* PROC(MODE71,REF REF MODE60) VOID */
+A_PROCEDURE(A68_VOID ,A68t107,(A68_INT ,A68_INT ),(A68_INT ,A68_INT ,void *));
+typedef struct A68t107  A68_107 ;    /* PROC(INT,INT) VOID */
 
-A_PROCEDURE(A68_VOID ,A68t108,(struct A68t71 ),(struct A68t71 ,void *));
-typedef struct A68t108  A68_108 ;    /* PROC(MODE71) VOID */
+A_PROCEDURE(A68_VOID ,A68t108,(struct A68t71 ,struct A68t60 **),(struct A68t71 ,struct A68t60 **,void *));
+typedef struct A68t108  A68_108 ;    /* PROC(MODE71,REF REF MODE60) VOID */
 
-A_PROCEDURE(A68_VOID ,A68t109,(struct A68t74 ),(struct A68t74 ,void *));
-typedef struct A68t109  A68_109 ;    /* PROC(MODE74) VOID */
+A_PROCEDURE(A68_VOID ,A68t109,(struct A68t71 ),(struct A68t71 ,void *));
+typedef struct A68t109  A68_109 ;    /* PROC(MODE71) VOID */
 
-A_PROCEDURE(A68_INT ,A68t110,(A68_INT ),(A68_INT ,void *));
-typedef struct A68t110  A68_110 ;    /* PROC(INT) INT */
-struct A68t112 ;
+A_PROCEDURE(A68_VOID ,A68t110,(struct A68t74 ),(struct A68t74 ,void *));
+typedef struct A68t110  A68_110 ;    /* PROC(MODE74) VOID */
 
-A_PROCEDURE(A68_VOID ,A68t111,(A68_VC ,A68_INT ,struct A68t112 ,A68_INT ,A68_INT ,struct A68t90 ,A68_BITS ),(A68_VC ,A68_INT ,struct A68t112 ,A68_INT ,A68_INT ,struct A68t90 ,A68_BITS ,void *));
-typedef struct A68t111  A68_111 ;    /* PROC(REF MODE26,INT,REF MODE112,INT,INT,MODE90,BITS) VOID */
-A_VECTOR(A68_INT ,A68t112);
-typedef struct A68t112  A68_112 ;    /* VECTOR [] INT */
-struct A68t113{
+A_PROCEDURE(A68_INT ,A68t111,(A68_INT ),(A68_INT ,void *));
+typedef struct A68t111  A68_111 ;    /* PROC(INT) INT */
+struct A68t113 ;
+
+A_PROCEDURE(A68_VOID ,A68t112,(A68_VC ,A68_INT ,struct A68t113 ,A68_INT ,A68_INT ,struct A68t90 ,A68_BITS ),(A68_VC ,A68_INT ,struct A68t113 ,A68_INT ,A68_INT ,struct A68t90 ,A68_BITS ,void *));
+typedef struct A68t112  A68_112 ;    /* PROC(REF MODE26,INT,REF MODE113,INT,INT,MODE90,BITS) VOID */
+A_VECTOR(A68_INT ,A68t113);
+typedef struct A68t113  A68_113 ;    /* VECTOR [] INT */
+struct A68t114{
 A68_INT  Rdenno;
 A_PAD_INT(PAD_78)
 A68_INT  Mode;
@@ -488,21 +491,21 @@ A_PAD_INT(PAD_80)
 A68_INT  Deflex;
 A_PAD_INT(PAD_81)
 };
-typedef struct A68t113  A68_113 ;    /* STRUCT(INT,INT,INT,INT)  */
-A_ISTRUCT(A68_CHAR ,32,A68t115);
-typedef struct A68t115  A68_115 ;    /* STRUCT 32 CHAR */
-struct A68t114{
-struct A68t115  N;
-A_PAD_ISTRUCT(A68_115 ,PAD_82)
-struct A68t115  F;
-A_PAD_ISTRUCT(A68_115 ,PAD_83)
+typedef struct A68t114  A68_114 ;    /* STRUCT(INT,INT,INT,INT)  */
+A_ISTRUCT(A68_CHAR ,32,A68t116);
+typedef struct A68t116  A68_116 ;    /* STRUCT 32 CHAR */
+struct A68t115{
+struct A68t116  N;
+A_PAD_ISTRUCT(A68_116 ,PAD_82)
+struct A68t116  F;
+A_PAD_ISTRUCT(A68_116 ,PAD_83)
 A68_INT  Level;
 A_PAD_INT(PAD_84)
 };
-typedef struct A68t114  A68_114 ;    /* STRUCT(MODE115,MODE115,INT)  */
-struct A68t116{
-struct A68t115  Name;
-A_PAD_ISTRUCT(A68_115 ,PAD_85)
+typedef struct A68t115  A68_115 ;    /* STRUCT(MODE116,MODE116,INT)  */
+struct A68t117{
+struct A68t116  Name;
+A_PAD_ISTRUCT(A68_116 ,PAD_85)
 A68_INT  Decno;
 A_PAD_INT(PAD_86)
 A68_INT  Level;
@@ -511,10 +514,10 @@ A68_INT  Mode;
 A_PAD_INT(PAD_88)
 A68_INT  Scope;
 A_PAD_INT(PAD_89)
-struct A68t116 * Rest;
+struct A68t117 * Rest;
 };
-typedef struct A68t116  A68_116 ;    /* STRUCT(MODE115,INT,INT,INT,INT,REF MODE116)  */
-struct A68t117{
+typedef struct A68t117  A68_117 ;    /* STRUCT(MODE116,INT,INT,INT,INT,REF MODE117)  */
+struct A68t118{
 A68_INT  Rdenno;
 A_PAD_INT(PAD_90)
 A68_INT  Imode;
@@ -524,52 +527,52 @@ A_PAD_INT(PAD_92)
 A68_INT  Deflex;
 A_PAD_INT(PAD_93)
 };
-typedef struct A68t117  A68_117 ;    /* STRUCT(INT,INT,INT,INT)  */
-struct A68t126{
+typedef struct A68t118  A68_118 ;    /* STRUCT(INT,INT,INT,INT)  */
+struct A68t127{
 A68_INT  Mode;
 A_PAD_INT(PAD_94)
 };
-typedef struct A68t126  A68_126 ;    /* STRUCT(INT)  */
-struct A68t118 { A68_INT mode; union {
+typedef struct A68t127  A68_127 ;    /* STRUCT(INT)  */
+struct A68t119 { A68_INT mode; union {
 A68_INT  mode1;
-struct A68t119 * mode2;
-struct A68t120 * mode3;
-struct A68t121 * mode4;
-struct A68t117 * mode5;
-struct A68t122 * mode6;
-struct A68t123 * mode7;
-struct A68t113 * mode8;
-struct A68t124 * mode9;
-struct A68t125 * mode10;
-struct A68t126  mode11;
+struct A68t120 * mode2;
+struct A68t121 * mode3;
+struct A68t122 * mode4;
+struct A68t118 * mode5;
+struct A68t123 * mode6;
+struct A68t124 * mode7;
+struct A68t114 * mode8;
+struct A68t125 * mode9;
+struct A68t126 * mode10;
+struct A68t127  mode11;
 } data __attribute__ ((__aligned__(8))); };
-typedef struct A68t118  A68_118 ;    /* UNION(INT,REF MODE119,REF MODE120,REF MODE121,REF MODE117,REF MODE122,REF MODE123,REF MODE113,REF MODE124,REF MODE125,MODE126)  */
-struct A68t119{
+typedef struct A68t119  A68_119 ;    /* UNION(INT,REF MODE120,REF MODE121,REF MODE122,REF MODE118,REF MODE123,REF MODE124,REF MODE114,REF MODE125,REF MODE126,MODE127)  */
+struct A68t120{
 A68_INT  Rdenno;
 A_PAD_INT(PAD_95)
-struct A68t130 * Modelist;
+struct A68t131 * Modelist;
 };
-typedef struct A68t119  A68_119 ;    /* STRUCT(INT,REF MODE130)  */
-struct A68t120{
+typedef struct A68t120  A68_120 ;    /* STRUCT(INT,REF MODE131)  */
+struct A68t121{
 A68_INT  Deproc;
 A_PAD_INT(PAD_96)
-struct A68t130 * Pars;
+struct A68t131 * Pars;
 };
-typedef struct A68t120  A68_120 ;    /* STRUCT(INT,REF MODE130)  */
-struct A68t121{
+typedef struct A68t121  A68_121 ;    /* STRUCT(INT,REF MODE131)  */
+struct A68t122{
 A68_INT  Rdenno;
 A_PAD_INT(PAD_97)
 A68_INT  Deflex;
 A_PAD_INT(PAD_98)
-struct A68t129 * Sels;
+struct A68t130 * Sels;
 };
-typedef struct A68t121  A68_121 ;    /* STRUCT(INT,INT,REF MODE129)  */
-struct A68t122{
+typedef struct A68t122  A68_122 ;    /* STRUCT(INT,INT,REF MODE130)  */
+struct A68t123{
 A68_INT  Deproc;
 A_PAD_INT(PAD_99)
 };
-typedef struct A68t122  A68_122 ;    /* STRUCT(INT)  */
-struct A68t123{
+typedef struct A68t123  A68_123 ;    /* STRUCT(INT)  */
+struct A68t124{
 A68_INT  Rdenno;
 A_PAD_INT(PAD_100)
 A68_INT  Vecmode;
@@ -577,74 +580,74 @@ A_PAD_INT(PAD_101)
 A68_INT  Deflex;
 A_PAD_INT(PAD_102)
 };
-typedef struct A68t123  A68_123 ;    /* STRUCT(INT,INT,INT)  */
-struct A68t124{
+typedef struct A68t124  A68_124 ;    /* STRUCT(INT,INT,INT)  */
+struct A68t125{
 A68_INT  Mode;
 A_PAD_INT(PAD_103)
-struct A68t128 * Stenlist;
+struct A68t129 * Stenlist;
 };
-typedef struct A68t124  A68_124 ;    /* STRUCT(INT,REF MODE128)  */
-struct A68t125{
+typedef struct A68t125  A68_125 ;    /* STRUCT(INT,REF MODE129)  */
+struct A68t126{
 A68_INT  Mode;
 A_PAD_INT(PAD_104)
 A68_INT  Modeproc;
 A_PAD_INT(PAD_105)
-struct A68t127 * El;
+struct A68t128 * El;
 };
-typedef struct A68t125  A68_125 ;    /* STRUCT(INT,INT,REF MODE127)  */
-struct A68t127{
-struct A68t125 * Am;
-struct A68t127 * Rest;
-};
-typedef struct A68t127  A68_127 ;    /* STRUCT(REF MODE125,REF MODE127)  */
+typedef struct A68t126  A68_126 ;    /* STRUCT(INT,INT,REF MODE128)  */
 struct A68t128{
+struct A68t126 * Am;
+struct A68t128 * Rest;
+};
+typedef struct A68t128  A68_128 ;    /* STRUCT(REF MODE126,REF MODE128)  */
+struct A68t129{
 A68_INT  Mode;
 A_PAD_INT(PAD_106)
 A68_INT  Rdenno;
 A_PAD_INT(PAD_107)
-struct A68t128 * Rest;
+struct A68t129 * Rest;
 };
-typedef struct A68t128  A68_128 ;    /* STRUCT(INT,INT,REF MODE128)  */
-struct A68t129{
+typedef struct A68t129  A68_129 ;    /* STRUCT(INT,INT,REF MODE129)  */
+struct A68t130{
 A68_INT  Mode;
 A_PAD_INT(PAD_108)
 A68_INT  Fieldno;
 A_PAD_INT(PAD_109)
-struct A68t115  Name;
-A_PAD_ISTRUCT(A68_115 ,PAD_110)
-struct A68t129 * Rest;
-};
-typedef struct A68t129  A68_129 ;    /* STRUCT(INT,INT,MODE115,REF MODE129)  */
-struct A68t130{
-A68_INT  Mode;
-A_PAD_INT(PAD_111)
+struct A68t116  Name;
+A_PAD_ISTRUCT(A68_116 ,PAD_110)
 struct A68t130 * Rest;
 };
-typedef struct A68t130  A68_130 ;    /* STRUCT(INT,REF MODE130)  */
-A_VECTOR(struct A68t134 ,A68t133);
-typedef struct A68t133  A68_133 ;    /* VECTOR [] MODE134 */
-A_VECTOR(struct A68t114 ,A68t140);
-typedef struct A68t140  A68_140 ;    /* VECTOR [] MODE114 */
-struct A68t139 { A68_INT mode; union {
+typedef struct A68t130  A68_130 ;    /* STRUCT(INT,INT,MODE116,REF MODE130)  */
+struct A68t131{
+A68_INT  Mode;
+A_PAD_INT(PAD_111)
+struct A68t131 * Rest;
+};
+typedef struct A68t131  A68_131 ;    /* STRUCT(INT,REF MODE131)  */
+A_VECTOR(struct A68t135 ,A68t134);
+typedef struct A68t134  A68_134 ;    /* VECTOR [] MODE135 */
+A_VECTOR(struct A68t115 ,A68t141);
+typedef struct A68t141  A68_141 ;    /* VECTOR [] MODE115 */
+struct A68t140 { A68_INT mode; union {
 A68_VC  mode1;
-struct A68t140  mode2;
+struct A68t141  mode2;
 } data __attribute__ ((__aligned__(8))); };
-typedef struct A68t139  A68_139 ;    /* UNION(REF MODE26,REF MODE140)  */
-struct A68t135{
-struct A68t115  F;
-A_PAD_ISTRUCT(A68_115 ,PAD_112)
+typedef struct A68t140  A68_140 ;    /* UNION(REF MODE26,REF MODE141)  */
+struct A68t136{
+struct A68t116  F;
+A_PAD_ISTRUCT(A68_116 ,PAD_112)
 A68_INT  No;
 A_PAD_INT(PAD_113)
 A68_INT  Nl;
 A_PAD_INT(PAD_114)
 A68_INT  Ng;
 A_PAD_INT(PAD_115)
-struct A68t139  U;
+struct A68t140  U;
 };
-typedef struct A68t135  A68_135 ;    /* STRUCT(MODE115,INT,INT,INT,MODE139)  */
-A_VECTOR(struct A68t138 ,A68t136);
-typedef struct A68t136  A68_136 ;    /* VECTOR [] MODE138 */
-struct A68t138{
+typedef struct A68t136  A68_136 ;    /* STRUCT(MODE116,INT,INT,INT,MODE140)  */
+A_VECTOR(struct A68t139 ,A68t137);
+typedef struct A68t137  A68_137 ;    /* VECTOR [] MODE139 */
+struct A68t139{
 struct A68t42  Prefix;
 A_PAD_ISTRUCT(A68_42 ,PAD_116)
 A68_BOOL  Optimised;
@@ -660,35 +663,35 @@ A_PAD_BOOL(PAD_121)
 A68_VC  Definition;
 A68_VC  Rhs;
 };
-typedef struct A68t138  A68_138 ;    /* STRUCT(MODE42,BOOL,BOOL,BOOL,BOOL,BOOL,REF MODE26,REF MODE26)  */
-A_VECTOR(struct A68t42 ,A68t137);
-typedef struct A68t137  A68_137 ;    /* VECTOR [] MODE42 */
-struct A68t134{
-struct A68t135  Xs;
+typedef struct A68t139  A68_139 ;    /* STRUCT(MODE42,BOOL,BOOL,BOOL,BOOL,BOOL,REF MODE26,REF MODE26)  */
+A_VECTOR(struct A68t42 ,A68t138);
+typedef struct A68t138  A68_138 ;    /* VECTOR [] MODE42 */
+struct A68t135{
+struct A68t136  Xs;
 struct A68t42  Ys;
 A_PAD_ISTRUCT(A68_42 ,PAD_122)
 A68_LINT  Timeoflastchange;
 A_PAD_LINT(PAD_123)
-struct A68t136  Keptinfo;
-struct A68t137  Cnames;
+struct A68t137  Keptinfo;
+struct A68t138  Cnames;
 };
-typedef struct A68t134  A68_134 ;    /* STRUCT(MODE135,MODE42,LONG INT,REF MODE136,REF MODE137)  */
-struct A68t132{
+typedef struct A68t135  A68_135 ;    /* STRUCT(MODE136,MODE42,LONG INT,REF MODE137,REF MODE138)  */
+struct A68t133{
 struct A68t42  Uname;
 A_PAD_ISTRUCT(A68_42 ,PAD_124)
 struct A68t42  Lname;
 A_PAD_ISTRUCT(A68_42 ,PAD_125)
 struct A68t42  Gname;
 A_PAD_ISTRUCT(A68_42 ,PAD_126)
-struct A68t133  Specs;
+struct A68t134  Specs;
 };
-typedef struct A68t132  A68_132 ;    /* STRUCT(MODE42,MODE42,MODE42,REF MODE133)  */
-struct A68t131{
-struct A68t115  Name;
-A_PAD_ISTRUCT(A68_115 ,PAD_127)
-struct A68t132  Ym;
-struct A68t115  Formal;
-A_PAD_ISTRUCT(A68_115 ,PAD_128)
+typedef struct A68t133  A68_133 ;    /* STRUCT(MODE42,MODE42,MODE42,REF MODE134)  */
+struct A68t132{
+struct A68t116  Name;
+A_PAD_ISTRUCT(A68_116 ,PAD_127)
+struct A68t133  Ym;
+struct A68t116  Formal;
+A_PAD_ISTRUCT(A68_116 ,PAD_128)
 struct A68t42  Ys;
 A_PAD_ISTRUCT(A68_42 ,PAD_129)
 A68_INT  Level;
@@ -696,17 +699,17 @@ A_PAD_INT(PAD_130)
 A68_INT  Ownlevel;
 A_PAD_INT(PAD_131)
 };
-typedef struct A68t131  A68_131 ;    /* STRUCT(MODE115,MODE132,MODE115,MODE42,INT,INT)  */
-struct A68t141{
-struct A68t115  Name;
-A_PAD_ISTRUCT(A68_115 ,PAD_132)
-struct A68t114  L;
-struct A68t114  G;
+typedef struct A68t132  A68_132 ;    /* STRUCT(MODE116,MODE133,MODE116,MODE42,INT,INT)  */
+struct A68t142{
+struct A68t116  Name;
+A_PAD_ISTRUCT(A68_116 ,PAD_132)
+struct A68t115  L;
+struct A68t115  G;
 A68_INT  Type;
 A_PAD_INT(PAD_133)
 };
-typedef struct A68t141  A68_141 ;    /* STRUCT(MODE115,MODE114,MODE114,INT)  */
-struct A68t142{
+typedef struct A68t142  A68_142 ;    /* STRUCT(MODE116,MODE115,MODE115,INT)  */
+struct A68t143{
 A68_INT  Norden;
 A_PAD_INT(PAD_134)
 A68_INT  Nomodes;
@@ -720,42 +723,42 @@ A_PAD_INT(PAD_138)
 A68_INT  Nolibinds;
 A_PAD_INT(PAD_139)
 };
-typedef struct A68t142  A68_142 ;    /* STRUCT(INT,INT,INT,INT,INT,INT)  */
-struct A68t143{
+typedef struct A68t143  A68_143 ;    /* STRUCT(INT,INT,INT,INT,INT,INT)  */
+struct A68t144{
 A68_INT  Type;
 A_PAD_INT(PAD_140)
 A68_INT  Moduleno;
 A_PAD_INT(PAD_141)
-struct A68t115  Name;
-A_PAD_ISTRUCT(A68_115 ,PAD_142)
-struct A68t132  Ym;
+struct A68t116  Name;
+A_PAD_ISTRUCT(A68_116 ,PAD_142)
+struct A68t133  Ym;
 };
-typedef struct A68t143  A68_143 ;    /* STRUCT(INT,INT,MODE115,MODE132)  */
-struct A68t144{
-struct A68t141  Xmi;
-struct A68t132  Ym;
-};
-typedef struct A68t144  A68_144 ;    /* STRUCT(MODE141,MODE132)  */
+typedef struct A68t144  A68_144 ;    /* STRUCT(INT,INT,MODE116,MODE133)  */
 struct A68t145{
-struct A68t135  Xs;
+struct A68t142  Xmi;
+struct A68t133  Ym;
+};
+typedef struct A68t145  A68_145 ;    /* STRUCT(MODE142,MODE133)  */
+struct A68t146{
+struct A68t136  Xs;
 struct A68t42  Ys;
 A_PAD_ISTRUCT(A68_42 ,PAD_143)
 };
-typedef struct A68t145  A68_145 ;    /* STRUCT(MODE135,MODE42)  */
-struct A68t146{
+typedef struct A68t146  A68_146 ;    /* STRUCT(MODE136,MODE42)  */
+struct A68t147{
 struct A68t52 * Value;
 struct A68t93 * End;
 A68_INT  Type;
 A_PAD_INT(PAD_144)
 };
-typedef struct A68t146  A68_146 ;    /* STRUCT(REF MODE52,REF MODE93,INT)  */
-struct A68t147 { A68_INT mode; union {
+typedef struct A68t147  A68_147 ;    /* STRUCT(REF MODE52,REF MODE93,INT)  */
+struct A68t148 { A68_INT mode; union {
 struct A68t83  mode1;
 struct A68t84  mode2;
 struct A68t85  mode3;
 } data __attribute__ ((__aligned__(8))); };
-typedef struct A68t147  A68_147 ;    /* UNION(MODE83,MODE84,MODE85)  */
-struct A68t148 { A68_INT mode; union {
+typedef struct A68t148  A68_148 ;    /* UNION(MODE83,MODE84,MODE85)  */
+struct A68t149 { A68_INT mode; union {
 struct A68t58  mode1;
 A68_INT  mode2;
 A68_BOOL  mode3;
@@ -766,8 +769,8 @@ struct A68t67  mode7;
 struct A68t68  mode8;
 struct A68t69  mode9;
 } data __attribute__ ((__aligned__(8))); };
-typedef struct A68t148  A68_148 ;    /* UNION(MODE58,INT,BOOL,MODE65,MODE57,MODE66,MODE67,MODE68,MODE69)  */
-struct A68t149 { A68_INT mode; union {
+typedef struct A68t149  A68_149 ;    /* UNION(MODE58,INT,BOOL,MODE65,MODE57,MODE66,MODE67,MODE68,MODE69)  */
+struct A68t150 { A68_INT mode; union {
 struct A68t58  mode1;
 A68_INT  mode2;
 A68_BOOL  mode3;
@@ -788,27 +791,27 @@ struct A68t77  mode17;
 struct A68t78  mode18;
 struct A68t79  mode19;
 } data __attribute__ ((__aligned__(8))); };
-typedef struct A68t149  A68_149 ;    /* UNION(MODE58,INT,BOOL,MODE65,MODE57,MODE66,MODE67,MODE68,MODE69,MODE70,MODE71,MODE72,MODE73,MODE74,MODE75,MODE76,MODE77,MODE78,MODE79)  */
+typedef struct A68t150  A68_150 ;    /* UNION(MODE58,INT,BOOL,MODE65,MODE57,MODE66,MODE67,MODE68,MODE69,MODE70,MODE71,MODE72,MODE73,MODE74,MODE75,MODE76,MODE77,MODE78,MODE79)  */
 
-A_PROCEDURE(A68_VOID ,A68t150,(A68_BOOL ,A68_VC *),(A68_BOOL ,A68_VC *,void *));
-typedef struct A68t150  A68_150 ;    /* PROC(BOOL) MODE26 */
+A_PROCEDURE(A68_VOID ,A68t151,(A68_BOOL ,A68_VC *),(A68_BOOL ,A68_VC *,void *));
+typedef struct A68t151  A68_151 ;    /* PROC(BOOL) MODE26 */
 
-A_PROCEDURE(A68_VOID ,A68t151,(A68_VC ,A68_VC *),(A68_VC ,A68_VC *,void *));
-typedef struct A68t151  A68_151 ;    /* PROC(MODE26) REF MODE26 */
+A_PROCEDURE(A68_VOID ,A68t152,(A68_VC ,A68_VC *),(A68_VC ,A68_VC *,void *));
+typedef struct A68t152  A68_152 ;    /* PROC(MODE26) REF MODE26 */
 
-A_PROCEDURE(A68_VOID ,A68t152,(struct A68t32 ),(struct A68t32 ,void *));
-typedef struct A68t152  A68_152 ;    /* PROC(MODE32) VOID */
+A_PROCEDURE(A68_VOID ,A68t153,(struct A68t32 ),(struct A68t32 ,void *));
+typedef struct A68t153  A68_153 ;    /* PROC(MODE32) VOID */
 
-A_PROCEDURE(A68_VOID ,A68t153,(struct A68t43 ),(struct A68t43 ,void *));
-typedef struct A68t153  A68_153 ;    /* PROC(MODE43) VOID */
+A_PROCEDURE(A68_VOID ,A68t154,(struct A68t43 ),(struct A68t43 ,void *));
+typedef struct A68t154  A68_154 ;    /* PROC(MODE43) VOID */
 
-A_PROCEDURE(A68_VOID ,A68t154,(A68_VC ,A68_VC ),(A68_VC ,A68_VC ,void *));
-typedef struct A68t154  A68_154 ;    /* PROC(MODE26,MODE26) VOID */
-A_ISTRUCT(A68_CHAR ,61,A68t155);
-typedef struct A68t155  A68_155 ;    /* STRUCT 61 CHAR */
+A_PROCEDURE(A68_VOID ,A68t155,(A68_VC ,A68_VC ),(A68_VC ,A68_VC ,void *));
+typedef struct A68t155  A68_155 ;    /* PROC(MODE26,MODE26) VOID */
+A_ISTRUCT(A68_CHAR ,61,A68t156);
+typedef struct A68t156  A68_156 ;    /* STRUCT 61 CHAR */
 
-A_PROCEDURE(A68_VOID ,A68t156,(struct A68t142 *,struct A68t64 *,struct A68t87 ),(struct A68t142 *,struct A68t64 *,struct A68t87 ,void *));
-typedef struct A68t156  A68_156 ;    /* PROC(REF MODE142,REF MODE64,REF MODE87) VOID */
+A_PROCEDURE(A68_VOID ,A68t157,(struct A68t143 *,struct A68t64 *,struct A68t87 ),(struct A68t143 *,struct A68t64 *,struct A68t87 ,void *));
+typedef struct A68t157  A68_157 ;    /* PROC(REF MODE143,REF MODE64,REF MODE87) VOID */
 
 /* --- Imports from a68config --- */
 extern A68_VOID  UEAALIB_a68config(A68_VC ,A68_VC );
@@ -830,7 +833,7 @@ static A68_VC  A_configinfo;
 
 
 /* --- Imports from identifiers --- */
-extern A68_VOID  HYWACTR_initialiseidentifiers(void);
+extern A68_VOID  YYWACTR_initialiseidentifiers(void);
 /* --- End of imports from identifiers --- */
 
 
@@ -841,7 +844,7 @@ extern A68_VOID  FVKACTR_initialiseids(A68_INT ,A68_INT ,A68_INT ,A68_INT ,struc
 
 /* --- Imports from tracer --- */
 extern A68_51  XGVACTR_calltrace;
-extern A68_VOID  IAZACTR_trace(struct A68t64 ,struct A68t52 *,A68_BOOL );
+extern A68_VOID  FBZACTR_trace(struct A68t64 ,struct A68t52 *,A68_BOOL );
 /* --- End of imports from tracer --- */
 
 
@@ -861,39 +864,39 @@ extern void UAAACTR(void);   /* incimperatives */
 extern void GKJACTR(void);   /* incvalue */
 extern void MMVACTR(void);   /* identifiers */
 extern void PPKACTR(void);   /* idtable */
-extern void QWYACTR(void);   /* tracer */
+extern void NXYACTR(void);   /* tracer */
 extern void JGVACTR(void);   /* evaluator */
 extern void HPIACTR(void);   /* environment */
 /* --- end of DECS initialisation functions --- */
-static A68_155   HYZACTR = {"$Id: initialiser.a68,v 1.1.1.1 2001-05-07 10:16:10 sian Exp $"}; 
-A_GISVEC(A68_VC ,IYZACTR,HYZACTR,61)
-static A68_64 * JYZACTR_traceimperative A_UNUSED;
+static A68_156   DZZACTR = {"$Id: initialiser.a68,v 1.1.1.1 2001-05-07 10:16:10 sian Exp $"}; 
+A_GISVEC(A68_VC ,EZZACTR,DZZACTR,61)
+static A68_64 * FZZACTR_traceimperative A_UNUSED;
 
-A68_VOID  NYZACTR_initialise(A68_142 * Xsizes, A68_64 * Currentimperative, A68_87  Keptdecnos);
+A68_VOID  JZZACTR_initialise(A68_143 * Xsizes, A68_64 * Currentimperative, A68_87  Keptdecnos);
 
-A_STATIC A68_VOID  QYZACTR_anonymous(A68_52 * Root, A68_BOOL  Aftereval);
+A_STATIC A68_VOID  MZZACTR_anonymous(A68_52 * Root, A68_BOOL  Aftereval);
 
-A_STATIC A68_VOID  QYZACTR_anonymous(A68_52 * Root, A68_BOOL  Aftereval)
+A_STATIC A68_VOID  MZZACTR_anonymous(A68_52 * Root, A68_BOOL  Aftereval)
 { 
  /* line 55: */
-(void)(IAZACTR_trace((*JYZACTR_traceimperative), Root, Aftereval));
+(void)(FBZACTR_trace((*FZZACTR_traceimperative), Root, Aftereval));
 return;
 } 
 #undef NL
  /* line 51: */
 
-A68_VOID  NYZACTR_initialise(A68_142 * Xsizes, A68_64 * Currentimperative, A68_87  Keptdecnos)
+A68_VOID  JZZACTR_initialise(A68_143 * Xsizes, A68_64 * Currentimperative, A68_87  Keptdecnos)
 { 
-A68_51  RYZACTR;  /* procedure value */
+A68_51  NZZACTR;  /* procedure value */
 A_PROC_ENTRY(initialise);
  /* line 52: */
  /* line 53: */
 { 
-JYZACTR_traceimperative = Currentimperative;
+FZZACTR_traceimperative = Currentimperative;
  /* line 54: */
-RYZACTR.fn.fn_global = QYZACTR_anonymous;
-RYZACTR.nonlocals = A68_NIL;
-XGVACTR_calltrace = RYZACTR;
+NZZACTR.fn.fn_global = MZZACTR_anonymous;
+NZZACTR.nonlocals = A68_NIL;
+XGVACTR_calltrace = NZZACTR;
  /* line 57: */
 (void)(NJJACTR_initialisetrace());
  /* line 58: */
@@ -908,7 +911,7 @@ XGVACTR_calltrace = RYZACTR;
  /* line 66: */
  /* line 67: */
  /* line 69: */
-(void)(HYWACTR_initialiseidentifiers());
+(void)(YYWACTR_initialiseidentifiers());
 } 
 A_PROC_EXIT(initialise);
 return;
@@ -917,7 +920,7 @@ return;
  /* line 1: */
  /* line 2: */
  /* line 4: */
-void EYZACTR(void)   /* initialise DECS initialiser */
+void AZZACTR(void)   /* initialise DECS initialiser */
 { 
 static A68_BOOL A_invoked = A68_FALSE;
 
@@ -934,20 +937,20 @@ UAAACTR();   /* USE incimperatives */
 GKJACTR();   /* USE incvalue */
 MMVACTR();   /* USE identifiers */
 PPKACTR();   /* USE idtable */
-QWYACTR();   /* USE tracer */
+NXYACTR();   /* USE tracer */
 JGVACTR();   /* USE evaluator */
 HPIACTR();   /* USE environment */
 /* --- Initialise configuration information */
 A_config.source_file = "/home/vak/Project/Algol/Algol-68RS-Source/src/initialiser.a68";
-A_config.translation_time = "Thu Nov  5 21:11:00 2026";
+A_config.translation_time = "Thu Nov  5 21:38:58 2026";
 A_config.ctrans_version = "Ctrans_34.6";
-A_config.name_seed = "DYZACTR (from seed file) ";
-A_config.spec_change_time = "Thu Nov  5 21:11:00 2026";
+A_config.name_seed = "ZYZACTR (from seed file) ";
+A_config.spec_change_time = "Thu Nov  5 21:38:58 2026";
 A_config.arguments = A_config_arguments;
 A_config.environment = A_config_environment;
 A_config.modinfo_files = A_config_modinfo_files;
 A_PROC_ENTRY(DECS initialiser);
-(void)(UEAALIB_a68config(LGAALIB_configinfo, IYZACTR));
+(void)(UEAALIB_a68config(LGAALIB_configinfo, EZZACTR));
  /* line 48: */
  /* line 50: */
  /* line 71: */

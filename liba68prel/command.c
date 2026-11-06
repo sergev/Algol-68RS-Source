@@ -1453,6 +1453,7 @@ A_STATIC A68_VOID  RHJAOSF_return_to_caller(A68_216  *ReturnedValue, void *NonLo
 A_STATIC A68_VOID  CIJAOSF_generator(A68_BOOL  AIJAOSF_anonymous, A68_102  *ReturnedValue, void *NonLocals);
 
 A_STATIC A68_VOID  YIJAOSF_anonymous(A68_92  Msgno, A68_46  Params, void *NonLocals);
+A_SETJMP_FN A68_VOID  YEJAOSF_interpret_commands(A68_234 * Env, A68_216  *ReturnedValue);
 
 A_STATIC A68_VOID  CIJAOSF_generator(A68_BOOL  AIJAOSF_anonymous, A68_102  *ReturnedValue, void *NonLocals)
 #define NL(x) (((DIJAOSF_generator *)NonLocals)->x)
@@ -4838,10 +4839,10 @@ ZRAAOSF();   /* USE messageproc */
 QMDAOSF();   /* USE putstrings */
 /* --- Initialise configuration information */
 A_config.source_file = "/home/vak/Project/Algol/Algol-68RS-Source/liba68prel/command.a68";
-A_config.translation_time = "Thu Nov  5 21:10:59 2026";
+A_config.translation_time = "Thu Nov  5 21:38:57 2026";
 A_config.ctrans_version = "Ctrans_34.6";
 A_config.name_seed = "XYHAOSF (from seed file) ";
-A_config.spec_change_time = "Thu Nov  5 21:10:59 2026";
+A_config.spec_change_time = "Thu Nov  5 21:38:57 2026";
 A_config.arguments = A_config_arguments;
 A_config.environment = A_config_environment;
 A_config.modinfo_files = A_config_modinfo_files;

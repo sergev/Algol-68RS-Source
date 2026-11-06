@@ -1,0 +1,8 @@
+PROGRAM trim CONTEXT VOID
+USE standard
+BEGIN
+   STRING s := "abc";
+   INT n := 5;
+   print((s[2:n], newline))
+END
+FINISH

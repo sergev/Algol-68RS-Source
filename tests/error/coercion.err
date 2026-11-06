@@ -1,0 +1,2 @@
+"coercion.a68", line 4: ERROR (110) 3 CHAR cannot be coerced to INT (at character 18)
+"coercion.a68", line 5: ERROR (110) BOOL cannot be coerced to REAL (at character 18)

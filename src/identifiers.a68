@@ -42,6 +42,8 @@ COMMENT
 29:03:95  34.002  ELLA  Modcprght Change copyright header
 05:11:26  34.003  SV    Wall      Zero-initialise local variables; mark
                                   variables and labels A_UNUSED.
+05:11:26  34.004  SV    Setjmp    Functions calling sigsetjmp are declared
+                                  A_SETJMP_FN (not optimised).
 ??:??:??   ?.???  ????
 COMMENT
 
@@ -284,7 +286,7 @@ BEGIN
 		  ),
 		  cvartype(cvariabletype OF idinfo) , " " ,
 		  idfullname(decno) , " A_UNUSED",
-		  ( global | ";" | " = {0};" ),  { locals start zeroed }
+		  IF global THEN ";" ELSE " = {0};" FI,  { locals start zeroed }
 		  ( flags OF idinfo >= id op flag
 		  | " /* OP " + name OF idinfo + " */"
 		  | ""
@@ -526,6 +528,37 @@ BEGIN
 	FI
 END;
 
+{
+  Prototype of the C function being emitted at each level, and whether it
+  calls sigsetjmp.  Such a function is redeclared A_SETJMP_FN (not
+  optimised): its locals are not volatile, so after siglongjmp optimised
+  code could use stale register copies of them.
+}
+REF REF [] RVC level prototype = LOC REF [] RVC := HEAP [0:15] RVC;
+REF REF [] BOOL level setjmp = LOC REF [] BOOL := HEAP [0:15] BOOL;
+
+PROC	note routine prototype = ( INT level, CFRAGMENT prototype ) VOID:
+BEGIN
+	WHILE	level > UPB level prototype
+	DO	INT n = 2 * UPB level prototype + 1;
+		REF [] RVC new prototype = HEAP [0:n] RVC;
+		REF [] BOOL new setjmp = HEAP [0:n] BOOL;
+		new prototype[:UPB level prototype AT 0] := level prototype;
+		new setjmp[:UPB level setjmp AT 0] := level setjmp;
+		level prototype := new prototype;
+		level setjmp := new setjmp
+	OD;
+	level prototype[level] := MAKERVC prototype;
+	level setjmp[level] := FALSE
+END;
+
+PROC	end routine prototype = ( INT level ) VOID:
+IF	level <= UPB level setjmp ANDTH level setjmp[level]
+THEN	CFRAGMENT prototype = level prototype[level];
+	write c stream(( "A_SETJMP_FN ", prototype, ";", cnewline ), extern stream );
+	level setjmp[level] := FALSE
+FI;
+
 PROC	declare non local label = ( INT labno ) VOID:
 {
 	Declares a local jmp_buf.  Emits sigsetjmp text on the label stream
@@ -548,6 +581,7 @@ BEGIN
 		    ",1) ) goto ", label full name( labno ), ";", c newline
 	 	  ),LABELSTREAM level
 		);
+		IF level <= UPB level setjmp THEN level setjmp[level] := TRUE FI;
 		flags OF labinfo ORAB lab buffer emitted flag
 	FI        
 END;
@@ -659,59 +693,44 @@ BEGIN
     paramtype := CASTRVC cvartype(cvariabletype OF ids[param])
   OD;
 
-  PROC prototype = (INT proto stream) VOID:
-  { outputs function prototype to specified stream.
-    caller is responsible for correct termination:
-      eg ";" if not a defining occurrence
-  }
+  PROC prototype = CFRAGMENT:
+  { function prototype text, without terminating ";" }
   BEGIN
-    write c stream((
-      cnewline,
-      ( global AND kept | "" | "A_STATIC " ),
-        ctype( c result mode ),
-        " ",
-        fn name,
-        "("
-      ),  proto stream );
+    REF RVC params = LOC RVC := MAKERVC "";
+    PROC add param = (CFRAGMENT text) VOID:
+      params := MAKERVC
+        IF UPB params = 0 THEN text ELSE params + ", " + text FI;
 
-    IF c param count = 0
+    FOR i TO a68 param count
+    DO
+      add param( paramtypes[i] + " " + paramnames[i] )
+    OD;
+    { extra hidden arguments for structured result and/or environment }
+    IF use temp for result
     THEN
-      write c stream( "void", proto stream )
-    ELSE
-      IF a68 param count > 0
-      THEN
-        write c stream(( paramtypes[1], " ", paramnames[1] ), proto stream );
-        FOR i FROM 2 TO a68 param count
-        DO
-          write c stream(( ", ", paramtypes[i], " ", paramnames[i] ), proto stream )
-        OD
-      FI;
-
-      { extra hidden arguments for structured result and/or environment }
-      IF use temp for result
-      THEN
-        write c stream((
-          ( a68 param count /= 0 | ", " | "" ),
-          ctype(resultmode), " *ReturnedValue"
-        ), proto stream )
-      FI;
-      IF full dec
-      THEN
-        write c stream((
-          ( use temp for result OREL a68 param count /= 0 | ", " | "" ),
-          "void *NonLocals"
-        ), proto stream )
-      FI
+      add param( ctype(resultmode) + " *ReturnedValue" )
+    FI;
+    IF full dec
+    THEN
+      add param( "void *NonLocals" )
     FI;
 
-    write c stream( ")",  proto stream )
+    concat((
+      IF global AND kept THEN "" ELSE "A_STATIC " FI,
+      ctype( c result mode ), " ", fn name, "(",
+      IF UPB params = 0 THEN "void" ELSE params FI,
+      ")"
+    ))
   END;
 
+  CFRAGMENT proto = prototype;
+  note routine prototype( current level, proto );
+
   { output pre-declaration }
-  prototype(extern stream);  write c stream ((";",cnewline),extern stream );
+  write c stream(( cnewline, proto, ";", cnewline ), extern stream );
 
   { output function header }
-  prototype(code stream);  write c stream (cnewline, code stream );
+  write c stream(( cnewline, proto, cnewline ), code stream );
 
   IF  full dec
   THEN
@@ -1022,7 +1041,7 @@ PROC	environ of label = ( INT labno ) ENVIRON:
 SKIP
 
 KEEP
-	declare non local label,
+	declare non local label, note routine prototype, end routine prototype,
 	ccdec, complete rddec, environ of label, non local dec, 
 	external dec, external c dec, id full name, iddec, ids, 
 	initial dummydec, labdec, level of label, library ids,

@@ -1,0 +1,14 @@
+PROGRAM bits CONTEXT VOID
+USE standard
+BEGIN
+   BITS a = 2r1100, b = 2r1010;
+   print((a AND b, newline, a OR b, newline));
+   print(("ABS ", whole(ABS (a AND b), 0), " ", whole(ABS (a OR b), 0), newline));
+   print(("SHL ", whole(ABS (a SHL 2), 0), " SHR ", whole(ABS (a SHR 2), 0), newline));
+   print(("NOT ", whole(ABS ((NOT a) AND 2r1111), 0), newline));
+   print(("BIN 5 = ", whole(ABS BIN 5, 0), newline));
+   print(("16rff = ", whole(ABS 16rff, 0), ", 8r17 = ", whole(ABS 8r17, 0), newline));
+   BOOL t = TRUE, f = FALSE;
+   print((t AND f, t OR f, NOT t, t /= f, newline))
+END
+FINISH

@@ -1,0 +1,28 @@
+PROGRAM intops CONTEXT VOID
+USE standard
+BEGIN
+   PROC show = (STRING what, INT v) VOID: print((what, " = ", whole(v, 0), newline));
+   show("7 OVER 2", 7 OVER 2);
+   show("-7 OVER 2", -7 OVER 2);
+   show("7 MOD 3", 7 MOD 3);
+   show("-7 MOD 3", -7 MOD 3);
+   show("7 MOD -3", 7 MOD -3);
+   show("ABS -5", ABS -5);
+   show("SIGN -5", SIGN -5);
+   show("SIGN 0", SIGN 0);
+   show("2 ** 10", 2 ** 10);
+   show("max int", max int);
+   show("-max int - 1", -max int - 1);
+   print(("ODD 3 ", ODD 3, ", ODD 4 ", ODD 4, newline));
+   show("17 MIN 4", 17 MIN 4);
+   show("17 MAX 4", 17 MAX 4);
+   LONG INT big := LENG max int * LONG 4;
+   print(("LENG max int * 4 = ", whole(big, 0), newline));
+   print(("long max int = ", whole(long max int, 0), newline));
+   print(("-long max int - 1 = ", whole(-long max int - LONG 1, 0), newline));
+   show("SHORTEN LONG 12345", SHORTEN LONG 12345);
+   INT a := 10;
+   a +:= 5; a -:= 3; a *:= 4; a OVERAB 5; a MODAB 7;
+   show("a", a)
+END
+FINISH

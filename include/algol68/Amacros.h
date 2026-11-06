@@ -490,7 +490,7 @@ register A_DIM		*dim;
 
 #define	A_MOD(a,b,temp)	(temp=(a)-((a)/(b))*(b),(temp)<0 ? temp+A_ABS(b) : temp)
 
-#define A_MODAB(a,b)	( (a)+=( ((a)-=((a)/(b))*(b))<0 ? A_ABS(b) : 0) )
+#define A_MODAB(a,b)	( (a)-=((a)/(b))*(b), (a)+=((a)<0 ? A_ABS(b) : 0) )
 
 #define A_LB_LE(a,b)	(((a)&(b))==(a))
 #define A_LB_GE(a,b)	(((a)&(b))==(b))

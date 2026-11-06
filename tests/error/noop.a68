@@ -1,0 +1,8 @@
+PROGRAM noop CONTEXT VOID
+USE standard
+BEGIN
+   BOOL b := TRUE;
+   INT n := b * 2;
+   print((n, newline))
+END
+FINISH

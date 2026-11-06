@@ -1,0 +1,8 @@
+PROGRAM coercion CONTEXT VOID
+USE standard
+BEGIN
+   INT x := "abc";
+   REAL r := TRUE;
+   print((x, r, newline))
+END
+FINISH

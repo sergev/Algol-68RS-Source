@@ -1,0 +1,33 @@
+PROGRAM heap CONTEXT VOID
+USE standard
+BEGIN
+   # Allocate far more than stays live, so the collector must run. #
+   MODE CELL = STRUCT(INT value, REF CELL next);
+   PROC build = (INT n) REF CELL:
+   BEGIN
+      REF CELL head := NIL;
+      FOR i TO n DO head := HEAP CELL := (i, head) OD;
+      head
+   END;
+   PROC sum = (REF CELL list) INT:
+   BEGIN
+      INT s := 0;
+      REF CELL p := list;
+      WHILE REF CELL (p) ISNT NIL DO s +:= value OF p; p := next OF p OD;
+      s
+   END;
+   REF CELL keep = build(1000);
+   INT total := 0;
+   FOR round TO 2000 DO total +:= sum(build(round)) MOD 1000 OD;
+   print(("total ", whole(total, 0), newline));
+   print(("kept ", whole(sum(keep), 0), newline));
+   STRING s := "";
+   FOR i TO 20000 DO s +:= REPR (ABS "a" + i MOD 26) OD;
+   print(("string ", whole(UPB s, 0), " ", s[UPB s - 4:], newline));
+   [1000]REF []INT rows;
+   FOR i TO UPB rows DO rows[i] := HEAP [i]INT; (rows[i])[i] := i OD;
+   INT check := 0;
+   FOR i TO UPB rows DO check +:= (rows[i])[i] OD;
+   print(("rows ", whole(check, 0), newline))
+END
+FINISH
