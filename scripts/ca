@@ -29,6 +29,9 @@ case $ARCH in
     "aarch64")
 	CC="gcc"
 	;;
+    "arm64")	# Apple Silicon (macOS)
+	CC="gcc"
+	;;
     *)
 	echo "Architecture not supported"
 	exit 1

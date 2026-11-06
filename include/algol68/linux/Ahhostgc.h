@@ -67,10 +67,15 @@ extern void *Agc_main_frame;      /* from Ahcollect.c */
 
 #if defined(__MACH__)
 #include <mach-o/getsect.h>
+#include <mach-o/ldsyms.h>
 
+/* get_etext()/get_edata() are deprecated since macOS 13: scan the whole
+   __DATA segment (initialised data, common and bss) of the executable. */
 #define INIT_STATIC_AREA(area)						\
-  { (area).addr = (void *)get_etext();					\
-    (area).size = (unsigned long)get_edata() - (unsigned long)get_etext(); }
+  { unsigned long seg_size_ = 0;					\
+    (area).addr = (void *)getsegmentdata(&_mh_execute_header, "__DATA", \
+					 &seg_size_);			\
+    (area).size = (SIZE)seg_size_; }
 
 #else
 

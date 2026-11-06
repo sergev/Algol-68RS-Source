@@ -2,6 +2,8 @@ DECS spaliens CONTEXT VOID
 USE spmodes:
 
 COMMENT
+   2026-11-05 SV  linux on exit, posix exit: emulate on_exit on macOS
+                  (A_on_exit, A_exit in liba68) instead of ignoring it.
    2026-11-05 SV  prbs step, long prbs step: random steps without
                   signed overflow.
 
@@ -281,7 +283,7 @@ PROC(CPTR)INT
 PROC(CPTR,CSTR)INT
    linux on exit = ALIEN "ON_EXIT"
    "#if defined(__MACH__)"
-   "#define ON_EXIT(p,a) (0)" #0=success, -1=failure#
+   "#define ON_EXIT(p,a) A_on_exit((void *)p,(void *)a)" #0=success, -1=failure#
    "#else"
    "#define ON_EXIT(p,a) on_exit((void *)p,(void *)a)" #0=success, -1=failure#
    "#endif";
@@ -309,7 +311,11 @@ PROC(VECTOR[]CHAR,INT)INT
 
 PROC(INT)VOID
    posix exit = ALIEN "EXIT"
-   "#define EXIT(n) exit(n)";
+   "#if defined(__MACH__)"
+   "#define EXIT(n) A_exit(n)"
+   "#else"
+   "#define EXIT(n) exit(n)"
+   "#endif";
 
 PROC(VECTOR[]CHAR)CSTR
    posix getenv = ALIEN "GETENV"

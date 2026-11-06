@@ -35,6 +35,7 @@
 26:04:94  Module renamed from a68_library.h to Alibrary.h for porting.  DCT
 25:08:94  33.001  ELLA  NewConFig Insert into configuration management. 
 29:03:95  34.002  ELLA  Modcprght Change copyright header
+05:11:26          SV    Add A_on_exit, A_exit (on_exit emulation, macOS).
 ??:??:??   ?.???  ????
 */
 
@@ -90,6 +91,15 @@ extern A68_INT A_T3INDEX(const A_DIM *old, const A68_INT lwb1, const A68_INT lwb
 */
 
 extern A68_VOID A68_ERROR(const char *message) __attribute__((__noreturn__));
+
+/*
+  Aonexit: on_exit() emulation where the C library lacks it
+*/
+
+#if defined(__MACH__)
+extern int A_on_exit(void *fn, void *arg);
+extern void A_exit(int status) __attribute__((__noreturn__));
+#endif
 
 /*
   Aalloc

@@ -49,7 +49,10 @@ make $J -C "$T" Translate >"$WORK/tr2.log" 2>&1 || fail "stage-2 translate" "$WO
 save "$WORK/gen2"
 
 # Ignore translation timestamps (.c) and spec change times (.m).
-diff -r -I 'translation_time = \|spec_change_time = ' -I '^[0-9]\{10\}$' \
+# Separate -I options and no \| or \{n\}: BSD diff (macOS) reads them
+# differently from GNU diff.
+D10='[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]'
+diff -r -I 'translation_time = ' -I 'spec_change_time = ' -I "^$D10\$" \
     "$WORK/gen1" "$WORK/gen2" >"$WORK/fixpoint.diff" ||
     fail "stage-1 and stage-2 output differ" "$WORK/fixpoint.diff"
 echo "check: fixed point OK"

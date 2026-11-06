@@ -5,7 +5,7 @@
 # ------------ C source --------------
 library_c := Aassign.c Acoerce.c Aerror.c Ah1alloc.c Ahalloc.c \
         Ahcollec.c Ahdebug.c Ahparam.c Ahpolicy.c Ahstats.c Ahsweep.c \
-        Ahtrace.c Aindex.c Amath.c Astrings.c
+        Ahtrace.c Aindex.c Amath.c Aonexit.c Astrings.c
 
 library_h := Ah1alloc.h Ahalloc.h Aharea.h Ahbasic.h Ahbitmap.h \
 	Ahcheck.h Ahclr.h Ahdebug.h Ahdesc.h Ahparam.h Ahpolicy.h \

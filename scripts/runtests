@@ -60,8 +60,10 @@ run() {
     [ -f "$1.args" ] && ARGS=$(cat "$1.args")
     IN=/dev/null
     [ -f "$1.in" ] && IN=$1.in
+    # Run-time faults end in abort(); the outer 2>/dev/null drops the
+    # shell's "Abort trap" notice (bash), keeping the exit status.
     # shellcheck disable=SC2086
-    "./$1" $ARGS <"$IN" >out 2>err
+    { "./$1" $ARGS <"$IN" >out 2>err; } 2>/dev/null
 }
 
 for f in "$T"/tests/run/*.a68; do
