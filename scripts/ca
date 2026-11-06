@@ -15,19 +15,19 @@ ECHO=":"
 
 case $ARCH in
     "i386")
-	CC="gcc"
+	CC="gcc -std=gnu17"
 	;;
     "i686")
-	CC="gcc"
+	CC="gcc -std=gnu17"
 	;;
     "x86_64")
-	CC="gcc"
+	CC="gcc -std=gnu17"
 	;;
     "armv7l")
-	CC="gcc"
+	CC="gcc -std=gnu17"
 	;;
     "aarch64")
-	CC="gcc"
+	CC="gcc -std=gnu17"
 	;;
     *)
 	echo "Architecture not supported"

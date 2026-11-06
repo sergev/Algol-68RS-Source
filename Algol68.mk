@@ -2,6 +2,9 @@
 #
 # Other macros used:
 #  A68 A68_LIB A68_NAMESEED CTFLAGS QADFLAGS
+# Modules depend on each other's .m files and share one nameseed.
+.NOTPARALLEL:
+
 #---------------------- Macros --------------------------
 # The following directory contains a68config.m
 #

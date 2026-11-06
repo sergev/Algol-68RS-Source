@@ -88,9 +88,9 @@ A68_LIB:=$(ACD)
 
 #------------ Flags ------------
 ifeq ($(DEBUG),no)
-override CFLAGS=-O0
+override CFLAGS=-O0 -std=gnu17
 else
-override CFLAGS=-O0 -g
+override CFLAGS=-O0 -g -std=gnu17
 endif
 NOR=$(CFLAGS) $(INCS)
 CTSTAR=59LR
@@ -138,7 +138,7 @@ c-stamp: g-stamp
 	-for d in $(CDIRS); do $(MAKE) -C $$d; done
 	touch c-stamp
 
-q-stamp : nameseed
+q-stamp : c-stamp nameseed
 	-$(MAKE) -C $(QAD)
 	touch q-stamp
 
