@@ -970,7 +970,7 @@ A_STATIC A68_VOID  HBMACTR_generator(A68_BOOL  FBMACTR_anonymous, A68_161  *Retu
 A68_161  JBMACTR;  /* clause result */
 A68_161  KBMACTR;  /* OPERATORS - dynamic generator */
 { 
-KBMACTR.dim[0].upb = (*NL(EBMACTR_newupb)) ;
+KBMACTR.dim[0].upb = (*A_NILCHECK(NL(EBMACTR_newupb))) ;
 KBMACTR.dim[0].lwb = 0 ;
 (void)A_1INITSTRIDES(KBMACTR) ;
 ( FBMACTR_anonymous? A_R1LOC(A68_159 ,KBMACTR): A_R1HEAP(A68_159 ,KBMACTR) );
@@ -1007,7 +1007,7 @@ A68_CHAR  AFMACTR;  /* clause result */
 A_PROC_ENTRY(filestreamchar);
 { 
  /* line 388: */
-SWBAOSF_read_buffer( (*(&((*NL(REMACTR_currentfilestream))->File))), A_VEC(YEMACTR,(&WEMACTR_c),A68_CHAR *), (&XEMACTR_charsread), RIBAOSF_ignore_msg, &ZEMACTR );
+SWBAOSF_read_buffer( (*A_NILCHECK((&(A_NILCHECK((*A_NILCHECK(NL(REMACTR_currentfilestream))))->File)))), A_VEC(YEMACTR,(&WEMACTR_c),A68_CHAR *), (&XEMACTR_charsread), RIBAOSF_ignore_msg, &ZEMACTR );
 ;
  /* line 389: */
 if (XEMACTR_charsread!=1)
@@ -1035,20 +1035,20 @@ A68_CHAR  JFMACTR;  /* clause result */
 A68_156 ** KFMACTR;  /* YIELD */
 A_PROC_ENTRY(memstreamchar);
 { 
-EFMACTR_current_chunk = (*(&((*NL(SEMACTR_currentmemstream))->Current_chunk)));
+EFMACTR_current_chunk = (*A_NILCHECK((&(A_NILCHECK((*A_NILCHECK(NL(SEMACTR_currentmemstream))))->Current_chunk))));
  /* line 399: */
-FFMACTR_current_data = (*(&(EFMACTR_current_chunk->Data)));
+FFMACTR_current_data = (*A_NILCHECK((&(A_NILCHECK(EFMACTR_current_chunk)->Data))));
  /* line 400: */
-GFMACTR_pos = (&((*NL(SEMACTR_currentmemstream))->Pos));
+GFMACTR_pos = (&(A_NILCHECK((*A_NILCHECK(NL(SEMACTR_currentmemstream))))->Pos));
  /* line 401: */
  /* line 402: */
  /* line 404: */
-HFMACTR = ((*GFMACTR_pos)<=FFMACTR_current_data.upb);
+HFMACTR = ((*A_NILCHECK(GFMACTR_pos))<=FFMACTR_current_data.upb);
 if (HFMACTR)
 { 
-IFMACTR_c = (*(&A_VINDEX(FFMACTR_current_data,(*GFMACTR_pos))));
+IFMACTR_c = (*A_NILCHECK((&A_VINDEX(FFMACTR_current_data,(*A_NILCHECK(GFMACTR_pos))))));
  /* line 405: */
-(*GFMACTR_pos)+=1;
+(*A_NILCHECK(GFMACTR_pos))+=1;
  /* line 406: */
  /* line 407: */
  /* line 408: */
@@ -1058,7 +1058,7 @@ else
 { 
  /* line 409: */
  /* line 411: */
-if ((*(&(EFMACTR_current_chunk->Next)))==(A68_156 *)A68_NIL)
+if ((*A_NILCHECK((&(A_NILCHECK(EFMACTR_current_chunk)->Next))))==(A68_156 *)A68_NIL)
 { 
  /* line 412: */
  /* line 414: */
@@ -1067,10 +1067,10 @@ JFMACTR = (*(A68_CHAR *)A68_NIL);
 } 
 else
 { 
-KFMACTR = (&((*NL(SEMACTR_currentmemstream))->Current_chunk)) ;
-(void)((*KFMACTR) = (*(&(EFMACTR_current_chunk->Next))));
+KFMACTR = (&(A_NILCHECK((*A_NILCHECK(NL(SEMACTR_currentmemstream))))->Current_chunk)) ;
+(void)((*A_NILCHECK(KFMACTR)) = (*A_NILCHECK((&(A_NILCHECK(EFMACTR_current_chunk)->Next)))));
  /* line 415: */
-(*GFMACTR_pos) = 1;
+(*A_NILCHECK(GFMACTR_pos)) = 1;
  /* line 416: */
  /* line 417: */
 JFMACTR = A_CALLPROC(NL(BFMACTR_memstreamchar),(),((NL(BFMACTR_memstreamchar)).nonlocals));
@@ -1101,7 +1101,7 @@ A_PROC_ENTRY(selectstream);
  /* line 426: */
  /* line 427: */
  /* line 428: */
-QFMACTR = (*(&A_R1INDEX(EWLACTR_cstreams,Streamno))) ;
+QFMACTR = (*A_NILCHECK((&A_R1INDEX(EWLACTR_cstreams,Streamno)))) ;
 switch ( QFMACTR.mode )
 { 
 case 1: /* REF STRUCT(REF MODE74,INT)  */
@@ -1109,13 +1109,13 @@ RFMACTR_fs = (QFMACTR.data.mode1);
  /* line 429: */
  /* line 431: */
  /* line 433: */
-switch ( (*(&(RFMACTR_fs->Status))) )
+switch ( (*A_NILCHECK((&(A_NILCHECK(RFMACTR_fs)->Status)))) )
 { 
 case 1: 
 { 
-(*NL(REMACTR_currentfilestream)) = RFMACTR_fs;
+(*A_NILCHECK(NL(REMACTR_currentfilestream))) = RFMACTR_fs;
  /* line 435: */
-(void)((*NL(LFMACTR_streamchar)) = NL(TEMACTR_filestreamchar));
+(void)((*A_NILCHECK(NL(LFMACTR_streamchar))) = NL(TEMACTR_filestreamchar));
 } 
 break;
 case 2: 
@@ -1142,13 +1142,13 @@ else
 { 
 ZFMACTR.File = VFMACTR_f;
 ZFMACTR.Status = AWLACTR_openforreading;
-(*RFMACTR_fs) = ZFMACTR;
+(*A_NILCHECK(RFMACTR_fs)) = ZFMACTR;
  /* line 444: */
-(*NL(REMACTR_currentfilestream)) = RFMACTR_fs;
+(*A_NILCHECK(NL(REMACTR_currentfilestream))) = RFMACTR_fs;
  /* line 445: */
  /* line 446: */
  /* line 448: */
-(void)((*NL(LFMACTR_streamchar)) = NL(TEMACTR_filestreamchar));
+(void)((*A_NILCHECK(NL(LFMACTR_streamchar))) = NL(TEMACTR_filestreamchar));
 } 
 } 
 break;
@@ -1165,13 +1165,13 @@ CGMACTR_ms = (QFMACTR.data.mode2);
  /* line 451: */
  /* line 453: */
  /* line 455: */
-switch ( (*(&(CGMACTR_ms->Status))) )
+switch ( (*A_NILCHECK((&(A_NILCHECK(CGMACTR_ms)->Status)))) )
 { 
 case 1: 
 { 
-(*NL(SEMACTR_currentmemstream)) = CGMACTR_ms;
+(*A_NILCHECK(NL(SEMACTR_currentmemstream))) = CGMACTR_ms;
  /* line 457: */
-(void)((*NL(LFMACTR_streamchar)) = NL(BFMACTR_memstreamchar));
+(void)((*A_NILCHECK(NL(LFMACTR_streamchar))) = NL(BFMACTR_memstreamchar));
 } 
 break;
 case 2: 
@@ -1181,20 +1181,20 @@ break;
 case 3: 
  /* line 460: */
 { 
-FGMACTR_first_chunk = (*(&(CGMACTR_ms->First_chunk)));
+FGMACTR_first_chunk = (*A_NILCHECK((&(A_NILCHECK(CGMACTR_ms)->First_chunk))));
  /* line 461: */
 GGMACTR.First_chunk = FGMACTR_first_chunk;
 GGMACTR.Current_chunk = FGMACTR_first_chunk;
 GGMACTR.Pos = 1;
 GGMACTR.Status = AWLACTR_openforreading;
-(*CGMACTR_ms) = GGMACTR;
+(*A_NILCHECK(CGMACTR_ms)) = GGMACTR;
  /* line 462: */
-(*NL(SEMACTR_currentmemstream)) = CGMACTR_ms;
+(*A_NILCHECK(NL(SEMACTR_currentmemstream))) = CGMACTR_ms;
  /* line 463: */
  /* line 464: */
  /* line 465: */
  /* line 466: */
-(void)((*NL(LFMACTR_streamchar)) = NL(BFMACTR_memstreamchar));
+(void)((*A_NILCHECK(NL(LFMACTR_streamchar))) = NL(BFMACTR_memstreamchar));
 } 
 break;
 default: 
@@ -1490,34 +1490,34 @@ LXLACTR_ce = (KXLACTR.data.mode3);
  /* line 179: */
 NXLACTR.source = LXLACTR_ce ;
 PXLACTR = (NXLACTR.destination) ;
-UXBAOSF_write_buffer( (*(&(JXLACTR_f->File))), A_VC_PLUS(A_HVEC(MXLACTR,LWLACTR_ceditid,A68_CHAR ),A_HISVEC(OXLACTR,PXLACTR,4,A68_CHAR )), GXLACTR_msg, &QXLACTR );
+UXBAOSF_write_buffer( (*A_NILCHECK((&(A_NILCHECK(JXLACTR_f)->File)))), A_VC_PLUS(A_HVEC(MXLACTR,LWLACTR_ceditid,A68_CHAR ),A_HISVEC(OXLACTR,PXLACTR,4,A68_CHAR )), GXLACTR_msg, &QXLACTR );
 ;
 break;
 case 1: /* CHAR */
 RXLACTR_c = (KXLACTR.data.mode1);
  /* line 180: */
  /* line 181: */
-UXBAOSF_write_buffer( (*(&(JXLACTR_f->File))), A_HVEC(SXLACTR,RXLACTR_c,A68_CHAR ), GXLACTR_msg, &TXLACTR );
+UXBAOSF_write_buffer( (*A_NILCHECK((&(A_NILCHECK(JXLACTR_f)->File)))), A_HVEC(SXLACTR,RXLACTR_c,A68_CHAR ), GXLACTR_msg, &TXLACTR );
 ;
 break;
 case 2: /* VECTOR [] CHAR */
 UXLACTR_cf = (KXLACTR.data.mode2);
  /* line 182: */
  /* line 183: */
-UXBAOSF_write_buffer( (*(&(JXLACTR_f->File))), UXLACTR_cf, GXLACTR_msg, &VXLACTR );
+UXBAOSF_write_buffer( (*A_NILCHECK((&(A_NILCHECK(JXLACTR_f)->File)))), UXLACTR_cf, GXLACTR_msg, &VXLACTR );
 ;
 break;
 case 4: /* SHORT INT */
  /* line 184: */
 { 
-UXBAOSF_write_buffer( (*(&(JXLACTR_f->File))), A_HVEC(WXLACTR,GVBAOSF_newline_char,A68_CHAR ), GXLACTR_msg, &XXLACTR );
+UXBAOSF_write_buffer( (*A_NILCHECK((&(A_NILCHECK(JXLACTR_f)->File)))), A_HVEC(WXLACTR,GVBAOSF_newline_char,A68_CHAR ), GXLACTR_msg, &XXLACTR );
 ;
  /* line 185: */
  /* line 186: */
  /* line 187: */
 if (BQIACTR_lineoption)
 { 
-UXBAOSF_write_buffer( (*(&(JXLACTR_f->File))), ZXLACTR, GXLACTR_msg, &AYLACTR );
+UXBAOSF_write_buffer( (*A_NILCHECK((&(A_NILCHECK(JXLACTR_f)->File)))), ZXLACTR, GXLACTR_msg, &AYLACTR );
 ;
  /* line 188: */
 if (XRIACTR_linenumber==0)
@@ -1529,26 +1529,26 @@ else
 BYLACTR = XRIACTR_linenumber;
 } 
 ROAAOSF_whole( BYLACTR, 0, &CYLACTR );
-UXBAOSF_write_buffer( (*(&(JXLACTR_f->File))), CYLACTR, GXLACTR_msg, &DYLACTR );
+UXBAOSF_write_buffer( (*A_NILCHECK((&(A_NILCHECK(JXLACTR_f)->File)))), CYLACTR, GXLACTR_msg, &DYLACTR );
 ;
  /* line 189: */
-UXBAOSF_write_buffer( (*(&(JXLACTR_f->File))), FYLACTR, GXLACTR_msg, &GYLACTR );
+UXBAOSF_write_buffer( (*A_NILCHECK((&(A_NILCHECK(JXLACTR_f)->File)))), FYLACTR, GXLACTR_msg, &GYLACTR );
 ;
  /* line 190: */
-UXBAOSF_write_buffer( (*(&(JXLACTR_f->File))), YQIACTR_basenamesourcefile, GXLACTR_msg, &HYLACTR );
+UXBAOSF_write_buffer( (*A_NILCHECK((&(A_NILCHECK(JXLACTR_f)->File)))), YQIACTR_basenamesourcefile, GXLACTR_msg, &HYLACTR );
 ;
  /* line 191: */
-UXBAOSF_write_buffer( (*(&(JXLACTR_f->File))), ZQIACTR_sourcefilesuffix, GXLACTR_msg, &IYLACTR );
+UXBAOSF_write_buffer( (*A_NILCHECK((&(A_NILCHECK(JXLACTR_f)->File)))), ZQIACTR_sourcefilesuffix, GXLACTR_msg, &IYLACTR );
 ;
  /* line 192: */
-UXBAOSF_write_buffer( (*(&(JXLACTR_f->File))), A_HVEC(JYLACTR,'\"',A68_CHAR ), GXLACTR_msg, &KYLACTR );
+UXBAOSF_write_buffer( (*A_NILCHECK((&(A_NILCHECK(JXLACTR_f)->File)))), A_HVEC(JYLACTR,'\"',A68_CHAR ), GXLACTR_msg, &KYLACTR );
 ;
  /* line 193: */
  /* line 194: */
  /* line 195: */
  /* line 196: */
  /* line 197: */
-UXBAOSF_write_buffer( (*(&(JXLACTR_f->File))), A_HVEC(LYLACTR,GVBAOSF_newline_char,A68_CHAR ), GXLACTR_msg, &MYLACTR );
+UXBAOSF_write_buffer( (*A_NILCHECK((&(A_NILCHECK(JXLACTR_f)->File)))), A_HVEC(LYLACTR,GVBAOSF_newline_char,A68_CHAR ), GXLACTR_msg, &MYLACTR );
 ;
 } 
 } 
@@ -1595,10 +1595,10 @@ A_PROC_ENTRY(write_mem);
  /* line 207: */
  /* line 208: */
 { 
-UYLACTR_pos = (&(Ms->Pos));
+UYLACTR_pos = (&(A_NILCHECK(Ms)->Pos));
  /* line 209: */
-VYLACTR = (*(&((*(&(Ms->Current_chunk)))->Data))) ;
-XYLACTR_usable_data = A_VTRIM(WYLACTR,(VYLACTR),A_VTSCRIPT(&(WYLACTR.upb),(VYLACTR).upb,(*UYLACTR_pos),(VYLACTR).upb));
+VYLACTR = (*A_NILCHECK((&(A_NILCHECK((*A_NILCHECK((&(A_NILCHECK(Ms)->Current_chunk)))))->Data)))) ;
+XYLACTR_usable_data = A_VTRIM(WYLACTR,(VYLACTR),A_VTSCRIPT(&(WYLACTR.upb),(VYLACTR).upb,(*A_NILCHECK(UYLACTR_pos)),(VYLACTR).upb));
  /* line 210: */
  /* line 211: */
 YYLACTR_upb_usable_data = XYLACTR_usable_data.upb;
@@ -1615,7 +1615,7 @@ CZLACTR = A_VTRIM(BZLACTR,(XYLACTR_usable_data),A_VTSCRIPT(&(BZLACTR.upb),(XYLAC
  /* line 217: */
  /* line 218: */
  /* line 220: */
-(*UYLACTR_pos)+=ZYLACTR_upb_buf;
+(*A_NILCHECK(UYLACTR_pos))+=ZYLACTR_upb_buf;
 } 
 else
 { 
@@ -1627,14 +1627,14 @@ A_CALLPROC(HZLACTR_generator,(A68_FALSE, &MZLACTR),(A68_FALSE, &MZLACTR,(HZLACTR
 FZLACTR.Data = MZLACTR;
 FZLACTR.Next = (A68_156 *)A68_NIL;
 NZLACTR = A_HEAP(A68_156 ) ;
-(void)((*NZLACTR) = FZLACTR) ;
-OZLACTR = (&((*(&(Ms->Current_chunk)))->Next)) ;
-(*OZLACTR) = NZLACTR;
+(void)((*A_NILCHECK(NZLACTR)) = FZLACTR) ;
+OZLACTR = (&(A_NILCHECK((*A_NILCHECK((&(A_NILCHECK(Ms)->Current_chunk)))))->Next)) ;
+(*A_NILCHECK(OZLACTR)) = NZLACTR;
  /* line 224: */
-PZLACTR = (&(Ms->Current_chunk)) ;
-(void)((*PZLACTR) = (*(&((*(&(Ms->Current_chunk)))->Next))));
+PZLACTR = (&(A_NILCHECK(Ms)->Current_chunk)) ;
+(void)((*A_NILCHECK(PZLACTR)) = (*A_NILCHECK((&(A_NILCHECK((*A_NILCHECK((&(A_NILCHECK(Ms)->Current_chunk)))))->Next)))));
  /* line 225: */
-(*UYLACTR_pos) = 1;
+(*A_NILCHECK(UYLACTR_pos)) = 1;
  /* line 228: */
  /* line 229: */
 (void)(TYLACTR_write_mem(Ms, A_VTRIM(QZLACTR,(Buf),A_VTSCRIPT(&(QZLACTR.upb),(Buf).upb,(YYLACTR_upb_usable_data+1),(Buf).upb))));
@@ -1841,7 +1841,7 @@ for (;SBMACTR-- >= 0;
 (PBMACTR_s += RBMACTR.dim[0].stride
 ) )
 {
-(void)((*PBMACTR_s) = A_EMPTY(TBMACTR,3));
+(void)((*A_NILCHECK(PBMACTR_s)) = A_EMPTY(TBMACTR,3));
 }
  /* line 282: */
 EWLACTR_cstreams = MBMACTR_newcstreams;
@@ -1858,14 +1858,14 @@ WBMACTR_s = (&A_R1INDEX(EWLACTR_cstreams,Streamno));
  /* line 289: */
  /* line 290: */
  /* line 291: */
-XBMACTR = (*WBMACTR_s);
+XBMACTR = (*A_NILCHECK(WBMACTR_s));
 switch ( XBMACTR.mode )
 { 
 case 1: /* REF STRUCT(REF MODE74,INT)  */
 YBMACTR_fs = (XBMACTR.data.mode1);
  /* line 292: */
 { 
-(void)(WXIACTR_assert(ACMACTR, ((*(&(YBMACTR_fs->Status)))==BWLACTR_openforwriting)));
+(void)(WXIACTR_assert(ACMACTR, ((*A_NILCHECK((&(A_NILCHECK(YBMACTR_fs)->Status))))==BWLACTR_openforwriting)));
  /* line 293: */
  /* line 294: */
  /* line 295: */
@@ -1878,7 +1878,7 @@ case 2: /* REF STRUCT(REF MODE156,REF MODE156,INT,INT)  */
 CCMACTR_ms = (XBMACTR.data.mode2);
  /* line 296: */
 { 
-(void)(WXIACTR_assert(ECMACTR, ((*(&(CCMACTR_ms->Status)))==BWLACTR_openforwriting)));
+(void)(WXIACTR_assert(ECMACTR, ((*A_NILCHECK((&(A_NILCHECK(CCMACTR_ms)->Status))))==BWLACTR_openforwriting)));
  /* line 297: */
  /* line 298: */
  /* line 299: */
@@ -1916,8 +1916,8 @@ else
 MCMACTR.File = HCMACTR_f;
 MCMACTR.Status = BWLACTR_openforwriting;
 NCMACTR = A_HEAP(A68_158 ) ;
-(void)((*NCMACTR) = MCMACTR) ;
-(void)((*WBMACTR_s) = A_UNITE(OCMACTR,mode1,1,NCMACTR));
+(void)((*A_NILCHECK(NCMACTR)) = MCMACTR) ;
+(void)((*A_NILCHECK(WBMACTR_s)) = A_UNITE(OCMACTR,mode1,1,NCMACTR));
  /* line 312: */
  /* line 313: */
  /* line 315: */
@@ -1937,15 +1937,15 @@ XCMACTR_data = WCMACTR;
 YCMACTR_initialchunk = (A_HEAP(A68_156 ));
 ZCMACTR.Data = XCMACTR_data;
 ZCMACTR.Next = (A68_156 *)A68_NIL;
-(*YCMACTR_initialchunk) = ZCMACTR;
+(*A_NILCHECK(YCMACTR_initialchunk)) = ZCMACTR;
  /* line 318: */
 ADMACTR.First_chunk = YCMACTR_initialchunk;
 ADMACTR.Current_chunk = YCMACTR_initialchunk;
 ADMACTR.Pos = 1;
 ADMACTR.Status = BWLACTR_openforwriting;
 BDMACTR = A_HEAP(A68_157 ) ;
-(void)((*BDMACTR) = ADMACTR) ;
-(void)((*WBMACTR_s) = A_UNITE(CDMACTR,mode2,2,BDMACTR));
+(void)((*A_NILCHECK(BDMACTR)) = ADMACTR) ;
+(void)((*A_NILCHECK(WBMACTR_s)) = A_UNITE(CDMACTR,mode2,2,BDMACTR));
  /* line 319: */
  /* line 320: */
  /* line 321: */
@@ -2005,7 +2005,7 @@ PDMACTR_p = *QDMACTR;
  /* line 336: */
  /* line 327: */
  /* line 337: */
-(void)(A_CALLPROC(ODMACTR_outputdata,(PDMACTR_p, (*(&A_R1INDEX(EWLACTR_cstreams,Streamno)))),(PDMACTR_p, (*(&A_R1INDEX(EWLACTR_cstreams,Streamno))),(ODMACTR_outputdata).nonlocals)));
+(void)(A_CALLPROC(ODMACTR_outputdata,(PDMACTR_p, (*A_NILCHECK((&A_R1INDEX(EWLACTR_cstreams,Streamno))))),(PDMACTR_p, (*A_NILCHECK((&A_R1INDEX(EWLACTR_cstreams,Streamno)))),(ODMACTR_outputdata).nonlocals)));
 }
  /* line 338: */
 } 
@@ -2085,17 +2085,17 @@ for (;IEMACTR-- >= 0;
 {
  /* line 365: */
  /* line 366: */
-JEMACTR = (*HEMACTR_s) ;
+JEMACTR = (*A_NILCHECK(HEMACTR_s)) ;
 switch ( JEMACTR.mode )
 { 
 case 1: /* REF STRUCT(REF MODE74,INT)  */
 KEMACTR_fs = (JEMACTR.data.mode1);
  /* line 367: */
 { 
-(void)(IWBAOSF_close_file((*(&(KEMACTR_fs->File))), RIBAOSF_ignore_msg));
+(void)(IWBAOSF_close_file((*A_NILCHECK((&(A_NILCHECK(KEMACTR_fs)->File)))), RIBAOSF_ignore_msg));
  /* line 368: */
-LEMACTR = (&(KEMACTR_fs->Status)) ;
-(*LEMACTR) = CWLACTR_notopen;
+LEMACTR = (&(A_NILCHECK(KEMACTR_fs)->Status)) ;
+(*A_NILCHECK(LEMACTR)) = CWLACTR_notopen;
 } 
 break;
 case 2: /* REF STRUCT(REF MODE156,REF MODE156,INT,INT)  */
@@ -2104,15 +2104,15 @@ MEMACTR_ms = (JEMACTR.data.mode2);
  /* line 370: */
 { 
  /* line 371: */
-NEMACTR = (*(&((*(&(MEMACTR_ms->Current_chunk)))->Data))) ;
-PEMACTR = (&((*(&(MEMACTR_ms->Current_chunk)))->Data)) ;
-(void)((*PEMACTR) = A_VTRIM(OEMACTR,(NEMACTR),A_VTSCRIPT(&(OEMACTR.upb),(NEMACTR).upb,1,((*(&(MEMACTR_ms->Pos)))-1))));
+NEMACTR = (*A_NILCHECK((&(A_NILCHECK((*A_NILCHECK((&(A_NILCHECK(MEMACTR_ms)->Current_chunk)))))->Data)))) ;
+PEMACTR = (&(A_NILCHECK((*A_NILCHECK((&(A_NILCHECK(MEMACTR_ms)->Current_chunk)))))->Data)) ;
+(void)((*A_NILCHECK(PEMACTR)) = A_VTRIM(OEMACTR,(NEMACTR),A_VTSCRIPT(&(OEMACTR.upb),(NEMACTR).upb,1,((*A_NILCHECK((&(A_NILCHECK(MEMACTR_ms)->Pos))))-1))));
  /* line 372: */
  /* line 373: */
  /* line 374: */
  /* line 376: */
-QEMACTR = (&(MEMACTR_ms->Status)) ;
-(*QEMACTR) = CWLACTR_notopen;
+QEMACTR = (&(A_NILCHECK(MEMACTR_ms)->Status)) ;
+(*A_NILCHECK(QEMACTR)) = CWLACTR_notopen;
 } 
 break;
 default: 
@@ -2171,7 +2171,7 @@ for (;CHMACTR-- >= 0;
 (ZGMACTR_i++
 ) )
 {
-(void)((*ZGMACTR_i) = A_CALLPROC(LFMACTR_streamchar,(),((LFMACTR_streamchar).nonlocals)));
+(void)((*A_NILCHECK(ZGMACTR_i)) = A_CALLPROC(LFMACTR_streamchar,(),((LFMACTR_streamchar).nonlocals)));
 }
  /* line 490: */
  /* line 491: */
@@ -2216,7 +2216,7 @@ HHMACTR_i += 1 )
 { 
  /* line 504: */
  /* line 505: */
-JHMACTR_s = (*(&A_R1INDEX(EWLACTR_cstreams,HHMACTR_i)));
+JHMACTR_s = (*A_NILCHECK((&A_R1INDEX(EWLACTR_cstreams,HHMACTR_i))));
  /* line 506: */
  /* line 507: */
 KHMACTR = JHMACTR_s;
@@ -2227,7 +2227,7 @@ LHMACTR_f = (KHMACTR.data.mode1);
  /* line 508: */
 { 
  /* line 494: */
-(void)(IWBAOSF_close_file((*(&(LHMACTR_f->File))), RIBAOSF_ignore_msg));
+(void)(IWBAOSF_close_file((*A_NILCHECK((&(A_NILCHECK(LHMACTR_f)->File)))), RIBAOSF_ignore_msg));
  /* line 509: */
 if (ZCHACTR_tracelevel(NHMACTR)<5)
 { 
@@ -2282,10 +2282,10 @@ ZRAAOSF();   /* USE messageproc */
 IKAAOSF();   /* USE usefulops */
 /* --- Initialise configuration information */
 A_config.source_file = "/home/vak/Project/Algol/Algol-68RS-Source/src/coutput.a68";
-A_config.translation_time = "Thu Nov  5 21:38:57 2026";
+A_config.translation_time = "Thu Nov  5 21:56:13 2026";
 A_config.ctrans_version = "Ctrans_34.6";
 A_config.name_seed = "OTLACTR (from seed file) ";
-A_config.spec_change_time = "Thu Nov  5 21:38:57 2026";
+A_config.spec_change_time = "Thu Nov  5 21:56:13 2026";
 A_config.arguments = A_config_arguments;
 A_config.environment = A_config_environment;
 A_config.modinfo_files = A_config_modinfo_files;
@@ -2326,7 +2326,7 @@ for (;JWLACTR-- >= 0;
 (IWLACTR_stream += EWLACTR_cstreams.dim[0].stride
 ) )
 {
-(void)((*IWLACTR_stream) = A_EMPTY(KWLACTR,3));
+(void)((*A_NILCHECK(IWLACTR_stream)) = A_EMPTY(KWLACTR,3));
 }
  /* line 158: */
 LWLACTR_ceditid = (A68_SSBITS)26;

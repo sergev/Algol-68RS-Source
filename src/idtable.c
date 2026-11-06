@@ -782,7 +782,7 @@ A_PROC_ENTRY(idname);
  /* line 209: */
 if (Idno==VPKACTR_alienidno)
 { 
-MRKACTR = (*(&((&UPKACTR_alienidinfo)->Name)));
+MRKACTR = (*A_NILCHECK((&(A_NILCHECK((&UPKACTR_alienidinfo))->Name))));
 } 
 else
 { 
@@ -798,7 +798,7 @@ else
 if (Idno<=IAAACTR_maxidno)
 { 
  /* line 213: */
-MRKACTR = (*(&((&A_R1INDEX(WPKACTR_ids,Idno))->Name)));
+MRKACTR = (*A_NILCHECK((&(A_NILCHECK((&A_R1INDEX(WPKACTR_ids,Idno)))->Name))));
 } 
 else
 { 
@@ -806,7 +806,7 @@ else
 if (Idno<=KAAACTR_maxrdno)
 { 
  /* line 215: */
-MRKACTR = (*(&((&A_R1INDEX(XPKACTR_rds,Idno))->Name)));
+MRKACTR = (*A_NILCHECK((&(A_NILCHECK((&A_R1INDEX(XPKACTR_rds,Idno)))->Name))));
 } 
 else
 { 
@@ -814,13 +814,13 @@ else
 if (Idno<=MAAACTR_maxlibid)
 { 
  /* line 217: */
-MRKACTR = (*(&((&A_R1INDEX(YPKACTR_libraryids,Idno))->Name)));
+MRKACTR = (*A_NILCHECK((&(A_NILCHECK((&A_R1INDEX(YPKACTR_libraryids,Idno)))->Name))));
 } 
 else
 { 
  /* line 218: */
 PRKACTR = (Idno-OAAACTR_minlab) ;
-MRKACTR = (*(&((&A_R1INDEX(ZPKACTR_labels,PRKACTR))->Name)));
+MRKACTR = (*A_NILCHECK((&(A_NILCHECK((&A_R1INDEX(ZPKACTR_labels,PRKACTR)))->Name))));
 } 
 } 
 } 
@@ -847,7 +847,7 @@ SRKACTR_upb = Name.upb;
 TRKACTR = (SRKACTR_upb>0);
 if ( TRKACTR )
 {URKACTR = 1 ;
-TRKACTR = ((*(&A_VINDEX(Name,URKACTR)))=='!');
+TRKACTR = ((*A_NILCHECK((&A_VINDEX(Name,URKACTR))))=='!');
 }
 if (TRKACTR)
 { 
@@ -899,17 +899,17 @@ switch ( Prefix )
 { 
 case 1: 
  /* line 231: */
-FSKACTR = (*(&(CSKACTR_rd->Prefix))) ;
+FSKACTR = (*A_NILCHECK((&(A_NILCHECK(CSKACTR_rd)->Prefix)))) ;
 DSKACTR = A_HISVEC(ESKACTR,FSKACTR,7,A68_CHAR );
 break;
 case 2: 
  /* line 233: */
-HSKACTR = (*(&(CSKACTR_rd->Fnprefix))) ;
+HSKACTR = (*A_NILCHECK((&(A_NILCHECK(CSKACTR_rd)->Fnprefix)))) ;
 DSKACTR = A_HISVEC(GSKACTR,HSKACTR,7,A68_CHAR );
 break;
 case 3: 
  /* line 235: */
-JSKACTR = (*(&(CSKACTR_rd->Envprefix))) ;
+JSKACTR = (*A_NILCHECK((&(A_NILCHECK(CSKACTR_rd)->Envprefix)))) ;
 DSKACTR = A_HISVEC(ISKACTR,JSKACTR,7,A68_CHAR );
 break;
 default: 
@@ -921,7 +921,7 @@ break;
  /* line 237: */
  /* line 238: */
  /* line 239: */
-OSKACTR = (*(&(CSKACTR_rd->Flags))) ;
+OSKACTR = (*A_NILCHECK((&(A_NILCHECK(CSKACTR_rd)->Flags)))) ;
 if (A_LB_GE(OSKACTR,SQKACTR_rdopflag))
 { 
  /* line 240: */
@@ -930,7 +930,7 @@ QSKACTR = RSKACTR;
 else
 { 
  /* line 241: */
-RRKACTR_afterbang( (*(&(CSKACTR_rd->Name))), &SSKACTR );
+RRKACTR_afterbang( (*A_NILCHECK((&(A_NILCHECK(CSKACTR_rd)->Name)))), &SSKACTR );
 QSKACTR = SSKACTR;
 } 
 TSKACTR = A_VC_PLUS(A_VC_PLUS(DSKACTR,A_HVEC(USKACTR,'_',A68_CHAR )),QSKACTR);
@@ -954,8 +954,8 @@ A_PROC_ENTRY(labelfullname);
 XSKACTR_labinfo = (&A_R1INDEX(ZPKACTR_labels,Labno));
  /* line 248: */
  /* line 249: */
-ATKACTR = (*(&(XSKACTR_labinfo->Prefix))) ;
-YSKACTR = A_VC_PLUS(A_VC_PLUS(A_HISVEC(ZSKACTR,ATKACTR,7,A68_CHAR ),A_HVEC(BTKACTR,'_',A68_CHAR )),(*(&(XSKACTR_labinfo->Name))));
+ATKACTR = (*A_NILCHECK((&(A_NILCHECK(XSKACTR_labinfo)->Prefix)))) ;
+YSKACTR = A_VC_PLUS(A_VC_PLUS(A_HISVEC(ZSKACTR,ATKACTR,7,A68_CHAR ),A_HVEC(BTKACTR,'_',A68_CHAR )),(*A_NILCHECK((&(A_NILCHECK(XSKACTR_labinfo)->Name)))));
 } 
 A_PROC_EXIT(labelfullname);
 *ReturnedValue = (YSKACTR);
@@ -977,8 +977,8 @@ A_PROC_ENTRY(labelbuffername);
 ETKACTR_labinfo = (&A_R1INDEX(ZPKACTR_labels,Labno));
  /* line 257: */
  /* line 258: */
-HTKACTR = (*(&((&(ETKACTR_labinfo->Label))->Name))) ;
-FTKACTR = A_VC_PLUS(A_VC_PLUS(A_HISVEC(GTKACTR,HTKACTR,7,A68_CHAR ),A_HVEC(ITKACTR,'_',A68_CHAR )),(*(&(ETKACTR_labinfo->Name))));
+HTKACTR = (*A_NILCHECK((&(A_NILCHECK((&(A_NILCHECK(ETKACTR_labinfo)->Label)))->Name)))) ;
+FTKACTR = A_VC_PLUS(A_VC_PLUS(A_HISVEC(GTKACTR,HTKACTR,7,A68_CHAR ),A_HVEC(ITKACTR,'_',A68_CHAR )),(*A_NILCHECK((&(A_NILCHECK(ETKACTR_labinfo)->Name)))));
 } 
 A_PROC_EXIT(labelbuffername);
 *ReturnedValue = (FTKACTR);
@@ -991,7 +991,7 @@ A68_BOOL  KTKACTR_labelisset(A68_INT  Labno)
 A68_BOOL  LTKACTR;  /* clause result */
 A_PROC_ENTRY(labelisset);
  /* line 261: */
-LTKACTR = (*(&((&((&A_R1INDEX(ZPKACTR_labels,Labno))->Label))->Set)));
+LTKACTR = (*A_NILCHECK((&(A_NILCHECK((&(A_NILCHECK((&A_R1INDEX(ZPKACTR_labels,Labno)))->Label)))->Set))));
 A_PROC_EXIT(labelisset);
 return( LTKACTR );
 } 
@@ -1003,7 +1003,7 @@ A68_BOOL  OTKACTR;  /* clause result */
 A68_BITS  PTKACTR;  /* ADICOPS - <= */
 A_PROC_ENTRY(labelisdeclared);
  /* line 264: */
-PTKACTR = (*(&((&A_R1INDEX(ZPKACTR_labels,Labno))->Flags))) ;
+PTKACTR = (*A_NILCHECK((&(A_NILCHECK((&A_R1INDEX(ZPKACTR_labels,Labno)))->Flags)))) ;
 OTKACTR = A_LB_LE(VQKACTR_labdeclaredflag,PTKACTR);
 A_PROC_EXIT(labelisdeclared);
 return( OTKACTR );
@@ -1015,7 +1015,7 @@ A68_VOID  RTKACTR_labelenviron(A68_INT  Labno, A68_78  *ReturnedValue)
 A68_78  STKACTR;  /* clause result */
 A_PROC_ENTRY(labelenviron);
  /* line 267: */
-STKACTR = (*(&((&A_R1INDEX(ZPKACTR_labels,Labno))->Environ)));
+STKACTR = (*A_NILCHECK((&(A_NILCHECK((&A_R1INDEX(ZPKACTR_labels,Labno)))->Environ))));
 A_PROC_EXIT(labelenviron);
 *ReturnedValue = (STKACTR);
 return;
@@ -1037,7 +1037,7 @@ A_PROC_ENTRY(idfullname);
  /* line 276: */
 if (Idno==VPKACTR_alienidno)
 { 
-VTKACTR = (*(&((&UPKACTR_alienidinfo)->Name)));
+VTKACTR = (*A_NILCHECK((&(A_NILCHECK((&UPKACTR_alienidinfo))->Name))));
 } 
 else
 { 
@@ -1055,7 +1055,7 @@ if (Idno<=IAAACTR_maxidno)
 YTKACTR_id = (&A_R1INDEX(WPKACTR_ids,Idno));
  /* line 282: */
  /* line 284: */
-VTKACTR = (*(&(YTKACTR_id->C_name)));
+VTKACTR = (*A_NILCHECK((&(A_NILCHECK(YTKACTR_id)->C_name))));
 } 
 else
 { 
@@ -1075,7 +1075,7 @@ AUKACTR_id = (&A_R1INDEX(YPKACTR_libraryids,Idno));
  /* line 289: */
  /* line 291: */
  /* line 292: */
-VTKACTR = (*(&(AUKACTR_id->C_name)));
+VTKACTR = (*A_NILCHECK((&(A_NILCHECK(AUKACTR_id)->C_name))));
 } 
 else
 { 
@@ -1239,8 +1239,8 @@ for (;JWKACTR-- >= 0;
 (IWKACTR_id += WPKACTR_ids.dim[0].stride
 ) )
 {
-KWKACTR = (&(IWKACTR_id->Flags)) ;
-(*KWKACTR) = AQKACTR_idnoflags;
+KWKACTR = (&(A_NILCHECK(IWKACTR_id)->Flags)) ;
+(*A_NILCHECK(KWKACTR)) = AQKACTR_idnoflags;
 }
  /* line 332: */
 MWKACTR = XPKACTR_rds.dim[0].upb - XPKACTR_rds.dim[0].lwb;
@@ -1249,8 +1249,8 @@ for (;MWKACTR-- >= 0;
 (LWKACTR_rd += XPKACTR_rds.dim[0].stride
 ) )
 {
-NWKACTR = (&(LWKACTR_rd->Flags)) ;
-(*NWKACTR) = OQKACTR_rdnoflags;
+NWKACTR = (&(A_NILCHECK(LWKACTR_rd)->Flags)) ;
+(*A_NILCHECK(NWKACTR)) = OQKACTR_rdnoflags;
 }
  /* line 333: */
 PWKACTR = YPKACTR_libraryids.dim[0].upb - YPKACTR_libraryids.dim[0].lwb;
@@ -1259,8 +1259,8 @@ for (;PWKACTR-- >= 0;
 (OWKACTR_id += YPKACTR_libraryids.dim[0].stride
 ) )
 {
-QWKACTR = (&(OWKACTR_id->Flags)) ;
-(*QWKACTR) = AQKACTR_idnoflags;
+QWKACTR = (&(A_NILCHECK(OWKACTR_id)->Flags)) ;
+(*A_NILCHECK(QWKACTR)) = AQKACTR_idnoflags;
 }
  /* line 334: */
 SWKACTR = ZPKACTR_labels.dim[0].upb - ZPKACTR_labels.dim[0].lwb;
@@ -1269,8 +1269,8 @@ for (;SWKACTR-- >= 0;
 (RWKACTR_lab += ZPKACTR_labels.dim[0].stride
 ) )
 {
-TWKACTR = (&(RWKACTR_lab->Flags)) ;
-(*TWKACTR) = UQKACTR_labnoflags;
+TWKACTR = (&(A_NILCHECK(RWKACTR_lab)->Flags)) ;
+(*A_NILCHECK(TWKACTR)) = UQKACTR_labnoflags;
 }
  /* line 342: */
  /* line 343: */
@@ -1288,45 +1288,45 @@ for (;ZWKACTR-- >= 0;
 ) )
 {
  /* line 348: */
-ROAAOSF_whole( (*YWKACTR_decno), 0, &AXKACTR );
+ROAAOSF_whole( (*A_NILCHECK(YWKACTR_decno)), 0, &AXKACTR );
 (void)(FRKACTR_debugmessage(AXKACTR));
  /* line 349: */
  /* line 350: */
-if ((*YWKACTR_decno)<=IAAACTR_maxidno)
+if ((*A_NILCHECK(YWKACTR_decno))<=IAAACTR_maxidno)
 { 
  /* line 351: */
-BXKACTR = (&((&A_R1INDEX(WPKACTR_ids,(*YWKACTR_decno)))->Flags)) ;
-(*BXKACTR) = CQKACTR_idkeptflag;
+BXKACTR = (&(A_NILCHECK((&A_R1INDEX(WPKACTR_ids,(*A_NILCHECK(YWKACTR_decno)))))->Flags)) ;
+(*A_NILCHECK(BXKACTR)) = CQKACTR_idkeptflag;
 } 
 else
 { 
  /* line 352: */
-if ((*YWKACTR_decno)<=KAAACTR_maxrdno)
+if ((*A_NILCHECK(YWKACTR_decno))<=KAAACTR_maxrdno)
 { 
  /* line 353: */
-CXKACTR = (&((&A_R1INDEX(XPKACTR_rds,(*YWKACTR_decno)))->Flags)) ;
-(*CXKACTR) = PQKACTR_rdkeptflag;
+CXKACTR = (&(A_NILCHECK((&A_R1INDEX(XPKACTR_rds,(*A_NILCHECK(YWKACTR_decno)))))->Flags)) ;
+(*A_NILCHECK(CXKACTR)) = PQKACTR_rdkeptflag;
 } 
 else
 { 
  /* line 354: */
-if ((*YWKACTR_decno)<=MAAACTR_maxlibid)
+if ((*A_NILCHECK(YWKACTR_decno))<=MAAACTR_maxlibid)
 { 
  /* line 355: */
-DXKACTR = (&((&A_R1INDEX(YPKACTR_libraryids,(*YWKACTR_decno)))->Flags)) ;
-(*DXKACTR) = CQKACTR_idkeptflag;
+DXKACTR = (&(A_NILCHECK((&A_R1INDEX(YPKACTR_libraryids,(*A_NILCHECK(YWKACTR_decno)))))->Flags)) ;
+(*A_NILCHECK(DXKACTR)) = CQKACTR_idkeptflag;
 } 
 else
 { 
  /* line 356: */
  /* line 357: */
-if ((*YWKACTR_decno)<=TAAACTR_maxkeptgeneratorproc)
+if ((*A_NILCHECK(YWKACTR_decno))<=TAAACTR_maxkeptgeneratorproc)
 { 
-(*YWKACTR_decno)-=NAAACTR_keptgeneratorproccorrection;
+(*A_NILCHECK(YWKACTR_decno))-=NAAACTR_keptgeneratorproccorrection;
  /* line 358: */
  /* line 360: */
-EXKACTR = (&((&A_R1INDEX(WPKACTR_ids,(*YWKACTR_decno)))->Flags)) ;
-(void)((*EXKACTR) = (A68_BITS )(CQKACTR_idkeptflag|KQKACTR_idkeptgenprocflag));
+EXKACTR = (&(A_NILCHECK((&A_R1INDEX(WPKACTR_ids,(*A_NILCHECK(YWKACTR_decno)))))->Flags)) ;
+(void)((*A_NILCHECK(EXKACTR)) = (A68_BITS )(CQKACTR_idkeptflag|KQKACTR_idkeptgenprocflag));
 } 
 else
 { 
@@ -1343,14 +1343,14 @@ else
  /* line 365: */
 HXKACTR.Level = 0;
 HXKACTR.Block = 0;
-IXKACTR = (&((&A_R1INDEX(WPKACTR_ids,GAAACTR_globalidno))->Environ)) ;
-(*IXKACTR) = HXKACTR;
+IXKACTR = (&(A_NILCHECK((&A_R1INDEX(WPKACTR_ids,GAAACTR_globalidno)))->Environ)) ;
+(*A_NILCHECK(IXKACTR)) = HXKACTR;
  /* line 366: */
 JXKACTR.Level = 0;
  /* line 367: */
 JXKACTR.Block = 0;
-KXKACTR = (&((&A_R1INDEX(WPKACTR_ids,HAAACTR_minidno))->Environ)) ;
-(*KXKACTR) = JXKACTR;
+KXKACTR = (&(A_NILCHECK((&A_R1INDEX(WPKACTR_ids,HAAACTR_minidno)))->Environ)) ;
+(*A_NILCHECK(KXKACTR)) = JXKACTR;
 } 
 A_PROC_EXIT(initialiseids);
 return;
@@ -1384,10 +1384,10 @@ THAACTR();   /* USE centities */
 IKAAOSF();   /* USE usefulops */
 /* --- Initialise configuration information */
 A_config.source_file = "/home/vak/Project/Algol/Algol-68RS-Source/src/idtable.a68";
-A_config.translation_time = "Thu Nov  5 21:38:57 2026";
+A_config.translation_time = "Thu Nov  5 21:56:13 2026";
 A_config.ctrans_version = "Ctrans_34.6";
 A_config.name_seed = "OPKACTR (from seed file) ";
-A_config.spec_change_time = "Thu Nov  5 21:38:57 2026";
+A_config.spec_change_time = "Thu Nov  5 21:56:13 2026";
 A_config.arguments = A_config_arguments;
 A_config.environment = A_config_environment;
 A_config.modinfo_files = A_config_modinfo_files;

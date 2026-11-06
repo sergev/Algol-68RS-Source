@@ -1,0 +1,8 @@
+PROGRAM nil CONTEXT VOID
+USE standard
+BEGIN
+   REF INT p := NIL;
+   INT x := p;
+   print((x, newline))
+END
+FINISH

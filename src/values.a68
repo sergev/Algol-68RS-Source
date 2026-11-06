@@ -42,6 +42,7 @@ COMMENT
 25:08:94  33.001  ELLA  NewConFig Entered in new config system previous version
                                   number 2.7 
 29:03:95  34.002  ELLA  Modcprght Change copyright header
+05:11:26  34.003  SV    NilCheck  Dereferences go through A_NILCHECK.
 ??:??:??   ?.???  ????
 COMMENT
 
@@ -163,6 +164,16 @@ BEGIN	"VALUES - ref string: level is invalid"
 	ABS level * ( level > 0 | "*" | "&" )
 END;
 
+PROC	deref name = ( INT level, CFRAGMENT name ) CFRAGMENT:
+{
+	'name' with 'level' C dereferences, each checked for NIL
+	(A_NILCHECK), or with "&" for level -1.
+}
+IF	level <= 0
+THEN	ref string( level ) + name
+ELSE	"*A_NILCHECK(" + deref name( level - 1, name ) + ")"
+FI;
+
 PROC	id ref level = ( INT mode, c type ) INT:
 BEGIN
 	BOOL	firm array = is firm array( mode );
@@ -210,7 +221,7 @@ BEGIN
 		INT diff = id ref level( rmode, mode OF t );
 		"VALUES - GETCFRAGMENT: attempt to take address of temporary"
 		ASSERT	( diff >= 0 );
-	  	CFRAGMENT result = ref string( diff ) + name OF t;
+	  	CFRAGMENT result = deref name( diff, name OF t );
 		( diff > 0 | bracket( result ) | result )
 	END,
 
@@ -248,6 +259,11 @@ BEGIN
                   ASSERT (id <= max id no) OREL ( (id >= min libid) ANDTH (id <= max libid));
 		REF IDINFO idinfo = get_idinfo(id);
 		BOOL	is gproc = flags OF idinfo >= id gproc flag;
+		CFRAGMENT name =
+		IF	non local
+		THEN	nl macro( id full name( id no OF i ) )
+		ELSE	id full name( id no OF i )
+		FI;
 		CFRAGMENT body =
 		IF	is gproc
 		THEN    "VALUES: GETCFRAGMENT: non-local used gproc"
@@ -270,13 +286,7 @@ BEGIN
 				);    
 			INT diff = id ref level( reqd a68 mode, reqd c mode );
 			brackets required := ( diff /= 0 );
-			ref string( diff )
-		FI  	+       
-		IF	non local                                   
-		THEN	nl macro( id full name( id no OF i ) )
-		ELIF	is gproc
-		THEN    ""
-		ELSE	id full name( id no OF i )
+			deref name( diff, name )
 		FI;
 		( brackets required
 		| bracket( body )

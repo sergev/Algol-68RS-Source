@@ -1139,7 +1139,7 @@ A_PROC_ENTRY(msg);
  /* line 205: */
 if (JXAAOSF_error_msg(A_UNITE(KXEAOSF,mode1,1,No)))
 { 
-(*NL(EXEAOSF_failed)) = A68_TRUE;
+(*A_NILCHECK(NL(EXEAOSF_failed))) = A68_TRUE;
 } 
 A_PROC_EXIT(msg);
 return;
@@ -1154,7 +1154,7 @@ A_PROC_ENTRY(msg);
  /* line 247: */
 if (JXAAOSF_error_msg(A_UNITE(RZEAOSF,mode1,1,No)))
 { 
-(*NL(LZEAOSF_failed)) = A68_TRUE;
+(*A_NILCHECK(NL(LZEAOSF_failed))) = A68_TRUE;
 } 
 A_PROC_EXIT(msg);
 return;
@@ -1166,9 +1166,9 @@ A_STATIC A68_VOID  UZEAOSF_next(A68_VC  *ReturnedValue, void *NonLocals)
 { 
 A68_VC  WZEAOSF;  /* clause result */
 A_PROC_ENTRY(next);
-if (((*NL(SZEAOSF_argc))+=1)<=NL(KZEAOSF_args).upb)
+if (((*A_NILCHECK(NL(SZEAOSF_argc)))+=1)<=NL(KZEAOSF_args).upb)
 { 
-WZEAOSF = A_VINDEX(NL(KZEAOSF_args),(*NL(SZEAOSF_argc)));
+WZEAOSF = A_VINDEX(NL(KZEAOSF_args),(*A_NILCHECK(NL(SZEAOSF_argc))));
 } 
 else
 { 
@@ -1219,7 +1219,7 @@ for (;MCFAOSF-- >= 0;
 ) )
 {
 KCFAOSF_sig = *LCFAOSF;
-(void)(YPCAOSF_set_sigmsgproc(A_HVEC(NCFAOSF,KCFAOSF_sig,A68_INT ), (*JCFAOSF_old), NL(Msg)));
+(void)(YPCAOSF_set_sigmsgproc(A_HVEC(NCFAOSF,KCFAOSF_sig,A68_INT ), (*A_NILCHECK(JCFAOSF_old)), NL(Msg)));
 }
  /* line 334: */
  /* line 335: */
@@ -1296,7 +1296,7 @@ UXBAOSF_write_buffer( USBAOSF_stdout, Buffer, RIBAOSF_ignore_msg, &EQEAOSF );
  /* line 83: */
  /* line 84: */
  /* line 85: */
-(void)(FQEAOSF_fflush((*(&(USBAOSF_stdout->Stdiofile)))));
+(void)(FQEAOSF_fflush((*A_NILCHECK((&(A_NILCHECK(USBAOSF_stdout)->Stdiofile))))));
 } 
 A_PROC_EXIT(write_stdout);
 return;
@@ -1319,20 +1319,20 @@ A68_174 * AREAOSF;  /* YIELD */
 A68_172  BREAOSF;  /* clause result */
 { 
 A_CALLPROC(ESAAOSF_anonymous,(OQEAOSF_anonymous, &RQEAOSF),(OQEAOSF_anonymous, &RQEAOSF,(ESAAOSF_anonymous).nonlocals));
-SQEAOSF = (&((&QQEAOSF_anonymous)->Name)) ;
-(*SQEAOSF) = RQEAOSF;
+SQEAOSF = (&(A_NILCHECK((&QQEAOSF_anonymous))->Name)) ;
+(*A_NILCHECK(SQEAOSF)) = RQEAOSF;
 A_CALLPROC(ESAAOSF_anonymous,(OQEAOSF_anonymous, &TQEAOSF),(OQEAOSF_anonymous, &TQEAOSF,(ESAAOSF_anonymous).nonlocals));
-UQEAOSF = (&((&QQEAOSF_anonymous)->Version)) ;
-(*UQEAOSF) = TQEAOSF;
+UQEAOSF = (&(A_NILCHECK((&QQEAOSF_anonymous))->Version)) ;
+(*A_NILCHECK(UQEAOSF)) = TQEAOSF;
 A_CALLPROC(ESAAOSF_anonymous,(OQEAOSF_anonymous, &VQEAOSF),(OQEAOSF_anonymous, &VQEAOSF,(ESAAOSF_anonymous).nonlocals));
-WQEAOSF = (&((&QQEAOSF_anonymous)->Date)) ;
-(*WQEAOSF) = VQEAOSF;
+WQEAOSF = (&(A_NILCHECK((&QQEAOSF_anonymous))->Date)) ;
+(*A_NILCHECK(WQEAOSF)) = VQEAOSF;
 A_CALLPROC(ESAAOSF_anonymous,(OQEAOSF_anonymous, &XQEAOSF),(OQEAOSF_anonymous, &XQEAOSF,(ESAAOSF_anonymous).nonlocals));
-YQEAOSF = (&((&QQEAOSF_anonymous)->Msg)) ;
-(*YQEAOSF) = XQEAOSF;
+YQEAOSF = (&(A_NILCHECK((&QQEAOSF_anonymous))->Msg)) ;
+(*A_NILCHECK(YQEAOSF)) = XQEAOSF;
 A_CALLPROC(ESAAOSF_anonymous,(OQEAOSF_anonymous, &ZQEAOSF),(OQEAOSF_anonymous, &ZQEAOSF,(ESAAOSF_anonymous).nonlocals));
-AREAOSF = (&((&QQEAOSF_anonymous)->Sys_fault)) ;
-(*AREAOSF) = ZQEAOSF;
+AREAOSF = (&(A_NILCHECK((&QQEAOSF_anonymous))->Sys_fault)) ;
+(*A_NILCHECK(AREAOSF)) = ZQEAOSF;
 BREAOSF = QQEAOSF_anonymous;
 } 
 *ReturnedValue = (BREAOSF);
@@ -1513,7 +1513,7 @@ YSEAOSF.data[1] = A_UNITE(ETEAOSF,mode7,7,DTEAOSF);
  /* line 148: */
 ITEAOSF = GTEAOSF ;
 YSEAOSF.data[2] = A_UNITE(HTEAOSF,mode7,7,ITEAOSF);
-KTEAOSF = (*(&(QSEAOSF_message.Msgno.Facility->Name))) ;
+KTEAOSF = (*A_NILCHECK((&(A_NILCHECK(QSEAOSF_message.Msgno.Facility)->Name)))) ;
 YSEAOSF.data[3] = A_UNITE(JTEAOSF,mode7,7,KTEAOSF);
 MTEAOSF = ')' ;
 YSEAOSF.data[4] = A_UNITE(LTEAOSF,mode6,6,MTEAOSF);
@@ -1693,7 +1693,7 @@ OWEAOSF = A68_FALSE;
 else
 { 
  /* line 200: */
-if ((*Ans).upb>0)
+if ((*A_NILCHECK(Ans)).upb>0)
 { 
 { 
 PWEAOSF.data[0] = A_UNITE(QWEAOSF,mode7,7,Name);
@@ -1721,7 +1721,7 @@ A_CLOSURE( HXEAOSF_msg, IXEAOSF_msg, JXEAOSF_msg );
 (( JXEAOSF_msg * ) ( HXEAOSF_msg.nonlocals )) -> EXEAOSF_failed = (&EXEAOSF_failed);
  /* line 207: */
 BFCAOSF_parse_filename( Name, Type, HXEAOSF_msg, &LXEAOSF );
-(*Ans) = LXEAOSF.Filename;
+(*A_NILCHECK(Ans)) = LXEAOSF.Filename;
  /* line 208: */
  /* line 209: */
 if (EXEAOSF_failed)
@@ -1740,7 +1740,7 @@ MXEAOSF.data[3] = A_UNITE(WXEAOSF,mode12,12,XXEAOSF);
 } 
 else
 { 
-ZXEAOSF_f = QVBAOSF_open_file((*Ans), ATBAOSF_read_access, HXEAOSF_msg);
+ZXEAOSF_f = QVBAOSF_open_file((*A_NILCHECK(Ans)), ATBAOSF_read_access, HXEAOSF_msg);
  /* line 212: */
  /* line 213: */
 if (EXEAOSF_failed)
@@ -1754,14 +1754,14 @@ AYEAOSF.data[1] = A_UNITE(FYEAOSF,mode7,7,Sort);
  /* line 215: */
 JYEAOSF = HYEAOSF ;
 AYEAOSF.data[2] = A_UNITE(IYEAOSF,mode7,7,JYEAOSF);
-AYEAOSF.data[3] = A_UNITE(KYEAOSF,mode7,7,(*Ans));
+AYEAOSF.data[3] = A_UNITE(KYEAOSF,mode7,7,(*A_NILCHECK(Ans)));
 MYEAOSF.fn.fn_global = PKDAOSF_newline;
 MYEAOSF.nonlocals = A68_NIL;
 AYEAOSF.data[4] = A_UNITE(LYEAOSF,mode12,12,MYEAOSF);
 (void)(KYDAOSF_put(FREAOSF_err, A_HISVEC(NYEAOSF,AYEAOSF,5,A68_52 )));
  /* line 216: */
  /* line 217: */
-(*Ans) = IHDAOSF_nullstr;
+(*A_NILCHECK(Ans)) = IHDAOSF_nullstr;
 } 
 else
 { 
@@ -1791,7 +1791,7 @@ OYEAOSF.data[4] = A_UNITE(AZEAOSF,mode12,12,BZEAOSF);
 (void)(KYDAOSF_put(FREAOSF_err, A_HISVEC(CZEAOSF,OYEAOSF,5,A68_52 )));
  /* line 223: */
  /* line 224: */
-(*Ans) = IHDAOSF_nullstr;
+(*A_NILCHECK(Ans)) = IHDAOSF_nullstr;
 } 
  /* line 225: */
  /* line 226: */
@@ -2032,7 +2032,7 @@ for (;ECFAOSF-- >= 0;
 {
 CCFAOSF_sig = *DCFAOSF;
 PRCAOSF_get_sigmsgproc( CCFAOSF_sig, Msg, &FCFAOSF );
-(*BCFAOSF_old) = FCFAOSF;
+(*A_NILCHECK(BCFAOSF_old)) = FCFAOSF;
 }
  /* line 328: */
  /* line 329: */
@@ -2178,10 +2178,10 @@ ZRAAOSF();   /* USE messageproc */
 QMDAOSF();   /* USE putstrings */
 /* --- Initialise configuration information */
 A_config.source_file = "/home/vak/Project/Algol/Algol-68RS-Source/liba68prel/osinterface.a68";
-A_config.translation_time = "Thu Nov  5 21:38:57 2026";
+A_config.translation_time = "Thu Nov  5 21:56:13 2026";
 A_config.ctrans_version = "Ctrans_34.6";
 A_config.name_seed = "HPEAOSF (from seed file) ";
-A_config.spec_change_time = "Thu Nov  5 21:38:57 2026";
+A_config.spec_change_time = "Thu Nov  5 21:56:13 2026";
 A_config.arguments = A_config_arguments;
 A_config.environment = A_config_environment;
 A_config.modinfo_files = A_config_modinfo_files;

@@ -373,9 +373,9 @@ UQLACTR = (List!=GPLACTR_emptynonloclist);
 if ( UQLACTR )
 { /* line 124: */
  /* line 125: */
-VQLACTR = (Decno==(*(&(List->Decno))));
+VQLACTR = (Decno==(*A_NILCHECK((&(A_NILCHECK(List)->Decno)))));
 if ( ! VQLACTR )
-{VQLACTR = A_CALLPROC(NL(RQLACTR_isinlist),(Decno, (*(&(List->Rest)))),(Decno, (*(&(List->Rest))),(NL(RQLACTR_isinlist)).nonlocals));
+{VQLACTR = A_CALLPROC(NL(RQLACTR_isinlist),(Decno, (*A_NILCHECK((&(A_NILCHECK(List)->Rest))))),(Decno, (*A_NILCHECK((&(A_NILCHECK(List)->Rest)))),(NL(RQLACTR_isinlist)).nonlocals));
 }
  /* line 126: */
 UQLACTR = VQLACTR;
@@ -391,8 +391,8 @@ A68_VOID  QPLACTR_currentenviron(A68_51  *ReturnedValue)
 A68_51  RPLACTR;  /* collateral clause result */
 A68_51  SPLACTR;  /* clause result */
 A_PROC_ENTRY(currentenviron);
-RPLACTR.Level = (*(&((&(NPLACTR_environstack->Env))->Level)));
-RPLACTR.Block = (*(&((&(NPLACTR_environstack->Env))->Block)));
+RPLACTR.Level = (*A_NILCHECK((&(A_NILCHECK((&(A_NILCHECK(NPLACTR_environstack)->Env)))->Level))));
+RPLACTR.Block = (*A_NILCHECK((&(A_NILCHECK((&(A_NILCHECK(NPLACTR_environstack)->Env)))->Block))));
 SPLACTR = RPLACTR;
 A_PROC_EXIT(currentenviron);
 *ReturnedValue = (SPLACTR);
@@ -413,10 +413,10 @@ VPLACTR_selectenviron = NPLACTR_environstack;
 for ( ;; )
 { 
  /* line 77: */
-if ( !(((*(&((&(VPLACTR_selectenviron->Env))->Level)))>Level)) ) break;
+if ( !(((*A_NILCHECK((&(A_NILCHECK((&(A_NILCHECK(VPLACTR_selectenviron)->Env)))->Level))))>Level)) ) break;
  /* line 78: */
  /* line 79: */
-if ((*(&(VPLACTR_selectenviron->Rest)))==HPLACTR_emptyenvironstack)
+if ((*A_NILCHECK((&(A_NILCHECK(VPLACTR_selectenviron)->Rest))))==HPLACTR_emptyenvironstack)
 { 
  /* line 80: */
 (void)(WXIACTR_assert(XPLACTR, A68_FALSE));
@@ -425,12 +425,12 @@ else
 { 
  /* line 81: */
  /* line 82: */
-(void)(VPLACTR_selectenviron = (*(&(VPLACTR_selectenviron->Rest))));
+(void)(VPLACTR_selectenviron = (*A_NILCHECK((&(A_NILCHECK(VPLACTR_selectenviron)->Rest)))));
 } 
 }
  /* line 83: */
  /* line 84: */
-YPLACTR = (&(VPLACTR_selectenviron->Env));
+YPLACTR = (&(A_NILCHECK(VPLACTR_selectenviron)->Env));
 } 
 A_PROC_EXIT(findenviron);
 return( YPLACTR );
@@ -441,7 +441,7 @@ A68_INT  ZPLACTR_currentroutine(void)
 { 
 A68_INT  AQLACTR;  /* clause result */
 A_PROC_ENTRY(currentroutine);
-AQLACTR = (*(&((&(NPLACTR_environstack->Env))->Rdenno)));
+AQLACTR = (*A_NILCHECK((&(A_NILCHECK((&(A_NILCHECK(NPLACTR_environstack)->Env)))->Rdenno))));
 A_PROC_EXIT(currentroutine);
 return( AQLACTR );
 } 
@@ -451,7 +451,7 @@ A68_INT  CQLACTR_findroutine(A68_INT  Level)
 { 
 A68_INT  DQLACTR;  /* clause result */
 A_PROC_ENTRY(findroutine);
-DQLACTR = (*(&(UPLACTR_findenviron(Level)->Rdenno)));
+DQLACTR = (*A_NILCHECK((&(A_NILCHECK(UPLACTR_findenviron(Level))->Rdenno))));
 A_PROC_EXIT(findroutine);
 return( DQLACTR );
 } 
@@ -468,7 +468,7 @@ GQLACTR.Env = Environ;
  /* line 96: */
 GQLACTR.Rest = NPLACTR_environstack;
 HQLACTR = A_HEAP(A68_53 ) ;
-(void)((*HQLACTR) = GQLACTR) ;
+(void)((*A_NILCHECK(HQLACTR)) = GQLACTR) ;
 NPLACTR_environstack = HQLACTR;
 A_PROC_EXIT(stackenviron);
 return;
@@ -479,7 +479,7 @@ A_STATIC A68_VOID  IQLACTR_collapseenvironstack(void)
 { 
 A_PROC_ENTRY(collapseenvironstack);
  /* line 104: */
-(void)(NPLACTR_environstack = (*(&(NPLACTR_environstack->Rest))));
+(void)(NPLACTR_environstack = (*A_NILCHECK((&(A_NILCHECK(NPLACTR_environstack)->Rest)))));
 A_PROC_EXIT(collapseenvironstack);
 return;
 } 
@@ -489,7 +489,7 @@ A68_BOOL  JQLACTR_nonlocalsused(void)
 { 
 A68_BOOL  KQLACTR;  /* clause result */
 A_PROC_ENTRY(nonlocalsused);
-KQLACTR = ((*(&((&(NPLACTR_environstack->Env))->Nonlocals)))!=GPLACTR_emptynonloclist);
+KQLACTR = ((*A_NILCHECK((&(A_NILCHECK((&(A_NILCHECK(NPLACTR_environstack)->Env)))->Nonlocals))))!=GPLACTR_emptynonloclist);
 A_PROC_EXIT(nonlocalsused);
 return( KQLACTR );
 } 
@@ -510,7 +510,7 @@ A_PROC_ENTRY(nonlocaldeclared);
 A_CLOSURE( RQLACTR_isinlist, SQLACTR_isinlist, TQLACTR_isinlist );
 (( TQLACTR_isinlist * ) ( RQLACTR_isinlist.nonlocals )) -> RQLACTR_isinlist = RQLACTR_isinlist;
  /* line 128: */
-XQLACTR_nonlocals = (*(&(UPLACTR_findenviron(Level)->Nonlocals)));
+XQLACTR_nonlocals = (*A_NILCHECK((&(A_NILCHECK(UPLACTR_findenviron(Level))->Nonlocals))));
  /* line 130: */
  /* line 131: */
  /* line 132: */
@@ -519,7 +519,7 @@ if ( ! YQLACTR )
 {ZQLACTR = (Decno>OAAACTR_minlab);
 if ( ZQLACTR )
 {ARLACTR = (Decno-OAAACTR_minlab) ;
-ZQLACTR = A_CALLPROC(RQLACTR_isinlist,(((*(&((&A_R1INDEX(ZPKACTR_labels,ARLACTR))->Alias)))+OAAACTR_minlab), XQLACTR_nonlocals),(((*(&((&A_R1INDEX(ZPKACTR_labels,ARLACTR))->Alias)))+OAAACTR_minlab), XQLACTR_nonlocals,(RQLACTR_isinlist).nonlocals));
+ZQLACTR = A_CALLPROC(RQLACTR_isinlist,(((*A_NILCHECK((&(A_NILCHECK((&A_R1INDEX(ZPKACTR_labels,ARLACTR)))->Alias))))+OAAACTR_minlab), XQLACTR_nonlocals),(((*A_NILCHECK((&(A_NILCHECK((&A_R1INDEX(ZPKACTR_labels,ARLACTR)))->Alias))))+OAAACTR_minlab), XQLACTR_nonlocals,(RQLACTR_isinlist).nonlocals));
 }
  /* line 133: */
 YQLACTR = ZQLACTR;
@@ -549,7 +549,7 @@ A_PROC_ENTRY(addnonlocal);
 if (Decno>OAAACTR_minlab)
 { 
 FRLACTR = (Decno-OAAACTR_minlab) ;
-GRLACTR_alias = (*(&((&A_R1INDEX(ZPKACTR_labels,FRLACTR))->Alias)));
+GRLACTR_alias = (*A_NILCHECK((&(A_NILCHECK((&A_R1INDEX(ZPKACTR_labels,FRLACTR)))->Alias))));
  /* line 145: */
  /* line 146: */
  /* line 147: */
@@ -565,11 +565,11 @@ HRLACTR_environ = UPLACTR_findenviron(Level);
  /* line 152: */
 IRLACTR.Decno = Decno;
  /* line 153: */
-IRLACTR.Rest = (*(&(HRLACTR_environ->Nonlocals)));
+IRLACTR.Rest = (*A_NILCHECK((&(A_NILCHECK(HRLACTR_environ)->Nonlocals))));
 JRLACTR = A_HEAP(A68_52 ) ;
-(void)((*JRLACTR) = IRLACTR) ;
-KRLACTR = (&(HRLACTR_environ->Nonlocals)) ;
-(*KRLACTR) = JRLACTR;
+(void)((*A_NILCHECK(JRLACTR)) = IRLACTR) ;
+KRLACTR = (&(A_NILCHECK(HRLACTR_environ)->Nonlocals)) ;
+(*A_NILCHECK(KRLACTR)) = JRLACTR;
 } 
 A_PROC_EXIT(addnonlocal);
 return;
@@ -581,7 +581,7 @@ A68_BOOL  MRLACTR_islocallevel(A68_51  E1)
 A68_BOOL  NRLACTR;  /* clause result */
 A_PROC_ENTRY(islocallevel);
  /* line 156: */
-NRLACTR = (E1.Level==(*(&((&(NPLACTR_environstack->Env))->Level))));
+NRLACTR = (E1.Level==(*A_NILCHECK((&(A_NILCHECK((&(A_NILCHECK(NPLACTR_environstack)->Env)))->Level)))));
 A_PROC_EXIT(islocallevel);
 return( NRLACTR );
 } 
@@ -622,7 +622,7 @@ A68_INT  VRLACTR_currentlevel(void)
 { 
 A68_INT  WRLACTR;  /* clause result */
 A_PROC_ENTRY(currentlevel);
-WRLACTR = (*(&((&(NPLACTR_environstack->Env))->Level)));
+WRLACTR = (*A_NILCHECK((&(A_NILCHECK((&(A_NILCHECK(NPLACTR_environstack)->Env)))->Level))));
 A_PROC_EXIT(currentlevel);
 return( WRLACTR );
 } 
@@ -636,7 +636,7 @@ A_PROC_ENTRY(startnewlevel);
  /* line 173: */
  /* line 174: */
 { 
-ZRLACTR_thislevel = ((*(&((&(NPLACTR_environstack->Env))->Level)))+1);
+ZRLACTR_thislevel = ((*A_NILCHECK((&(A_NILCHECK((&(A_NILCHECK(NPLACTR_environstack)->Env)))->Level))))+1);
  /* line 175: */
 ASLACTR.Level = ZRLACTR_thislevel;
 ASLACTR.Block = 0;
@@ -795,10 +795,10 @@ AHAACTR();   /* USE incenviron */
 HPIACTR();   /* USE environment */
 /* --- Initialise configuration information */
 A_config.source_file = "/home/vak/Project/Algol/Algol-68RS-Source/src/environ.a68";
-A_config.translation_time = "Thu Nov  5 21:38:57 2026";
+A_config.translation_time = "Thu Nov  5 21:56:13 2026";
 A_config.ctrans_version = "Ctrans_34.6";
 A_config.name_seed = "APLACTR (from seed file) ";
-A_config.spec_change_time = "Thu Nov  5 21:38:57 2026";
+A_config.spec_change_time = "Thu Nov  5 21:56:13 2026";
 A_config.arguments = A_config_arguments;
 A_config.environment = A_config_environment;
 A_config.modinfo_files = A_config_modinfo_files;
@@ -823,7 +823,7 @@ LPLACTR_globalenviron = KPLACTR;
 MPLACTR.Env = LPLACTR_globalenviron;
 MPLACTR.Rest = HPLACTR_emptyenvironstack;
 OPLACTR = A_HEAP(A68_53 ) ;
-(void)((*OPLACTR) = MPLACTR) ;
+(void)((*A_NILCHECK(OPLACTR)) = MPLACTR) ;
 NPLACTR_environstack = OPLACTR;
  /* line 65: */
 PPLACTR_highestlevel = 0;

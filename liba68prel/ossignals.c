@@ -770,7 +770,7 @@ A_PROC_ENTRY(osif_handler);
 (void)(JKCAOSF_raise(FLCAOSF_sigusr1));
  /* line 287: */
  /* line 288: */
-SPCAOSF = (*(&A_VINDEX(DPCAOSF_sig_msgprocs,Os_signum))) ;
+SPCAOSF = (*A_NILCHECK((&A_VINDEX(DPCAOSF_sig_msgprocs,Os_signum)))) ;
 XYAAOSF_make_msgno( Os_signum, YOCAOSF_signal_facility, &UPCAOSF );
 (void)(A_CALLPROC(SPCAOSF,(UPCAOSF, A_VVAC(TPCAOSF)),(UPCAOSF, A_VVAC(TPCAOSF),(SPCAOSF).nonlocals)));
 } 
@@ -827,7 +827,7 @@ else
  /* line 308: */
  /* line 309: */
 KQCAOSF = (&A_VINDEX(DPCAOSF_sig_msgprocs,ZPCAOSF_s)) ;
-(*KQCAOSF) = Sigmsgproc;
+(*A_NILCHECK(KQCAOSF)) = Sigmsgproc;
 } 
 }
 A_PROC_EXIT(set_sigmsgproc);
@@ -959,7 +959,7 @@ YRCAOSF = RIBAOSF_ignore_msg;
 else
 { 
  /* line 358: */
-YRCAOSF = (*(&A_VINDEX(DPCAOSF_sig_msgprocs,Signal)));
+YRCAOSF = (*A_NILCHECK((&A_VINDEX(DPCAOSF_sig_msgprocs,Signal))));
 } 
 A_PROC_EXIT(get_sigmsgproc);
 *ReturnedValue = (YRCAOSF);
@@ -979,7 +979,7 @@ for (;BSCAOSF-- >= 0;
 (ASCAOSF_m++
 ) )
 {
-(*ASCAOSF_m) = TIBAOSF_global_msg;
+(*A_NILCHECK(ASCAOSF_m)) = TIBAOSF_global_msg;
 }
  /* line 367: */
  /* line 368: */
@@ -1030,10 +1030,10 @@ ZRAAOSF();   /* USE messageproc */
 BAAAOSF();   /* USE cif */
 /* --- Initialise configuration information */
 A_config.source_file = "/home/vak/Project/Algol/Algol-68RS-Source/liba68prel/ossignals.a68";
-A_config.translation_time = "Thu Nov  5 21:38:57 2026";
+A_config.translation_time = "Thu Nov  5 21:56:13 2026";
 A_config.ctrans_version = "Ctrans_34.6";
 A_config.name_seed = "CKCAOSF (from seed file) ";
-A_config.spec_change_time = "Thu Nov  5 21:38:57 2026";
+A_config.spec_change_time = "Thu Nov  5 21:56:13 2026";
 A_config.arguments = A_config_arguments;
 A_config.environment = A_config_environment;
 A_config.modinfo_files = A_config_modinfo_files;
@@ -1136,7 +1136,7 @@ JMCAOSF_generator( A68_TRUE, &MMCAOSF );
 FMCAOSF.Messages = MMCAOSF;
  /* line 186: */
 NMCAOSF = A_LOC(A68_BOOL ) ;
-(void)((*NMCAOSF) = A68_FALSE) ;
+(void)((*A_NILCHECK(NMCAOSF)) = A68_FALSE) ;
 FMCAOSF.Initialised = NMCAOSF;
  /* line 187: */
 OMCAOSF.data[0].Number = WKCAOSF_sighup;

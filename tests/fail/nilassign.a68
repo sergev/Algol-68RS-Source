@@ -1,0 +1,8 @@
+PROGRAM nilassign CONTEXT VOID
+USE standard
+BEGIN
+   REF INT p := NIL;
+   REF INT (p) := 5;
+   print(("not reached", newline))
+END
+FINISH

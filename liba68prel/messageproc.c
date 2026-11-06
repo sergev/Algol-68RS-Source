@@ -312,8 +312,8 @@ A68_54 * FTAAOSF;  /* YIELD */
 A68_50  GTAAOSF;  /* clause result */
 { 
 A_CALLPROC(ESAAOSF_anonymous,(BTAAOSF_anonymous, &ETAAOSF),(BTAAOSF_anonymous, &ETAAOSF,(ESAAOSF_anonymous).nonlocals));
-FTAAOSF = (&((&DTAAOSF_anonymous)->Text)) ;
-(*FTAAOSF) = ETAAOSF;
+FTAAOSF = (&(A_NILCHECK((&DTAAOSF_anonymous))->Text)) ;
+(*A_NILCHECK(FTAAOSF)) = ETAAOSF;
 GTAAOSF = DTAAOSF_anonymous;
 } 
 *ReturnedValue = (GTAAOSF);
@@ -341,7 +341,7 @@ for (;ITAAOSF-- >= 0;
 ) )
 {
 CTAAOSF_generator( XSAAOSF_anonymous, &JTAAOSF );
-(*HTAAOSF_anonymous) = JTAAOSF;
+(*A_NILCHECK(HTAAOSF_anonymous)) = JTAAOSF;
 }
 KTAAOSF = ZSAAOSF_anonymous;
 } 
@@ -365,7 +365,7 @@ KABAOSF.Msgno.Facility = NL(Msgno).Facility;
  /* line 259: */
 KABAOSF.Msgno.Class = IUAAOSF_system.Class;
 LABAOSF.data[0] = NABAOSF;
-LABAOSF.data[1] = (*(&(NL(Msgno).Facility->Name)));
+LABAOSF.data[1] = (*A_NILCHECK((&(A_NILCHECK(NL(Msgno).Facility)->Name))));
 LABAOSF.data[2] = PABAOSF;
 LABAOSF.data[3] = Text;
 JDAAOSF_concat( A_HISVEC(QABAOSF,LABAOSF,4,A68_VC ), &RABAOSF );
@@ -384,9 +384,9 @@ A68_45  OBBAOSF;  /* avoid structure result */
 A_PROC_ENTRY(make_sysmsg);
  /* line 275: */
 { 
-(*NL(JBBAOSF_failed)) = A68_TRUE;
+(*A_NILCHECK(NL(JBBAOSF_failed))) = A68_TRUE;
 A_CALLPROC(NL(HABAOSF_fail),(Text, &OBBAOSF),(Text, &OBBAOSF,(NL(HABAOSF_fail)).nonlocals));
-(*NL(EBBAOSF_message)) = OBBAOSF;
+(*A_NILCHECK(NL(EBBAOSF_message))) = OBBAOSF;
 } 
 A_PROC_EXIT(make_sysmsg);
 return;
@@ -428,7 +428,7 @@ for (;RSAAOSF-- >= 0;
 ) )
 {
 A_CALLPROC(ESAAOSF_anonymous,(MSAAOSF_anonymous, &SSAAOSF),(MSAAOSF_anonymous, &SSAAOSF,(ESAAOSF_anonymous).nonlocals));
-(*QSAAOSF_anonymous) = SSAAOSF;
+(*A_NILCHECK(QSAAOSF_anonymous)) = SSAAOSF;
 }
 TSAAOSF = OSAAOSF_anonymous;
 } 
@@ -447,11 +447,11 @@ A68_58 * PTAAOSF;  /* YIELD */
 A68_49  QTAAOSF;  /* clause result */
 { 
 A_CALLPROC(ESAAOSF_anonymous,(VSAAOSF_anonymous, &MTAAOSF),(VSAAOSF_anonymous, &MTAAOSF,(ESAAOSF_anonymous).nonlocals));
-NTAAOSF = (&((&LTAAOSF_anonymous)->Name)) ;
-(*NTAAOSF) = MTAAOSF;
+NTAAOSF = (&(A_NILCHECK((&LTAAOSF_anonymous))->Name)) ;
+(*A_NILCHECK(NTAAOSF)) = MTAAOSF;
 YSAAOSF_generator( VSAAOSF_anonymous, &OTAAOSF );
-PTAAOSF = (&((&LTAAOSF_anonymous)->Setup)) ;
-(*PTAAOSF) = OTAAOSF;
+PTAAOSF = (&(A_NILCHECK((&LTAAOSF_anonymous))->Setup)) ;
+(*A_NILCHECK(PTAAOSF)) = OTAAOSF;
 QTAAOSF = LTAAOSF_anonymous;
 } 
 *ReturnedValue = (QTAAOSF);
@@ -502,7 +502,7 @@ for (;HWAAOSF-- >= 0;
 ) )
 {
 A_CALLPROC(ESAAOSF_anonymous,(CWAAOSF_anonymous, &IWAAOSF),(CWAAOSF_anonymous, &IWAAOSF,(ESAAOSF_anonymous).nonlocals));
-(*GWAAOSF_anonymous) = IWAAOSF;
+(*A_NILCHECK(GWAAOSF_anonymous)) = IWAAOSF;
 }
 JWAAOSF = EWAAOSF_anonymous;
 } 
@@ -774,7 +774,7 @@ YYAAOSF_messages = Facility.Messages;
 ZYAAOSF_upb = YYAAOSF_messages.upb;
  /* line 227: */
  /* line 228: */
-if (!(*Facility.Initialised))
+if (!(*A_NILCHECK(Facility.Initialised)))
 { 
 BZAAOSF = YYAAOSF_messages.upb -1;
 AZAAOSF_msg = YYAAOSF_messages.data;
@@ -782,14 +782,14 @@ for (;BZAAOSF-- >= 0;
 (AZAAOSF_msg++
 ) )
 {
-(*AZAAOSF_msg) = BWAAOSF_unsetmsg;
+(*A_NILCHECK(AZAAOSF_msg)) = BWAAOSF_unsetmsg;
 }
  /* line 229: */
 CZAAOSF_msgfacility = (A_HEAP(A68_46 ));
 ZCAAOSF_makervc( Facility.Name, &EZAAOSF );
 DZAAOSF.Name = EZAAOSF;
 DZAAOSF.Messages = YYAAOSF_messages;
-(*CZAAOSF_msgfacility) = DZAAOSF;
+(*A_NILCHECK(CZAAOSF_msgfacility)) = DZAAOSF;
  /* line 230: */
  /* line 231: */
 GZAAOSF = Facility.Setup ;
@@ -810,12 +810,12 @@ KZAAOSF.source = FZAAOSF_setup.Text ;
 JZAAOSF.Text = (KZAAOSF.destination);
 LZAAOSF = FZAAOSF_setup.Number ;
 MZAAOSF = (&A_VINDEX(YYAAOSF_messages,LZAAOSF)) ;
-(*MZAAOSF) = JZAAOSF;
+(*A_NILCHECK(MZAAOSF)) = JZAAOSF;
 }
  /* line 235: */
  /* line 236: */
 NZAAOSF = Facility.Initialised ;
-(*NZAAOSF) = A68_TRUE;
+(*A_NILCHECK(NZAAOSF)) = A68_TRUE;
 } 
  /* line 237: */
 OZAAOSF = (Number<=0);
@@ -831,7 +831,7 @@ QZAAOSF.Name = RZAAOSF;
 QZAAOSF.Messages = YYAAOSF_messages;
  /* line 239: */
 SZAAOSF = A_HEAP(A68_46 ) ;
-(void)((*SZAAOSF) = QZAAOSF) ;
+(void)((*A_NILCHECK(SZAAOSF)) = QZAAOSF) ;
 PZAAOSF.Facility = SZAAOSF;
  /* line 240: */
 PZAAOSF.Class = IUAAOSF_system.Class;
@@ -839,7 +839,7 @@ TZAAOSF = PZAAOSF;
 } 
 else
 { 
-UZAAOSF_no = (*(&((&A_VINDEX(YYAAOSF_messages,Number))->Msgno)));
+UZAAOSF_no = (*A_NILCHECK((&(A_NILCHECK((&A_VINDEX(YYAAOSF_messages,Number)))->Msgno))));
  /* line 241: */
  /* line 242: */
 if (UZAAOSF_no.Number<=0)
@@ -873,7 +873,7 @@ A68_47  BABAOSF;  /* == */
 A_PROC_ENTRY(is_facility_msg);
  /* line 250: */
 AABAOSF = Facility.Messages ;
-BABAOSF = (*(&(Msgno.Facility->Messages))) ;
+BABAOSF = (*A_NILCHECK((&(A_NILCHECK(Msgno.Facility)->Messages)))) ;
 ZZAAOSF = A_VSTRUCTCOMP(BABAOSF,AABAOSF);
 A_PROC_EXIT(is_facility_msg);
 return( ZZAAOSF );
@@ -925,7 +925,7 @@ if (Msgno.Facility!=(&GUAAOSF_nilmsg))
 { 
 TABAOSF_facility = Msgno.Facility;
  /* line 263: */
-UABAOSF_messages = (*(&(TABAOSF_facility->Messages)));
+UABAOSF_messages = (*A_NILCHECK((&(A_NILCHECK(TABAOSF_facility)->Messages))));
  /* line 264: */
 VABAOSF_number = Msgno.Number;
  /* line 265: */
@@ -951,9 +951,9 @@ XABAOSF = DBBAOSF;
 } 
 else
 { 
-EBBAOSF_message = (*(&A_VINDEX(UABAOSF_messages,VABAOSF_number)));
+EBBAOSF_message = (*A_NILCHECK((&A_VINDEX(UABAOSF_messages,VABAOSF_number))));
  /* line 270: */
-FBBAOSF_text = (*(&((&EBBAOSF_message)->Text)));
+FBBAOSF_text = (*A_NILCHECK((&(A_NILCHECK((&EBBAOSF_message))->Text))));
  /* line 271: */
 GBBAOSF_bind = 0;
 HBBAOSF_tind = 0;
@@ -1018,7 +1018,7 @@ else
  /* line 291: */
  /* line 292: */
 ACBAOSF = (&A_VINDEX(UYAAOSF_buffer,GBBAOSF_bind)) ;
-(void)((*ACBAOSF) = A_VINDEX(FBBAOSF_text,HBBAOSF_tind));
+(void)((*A_NILCHECK(ACBAOSF)) = A_VINDEX(FBBAOSF_text,HBBAOSF_tind));
 } 
 } 
 }
@@ -1040,7 +1040,7 @@ XABAOSF = DCBAOSF;
 } 
 else
 { 
-ECBAOSF.Msgno = (*(&((&EBBAOSF_message)->Msgno)));
+ECBAOSF.Msgno = (*A_NILCHECK((&(A_NILCHECK((&EBBAOSF_message))->Msgno))));
  /* line 298: */
  /* line 299: */
  /* line 300: */
@@ -1127,10 +1127,10 @@ BAAALIB();   /* USE a68config */
 BCAAOSF();   /* USE strops */
 /* --- Initialise configuration information */
 A_config.source_file = "/home/vak/Project/Algol/Algol-68RS-Source/liba68prel/messageproc.a68";
-A_config.translation_time = "Thu Nov  5 21:38:57 2026";
+A_config.translation_time = "Thu Nov  5 21:56:12 2026";
 A_config.ctrans_version = "Ctrans_34.6";
 A_config.name_seed = "YRAAOSF (from seed file) ";
-A_config.spec_change_time = "Thu Nov  5 21:38:57 2026";
+A_config.spec_change_time = "Thu Nov  5 21:56:12 2026";
 A_config.arguments = A_config_arguments;
 A_config.environment = A_config_environment;
 A_config.modinfo_files = A_config_modinfo_files;

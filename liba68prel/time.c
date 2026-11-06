@@ -808,18 +808,18 @@ RCDAOSF = (A68_SSBITS)(IZCAOSF_zero+QCDAOSF_dten);
 } 
 SCDAOSF = 1 ;
 TCDAOSF = (&A_VINDEX(Ans,SCDAOSF)) ;
-(*TCDAOSF) = RCDAOSF;
+(*A_NILCHECK(TCDAOSF)) = RCDAOSF;
  /* line 90: */
 UCDAOSF = 2 ;
 WCDAOSF = 10 ;
 XCDAOSF = (&A_VINDEX(Ans,UCDAOSF)) ;
-(void)((*XCDAOSF) = (A68_SSBITS)(IZCAOSF_zero+A_MOD(BCDAOSF_days,WCDAOSF,VCDAOSF)));
+(void)((*A_NILCHECK(XCDAOSF)) = (A68_SSBITS)(IZCAOSF_zero+A_MOD(BCDAOSF_days,WCDAOSF,VCDAOSF)));
  /* line 91: */
 YCDAOSF = 3 ;
 ZCDAOSF = 7 ;
 ADDAOSF = (&A_VINDEX(Ans,ZCDAOSF)) ;
 BDDAOSF = (&A_VINDEX(Ans,YCDAOSF)) ;
-(*BDDAOSF) = (*ADDAOSF) = ' ';
+(*A_NILCHECK(BDDAOSF)) = (*A_NILCHECK(ADDAOSF)) = ' ';
  /* line 92: */
 DDDAOSF = A_VTRIM(CDDAOSF,(Ans),A_VTSCRIPT(&(CDDAOSF.upb),(Ans).upb,4,6)) ;
 EDDAOSF = A_VINDEX(UBDAOSF_months,JCDAOSF_month) ;
@@ -835,7 +835,7 @@ FDDAOSF_i += GDDAOSF )
 { 
 IDDAOSF = 10 ;
 JDDAOSF = (&A_VINDEX(Ans,FDDAOSF_i)) ;
-(void)((*JDDAOSF) = (A68_SSBITS)(IZCAOSF_zero+A_MOD(CCDAOSF_year,IDDAOSF,HDDAOSF)));
+(void)((*A_NILCHECK(JDDAOSF)) = (A68_SSBITS)(IZCAOSF_zero+A_MOD(CCDAOSF_year,IDDAOSF,HDDAOSF)));
  /* line 95: */
  /* line 96: */
 CCDAOSF_year/=10;
@@ -892,7 +892,7 @@ FEDAOSF = 12 ;
 GEDAOSF = 13 ;
 HEDAOSF = (&A_VINDEX(EEDAOSF_ans,GEDAOSF)) ;
 IEDAOSF = (&A_VINDEX(EEDAOSF_ans,FEDAOSF)) ;
-(*IEDAOSF) = (*HEDAOSF) = ' ';
+(*A_NILCHECK(IEDAOSF)) = (*A_NILCHECK(HEDAOSF)) = ' ';
  /* line 106: */
 (void)(XBDAOSF_date_proc(Seconds, A_VTRIM(JEDAOSF,(EEDAOSF_ans),A_VTSCRIPT(&(JEDAOSF.upb),(EEDAOSF_ans).upb,1,11))));
  /* line 107: */
@@ -930,7 +930,7 @@ A_PROC_ENTRY(centichars);
 OEDAOSF_centi = I;
  /* line 115: */
 QEDAOSF = A_LOC(A68_108 ) ;
-(void)((*QEDAOSF) = PEDAOSF) ;
+(void)((*A_NILCHECK(QEDAOSF)) = PEDAOSF) ;
 SEDAOSF_fr = A_ISVEC(REDAOSF,QEDAOSF,3,A68_CHAR );
  /* line 116: */
  /* line 117: */
@@ -943,7 +943,7 @@ TEDAOSF_i += UEDAOSF )
 { 
 WEDAOSF = 10 ;
 XEDAOSF = (&A_VINDEX(SEDAOSF_fr,TEDAOSF_i)) ;
-(void)((*XEDAOSF) = (A68_SSBITS)(IZCAOSF_zero+A_MOD(OEDAOSF_centi,WEDAOSF,VEDAOSF)));
+(void)((*A_NILCHECK(XEDAOSF)) = (A68_SSBITS)(IZCAOSF_zero+A_MOD(OEDAOSF_centi,WEDAOSF,VEDAOSF)));
  /* line 118: */
  /* line 119: */
 OEDAOSF_centi/=10;
@@ -1022,7 +1022,7 @@ KFDAOSF_i += LFDAOSF )
 NFDAOSF = A_ISVEC(MFDAOSF,(&JFDAOSF_fr),5,A68_CHAR ) ;
 PFDAOSF = 10 ;
 QFDAOSF = (&A_VINDEX(NFDAOSF,KFDAOSF_i)) ;
-(void)((*QFDAOSF) = (A68_SSBITS)(IZCAOSF_zero+A_MOD(HFDAOSF_cpu,PFDAOSF,OFDAOSF)));
+(void)((*A_NILCHECK(QFDAOSF)) = (A68_SSBITS)(IZCAOSF_zero+A_MOD(HFDAOSF_cpu,PFDAOSF,OFDAOSF)));
  /* line 133: */
  /* line 134: */
 HFDAOSF_cpu/=10;
@@ -1038,7 +1038,7 @@ ZFDAOSF = A_ISVEC(YFDAOSF,(&RFDAOSF_time),10,A68_CHAR ) ;
 AGDAOSF = 10 ;
 BGDAOSF = (&A_VINDEX(ZFDAOSF,AGDAOSF)) ;
 CGDAOSF = (&A_VINDEX(WFDAOSF,XFDAOSF)) ;
-(*CGDAOSF) = (*BGDAOSF) = ' ';
+(*A_NILCHECK(CGDAOSF)) = (*A_NILCHECK(BGDAOSF)) = ' ';
  /* line 138: */
 DGDAOSF.data[0] = A_HISVEC(EGDAOSF,RFDAOSF_time,10,A68_CHAR );
 FEAAOSF_intchars( HFDAOSF_cpu, &FGDAOSF );
@@ -1076,10 +1076,10 @@ ZRAAOSF();   /* USE messageproc */
 BCAAOSF();   /* USE strops */
 /* --- Initialise configuration information */
 A_config.source_file = "/home/vak/Project/Algol/Algol-68RS-Source/liba68prel/time.a68";
-A_config.translation_time = "Thu Nov  5 21:38:57 2026";
+A_config.translation_time = "Thu Nov  5 21:56:13 2026";
 A_config.ctrans_version = "Ctrans_34.6";
 A_config.name_seed = "CZCAOSF (from seed file) ";
-A_config.spec_change_time = "Thu Nov  5 21:38:57 2026";
+A_config.spec_change_time = "Thu Nov  5 21:56:13 2026";
 A_config.arguments = A_config_arguments;
 A_config.environment = A_config_environment;
 A_config.modinfo_files = A_config_modinfo_files;

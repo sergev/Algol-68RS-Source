@@ -1193,7 +1193,7 @@ A_STATIC A68_VOID  AFGAOSF_generator(A68_BOOL  YEGAOSF_anonymous, A68_164  *Retu
 A68_164  CFGAOSF;  /* clause result */
 A68_164  DFGAOSF;  /* OPERATORS - dynamic generator */
 { 
-DFGAOSF.upb = (*NL(REGAOSF_n)) ;
+DFGAOSF.upb = (*A_NILCHECK(NL(REGAOSF_n))) ;
 ( YEGAOSF_anonymous? A_VLOC(A68_162 ,DFGAOSF): A_VHEAP(A68_162 ,DFGAOSF) );
 CFGAOSF = DFGAOSF;
 } 
@@ -1248,16 +1248,16 @@ if (Stack==CUFAOSF_no_lines)
 A_CLOSURE( AVFAOSF_generator, BVFAOSF_generator, CVFAOSF_generator );
 (( CVFAOSF_generator * ) ( AVFAOSF_generator.nonlocals )) -> N = N;
 A_CALLPROC(AVFAOSF_generator,(A68_FALSE, &FVFAOSF),(A68_FALSE, &FVFAOSF,(AVFAOSF_generator).nonlocals));
-(*NL(TUFAOSF_ans)) = FVFAOSF;
+(*A_NILCHECK(NL(TUFAOSF_ans))) = FVFAOSF;
  /* line 158: */
 GVFAOSF = 1;
 } 
 else
 { 
-HVFAOSF_ind = A_CALLPROC(NL(WUFAOSF_add),((*(&(Stack->Rest))), (N+1)),((*(&(Stack->Rest))), (N+1),(NL(WUFAOSF_add)).nonlocals));
+HVFAOSF_ind = A_CALLPROC(NL(WUFAOSF_add),((*A_NILCHECK((&(A_NILCHECK(Stack)->Rest)))), (N+1)),((*A_NILCHECK((&(A_NILCHECK(Stack)->Rest)))), (N+1),(NL(WUFAOSF_add)).nonlocals));
  /* line 159: */
-IVFAOSF = (&A_VINDEX((*NL(TUFAOSF_ans)),HVFAOSF_ind)) ;
-(void)((*IVFAOSF) = (*(&(Stack->Line))));
+IVFAOSF = (&A_VINDEX((*A_NILCHECK(NL(TUFAOSF_ans))),HVFAOSF_ind)) ;
+(void)((*A_NILCHECK(IVFAOSF)) = (*A_NILCHECK((&(A_NILCHECK(Stack)->Line)))));
  /* line 160: */
  /* line 161: */
 GVFAOSF = (HVFAOSF_ind+1);
@@ -1271,7 +1271,7 @@ A_STATIC A68_VOID  RXFAOSF_inc_indent(void *NonLocals)
 #define NL(x) (((SXFAOSF_inc_indent *)NonLocals)->x)
 { 
 A_PROC_ENTRY(inc_indent);
-(*NL(PXFAOSF_indent))+=2;
+(*A_NILCHECK(NL(PXFAOSF_indent)))+=2;
 A_PROC_EXIT(inc_indent);
 return;
 } 
@@ -1281,7 +1281,7 @@ A_STATIC A68_VOID  UXFAOSF_dec_indent(void *NonLocals)
 #define NL(x) (((VXFAOSF_dec_indent *)NonLocals)->x)
 { 
 A_PROC_ENTRY(dec_indent);
-(*NL(PXFAOSF_indent))-=2;
+(*A_NILCHECK(NL(PXFAOSF_indent)))-=2;
 A_PROC_EXIT(dec_indent);
 return;
 } 
@@ -1317,7 +1317,7 @@ A_PROC_ENTRY(print);
 IYFAOSF.fn.fn_global = PKDAOSF_newline;
 IYFAOSF.nonlocals = A68_NIL;
 GYFAOSF.data[0] = A_UNITE(HYFAOSF,mode12,12,IYFAOSF);
-RODAOSF_( ' ', (*NL(PXFAOSF_indent)), &JYFAOSF );
+RODAOSF_( ' ', (*A_NILCHECK(NL(PXFAOSF_indent))), &JYFAOSF );
 GYFAOSF.data[1] = A_UNITE(KYFAOSF,mode7,7,JYFAOSF);
 (void)(KYDAOSF_put(DREAOSF_screen, A_HISVEC(LYFAOSF,GYFAOSF,2,A68_52 )));
 } 
@@ -1484,7 +1484,7 @@ for (;VAGAOSF-- >= 0;
 ) )
 {
  /* line 331: */
-A_CALLPROC((*NL(GZFAOSF_read_rule)),((*UAGAOSF_arm), A68_FALSE, &WAGAOSF),((*UAGAOSF_arm), A68_FALSE, &WAGAOSF,((*NL(GZFAOSF_read_rule))).nonlocals));
+A_CALLPROC((*A_NILCHECK(NL(GZFAOSF_read_rule))),((*A_NILCHECK(UAGAOSF_arm)), A68_FALSE, &WAGAOSF),((*A_NILCHECK(UAGAOSF_arm)), A68_FALSE, &WAGAOSF,((*A_NILCHECK(NL(GZFAOSF_read_rule)))).nonlocals));
 if ( !(XYFAOSF_is_illegal(RAGAOSF_p = WAGAOSF)) ) break;
 TAGAOSF_choice+=1;
 }
@@ -1621,11 +1621,11 @@ for (;DDGAOSF-- >= 0;
 EDGAOSF = (BDGAOSF_index+1) ;
 FDGAOSF_val = (&A_VINDEX(ADGAOSF_values,EDGAOSF));
  /* line 365: */
-A_CALLPROC((*NL(GZFAOSF_read_rule)),((*CDGAOSF_w), SCGAOSF_should_find, &GDGAOSF),((*CDGAOSF_w), SCGAOSF_should_find, &GDGAOSF,((*NL(GZFAOSF_read_rule))).nonlocals));
-(*FDGAOSF_val) = GDGAOSF;
+A_CALLPROC((*A_NILCHECK(NL(GZFAOSF_read_rule))),((*A_NILCHECK(CDGAOSF_w)), SCGAOSF_should_find, &GDGAOSF),((*A_NILCHECK(CDGAOSF_w)), SCGAOSF_should_find, &GDGAOSF,((*A_NILCHECK(NL(GZFAOSF_read_rule)))).nonlocals));
+(*A_NILCHECK(FDGAOSF_val)) = GDGAOSF;
  /* line 366: */
  /* line 367: */
-if (CZFAOSF_is_legal((*FDGAOSF_val)))
+if (CZFAOSF_is_legal((*A_NILCHECK(FDGAOSF_val))))
 { 
 BDGAOSF_index+=1;
  /* line 368: */
@@ -1636,7 +1636,7 @@ HDGAOSF = A68_TRUE;
 } 
 else
 { 
-IDGAOSF = (*CDGAOSF_w) ;
+IDGAOSF = (*A_NILCHECK(CDGAOSF_w)) ;
 switch ( IDGAOSF.mode )
 { 
 case 2: /* STRUCT(BITS,REF MODE158)  */
@@ -1650,7 +1650,7 @@ break;
 } 
 if (KDGAOSF)
 { 
-(*FDGAOSF_val) = TEFAOSF_no_parameters;
+(*A_NILCHECK(FDGAOSF_val)) = TEFAOSF_no_parameters;
  /* line 372: */
  /* line 373: */
  /* line 374: */
@@ -1662,7 +1662,7 @@ else
 if (SCGAOSF_should_find)
 { 
  /* line 376: */
-(void)(A_CALLPROC(NL(JZFAOSF_error),((*CDGAOSF_w), (*FDGAOSF_val)),((*CDGAOSF_w), (*FDGAOSF_val),(NL(JZFAOSF_error)).nonlocals)));
+(void)(A_CALLPROC(NL(JZFAOSF_error),((*A_NILCHECK(CDGAOSF_w)), (*A_NILCHECK(FDGAOSF_val))),((*A_NILCHECK(CDGAOSF_w)), (*A_NILCHECK(FDGAOSF_val)),(NL(JZFAOSF_error)).nonlocals)));
 } 
  /* line 377: */
  /* line 378: */
@@ -1683,7 +1683,7 @@ if (KXFAOSF_debug_reader)
 if (BDGAOSF_index==0)
 { 
 NDGAOSF = 1 ;
-MDGAOSF = (*(&A_VINDEX(ADGAOSF_values,NDGAOSF)));
+MDGAOSF = (*A_NILCHECK((&A_VINDEX(ADGAOSF_values,NDGAOSF))));
 } 
 else
 { 
@@ -1774,12 +1774,12 @@ EEGAOSF.data[1] = A_UNITE(LEGAOSF,mode7,7,KEGAOSF);
 OEGAOSF.Param = First;
 OEGAOSF.Rest = (A68_214 *)A68_NIL;
 QEGAOSF = A_HEAP(A68_214 ) ;
-(void)((*QEGAOSF) = OEGAOSF) ;
+(void)((*A_NILCHECK(QEGAOSF)) = OEGAOSF) ;
 PEGAOSF_list = QEGAOSF;
  /* line 403: */
 REGAOSF_n = 1;
  /* line 404: */
-SEGAOSF_ptr = (&(PEGAOSF_list->Rest));
+SEGAOSF_ptr = (&(A_NILCHECK(PEGAOSF_list)->Rest));
  /* line 405: */
 for ( ;; )
 { 
@@ -1796,8 +1796,8 @@ WEGAOSF.Param = UEGAOSF_p;
 WEGAOSF.Rest = (A68_214 *)A68_NIL;
  /* line 410: */
 XEGAOSF = A_HEAP(A68_214 ) ;
-(void)((*XEGAOSF) = WEGAOSF) ;
-(void)(SEGAOSF_ptr = (&(((*SEGAOSF_ptr) = XEGAOSF)->Rest)));
+(void)((*A_NILCHECK(XEGAOSF)) = WEGAOSF) ;
+(void)(SEGAOSF_ptr = (&(A_NILCHECK(((*A_NILCHECK(SEGAOSF_ptr)) = XEGAOSF))->Rest)));
 }
  /* line 411: */
 A_CLOSURE( ZEGAOSF_generator, AFGAOSF_generator, BFGAOSF_generator );
@@ -1812,8 +1812,8 @@ for (;HFGAOSF-- >= 0;
 (GFGAOSF_p++
 ) )
 {
-(void)((*GFGAOSF_p) = (*(&(PEGAOSF_list->Param))));
-(void)(PEGAOSF_list = (*(&(PEGAOSF_list->Rest))));
+(void)((*A_NILCHECK(GFGAOSF_p)) = (*A_NILCHECK((&(A_NILCHECK(PEGAOSF_list)->Param)))));
+(void)(PEGAOSF_list = (*A_NILCHECK((&(A_NILCHECK(PEGAOSF_list)->Rest)))));
 }
  /* line 415: */
 if (KXFAOSF_debug_reader)
@@ -1925,22 +1925,22 @@ case 1: /* REF INT */
 ZFGAOSF_index = (YFGAOSF.data.mode1);
  /* line 430: */
 { 
-AGGAOSF_analyser = (&A_VINDEX(NL(Analysers),(*ZFGAOSF_index)));
+AGGAOSF_analyser = (&A_VINDEX(NL(Analysers),(*A_NILCHECK(ZFGAOSF_index))));
  /* line 431: */
  /* line 432: */
-if ((*(*(&(AGGAOSF_analyser->Sort))))<1)
+if ((*A_NILCHECK((*A_NILCHECK((&(A_NILCHECK(AGGAOSF_analyser)->Sort))))))<1)
 { 
  /* line 433: */
 FGGAOSF = DGGAOSF ;
 BGGAOSF.data[0] = A_UNITE(EGGAOSF,mode7,7,FGGAOSF);
-BGGAOSF.data[1] = A_UNITE(GGGAOSF,mode1,1,(*ZFGAOSF_index));
+BGGAOSF.data[1] = A_UNITE(GGGAOSF,mode1,1,(*A_NILCHECK(ZFGAOSF_index)));
  /* line 434: */
 YCEAOSF_oneline( A_HISVEC(HGGAOSF,BGGAOSF,2,A68_52 ), &IGGAOSF );
 (void)(A_CALLPROC(NL(Msg),(IUAAOSF_system, A_HVEC(JGGAOSF,IGGAOSF,A68_VC )),(IUAAOSF_system, A_HVEC(JGGAOSF,IGGAOSF,A68_VC ),(NL(Msg)).nonlocals)));
 } 
  /* line 435: */
  /* line 436: */
-KGGAOSF = (*(&(AGGAOSF_analyser->Reader))) ;
+KGGAOSF = (*A_NILCHECK((&(A_NILCHECK(AGGAOSF_analyser)->Reader)))) ;
 switch ( KGGAOSF.mode )
 { 
 case 1: /* PROC(MODE97) REF MODE26 */
@@ -1988,7 +1988,7 @@ else
 if (KXFAOSF_debug_reader)
 { 
  /* line 453: */
-BHGAOSF = (*(*(&(AGGAOSF_analyser->Sort)))) ;
+BHGAOSF = (*A_NILCHECK((*A_NILCHECK((&(A_NILCHECK(AGGAOSF_analyser)->Sort)))))) ;
 ZGGAOSF.data[0] = A_UNITE(AHGAOSF,mode1,1,BHGAOSF);
 FHGAOSF = DHGAOSF ;
 ZGGAOSF.data[1] = A_UNITE(EHGAOSF,mode7,7,FHGAOSF);
@@ -1999,7 +1999,7 @@ ZGGAOSF.data[3] = A_UNITE(HHGAOSF,mode6,6,IHGAOSF);
 (void)(A_CALLPROC(NL(DYFAOSF_print),(A_HISVEC(JHGAOSF,ZGGAOSF,4,A68_52 )),(A_HISVEC(JHGAOSF,ZGGAOSF,4,A68_52 ),(NL(DYFAOSF_print)).nonlocals)));
 } 
  /* line 455: */
-TGGAOSF.Sort = (*(*(&(AGGAOSF_analyser->Sort))));
+TGGAOSF.Sort = (*A_NILCHECK((*A_NILCHECK((&(A_NILCHECK(AGGAOSF_analyser)->Sort))))));
  /* line 456: */
  /* line 457: */
 TGGAOSF.Value = NGGAOSF_val;
@@ -2017,7 +2017,7 @@ MHGAOSF_syntax.mode -= 1;
  /* line 461: */
  /* line 462: */
  /* line 464: */
-A_CALLPROC((*NL(GZFAOSF_read_rule)),(MHGAOSF_syntax, Expected, &NHGAOSF),(MHGAOSF_syntax, Expected, &NHGAOSF,((*NL(GZFAOSF_read_rule))).nonlocals));
+A_CALLPROC((*A_NILCHECK(NL(GZFAOSF_read_rule))),(MHGAOSF_syntax, Expected, &NHGAOSF),(MHGAOSF_syntax, Expected, &NHGAOSF,((*A_NILCHECK(NL(GZFAOSF_read_rule)))).nonlocals));
 KHGAOSF = NHGAOSF;
 break;
 default: 
@@ -2130,7 +2130,7 @@ A_STATIC A68_VOID  XNGAOSF_generator(A68_BOOL  VNGAOSF_anonymous, A68_VC  *Retur
 A68_VC  ZNGAOSF;  /* clause result */
 A68_VC  AOGAOSF;  /* OPERATORS - dynamic generator */
 { 
-AOGAOSF.upb = (*GUFAOSF_rdcharend) ;
+AOGAOSF.upb = (*A_NILCHECK(GUFAOSF_rdcharend)) ;
 ( VNGAOSF_anonymous? A_VLOC(A68_CHAR ,AOGAOSF): A_VHEAP(A68_CHAR ,AOGAOSF) );
 ZNGAOSF = AOGAOSF;
 } 
@@ -2316,15 +2316,15 @@ A_PROC_ENTRY(set_reader);
  /* line 125: */
  /* line 128: */
 { 
-(*FUFAOSF_rdbuffer) = Buffer;
+(*A_NILCHECK(FUFAOSF_rdbuffer)) = Buffer;
  /* line 129: */
-(*EUFAOSF_rdline) = Reader;
+(*A_NILCHECK(EUFAOSF_rdline)) = Reader;
  /* line 130: */
-(*HUFAOSF_rdcharno) = (*IUFAOSF_start_of_word) = 0;
+(*A_NILCHECK(HUFAOSF_rdcharno)) = (*A_NILCHECK(IUFAOSF_start_of_word)) = 0;
  /* line 131: */
-NUFAOSF = (*GUFAOSF_rdcharend) = 1 ;
-OUFAOSF = (&A_VINDEX((*FUFAOSF_rdbuffer),NUFAOSF)) ;
-(*OUFAOSF) = WSFAOSF_sep;
+NUFAOSF = (*A_NILCHECK(GUFAOSF_rdcharend)) = 1 ;
+OUFAOSF = (&A_VINDEX((*A_NILCHECK(FUFAOSF_rdbuffer)),NUFAOSF)) ;
+(*A_NILCHECK(OUFAOSF)) = WSFAOSF_sep;
  /* line 132: */
  /* line 133: */
 PUFAOSF = (&DUFAOSF_current_details);
@@ -2360,10 +2360,10 @@ A_CLOSURE( WUFAOSF_add, XUFAOSF_add, YUFAOSF_add );
 (( YUFAOSF_add * ) ( WUFAOSF_add.nonlocals )) -> TUFAOSF_ans = (&TUFAOSF_ans);
 (( YUFAOSF_add * ) ( WUFAOSF_add.nonlocals )) -> WUFAOSF_add = WUFAOSF_add;
  /* line 162: */
-JVFAOSF = A_CALLPROC(WUFAOSF_add,((*JUFAOSF_line_stack), 1),((*JUFAOSF_line_stack), 1,(WUFAOSF_add).nonlocals)) ;
-ZCAAOSF_makervc( A_VTRIM(KVFAOSF,((*FUFAOSF_rdbuffer)),A_VTSCRIPT(&(KVFAOSF.upb),((*FUFAOSF_rdbuffer)).upb,1,(*HUFAOSF_rdcharno))), &LVFAOSF );
+JVFAOSF = A_CALLPROC(WUFAOSF_add,((*A_NILCHECK(JUFAOSF_line_stack)), 1),((*A_NILCHECK(JUFAOSF_line_stack)), 1,(WUFAOSF_add).nonlocals)) ;
+ZCAAOSF_makervc( A_VTRIM(KVFAOSF,((*A_NILCHECK(FUFAOSF_rdbuffer))),A_VTSCRIPT(&(KVFAOSF.upb),((*A_NILCHECK(FUFAOSF_rdbuffer))).upb,1,(*A_NILCHECK(HUFAOSF_rdcharno)))), &LVFAOSF );
 MVFAOSF = (&A_VINDEX(TUFAOSF_ans,JVFAOSF)) ;
-(*MVFAOSF) = LVFAOSF;
+(*A_NILCHECK(MVFAOSF)) = LVFAOSF;
  /* line 163: */
  /* line 164: */
 NVFAOSF = TUFAOSF_ans;
@@ -2379,11 +2379,11 @@ A68_VOID  OVFAOSF_skip_command(void)
 A68_CHAR * PVFAOSF;  /* YIELD */
 A_PROC_ENTRY(skip_command);
 { 
-PVFAOSF = (&A_VINDEX((*FUFAOSF_rdbuffer),(*GUFAOSF_rdcharend))) ;
-(*PVFAOSF) = WSFAOSF_sep;
+PVFAOSF = (&A_VINDEX((*A_NILCHECK(FUFAOSF_rdbuffer)),(*A_NILCHECK(GUFAOSF_rdcharend)))) ;
+(*A_NILCHECK(PVFAOSF)) = WSFAOSF_sep;
  /* line 173: */
  /* line 174: */
-(void)((*HUFAOSF_rdcharno) = ((*GUFAOSF_rdcharend)-1));
+(void)((*A_NILCHECK(HUFAOSF_rdcharno)) = ((*A_NILCHECK(GUFAOSF_rdcharend))-1));
 } 
 A_PROC_EXIT(skip_command);
 return;
@@ -2412,78 +2412,78 @@ A_PROC_ENTRY(rdchar);
  /* line 183: */
 { 
  /* line 184: */
-if ((*HUFAOSF_rdcharno)>=(*GUFAOSF_rdcharend))
+if ((*A_NILCHECK(HUFAOSF_rdcharno))>=(*A_NILCHECK(GUFAOSF_rdcharend)))
 { 
 TVFAOSF = Stack;
 if ( TVFAOSF )
-{TVFAOSF = ((*GUFAOSF_rdcharend)>0);
+{TVFAOSF = ((*A_NILCHECK(GUFAOSF_rdcharend))>0);
 }
 if ( TVFAOSF )
 { /* line 185: */
-TVFAOSF = ((*(&A_VINDEX((*FUFAOSF_rdbuffer),(*GUFAOSF_rdcharend))))==VSFAOSF_sp);
+TVFAOSF = ((*A_NILCHECK((&A_VINDEX((*A_NILCHECK(FUFAOSF_rdbuffer)),(*A_NILCHECK(GUFAOSF_rdcharend))))))==VSFAOSF_sp);
 }
  /* line 186: */
 if (TVFAOSF)
 { 
-UVFAOSF = (&A_VINDEX((*FUFAOSF_rdbuffer),(*HUFAOSF_rdcharno))) ;
-(*UVFAOSF) = '.';
+UVFAOSF = (&A_VINDEX((*A_NILCHECK(FUFAOSF_rdbuffer)),(*A_NILCHECK(HUFAOSF_rdcharno)))) ;
+(*A_NILCHECK(UVFAOSF)) = '.';
  /* line 187: */
  /* line 188: */
-ZCAAOSF_makervc( A_VTRIM(WVFAOSF,((*FUFAOSF_rdbuffer)),A_VTSCRIPT(&(WVFAOSF.upb),((*FUFAOSF_rdbuffer)).upb,1,((*GUFAOSF_rdcharend)+1))), &XVFAOSF );
+ZCAAOSF_makervc( A_VTRIM(WVFAOSF,((*A_NILCHECK(FUFAOSF_rdbuffer))),A_VTSCRIPT(&(WVFAOSF.upb),((*A_NILCHECK(FUFAOSF_rdbuffer))).upb,1,((*A_NILCHECK(GUFAOSF_rdcharend))+1))), &XVFAOSF );
 VVFAOSF.Line = XVFAOSF;
  /* line 189: */
-VVFAOSF.Rest = (*JUFAOSF_line_stack);
+VVFAOSF.Rest = (*A_NILCHECK(JUFAOSF_line_stack));
 YVFAOSF = A_HEAP(A68_185 ) ;
-(void)((*YVFAOSF) = VVFAOSF) ;
-(*JUFAOSF_line_stack) = YVFAOSF;
+(void)((*A_NILCHECK(YVFAOSF)) = VVFAOSF) ;
+(*A_NILCHECK(JUFAOSF_line_stack)) = YVFAOSF;
 } 
  /* line 190: */
-(*HUFAOSF_rdcharno) = (*IUFAOSF_start_of_word) = 0;
+(*A_NILCHECK(HUFAOSF_rdcharno)) = (*A_NILCHECK(IUFAOSF_start_of_word)) = 0;
  /* line 191: */
-(void)((*GUFAOSF_rdcharend) = A_CALLPROC((*EUFAOSF_rdline),(FUFAOSF_rdbuffer, Msg),(FUFAOSF_rdbuffer, Msg,((*EUFAOSF_rdline)).nonlocals)));
+(void)((*A_NILCHECK(GUFAOSF_rdcharend)) = A_CALLPROC((*A_NILCHECK(EUFAOSF_rdline)),(FUFAOSF_rdbuffer, Msg),(FUFAOSF_rdbuffer, Msg,((*A_NILCHECK(EUFAOSF_rdline))).nonlocals)));
  /* line 192: */
 for ( ;; )
 { 
-ZVFAOSF = ((*GUFAOSF_rdcharend)>=1);
+ZVFAOSF = ((*A_NILCHECK(GUFAOSF_rdcharend))>=1);
 if ( ZVFAOSF )
 { /* line 193: */
-ZVFAOSF = BTFAOSF_space((*(&A_VINDEX((*FUFAOSF_rdbuffer),(*GUFAOSF_rdcharend)))));
+ZVFAOSF = BTFAOSF_space((*A_NILCHECK((&A_VINDEX((*A_NILCHECK(FUFAOSF_rdbuffer)),(*A_NILCHECK(GUFAOSF_rdcharend)))))));
 }
 if ( !(ZVFAOSF) ) break;
-(*GUFAOSF_rdcharend)-=1;
+(*A_NILCHECK(GUFAOSF_rdcharend))-=1;
 }
  /* line 194: */
-AWFAOSF = ((*GUFAOSF_rdcharend)>=2);
+AWFAOSF = ((*A_NILCHECK(GUFAOSF_rdcharend))>=2);
 if ( AWFAOSF )
-{AWFAOSF = ((*(&A_VINDEX((*FUFAOSF_rdbuffer),(*GUFAOSF_rdcharend))))=='.');
+{AWFAOSF = ((*A_NILCHECK((&A_VINDEX((*A_NILCHECK(FUFAOSF_rdbuffer)),(*A_NILCHECK(GUFAOSF_rdcharend))))))=='.');
 }
  /* line 195: */
 if ( AWFAOSF )
 { /* line 196: */
-BWFAOSF = ((*GUFAOSF_rdcharend)-1) ;
-AWFAOSF = ((*(&A_VINDEX((*FUFAOSF_rdbuffer),BWFAOSF)))=='.');
+BWFAOSF = ((*A_NILCHECK(GUFAOSF_rdcharend))-1) ;
+AWFAOSF = ((*A_NILCHECK((&A_VINDEX((*A_NILCHECK(FUFAOSF_rdbuffer)),BWFAOSF))))=='.');
 }
 if (AWFAOSF)
 { 
  /* line 197: */
  /* line 198: */
-CWFAOSF = (*GUFAOSF_rdcharend)-=1 ;
-DWFAOSF = (&A_VINDEX((*FUFAOSF_rdbuffer),CWFAOSF)) ;
-(*DWFAOSF) = VSFAOSF_sp;
+CWFAOSF = (*A_NILCHECK(GUFAOSF_rdcharend))-=1 ;
+DWFAOSF = (&A_VINDEX((*A_NILCHECK(FUFAOSF_rdbuffer)),CWFAOSF)) ;
+(*A_NILCHECK(DWFAOSF)) = VSFAOSF_sp;
 } 
 else
 { 
  /* line 199: */
  /* line 200: */
-EWFAOSF = (*GUFAOSF_rdcharend)+=1 ;
-FWFAOSF = (&A_VINDEX((*FUFAOSF_rdbuffer),EWFAOSF)) ;
-(*FWFAOSF) = WSFAOSF_sep;
+EWFAOSF = (*A_NILCHECK(GUFAOSF_rdcharend))+=1 ;
+FWFAOSF = (&A_VINDEX((*A_NILCHECK(FUFAOSF_rdbuffer)),EWFAOSF)) ;
+(*A_NILCHECK(FWFAOSF)) = WSFAOSF_sep;
 } 
 } 
  /* line 201: */
  /* line 202: */
-HWFAOSF = (*HUFAOSF_rdcharno)+=1 ;
-GWFAOSF = (*(&A_VINDEX((*FUFAOSF_rdbuffer),HWFAOSF)));
+HWFAOSF = (*A_NILCHECK(HUFAOSF_rdcharno))+=1 ;
+GWFAOSF = (*A_NILCHECK((&A_VINDEX((*A_NILCHECK(FUFAOSF_rdbuffer)),HWFAOSF))));
 } 
 A_PROC_EXIT(rdchar);
 return( GWFAOSF );
@@ -2495,7 +2495,7 @@ A68_CHAR  JWFAOSF_next_char(A68_97  Msg)
 A68_CHAR  KWFAOSF;  /* clause result */
 A_PROC_ENTRY(next_char);
  /* line 207: */
-if ((*HUFAOSF_rdcharno)==(*GUFAOSF_rdcharend))
+if ((*A_NILCHECK(HUFAOSF_rdcharno))==(*A_NILCHECK(GUFAOSF_rdcharend)))
 { 
 KWFAOSF = VSFAOSF_sp;
 } 
@@ -2523,7 +2523,7 @@ if ( !(BTFAOSF_space(NWFAOSF_c = SVFAOSF_rdchar(A68_TRUE, Msg))) ) break;
 /*SKIP*/;
 }
  /* line 216: */
-(void)((*IUFAOSF_start_of_word) = ((*HUFAOSF_rdcharno)-1));
+(void)((*A_NILCHECK(IUFAOSF_start_of_word)) = ((*A_NILCHECK(HUFAOSF_rdcharno))-1));
  /* line 217: */
  /* line 218: */
 OWFAOSF = NWFAOSF_c;
@@ -2543,7 +2543,7 @@ A_PROC_ENTRY(next_first_char);
 { 
 RWFAOSF_c = SVFAOSF_rdchar(A68_TRUE, Msg);
  /* line 227: */
-(void)((*IUFAOSF_start_of_word) = ((*HUFAOSF_rdcharno)-1));
+(void)((*A_NILCHECK(IUFAOSF_start_of_word)) = ((*A_NILCHECK(HUFAOSF_rdcharno))-1));
  /* line 228: */
  /* line 229: */
 SWFAOSF = RWFAOSF_c;
@@ -2559,7 +2559,7 @@ A68_46  XWFAOSF;  /* OPERATORS - scalar -> [] or VEC[] */
 A_PROC_ENTRY(put_back_char);
  /* line 234: */
  /* line 235: */
-if ((*HUFAOSF_rdcharno)==0)
+if ((*A_NILCHECK(HUFAOSF_rdcharno))==0)
 { 
  /* line 236: */
 (void)(A_CALLPROC(Msg,(IUAAOSF_system, A_HVEC(XWFAOSF,WWFAOSF,A68_VC )),(IUAAOSF_system, A_HVEC(XWFAOSF,WWFAOSF,A68_VC ),(Msg).nonlocals)));
@@ -2567,7 +2567,7 @@ if ((*HUFAOSF_rdcharno)==0)
 else
 { 
  /* line 237: */
-(*HUFAOSF_rdcharno)-=1;
+(*A_NILCHECK(HUFAOSF_rdcharno))-=1;
 } 
 A_PROC_EXIT(put_back_char);
 return;
@@ -2581,7 +2581,7 @@ A68_CHAR  DXFAOSF;  /* clause result */
 A_PROC_ENTRY(same_char);
  /* line 241: */
  /* line 242: */
-if ((*HUFAOSF_rdcharno)==0)
+if ((*A_NILCHECK(HUFAOSF_rdcharno))==0)
 { 
 (void)(A_CALLPROC(Msg,(IUAAOSF_system, A_HVEC(CXFAOSF,BXFAOSF,A68_VC )),(IUAAOSF_system, A_HVEC(CXFAOSF,BXFAOSF,A68_VC ),(Msg).nonlocals)));
  /* line 243: */
@@ -2590,7 +2590,7 @@ DXFAOSF = '\000';
 else
 { 
  /* line 244: */
-DXFAOSF = (*(&A_VINDEX((*FUFAOSF_rdbuffer),(*HUFAOSF_rdcharno))));
+DXFAOSF = (*A_NILCHECK((&A_VINDEX((*A_NILCHECK(FUFAOSF_rdbuffer)),(*A_NILCHECK(HUFAOSF_rdcharno))))));
 } 
 A_PROC_EXIT(same_char);
 return( DXFAOSF );
@@ -2615,7 +2615,7 @@ if ( !(BTFAOSF_space(GXFAOSF_c = SVFAOSF_rdchar(A68_TRUE, Msg))) ) break;
  /* line 254: */
 if (GXFAOSF_c==WSFAOSF_sep)
 { 
-(*HUFAOSF_rdcharno)-=1;
+(*A_NILCHECK(HUFAOSF_rdcharno))-=1;
  /* line 255: */
  /* line 256: */
  /* line 257: */
@@ -2629,7 +2629,7 @@ if ( !((!ETFAOSF_separator(JWFAOSF_next_char(Msg)))) ) break;
 /*SKIP*/;
 }
  /* line 258: */
-(*HUFAOSF_rdcharno)-=1;
+(*A_NILCHECK(HUFAOSF_rdcharno))-=1;
  /* line 259: */
  /* line 260: */
  /* line 261: */
@@ -2654,7 +2654,7 @@ if ( !((!ETFAOSF_separator(JWFAOSF_next_char(Msg)))) ) break;
 }
  /* line 269: */
  /* line 270: */
-(*HUFAOSF_rdcharno)-=1;
+(*A_NILCHECK(HUFAOSF_rdcharno))-=1;
 } 
 A_PROC_EXIT(skip_parameter);
 return;
@@ -2798,7 +2798,7 @@ switch ( VIGAOSF.mode )
 { 
 case 1: /* REF INT */
 WIGAOSF_index = (VIGAOSF.data.mode1);
-XIGAOSF = ((*WIGAOSF_index)==0);
+XIGAOSF = ((*A_NILCHECK(WIGAOSF_index))==0);
 break;
 default: 
  /* line 493: */
@@ -2911,7 +2911,7 @@ A68_VOID  IKGAOSF_read_failed(A68_VC  *ReturnedValue)
 A68_VC  JKGAOSF;  /* clause result */
 A_PROC_ENTRY(read_failed);
 { 
-(void)((*HUFAOSF_rdcharno) = (*IUFAOSF_start_of_word));
+(void)((*A_NILCHECK(HUFAOSF_rdcharno)) = (*A_NILCHECK(IUFAOSF_start_of_word)));
  /* line 525: */
  /* line 526: */
 JKGAOSF = CHDAOSF_nilstr;
@@ -2928,14 +2928,14 @@ A68_BOOL  LKGAOSF;  /* optbool result */
 A68_VC  MKGAOSF;  /* clause result */
 A68_VC  NKGAOSF;  /* avoid structure result */
 A_PROC_ENTRY(nothing_read);
-LKGAOSF = ((*(&A_VINDEX((*FUFAOSF_rdbuffer),(*HUFAOSF_rdcharno))))==WSFAOSF_sep);
+LKGAOSF = ((*A_NILCHECK((&A_VINDEX((*A_NILCHECK(FUFAOSF_rdbuffer)),(*A_NILCHECK(HUFAOSF_rdcharno))))))==WSFAOSF_sep);
 if ( LKGAOSF )
 { /* line 532: */
-LKGAOSF = ((*HUFAOSF_rdcharno)<=((*IUFAOSF_start_of_word)+1));
+LKGAOSF = ((*A_NILCHECK(HUFAOSF_rdcharno))<=((*A_NILCHECK(IUFAOSF_start_of_word))+1));
 }
 if (LKGAOSF)
 { 
-(*HUFAOSF_rdcharno)-=1;
+(*A_NILCHECK(HUFAOSF_rdcharno))-=1;
  /* line 533: */
  /* line 534: */
  /* line 535: */
@@ -2970,7 +2970,7 @@ A68_46  ILGAOSF;  /* OPERATORS - scalar -> [] or VEC[] */
 A_PROC_ENTRY(check_read);
  /* line 542: */
 { 
-SKGAOSF_c = (*(&A_VINDEX((*FUFAOSF_rdbuffer),(*HUFAOSF_rdcharno))));
+SKGAOSF_c = (*A_NILCHECK((&A_VINDEX((*A_NILCHECK(FUFAOSF_rdbuffer)),(*A_NILCHECK(HUFAOSF_rdcharno))))));
  /* line 543: */
  /* line 544: */
  /* line 545: */
@@ -2979,7 +2979,7 @@ if (TKGAOSF)
 { 
 if (SKGAOSF_c==WSFAOSF_sep)
 { 
-(*HUFAOSF_rdcharno)-=1;
+(*A_NILCHECK(HUFAOSF_rdcharno))-=1;
 } 
  /* line 547: */
  /* line 548: */
@@ -2993,7 +2993,7 @@ if ( !((!ETFAOSF_separator(JWFAOSF_next_char(Msg)))) ) break;
 /*SKIP*/;
 }
  /* line 549: */
-(*HUFAOSF_rdcharno)-=1;
+(*A_NILCHECK(HUFAOSF_rdcharno))-=1;
  /* line 550: */
  /* line 551: */
 if (Name.upb>0)
@@ -3012,7 +3012,7 @@ YCEAOSF_oneline( A_HISVEC(GLGAOSF,VKGAOSF,4,A68_52 ), &HLGAOSF );
 else
 { 
  /* line 554: */
-(void)((*HUFAOSF_rdcharno) = (*IUFAOSF_start_of_word));
+(void)((*A_NILCHECK(HUFAOSF_rdcharno)) = (*A_NILCHECK(IUFAOSF_start_of_word)));
 } 
  /* line 555: */
  /* line 556: */
@@ -3247,7 +3247,7 @@ EOGAOSF = PNGAOSF_c;
 } 
 FOGAOSF = QNGAOSF_index+=1 ;
 GOGAOSF = (&A_VINDEX(BOGAOSF_ans,FOGAOSF)) ;
-(*GOGAOSF) = EOGAOSF;
+(*A_NILCHECK(GOGAOSF)) = EOGAOSF;
  /* line 629: */
  /* line 630: */
 (void)(PNGAOSF_c = JWFAOSF_next_char(Msg));
@@ -3322,7 +3322,7 @@ A_PROC_ENTRY(read_command);
  /* line 655: */
  /* line 659: */
 { 
-(*JUFAOSF_line_stack) = CUFAOSF_no_lines;
+(*A_NILCHECK(JUFAOSF_line_stack)) = CUFAOSF_no_lines;
  /* line 661: */
  /* line 662: */
  /* line 664: */
@@ -3340,7 +3340,7 @@ if ( !((A_CALLPROC(VOGAOSF_first,(),((VOGAOSF_first).nonlocals))==WSFAOSF_sep)) 
 /*SKIP*/;
 }
  /* line 673: */
-(*HUFAOSF_rdcharno)-=1;
+(*A_NILCHECK(HUFAOSF_rdcharno))-=1;
  /* line 674: */
 ONGAOSF_read_command_name( Msg, &CPGAOSF );
 APGAOSF_command = CPGAOSF;
@@ -3401,10 +3401,10 @@ ZRAAOSF();   /* USE messageproc */
 QMDAOSF();   /* USE putstrings */
 /* --- Initialise configuration information */
 A_config.source_file = "/home/vak/Project/Algol/Algol-68RS-Source/liba68prel/commandreader.a68";
-A_config.translation_time = "Thu Nov  5 21:38:57 2026";
+A_config.translation_time = "Thu Nov  5 21:56:13 2026";
 A_config.ctrans_version = "Ctrans_34.6";
 A_config.name_seed = "ISFAOSF (from seed file) ";
-A_config.spec_change_time = "Thu Nov  5 21:38:57 2026";
+A_config.spec_change_time = "Thu Nov  5 21:56:13 2026";
 A_config.arguments = A_config_arguments;
 A_config.environment = A_config_environment;
 A_config.modinfo_files = A_config_modinfo_files;
@@ -3427,17 +3427,17 @@ ZSFAOSF_arrow_str = YSFAOSF;
  /* line 112: */
  /* line 113: */
  /* line 115: */
-EUFAOSF_rdline = (&((&DUFAOSF_current_details)->Rdline));
+EUFAOSF_rdline = (&(A_NILCHECK((&DUFAOSF_current_details))->Rdline));
  /* line 116: */
-FUFAOSF_rdbuffer = (&((&DUFAOSF_current_details)->Rdbuffer));
+FUFAOSF_rdbuffer = (&(A_NILCHECK((&DUFAOSF_current_details))->Rdbuffer));
  /* line 117: */
-GUFAOSF_rdcharend = (&((&DUFAOSF_current_details)->Rdcharend));
+GUFAOSF_rdcharend = (&(A_NILCHECK((&DUFAOSF_current_details))->Rdcharend));
  /* line 118: */
-HUFAOSF_rdcharno = (&((&DUFAOSF_current_details)->Rdcharno));
+HUFAOSF_rdcharno = (&(A_NILCHECK((&DUFAOSF_current_details))->Rdcharno));
  /* line 119: */
-IUFAOSF_start_of_word = (&((&DUFAOSF_current_details)->Start_of_word));
+IUFAOSF_start_of_word = (&(A_NILCHECK((&DUFAOSF_current_details))->Start_of_word));
  /* line 120: */
-JUFAOSF_line_stack = (&((&DUFAOSF_current_details)->Stack));
+JUFAOSF_line_stack = (&(A_NILCHECK((&DUFAOSF_current_details))->Stack));
  /* line 123: */
  /* line 135: */
  /* line 144: */

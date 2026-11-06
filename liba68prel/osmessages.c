@@ -309,10 +309,10 @@ BAAALIB();   /* USE a68config */
 ZRAAOSF();   /* USE messageproc */
 /* --- Initialise configuration information */
 A_config.source_file = "/home/vak/Project/Algol/Algol-68RS-Source/liba68prel/osmessages.a68";
-A_config.translation_time = "Thu Nov  5 21:38:57 2026";
+A_config.translation_time = "Thu Nov  5 21:56:12 2026";
 A_config.ctrans_version = "Ctrans_34.6";
 A_config.name_seed = "TIBAOSF (from seed file) ";
-A_config.spec_change_time = "Thu Nov  5 21:38:57 2026";
+A_config.spec_change_time = "Thu Nov  5 21:56:12 2026";
 A_config.arguments = A_config_arguments;
 A_config.environment = A_config_environment;
 A_config.modinfo_files = A_config_modinfo_files;
@@ -327,7 +327,7 @@ EJBAOSF_generator( A68_TRUE, &HJBAOSF );
 AJBAOSF.Messages = HJBAOSF;
  /* line 71: */
 IJBAOSF = A_LOC(A68_BOOL ) ;
-(void)((*IJBAOSF) = A68_FALSE) ;
+(void)((*A_NILCHECK(IJBAOSF)) = A68_FALSE) ;
 AJBAOSF.Initialised = IJBAOSF;
  /* line 73: */
 JJBAOSF.data[0].Number = 1;
@@ -455,7 +455,7 @@ YLBAOSF.Msgno.Number = 0;
 YLBAOSF.Msgno.Facility = (A68_32 *)A68_NIL;
 YLBAOSF.Msgno.Class = 0X0U;
 YLBAOSF.Text = A_VVAC(ZLBAOSF);
-(*VLBAOSF_message) = YLBAOSF;
+(*A_NILCHECK(VLBAOSF_message)) = YLBAOSF;
 }
  /* line 121: */
  /* line 122: */

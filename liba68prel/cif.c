@@ -260,7 +260,7 @@ EBAAOSF_ptr = (DBAAOSF.destination);
  /* line 150: */
 GBAAOSF = A_ISVEC(FBAAOSF,EBAAOSF_ptr,16000000,A68_CHAR ) ;
 HBAAOSF = (Str.upb+1) ;
-if ((*(&A_VINDEX(GBAAOSF,HBAAOSF)))==HAAAOSF_null_char)
+if ((*A_NILCHECK((&A_VINDEX(GBAAOSF,HBAAOSF))))==HAAAOSF_null_char)
 { 
 IBAAOSF = Str;
 } 
@@ -276,7 +276,7 @@ SBAAOSF = A_VTRIM(RBAAOSF,(PBAAOSF_ans),A_VTSCRIPT(&(RBAAOSF.upb),(PBAAOSF_ans).
  /* line 152: */
 TBAAOSF = PBAAOSF_ans.upb ;
 UBAAOSF = (&A_VINDEX(PBAAOSF_ans,TBAAOSF)) ;
-(*UBAAOSF) = HAAAOSF_null_char;
+(*A_NILCHECK(UBAAOSF)) = HAAAOSF_null_char;
  /* line 153: */
  /* line 154: */
  /* line 155: */
@@ -309,10 +309,10 @@ A_invoked = A68_TRUE;
 BAAALIB();   /* USE a68config */
 /* --- Initialise configuration information */
 A_config.source_file = "/home/vak/Project/Algol/Algol-68RS-Source/liba68prel/cif.a68";
-A_config.translation_time = "Thu Nov  5 21:38:57 2026";
+A_config.translation_time = "Thu Nov  5 21:56:12 2026";
 A_config.ctrans_version = "Ctrans_34.6";
 A_config.name_seed = "AAAAOSF (from seed file) ";
-A_config.spec_change_time = "Thu Nov  5 21:38:57 2026";
+A_config.spec_change_time = "Thu Nov  5 21:56:12 2026";
 A_config.arguments = A_config_arguments;
 A_config.environment = A_config_environment;
 A_config.modinfo_files = A_config_modinfo_files;

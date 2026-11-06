@@ -600,7 +600,7 @@ A_STATIC A68_VOID  ZMFAOSF_generator(A68_BOOL  XMFAOSF_anonymous, A68_122  *Retu
 A68_122  BNFAOSF;  /* clause result */
 A68_122  CNFAOSF;  /* OPERATORS - dynamic generator */
 { 
-CNFAOSF.upb = ((*NL(QMFAOSF_ans)).upb+10) ;
+CNFAOSF.upb = ((*A_NILCHECK(NL(QMFAOSF_ans))).upb+10) ;
 ( XMFAOSF_anonymous? A_VLOC(A68_120 ,CNFAOSF): A_VHEAP(A68_120 ,CNFAOSF) );
 BNFAOSF = CNFAOSF;
 } 
@@ -694,10 +694,10 @@ for (;EIFAOSF-- >= 0;
 {
  /* line 125: */
 if ( !((!CIFAOSF_ans)) ) break;
-FIFAOSF = ((*DIFAOSF_c)=='{');
+FIFAOSF = ((*A_NILCHECK(DIFAOSF_c))=='{');
 if ( ! FIFAOSF )
 { /* line 126: */
-FIFAOSF = ((*DIFAOSF_c)=='[');
+FIFAOSF = ((*A_NILCHECK(DIFAOSF_c))=='[');
 }
 if (FIFAOSF)
 { 
@@ -706,10 +706,10 @@ BIFAOSF_n+=1;
 } 
 else
 { 
-GIFAOSF = ((*DIFAOSF_c)=='}');
+GIFAOSF = ((*A_NILCHECK(DIFAOSF_c))=='}');
 if ( ! GIFAOSF )
 { /* line 128: */
-GIFAOSF = ((*DIFAOSF_c)==']');
+GIFAOSF = ((*A_NILCHECK(DIFAOSF_c))==']');
 }
 if (GIFAOSF)
 { 
@@ -718,7 +718,7 @@ BIFAOSF_n-=1;
 } 
 else
 { 
-HIFAOSF = ((*DIFAOSF_c)==' ');
+HIFAOSF = ((*A_NILCHECK(DIFAOSF_c))==' ');
 if ( HIFAOSF )
 { /* line 130: */
 HIFAOSF = (BIFAOSF_n==0);
@@ -771,24 +771,24 @@ A_PROC_ENTRY(add);
  /* line 205: */
 { 
  /* line 206: */
-if ((*NL(SMFAOSF_n))==(*NL(QMFAOSF_ans)).upb)
+if ((*A_NILCHECK(NL(SMFAOSF_n)))==(*A_NILCHECK(NL(QMFAOSF_ans))).upb)
 { 
 A_CLOSURE( YMFAOSF_generator, ZMFAOSF_generator, ANFAOSF_generator );
 (( ANFAOSF_generator * ) ( YMFAOSF_generator.nonlocals )) -> QMFAOSF_ans = NL(QMFAOSF_ans);
 A_CALLPROC(YMFAOSF_generator,(A68_FALSE, &DNFAOSF),(A68_FALSE, &DNFAOSF,(YMFAOSF_generator).nonlocals));
 ENFAOSF_new = DNFAOSF;
  /* line 207: */
-GNFAOSF = A_VTRIM(FNFAOSF,(ENFAOSF_new),A_VTSCRIPT(&(FNFAOSF.upb),(ENFAOSF_new).upb,1,(*NL(SMFAOSF_n)))) ;
-(void)(A_VASSIGN2((*NL(QMFAOSF_ans)),GNFAOSF,A68_120 ));
+GNFAOSF = A_VTRIM(FNFAOSF,(ENFAOSF_new),A_VTSCRIPT(&(FNFAOSF.upb),(ENFAOSF_new).upb,1,(*A_NILCHECK(NL(SMFAOSF_n))))) ;
+(void)(A_VASSIGN2((*A_NILCHECK(NL(QMFAOSF_ans))),GNFAOSF,A68_120 ));
  /* line 208: */
  /* line 209: */
-(*NL(QMFAOSF_ans)) = ENFAOSF_new;
+(*A_NILCHECK(NL(QMFAOSF_ans))) = ENFAOSF_new;
 } 
  /* line 210: */
  /* line 211: */
-HNFAOSF = (*NL(SMFAOSF_n))+=1 ;
-INFAOSF = (&A_VINDEX((*NL(QMFAOSF_ans)),HNFAOSF)) ;
-(*INFAOSF) = V;
+HNFAOSF = (*A_NILCHECK(NL(SMFAOSF_n)))+=1 ;
+INFAOSF = (&A_VINDEX((*A_NILCHECK(NL(QMFAOSF_ans))),HNFAOSF)) ;
+(*A_NILCHECK(INFAOSF)) = V;
 } 
 A_PROC_EXIT(add);
 return;
@@ -829,7 +829,7 @@ for (;SNFAOSF-- >= 0;
 (QNFAOSF_p++
 ) )
 {
-(void)(A_CALLPROC(NL(KNFAOSF_simplify),((*QNFAOSF_p)),((*QNFAOSF_p),(NL(KNFAOSF_simplify)).nonlocals)));
+(void)(A_CALLPROC(NL(KNFAOSF_simplify),((*A_NILCHECK(QNFAOSF_p))),((*A_NILCHECK(QNFAOSF_p)),(NL(KNFAOSF_simplify)).nonlocals)));
 }
  /* line 219: */
 break;
@@ -1133,16 +1133,16 @@ RHFAOSF_symbol_number = (QHFAOSF.data.mode1);
  /* line 114: */
  /* line 115: */
  /* line 116: */
-if ((*RHFAOSF_symbol_number)==0)
+if ((*A_NILCHECK(RHFAOSF_symbol_number))==0)
 { 
 SHFAOSF = IHDAOSF_nullstr;
 } 
 else
 { 
-THFAOSF = ((*RHFAOSF_symbol_number)<0);
+THFAOSF = ((*A_NILCHECK(RHFAOSF_symbol_number))<0);
 if ( ! THFAOSF )
 { /* line 117: */
-THFAOSF = ((*RHFAOSF_symbol_number)>Analysers.upb);
+THFAOSF = ((*A_NILCHECK(RHFAOSF_symbol_number))>Analysers.upb);
 }
  /* line 118: */
 if (THFAOSF)
@@ -1154,7 +1154,7 @@ else
 { 
  /* line 119: */
  /* line 120: */
-SHFAOSF = (*(&((&A_VINDEX(Analysers,(*RHFAOSF_symbol_number)))->Description)));
+SHFAOSF = (*A_NILCHECK((&(A_NILCHECK((&A_VINDEX(Analysers,(*A_NILCHECK(RHFAOSF_symbol_number)))))->Description))));
 } 
 } 
 break;
@@ -1186,7 +1186,7 @@ for (;TIFAOSF-- >= 0;
 (RIFAOSF_r++
 ) )
 {
-PHFAOSF_show_syntax( (*RIFAOSF_r), Analysers, &UIFAOSF );
+PHFAOSF_show_syntax( (*A_NILCHECK(RIFAOSF_r)), Analysers, &UIFAOSF );
 VIFAOSF_phrase = UIFAOSF;
  /* line 141: */
 WIFAOSF = (QIFAOSF_l>1);
@@ -1329,11 +1329,11 @@ for (;UKFAOSF-- >= 0;
 (TKFAOSF_reader++
 ) )
 {
-WKFAOSF = (*(&(TKFAOSF_reader->Description))) ;
+WKFAOSF = (*A_NILCHECK((&(A_NILCHECK(TKFAOSF_reader)->Description)))) ;
 (void)(KYDAOSF_put(Out, A_HVEC(XKFAOSF,A_UNITE(VKFAOSF,mode7,7,WKFAOSF),A68_52 )));
  /* line 166: */
  /* line 167: */
-YKFAOSF = (*(&(TKFAOSF_reader->Reader))) ;
+YKFAOSF = (*A_NILCHECK((&(A_NILCHECK(TKFAOSF_reader)->Reader)))) ;
 switch ( YKFAOSF.mode )
 { 
 case 2: /* REF INT */
@@ -1368,11 +1368,11 @@ default:
 break;
 } 
  /* line 174: */
-LLFAOSF = (*(&(TKFAOSF_reader->Help))) ;
+LLFAOSF = (*A_NILCHECK((&(A_NILCHECK(TKFAOSF_reader)->Help)))) ;
 MLFAOSF = A_VSTRUCTCOMP(LLFAOSF,CHDAOSF_nilstr);
 if ( ! MLFAOSF )
 { /* line 175: */
-MLFAOSF = ((*(&(TKFAOSF_reader->Help))).upb==0);
+MLFAOSF = ((*A_NILCHECK((&(A_NILCHECK(TKFAOSF_reader)->Help)))).upb==0);
 }
 if (MLFAOSF)
 { 
@@ -1384,7 +1384,7 @@ else
 PLFAOSF.fn.fn_global = PKDAOSF_newline;
 PLFAOSF.nonlocals = A68_NIL;
 NLFAOSF.data[0] = A_UNITE(OLFAOSF,mode12,12,PLFAOSF);
-RLFAOSF = (*(&(TKFAOSF_reader->Help))) ;
+RLFAOSF = (*A_NILCHECK((&(A_NILCHECK(TKFAOSF_reader)->Help)))) ;
 NLFAOSF.data[1] = A_UNITE(QLFAOSF,mode7,7,RLFAOSF);
 LSDAOSF_lines( 2, &SLFAOSF );
 NLFAOSF.data[2] = A_UNITE(TLFAOSF,mode20,20,SLFAOSF);
@@ -1426,7 +1426,7 @@ for (;BMFAOSF-- >= 0;
 {
 ZLFAOSF_rule = *AMFAOSF;
 CMFAOSF = ZLFAOSF_rule.No ;
-(void)((*CMFAOSF) = ((*(*(&((&(YLFAOSF_rptr->Rule))->Sort))))+1));
+(void)((*A_NILCHECK(CMFAOSF)) = ((*A_NILCHECK((*A_NILCHECK((&(A_NILCHECK((&(A_NILCHECK(YLFAOSF_rptr)->Rule)))->Sort))))))+1));
  /* line 191: */
 DMFAOSF.Rule.Sort = ZLFAOSF_rule.No;
 DMFAOSF.Rule.Reader = ZLFAOSF_rule.New;
@@ -1438,7 +1438,7 @@ DMFAOSF.Rule.Help = FMFAOSF;
  /* line 193: */
 DMFAOSF.Rest = YLFAOSF_rptr;
 GMFAOSF = A_HEAP(A68_130 ) ;
-(void)((*GMFAOSF) = DMFAOSF) ;
+(void)((*A_NILCHECK(GMFAOSF)) = DMFAOSF) ;
 YLFAOSF_rptr = GMFAOSF;
 }
  /* line 194: */
@@ -1565,10 +1565,10 @@ ZRAAOSF();   /* USE messageproc */
 QMDAOSF();   /* USE putstrings */
 /* --- Initialise configuration information */
 A_config.source_file = "/home/vak/Project/Algol/Algol-68RS-Source/liba68prel/commandsyntax.a68";
-A_config.translation_time = "Thu Nov  5 21:38:57 2026";
+A_config.translation_time = "Thu Nov  5 21:56:13 2026";
 A_config.ctrans_version = "Ctrans_34.6";
 A_config.name_seed = "DEFAOSF (from seed file) ";
-A_config.spec_change_time = "Thu Nov  5 21:38:57 2026";
+A_config.spec_change_time = "Thu Nov  5 21:56:13 2026";
 A_config.arguments = A_config_arguments;
 A_config.environment = A_config_environment;
 A_config.modinfo_files = A_config_modinfo_files;
@@ -1578,7 +1578,7 @@ A_PROC_ENTRY(DECS commandsyntax);
  /* line 73: */
  /* line 75: */
 JEFAOSF = A_HEAP(A68_INT ) ;
-(void)((*JEFAOSF) = 0) ;
+(void)((*A_NILCHECK(JEFAOSF)) = 0) ;
 LEFAOSF_noparameters = A_UNITE(KEFAOSF,mode1,1,JEFAOSF);
  /* line 76: */
 MEFAOSF.Sort = 0;

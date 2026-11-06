@@ -683,10 +683,10 @@ A_PROC_ENTRY(centred);
  /* line 49: */
 { 
  /* line 50: */
-if (Str.upb<((*(&(DREAOSF_screen->Width)))-1))
+if (Str.upb<((*A_NILCHECK((&(A_NILCHECK(DREAOSF_screen)->Width))))-1))
 { 
  /* line 51: */
-GSDAOSF_spaces( (((*(&(DREAOSF_screen->Width)))-Str.upb)/2), &ZPGAOSF );
+GSDAOSF_spaces( (((*A_NILCHECK((&(A_NILCHECK(DREAOSF_screen)->Width))))-Str.upb)/2), &ZPGAOSF );
 (void)(KYDAOSF_put(DREAOSF_screen, A_HVEC(BQGAOSF,A_UNITE(AQGAOSF,mode19,19,ZPGAOSF),A68_52 )));
 } 
  /* line 52: */
@@ -963,10 +963,10 @@ IPEAOSF();   /* USE osinterface */
 QMDAOSF();   /* USE putstrings */
 /* --- Initialise configuration information */
 A_config.source_file = "/home/vak/Project/Algol/Algol-68RS-Source/liba68prel/printissue.a68";
-A_config.translation_time = "Thu Nov  5 21:38:57 2026";
+A_config.translation_time = "Thu Nov  5 21:56:13 2026";
 A_config.ctrans_version = "Ctrans_34.6";
 A_config.name_seed = "OPGAOSF (from seed file) ";
-A_config.spec_change_time = "Thu Nov  5 21:38:57 2026";
+A_config.spec_change_time = "Thu Nov  5 21:56:13 2026";
 A_config.arguments = A_config_arguments;
 A_config.environment = A_config_environment;
 A_config.modinfo_files = A_config_modinfo_files;

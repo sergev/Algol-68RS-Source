@@ -480,7 +480,7 @@ else
 XOJACTR = VLJACTR_abs0;
 } 
 YOJACTR = (&A_VINDEX(SOJACTR_c,VOJACTR_next)) ;
-(void)((*YOJACTR) = (A68_SSBITS)(WOJACTR_digit+XOJACTR));
+(void)((*A_NILCHECK(YOJACTR)) = (A68_SSBITS)(WOJACTR_digit+XOJACTR));
  /* line 265: */
 ZOJACTR = 4 ;
 (void)(UOJACTR_i = A_SHR(UOJACTR_i,ZOJACTR));
@@ -612,7 +612,7 @@ TRJACTR = ((ERJACTR_escsize-RRJACTR_j)+1) ;
 URJACTR = 8 ;
 VRJACTR = (RRJACTR_j-1) ;
 WRJACTR = (&A_VINDEX(PRJACTR_octal,TRJACTR)) ;
-(void)((*WRJACTR) = (A68_SSBITS)((A68_INT )(A68_BITS )((A68_BITS )(I/A_LI_POWER(URJACTR,VRJACTR,(A68_INT )))&07U)+VLJACTR_abs0));
+(void)((*A_NILCHECK(WRJACTR)) = (A68_SSBITS)((A68_INT )(A68_BITS )((A68_BITS )(I/A_LI_POWER(URJACTR,VRJACTR,(A68_INT )))&07U)+VLJACTR_abs0));
 }
  /* line 322: */
  /* line 323: */
@@ -660,7 +660,7 @@ A_PROC_ENTRY(charstolongbits);
  /* line 64: */
 { 
 BMJACTR = 1 ;
-CMJACTR_width = BMAAOSF_charinvec((*(&A_VINDEX(Chars,BMJACTR))), AMJACTR);
+CMJACTR_width = BMAAOSF_charinvec((*A_NILCHECK((&A_VINDEX(Chars,BMJACTR)))), AMJACTR);
  /* line 65: */
 if (CMJACTR_width<=0)
 { 
@@ -684,7 +684,7 @@ for (;KMJACTR-- >= 0;
  /* line 72: */
 if (A_LB_LE(EMJACTR_answer,DMJACTR_safetoshift))
 { 
-(void)(GMJACTR_x = (A68_INT)(unsigned char)(*HMJACTR_char));
+(void)(GMJACTR_x = (A68_INT)(unsigned char)(*A_NILCHECK(HMJACTR_char)));
  /* line 73: */
 if (GMJACTR_x>=WLJACTR_absa)
 { 
@@ -735,7 +735,7 @@ A_PROC_ENTRY(charstolongint);
  /* line 87: */
  /* line 88: */
 TMJACTR = 1 ;
-if ((*(&A_VINDEX(Chars,TMJACTR)))=='a')
+if ((*A_NILCHECK((&A_VINDEX(Chars,TMJACTR))))=='a')
 { 
 { 
 XMJACTR_answer = 0;
@@ -757,7 +757,7 @@ goto WMJACTR_overflowed;
  /* line 95: */
 XMJACTR_answer*=10;
  /* line 96: */
-(void)(YMJACTR_digit = ((A68_INT)(unsigned char)(*(&A_VINDEX(Chars,ZMJACTR_i)))-VLJACTR_abs0));
+(void)(YMJACTR_digit = ((A68_INT)(unsigned char)(*A_NILCHECK((&A_VINDEX(Chars,ZMJACTR_i))))-VLJACTR_abs0));
  /* line 97: */
 (void)(WXIACTR_assert(CNJACTR, (YMJACTR_digit<=9)));
  /* line 98: */
@@ -851,14 +851,14 @@ for (;YNJACTR-- >= 0;
 (XNJACTR_c++
 ) )
 {
-(void)(WNJACTR_x = (A68_INT)(unsigned char)(*XNJACTR_c));
+(void)(WNJACTR_x = (A68_INT)(unsigned char)(*A_NILCHECK(XNJACTR_c)));
  /* line 233: */
  /* line 235: */
 if (WNJACTR_x<=ULJACTR_absspace)
 { 
 ZNJACTR = SNJACTR_convertedposition+=1 ;
 AOJACTR = (&A_VINDEX(QNJACTR_converted,ZNJACTR)) ;
-(*AOJACTR) = (A68_SSBITS)TNJACTR_sum;
+(*A_NILCHECK(AOJACTR)) = (A68_SSBITS)TNJACTR_sum;
  /* line 236: */
 TNJACTR_sum = 0;
  /* line 240: */
@@ -897,7 +897,7 @@ TNJACTR_sum = UNJACTR_base = 0;
  /* line 251: */
 EOJACTR = SNJACTR_convertedposition+=1 ;
 FOJACTR = (&A_VINDEX(QNJACTR_converted,EOJACTR)) ;
-(*FOJACTR) = (A68_SSBITS)TNJACTR_sum;
+(*A_NILCHECK(FOJACTR)) = (A68_SSBITS)TNJACTR_sum;
  /* line 253: */
  /* line 254: */
 INJACTR = A_VTRIM(GOJACTR,(QNJACTR_converted),A_VTSCRIPT(&(GOJACTR.upb),(QNJACTR_converted).upb,1,SNJACTR_convertedposition));
@@ -947,7 +947,7 @@ A_PROC_ENTRY(translatedenotation);
  /* line 279: */
  /* line 294: */
 UPJACTR = 1 ;
-VPJACTR_basesymbol = (*(&A_VINDEX(Chars,UPJACTR)));
+VPJACTR_basesymbol = (*A_NILCHECK((&A_VINDEX(Chars,UPJACTR))));
  /* line 295: */
  /* line 296: */
 if (VPJACTR_basesymbol=='a')
@@ -1077,7 +1077,7 @@ HSJACTR_i <= ISJACTR;
 HSJACTR_i += 1 )
 { 
  /* line 328: */
-JSJACTR_c = (*(&A_VINDEX(String,HSJACTR_i)));
+JSJACTR_c = (*A_NILCHECK((&A_VINDEX(String,HSJACTR_i))));
  /* line 329: */
 KSJACTR = ((A68_INT)(unsigned char)JSJACTR_c==0);
 if ( KSJACTR )
@@ -1087,10 +1087,10 @@ if ( KSJACTR )
 if ( KSJACTR )
 { /* line 331: */
 LSJACTR = (HSJACTR_i+1) ;
-MSJACTR = ((A68_INT)(unsigned char)(*(&A_VINDEX(String,LSJACTR)))<(A68_INT)(unsigned char)'0');
+MSJACTR = ((A68_INT)(unsigned char)(*A_NILCHECK((&A_VINDEX(String,LSJACTR))))<(A68_INT)(unsigned char)'0');
 if ( ! MSJACTR )
 {NSJACTR = (HSJACTR_i+1) ;
-MSJACTR = ((A68_INT)(unsigned char)(*(&A_VINDEX(String,NSJACTR)))>(A68_INT)(unsigned char)'9');
+MSJACTR = ((A68_INT)(unsigned char)(*A_NILCHECK((&A_VINDEX(String,NSJACTR))))>(A68_INT)(unsigned char)'9');
 }
  /* line 332: */
 KSJACTR = MSJACTR;
@@ -1162,7 +1162,7 @@ YRJACTR_pos+=2;
 else
 { 
 QTJACTR = (&A_VINDEX(GSJACTR_escapeseq,YRJACTR_pos)) ;
-(*QTJACTR) = JSJACTR_c;
+(*A_NILCHECK(QTJACTR)) = JSJACTR_c;
  /* line 348: */
  /* line 349: */
  /* line 350: */
@@ -1205,10 +1205,10 @@ BAAAOSF();   /* USE cif */
 IKAAOSF();   /* USE usefulops */
 /* --- Initialise configuration information */
 A_config.source_file = "/home/vak/Project/Algol/Algol-68RS-Source/src/denotations.a68";
-A_config.translation_time = "Thu Nov  5 21:38:57 2026";
+A_config.translation_time = "Thu Nov  5 21:56:13 2026";
 A_config.ctrans_version = "Ctrans_34.6";
 A_config.name_seed = "KLJACTR (from seed file) ";
-A_config.spec_change_time = "Thu Nov  5 21:38:57 2026";
+A_config.spec_change_time = "Thu Nov  5 21:56:13 2026";
 A_config.arguments = A_config_arguments;
 A_config.environment = A_config_environment;
 A_config.modinfo_files = A_config_modinfo_files;

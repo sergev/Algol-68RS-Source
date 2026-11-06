@@ -94,7 +94,7 @@ switch ( KYCAOSF.mode )
 case 1: /* REF CHAR */
 LYCAOSF_c = (KYCAOSF.data.mode1);
  /* line 51: */
-(*LYCAOSF_c) = ' ';
+(*A_NILCHECK(LYCAOSF_c)) = ' ';
 break;
 case 2: /* REF VECTOR [] CHAR */
 MYCAOSF_str = (KYCAOSF.data.mode2);
@@ -104,14 +104,14 @@ for (;OYCAOSF-- >= 0;
 (NYCAOSF_c++
 ) )
 {
-(*NYCAOSF_c) = ' ';
+(*A_NILCHECK(NYCAOSF_c)) = ' ';
 }
  /* line 52: */
 break;
 case 3: /* REF INT */
 PYCAOSF_i = (KYCAOSF.data.mode3);
  /* line 53: */
-(*PYCAOSF_i) = 0;
+(*A_NILCHECK(PYCAOSF_i)) = 0;
 break;
 case 4: /* REF VECTOR [] INT */
 QYCAOSF_vi = (KYCAOSF.data.mode4);
@@ -121,14 +121,14 @@ for (;SYCAOSF-- >= 0;
 (RYCAOSF_i++
 ) )
 {
-(*RYCAOSF_i) = 0;
+(*A_NILCHECK(RYCAOSF_i)) = 0;
 }
  /* line 54: */
 break;
 case 5: /* REF REAL */
 TYCAOSF_r = (KYCAOSF.data.mode5);
  /* line 55: */
-(*TYCAOSF_r) = 0.0;
+(*A_NILCHECK(TYCAOSF_r)) = 0.0;
 break;
 case 6: /* REF VECTOR [] REAL */
 UYCAOSF_vr = (KYCAOSF.data.mode6);
@@ -138,14 +138,14 @@ for (;WYCAOSF-- >= 0;
 (VYCAOSF_r++
 ) )
 {
-(*VYCAOSF_r) = 0.0;
+(*A_NILCHECK(VYCAOSF_r)) = 0.0;
 }
  /* line 56: */
 break;
 case 7: /* REF BOOL */
 XYCAOSF_b = (KYCAOSF.data.mode7);
  /* line 57: */
-(*XYCAOSF_b) = A68_FALSE;
+(*A_NILCHECK(XYCAOSF_b)) = A68_FALSE;
 break;
 case 8: /* STRAIGHT MODE41 */
 YYCAOSF_ct = (KYCAOSF.data.mode8);
@@ -183,10 +183,10 @@ A_invoked = A68_TRUE;
 BAAALIB();   /* USE a68config */
 /* --- Initialise configuration information */
 A_config.source_file = "/home/vak/Project/Algol/Algol-68RS-Source/liba68prel/clear.a68";
-A_config.translation_time = "Thu Nov  5 21:38:57 2026";
+A_config.translation_time = "Thu Nov  5 21:56:13 2026";
 A_config.ctrans_version = "Ctrans_34.6";
 A_config.name_seed = "CYCAOSF (from seed file) ";
-A_config.spec_change_time = "Thu Nov  5 21:38:57 2026";
+A_config.spec_change_time = "Thu Nov  5 21:56:13 2026";
 A_config.arguments = A_config_arguments;
 A_config.environment = A_config_environment;
 A_config.modinfo_files = A_config_modinfo_files;

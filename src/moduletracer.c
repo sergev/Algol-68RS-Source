@@ -161,10 +161,10 @@ if ( MCHACTR )
 }
  /* line 63: */
 if ( !(MCHACTR) ) break;
-NCHACTR = A_VC_EQ((*(&(KCHACTR_t->Name))),Keyword);
+NCHACTR = A_VC_EQ((*A_NILCHECK((&(A_NILCHECK(KCHACTR_t)->Name)))),Keyword);
 if ( ! NCHACTR )
 { /* line 64: */
-NCHACTR = A_VC_EQ((*(&(KCHACTR_t->Name))),PCHACTR);
+NCHACTR = A_VC_EQ((*A_NILCHECK((&(A_NILCHECK(KCHACTR_t)->Name)))),PCHACTR);
 }
 if (NCHACTR)
 { 
@@ -175,7 +175,7 @@ else
 { 
  /* line 66: */
  /* line 67: */
-(void)(KCHACTR_t = (*(&(KCHACTR_t->Next))));
+(void)(KCHACTR_t = (*A_NILCHECK((&(A_NILCHECK(KCHACTR_t)->Next)))));
 } 
 }
  /* line 69: */
@@ -202,7 +202,7 @@ UCHACTR.Name = VCHACTR;
 UCHACTR.Tracelevel = Level;
 UCHACTR.Next = HCHACTR_traceinfo;
 WCHACTR = A_HEAP(A68_61 ) ;
-(void)((*WCHACTR) = UCHACTR) ;
+(void)((*A_NILCHECK(WCHACTR)) = UCHACTR) ;
 HCHACTR_traceinfo = WCHACTR;
  /* line 75: */
  /* line 76: */
@@ -234,7 +234,7 @@ CDHACTR = 0;
 } 
 else
 { 
-CDHACTR = (*(&(ADHACTR_t->Tracelevel)));
+CDHACTR = (*A_NILCHECK((&(A_NILCHECK(ADHACTR_t)->Tracelevel))));
 } 
 } 
 A_PROC_EXIT(tracelevel);
@@ -259,10 +259,10 @@ BAAALIB();   /* USE a68config */
 IKAAOSF();   /* USE usefulops */
 /* --- Initialise configuration information */
 A_config.source_file = "/home/vak/Project/Algol/Algol-68RS-Source/src/moduletracer.a68";
-A_config.translation_time = "Thu Nov  5 21:38:57 2026";
+A_config.translation_time = "Thu Nov  5 21:56:13 2026";
 A_config.ctrans_version = "Ctrans_34.6";
 A_config.name_seed = "ACHACTR (from seed file) ";
-A_config.spec_change_time = "Thu Nov  5 21:38:57 2026";
+A_config.spec_change_time = "Thu Nov  5 21:56:13 2026";
 A_config.arguments = A_config_arguments;
 A_config.environment = A_config_environment;
 A_config.modinfo_files = A_config_modinfo_files;

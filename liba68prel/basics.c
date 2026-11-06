@@ -1141,7 +1141,7 @@ for (;SGHAOSF-- >= 0;
 (RGHAOSF_c++
 ) )
 {
-(*RGHAOSF_c) = ' ';
+(*A_NILCHECK(RGHAOSF_c)) = ' ';
 }
  /* line 114: */
 break;
@@ -1153,7 +1153,7 @@ for (;VGHAOSF-- >= 0;
 (UGHAOSF_i++
 ) )
 {
-(*UGHAOSF_i) = 0;
+(*A_NILCHECK(UGHAOSF_i)) = 0;
 }
  /* line 115: */
 break;
@@ -1165,7 +1165,7 @@ for (;YGHAOSF-- >= 0;
 (XGHAOSF_b++
 ) )
 {
-(*XGHAOSF_b) = A68_FALSE;
+(*A_NILCHECK(XGHAOSF_b)) = A68_FALSE;
 }
  /* line 116: */
 break;
@@ -1177,7 +1177,7 @@ for (;BHHAOSF-- >= 0;
 (AHHAOSF_u++
 ) )
 {
-(*AHHAOSF_u) = 0X0U;
+(*A_NILCHECK(AHHAOSF_u)) = 0X0U;
 }
  /* line 117: */
 break;
@@ -1204,13 +1204,13 @@ for (;FHHAOSF-- >= 0;
 (EHHAOSF_c++
 ) )
 {
-GHHAOSF = ((*EHHAOSF_c)>='a');
+GHHAOSF = ((*A_NILCHECK(EHHAOSF_c))>='a');
 if ( GHHAOSF )
-{GHHAOSF = ((*EHHAOSF_c)<='z');
+{GHHAOSF = ((*A_NILCHECK(EHHAOSF_c))<='z');
 }
 if (GHHAOSF)
 { 
-(void)((*EHHAOSF_c) = (A68_SSBITS)((A68_INT)(unsigned char)(*EHHAOSF_c)-32));
+(void)((*A_NILCHECK(EHHAOSF_c)) = (A68_SSBITS)((A68_INT)(unsigned char)(*A_NILCHECK(EHHAOSF_c))-32));
 } 
 }
 A_PROC_EXIT(uppercase);
@@ -1255,13 +1255,13 @@ for (;PHHAOSF-- >= 0;
 (OHHAOSF_c++
 ) )
 {
-QHHAOSF = ((*OHHAOSF_c)>='A');
+QHHAOSF = ((*A_NILCHECK(OHHAOSF_c))>='A');
 if ( QHHAOSF )
-{QHHAOSF = ((*OHHAOSF_c)<='Z');
+{QHHAOSF = ((*A_NILCHECK(OHHAOSF_c))<='Z');
 }
 if (QHHAOSF)
 { 
-(void)((*OHHAOSF_c) = (A68_SSBITS)((A68_INT)(unsigned char)(*OHHAOSF_c)+32));
+(void)((*A_NILCHECK(OHHAOSF_c)) = (A68_SSBITS)((A68_INT)(unsigned char)(*A_NILCHECK(OHHAOSF_c))+32));
 } 
 }
 A_PROC_EXIT(lowercase);
@@ -1409,12 +1409,12 @@ RIHAOSF_index+=1;
 else
 { 
  /* line 185: */
-(*Error) = A68_TRUE;
+(*A_NILCHECK(Error)) = A68_TRUE;
 } 
  /* line 186: */
 if (RIHAOSF_index<Str.upb)
 { 
-(*Error) = A68_TRUE;
+(*A_NILCHECK(Error)) = A68_TRUE;
 } 
  /* line 187: */
 if (TIHAOSF_neg)
@@ -1473,7 +1473,7 @@ for ( ;; )
 { 
 LJHAOSF = JJHAOSF_l-=1 ;
 MJHAOSF = (&A_VINDEX(HJHAOSF_line,LJHAOSF)) ;
-(void)((*MJHAOSF) = (A68_SSBITS)(A68_INT )(A68_BITS )(KJHAOSF_i&(A68_BITS )NIHAOSF_intmask));
+(void)((*A_NILCHECK(MJHAOSF)) = (A68_SSBITS)(A68_INT )(A68_BITS )(KJHAOSF_i&(A68_BITS )NIHAOSF_intmask));
  /* line 198: */
 (void)(KJHAOSF_i = A_SHR(KJHAOSF_i,IIHAOSF_bitsperchar));
  /* line 199: */
@@ -1489,7 +1489,7 @@ for ( OJHAOSF_i = JJHAOSF_l;
 OJHAOSF_i <= PJHAOSF;
 OJHAOSF_i += 1 )
 { 
-(void)(A_CALLPROC(Outintchar,((*(&A_VINDEX(HJHAOSF_line,OJHAOSF_i)))),((*(&A_VINDEX(HJHAOSF_line,OJHAOSF_i))),(Outintchar).nonlocals)));
+(void)(A_CALLPROC(Outintchar,((*A_NILCHECK((&A_VINDEX(HJHAOSF_line,OJHAOSF_i))))),((*A_NILCHECK((&A_VINDEX(HJHAOSF_line,OJHAOSF_i)))),(Outintchar).nonlocals)));
 }
  /* line 202: */
  /* line 203: */
@@ -1883,18 +1883,18 @@ EPHAOSF = (A68_SSBITS)(IFHAOSF_zero+DPHAOSF_dten);
 } 
 FPHAOSF = 1 ;
 GPHAOSF = (&A_VINDEX(Ans,FPHAOSF)) ;
-(*GPHAOSF) = EPHAOSF;
+(*A_NILCHECK(GPHAOSF)) = EPHAOSF;
  /* line 296: */
 HPHAOSF = 2 ;
 JPHAOSF = 10 ;
 KPHAOSF = (&A_VINDEX(Ans,HPHAOSF)) ;
-(void)((*KPHAOSF) = (A68_SSBITS)(IFHAOSF_zero+A_MOD(OOHAOSF_days,JPHAOSF,IPHAOSF)));
+(void)((*A_NILCHECK(KPHAOSF)) = (A68_SSBITS)(IFHAOSF_zero+A_MOD(OOHAOSF_days,JPHAOSF,IPHAOSF)));
  /* line 297: */
 LPHAOSF = 3 ;
 MPHAOSF = 7 ;
 NPHAOSF = (&A_VINDEX(Ans,MPHAOSF)) ;
 OPHAOSF = (&A_VINDEX(Ans,LPHAOSF)) ;
-(*OPHAOSF) = (*NPHAOSF) = ' ';
+(*A_NILCHECK(OPHAOSF)) = (*A_NILCHECK(NPHAOSF)) = ' ';
  /* line 298: */
 QPHAOSF = A_VTRIM(PPHAOSF,(Ans),A_VTSCRIPT(&(PPHAOSF.upb),(Ans).upb,4,6)) ;
 RPHAOSF = A_VINDEX(HOHAOSF_months,WOHAOSF_month) ;
@@ -1910,7 +1910,7 @@ SPHAOSF_i += TPHAOSF )
 { 
 VPHAOSF = 10 ;
 WPHAOSF = (&A_VINDEX(Ans,SPHAOSF_i)) ;
-(void)((*WPHAOSF) = (A68_SSBITS)(IFHAOSF_zero+A_MOD(POHAOSF_year,VPHAOSF,UPHAOSF)));
+(void)((*A_NILCHECK(WPHAOSF)) = (A68_SSBITS)(IFHAOSF_zero+A_MOD(POHAOSF_year,VPHAOSF,UPHAOSF)));
  /* line 301: */
  /* line 302: */
 POHAOSF_year/=10;
@@ -1967,7 +1967,7 @@ SQHAOSF = 12 ;
 TQHAOSF = 13 ;
 UQHAOSF = (&A_VINDEX(RQHAOSF_ans,TQHAOSF)) ;
 VQHAOSF = (&A_VINDEX(RQHAOSF_ans,SQHAOSF)) ;
-(*VQHAOSF) = (*UQHAOSF) = ' ';
+(*A_NILCHECK(VQHAOSF)) = (*A_NILCHECK(UQHAOSF)) = ' ';
  /* line 312: */
 (void)(KOHAOSF_date_proc(Seconds, A_VTRIM(WQHAOSF,(RQHAOSF_ans),A_VTSCRIPT(&(WQHAOSF.upb),(RQHAOSF_ans).upb,1,11))));
  /* line 313: */
@@ -2029,7 +2029,7 @@ DRHAOSF_i += ERHAOSF )
 GRHAOSF = A_ISVEC(FRHAOSF,(&CRHAOSF_fr),5,A68_CHAR ) ;
 IRHAOSF = 10 ;
 JRHAOSF = (&A_VINDEX(GRHAOSF,DRHAOSF_i)) ;
-(void)((*JRHAOSF) = (A68_SSBITS)(IFHAOSF_zero+A_MOD(ARHAOSF_cpu,IRHAOSF,HRHAOSF)));
+(void)((*A_NILCHECK(JRHAOSF)) = (A68_SSBITS)(IFHAOSF_zero+A_MOD(ARHAOSF_cpu,IRHAOSF,HRHAOSF)));
  /* line 324: */
  /* line 325: */
 ARHAOSF_cpu/=10;
@@ -2045,7 +2045,7 @@ SRHAOSF = A_ISVEC(RRHAOSF,(&KRHAOSF_time),10,A68_CHAR ) ;
 TRHAOSF = 10 ;
 URHAOSF = (&A_VINDEX(SRHAOSF,TRHAOSF)) ;
 VRHAOSF = (&A_VINDEX(PRHAOSF,QRHAOSF)) ;
-(*VRHAOSF) = (*URHAOSF) = ' ';
+(*A_NILCHECK(VRHAOSF)) = (*A_NILCHECK(URHAOSF)) = ' ';
  /* line 329: */
 WRHAOSF.data[0] = A_HISVEC(XRHAOSF,KRHAOSF_time,10,A68_CHAR );
 FEAAOSF_intchars( ARHAOSF_cpu, &YRHAOSF );
@@ -2085,7 +2085,7 @@ HSHAOSF_ans = JSHAOSF;
  /* line 349: */
  /* line 350: */
  /* line 353: */
-if ((*Input).upb>0)
+if ((*A_NILCHECK(Input)).upb>0)
 { 
 KSHAOSF_found = A68_FALSE;
  /* line 354: */
@@ -2095,7 +2095,7 @@ for ( ;; )
 { 
  /* line 356: */
  /* line 357: */
-MSHAOSF = (LSHAOSF_i<=(*Input).upb);
+MSHAOSF = (LSHAOSF_i<=(*A_NILCHECK(Input)).upb);
 if ( MSHAOSF )
 {MSHAOSF = (!KSHAOSF_found);
 }
@@ -2103,7 +2103,7 @@ if ( MSHAOSF )
 if ( !(MSHAOSF) ) break;
  /* line 359: */
  /* line 360: */
-if ((*(&A_VINDEX((*Input),LSHAOSF_i)))==Terminatingchar)
+if ((*A_NILCHECK((&A_VINDEX((*A_NILCHECK(Input)),LSHAOSF_i))))==Terminatingchar)
 { 
  /* line 361: */
  /* line 362: */
@@ -2122,17 +2122,17 @@ LSHAOSF_i+=1;
 if (LSHAOSF_i>1)
 { 
  /* line 370: */
-ZCAAOSF_makervc( A_VTRIM(NSHAOSF,((*Input)),A_VTSCRIPT(&(NSHAOSF.upb),((*Input)).upb,1,(LSHAOSF_i-1))), &OSHAOSF );
+ZCAAOSF_makervc( A_VTRIM(NSHAOSF,((*A_NILCHECK(Input))),A_VTSCRIPT(&(NSHAOSF.upb),((*A_NILCHECK(Input))).upb,1,(LSHAOSF_i-1))), &OSHAOSF );
 HSHAOSF_ans = OSHAOSF;
 } 
  /* line 373: */
 for ( ;; )
 { 
  /* line 374: */
-PSHAOSF = (LSHAOSF_i<=(*Input).upb);
+PSHAOSF = (LSHAOSF_i<=(*A_NILCHECK(Input)).upb);
 if ( PSHAOSF )
 { /* line 375: */
-PSHAOSF = ((*(&A_VINDEX((*Input),LSHAOSF_i)))==Terminatingchar);
+PSHAOSF = ((*A_NILCHECK((&A_VINDEX((*A_NILCHECK(Input)),LSHAOSF_i))))==Terminatingchar);
 }
  /* line 376: */
 if ( !(PSHAOSF) ) break;
@@ -2142,19 +2142,19 @@ LSHAOSF_i+=1;
  /* line 381: */
  /* line 382: */
  /* line 383: */
-if (LSHAOSF_i<=(*Input).upb)
+if (LSHAOSF_i<=(*A_NILCHECK(Input)).upb)
 { 
  /* line 384: */
  /* line 385: */
-ZCAAOSF_makervc( A_VTRIM(QSHAOSF,((*Input)),A_VTSCRIPT(&(QSHAOSF.upb),((*Input)).upb,LSHAOSF_i,((*Input)).upb)), &RSHAOSF );
-(*Input) = RSHAOSF;
+ZCAAOSF_makervc( A_VTRIM(QSHAOSF,((*A_NILCHECK(Input))),A_VTSCRIPT(&(QSHAOSF.upb),((*A_NILCHECK(Input))).upb,LSHAOSF_i,((*A_NILCHECK(Input))).upb)), &RSHAOSF );
+(*A_NILCHECK(Input)) = RSHAOSF;
 } 
 else
 { 
  /* line 386: */
  /* line 387: */
 ZCAAOSF_makervc( TSHAOSF, &USHAOSF );
-(*Input) = USHAOSF;
+(*A_NILCHECK(Input)) = USHAOSF;
 } 
 } 
  /* line 389: */
@@ -2224,16 +2224,16 @@ QTHAOSF_error = A68_FALSE;
  /* line 423: */
  /* line 424: */
 FSHAOSF_extractchars( (&OTHAOSF_dateandtimestring), ETHAOSF_dateseparator, &RTHAOSF );
-(void)((*Day) = QIHAOSF_charstoint(RTHAOSF, (&QTHAOSF_error)));
+(void)((*A_NILCHECK(Day)) = QIHAOSF_charstoint(RTHAOSF, (&QTHAOSF_error)));
  /* line 425: */
  /* line 426: */
 STHAOSF = (!QTHAOSF_error);
 if ( STHAOSF )
-{STHAOSF = ((*Day)>0);
+{STHAOSF = ((*A_NILCHECK(Day))>0);
 }
 if ( STHAOSF )
 { /* line 427: */
-STHAOSF = ((*Day)<32);
+STHAOSF = ((*A_NILCHECK(Day))<32);
 }
  /* line 430: */
 TTHAOSF = STHAOSF;
@@ -2261,7 +2261,7 @@ if ( !((!WTHAOSF_found)) ) break;
  /* line 441: */
 if (A_VC_EQ(UTHAOSF_monthchars,A_VINDEX(HOHAOSF_months,XTHAOSF_i)))
 { 
-(*Month) = XTHAOSF_i;
+(*A_NILCHECK(Month)) = XTHAOSF_i;
  /* line 442: */
  /* line 443: */
  /* line 444: */
@@ -2278,7 +2278,7 @@ ZTHAOSF_error = A68_FALSE;
  /* line 449: */
  /* line 450: */
 FSHAOSF_extractchars( (&OTHAOSF_dateandtimestring), GTHAOSF_spacechar, &AUHAOSF );
-(void)((*Year) = QIHAOSF_charstoint(AUHAOSF, (&ZTHAOSF_error)));
+(void)((*A_NILCHECK(Year)) = QIHAOSF_charstoint(AUHAOSF, (&ZTHAOSF_error)));
  /* line 451: */
  /* line 452: */
  /* line 454: */
@@ -2290,12 +2290,12 @@ CUHAOSF_error = A68_FALSE;
  /* line 455: */
  /* line 456: */
 FSHAOSF_extractchars( (&OTHAOSF_dateandtimestring), FTHAOSF_timeseparator, &DUHAOSF );
-(void)((*Hour) = QIHAOSF_charstoint(DUHAOSF, (&CUHAOSF_error)));
+(void)((*A_NILCHECK(Hour)) = QIHAOSF_charstoint(DUHAOSF, (&CUHAOSF_error)));
  /* line 457: */
 EUHAOSF = (!CUHAOSF_error);
 if ( EUHAOSF )
 { /* line 458: */
-EUHAOSF = ((*Hour)<24);
+EUHAOSF = ((*A_NILCHECK(Hour))<24);
 }
  /* line 460: */
 FUHAOSF = EUHAOSF;
@@ -2306,12 +2306,12 @@ GUHAOSF_error = A68_FALSE;
  /* line 461: */
  /* line 462: */
 FSHAOSF_extractchars( (&OTHAOSF_dateandtimestring), FTHAOSF_timeseparator, &HUHAOSF );
-(void)((*Min) = QIHAOSF_charstoint(HUHAOSF, (&GUHAOSF_error)));
+(void)((*A_NILCHECK(Min)) = QIHAOSF_charstoint(HUHAOSF, (&GUHAOSF_error)));
  /* line 463: */
 IUHAOSF = (!GUHAOSF_error);
 if ( IUHAOSF )
 { /* line 464: */
-IUHAOSF = ((*Min)<60);
+IUHAOSF = ((*A_NILCHECK(Min))<60);
 }
  /* line 466: */
 JUHAOSF = IUHAOSF;
@@ -2322,12 +2322,12 @@ KUHAOSF_error = A68_FALSE;
  /* line 467: */
  /* line 468: */
 FSHAOSF_extractchars( (&OTHAOSF_dateandtimestring), GTHAOSF_spacechar, &LUHAOSF );
-(void)((*Sec) = QIHAOSF_charstoint(LUHAOSF, (&KUHAOSF_error)));
+(void)((*A_NILCHECK(Sec)) = QIHAOSF_charstoint(LUHAOSF, (&KUHAOSF_error)));
  /* line 469: */
 MUHAOSF = (!KUHAOSF_error);
 if ( MUHAOSF )
 { /* line 470: */
-MUHAOSF = ((*Sec)<60);
+MUHAOSF = ((*A_NILCHECK(Sec))<60);
 }
  /* line 472: */
 NUHAOSF = MUHAOSF;
@@ -2519,7 +2519,7 @@ break;
  /* line 537: */
 (void)(LVHAOSF_time = ((LVHAOSF_time+CVHAOSF_min)*TUHAOSF_secondsinminute));
  /* line 540: */
-(void)((*Seconds) = (LVHAOSF_time+DVHAOSF_sec));
+(void)((*A_NILCHECK(Seconds)) = (LVHAOSF_time+DVHAOSF_sec));
  /* line 541: */
  /* line 542: */
  /* line 544: */
@@ -2568,7 +2568,7 @@ HWHAOSF = IWHAOSF;
  /* line 574: */
 if (HWHAOSF)
 { 
-(*Overflowed) = A68_TRUE;
+(*A_NILCHECK(Overflowed)) = A68_TRUE;
  /* line 575: */
  /* line 576: */
  /* line 577: */
@@ -2607,7 +2607,7 @@ OWHAOSF = PWHAOSF;
  /* line 585: */
 if (OWHAOSF)
 { 
-(*Overflowed) = A68_TRUE;
+(*A_NILCHECK(Overflowed)) = A68_TRUE;
  /* line 586: */
  /* line 587: */
  /* line 588: */
@@ -2708,7 +2708,7 @@ XWHAOSF = A68_FALSE;
 } 
 if (XWHAOSF)
 { 
-(*Overflowed) = A68_TRUE;
+(*A_NILCHECK(Overflowed)) = A68_TRUE;
  /* line 601: */
  /* line 602: */
  /* line 603: */
@@ -2774,10 +2774,10 @@ ZRAAOSF();   /* USE messageproc */
 QMDAOSF();   /* USE putstrings */
 /* --- Initialise configuration information */
 A_config.source_file = "/home/vak/Project/Algol/Algol-68RS-Source/liba68prel/basics.a68";
-A_config.translation_time = "Thu Nov  5 21:38:57 2026";
+A_config.translation_time = "Thu Nov  5 21:56:13 2026";
 A_config.ctrans_version = "Ctrans_34.6";
 A_config.name_seed = "BFHAOSF (from seed file) ";
-A_config.spec_change_time = "Thu Nov  5 21:38:57 2026";
+A_config.spec_change_time = "Thu Nov  5 21:56:13 2026";
 A_config.arguments = A_config_arguments;
 A_config.environment = A_config_environment;
 A_config.modinfo_files = A_config_modinfo_files;

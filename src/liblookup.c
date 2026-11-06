@@ -1066,7 +1066,7 @@ if (TMLACTR)
 { 
 UMLACTR = SMLACTR_ymodinfo.Ym.Specs ;
 VMLACTR = 1 ;
-WMLACTR = (*(&((&((&A_VINDEX(UMLACTR,VMLACTR))->Xs))->U))) ;
+WMLACTR = (*A_NILCHECK((&(A_NILCHECK((&(A_NILCHECK((&A_VINDEX(UMLACTR,VMLACTR)))->Xs)))->U)))) ;
 switch ( WMLACTR.mode )
 { 
 case 1: /* REF VECTOR [] CHAR */
@@ -1081,7 +1081,7 @@ ZMLACTR_spec = YMLACTR;
  /* line 352: */
  /* line 356: */
 ANLACTR = A_HEAP(A68_105 ) ;
-(void)((*ANLACTR) = KMLACTR_currentmodule) ;
+(void)((*A_NILCHECK(ANLACTR)) = KMLACTR_currentmodule) ;
 (void)(CJLACTR_processspec(ZMLACTR_spec, ANLACTR));
 } 
 } 
@@ -1109,12 +1109,12 @@ for ( ;; )
  /* line 378: */
  /* line 379: */
 if ( !((PNLACTR_current!=(A68_157 *)A68_NIL)) ) break;
-TNLACTR = (*(*(&(PNLACTR_current->Module)))) ;
+TNLACTR = (*A_NILCHECK((*A_NILCHECK((&(A_NILCHECK(PNLACTR_current)->Module)))))) ;
 BNAAOSF_before( A_HISVEC(SNLACTR,TNLACTR,32,A68_CHAR ), ' ', &UNLACTR );
-(void)(AYKACTR_debugmessage(10, A_VC_PLUS(A_VC_PLUS((*(&(PNLACTR_current->Symbol))),RNLACTR),UNLACTR)));
+(void)(AYKACTR_debugmessage(10, A_VC_PLUS(A_VC_PLUS((*A_NILCHECK((&(A_NILCHECK(PNLACTR_current)->Symbol)))),RNLACTR),UNLACTR)));
  /* line 380: */
  /* line 381: */
-(void)(PNLACTR_current = (*(&(PNLACTR_current->Next))));
+(void)(PNLACTR_current = (*A_NILCHECK((&(A_NILCHECK(PNLACTR_current)->Next)))));
 }
  /* line 382: */
 } 
@@ -1849,7 +1849,7 @@ A_PROC_ENTRY(processspec);
  /* line 245: */
 { 
  /* line 237: */
-BNAAOSF_before( A_HISVEC(FJLACTR,(*Currentmodule),32,A68_CHAR ), ' ', &GJLACTR );
+BNAAOSF_before( A_HISVEC(FJLACTR,(*A_NILCHECK(Currentmodule)),32,A68_CHAR ), ' ', &GJLACTR );
 (void)(AYKACTR_debugmessage(10, A_VC_PLUS(A_VC_PLUS(EJLACTR,GJLACTR),A_HVEC(HJLACTR,')',A68_CHAR ))));
  /* line 246: */
 IJLACTR_index = 1;
@@ -1880,7 +1880,7 @@ QJLACTR.Symbol = RJLACTR;
 QJLACTR.Module = Currentmodule;
 QJLACTR.Next = VXKACTR_idtable;
 SJLACTR = A_HEAP(A68_157 ) ;
-(void)((*SJLACTR) = QJLACTR) ;
+(void)((*A_NILCHECK(SJLACTR)) = QJLACTR) ;
 VXKACTR_idtable = SJLACTR;
  /* line 254: */
  /* line 255: */
@@ -1902,7 +1902,7 @@ YJLACTR.Symbol = ZJLACTR;
 YJLACTR.Module = Currentmodule;
 YJLACTR.Next = VXKACTR_idtable;
 AKLACTR = A_HEAP(A68_157 ) ;
-(void)((*AKLACTR) = YJLACTR) ;
+(void)((*A_NILCHECK(AKLACTR)) = YJLACTR) ;
 VXKACTR_idtable = AKLACTR;
  /* line 260: */
  /* line 261: */
@@ -1924,7 +1924,7 @@ GKLACTR.Symbol = HKLACTR;
 GKLACTR.Module = Currentmodule;
 GKLACTR.Next = XXKACTR_boldtable;
 IKLACTR = A_HEAP(A68_157 ) ;
-(void)((*IKLACTR) = GKLACTR) ;
+(void)((*A_NILCHECK(IKLACTR)) = GKLACTR) ;
 XXKACTR_boldtable = IKLACTR;
  /* line 266: */
  /* line 267: */
@@ -1963,10 +1963,10 @@ TKLACTR_table = SKLACTR;
 ZCAAOSF_makervc( NKLACTR_name, &VKLACTR );
 UKLACTR.Symbol = VKLACTR;
 UKLACTR.Module = Currentmodule;
-UKLACTR.Next = (*TKLACTR_table);
+UKLACTR.Next = (*A_NILCHECK(TKLACTR_table));
 WKLACTR = A_HEAP(A68_157 ) ;
-(void)((*WKLACTR) = UKLACTR) ;
-(*TKLACTR_table) = WKLACTR;
+(void)((*A_NILCHECK(WKLACTR)) = UKLACTR) ;
+(*A_NILCHECK(TKLACTR_table)) = WKLACTR;
  /* line 273: */
  /* line 274: */
  /* line 275: */
@@ -2004,10 +2004,10 @@ HLLACTR_table = GLLACTR;
 ZCAAOSF_makervc( BLLACTR_name, &JLLACTR );
 ILLACTR.Symbol = JLLACTR;
 ILLACTR.Module = Currentmodule;
-ILLACTR.Next = (*HLLACTR_table);
+ILLACTR.Next = (*A_NILCHECK(HLLACTR_table));
 KLLACTR = A_HEAP(A68_157 ) ;
-(void)((*KLLACTR) = ILLACTR) ;
-(*HLLACTR_table) = KLLACTR;
+(void)((*A_NILCHECK(KLLACTR)) = ILLACTR) ;
+(*A_NILCHECK(HLLACTR_table)) = KLLACTR;
  /* line 280: */
  /* line 281: */
  /* line 283: */
@@ -2115,14 +2115,14 @@ A_PROC_ENTRY(init_liblookup);
 { 
 QLLACTR_initialised = A68_TRUE;
  /* line 329: */
-TLLACTR_d = NBCAOSF_open_directory((*(&(FRIACTR_library_directory->Dir))), RIBAOSF_ignore_msg);
+TLLACTR_d = NBCAOSF_open_directory((*A_NILCHECK((&(A_NILCHECK(FRIACTR_library_directory)->Dir)))), RIBAOSF_ignore_msg);
  /* line 330: */
  /* line 331: */
  /* line 332: */
 ULLACTR = (TLLACTR_d==SRBAOSF_null_dirptr);
 if (ULLACTR)
 { 
-(void)(VWIACTR_pwarning(816, A_HARR(VLLACTR,(*(&(FRIACTR_library_directory->Dir))),A68_VC )));
+(void)(VWIACTR_pwarning(816, A_HARR(VLLACTR,(*A_NILCHECK((&(A_NILCHECK(FRIACTR_library_directory)->Dir)))),A68_VC )));
  /* line 333: */
  /* line 334: */
  /* line 335: */
@@ -2213,13 +2213,13 @@ for ( ;; )
  /* line 399: */
  /* line 400: */
 if ( !((MOLACTR_current_map!=SXKACTR_nilmap)) ) break;
-if (A_VC_EQ((*(&(MOLACTR_current_map->Symbol))),JOLACTR_reqd_symbol))
+if (A_VC_EQ((*A_NILCHECK((&(A_NILCHECK(MOLACTR_current_map)->Symbol)))),JOLACTR_reqd_symbol))
 { 
 goto GOLACTR_found;
 } 
  /* line 401: */
  /* line 402: */
-(void)(MOLACTR_current_map = (*(&(MOLACTR_current_map->Next))));
+(void)(MOLACTR_current_map = (*A_NILCHECK((&(A_NILCHECK(MOLACTR_current_map)->Next)))));
 }
  /* line 404: */
 (void)(AYKACTR_debugmessage(1, A_VC_PLUS(JOLACTR_reqd_symbol,OOLACTR)));
@@ -2229,12 +2229,12 @@ POLACTR = UXKACTR_nullid;
 goto EOLACTR;
 GOLACTR_found: A_UNUSED;
  /* line 407: */
-TOLACTR = (*(*(&(MOLACTR_current_map->Module)))) ;
+TOLACTR = (*A_NILCHECK((*A_NILCHECK((&(A_NILCHECK(MOLACTR_current_map)->Module)))))) ;
 BNAAOSF_before( A_VC_PLUS(A_VC_PLUS(JOLACTR_reqd_symbol,ROLACTR),A_HISVEC(SOLACTR,TOLACTR,32,A68_CHAR )), ' ', &UOLACTR );
 (void)(AYKACTR_debugmessage(1, UOLACTR));
  /* line 408: */
  /* line 409: */
-POLACTR = (*(*(&(MOLACTR_current_map->Module))));
+POLACTR = (*A_NILCHECK((*A_NILCHECK((&(A_NILCHECK(MOLACTR_current_map)->Module))))));
 EOLACTR: ;
 } 
 A_PROC_EXIT(lookup_in_table);
@@ -2309,10 +2309,10 @@ CSCAOSF();   /* USE osif */
 IKAAOSF();   /* USE usefulops */
 /* --- Initialise configuration information */
 A_config.source_file = "/home/vak/Project/Algol/Algol-68RS-Source/src/liblookup.a68";
-A_config.translation_time = "Thu Nov  5 21:38:57 2026";
+A_config.translation_time = "Thu Nov  5 21:56:13 2026";
 A_config.ctrans_version = "Ctrans_34.6";
 A_config.name_seed = "MXKACTR (from seed file) ";
-A_config.spec_change_time = "Thu Nov  5 21:38:57 2026";
+A_config.spec_change_time = "Thu Nov  5 21:56:13 2026";
 A_config.arguments = A_config_arguments;
 A_config.environment = A_config_environment;
 A_config.modinfo_files = A_config_modinfo_files;

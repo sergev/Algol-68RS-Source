@@ -998,7 +998,7 @@ for (;JLLAOSF-- >= 0;
 (ILLAOSF_line++
 ) )
 {
-KLLAOSF.data[0] = A_UNITE(LLLAOSF,mode7,7,(*ILLAOSF_line));
+KLLAOSF.data[0] = A_UNITE(LLLAOSF,mode7,7,(*A_NILCHECK(ILLAOSF_line)));
 NLLAOSF.fn.fn_global = PKDAOSF_newline;
 NLLAOSF.nonlocals = A68_NIL;
 KLLAOSF.data[1] = A_UNITE(MLLAOSF,mode12,12,NLLAOSF);
@@ -1090,7 +1090,7 @@ CMLAOSF_vals = BMLAOSF;
  /* line 92: */
  /* line 93: */
 DMLAOSF = 1 ;
-if ((*(&((&A_VINDEX(CMLAOSF_vals,DMLAOSF))->Sort)))!=0)
+if ((*A_NILCHECK((&(A_NILCHECK((&A_VINDEX(CMLAOSF_vals,DMLAOSF)))->Sort))))!=0)
 { 
  /* line 94: */
 FMLAOSF = CMLAOSF_vals.upb -1;
@@ -1099,20 +1099,20 @@ for (;FMLAOSF-- >= 0;
 (EMLAOSF_v++
 ) )
 {
-FEAAOSF_intchars( (*(&(EMLAOSF_v->Sort))), &HMLAOSF );
+FEAAOSF_intchars( (*A_NILCHECK((&(A_NILCHECK(EMLAOSF_v)->Sort)))), &HMLAOSF );
 NRDAOSF_justify( HMLAOSF, 3, &IMLAOSF );
 GMLAOSF.data[0] = A_UNITE(JMLAOSF,mode15,15,IMLAOSF);
  /* line 95: */
 LMLAOSF = ' ' ;
 GMLAOSF.data[1] = A_UNITE(KMLAOSF,mode6,6,LMLAOSF);
  /* line 96: */
-MMLAOSF = (*(&(Env->Analysers))) ;
-NMLAOSF = (*(&(EMLAOSF_v->Sort))) ;
-PMLAOSF = (*(&((&A_VINDEX(MMLAOSF,NMLAOSF))->Description))) ;
+MMLAOSF = (*A_NILCHECK((&(A_NILCHECK(Env)->Analysers)))) ;
+NMLAOSF = (*A_NILCHECK((&(A_NILCHECK(EMLAOSF_v)->Sort)))) ;
+PMLAOSF = (*A_NILCHECK((&(A_NILCHECK((&A_VINDEX(MMLAOSF,NMLAOSF)))->Description)))) ;
 GMLAOSF.data[2] = A_UNITE(OMLAOSF,mode7,7,PMLAOSF);
 RRDAOSF_tab( 20, &QMLAOSF );
 GMLAOSF.data[3] = A_UNITE(RMLAOSF,mode16,16,QMLAOSF);
-TMLAOSF = (*(&(EMLAOSF_v->Value))) ;
+TMLAOSF = (*A_NILCHECK((&(A_NILCHECK(EMLAOSF_v)->Value)))) ;
 GMLAOSF.data[4] = A_UNITE(SMLAOSF,mode7,7,TMLAOSF);
 VMLAOSF.fn.fn_global = PKDAOSF_newline;
 VMLAOSF.nonlocals = A68_NIL;
@@ -1129,7 +1129,7 @@ GMLAOSF.data[5] = A_UNITE(UMLAOSF,mode12,12,VMLAOSF);
 XMLAOSF = YKLAOSF_check_syntax;
 if ( XMLAOSF )
 {{ 
-YMLAOSF_name = (*(&(Command->Name)));
+YMLAOSF_name = (*A_NILCHECK((&(A_NILCHECK(Command)->Name))));
  /* line 103: */
 BNLAOSF = A_VC_NE(YMLAOSF_name,ANLAOSF);
 if ( BNLAOSF )
@@ -1166,7 +1166,7 @@ PNLAOSF = SAIAOSF_continue;
 else
 { 
  /* line 109: */
-QNLAOSF = (*(&(Command->Command))) ;
+QNLAOSF = (*A_NILCHECK((&(A_NILCHECK(Command)->Command)))) ;
 switch ( QNLAOSF.mode )
 { 
 case 1: /* STRUCT(REF MODE26,MODE182)  */
@@ -1197,7 +1197,7 @@ break;
  /* line 118: */
  /* line 119: */
  /* line 122: */
-PNLAOSF = (*(&(Command->Continuation)));
+PNLAOSF = (*A_NILCHECK((&(A_NILCHECK(Command)->Continuation))));
 } 
 } 
 A_PROC_EXIT(call_command);
@@ -1229,10 +1229,10 @@ ZRAAOSF();   /* USE messageproc */
 QMDAOSF();   /* USE putstrings */
 /* --- Initialise configuration information */
 A_config.source_file = "/home/vak/Project/Algol/Algol-68RS-Source/liba68prel/commandcaller.a68";
-A_config.translation_time = "Thu Nov  5 21:38:57 2026";
+A_config.translation_time = "Thu Nov  5 21:56:13 2026";
 A_config.ctrans_version = "Ctrans_34.6";
 A_config.name_seed = "SKLAOSF (from seed file) ";
-A_config.spec_change_time = "Thu Nov  5 21:38:57 2026";
+A_config.spec_change_time = "Thu Nov  5 21:56:13 2026";
 A_config.arguments = A_config_arguments;
 A_config.environment = A_config_environment;
 A_config.modinfo_files = A_config_modinfo_files;

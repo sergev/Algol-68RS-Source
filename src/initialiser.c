@@ -1,4 +1,4 @@
-/* UNAME:ZYZACTR */
+/* UNAME:LZZACTR */
 #include <algol68/Asupport.h>
 
 A_PROCEDURE(A68_VOID ,A68t31,(A68_VC ,A68_BOOL ),(A68_VC ,A68_BOOL ,void *));
@@ -833,7 +833,7 @@ static A68_VC  A_configinfo;
 
 
 /* --- Imports from identifiers --- */
-extern A68_VOID  YYWACTR_initialiseidentifiers(void);
+extern A68_VOID  KZWACTR_initialiseidentifiers(void);
 /* --- End of imports from identifiers --- */
 
 
@@ -843,13 +843,13 @@ extern A68_VOID  FVKACTR_initialiseids(A68_INT ,A68_INT ,A68_INT ,A68_INT ,struc
 
 
 /* --- Imports from tracer --- */
-extern A68_51  XGVACTR_calltrace;
-extern A68_VOID  FBZACTR_trace(struct A68t64 ,struct A68t52 *,A68_BOOL );
+extern A68_51  JHVACTR_calltrace;
+extern A68_VOID  RBZACTR_trace(struct A68t64 ,struct A68t52 *,A68_BOOL );
 /* --- End of imports from tracer --- */
 
 
 /* --- Imports from evaluator --- */
-extern A68_VOID  IMVACTR_initialiseevaluator(void);
+extern A68_VOID  UMVACTR_initialiseevaluator(void);
 /* --- End of imports from evaluator --- */
 
 
@@ -862,56 +862,56 @@ extern A68_VOID  NJJACTR_initialisetrace(void);
 extern void BAAALIB(void);   /* a68config */
 extern void UAAACTR(void);   /* incimperatives */
 extern void GKJACTR(void);   /* incvalue */
-extern void MMVACTR(void);   /* identifiers */
+extern void YMVACTR(void);   /* identifiers */
 extern void PPKACTR(void);   /* idtable */
-extern void NXYACTR(void);   /* tracer */
-extern void JGVACTR(void);   /* evaluator */
+extern void ZXYACTR(void);   /* tracer */
+extern void VGVACTR(void);   /* evaluator */
 extern void HPIACTR(void);   /* environment */
 /* --- end of DECS initialisation functions --- */
-static A68_156   DZZACTR = {"$Id: initialiser.a68,v 1.1.1.1 2001-05-07 10:16:10 sian Exp $"}; 
-A_GISVEC(A68_VC ,EZZACTR,DZZACTR,61)
-static A68_64 * FZZACTR_traceimperative A_UNUSED;
+static A68_156   PZZACTR = {"$Id: initialiser.a68,v 1.1.1.1 2001-05-07 10:16:10 sian Exp $"}; 
+A_GISVEC(A68_VC ,QZZACTR,PZZACTR,61)
+static A68_64 * RZZACTR_traceimperative A_UNUSED;
 
-A68_VOID  JZZACTR_initialise(A68_143 * Xsizes, A68_64 * Currentimperative, A68_87  Keptdecnos);
+A68_VOID  VZZACTR_initialise(A68_143 * Xsizes, A68_64 * Currentimperative, A68_87  Keptdecnos);
 
-A_STATIC A68_VOID  MZZACTR_anonymous(A68_52 * Root, A68_BOOL  Aftereval);
+A_STATIC A68_VOID  YZZACTR_anonymous(A68_52 * Root, A68_BOOL  Aftereval);
 
-A_STATIC A68_VOID  MZZACTR_anonymous(A68_52 * Root, A68_BOOL  Aftereval)
+A_STATIC A68_VOID  YZZACTR_anonymous(A68_52 * Root, A68_BOOL  Aftereval)
 { 
  /* line 55: */
-(void)(FBZACTR_trace((*FZZACTR_traceimperative), Root, Aftereval));
+(void)(RBZACTR_trace((*A_NILCHECK(RZZACTR_traceimperative)), Root, Aftereval));
 return;
 } 
 #undef NL
  /* line 51: */
 
-A68_VOID  JZZACTR_initialise(A68_143 * Xsizes, A68_64 * Currentimperative, A68_87  Keptdecnos)
+A68_VOID  VZZACTR_initialise(A68_143 * Xsizes, A68_64 * Currentimperative, A68_87  Keptdecnos)
 { 
-A68_51  NZZACTR;  /* procedure value */
+A68_51  ZZZACTR;  /* procedure value */
 A_PROC_ENTRY(initialise);
  /* line 52: */
  /* line 53: */
 { 
-FZZACTR_traceimperative = Currentimperative;
+RZZACTR_traceimperative = Currentimperative;
  /* line 54: */
-NZZACTR.fn.fn_global = MZZACTR_anonymous;
-NZZACTR.nonlocals = A68_NIL;
-XGVACTR_calltrace = NZZACTR;
+ZZZACTR.fn.fn_global = YZZACTR_anonymous;
+ZZZACTR.nonlocals = A68_NIL;
+JHVACTR_calltrace = ZZZACTR;
  /* line 57: */
 (void)(NJJACTR_initialisetrace());
  /* line 58: */
-(void)(IMVACTR_initialiseevaluator());
+(void)(UMVACTR_initialiseevaluator());
  /* line 59: */
  /* line 60: */
  /* line 61: */
  /* line 62: */
  /* line 63: */
  /* line 65: */
-(void)(FVKACTR_initialiseids((*(&(Xsizes->Nodecnos))), (*(&(Xsizes->Nolibinds))), (*(&(Xsizes->Nolabs))), (*(&(Xsizes->Norden))), Keptdecnos));
+(void)(FVKACTR_initialiseids((*A_NILCHECK((&(A_NILCHECK(Xsizes)->Nodecnos)))), (*A_NILCHECK((&(A_NILCHECK(Xsizes)->Nolibinds)))), (*A_NILCHECK((&(A_NILCHECK(Xsizes)->Nolabs)))), (*A_NILCHECK((&(A_NILCHECK(Xsizes)->Norden)))), Keptdecnos));
  /* line 66: */
  /* line 67: */
  /* line 69: */
-(void)(YYWACTR_initialiseidentifiers());
+(void)(KZWACTR_initialiseidentifiers());
 } 
 A_PROC_EXIT(initialise);
 return;
@@ -920,7 +920,7 @@ return;
  /* line 1: */
  /* line 2: */
  /* line 4: */
-void AZZACTR(void)   /* initialise DECS initialiser */
+void MZZACTR(void)   /* initialise DECS initialiser */
 { 
 static A68_BOOL A_invoked = A68_FALSE;
 
@@ -935,22 +935,22 @@ A_invoked = A68_TRUE;
 BAAALIB();   /* USE a68config */
 UAAACTR();   /* USE incimperatives */
 GKJACTR();   /* USE incvalue */
-MMVACTR();   /* USE identifiers */
+YMVACTR();   /* USE identifiers */
 PPKACTR();   /* USE idtable */
-NXYACTR();   /* USE tracer */
-JGVACTR();   /* USE evaluator */
+ZXYACTR();   /* USE tracer */
+VGVACTR();   /* USE evaluator */
 HPIACTR();   /* USE environment */
 /* --- Initialise configuration information */
 A_config.source_file = "/home/vak/Project/Algol/Algol-68RS-Source/src/initialiser.a68";
-A_config.translation_time = "Thu Nov  5 21:38:58 2026";
+A_config.translation_time = "Thu Nov  5 21:56:13 2026";
 A_config.ctrans_version = "Ctrans_34.6";
-A_config.name_seed = "ZYZACTR (from seed file) ";
-A_config.spec_change_time = "Thu Nov  5 21:38:58 2026";
+A_config.name_seed = "LZZACTR (from seed file) ";
+A_config.spec_change_time = "Thu Nov  5 21:56:13 2026";
 A_config.arguments = A_config_arguments;
 A_config.environment = A_config_environment;
 A_config.modinfo_files = A_config_modinfo_files;
 A_PROC_ENTRY(DECS initialiser);
-(void)(UEAALIB_a68config(LGAALIB_configinfo, EZZACTR));
+(void)(UEAALIB_a68config(LGAALIB_configinfo, QZZACTR));
  /* line 48: */
  /* line 50: */
  /* line 71: */

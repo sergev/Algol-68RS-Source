@@ -696,10 +696,10 @@ ZRAAOSF();   /* USE messageproc */
 BCAAOSF();   /* USE strops */
 /* --- Initialise configuration information */
 A_config.source_file = "/home/vak/Project/Algol/Algol-68RS-Source/liba68prel/testmode.a68";
-A_config.translation_time = "Thu Nov  5 21:38:57 2026";
+A_config.translation_time = "Thu Nov  5 21:56:13 2026";
 A_config.ctrans_version = "Ctrans_34.6";
 A_config.name_seed = "TBHAOSF (from seed file) ";
-A_config.spec_change_time = "Thu Nov  5 21:38:57 2026";
+A_config.spec_change_time = "Thu Nov  5 21:56:13 2026";
 A_config.arguments = A_config_arguments;
 A_config.environment = A_config_environment;
 A_config.modinfo_files = A_config_modinfo_files;
@@ -719,36 +719,36 @@ ZBHAOSF.data[4] = JCHAOSF;
 LCHAOSF_testmode_options = A_HISVEC(KCHAOSF,ZBHAOSF,5,A68_VC );
  /* line 59: */
 { 
-NCHAOSF = (&((&MCHAOSF_o)->Options)) ;
-(*NCHAOSF) = 0X1U;
+NCHAOSF = (&(A_NILCHECK((&MCHAOSF_o))->Options)) ;
+(*A_NILCHECK(NCHAOSF)) = 0X1U;
 OCHAOSF = MCHAOSF_o;
 } 
 PCHAOSF_testmode_noerror = OCHAOSF;
  /* line 60: */
 { 
-RCHAOSF = (&((&QCHAOSF_o)->Options)) ;
-(*RCHAOSF) = 0X2U;
+RCHAOSF = (&(A_NILCHECK((&QCHAOSF_o))->Options)) ;
+(*A_NILCHECK(RCHAOSF)) = 0X2U;
 SCHAOSF = QCHAOSF_o;
 } 
 TCHAOSF_testmode_noversions = SCHAOSF;
  /* line 61: */
 { 
-VCHAOSF = (&((&UCHAOSF_o)->Options)) ;
-(*VCHAOSF) = 0X4U;
+VCHAOSF = (&(A_NILCHECK((&UCHAOSF_o))->Options)) ;
+(*A_NILCHECK(VCHAOSF)) = 0X4U;
 WCHAOSF = UCHAOSF_o;
 } 
 XCHAOSF_testmode_nodates = WCHAOSF;
  /* line 62: */
 { 
-ZCHAOSF = (&((&YCHAOSF_o)->Options)) ;
-(*ZCHAOSF) = 0X8U;
+ZCHAOSF = (&(A_NILCHECK((&YCHAOSF_o))->Options)) ;
+(*A_NILCHECK(ZCHAOSF)) = 0X8U;
 ADHAOSF = YCHAOSF_o;
 } 
 BDHAOSF_testmode_nofilenames = ADHAOSF;
  /* line 63: */
 { 
-DDHAOSF = (&((&CDHAOSF_o)->Options)) ;
-(*DDHAOSF) = 0X10U;
+DDHAOSF = (&(A_NILCHECK((&CDHAOSF_o))->Options)) ;
+(*A_NILCHECK(DDHAOSF)) = 0X10U;
 EDHAOSF = CDHAOSF_o;
 } 
 FDHAOSF_testmode_nogarbage = EDHAOSF;

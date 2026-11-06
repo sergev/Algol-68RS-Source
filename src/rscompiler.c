@@ -3851,7 +3851,7 @@ A_STATIC A68_VOID  CJDACTR_generator(A68_BOOL  AJDACTR_anonymous, A68_198  *Retu
 A68_198  EJDACTR;  /* clause result */
 A68_198  FJDACTR;  /* OPERATORS - dynamic generator */
 { 
-FJDACTR.upb = ((*NL(WHDACTR_test_flex)).upb+100) ;
+FJDACTR.upb = ((*A_NILCHECK(NL(WHDACTR_test_flex))).upb+100) ;
 ( AJDACTR_anonymous? A_VLOC(A68_70 ,FJDACTR): A_VHEAP(A68_70 ,FJDACTR) );
 EJDACTR = FJDACTR;
 } 
@@ -3872,10 +3872,10 @@ GOEACTR_m = A_CALLPROC(NL(JMEACTR_rw),(),((NL(JMEACTR_rw)).nonlocals));
 HOEACTR_n = (A68_INT )(A68_BITS )((A68_BITS )GOEACTR_m&LQAACTR_decsmask);
  /* line 5290: */
  /* line 5291: */
-if (HOEACTR_n>=(*NL(WNEACTR_firstmode)))
+if (HOEACTR_n>=(*A_NILCHECK(NL(WNEACTR_firstmode))))
 { 
  /* line 5292: */
-IOEACTR = ((GOEACTR_m-100)+(*NL(OKEACTR_basemode)));
+IOEACTR = ((GOEACTR_m-100)+(*A_NILCHECK(NL(OKEACTR_basemode))));
 } 
 else
 { 
@@ -3917,13 +3917,13 @@ QOEACTR += 1 )
 ROEACTR.Mode = A_CALLPROC(NL(DOEACTR_rm),(),((NL(DOEACTR_rm)).nonlocals));
 ROEACTR.Rest = (A68_54 *)A68_NIL;
 SOEACTR = A_HEAP(A68_54 ) ;
-(void)((*SOEACTR) = ROEACTR) ;
-(*OOEACTR_rrml) = SOEACTR;
+(void)((*A_NILCHECK(SOEACTR)) = ROEACTR) ;
+(*A_NILCHECK(OOEACTR_rrml)) = SOEACTR;
  /* line 5303: */
-(void)(A_CALLPROC(NL(ALEACTR_remember),((&((*OOEACTR_rrml)->Mode))),((&((*OOEACTR_rrml)->Mode)),(NL(ALEACTR_remember)).nonlocals)));
+(void)(A_CALLPROC(NL(ALEACTR_remember),((&(A_NILCHECK((*A_NILCHECK(OOEACTR_rrml)))->Mode))),((&(A_NILCHECK((*A_NILCHECK(OOEACTR_rrml)))->Mode)),(NL(ALEACTR_remember)).nonlocals)));
  /* line 5304: */
  /* line 5305: */
-(void)(OOEACTR_rrml = (&((*OOEACTR_rrml)->Rest)));
+(void)(OOEACTR_rrml = (&(A_NILCHECK((*A_NILCHECK(OOEACTR_rrml)))->Rest)));
 }
  /* line 5306: */
  /* line 5307: */
@@ -3989,9 +3989,9 @@ if (ISFACTR_j>0)
 } 
  /* line 6822: */
  /* line 6823: */
-MSFACTR = (*NL(NSAACTR_find))+=1 ;
+MSFACTR = (*A_NILCHECK(NL(NSAACTR_find)))+=1 ;
 NSFACTR = (&A_VINDEX(NL(JSAACTR_globfbuff),MSFACTR)) ;
-(void)((*NSFACTR) = (A68_SSBITS)(JSFACTR_k+(A68_INT)(unsigned char)'0'));
+(void)((*A_NILCHECK(NSFACTR)) = (A68_SSBITS)(JSFACTR_k+(A68_INT)(unsigned char)'0'));
 } 
 A_PROC_EXIT(outint);
 return;
@@ -4007,16 +4007,16 @@ A68_INT  TSFACTR;  /* YIELD */
 A68_CHAR * USFACTR;  /* YIELD */
 A_PROC_ENTRY(outcount);
 { 
-RSFACTR = (*NL(NSAACTR_find))+=1 ;
+RSFACTR = (*A_NILCHECK(NL(NSAACTR_find)))+=1 ;
 SSFACTR = (&A_VINDEX(NL(JSAACTR_globfbuff),RSFACTR)) ;
-(*SSFACTR) = '(';
+(*A_NILCHECK(SSFACTR)) = '(';
  /* line 6827: */
-(void)(A_CALLPROC(NL(FSFACTR_outint),((*NL(VRFACTR_cccount))+=1),((*NL(VRFACTR_cccount))+=1,(NL(FSFACTR_outint)).nonlocals)));
+(void)(A_CALLPROC(NL(FSFACTR_outint),((*A_NILCHECK(NL(VRFACTR_cccount)))+=1),((*A_NILCHECK(NL(VRFACTR_cccount)))+=1,(NL(FSFACTR_outint)).nonlocals)));
  /* line 6828: */
  /* line 6829: */
-TSFACTR = (*NL(NSAACTR_find))+=1 ;
+TSFACTR = (*A_NILCHECK(NL(NSAACTR_find)))+=1 ;
 USFACTR = (&A_VINDEX(NL(JSAACTR_globfbuff),TSFACTR)) ;
-(*USFACTR) = ')';
+(*A_NILCHECK(USFACTR)) = ')';
 } 
 A_PROC_EXIT(outcount);
 return;
@@ -4029,7 +4029,7 @@ A_STATIC A68_VOID  CGBACTR_generator(A68_BOOL  AGBACTR_anonymous, A68_100  *Retu
 A68_100  EGBACTR;  /* clause result */
 A68_100  FGBACTR;  /* OPERATORS - dynamic generator */
 { 
-FGBACTR.upb = (*NL(AFBACTR_upbofsidstack))+=ZEBACTR_sidstackstep ;
+FGBACTR.upb = (*A_NILCHECK(NL(AFBACTR_upbofsidstack)))+=ZEBACTR_sidstackstep ;
 ( AGBACTR_anonymous? A_VLOC(A68_INT ,FGBACTR): A_VHEAP(A68_INT ,FGBACTR) );
 EGBACTR = FGBACTR;
 } 
@@ -4098,7 +4098,7 @@ A_PROC_ENTRY(outid);
  /* line 2068: */
 { 
  /* line 2069: */
-MACACTR_i = (*NL(EACACTR_mind));
+MACACTR_i = (*A_NILCHECK(NL(EACACTR_mind)));
  /* line 2070: */
  /* line 2071: */
 OACACTR = VDAACTR_maxid;
@@ -4109,12 +4109,12 @@ NACACTR_i += 1 )
  /* line 2072: */
 QACACTR = A_HISVEC(PACACTR,Id,32,A68_CHAR ) ;
 if ( !(((LACACTR_c = A_VINDEX(QACACTR,NACACTR_i))!=' ')) ) break;
-RACACTR = (*NL(EACACTR_mind))+=1 ;
+RACACTR = (*A_NILCHECK(NL(EACACTR_mind)))+=1 ;
 SACACTR = (&A_VINDEX(NL(CACACTR_m),RACACTR)) ;
-(*SACACTR) = LACACTR_c;
+(*A_NILCHECK(SACACTR)) = LACACTR_c;
 }
  /* line 2073: */
-if (MACACTR_i==(*NL(EACACTR_mind)))
+if (MACACTR_i==(*A_NILCHECK(NL(EACACTR_mind))))
 { 
  /* line 2074: */
 (void)(siglongjmp(NL(SZBACTR_endf).label,1));
@@ -4142,7 +4142,7 @@ A_PROC_ENTRY(outboldid);
  /* line 2077: */
 { 
  /* line 2079: */
-YACACTR_i = (*NL(EACACTR_mind));
+YACACTR_i = (*A_NILCHECK(NL(EACACTR_mind)));
  /* line 2080: */
  /* line 2081: */
 ABCACTR = VDAACTR_maxid;
@@ -4169,12 +4169,12 @@ else
  /* line 2086: */
 EBCACTR = XACACTR_c;
 } 
-FBCACTR = (*NL(EACACTR_mind))+=1 ;
+FBCACTR = (*A_NILCHECK(NL(EACACTR_mind)))+=1 ;
 GBCACTR = (&A_VINDEX(NL(CACACTR_m),FBCACTR)) ;
-(*GBCACTR) = EBCACTR;
+(*A_NILCHECK(GBCACTR)) = EBCACTR;
 }
  /* line 2087: */
-if (YACACTR_i==(*NL(EACACTR_mind)))
+if (YACACTR_i==(*A_NILCHECK(NL(EACACTR_mind))))
 { 
 (void)(siglongjmp(NL(SZBACTR_endf).label,1));
 } 
@@ -4198,11 +4198,11 @@ A_PROC_ENTRY(outchars);
 { 
 LBCACTR_u = V.upb;
  /* line 2095: */
-NBCACTR = A_VTRIM(MBCACTR,(NL(CACACTR_m)),A_VTSCRIPT(&(MBCACTR.upb),(NL(CACACTR_m)).upb,((*NL(EACACTR_mind))+1),((*NL(EACACTR_mind))+LBCACTR_u))) ;
+NBCACTR = A_VTRIM(MBCACTR,(NL(CACACTR_m)),A_VTSCRIPT(&(MBCACTR.upb),(NL(CACACTR_m)).upb,((*A_NILCHECK(NL(EACACTR_mind)))+1),((*A_NILCHECK(NL(EACACTR_mind)))+LBCACTR_u))) ;
 (void)(A_VASSIGN2(V,NBCACTR,A68_CHAR ));
  /* line 2096: */
  /* line 2097: */
-(*NL(EACACTR_mind))+=LBCACTR_u;
+(*A_NILCHECK(NL(EACACTR_mind)))+=LBCACTR_u;
 } 
 A_PROC_EXIT(outchars);
 return;
@@ -4225,11 +4225,11 @@ TBCACTR_v = SBCACTR;
  /* line 2101: */
 UBCACTR_u = TBCACTR_v.upb;
  /* line 2102: */
-WBCACTR = A_VTRIM(VBCACTR,(NL(CACACTR_m)),A_VTSCRIPT(&(VBCACTR.upb),(NL(CACACTR_m)).upb,((*NL(EACACTR_mind))+1),((*NL(EACACTR_mind))+UBCACTR_u))) ;
+WBCACTR = A_VTRIM(VBCACTR,(NL(CACACTR_m)),A_VTSCRIPT(&(VBCACTR.upb),(NL(CACACTR_m)).upb,((*A_NILCHECK(NL(EACACTR_mind)))+1),((*A_NILCHECK(NL(EACACTR_mind)))+UBCACTR_u))) ;
 (void)(A_VASSIGN2(TBCACTR_v,WBCACTR,A68_CHAR ));
  /* line 2103: */
  /* line 2104: */
-(*NL(EACACTR_mind))+=UBCACTR_u;
+(*A_NILCHECK(NL(EACACTR_mind)))+=UBCACTR_u;
 } 
 A_PROC_EXIT(outmess);
 return;
@@ -4261,9 +4261,9 @@ if (BCCACTR_j>0)
 } 
  /* line 2111: */
  /* line 2112: */
-FCCACTR = (*NL(EACACTR_mind))+=1 ;
+FCCACTR = (*A_NILCHECK(NL(EACACTR_mind)))+=1 ;
 GCCACTR = (&A_VINDEX(NL(CACACTR_m),FCCACTR)) ;
-(void)((*GCCACTR) = (A68_SSBITS)(CCCACTR_k+(A68_INT)(unsigned char)'0'));
+(void)((*A_NILCHECK(GCCACTR)) = (A68_SSBITS)(CCCACTR_k+(A68_INT)(unsigned char)'0'));
 } 
 A_PROC_EXIT(outint);
 return;
@@ -4326,9 +4326,9 @@ A_PROC_ENTRY(outmode);
  /* line 2122: */
 if (Mode<0)
 { 
-SCCACTR = (*NL(EACACTR_mind))+=1 ;
+SCCACTR = (*A_NILCHECK(NL(EACACTR_mind)))+=1 ;
 TCCACTR = (&A_VINDEX(NL(CACACTR_m),SCCACTR)) ;
-(*TCCACTR) = '?';
+(*A_NILCHECK(TCCACTR)) = '?';
  /* line 2123: */
  /* line 2124: */
 goto NCCACTR_out;
@@ -4347,7 +4347,7 @@ switch ( UCCACTR_j )
 { 
 case 1: 
  /* line 2131: */
-VCCACTR = (*(&((*NL(QYAACTR_globcurrent))->Indics)));
+VCCACTR = (*A_NILCHECK((&(A_NILCHECK((*A_NILCHECK(NL(QYAACTR_globcurrent))))->Indics))));
 break;
 case 2: 
 VCCACTR = NL(MABACTR_libinds);
@@ -4363,23 +4363,23 @@ for ( WCCACTR_i = 1;
 WCCACTR_i <= 64;
 WCCACTR_i += 1 )
 { 
-(void)(OCCACTR_ri = (*(&A_VINDEX(RCCACTR_rri,WCCACTR_i))));
+(void)(OCCACTR_ri = (*A_NILCHECK((&A_VINDEX(RCCACTR_rri,WCCACTR_i)))));
  /* line 2134: */
 for ( ;; )
 { 
  /* line 2135: */
 if ( !((OCCACTR_ri!=SQAACTR_nilind)) ) break;
  /* line 2136: */
-XCCACTR = (*(&(OCCACTR_ri->U))) ;
+XCCACTR = (*A_NILCHECK((&(A_NILCHECK(OCCACTR_ri)->U)))) ;
 switch ( XCCACTR.mode )
 { 
 case 2: /* REF STRUCT(INT,INT,REF MODE53)  */
 YCCACTR_ra = (XCCACTR.data.mode2);
  /* line 2137: */
  /* line 2138: */
-if ((*(&(YCCACTR_ra->Mode)))==Mode)
+if ((*A_NILCHECK((&(A_NILCHECK(YCCACTR_ra)->Mode))))==Mode)
 { 
-(void)(A_CALLPROC(NL(UACACTR_outboldid),((*(&(OCCACTR_ri->Name)))),((*(&(OCCACTR_ri->Name))),(NL(UACACTR_outboldid)).nonlocals)));
+(void)(A_CALLPROC(NL(UACACTR_outboldid),((*A_NILCHECK((&(A_NILCHECK(OCCACTR_ri)->Name))))),((*A_NILCHECK((&(A_NILCHECK(OCCACTR_ri)->Name)))),(NL(UACACTR_outboldid)).nonlocals)));
  /* line 2139: */
  /* line 2140: */
  /* line 2141: */
@@ -4393,7 +4393,7 @@ break;
 } 
  /* line 2143: */
  /* line 2144: */
-(void)(OCCACTR_ri = (*(&(OCCACTR_ri->Rest))));
+(void)(OCCACTR_ri = (*A_NILCHECK((&(A_NILCHECK(OCCACTR_ri)->Rest)))));
 }
  /* line 2145: */
 }
@@ -4413,7 +4413,7 @@ if (Mode>KQAACTR_refmark)
 else
 { 
  /* line 2153: */
-ZCCACTR = (*(&A_VINDEX(NL(KUAACTR_modes),Mode))) ;
+ZCCACTR = (*A_NILCHECK((&A_VINDEX(NL(KUAACTR_modes),Mode)))) ;
 switch ( ZCCACTR.mode )
 { 
 case 1: /* INT */
@@ -4452,7 +4452,7 @@ CDCACTR_prc = (ZCCACTR.data.mode6);
  /* line 2165: */
  /* line 2166: */
  /* line 2167: */
-(void)(A_CALLPROC(NL(JCCACTR_outmode),((*(&(CDCACTR_prc->Deproc))), High),((*(&(CDCACTR_prc->Deproc))), High,(NL(JCCACTR_outmode)).nonlocals)));
+(void)(A_CALLPROC(NL(JCCACTR_outmode),((*A_NILCHECK((&(A_NILCHECK(CDCACTR_prc)->Deproc)))), High),((*A_NILCHECK((&(A_NILCHECK(CDCACTR_prc)->Deproc)))), High,(NL(JCCACTR_outmode)).nonlocals)));
 } 
 break;
 case 2: /* REF STRUCT(INT,REF MODE54)  */
@@ -4464,19 +4464,19 @@ DDCACTR_u = (ZCCACTR.data.mode2);
  /* line 2170: */
 if (High)
 { 
-(void)(PCCACTR_ml = (*(&(DDCACTR_u->Modelist))));
+(void)(PCCACTR_ml = (*A_NILCHECK((&(A_NILCHECK(DDCACTR_u)->Modelist)))));
  /* line 2171: */
-(void)(A_CALLPROC(NL(JCCACTR_outmode),((*(&(PCCACTR_ml->Mode))), A68_FALSE),((*(&(PCCACTR_ml->Mode))), A68_FALSE,(NL(JCCACTR_outmode)).nonlocals)));
+(void)(A_CALLPROC(NL(JCCACTR_outmode),((*A_NILCHECK((&(A_NILCHECK(PCCACTR_ml)->Mode)))), A68_FALSE),((*A_NILCHECK((&(A_NILCHECK(PCCACTR_ml)->Mode)))), A68_FALSE,(NL(JCCACTR_outmode)).nonlocals)));
  /* line 2172: */
  /* line 2173: */
-if ((PCCACTR_ml = (*(&(PCCACTR_ml->Rest))))!=OQAACTR_nilml)
+if ((PCCACTR_ml = (*A_NILCHECK((&(A_NILCHECK(PCCACTR_ml)->Rest)))))!=OQAACTR_nilml)
 { 
 (void)(A_CALLPROC(NL(IBCACTR_outchars),(FDCACTR),(FDCACTR,(NL(IBCACTR_outchars)).nonlocals)));
  /* line 2174: */
-(void)(A_CALLPROC(NL(JCCACTR_outmode),((*(&(PCCACTR_ml->Mode))), A68_FALSE),((*(&(PCCACTR_ml->Mode))), A68_FALSE,(NL(JCCACTR_outmode)).nonlocals)));
+(void)(A_CALLPROC(NL(JCCACTR_outmode),((*A_NILCHECK((&(A_NILCHECK(PCCACTR_ml)->Mode)))), A68_FALSE),((*A_NILCHECK((&(A_NILCHECK(PCCACTR_ml)->Mode)))), A68_FALSE,(NL(JCCACTR_outmode)).nonlocals)));
  /* line 2175: */
  /* line 2176: */
-if ((*(&(PCCACTR_ml->Rest)))!=OQAACTR_nilml)
+if ((*A_NILCHECK((&(A_NILCHECK(PCCACTR_ml)->Rest))))!=OQAACTR_nilml)
 { 
  /* line 2177: */
  /* line 2178: */
@@ -4488,9 +4488,9 @@ if ((*(&(PCCACTR_ml->Rest)))!=OQAACTR_nilml)
  /* line 2180: */
  /* line 2181: */
  /* line 2183: */
-GDCACTR = (*NL(EACACTR_mind))+=1 ;
+GDCACTR = (*A_NILCHECK(NL(EACACTR_mind)))+=1 ;
 HDCACTR = (&A_VINDEX(NL(CACACTR_m),GDCACTR)) ;
-(*HDCACTR) = ')';
+(*A_NILCHECK(HDCACTR)) = ')';
 } 
 break;
 case 3: /* REF STRUCT(INT,REF MODE54)  */
@@ -4502,19 +4502,19 @@ IDCACTR_pp = (ZCCACTR.data.mode3);
  /* line 2186: */
 if (High)
 { 
-(void)(PCCACTR_ml = (*(&(IDCACTR_pp->Pars))));
+(void)(PCCACTR_ml = (*A_NILCHECK((&(A_NILCHECK(IDCACTR_pp)->Pars)))));
  /* line 2187: */
-(void)(A_CALLPROC(NL(JCCACTR_outmode),((*(&(PCCACTR_ml->Mode))), A68_FALSE),((*(&(PCCACTR_ml->Mode))), A68_FALSE,(NL(JCCACTR_outmode)).nonlocals)));
+(void)(A_CALLPROC(NL(JCCACTR_outmode),((*A_NILCHECK((&(A_NILCHECK(PCCACTR_ml)->Mode)))), A68_FALSE),((*A_NILCHECK((&(A_NILCHECK(PCCACTR_ml)->Mode)))), A68_FALSE,(NL(JCCACTR_outmode)).nonlocals)));
  /* line 2188: */
  /* line 2189: */
-if ((PCCACTR_ml = (*(&(PCCACTR_ml->Rest))))!=OQAACTR_nilml)
+if ((PCCACTR_ml = (*A_NILCHECK((&(A_NILCHECK(PCCACTR_ml)->Rest)))))!=OQAACTR_nilml)
 { 
 (void)(A_CALLPROC(NL(IBCACTR_outchars),(KDCACTR),(KDCACTR,(NL(IBCACTR_outchars)).nonlocals)));
  /* line 2190: */
-(void)(A_CALLPROC(NL(JCCACTR_outmode),((*(&(PCCACTR_ml->Mode))), A68_FALSE),((*(&(PCCACTR_ml->Mode))), A68_FALSE,(NL(JCCACTR_outmode)).nonlocals)));
+(void)(A_CALLPROC(NL(JCCACTR_outmode),((*A_NILCHECK((&(A_NILCHECK(PCCACTR_ml)->Mode)))), A68_FALSE),((*A_NILCHECK((&(A_NILCHECK(PCCACTR_ml)->Mode)))), A68_FALSE,(NL(JCCACTR_outmode)).nonlocals)));
  /* line 2191: */
  /* line 2192: */
-if ((*(&(PCCACTR_ml->Rest)))!=OQAACTR_nilml)
+if ((*A_NILCHECK((&(A_NILCHECK(PCCACTR_ml)->Rest))))!=OQAACTR_nilml)
 { 
  /* line 2193: */
  /* line 2194: */
@@ -4524,13 +4524,13 @@ if ((*(&(PCCACTR_ml->Rest)))!=OQAACTR_nilml)
 } 
 } 
  /* line 2196: */
-LDCACTR = (*NL(EACACTR_mind))+=1 ;
+LDCACTR = (*A_NILCHECK(NL(EACACTR_mind)))+=1 ;
 MDCACTR = (&A_VINDEX(NL(CACACTR_m),LDCACTR)) ;
-(*MDCACTR) = ')';
+(*A_NILCHECK(MDCACTR)) = ')';
  /* line 2197: */
  /* line 2198: */
  /* line 2199: */
-(void)(A_CALLPROC(NL(JCCACTR_outmode),((*(&(IDCACTR_pp->Deproc))), A68_FALSE),((*(&(IDCACTR_pp->Deproc))), A68_FALSE,(NL(JCCACTR_outmode)).nonlocals)));
+(void)(A_CALLPROC(NL(JCCACTR_outmode),((*A_NILCHECK((&(A_NILCHECK(IDCACTR_pp)->Deproc)))), A68_FALSE),((*A_NILCHECK((&(A_NILCHECK(IDCACTR_pp)->Deproc)))), A68_FALSE,(NL(JCCACTR_outmode)).nonlocals)));
 } 
 break;
 case 4: /* REF STRUCT(INT,INT,REF MODE58)  */
@@ -4549,31 +4549,31 @@ else
  /* line 2204: */
 if (High)
 { 
-(void)(QCCACTR_sl = (*(&(NDCACTR_s->Sels))));
+(void)(QCCACTR_sl = (*A_NILCHECK((&(A_NILCHECK(NDCACTR_s)->Sels)))));
  /* line 2205: */
-(void)(A_CALLPROC(NL(JCCACTR_outmode),((*(&(QCCACTR_sl->Mode))), A68_FALSE),((*(&(QCCACTR_sl->Mode))), A68_FALSE,(NL(JCCACTR_outmode)).nonlocals)));
+(void)(A_CALLPROC(NL(JCCACTR_outmode),((*A_NILCHECK((&(A_NILCHECK(QCCACTR_sl)->Mode)))), A68_FALSE),((*A_NILCHECK((&(A_NILCHECK(QCCACTR_sl)->Mode)))), A68_FALSE,(NL(JCCACTR_outmode)).nonlocals)));
  /* line 2206: */
-ODCACTR = (*NL(EACACTR_mind))+=1 ;
+ODCACTR = (*A_NILCHECK(NL(EACACTR_mind)))+=1 ;
 PDCACTR = (&A_VINDEX(NL(CACACTR_m),ODCACTR)) ;
-(*PDCACTR) = ' ';
+(*A_NILCHECK(PDCACTR)) = ' ';
  /* line 2207: */
-(void)(A_CALLPROC(NL(IACACTR_outid),((*(&(QCCACTR_sl->Name)))),((*(&(QCCACTR_sl->Name))),(NL(IACACTR_outid)).nonlocals)));
+(void)(A_CALLPROC(NL(IACACTR_outid),((*A_NILCHECK((&(A_NILCHECK(QCCACTR_sl)->Name))))),((*A_NILCHECK((&(A_NILCHECK(QCCACTR_sl)->Name)))),(NL(IACACTR_outid)).nonlocals)));
  /* line 2208: */
  /* line 2209: */
-if ((QCCACTR_sl = (*(&(QCCACTR_sl->Rest))))!=RQAACTR_nilsel)
+if ((QCCACTR_sl = (*A_NILCHECK((&(A_NILCHECK(QCCACTR_sl)->Rest)))))!=RQAACTR_nilsel)
 { 
 (void)(A_CALLPROC(NL(IBCACTR_outchars),(RDCACTR),(RDCACTR,(NL(IBCACTR_outchars)).nonlocals)));
  /* line 2210: */
-(void)(A_CALLPROC(NL(JCCACTR_outmode),((*(&(QCCACTR_sl->Mode))), A68_FALSE),((*(&(QCCACTR_sl->Mode))), A68_FALSE,(NL(JCCACTR_outmode)).nonlocals)));
+(void)(A_CALLPROC(NL(JCCACTR_outmode),((*A_NILCHECK((&(A_NILCHECK(QCCACTR_sl)->Mode)))), A68_FALSE),((*A_NILCHECK((&(A_NILCHECK(QCCACTR_sl)->Mode)))), A68_FALSE,(NL(JCCACTR_outmode)).nonlocals)));
  /* line 2211: */
-SDCACTR = (*NL(EACACTR_mind))+=1 ;
+SDCACTR = (*A_NILCHECK(NL(EACACTR_mind)))+=1 ;
 TDCACTR = (&A_VINDEX(NL(CACACTR_m),SDCACTR)) ;
-(*TDCACTR) = ' ';
+(*A_NILCHECK(TDCACTR)) = ' ';
  /* line 2212: */
-(void)(A_CALLPROC(NL(IACACTR_outid),((*(&(QCCACTR_sl->Name)))),((*(&(QCCACTR_sl->Name))),(NL(IACACTR_outid)).nonlocals)));
+(void)(A_CALLPROC(NL(IACACTR_outid),((*A_NILCHECK((&(A_NILCHECK(QCCACTR_sl)->Name))))),((*A_NILCHECK((&(A_NILCHECK(QCCACTR_sl)->Name)))),(NL(IACACTR_outid)).nonlocals)));
  /* line 2213: */
  /* line 2214: */
-if ((*(&(QCCACTR_sl->Rest)))!=RQAACTR_nilsel)
+if ((*A_NILCHECK((&(A_NILCHECK(QCCACTR_sl)->Rest))))!=RQAACTR_nilsel)
 { 
  /* line 2215: */
  /* line 2216: */
@@ -4585,24 +4585,24 @@ if ((*(&(QCCACTR_sl->Rest)))!=RQAACTR_nilsel)
  /* line 2218: */
  /* line 2219: */
  /* line 2220: */
-UDCACTR = (*NL(EACACTR_mind))+=1 ;
+UDCACTR = (*A_NILCHECK(NL(EACACTR_mind)))+=1 ;
 VDCACTR = (&A_VINDEX(NL(CACACTR_m),UDCACTR)) ;
-(*VDCACTR) = ')';
+(*A_NILCHECK(VDCACTR)) = ')';
 } 
 break;
 case 5: /* REF STRUCT(INT,INT,INT,INT)  */
 WDCACTR_ri1 = (ZCCACTR.data.mode5);
  /* line 2221: */
 { 
-(void)(A_CALLPROC(NL(YBCACTR_outint),((*(&(WDCACTR_ri1->Length)))),((*(&(WDCACTR_ri1->Length))),(NL(YBCACTR_outint)).nonlocals)));
+(void)(A_CALLPROC(NL(YBCACTR_outint),((*A_NILCHECK((&(A_NILCHECK(WDCACTR_ri1)->Length))))),((*A_NILCHECK((&(A_NILCHECK(WDCACTR_ri1)->Length)))),(NL(YBCACTR_outint)).nonlocals)));
  /* line 2222: */
-XDCACTR = (*NL(EACACTR_mind))+=1 ;
+XDCACTR = (*A_NILCHECK(NL(EACACTR_mind)))+=1 ;
 YDCACTR = (&A_VINDEX(NL(CACACTR_m),XDCACTR)) ;
-(*YDCACTR) = ' ';
+(*A_NILCHECK(YDCACTR)) = ' ';
  /* line 2223: */
  /* line 2224: */
  /* line 2225: */
-(void)(A_CALLPROC(NL(JCCACTR_outmode),((*(&(WDCACTR_ri1->Imode))), High),((*(&(WDCACTR_ri1->Imode))), High,(NL(JCCACTR_outmode)).nonlocals)));
+(void)(A_CALLPROC(NL(JCCACTR_outmode),((*A_NILCHECK((&(A_NILCHECK(WDCACTR_ri1)->Imode)))), High),((*A_NILCHECK((&(A_NILCHECK(WDCACTR_ri1)->Imode)))), High,(NL(JCCACTR_outmode)).nonlocals)));
 } 
 break;
 case 7: /* REF STRUCT(INT,INT,INT)  */
@@ -4610,7 +4610,7 @@ ZDCACTR_v = (ZCCACTR.data.mode7);
  /* line 2226: */
 { 
  /* line 2227: */
-if ((*(&(ZDCACTR_v->Deflex)))<0)
+if ((*A_NILCHECK((&(A_NILCHECK(ZDCACTR_v)->Deflex))))<0)
 { 
  /* line 2228: */
 (void)(A_CALLPROC(NL(PBCACTR_outmess),(72),(72,(NL(PBCACTR_outmess)).nonlocals)));
@@ -4620,7 +4620,7 @@ if ((*(&(ZDCACTR_v->Deflex)))<0)
  /* line 2230: */
  /* line 2231: */
  /* line 2232: */
-(void)(A_CALLPROC(NL(JCCACTR_outmode),((*(&(ZDCACTR_v->Vecmode))), High),((*(&(ZDCACTR_v->Vecmode))), High,(NL(JCCACTR_outmode)).nonlocals)));
+(void)(A_CALLPROC(NL(JCCACTR_outmode),((*A_NILCHECK((&(A_NILCHECK(ZDCACTR_v)->Vecmode)))), High),((*A_NILCHECK((&(A_NILCHECK(ZDCACTR_v)->Vecmode)))), High,(NL(JCCACTR_outmode)).nonlocals)));
 } 
 break;
 case 8: /* REF STRUCT(INT,INT,INT,INT)  */
@@ -4628,7 +4628,7 @@ AECACTR_a = (ZCCACTR.data.mode8);
  /* line 2233: */
 { 
  /* line 2234: */
-if ((*(&(AECACTR_a->Deflex)))<0)
+if ((*A_NILCHECK((&(A_NILCHECK(AECACTR_a)->Deflex))))<0)
 { 
  /* line 2235: */
 (void)(A_CALLPROC(NL(PBCACTR_outmess),(72),(72,(NL(PBCACTR_outmess)).nonlocals)));
@@ -4636,16 +4636,16 @@ if ((*(&(AECACTR_a->Deflex)))<0)
  /* line 2236: */
 (void)(A_CALLPROC(NL(PBCACTR_outmess),(43),(43,(NL(PBCACTR_outmess)).nonlocals)));
  /* line 2237: */
-BECACTR_mm = (*(&(AECACTR_a->Mode)));
+BECACTR_mm = (*A_NILCHECK((&(A_NILCHECK(AECACTR_a)->Mode))));
  /* line 2238: */
  /* line 2239: */
-CECACTR = ((*(&(AECACTR_a->Nods)))-1);
+CECACTR = ((*A_NILCHECK((&(A_NILCHECK(AECACTR_a)->Nods))))-1);
 for ( DECACTR = 1;
 DECACTR <= CECACTR;
 DECACTR += 1 )
 { 
  /* line 2240: */
-EECACTR = (*(&A_VINDEX(NL(KUAACTR_modes),BECACTR_mm))) ;
+EECACTR = (*A_NILCHECK((&A_VINDEX(NL(KUAACTR_modes),BECACTR_mm)))) ;
 switch ( EECACTR.mode )
 { 
 case 8: /* REF STRUCT(INT,INT,INT,INT)  */
@@ -4653,7 +4653,7 @@ FECACTR_ra = (EECACTR.data.mode8);
  /* line 2241: */
  /* line 2242: */
  /* line 2243: */
-(void)(BECACTR_mm = (*(&(FECACTR_ra->Mode))));
+(void)(BECACTR_mm = (*A_NILCHECK((&(A_NILCHECK(FECACTR_ra)->Mode)))));
 break;
 default: 
 A_IMP_SKIP ;
@@ -4662,14 +4662,14 @@ break;
 }
  /* line 2244: */
  /* line 2245: */
-GECACTR = ((*(&(AECACTR_a->Nods)))-1);
+GECACTR = ((*A_NILCHECK((&(A_NILCHECK(AECACTR_a)->Nods))))-1);
 for ( HECACTR = 1;
 HECACTR <= GECACTR;
 HECACTR += 1 )
 { 
-IECACTR = (*NL(EACACTR_mind))+=1 ;
+IECACTR = (*A_NILCHECK(NL(EACACTR_mind)))+=1 ;
 JECACTR = (&A_VINDEX(NL(CACACTR_m),IECACTR)) ;
-(*JECACTR) = ',';
+(*A_NILCHECK(JECACTR)) = ',';
 }
  /* line 2246: */
 (void)(A_CALLPROC(NL(PBCACTR_outmess),(44),(44,(NL(PBCACTR_outmess)).nonlocals)));
@@ -4687,7 +4687,7 @@ KECACTR_sten = (ZCCACTR.data.mode9);
  /* line 2251: */
  /* line 2252: */
  /* line 2253: */
-(void)(A_CALLPROC(NL(JCCACTR_outmode),((*(&(KECACTR_sten->Mode))), High),((*(&(KECACTR_sten->Mode))), High,(NL(JCCACTR_outmode)).nonlocals)));
+(void)(A_CALLPROC(NL(JCCACTR_outmode),((*A_NILCHECK((&(A_NILCHECK(KECACTR_sten)->Mode)))), High),((*A_NILCHECK((&(A_NILCHECK(KECACTR_sten)->Mode)))), High,(NL(JCCACTR_outmode)).nonlocals)));
 } 
 break;
 default: 
@@ -4722,14 +4722,14 @@ EFCACTR_i = A_CALLPROC(NL(VECACTR_marker),(Mode),(Mode,(NL(VECACTR_marker)).nonl
 if (EFCACTR_i<=(-2))
 { 
  /* line 2297: */
-(void)((*Rd) = (-3));
+(void)((*A_NILCHECK(Rd)) = (-3));
 } 
 else
 { 
  /* line 2298: */
 if (EFCACTR_i>=2)
 { 
-if ((*Rd)>0)
+if ((*A_NILCHECK(Rd))>0)
 { 
 FFCACTR = 3;
 } 
@@ -4738,20 +4738,20 @@ else
  /* line 2299: */
 FFCACTR = (-3);
 } 
-(*Rd) = FFCACTR;
+(*A_NILCHECK(Rd)) = FFCACTR;
 } 
 else
 { 
 GFCACTR = (EFCACTR_i==(-1));
 if ( GFCACTR )
 { /* line 2300: */
-GFCACTR = ((*Rd)>0);
+GFCACTR = ((*A_NILCHECK(Rd))>0);
 }
 if (GFCACTR)
 { 
  /* line 2301: */
  /* line 2302: */
-(void)((*Rd) = (-(*Rd)));
+(void)((*A_NILCHECK(Rd)) = (-(*A_NILCHECK(Rd))));
 } 
 } 
 } 
@@ -4791,11 +4791,11 @@ ZNCACTR_f1-=KQAACTR_refmark;
 } 
  /* line 2679: */
  /* line 2680: */
-if (!A_CALLPROC((*NL(HKCACTR_coerce1)),((&YNCACTR_v), ZNCACTR_f1, T, 7, NL(Code)),((&YNCACTR_v), ZNCACTR_f1, T, 7, NL(Code),((*NL(HKCACTR_coerce1))).nonlocals)))
+if (!A_CALLPROC((*A_NILCHECK(NL(HKCACTR_coerce1))),((&YNCACTR_v), ZNCACTR_f1, T, 7, NL(Code)),((&YNCACTR_v), ZNCACTR_f1, T, 7, NL(Code),((*A_NILCHECK(NL(HKCACTR_coerce1)))).nonlocals)))
 { 
  /* line 2681: */
  /* line 2682: */
-(*NL(ENCACTR_p)) = 0;
+(*A_NILCHECK(NL(ENCACTR_p))) = 0;
 } 
 } 
 A_PROC_EXIT(strcoerce);
@@ -4811,21 +4811,21 @@ A68_106  YZCACTR = {0};  /* OPERATORS - mode -> union mode */
 A_PROC_ENTRY(elem);
  /* line 3365: */
 { 
-XZCACTR.Fn = (*(&(Vl->Type)));
+XZCACTR.Fn = (*A_NILCHECK((&(A_NILCHECK(Vl)->Type))));
  /* line 3367: */
-XZCACTR.M = (Mode*(*NL(DZCACTR_qneg)));
+XZCACTR.M = (Mode*(*A_NILCHECK(NL(DZCACTR_qneg))));
  /* line 3368: */
-XZCACTR.Props = (A68_BITS )((A68_BITS )((*(&((&(Vl->V))->Props)))&GRAACTR_notdontpull)|(*NL(AZCACTR_qdontpull)));
-XZCACTR.Param = (*NL(WYCACTR_n));
+XZCACTR.Props = (A68_BITS )((A68_BITS )((*A_NILCHECK((&(A_NILCHECK((&(A_NILCHECK(Vl)->V)))->Props))))&GRAACTR_notdontpull)|(*A_NILCHECK(NL(AZCACTR_qdontpull))));
+XZCACTR.Param = (*A_NILCHECK(NL(WYCACTR_n)));
  /* line 3369: */
-(void)(A_CALLPROC(NL(Output),(A_UNITE(YZCACTR,mode17,17,XZCACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(YZCACTR,mode17,17,XZCACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(YZCACTR,mode17,17,XZCACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(YZCACTR,mode17,17,XZCACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 3370: */
-(void)((*NL(AZCACTR_qdontpull)) = A_CALLPROC(NL(RYCACTR_strong),((&(Vl->V)), (-Mode), A68_TRUE),((&(Vl->V)), (-Mode), A68_TRUE,(NL(RYCACTR_strong)).nonlocals)));
+(void)((*A_NILCHECK(NL(AZCACTR_qdontpull))) = A_CALLPROC(NL(RYCACTR_strong),((&(A_NILCHECK(Vl)->V)), (-Mode), A68_TRUE),((&(A_NILCHECK(Vl)->V)), (-Mode), A68_TRUE,(NL(RYCACTR_strong)).nonlocals)));
  /* line 3371: */
-(void)((*NL(ZYCACTR_ans)) = (A68_BITS )((*NL(ZYCACTR_ans))|(*NL(AZCACTR_qdontpull))));
+(void)((*A_NILCHECK(NL(ZYCACTR_ans))) = (A68_BITS )((*A_NILCHECK(NL(ZYCACTR_ans)))|(*A_NILCHECK(NL(AZCACTR_qdontpull)))));
  /* line 3372: */
  /* line 3373: */
-(*NL(DZCACTR_qneg)) = 1;
+(*A_NILCHECK(NL(DZCACTR_qneg))) = 1;
 } 
 A_PROC_EXIT(elem);
 return;
@@ -4904,7 +4904,7 @@ if ( ! UIDACTR )
 { /* line 4093: */
 VIDACTR.source = (&A_VINDEX(NL(KUAACTR_modes),QIDACTR_a)) ;
 WIDACTR.source = (&A_VINDEX(NL(KUAACTR_modes),RIDACTR_b)) ;
-UIDACTR = ((*(VIDACTR.destination))!=(*(WIDACTR.destination)));
+UIDACTR = ((*A_NILCHECK((VIDACTR.destination)))!=(*A_NILCHECK((WIDACTR.destination))));
 }
 if (UIDACTR)
 { 
@@ -4912,17 +4912,17 @@ if (UIDACTR)
 } 
  /* line 4095: */
  /* line 4096: */
-YIDACTR = (*NL(PHDACTR_last_flex));
+YIDACTR = (*A_NILCHECK(NL(PHDACTR_last_flex)));
 for ( XIDACTR_y = 1;
 XIDACTR_y <= YIDACTR;
 XIDACTR_y += 1 )
 { 
-(void)(PIDACTR_u = (*(&A_VINDEX((*NL(WHDACTR_test_flex)),XIDACTR_y))));
+(void)(PIDACTR_u = (*A_NILCHECK((&A_VINDEX((*A_NILCHECK(NL(WHDACTR_test_flex))),XIDACTR_y)))));
  /* line 4097: */
-ZIDACTR = ((*(&((&PIDACTR_u)->I)))==QIDACTR_a);
+ZIDACTR = ((*A_NILCHECK((&(A_NILCHECK((&PIDACTR_u))->I))))==QIDACTR_a);
 if ( ZIDACTR )
 { /* line 4098: */
-ZIDACTR = ((*(&((&PIDACTR_u)->J)))==RIDACTR_b);
+ZIDACTR = ((*A_NILCHECK((&(A_NILCHECK((&PIDACTR_u))->J))))==RIDACTR_b);
 }
 if (ZIDACTR)
 { 
@@ -4933,24 +4933,24 @@ goto OIDACTR_out;
 }
  /* line 4102: */
  /* line 4104: */
-if ((*NL(WHDACTR_test_flex)).upb==(*NL(PHDACTR_last_flex)))
+if ((*A_NILCHECK(NL(WHDACTR_test_flex))).upb==(*A_NILCHECK(NL(PHDACTR_last_flex))))
 { 
 A_CLOSURE( BJDACTR_generator, CJDACTR_generator, DJDACTR_generator );
 (( DJDACTR_generator * ) ( BJDACTR_generator.nonlocals )) -> WHDACTR_test_flex = NL(WHDACTR_test_flex);
 A_CALLPROC(BJDACTR_generator,(A68_FALSE, &GJDACTR),(A68_FALSE, &GJDACTR,(BJDACTR_generator).nonlocals));
 HJDACTR_new = GJDACTR;
  /* line 4105: */
-JJDACTR = A_VTRIM(IJDACTR,(HJDACTR_new),A_VTSCRIPT(&(IJDACTR.upb),(HJDACTR_new).upb,1,(*NL(PHDACTR_last_flex)))) ;
-(void)(A_VASSIGN2((*NL(WHDACTR_test_flex)),JJDACTR,A68_70 ));
+JJDACTR = A_VTRIM(IJDACTR,(HJDACTR_new),A_VTSCRIPT(&(IJDACTR.upb),(HJDACTR_new).upb,1,(*A_NILCHECK(NL(PHDACTR_last_flex))))) ;
+(void)(A_VASSIGN2((*A_NILCHECK(NL(WHDACTR_test_flex))),JJDACTR,A68_70 ));
  /* line 4106: */
-(*NL(WHDACTR_test_flex)) = HJDACTR_new;
+(*A_NILCHECK(NL(WHDACTR_test_flex))) = HJDACTR_new;
 } 
  /* line 4107: */
 KJDACTR.I = QIDACTR_a;
 KJDACTR.J = RIDACTR_b;
-LJDACTR = (*NL(PHDACTR_last_flex))+=1 ;
-MJDACTR = (&A_VINDEX((*NL(WHDACTR_test_flex)),LJDACTR)) ;
-(*MJDACTR) = KJDACTR;
+LJDACTR = (*A_NILCHECK(NL(PHDACTR_last_flex)))+=1 ;
+MJDACTR = (&A_VINDEX((*A_NILCHECK(NL(WHDACTR_test_flex))),LJDACTR)) ;
+(*A_NILCHECK(MJDACTR)) = KJDACTR;
  /* line 4108: */
 OIDACTR_out: A_UNUSED;
  /* line 4109: */
@@ -4978,42 +4978,42 @@ A68_106  UPDACTR = {0};  /* OPERATORS - mode -> union mode */
 A_PROC_ENTRY(assigngen);
  /* line 4405: */
 { 
-(void)(A_CALLPROC(NL(Output),(A_UNITE(KPDACTR,mode16,16,EPAACTR_xwass), (*NL(FZAACTR_outlevel))),(A_UNITE(KPDACTR,mode16,16,EPAACTR_xwass), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(KPDACTR,mode16,16,EPAACTR_xwass), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(KPDACTR,mode16,16,EPAACTR_xwass), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 4406: */
 (void)(A_CALLPROC(NL(YNDACTR_loadmodeproc),(A),(A,(NL(YNDACTR_loadmodeproc)).nonlocals)));
  /* line 4407: */
-MPDACTR = (*(&(NL(FPDACTR_loc)->Decno))) ;
-(void)(A_CALLPROC(NL(Output),(A_UNITE(LPDACTR,mode3,3,MPDACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(LPDACTR,mode3,3,MPDACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+MPDACTR = (*A_NILCHECK((&(A_NILCHECK(NL(FPDACTR_loc))->Decno)))) ;
+(void)(A_CALLPROC(NL(Output),(A_UNITE(LPDACTR,mode3,3,MPDACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(LPDACTR,mode3,3,MPDACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 4408: */
  /* line 4409: */
 NPDACTR.Fn = HMAACTR_xparampack;
  /* line 4410: */
-NPDACTR.M = A_CALLPROC(NL(ZICACTR_mproc),((*(&(A->Mode)))),((*(&(A->Mode))),(NL(ZICACTR_mproc)).nonlocals));
+NPDACTR.M = A_CALLPROC(NL(ZICACTR_mproc),((*A_NILCHECK((&(A_NILCHECK(A)->Mode))))),((*A_NILCHECK((&(A_NILCHECK(A)->Mode)))),(NL(ZICACTR_mproc)).nonlocals));
 NPDACTR.Param = 1;
-(void)(A_CALLPROC(NL(Output),(A_UNITE(OPDACTR,mode14,14,NPDACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(OPDACTR,mode14,14,NPDACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(OPDACTR,mode14,14,NPDACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(OPDACTR,mode14,14,NPDACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 4411: */
 PPDACTR.Fn = AOAACTR_xcall;
-PPDACTR.M = A_CALLPROC(NL(JGCACTR_deflex),((*(&(A->Mode)))),((*(&(A->Mode))),(NL(JGCACTR_deflex)).nonlocals));
+PPDACTR.M = A_CALLPROC(NL(JGCACTR_deflex),((*A_NILCHECK((&(A_NILCHECK(A)->Mode))))),((*A_NILCHECK((&(A_NILCHECK(A)->Mode)))),(NL(JGCACTR_deflex)).nonlocals));
 PPDACTR.Param = 3;
-(void)(A_CALLPROC(NL(Output),(A_UNITE(QPDACTR,mode14,14,PPDACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(QPDACTR,mode14,14,PPDACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(QPDACTR,mode14,14,PPDACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(QPDACTR,mode14,14,PPDACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 4412: */
  /* line 4413: */
 RPDACTR.Fn = UMAACTR_xassign;
  /* line 4414: */
-RPDACTR.M = (A_CALLPROC(NL(ZHCACTR_enflex),((*(&(A->Mode)))),((*(&(A->Mode))),(NL(ZHCACTR_enflex)).nonlocals))+KQAACTR_refmark);
+RPDACTR.M = (A_CALLPROC(NL(ZHCACTR_enflex),((*A_NILCHECK((&(A_NILCHECK(A)->Mode))))),((*A_NILCHECK((&(A_NILCHECK(A)->Mode)))),(NL(ZHCACTR_enflex)).nonlocals))+KQAACTR_refmark);
 RPDACTR.Param = 1;
-(void)(A_CALLPROC(NL(Output),(A_UNITE(SPDACTR,mode14,14,RPDACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(SPDACTR,mode14,14,RPDACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(SPDACTR,mode14,14,RPDACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(SPDACTR,mode14,14,RPDACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 4415: */
-(void)(A_CALLPROC(NL(Output),(A_UNITE(TPDACTR,mode14,14,IRAACTR_opervoid), (*NL(FZAACTR_outlevel))),(A_UNITE(TPDACTR,mode14,14,IRAACTR_opervoid), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(TPDACTR,mode14,14,IRAACTR_opervoid), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(TPDACTR,mode14,14,IRAACTR_opervoid), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 4416: */
-(void)(A_CALLPROC(NL(Output),(A_UNITE(UPDACTR,mode17,17,KRAACTR_controlsemi), (*NL(FZAACTR_outlevel))),(A_UNITE(UPDACTR,mode17,17,KRAACTR_controlsemi), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(UPDACTR,mode17,17,KRAACTR_controlsemi), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(UPDACTR,mode17,17,KRAACTR_controlsemi), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 4417: */
  /* line 4418: */
-if ((*NL(VODACTR_lastid))>(*NL(GZAACTR_maxident)))
+if ((*A_NILCHECK(NL(VODACTR_lastid)))>(*A_NILCHECK(NL(GZAACTR_maxident))))
 { 
  /* line 4419: */
  /* line 4420: */
-(void)((*NL(GZAACTR_maxident)) = (*NL(VODACTR_lastid)));
+(void)((*A_NILCHECK(NL(GZAACTR_maxident))) = (*A_NILCHECK(NL(VODACTR_lastid))));
 } 
 } 
 A_PROC_EXIT(assigngen);
@@ -5051,7 +5051,7 @@ A_PROC_ENTRY(assignarr);
 { 
 AQDACTR.Name = NL(BZAACTR_nullid);
  /* line 4424: */
-AQDACTR.Decno = (*NL(VODACTR_lastid))+=1;
+AQDACTR.Decno = (*A_NILCHECK(NL(VODACTR_lastid)))+=1;
 AQDACTR.Level = 1;
 AQDACTR.Mode = 0;
  /* line 4425: */
@@ -5061,31 +5061,31 @@ BQDACTR_element = AQDACTR;
  /* line 4426: */
  /* line 4428: */
  /* line 4429: */
-DQDACTR = ((*(&(Id->Mode)))-KQAACTR_refmark) ;
-EQDACTR = (*(&A_VINDEX(NL(KUAACTR_modes),DQDACTR))) ;
+DQDACTR = ((*A_NILCHECK((&(A_NILCHECK(Id)->Mode))))-KQAACTR_refmark) ;
+EQDACTR = (*A_NILCHECK((&A_VINDEX(NL(KUAACTR_modes),DQDACTR)))) ;
 switch ( EQDACTR.mode )
 { 
 case 8: /* REF STRUCT(INT,INT,INT,INT)  */
 FQDACTR_arr = (EQDACTR.data.mode8);
  /* line 4430: */
 { 
-(void)(CQDACTR_nod = (*(&(FQDACTR_arr->Nods))));
+(void)(CQDACTR_nod = (*A_NILCHECK((&(A_NILCHECK(FQDACTR_arr)->Nods)))));
  /* line 4431: */
  /* line 4432: */
 if (CQDACTR_nod==1)
 { 
  /* line 4433: */
  /* line 4434: */
-GQDACTR = A_CALLPROC(NL(ZHCACTR_enflex),((*(&(FQDACTR_arr->Mode)))),((*(&(FQDACTR_arr->Mode))),(NL(ZHCACTR_enflex)).nonlocals));
+GQDACTR = A_CALLPROC(NL(ZHCACTR_enflex),((*A_NILCHECK((&(A_NILCHECK(FQDACTR_arr)->Mode))))),((*A_NILCHECK((&(A_NILCHECK(FQDACTR_arr)->Mode)))),(NL(ZHCACTR_enflex)).nonlocals));
 } 
 else
 { 
  /* line 4435: */
-GQDACTR = (*(&(FQDACTR_arr->Mode)));
+GQDACTR = (*A_NILCHECK((&(A_NILCHECK(FQDACTR_arr)->Mode))));
 } 
  /* line 4436: */
-HQDACTR = (&((&BQDACTR_element)->Mode)) ;
-(void)((*HQDACTR) = (GQDACTR+KQAACTR_refmark));
+HQDACTR = (&(A_NILCHECK((&BQDACTR_element))->Mode)) ;
+(void)((*A_NILCHECK(HQDACTR)) = (GQDACTR+KQAACTR_refmark));
 } 
 break;
 case 7: /* REF STRUCT(INT,INT,INT)  */
@@ -5096,8 +5096,8 @@ CQDACTR_nod = 1;
  /* line 4438: */
  /* line 4439: */
  /* line 4440: */
-JQDACTR = (&((&BQDACTR_element)->Mode)) ;
-(void)((*JQDACTR) = (A_CALLPROC(NL(ZHCACTR_enflex),((*(&(IQDACTR_v->Vecmode)))),((*(&(IQDACTR_v->Vecmode))),(NL(ZHCACTR_enflex)).nonlocals))+KQAACTR_refmark));
+JQDACTR = (&(A_NILCHECK((&BQDACTR_element))->Mode)) ;
+(void)((*A_NILCHECK(JQDACTR)) = (A_CALLPROC(NL(ZHCACTR_enflex),((*A_NILCHECK((&(A_NILCHECK(IQDACTR_v)->Vecmode))))),((*A_NILCHECK((&(A_NILCHECK(IQDACTR_v)->Vecmode)))),(NL(ZHCACTR_enflex)).nonlocals))+KQAACTR_refmark));
 } 
 break;
 default: 
@@ -5105,17 +5105,17 @@ A_IMP_SKIP ;
 break;
 } 
  /* line 4442: */
-(void)(A_CALLPROC(NL(Output),(A_UNITE(KQDACTR,mode16,16,JPAACTR_xwforall), (*NL(FZAACTR_outlevel))),(A_UNITE(KQDACTR,mode16,16,JPAACTR_xwforall), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(KQDACTR,mode16,16,JPAACTR_xwforall), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(KQDACTR,mode16,16,JPAACTR_xwforall), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 4443: */
 LQDACTR.Fn = SNAACTR_xforall;
 LQDACTR.M = 0;
 LQDACTR.Props = WLAACTR_compgenbit;
 LQDACTR.Param = 1;
-(void)(A_CALLPROC(NL(Output),(A_UNITE(MQDACTR,mode17,17,LQDACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(MQDACTR,mode17,17,LQDACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(MQDACTR,mode17,17,LQDACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(MQDACTR,mode17,17,LQDACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 4444: */
 NQDACTR.Type = CPAACTR_xforalldec;
 NQDACTR.Iddec = (&BQDACTR_element);
-(void)(A_CALLPROC(NL(Output),(A_UNITE(OQDACTR,mode12,12,NQDACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(OQDACTR,mode12,12,NQDACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(OQDACTR,mode12,12,NQDACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(OQDACTR,mode12,12,NQDACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 4445: */
 PQDACTR.Fn = XNAACTR_xdo;
  /* line 4446: */
@@ -5123,10 +5123,10 @@ PQDACTR.M = YKAACTR_voidmode;
  /* line 4447: */
 PQDACTR.Props = (A68_BITS )(WLAACTR_compgenbit|SLAACTR_semibit);
 PQDACTR.Param = 0;
-(void)(A_CALLPROC(NL(Output),(A_UNITE(QQDACTR,mode17,17,PQDACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(QQDACTR,mode17,17,PQDACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(QQDACTR,mode17,17,PQDACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(QQDACTR,mode17,17,PQDACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 4448: */
-SQDACTR = (*(&((&BQDACTR_element)->Decno))) ;
-(void)(A_CALLPROC(NL(Output),(A_UNITE(RQDACTR,mode3,3,SQDACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(RQDACTR,mode3,3,SQDACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+SQDACTR = (*A_NILCHECK((&(A_NILCHECK((&BQDACTR_element))->Decno)))) ;
+(void)(A_CALLPROC(NL(Output),(A_UNITE(RQDACTR,mode3,3,SQDACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(RQDACTR,mode3,3,SQDACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 4449: */
  /* line 4450: */
 if (CQDACTR_nod==1)
@@ -5144,12 +5144,12 @@ TQDACTR.Fn = TNAACTR_xod;
 TQDACTR.M = YKAACTR_voidmode;
 TQDACTR.Props = WLAACTR_compgenbit;
 TQDACTR.Param = 0;
-(void)(A_CALLPROC(NL(Output),(A_UNITE(UQDACTR,mode17,17,TQDACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(UQDACTR,mode17,17,TQDACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(UQDACTR,mode17,17,TQDACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(UQDACTR,mode17,17,TQDACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 4454: */
-(void)(A_CALLPROC(NL(Output),(A_UNITE(VQDACTR,mode17,17,KRAACTR_controlsemi), (*NL(FZAACTR_outlevel))),(A_UNITE(VQDACTR,mode17,17,KRAACTR_controlsemi), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(VQDACTR,mode17,17,KRAACTR_controlsemi), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(VQDACTR,mode17,17,KRAACTR_controlsemi), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 4455: */
  /* line 4456: */
-(*NL(VODACTR_lastid))-=1;
+(*A_NILCHECK(NL(VODACTR_lastid)))-=1;
 } 
 A_PROC_EXIT(assignarr);
 return;
@@ -5171,30 +5171,30 @@ for ( ;; )
 { 
  /* line 4631: */
 if ( !((WUDACTR_aml!=PQAACTR_nilaml)) ) break;
-XUDACTR_ri = (&((*(&(WUDACTR_aml->Am)))->Mode));
+XUDACTR_ri = (&(A_NILCHECK((*A_NILCHECK((&(A_NILCHECK(WUDACTR_aml)->Am)))))->Mode));
  /* line 4632: */
-YUDACTR_i = (*XUDACTR_ri);
+YUDACTR_i = (*A_NILCHECK(XUDACTR_ri));
  /* line 4633: */
  /* line 4634: */
 if (YUDACTR_i!=(-1))
 { 
-(void)((*XUDACTR_ri) = (-1));
+(void)((*A_NILCHECK(XUDACTR_ri)) = (-1));
  /* line 4635: */
-(void)(A_CALLPROC(NL(TUDACTR_subam),((*(&((*(&(WUDACTR_aml->Am)))->El)))),((*(&((*(&(WUDACTR_aml->Am)))->El))),(NL(TUDACTR_subam)).nonlocals)));
+(void)(A_CALLPROC(NL(TUDACTR_subam),((*A_NILCHECK((&(A_NILCHECK((*A_NILCHECK((&(A_NILCHECK(WUDACTR_aml)->Am)))))->El))))),((*A_NILCHECK((&(A_NILCHECK((*A_NILCHECK((&(A_NILCHECK(WUDACTR_aml)->Am)))))->El)))),(NL(TUDACTR_subam)).nonlocals)));
  /* line 4636: */
-(*XUDACTR_ri) = YUDACTR_i;
+(*A_NILCHECK(XUDACTR_ri)) = YUDACTR_i;
  /* line 4637: */
  /* line 4638: */
 if ((A68_BITS )((A68_BITS )YUDACTR_i&LQAACTR_decsmask)==(A68_BITS )NL(J))
 { 
  /* line 4639: */
  /* line 4640: */
-(void)((*XUDACTR_ri)+=NL(LUDACTR_m));
+(void)((*A_NILCHECK(XUDACTR_ri))+=NL(LUDACTR_m));
 } 
 } 
  /* line 4641: */
  /* line 4642: */
-(void)(WUDACTR_aml = (*(&(WUDACTR_aml->Rest))));
+(void)(WUDACTR_aml = (*A_NILCHECK((&(A_NILCHECK(WUDACTR_aml)->Rest)))));
 }
  /* line 4643: */
 } 
@@ -5209,18 +5209,18 @@ A_STATIC A68_VOID  BVDACTR_subd(A68_INT * M, void *NonLocals)
 A_PROC_ENTRY(subd);
  /* line 4646: */
  /* line 4647: */
-if ((*M)==NL(J))
+if ((*A_NILCHECK(M))==NL(J))
 { 
  /* line 4648: */
-(void)((*M) = NL(I));
+(void)((*A_NILCHECK(M)) = NL(I));
 } 
 else
 { 
  /* line 4649: */
-if ((*M)==(-NL(J)))
+if ((*A_NILCHECK(M))==(-NL(J)))
 { 
  /* line 4650: */
-(void)((*M) = (-NL(I)));
+(void)((*A_NILCHECK(M)) = (-NL(I)));
 } 
 } 
 A_PROC_EXIT(subd);
@@ -5319,7 +5319,7 @@ if ( AZDACTR )
  /* line 4798: */
 if ( AZDACTR )
 { /* line 4799: */
-AZDACTR = ((*(&A_R1INDEX(NL(EYDACTR_classno),XYDACTR_a)))==(*(&A_R1INDEX(NL(EYDACTR_classno),YYDACTR_b))));
+AZDACTR = ((*A_NILCHECK((&A_R1INDEX(NL(EYDACTR_classno),XYDACTR_a))))==(*A_NILCHECK((&A_R1INDEX(NL(EYDACTR_classno),YYDACTR_b)))));
 }
 ZYDACTR = AZDACTR;
 }
@@ -5353,12 +5353,12 @@ if ( JZDACTR )
  /* line 4803: */
 if ( JZDACTR )
 { /* line 4804: */
-JZDACTR = A_CALLPROC(NL(UYDACTR_f),((*(&(HZDACTR_slx->Mode))), (*(&(IZDACTR_sly->Mode)))),((*(&(HZDACTR_slx->Mode))), (*(&(IZDACTR_sly->Mode))),(NL(UYDACTR_f)).nonlocals));
+JZDACTR = A_CALLPROC(NL(UYDACTR_f),((*A_NILCHECK((&(A_NILCHECK(HZDACTR_slx)->Mode)))), (*A_NILCHECK((&(A_NILCHECK(IZDACTR_sly)->Mode))))),((*A_NILCHECK((&(A_NILCHECK(HZDACTR_slx)->Mode)))), (*A_NILCHECK((&(A_NILCHECK(IZDACTR_sly)->Mode)))),(NL(UYDACTR_f)).nonlocals));
 }
 if ( !(JZDACTR) ) break;
-(void)(HZDACTR_slx = (*(&(HZDACTR_slx->Rest))));
+(void)(HZDACTR_slx = (*A_NILCHECK((&(A_NILCHECK(HZDACTR_slx)->Rest)))));
  /* line 4805: */
-(void)(IZDACTR_sly = (*(&(IZDACTR_sly->Rest))));
+(void)(IZDACTR_sly = (*A_NILCHECK((&(A_NILCHECK(IZDACTR_sly)->Rest)))));
 }
  /* line 4806: */
 KZDACTR = (HZDACTR_slx==OQAACTR_nilml);
@@ -5387,24 +5387,24 @@ A68_85  CEEACTR;  /* collateral clause result */
 A68_106  DEEACTR = {0};  /* OPERATORS - mode -> union mode */
 A_PROC_ENTRY(fass);
 { 
-WDEACTR = (*(&(NL(PDEACTR_lhs)->Decno))) ;
-(void)(A_CALLPROC(NL(Output),(A_UNITE(VDEACTR,mode3,3,WDEACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(VDEACTR,mode3,3,WDEACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+WDEACTR = (*A_NILCHECK((&(A_NILCHECK(NL(PDEACTR_lhs))->Decno)))) ;
+(void)(A_CALLPROC(NL(Output),(A_UNITE(VDEACTR,mode3,3,WDEACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(VDEACTR,mode3,3,WDEACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 4967: */
-(void)(A_CALLPROC(NL(Output),(A_UNITE(XDEACTR,mode16,16,EPAACTR_xwass), (*NL(FZAACTR_outlevel))),(A_UNITE(XDEACTR,mode16,16,EPAACTR_xwass), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(XDEACTR,mode16,16,EPAACTR_xwass), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(XDEACTR,mode16,16,EPAACTR_xwass), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 4968: */
-ZDEACTR = (*(&(NL(RDEACTR_rhs)->Decno))) ;
-(void)(A_CALLPROC(NL(Output),(A_UNITE(YDEACTR,mode3,3,ZDEACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(YDEACTR,mode3,3,ZDEACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+ZDEACTR = (*A_NILCHECK((&(A_NILCHECK(NL(RDEACTR_rhs))->Decno)))) ;
+(void)(A_CALLPROC(NL(Output),(A_UNITE(YDEACTR,mode3,3,ZDEACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(YDEACTR,mode3,3,ZDEACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 4969: */
 AEEACTR.Fn = JMAACTR_xcopy;
-AEEACTR.M = (*(&(NL(RDEACTR_rhs)->Mode)));
+AEEACTR.M = (*A_NILCHECK((&(A_NILCHECK(NL(RDEACTR_rhs))->Mode))));
 AEEACTR.Param = 0;
-(void)(A_CALLPROC(NL(Output),(A_UNITE(BEEACTR,mode14,14,AEEACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(BEEACTR,mode14,14,AEEACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(BEEACTR,mode14,14,AEEACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(BEEACTR,mode14,14,AEEACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 4970: */
 CEEACTR.Fn = UMAACTR_xassign;
 CEEACTR.M = (NL(Mode)+KQAACTR_refmark);
 CEEACTR.Param = 1;
  /* line 4971: */
-(void)(A_CALLPROC(NL(Output),(A_UNITE(DEEACTR,mode14,14,CEEACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(DEEACTR,mode14,14,CEEACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(DEEACTR,mode14,14,CEEACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(DEEACTR,mode14,14,CEEACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
 } 
 A_PROC_EXIT(fass);
 return;
@@ -5417,7 +5417,7 @@ A_STATIC A68_VOID  TKEACTR_generator(A68_BOOL  RKEACTR_anonymous, A68_221  *Retu
 A68_221  VKEACTR;  /* clause result */
 A68_221  WKEACTR;  /* OPERATORS - dynamic generator */
 { 
-WKEACTR.upb = ((*NL(PKEACTR_nomem))+10) ;
+WKEACTR.upb = ((*A_NILCHECK(NL(PKEACTR_nomem)))+10) ;
 ( RKEACTR_anonymous? A_VLOC(A68_INT *,WKEACTR): A_VHEAP(A68_INT *,WKEACTR) );
 VKEACTR = WKEACTR;
 } 
@@ -5438,24 +5438,24 @@ A68_INT ** ILEACTR;  /* YIELD */
 A_PROC_ENTRY(remember);
  /* line 5214: */
  /* line 5215: */
-if ((A68_INT )(A68_BITS )((A68_BITS )(*Modepos)&LQAACTR_decsmask)>=(*NL(OKEACTR_basemode)))
+if ((A68_INT )(A68_BITS )((A68_BITS )(*A_NILCHECK(Modepos))&LQAACTR_decsmask)>=(*A_NILCHECK(NL(OKEACTR_basemode))))
 { 
  /* line 5216: */
-if ((*NL(PKEACTR_nomem))==(*NL(XKEACTR_modemem)).upb)
+if ((*A_NILCHECK(NL(PKEACTR_nomem)))==(*A_NILCHECK(NL(XKEACTR_modemem))).upb)
 { 
-A_CALLPROC((*NL(QKEACTR_anonymous)),(A68_FALSE, &DLEACTR),(A68_FALSE, &DLEACTR,((*NL(QKEACTR_anonymous))).nonlocals));
+A_CALLPROC((*A_NILCHECK(NL(QKEACTR_anonymous))),(A68_FALSE, &DLEACTR),(A68_FALSE, &DLEACTR,((*A_NILCHECK(NL(QKEACTR_anonymous)))).nonlocals));
 ELEACTR_temp = DLEACTR;
  /* line 5217: */
-GLEACTR = A_VTRIM(FLEACTR,(ELEACTR_temp),A_VTSCRIPT(&(FLEACTR.upb),(ELEACTR_temp).upb,1,(*NL(PKEACTR_nomem)))) ;
-(void)(A_VASSIGN2((*NL(XKEACTR_modemem)),GLEACTR,A68_INT *));
+GLEACTR = A_VTRIM(FLEACTR,(ELEACTR_temp),A_VTSCRIPT(&(FLEACTR.upb),(ELEACTR_temp).upb,1,(*A_NILCHECK(NL(PKEACTR_nomem))))) ;
+(void)(A_VASSIGN2((*A_NILCHECK(NL(XKEACTR_modemem))),GLEACTR,A68_INT *));
  /* line 5218: */
-(*NL(XKEACTR_modemem)) = ELEACTR_temp;
+(*A_NILCHECK(NL(XKEACTR_modemem))) = ELEACTR_temp;
 } 
  /* line 5219: */
  /* line 5220: */
-HLEACTR = (*NL(PKEACTR_nomem))+=1 ;
-ILEACTR = (&A_VINDEX((*NL(XKEACTR_modemem)),HLEACTR)) ;
-(*ILEACTR) = Modepos;
+HLEACTR = (*A_NILCHECK(NL(PKEACTR_nomem)))+=1 ;
+ILEACTR = (&A_VINDEX((*A_NILCHECK(NL(XKEACTR_modemem))),HLEACTR)) ;
+(*A_NILCHECK(ILEACTR)) = Modepos;
 } 
 A_PROC_EXIT(remember);
 return;
@@ -5472,7 +5472,7 @@ A68_INT  RLEACTR;  /* forall loop counter */
 A68_INT  SLEACTR_r A_UNUSED = {0};
 A_PROC_ENTRY(repmode);
  /* line 5223: */
-QLEACTR = A_VTRIM(PLEACTR,((*NL(XKEACTR_modemem))),A_VTSCRIPT(&(PLEACTR.upb),((*NL(XKEACTR_modemem))).upb,1,(*NL(PKEACTR_nomem)))) ;
+QLEACTR = A_VTRIM(PLEACTR,((*A_NILCHECK(NL(XKEACTR_modemem)))),A_VTSCRIPT(&(PLEACTR.upb),((*A_NILCHECK(NL(XKEACTR_modemem)))).upb,1,(*A_NILCHECK(NL(PKEACTR_nomem))))) ;
 RLEACTR = QLEACTR.upb -1;
 OLEACTR_mmi = QLEACTR.data;
 for (;RLEACTR-- >= 0;
@@ -5480,14 +5480,14 @@ for (;RLEACTR-- >= 0;
 ) )
 {
  /* line 5224: */
-SLEACTR_r = (A68_INT )(A68_BITS )((A68_BITS )(**OLEACTR_mmi)&LQAACTR_decsmask);
+SLEACTR_r = (A68_INT )(A68_BITS )((A68_BITS )(*A_NILCHECK(*A_NILCHECK(OLEACTR_mmi)))&LQAACTR_decsmask);
  /* line 5225: */
  /* line 5226: */
 if (SLEACTR_r==Old)
 { 
  /* line 5227: */
  /* line 5228: */
-(void)((**OLEACTR_mmi) = ((New+(**OLEACTR_mmi))-SLEACTR_r));
+(void)((*A_NILCHECK(*A_NILCHECK(OLEACTR_mmi))) = ((New+(*A_NILCHECK(*A_NILCHECK(OLEACTR_mmi))))-SLEACTR_r));
 } 
 }
 A_PROC_EXIT(repmode);
@@ -5501,7 +5501,7 @@ A_STATIC A68_VOID  YLEACTR_generator(A68_BOOL  WLEACTR_anonymous, A68_127  *Retu
 A68_127  AMEACTR;  /* clause result */
 A68_127  BMEACTR;  /* OPERATORS - dynamic generator */
 { 
-BMEACTR.upb = ((*NL(ULEACTR_noids))+10) ;
+BMEACTR.upb = ((*A_NILCHECK(NL(ULEACTR_noids)))+10) ;
 ( WLEACTR_anonymous? A_VLOC(A68_67 *,BMEACTR): A_VHEAP(A68_67 *,BMEACTR) );
 AMEACTR = BMEACTR;
 } 
@@ -5517,9 +5517,9 @@ A68_INT  HMEACTR_c A_UNUSED = {0};
 A68_INT  IMEACTR;  /* clause result */
 A_PROC_ENTRY(rc);
 { 
-HMEACTR_c = (A68_INT)(unsigned char)(*(&A_VINDEX(NL(Ka),(*NL(NKEACTR_ki)))));
+HMEACTR_c = (A68_INT)(unsigned char)(*A_NILCHECK((&A_VINDEX(NL(Ka),(*A_NILCHECK(NL(NKEACTR_ki)))))));
  /* line 5237: */
-(*NL(NKEACTR_ki))+=1;
+(*A_NILCHECK(NL(NKEACTR_ki)))+=1;
  /* line 5238: */
  /* line 5239: */
 IMEACTR = HMEACTR_c;
@@ -5537,10 +5537,10 @@ A68_INT  NMEACTR_c A_UNUSED = {0};
 A68_INT  OMEACTR;  /* clause result */
 A_PROC_ENTRY(rw);
 { 
-MMEACTR = ((*NL(NKEACTR_ki))+1) ;
-NMEACTR_c = (((A68_INT)(unsigned char)(*(&A_VINDEX(NL(Ka),(*NL(NKEACTR_ki)))))*XDAACTR_maxchar)+(A68_INT)(unsigned char)(*(&A_VINDEX(NL(Ka),MMEACTR))));
+MMEACTR = ((*A_NILCHECK(NL(NKEACTR_ki)))+1) ;
+NMEACTR_c = (((A68_INT)(unsigned char)(*A_NILCHECK((&A_VINDEX(NL(Ka),(*A_NILCHECK(NL(NKEACTR_ki)))))))*XDAACTR_maxchar)+(A68_INT)(unsigned char)(*A_NILCHECK((&A_VINDEX(NL(Ka),MMEACTR)))));
  /* line 5243: */
-(*NL(NKEACTR_ki))+=2;
+(*A_NILCHECK(NL(NKEACTR_ki)))+=2;
  /* line 5244: */
  /* line 5245: */
 OMEACTR = NMEACTR_c;
@@ -5571,7 +5571,7 @@ A68_INT  HNEACTR;  /* clause result */
 A_PROC_ENTRY(rs);
  /* line 5248: */
 { 
-TMEACTR_u = (A68_INT)(unsigned char)(*(&A_VINDEX(NL(Ka),(*NL(NKEACTR_ki)))));
+TMEACTR_u = (A68_INT)(unsigned char)(*A_NILCHECK((&A_VINDEX(NL(Ka),(*A_NILCHECK(NL(NKEACTR_ki)))))));
  /* line 5249: */
 if (TMEACTR_u>VDAACTR_maxid)
 { 
@@ -5592,21 +5592,21 @@ XMEACTR_j <= YMEACTR;
 XMEACTR_j += 1 )
 { 
  /* line 5253: */
-ZMEACTR = ((*NL(NKEACTR_ki))+XMEACTR_j) ;
-if ( !(((*(&A_VINDEX(NL(Ka),ZMEACTR)))!=' ')) ) break;
-ANEACTR = ((*NL(NKEACTR_ki))+XMEACTR_j) ;
-(void)(WMEACTR_i+=(A68_INT)(unsigned char)(*(&A_VINDEX(NL(Ka),ANEACTR))));
+ZMEACTR = ((*A_NILCHECK(NL(NKEACTR_ki)))+XMEACTR_j) ;
+if ( !(((*A_NILCHECK((&A_VINDEX(NL(Ka),ZMEACTR))))!=' ')) ) break;
+ANEACTR = ((*A_NILCHECK(NL(NKEACTR_ki)))+XMEACTR_j) ;
+(void)(WMEACTR_i+=(A68_INT)(unsigned char)(*A_NILCHECK((&A_VINDEX(NL(Ka),ANEACTR)))));
 }
  /* line 5255: */
 CNEACTR_n = A_ISVEC(BNEACTR,Id,32,A68_CHAR );
  /* line 5256: */
-(void)((*Id) = NL(XTAACTR_spaces));
+(void)((*A_NILCHECK(Id)) = NL(XTAACTR_spaces));
  /* line 5257: */
 FNEACTR = A_VTRIM(DNEACTR,(CNEACTR_n),A_VTSCRIPT(&(DNEACTR.upb),(CNEACTR_n).upb,1,VMEACTR_l)) ;
-GNEACTR = A_VTRIM(ENEACTR,(NL(Ka)),A_VTSCRIPT(&(ENEACTR.upb),(NL(Ka)).upb,((*NL(NKEACTR_ki))+1),((*NL(NKEACTR_ki))+VMEACTR_l))) ;
+GNEACTR = A_VTRIM(ENEACTR,(NL(Ka)),A_VTSCRIPT(&(ENEACTR.upb),(NL(Ka)).upb,((*A_NILCHECK(NL(NKEACTR_ki)))+1),((*A_NILCHECK(NL(NKEACTR_ki)))+VMEACTR_l))) ;
 (void)(A_VASSIGN2(GNEACTR,FNEACTR,A68_CHAR ));
  /* line 5258: */
-(void)((*NL(NKEACTR_ki))+=(TMEACTR_u+1));
+(void)((*A_NILCHECK(NL(NKEACTR_ki)))+=(TMEACTR_u+1));
  /* line 5259: */
  /* line 5260: */
 HNEACTR = (1+(A68_INT )(A68_BITS )((A68_BITS )WMEACTR_i&0X3fU));
@@ -5639,12 +5639,12 @@ else
 { 
 NNEACTR_n = MNEACTR_m;
  /* line 5269: */
-(void)(MNEACTR_m = ((MNEACTR_m+(*NL(OKEACTR_basemode)))-100));
+(void)(MNEACTR_m = ((MNEACTR_m+(*A_NILCHECK(NL(OKEACTR_basemode))))-100));
  /* line 5270: */
 QNEACTR_aa: A_UNUSED;
  /* line 5271: */
  /* line 5272: */
-RNEACTR = (*(&A_VINDEX(NL(KUAACTR_modes),MNEACTR_m))) ;
+RNEACTR = (*A_NILCHECK((&A_VINDEX(NL(KUAACTR_modes),MNEACTR_m)))) ;
 switch ( RNEACTR.mode )
 { 
 case 11: /* STRUCT(INT)  */
@@ -5730,7 +5730,7 @@ A68_66 * IQEACTR;  /* YIELD */
 A68_INT  JQEACTR;  /* clause result */
 A_PROC_ENTRY(readmodes);
 { 
-WNEACTR_firstmode = (((*NL(VYAACTR_lastmode))-(*NL(OKEACTR_basemode)))+101);
+WNEACTR_firstmode = (((*A_NILCHECK(NL(VYAACTR_lastmode)))-(*A_NILCHECK(NL(OKEACTR_basemode))))+101);
  /* line 5284: */
  /* line 5285: */
  /* line 5286: */
@@ -5752,7 +5752,7 @@ for ( ;; )
 { 
  /* line 5310: */
 if ( !(((XNEACTR_i = A_CALLPROC(NL(EMEACTR_rc),(),((NL(EMEACTR_rc)).nonlocals)))>5)) ) break;
-(void)(ZNEACTR_k = ((A_CALLPROC(NL(JMEACTR_rw),(),((NL(JMEACTR_rw)).nonlocals))-100)+(*NL(OKEACTR_basemode))));
+(void)(ZNEACTR_k = ((A_CALLPROC(NL(JMEACTR_rw),(),((NL(JMEACTR_rw)).nonlocals))-100)+(*A_NILCHECK(NL(OKEACTR_basemode)))));
  /* line 5311: */
  /* line 5312: */
 switch ( (XNEACTR_i-5) )
@@ -5762,8 +5762,8 @@ case 1:
 { 
 UOEACTR_prc = (A_HEAP(A68_55 ));
  /* line 5314: */
-VOEACTR = (&(UOEACTR_prc->Deproc)) ;
-(void)((*VOEACTR) = A_CALLPROC(DOEACTR_rm,(),((DOEACTR_rm).nonlocals))) ;
+VOEACTR = (&(A_NILCHECK(UOEACTR_prc)->Deproc)) ;
+(void)((*A_NILCHECK(VOEACTR)) = A_CALLPROC(DOEACTR_rm,(),((DOEACTR_rm).nonlocals))) ;
 (void)(A_CALLPROC(NL(ALEACTR_remember),(VOEACTR),(VOEACTR,(NL(ALEACTR_remember)).nonlocals)));
  /* line 5315: */
  /* line 5316: */
@@ -5775,12 +5775,12 @@ case 2:
 { 
 YOEACTR_hp = (A_HEAP(A68_57 ));
  /* line 5318: */
-ZOEACTR = (&(YOEACTR_hp->Deproc)) ;
-(void)((*ZOEACTR) = A_CALLPROC(NL(JGCACTR_deflex),(A_CALLPROC(DOEACTR_rm,(),((DOEACTR_rm).nonlocals))),(A_CALLPROC(DOEACTR_rm,(),((DOEACTR_rm).nonlocals)),(NL(JGCACTR_deflex)).nonlocals))) ;
+ZOEACTR = (&(A_NILCHECK(YOEACTR_hp)->Deproc)) ;
+(void)((*A_NILCHECK(ZOEACTR)) = A_CALLPROC(NL(JGCACTR_deflex),(A_CALLPROC(DOEACTR_rm,(),((DOEACTR_rm).nonlocals))),(A_CALLPROC(DOEACTR_rm,(),((DOEACTR_rm).nonlocals)),(NL(JGCACTR_deflex)).nonlocals))) ;
 (void)(A_CALLPROC(NL(ALEACTR_remember),(ZOEACTR),(ZOEACTR,(NL(ALEACTR_remember)).nonlocals)));
  /* line 5323: */
-APEACTR = (&(YOEACTR_hp->Pars)) ;
-(void)((*APEACTR) = A_CALLPROC(JOEACTR_rml,(),((JOEACTR_rml).nonlocals)));
+APEACTR = (&(A_NILCHECK(YOEACTR_hp)->Pars)) ;
+(void)((*A_NILCHECK(APEACTR)) = A_CALLPROC(JOEACTR_rml,(),((JOEACTR_rml).nonlocals)));
  /* line 5324: */
  /* line 5325: */
  /* line 5326: */
@@ -5792,7 +5792,7 @@ CPEACTR.Rdenno = 0;
 CPEACTR.Modelist = A_CALLPROC(JOEACTR_rml,(),((JOEACTR_rml).nonlocals));
  /* line 5328: */
 DPEACTR = A_HEAP(A68_56 ) ;
-(void)((*DPEACTR) = CPEACTR) ;
+(void)((*A_NILCHECK(DPEACTR)) = CPEACTR) ;
 WOEACTR = A_UNITE(EPEACTR,mode2,2,DPEACTR);
 break;
 case 4: 
@@ -5806,22 +5806,22 @@ FPEACTR_i <= GPEACTR;
 FPEACTR_i += 1 )
 { 
  /* line 5331: */
-(void)((*COEACTR_rsl) = A_HEAP(A68_58 ));
+(void)((*A_NILCHECK(COEACTR_rsl)) = A_HEAP(A68_58 ));
  /* line 5332: */
-HPEACTR = (&((*COEACTR_rsl)->Fieldno)) ;
-(*HPEACTR) = FPEACTR_i;
+HPEACTR = (&(A_NILCHECK((*A_NILCHECK(COEACTR_rsl)))->Fieldno)) ;
+(*A_NILCHECK(HPEACTR)) = FPEACTR_i;
  /* line 5333: */
-IPEACTR = (&((*COEACTR_rsl)->Mode)) ;
-(void)((*IPEACTR) = A_CALLPROC(DOEACTR_rm,(),((DOEACTR_rm).nonlocals))) ;
+IPEACTR = (&(A_NILCHECK((*A_NILCHECK(COEACTR_rsl)))->Mode)) ;
+(void)((*A_NILCHECK(IPEACTR)) = A_CALLPROC(DOEACTR_rm,(),((DOEACTR_rm).nonlocals))) ;
 (void)(A_CALLPROC(NL(ALEACTR_remember),(IPEACTR),(IPEACTR,(NL(ALEACTR_remember)).nonlocals)));
  /* line 5334: */
-(void)(A_CALLPROC(NL(QMEACTR_rs),((&((*COEACTR_rsl)->Name))),((&((*COEACTR_rsl)->Name)),(NL(QMEACTR_rs)).nonlocals)));
+(void)(A_CALLPROC(NL(QMEACTR_rs),((&(A_NILCHECK((*A_NILCHECK(COEACTR_rsl)))->Name))),((&(A_NILCHECK((*A_NILCHECK(COEACTR_rsl)))->Name)),(NL(QMEACTR_rs)).nonlocals)));
  /* line 5335: */
-JPEACTR = (&((*COEACTR_rsl)->Rest)) ;
-(*JPEACTR) = (A68_58 *)A68_NIL;
+JPEACTR = (&(A_NILCHECK((*A_NILCHECK(COEACTR_rsl)))->Rest)) ;
+(*A_NILCHECK(JPEACTR)) = (A68_58 *)A68_NIL;
  /* line 5336: */
  /* line 5337: */
-(void)(COEACTR_rsl = (&((*COEACTR_rsl)->Rest)));
+(void)(COEACTR_rsl = (&(A_NILCHECK((*A_NILCHECK(COEACTR_rsl)))->Rest)));
 }
  /* line 5338: */
 KPEACTR.Rdenno = 0;
@@ -5830,7 +5830,7 @@ KPEACTR.Deflex = 1;
 KPEACTR.Sels = BOEACTR_sl;
  /* line 5341: */
 LPEACTR = A_HEAP(A68_59 ) ;
-(void)((*LPEACTR) = KPEACTR) ;
+(void)((*A_NILCHECK(LPEACTR)) = KPEACTR) ;
 WOEACTR = A_UNITE(MPEACTR,mode4,4,LPEACTR);
 } 
 break;
@@ -5838,21 +5838,21 @@ case 5:
 { 
 NPEACTR_hi = (A_HEAP(A68_60 ));
  /* line 5342: */
-OPEACTR = (&(NPEACTR_hi->Rdenno)) ;
-(*OPEACTR) = 0;
+OPEACTR = (&(A_NILCHECK(NPEACTR_hi)->Rdenno)) ;
+(*A_NILCHECK(OPEACTR)) = 0;
  /* line 5343: */
-PPEACTR = (&(NPEACTR_hi->Imode)) ;
-(void)((*PPEACTR) = A_CALLPROC(DOEACTR_rm,(),((DOEACTR_rm).nonlocals))) ;
+PPEACTR = (&(A_NILCHECK(NPEACTR_hi)->Imode)) ;
+(void)((*A_NILCHECK(PPEACTR)) = A_CALLPROC(DOEACTR_rm,(),((DOEACTR_rm).nonlocals))) ;
 (void)(A_CALLPROC(NL(ALEACTR_remember),(PPEACTR),(PPEACTR,(NL(ALEACTR_remember)).nonlocals)));
  /* line 5344: */
-QPEACTR = (&(NPEACTR_hi->Length)) ;
-(void)((*QPEACTR) = (A_CALLPROC(NL(EMEACTR_rc),(),((NL(EMEACTR_rc)).nonlocals))*NL(DKEACTR_maxchar2)));
+QPEACTR = (&(A_NILCHECK(NPEACTR_hi)->Length)) ;
+(void)((*A_NILCHECK(QPEACTR)) = (A_CALLPROC(NL(EMEACTR_rc),(),((NL(EMEACTR_rc)).nonlocals))*NL(DKEACTR_maxchar2)));
  /* line 5345: */
-RPEACTR = (&(NPEACTR_hi->Length)) ;
-(void)((*RPEACTR)+=A_CALLPROC(NL(JMEACTR_rw),(),((NL(JMEACTR_rw)).nonlocals)));
+RPEACTR = (&(A_NILCHECK(NPEACTR_hi)->Length)) ;
+(void)((*A_NILCHECK(RPEACTR))+=A_CALLPROC(NL(JMEACTR_rw),(),((NL(JMEACTR_rw)).nonlocals)));
  /* line 5346: */
-SPEACTR = (&(NPEACTR_hi->Deflex)) ;
-(*SPEACTR) = 1;
+SPEACTR = (&(A_NILCHECK(NPEACTR_hi)->Deflex)) ;
+(*A_NILCHECK(SPEACTR)) = 1;
  /* line 5347: */
  /* line 5348: */
  /* line 5349: */
@@ -5863,15 +5863,15 @@ case 6:
 { 
 UPEACTR_hv = (A_HEAP(A68_61 ));
  /* line 5350: */
-VPEACTR = (&(UPEACTR_hv->Rdenno)) ;
-(*VPEACTR) = 0;
+VPEACTR = (&(A_NILCHECK(UPEACTR_hv)->Rdenno)) ;
+(*A_NILCHECK(VPEACTR)) = 0;
  /* line 5351: */
-WPEACTR = (&(UPEACTR_hv->Vecmode)) ;
-(void)((*WPEACTR) = A_CALLPROC(DOEACTR_rm,(),((DOEACTR_rm).nonlocals))) ;
+WPEACTR = (&(A_NILCHECK(UPEACTR_hv)->Vecmode)) ;
+(void)((*A_NILCHECK(WPEACTR)) = A_CALLPROC(DOEACTR_rm,(),((DOEACTR_rm).nonlocals))) ;
 (void)(A_CALLPROC(NL(ALEACTR_remember),(WPEACTR),(WPEACTR,(NL(ALEACTR_remember)).nonlocals)));
  /* line 5352: */
-XPEACTR = (&(UPEACTR_hv->Deflex)) ;
-(void)((*XPEACTR) = (A_CALLPROC(NL(EMEACTR_rc),(),((NL(EMEACTR_rc)).nonlocals))-1));
+XPEACTR = (&(A_NILCHECK(UPEACTR_hv)->Deflex)) ;
+(void)((*A_NILCHECK(XPEACTR)) = (A_CALLPROC(NL(EMEACTR_rc),(),((NL(EMEACTR_rc)).nonlocals))-1));
  /* line 5353: */
  /* line 5354: */
  /* line 5355: */
@@ -5882,18 +5882,18 @@ case 7:
 { 
 ZPEACTR_ha = (A_HEAP(A68_62 ));
  /* line 5356: */
-AQEACTR = (&(ZPEACTR_ha->Rdenno)) ;
-(*AQEACTR) = 0;
+AQEACTR = (&(A_NILCHECK(ZPEACTR_ha)->Rdenno)) ;
+(*A_NILCHECK(AQEACTR)) = 0;
  /* line 5357: */
-BQEACTR = (&(ZPEACTR_ha->Mode)) ;
-(void)((*BQEACTR) = A_CALLPROC(DOEACTR_rm,(),((DOEACTR_rm).nonlocals))) ;
+BQEACTR = (&(A_NILCHECK(ZPEACTR_ha)->Mode)) ;
+(void)((*A_NILCHECK(BQEACTR)) = A_CALLPROC(DOEACTR_rm,(),((DOEACTR_rm).nonlocals))) ;
 (void)(A_CALLPROC(NL(ALEACTR_remember),(BQEACTR),(BQEACTR,(NL(ALEACTR_remember)).nonlocals)));
  /* line 5358: */
-CQEACTR = (&(ZPEACTR_ha->Nods)) ;
-(void)((*CQEACTR) = A_CALLPROC(NL(EMEACTR_rc),(),((NL(EMEACTR_rc)).nonlocals)));
+CQEACTR = (&(A_NILCHECK(ZPEACTR_ha)->Nods)) ;
+(void)((*A_NILCHECK(CQEACTR)) = A_CALLPROC(NL(EMEACTR_rc),(),((NL(EMEACTR_rc)).nonlocals)));
  /* line 5359: */
-DQEACTR = (&(ZPEACTR_ha->Deflex)) ;
-(void)((*DQEACTR) = (A_CALLPROC(NL(EMEACTR_rc),(),((NL(EMEACTR_rc)).nonlocals))-1));
+DQEACTR = (&(A_NILCHECK(ZPEACTR_ha)->Deflex)) ;
+(void)((*A_NILCHECK(DQEACTR)) = (A_CALLPROC(NL(EMEACTR_rc),(),((NL(EMEACTR_rc)).nonlocals))-1));
  /* line 5360: */
  /* line 5361: */
  /* line 5362: */
@@ -5905,9 +5905,9 @@ case 8:
 FQEACTR_s = (A_HEAP(A68_64 ));
 GQEACTR.Mode = A_CALLPROC(DOEACTR_rm,(),((DOEACTR_rm).nonlocals));
 GQEACTR.Stenlist = (A68_63 *)A68_NIL;
-(*FQEACTR_s) = GQEACTR;
+(*A_NILCHECK(FQEACTR_s)) = GQEACTR;
  /* line 5363: */
-(void)(A_CALLPROC(NL(ALEACTR_remember),((&(FQEACTR_s->Mode))),((&(FQEACTR_s->Mode)),(NL(ALEACTR_remember)).nonlocals)));
+(void)(A_CALLPROC(NL(ALEACTR_remember),((&(A_NILCHECK(FQEACTR_s)->Mode))),((&(A_NILCHECK(FQEACTR_s)->Mode)),(NL(ALEACTR_remember)).nonlocals)));
  /* line 5364: */
  /* line 5365: */
  /* line 5366: */
@@ -5919,14 +5919,14 @@ A_IMP_SKIP ;
 break;
 } 
 IQEACTR = (&A_VINDEX(NL(KUAACTR_modes),ZNEACTR_k)) ;
-(*IQEACTR) = WOEACTR;
+(*A_NILCHECK(IQEACTR)) = WOEACTR;
  /* line 5367: */
  /* line 5368: */
-if (ZNEACTR_k>(*NL(VYAACTR_lastmode)))
+if (ZNEACTR_k>(*A_NILCHECK(NL(VYAACTR_lastmode))))
 { 
  /* line 5369: */
  /* line 5370: */
-(*NL(VYAACTR_lastmode)) = ZNEACTR_k;
+(*A_NILCHECK(NL(VYAACTR_lastmode))) = ZNEACTR_k;
 } 
 }
  /* line 5372: */
@@ -5947,28 +5947,28 @@ A68_112  JUEACTR;  /* collateral clause result */
 A68_112 * KUEACTR;  /* YIELD */
 A_PROC_ENTRY(setc);
 { 
-HUEACTR.Name = (*NL(Name));
+HUEACTR.Name = (*A_NILCHECK(NL(Name)));
 HUEACTR.Ym = NL(Ym);
-HUEACTR.Formal = (*NL(P));
+HUEACTR.Formal = (*A_NILCHECK(NL(P)));
  /* line 5518: */
-HUEACTR.Ys = (*(&(NL(ZTEACTR_ys)->Ys)));
+HUEACTR.Ys = (*A_NILCHECK((&(A_NILCHECK(NL(ZTEACTR_ys))->Ys))));
  /* line 5519: */
-HUEACTR.Level = (*NL(TZAACTR_modulelevel))+=1;
+HUEACTR.Level = (*A_NILCHECK(NL(TZAACTR_modulelevel)))+=1;
  /* line 5520: */
-HUEACTR.Ownlevel = ((*(&(NL(BUEACTR_xs)->Nl)))+(*(&(NL(BUEACTR_xs)->Ng))));
+HUEACTR.Ownlevel = ((*A_NILCHECK((&(A_NILCHECK(NL(BUEACTR_xs))->Nl))))+(*A_NILCHECK((&(A_NILCHECK(NL(BUEACTR_xs))->Ng)))));
 (void)(A_CALLPROC(NL(Output),(A_UNITE(IUEACTR,mode29,29,HUEACTR), 2),(A_UNITE(IUEACTR,mode29,29,HUEACTR), 2,(NL(Output)).nonlocals)));
  /* line 5521: */
-JUEACTR.C.N = (*NL(Name));
-JUEACTR.C.F = (*NL(P));
+JUEACTR.C.N = (*A_NILCHECK(NL(Name)));
+JUEACTR.C.F = (*A_NILCHECK(NL(P)));
  /* line 5522: */
-JUEACTR.C.Level = (*NL(TZAACTR_modulelevel));
+JUEACTR.C.Level = (*A_NILCHECK(NL(TZAACTR_modulelevel)));
  /* line 5524: */
-JUEACTR.Scope = ((*(&((*NL(QYAACTR_globcurrent))->Lastid)))+1);
+JUEACTR.Scope = ((*A_NILCHECK((&(A_NILCHECK((*A_NILCHECK(NL(QYAACTR_globcurrent))))->Lastid))))+1);
  /* line 5525: */
-JUEACTR.Rest = (*NL(RABACTR_concheck));
+JUEACTR.Rest = (*A_NILCHECK(NL(RABACTR_concheck)));
 KUEACTR = A_HEAP(A68_112 ) ;
-(void)((*KUEACTR) = JUEACTR) ;
-(*NL(RABACTR_concheck)) = KUEACTR;
+(void)((*A_NILCHECK(KUEACTR)) = JUEACTR) ;
+(*A_NILCHECK(NL(RABACTR_concheck))) = KUEACTR;
 } 
 A_PROC_EXIT(setc);
 return;
@@ -5996,7 +5996,7 @@ A_STATIC A68_VOID  CWEACTR_generator(A68_BOOL  AWEACTR_anonymous, A68_100  *Retu
 A68_100  EWEACTR;  /* clause result */
 A68_100  FWEACTR;  /* OPERATORS - dynamic generator */
 { 
-FWEACTR.upb = (*NL(NVEACTR_i)) ;
+FWEACTR.upb = (*A_NILCHECK(NL(NVEACTR_i))) ;
 ( AWEACTR_anonymous? A_VLOC(A68_INT ,FWEACTR): A_VHEAP(A68_INT ,FWEACTR) );
 EWEACTR = FWEACTR;
 } 
@@ -6011,7 +6011,7 @@ A_STATIC A68_VOID  BXEACTR_generator(A68_BOOL  ZWEACTR_anonymous, A68_99  *Retur
 A68_99  DXEACTR;  /* clause result */
 A68_99  EXEACTR;  /* OPERATORS - dynamic generator */
 { 
-EXEACTR.upb = (*NL(JWEACTR_k)) ;
+EXEACTR.upb = (*A_NILCHECK(NL(JWEACTR_k))) ;
 ( ZWEACTR_anonymous? A_VLOC(A68_71 ,EXEACTR): A_VHEAP(A68_71 ,EXEACTR) );
 DXEACTR = EXEACTR;
 } 
@@ -6026,7 +6026,7 @@ A_STATIC A68_VOID  IXEACTR_generator(A68_BOOL  GXEACTR_anonymous, A68_41  *Retur
 A68_41  KXEACTR;  /* clause result */
 A68_41  LXEACTR;  /* OPERATORS - dynamic generator */
 { 
-LXEACTR.upb = (*NL(JWEACTR_k)) ;
+LXEACTR.upb = (*A_NILCHECK(NL(JWEACTR_k))) ;
 ( GXEACTR_anonymous? A_VLOC(A68_42 ,LXEACTR): A_VHEAP(A68_42 ,LXEACTR) );
 KXEACTR = LXEACTR;
 } 
@@ -6043,18 +6043,18 @@ A68_INT * YYEACTR;  /* YIELD */
 A_PROC_ENTRY(mdno);
  /* line 5689: */
 { 
-(*NL(QSAACTR_compsize))+=1;
+(*A_NILCHECK(NL(QSAACTR_compsize)))+=1;
  /* line 5690: */
  /* line 5691: */
 if (NL(Kb))
 { 
-XYEACTR = (&A_VINDEX(NL(Decnos),(*NL(QSAACTR_compsize)))) ;
-(*XYEACTR) = D;
+XYEACTR = (&A_VINDEX(NL(Decnos),(*A_NILCHECK(NL(QSAACTR_compsize))))) ;
+(*A_NILCHECK(XYEACTR)) = D;
  /* line 5692: */
  /* line 5693: */
  /* line 5694: */
-YYEACTR = (&A_VINDEX(NL(Modenos),(*NL(QSAACTR_compsize)))) ;
-(*YYEACTR) = M;
+YYEACTR = (&A_VINDEX(NL(Modenos),(*A_NILCHECK(NL(QSAACTR_compsize))))) ;
+(*A_NILCHECK(YYEACTR)) = M;
 } 
 } 
 A_PROC_EXIT(mdno);
@@ -6072,13 +6072,13 @@ A_PROC_ENTRY(kc);
 { 
 if (NL(Kb))
 { 
-DZEACTR = ((*NL(QYEACTR_ki))+1) ;
+DZEACTR = ((*A_NILCHECK(NL(QYEACTR_ki)))+1) ;
 EZEACTR = (&A_VINDEX(NL(Ka),DZEACTR)) ;
-(*EZEACTR) = (A68_SSBITS)C;
+(*A_NILCHECK(EZEACTR)) = (A68_SSBITS)C;
 } 
  /* line 5698: */
  /* line 5699: */
-(*NL(QYEACTR_ki))+=1;
+(*A_NILCHECK(NL(QYEACTR_ki)))+=1;
 } 
 A_PROC_EXIT(kc);
 return;
@@ -6099,18 +6099,18 @@ A_PROC_ENTRY(kw);
  /* line 5703: */
 if (NL(Kb))
 { 
-JZEACTR = ((*NL(QYEACTR_ki))+1) ;
+JZEACTR = ((*A_NILCHECK(NL(QYEACTR_ki)))+1) ;
 KZEACTR = (&A_VINDEX(NL(Ka),JZEACTR)) ;
-(void)((*KZEACTR) = (A68_SSBITS)(I/XDAACTR_maxchar));
+(void)((*A_NILCHECK(KZEACTR)) = (A68_SSBITS)(I/XDAACTR_maxchar));
  /* line 5704: */
  /* line 5705: */
-LZEACTR = ((*NL(QYEACTR_ki))+2) ;
+LZEACTR = ((*A_NILCHECK(NL(QYEACTR_ki)))+2) ;
 NZEACTR = (&A_VINDEX(NL(Ka),LZEACTR)) ;
-(void)((*NZEACTR) = (A68_SSBITS)A_MOD(I,XDAACTR_maxchar,MZEACTR));
+(void)((*A_NILCHECK(NZEACTR)) = (A68_SSBITS)A_MOD(I,XDAACTR_maxchar,MZEACTR));
 } 
  /* line 5706: */
  /* line 5707: */
-(*NL(QYEACTR_ki))+=2;
+(*A_NILCHECK(NL(QYEACTR_ki)))+=2;
 } 
 A_PROC_EXIT(kw);
 return;
@@ -6147,18 +6147,18 @@ SZEACTR_u-=1;
  /* line 5715: */
 if (NL(Kb))
 { 
-UZEACTR = ((*NL(QYEACTR_ki))+1) ;
+UZEACTR = ((*A_NILCHECK(NL(QYEACTR_ki)))+1) ;
 VZEACTR = (&A_VINDEX(NL(Ka),UZEACTR)) ;
-(*VZEACTR) = (A68_SSBITS)SZEACTR_u;
+(*A_NILCHECK(VZEACTR)) = (A68_SSBITS)SZEACTR_u;
  /* line 5716: */
  /* line 5717: */
-YZEACTR = A_VTRIM(WZEACTR,(NL(Ka)),A_VTSCRIPT(&(WZEACTR.upb),(NL(Ka)).upb,((*NL(QYEACTR_ki))+2),(((*NL(QYEACTR_ki))+SZEACTR_u)+1))) ;
+YZEACTR = A_VTRIM(WZEACTR,(NL(Ka)),A_VTSCRIPT(&(WZEACTR.upb),(NL(Ka)).upb,((*A_NILCHECK(NL(QYEACTR_ki)))+2),(((*A_NILCHECK(NL(QYEACTR_ki)))+SZEACTR_u)+1))) ;
 ZZEACTR = A_VTRIM(XZEACTR,(S),A_VTSCRIPT(&(XZEACTR.upb),(S).upb,1,SZEACTR_u)) ;
 (void)(A_VASSIGN2(ZZEACTR,YZEACTR,A68_CHAR ));
 } 
  /* line 5718: */
  /* line 5719: */
-(void)((*NL(QYEACTR_ki))+=(SZEACTR_u+1));
+(void)((*A_NILCHECK(NL(QYEACTR_ki)))+=(SZEACTR_u+1));
 } 
 A_PROC_EXIT(ks);
 return;
@@ -6179,7 +6179,7 @@ A_PROC_ENTRY(numbermode);
 { 
 NAFACTR_m = (A68_INT )(A68_BITS )((A68_BITS )Mode&LQAACTR_decsmask);
  /* line 5728: */
-PAFACTR_kml = (*NL(GYEACTR_mdone));
+PAFACTR_kml = (*A_NILCHECK(NL(GYEACTR_mdone)));
  /* line 5729: */
  /* line 5730: */
  /* line 5731: */
@@ -6195,9 +6195,9 @@ for ( ;; )
  /* line 5733: */
 if ( !((PAFACTR_kml!=JQAACTR_nilkml)) ) break;
  /* line 5734: */
-if ((*(&(PAFACTR_kml->M)))==NAFACTR_m)
+if ((*A_NILCHECK((&(A_NILCHECK(PAFACTR_kml)->M))))==NAFACTR_m)
 { 
-(void)(OAFACTR_i = (*(&(PAFACTR_kml->Km))));
+(void)(OAFACTR_i = (*A_NILCHECK((&(A_NILCHECK(PAFACTR_kml)->Km)))));
  /* line 5735: */
  /* line 5736: */
 goto SAFACTR_out;
@@ -6206,20 +6206,20 @@ else
 { 
  /* line 5737: */
  /* line 5738: */
-(void)(PAFACTR_kml = (*(&(PAFACTR_kml->Rest))));
+(void)(PAFACTR_kml = (*A_NILCHECK((&(A_NILCHECK(PAFACTR_kml)->Rest)))));
 } 
 }
  /* line 5739: */
-(void)(PAFACTR_kml = (*NL(IAFACTR_mtodo)));
+(void)(PAFACTR_kml = (*A_NILCHECK(NL(IAFACTR_mtodo))));
  /* line 5741: */
 for ( ;; )
 { 
  /* line 5742: */
 if ( !((PAFACTR_kml!=JQAACTR_nilkml)) ) break;
  /* line 5743: */
-if ((*(&(PAFACTR_kml->M)))==NAFACTR_m)
+if ((*A_NILCHECK((&(A_NILCHECK(PAFACTR_kml)->M))))==NAFACTR_m)
 { 
-(void)(OAFACTR_i = (*(&(PAFACTR_kml->Km))));
+(void)(OAFACTR_i = (*A_NILCHECK((&(A_NILCHECK(PAFACTR_kml)->Km)))));
  /* line 5744: */
  /* line 5745: */
 goto SAFACTR_out;
@@ -6228,32 +6228,32 @@ else
 { 
  /* line 5746: */
  /* line 5747: */
-(void)(PAFACTR_kml = (*(&(PAFACTR_kml->Rest))));
+(void)(PAFACTR_kml = (*A_NILCHECK((&(A_NILCHECK(PAFACTR_kml)->Rest)))));
 } 
 }
  /* line 5748: */
-OAFACTR_i = (*NL(GAFACTR_kmno))+=1;
+OAFACTR_i = (*A_NILCHECK(NL(GAFACTR_kmno)))+=1;
  /* line 5749: */
  /* line 5750: */
  /* line 5751: */
-if ((*NL(HYEACTR_kmfree))==JQAACTR_nilkml)
+if ((*A_NILCHECK(NL(HYEACTR_kmfree)))==JQAACTR_nilkml)
 { 
 TAFACTR = A_HEAP(A68_122 );
 } 
 else
 { 
-(void)(PAFACTR_kml = (*NL(HYEACTR_kmfree)));
+(void)(PAFACTR_kml = (*A_NILCHECK(NL(HYEACTR_kmfree))));
  /* line 5752: */
-(void)((*NL(HYEACTR_kmfree)) = (*(&((*NL(HYEACTR_kmfree))->Rest))));
+(void)((*A_NILCHECK(NL(HYEACTR_kmfree))) = (*A_NILCHECK((&(A_NILCHECK((*A_NILCHECK(NL(HYEACTR_kmfree))))->Rest)))));
  /* line 5753: */
  /* line 5754: */
 TAFACTR = PAFACTR_kml;
 } 
 UAFACTR.M = NAFACTR_m;
 UAFACTR.Km = OAFACTR_i;
-UAFACTR.Rest = (*NL(IAFACTR_mtodo));
-(void)((*TAFACTR) = UAFACTR) ;
-(*NL(IAFACTR_mtodo)) = TAFACTR;
+UAFACTR.Rest = (*A_NILCHECK(NL(IAFACTR_mtodo)));
+(void)((*A_NILCHECK(TAFACTR)) = UAFACTR) ;
+(*A_NILCHECK(NL(IAFACTR_mtodo))) = TAFACTR;
  /* line 5755: */
 SAFACTR_out: A_UNUSED;
  /* line 5756: */
@@ -6308,20 +6308,20 @@ ZAFACTR_i = A_CALLPROC(NL(KAFACTR_numbermode),(Mode),(Mode,(NL(KAFACTR_numbermod
 for ( ;; )
 { 
  /* line 5767: */
-if ( !(((*NL(IAFACTR_mtodo))!=JQAACTR_nilkml)) ) break;
+if ( !(((*A_NILCHECK(NL(IAFACTR_mtodo)))!=JQAACTR_nilkml)) ) break;
 { 
-(void)(FBFACTR_kml = (*NL(IAFACTR_mtodo)));
+(void)(FBFACTR_kml = (*A_NILCHECK(NL(IAFACTR_mtodo))));
  /* line 5768: */
-(void)((*NL(IAFACTR_mtodo)) = (*(&((*NL(IAFACTR_mtodo))->Rest))));
+(void)((*A_NILCHECK(NL(IAFACTR_mtodo))) = (*A_NILCHECK((&(A_NILCHECK((*A_NILCHECK(NL(IAFACTR_mtodo))))->Rest)))));
  /* line 5769: */
-JBFACTR = (&(FBFACTR_kml->Rest)) ;
-(void)((*JBFACTR) = (*NL(GYEACTR_mdone)));
+JBFACTR = (&(A_NILCHECK(FBFACTR_kml)->Rest)) ;
+(void)((*A_NILCHECK(JBFACTR)) = (*A_NILCHECK(NL(GYEACTR_mdone))));
  /* line 5770: */
-(*NL(GYEACTR_mdone)) = FBFACTR_kml;
+(*A_NILCHECK(NL(GYEACTR_mdone))) = FBFACTR_kml;
  /* line 5771: */
  /* line 5772: */
-KBFACTR = (*(&((*NL(GYEACTR_mdone))->M))) ;
-LBFACTR = (*(&A_VINDEX(NL(KUAACTR_modes),KBFACTR))) ;
+KBFACTR = (*A_NILCHECK((&(A_NILCHECK((*A_NILCHECK(NL(GYEACTR_mdone))))->M)))) ;
+LBFACTR = (*A_NILCHECK((&A_VINDEX(NL(KUAACTR_modes),KBFACTR)))) ;
 switch ( LBFACTR.mode )
 { 
 case 6: /* REF STRUCT(INT)  */
@@ -6330,11 +6330,11 @@ MBFACTR_p = (LBFACTR.data.mode6);
 { 
 (void)(A_CALLPROC(NL(AZEACTR_kc),(6),(6,(NL(AZEACTR_kc)).nonlocals)));
  /* line 5774: */
-(void)(A_CALLPROC(NL(GZEACTR_kw),((*(&((*NL(GYEACTR_mdone))->Km)))),((*(&((*NL(GYEACTR_mdone))->Km))),(NL(GZEACTR_kw)).nonlocals)));
+(void)(A_CALLPROC(NL(GZEACTR_kw),((*A_NILCHECK((&(A_NILCHECK((*A_NILCHECK(NL(GYEACTR_mdone))))->Km))))),((*A_NILCHECK((&(A_NILCHECK((*A_NILCHECK(NL(GYEACTR_mdone))))->Km)))),(NL(GZEACTR_kw)).nonlocals)));
  /* line 5775: */
  /* line 5776: */
  /* line 5777: */
-(void)(A_CALLPROC(NL(GZEACTR_kw),(A_CALLPROC(NL(KAFACTR_numbermode),((*(&(MBFACTR_p->Deproc)))),((*(&(MBFACTR_p->Deproc))),(NL(KAFACTR_numbermode)).nonlocals))),(A_CALLPROC(NL(KAFACTR_numbermode),((*(&(MBFACTR_p->Deproc)))),((*(&(MBFACTR_p->Deproc))),(NL(KAFACTR_numbermode)).nonlocals)),(NL(GZEACTR_kw)).nonlocals)));
+(void)(A_CALLPROC(NL(GZEACTR_kw),(A_CALLPROC(NL(KAFACTR_numbermode),((*A_NILCHECK((&(A_NILCHECK(MBFACTR_p)->Deproc))))),((*A_NILCHECK((&(A_NILCHECK(MBFACTR_p)->Deproc)))),(NL(KAFACTR_numbermode)).nonlocals))),(A_CALLPROC(NL(KAFACTR_numbermode),((*A_NILCHECK((&(A_NILCHECK(MBFACTR_p)->Deproc))))),((*A_NILCHECK((&(A_NILCHECK(MBFACTR_p)->Deproc)))),(NL(KAFACTR_numbermode)).nonlocals)),(NL(GZEACTR_kw)).nonlocals)));
 } 
 break;
 case 3: /* REF STRUCT(INT,REF MODE54)  */
@@ -6343,11 +6343,11 @@ NBFACTR_pp = (LBFACTR.data.mode3);
 { 
 (void)(A_CALLPROC(NL(AZEACTR_kc),(7),(7,(NL(AZEACTR_kc)).nonlocals)));
  /* line 5779: */
-(void)(A_CALLPROC(NL(GZEACTR_kw),((*(&((*NL(GYEACTR_mdone))->Km)))),((*(&((*NL(GYEACTR_mdone))->Km))),(NL(GZEACTR_kw)).nonlocals)));
+(void)(A_CALLPROC(NL(GZEACTR_kw),((*A_NILCHECK((&(A_NILCHECK((*A_NILCHECK(NL(GYEACTR_mdone))))->Km))))),((*A_NILCHECK((&(A_NILCHECK((*A_NILCHECK(NL(GYEACTR_mdone))))->Km)))),(NL(GZEACTR_kw)).nonlocals)));
  /* line 5780: */
-(void)(A_CALLPROC(NL(GZEACTR_kw),(A_CALLPROC(NL(KAFACTR_numbermode),((*(&(NBFACTR_pp->Deproc)))),((*(&(NBFACTR_pp->Deproc))),(NL(KAFACTR_numbermode)).nonlocals))),(A_CALLPROC(NL(KAFACTR_numbermode),((*(&(NBFACTR_pp->Deproc)))),((*(&(NBFACTR_pp->Deproc))),(NL(KAFACTR_numbermode)).nonlocals)),(NL(GZEACTR_kw)).nonlocals)));
+(void)(A_CALLPROC(NL(GZEACTR_kw),(A_CALLPROC(NL(KAFACTR_numbermode),((*A_NILCHECK((&(A_NILCHECK(NBFACTR_pp)->Deproc))))),((*A_NILCHECK((&(A_NILCHECK(NBFACTR_pp)->Deproc)))),(NL(KAFACTR_numbermode)).nonlocals))),(A_CALLPROC(NL(KAFACTR_numbermode),((*A_NILCHECK((&(A_NILCHECK(NBFACTR_pp)->Deproc))))),((*A_NILCHECK((&(A_NILCHECK(NBFACTR_pp)->Deproc)))),(NL(KAFACTR_numbermode)).nonlocals)),(NL(GZEACTR_kw)).nonlocals)));
  /* line 5781: */
-(void)(CBFACTR_ml = (*(&(NBFACTR_pp->Pars))));
+(void)(CBFACTR_ml = (*A_NILCHECK((&(A_NILCHECK(NBFACTR_pp)->Pars)))));
  /* line 5782: */
  /* line 5783: */
  /* line 5784: */
@@ -6360,9 +6360,9 @@ OBFACTR_u = (LBFACTR.data.mode2);
 { 
 (void)(A_CALLPROC(NL(AZEACTR_kc),(8),(8,(NL(AZEACTR_kc)).nonlocals)));
  /* line 5786: */
-(void)(A_CALLPROC(NL(GZEACTR_kw),((*(&((*NL(GYEACTR_mdone))->Km)))),((*(&((*NL(GYEACTR_mdone))->Km))),(NL(GZEACTR_kw)).nonlocals)));
+(void)(A_CALLPROC(NL(GZEACTR_kw),((*A_NILCHECK((&(A_NILCHECK((*A_NILCHECK(NL(GYEACTR_mdone))))->Km))))),((*A_NILCHECK((&(A_NILCHECK((*A_NILCHECK(NL(GYEACTR_mdone))))->Km)))),(NL(GZEACTR_kw)).nonlocals)));
  /* line 5787: */
-(void)(CBFACTR_ml = (*(&(OBFACTR_u->Modelist))));
+(void)(CBFACTR_ml = (*A_NILCHECK((&(A_NILCHECK(OBFACTR_u)->Modelist)))));
  /* line 5788: */
  /* line 5789: */
  /* line 5790: */
@@ -6375,11 +6375,11 @@ PBFACTR_s = (LBFACTR.data.mode4);
 { 
 (void)(A_CALLPROC(NL(AZEACTR_kc),(9),(9,(NL(AZEACTR_kc)).nonlocals)));
  /* line 5792: */
-(void)(A_CALLPROC(NL(GZEACTR_kw),((*(&((*NL(GYEACTR_mdone))->Km)))),((*(&((*NL(GYEACTR_mdone))->Km))),(NL(GZEACTR_kw)).nonlocals)));
+(void)(A_CALLPROC(NL(GZEACTR_kw),((*A_NILCHECK((&(A_NILCHECK((*A_NILCHECK(NL(GYEACTR_mdone))))->Km))))),((*A_NILCHECK((&(A_NILCHECK((*A_NILCHECK(NL(GYEACTR_mdone))))->Km)))),(NL(GZEACTR_kw)).nonlocals)));
  /* line 5793: */
 BBFACTR_l = 0;
  /* line 5794: */
-(void)(EBFACTR_sl = (*(&(PBFACTR_s->Sels))));
+(void)(EBFACTR_sl = (*A_NILCHECK((&(A_NILCHECK(PBFACTR_s)->Sels)))));
  /* line 5796: */
 for ( ;; )
 { 
@@ -6388,24 +6388,24 @@ if ( !((EBFACTR_sl!=RQAACTR_nilsel)) ) break;
 BBFACTR_l+=1;
  /* line 5798: */
  /* line 5799: */
-(void)(EBFACTR_sl = (*(&(EBFACTR_sl->Rest))));
+(void)(EBFACTR_sl = (*A_NILCHECK((&(A_NILCHECK(EBFACTR_sl)->Rest)))));
 }
  /* line 5800: */
 (void)(A_CALLPROC(NL(AZEACTR_kc),(BBFACTR_l),(BBFACTR_l,(NL(AZEACTR_kc)).nonlocals)));
  /* line 5801: */
-(void)(EBFACTR_sl = (*(&(PBFACTR_s->Sels))));
+(void)(EBFACTR_sl = (*A_NILCHECK((&(A_NILCHECK(PBFACTR_s)->Sels)))));
  /* line 5803: */
 for ( ;; )
 { 
  /* line 5804: */
 if ( !((EBFACTR_sl!=RQAACTR_nilsel)) ) break;
-(void)(A_CALLPROC(NL(GZEACTR_kw),(A_CALLPROC(NL(KAFACTR_numbermode),((*(&(EBFACTR_sl->Mode)))),((*(&(EBFACTR_sl->Mode))),(NL(KAFACTR_numbermode)).nonlocals))),(A_CALLPROC(NL(KAFACTR_numbermode),((*(&(EBFACTR_sl->Mode)))),((*(&(EBFACTR_sl->Mode))),(NL(KAFACTR_numbermode)).nonlocals)),(NL(GZEACTR_kw)).nonlocals)));
+(void)(A_CALLPROC(NL(GZEACTR_kw),(A_CALLPROC(NL(KAFACTR_numbermode),((*A_NILCHECK((&(A_NILCHECK(EBFACTR_sl)->Mode))))),((*A_NILCHECK((&(A_NILCHECK(EBFACTR_sl)->Mode)))),(NL(KAFACTR_numbermode)).nonlocals))),(A_CALLPROC(NL(KAFACTR_numbermode),((*A_NILCHECK((&(A_NILCHECK(EBFACTR_sl)->Mode))))),((*A_NILCHECK((&(A_NILCHECK(EBFACTR_sl)->Mode)))),(NL(KAFACTR_numbermode)).nonlocals)),(NL(GZEACTR_kw)).nonlocals)));
  /* line 5805: */
-RBFACTR = (*(&(EBFACTR_sl->Name))) ;
+RBFACTR = (*A_NILCHECK((&(A_NILCHECK(EBFACTR_sl)->Name)))) ;
 (void)(A_CALLPROC(NL(PZEACTR_ks),(A_HISVEC(QBFACTR,RBFACTR,32,A68_CHAR )),(A_HISVEC(QBFACTR,RBFACTR,32,A68_CHAR ),(NL(PZEACTR_ks)).nonlocals)));
  /* line 5806: */
  /* line 5807: */
-(void)(EBFACTR_sl = (*(&(EBFACTR_sl->Rest))));
+(void)(EBFACTR_sl = (*A_NILCHECK((&(A_NILCHECK(EBFACTR_sl)->Rest)))));
 }
  /* line 5808: */
  /* line 5809: */
@@ -6417,13 +6417,13 @@ SBFACTR_is = (LBFACTR.data.mode5);
 { 
 (void)(A_CALLPROC(NL(AZEACTR_kc),(10),(10,(NL(AZEACTR_kc)).nonlocals)));
  /* line 5811: */
-(void)(A_CALLPROC(NL(GZEACTR_kw),((*(&((*NL(GYEACTR_mdone))->Km)))),((*(&((*NL(GYEACTR_mdone))->Km))),(NL(GZEACTR_kw)).nonlocals)));
+(void)(A_CALLPROC(NL(GZEACTR_kw),((*A_NILCHECK((&(A_NILCHECK((*A_NILCHECK(NL(GYEACTR_mdone))))->Km))))),((*A_NILCHECK((&(A_NILCHECK((*A_NILCHECK(NL(GYEACTR_mdone))))->Km)))),(NL(GZEACTR_kw)).nonlocals)));
  /* line 5812: */
-(void)(A_CALLPROC(NL(GZEACTR_kw),(A_CALLPROC(NL(KAFACTR_numbermode),((*(&(SBFACTR_is->Imode)))),((*(&(SBFACTR_is->Imode))),(NL(KAFACTR_numbermode)).nonlocals))),(A_CALLPROC(NL(KAFACTR_numbermode),((*(&(SBFACTR_is->Imode)))),((*(&(SBFACTR_is->Imode))),(NL(KAFACTR_numbermode)).nonlocals)),(NL(GZEACTR_kw)).nonlocals)));
+(void)(A_CALLPROC(NL(GZEACTR_kw),(A_CALLPROC(NL(KAFACTR_numbermode),((*A_NILCHECK((&(A_NILCHECK(SBFACTR_is)->Imode))))),((*A_NILCHECK((&(A_NILCHECK(SBFACTR_is)->Imode)))),(NL(KAFACTR_numbermode)).nonlocals))),(A_CALLPROC(NL(KAFACTR_numbermode),((*A_NILCHECK((&(A_NILCHECK(SBFACTR_is)->Imode))))),((*A_NILCHECK((&(A_NILCHECK(SBFACTR_is)->Imode)))),(NL(KAFACTR_numbermode)).nonlocals)),(NL(GZEACTR_kw)).nonlocals)));
  /* line 5813: */
-(void)(ABFACTR_j = ((*(&(SBFACTR_is->Length)))/NL(DKEACTR_maxchar2)));
+(void)(ABFACTR_j = ((*A_NILCHECK((&(A_NILCHECK(SBFACTR_is)->Length))))/NL(DKEACTR_maxchar2)));
  /* line 5814: */
-UBFACTR = (*(&(SBFACTR_is->Length))) ;
+UBFACTR = (*A_NILCHECK((&(A_NILCHECK(SBFACTR_is)->Length)))) ;
 (void)(BBFACTR_l = A_MOD(UBFACTR,NL(DKEACTR_maxchar2),TBFACTR));
  /* line 5815: */
 (void)(A_CALLPROC(NL(AZEACTR_kc),(ABFACTR_j),(ABFACTR_j,(NL(AZEACTR_kc)).nonlocals)));
@@ -6439,11 +6439,11 @@ VBFACTR_v = (LBFACTR.data.mode7);
 { 
 (void)(A_CALLPROC(NL(AZEACTR_kc),(11),(11,(NL(AZEACTR_kc)).nonlocals)));
  /* line 5820: */
-(void)(A_CALLPROC(NL(GZEACTR_kw),((*(&((*NL(GYEACTR_mdone))->Km)))),((*(&((*NL(GYEACTR_mdone))->Km))),(NL(GZEACTR_kw)).nonlocals)));
+(void)(A_CALLPROC(NL(GZEACTR_kw),((*A_NILCHECK((&(A_NILCHECK((*A_NILCHECK(NL(GYEACTR_mdone))))->Km))))),((*A_NILCHECK((&(A_NILCHECK((*A_NILCHECK(NL(GYEACTR_mdone))))->Km)))),(NL(GZEACTR_kw)).nonlocals)));
  /* line 5821: */
-(void)(A_CALLPROC(NL(GZEACTR_kw),(A_CALLPROC(NL(KAFACTR_numbermode),((*(&(VBFACTR_v->Vecmode)))),((*(&(VBFACTR_v->Vecmode))),(NL(KAFACTR_numbermode)).nonlocals))),(A_CALLPROC(NL(KAFACTR_numbermode),((*(&(VBFACTR_v->Vecmode)))),((*(&(VBFACTR_v->Vecmode))),(NL(KAFACTR_numbermode)).nonlocals)),(NL(GZEACTR_kw)).nonlocals)));
+(void)(A_CALLPROC(NL(GZEACTR_kw),(A_CALLPROC(NL(KAFACTR_numbermode),((*A_NILCHECK((&(A_NILCHECK(VBFACTR_v)->Vecmode))))),((*A_NILCHECK((&(A_NILCHECK(VBFACTR_v)->Vecmode)))),(NL(KAFACTR_numbermode)).nonlocals))),(A_CALLPROC(NL(KAFACTR_numbermode),((*A_NILCHECK((&(A_NILCHECK(VBFACTR_v)->Vecmode))))),((*A_NILCHECK((&(A_NILCHECK(VBFACTR_v)->Vecmode)))),(NL(KAFACTR_numbermode)).nonlocals)),(NL(GZEACTR_kw)).nonlocals)));
  /* line 5822: */
-if ((*(&(VBFACTR_v->Deflex)))<0)
+if ((*A_NILCHECK((&(A_NILCHECK(VBFACTR_v)->Deflex))))<0)
 { 
 WBFACTR = 0;
 } 
@@ -6462,13 +6462,13 @@ XBFACTR_a = (LBFACTR.data.mode8);
 { 
 (void)(A_CALLPROC(NL(AZEACTR_kc),(12),(12,(NL(AZEACTR_kc)).nonlocals)));
  /* line 5826: */
-(void)(A_CALLPROC(NL(GZEACTR_kw),((*(&((*NL(GYEACTR_mdone))->Km)))),((*(&((*NL(GYEACTR_mdone))->Km))),(NL(GZEACTR_kw)).nonlocals)));
+(void)(A_CALLPROC(NL(GZEACTR_kw),((*A_NILCHECK((&(A_NILCHECK((*A_NILCHECK(NL(GYEACTR_mdone))))->Km))))),((*A_NILCHECK((&(A_NILCHECK((*A_NILCHECK(NL(GYEACTR_mdone))))->Km)))),(NL(GZEACTR_kw)).nonlocals)));
  /* line 5827: */
-(void)(A_CALLPROC(NL(GZEACTR_kw),(A_CALLPROC(NL(KAFACTR_numbermode),((*(&(XBFACTR_a->Mode)))),((*(&(XBFACTR_a->Mode))),(NL(KAFACTR_numbermode)).nonlocals))),(A_CALLPROC(NL(KAFACTR_numbermode),((*(&(XBFACTR_a->Mode)))),((*(&(XBFACTR_a->Mode))),(NL(KAFACTR_numbermode)).nonlocals)),(NL(GZEACTR_kw)).nonlocals)));
+(void)(A_CALLPROC(NL(GZEACTR_kw),(A_CALLPROC(NL(KAFACTR_numbermode),((*A_NILCHECK((&(A_NILCHECK(XBFACTR_a)->Mode))))),((*A_NILCHECK((&(A_NILCHECK(XBFACTR_a)->Mode)))),(NL(KAFACTR_numbermode)).nonlocals))),(A_CALLPROC(NL(KAFACTR_numbermode),((*A_NILCHECK((&(A_NILCHECK(XBFACTR_a)->Mode))))),((*A_NILCHECK((&(A_NILCHECK(XBFACTR_a)->Mode)))),(NL(KAFACTR_numbermode)).nonlocals)),(NL(GZEACTR_kw)).nonlocals)));
  /* line 5828: */
-(void)(A_CALLPROC(NL(AZEACTR_kc),((*(&(XBFACTR_a->Nods)))),((*(&(XBFACTR_a->Nods))),(NL(AZEACTR_kc)).nonlocals)));
+(void)(A_CALLPROC(NL(AZEACTR_kc),((*A_NILCHECK((&(A_NILCHECK(XBFACTR_a)->Nods))))),((*A_NILCHECK((&(A_NILCHECK(XBFACTR_a)->Nods)))),(NL(AZEACTR_kc)).nonlocals)));
  /* line 5829: */
-if ((*(&(XBFACTR_a->Deflex)))<0)
+if ((*A_NILCHECK((&(A_NILCHECK(XBFACTR_a)->Deflex))))<0)
 { 
 YBFACTR = 0;
 } 
@@ -6487,12 +6487,12 @@ ZBFACTR_st = (LBFACTR.data.mode9);
 { 
 (void)(A_CALLPROC(NL(AZEACTR_kc),(13),(13,(NL(AZEACTR_kc)).nonlocals)));
  /* line 5833: */
-(void)(A_CALLPROC(NL(GZEACTR_kw),((*(&((*NL(GYEACTR_mdone))->Km)))),((*(&((*NL(GYEACTR_mdone))->Km))),(NL(GZEACTR_kw)).nonlocals)));
+(void)(A_CALLPROC(NL(GZEACTR_kw),((*A_NILCHECK((&(A_NILCHECK((*A_NILCHECK(NL(GYEACTR_mdone))))->Km))))),((*A_NILCHECK((&(A_NILCHECK((*A_NILCHECK(NL(GYEACTR_mdone))))->Km)))),(NL(GZEACTR_kw)).nonlocals)));
  /* line 5834: */
  /* line 5835: */
  /* line 5836: */
  /* line 5837: */
-(void)(A_CALLPROC(NL(GZEACTR_kw),(A_CALLPROC(NL(KAFACTR_numbermode),((*(&(ZBFACTR_st->Mode)))),((*(&(ZBFACTR_st->Mode))),(NL(KAFACTR_numbermode)).nonlocals))),(A_CALLPROC(NL(KAFACTR_numbermode),((*(&(ZBFACTR_st->Mode)))),((*(&(ZBFACTR_st->Mode))),(NL(KAFACTR_numbermode)).nonlocals)),(NL(GZEACTR_kw)).nonlocals)));
+(void)(A_CALLPROC(NL(GZEACTR_kw),(A_CALLPROC(NL(KAFACTR_numbermode),((*A_NILCHECK((&(A_NILCHECK(ZBFACTR_st)->Mode))))),((*A_NILCHECK((&(A_NILCHECK(ZBFACTR_st)->Mode)))),(NL(KAFACTR_numbermode)).nonlocals))),(A_CALLPROC(NL(KAFACTR_numbermode),((*A_NILCHECK((&(A_NILCHECK(ZBFACTR_st)->Mode))))),((*A_NILCHECK((&(A_NILCHECK(ZBFACTR_st)->Mode)))),(NL(KAFACTR_numbermode)).nonlocals)),(NL(GZEACTR_kw)).nonlocals)));
 } 
 break;
 default: 
@@ -6516,7 +6516,7 @@ if ( !((CBFACTR_ml!=OQAACTR_nilml)) ) break;
 BBFACTR_l+=1;
  /* line 5846: */
  /* line 5847: */
-(void)(CBFACTR_ml = (*(&(CBFACTR_ml->Rest))));
+(void)(CBFACTR_ml = (*A_NILCHECK((&(A_NILCHECK(CBFACTR_ml)->Rest)))));
 }
  /* line 5848: */
 (void)(A_CALLPROC(NL(AZEACTR_kc),(BBFACTR_l),(BBFACTR_l,(NL(AZEACTR_kc)).nonlocals)));
@@ -6527,10 +6527,10 @@ for ( BCFACTR = 1;
 BCFACTR <= ACFACTR;
 BCFACTR += 1 )
 { 
-(void)(A_CALLPROC(NL(GZEACTR_kw),(A_CALLPROC(NL(KAFACTR_numbermode),((*(&(DBFACTR_ml1->Mode)))),((*(&(DBFACTR_ml1->Mode))),(NL(KAFACTR_numbermode)).nonlocals))),(A_CALLPROC(NL(KAFACTR_numbermode),((*(&(DBFACTR_ml1->Mode)))),((*(&(DBFACTR_ml1->Mode))),(NL(KAFACTR_numbermode)).nonlocals)),(NL(GZEACTR_kw)).nonlocals)));
+(void)(A_CALLPROC(NL(GZEACTR_kw),(A_CALLPROC(NL(KAFACTR_numbermode),((*A_NILCHECK((&(A_NILCHECK(DBFACTR_ml1)->Mode))))),((*A_NILCHECK((&(A_NILCHECK(DBFACTR_ml1)->Mode)))),(NL(KAFACTR_numbermode)).nonlocals))),(A_CALLPROC(NL(KAFACTR_numbermode),((*A_NILCHECK((&(A_NILCHECK(DBFACTR_ml1)->Mode))))),((*A_NILCHECK((&(A_NILCHECK(DBFACTR_ml1)->Mode)))),(NL(KAFACTR_numbermode)).nonlocals)),(NL(GZEACTR_kw)).nonlocals)));
  /* line 5851: */
  /* line 5852: */
-(void)(DBFACTR_ml1 = (*(&(DBFACTR_ml1->Rest))));
+(void)(DBFACTR_ml1 = (*A_NILCHECK((&(A_NILCHECK(DBFACTR_ml1)->Rest)))));
 }
  /* line 5853: */
 GBFACTR: ;
@@ -6564,9 +6564,9 @@ A68_BOOL  ZHFACTR;  /* clause result */
 A_PROC_ENTRY(scopel);
  /* line 6093: */
 { 
-NHFACTR_lab = (*(&(NL(NFFACTR_current)->Labs)));
+NHFACTR_lab = (*A_NILCHECK((&(A_NILCHECK(NL(NFFACTR_current))->Labs))));
  /* line 6094: */
-(*L) = (A68_69 *)A68_NIL;
+(*A_NILCHECK(L)) = (A68_69 *)A68_NIL;
  /* line 6095: */
 PHFACTR_ans = A68_FALSE;
  /* line 6097: */
@@ -6575,9 +6575,9 @@ for ( ;; )
  /* line 6098: */
 if ( !((NHFACTR_lab!=XQAACTR_nillab)) ) break;
  /* line 6099: */
-if ((*(&(NHFACTR_lab->Status)))!=0)
+if ((*A_NILCHECK((&(A_NILCHECK(NHFACTR_lab)->Status))))!=0)
 { 
-(void)(OHFACTR_lab1 = (*(&(NL(External)->Labs))));
+(void)(OHFACTR_lab1 = (*A_NILCHECK((&(A_NILCHECK(NL(External))->Labs)))));
  /* line 6100: */
 PHFACTR_ans = A68_TRUE;
  /* line 6102: */
@@ -6587,12 +6587,12 @@ for ( ;; )
 QHFACTR = (OHFACTR_lab1!=XQAACTR_nillab);
 if ( QHFACTR )
 { /* line 6104: */
-SHFACTR = (*(&(OHFACTR_lab1->Name))) ;
-UHFACTR = (*(&(NHFACTR_lab->Name))) ;
+SHFACTR = (*A_NILCHECK((&(A_NILCHECK(OHFACTR_lab1)->Name)))) ;
+UHFACTR = (*A_NILCHECK((&(A_NILCHECK(NHFACTR_lab)->Name)))) ;
 QHFACTR = A_VC_NE(A_HISVEC(RHFACTR,SHFACTR,32,A68_CHAR ),A_HISVEC(THFACTR,UHFACTR,32,A68_CHAR ));
 }
 if ( !(QHFACTR) ) break;
-(void)(OHFACTR_lab1 = (*(&(OHFACTR_lab1->Rest))));
+(void)(OHFACTR_lab1 = (*A_NILCHECK((&(A_NILCHECK(OHFACTR_lab1)->Rest)))));
 }
  /* line 6106: */
  /* line 6107: */
@@ -6600,38 +6600,38 @@ if ( !(QHFACTR) ) break;
 if (OHFACTR_lab1!=XQAACTR_nillab)
 { 
  /* line 6109: */
-VHFACTR = (*(&(OHFACTR_lab1->Labno)));
+VHFACTR = (*A_NILCHECK((&(A_NILCHECK(OHFACTR_lab1)->Labno))));
 } 
 else
 { 
  /* line 6110: */
 VHFACTR = 1;
 } 
-WHFACTR = (&(NHFACTR_lab->Status)) ;
-(*WHFACTR) = VHFACTR;
+WHFACTR = (&(A_NILCHECK(NHFACTR_lab)->Status)) ;
+(*A_NILCHECK(WHFACTR)) = VHFACTR;
 } 
  /* line 6111: */
 OHFACTR_lab1 = NHFACTR_lab;
  /* line 6112: */
-(void)(NHFACTR_lab = (*(&(NHFACTR_lab->Rest))));
+(void)(NHFACTR_lab = (*A_NILCHECK((&(A_NILCHECK(NHFACTR_lab)->Rest)))));
  /* line 6113: */
  /* line 6114: */
-if ((*(&(OHFACTR_lab1->Status)))==1)
+if ((*A_NILCHECK((&(A_NILCHECK(OHFACTR_lab1)->Status))))==1)
 { 
-XHFACTR = (&(OHFACTR_lab1->Rest)) ;
-(void)((*XHFACTR) = (*E));
+XHFACTR = (&(A_NILCHECK(OHFACTR_lab1)->Rest)) ;
+(void)((*A_NILCHECK(XHFACTR)) = (*A_NILCHECK(E)));
  /* line 6115: */
  /* line 6116: */
-(*E) = OHFACTR_lab1;
+(*A_NILCHECK(E)) = OHFACTR_lab1;
 } 
 else
 { 
-YHFACTR = (&(OHFACTR_lab1->Rest)) ;
-(void)((*YHFACTR) = (*L));
+YHFACTR = (&(A_NILCHECK(OHFACTR_lab1)->Rest)) ;
+(void)((*A_NILCHECK(YHFACTR)) = (*A_NILCHECK(L)));
  /* line 6117: */
  /* line 6118: */
  /* line 6119: */
-(*L) = OHFACTR_lab1;
+(*A_NILCHECK(L)) = OHFACTR_lab1;
 } 
 }
  /* line 6120: */
@@ -6717,31 +6717,31 @@ FJFACTR = EJFACTR ;
 (void)(A_VASSIGN2(FJFACTR,YIFACTR_ignoremess,A68_CHAR ));
  /* line 6132: */
  /* line 6133: */
-(*NL(SYAACTR_modedecdepth)) = 0;
+(*A_NILCHECK(NL(SYAACTR_modedecdepth))) = 0;
  /* line 6134: */
 JJFACTR_result = A68_FALSE;
  /* line 6135: */
-(*NL(ITAACTR_supflts)) = FEBACTR_fltgap;
+(*A_NILCHECK(NL(ITAACTR_supflts))) = FEBACTR_fltgap;
  /* line 6136: */
  /* line 6137: */
 if (Readertype!=UDBACTR_formatreader)
 { 
-(void)((*NL(AIFACTR_inserts)) = A_ISVEC(KJFACTR,NL(JEBACTR_insertsn),13,A68_INT ));
+(void)((*A_NILCHECK(NL(AIFACTR_inserts))) = A_ISVEC(KJFACTR,NL(JEBACTR_insertsn),13,A68_INT ));
  /* line 6138: */
-(void)((*NL(BIFACTR_ignorable)) = A_ISVEC(LJFACTR,NL(LEBACTR_ignorablen),17,A68_INT ));
+(void)((*A_NILCHECK(NL(BIFACTR_ignorable))) = A_ISVEC(LJFACTR,NL(LEBACTR_ignorablen),17,A68_INT ));
  /* line 6139: */
-(void)((*NL(CIFACTR_nonstarter)) = A_ISVEC(MJFACTR,NL(NEBACTR_nonducstart),24,A68_INT ));
+(void)((*A_NILCHECK(NL(CIFACTR_nonstarter))) = A_ISVEC(MJFACTR,NL(NEBACTR_nonducstart),24,A68_INT ));
  /* line 6140: */
  /* line 6141: */
 NJFACTR = A68_FALSE;
 } 
 else
 { 
-(void)((*NL(AIFACTR_inserts)) = A_ISVEC(OJFACTR,NL(PEBACTR_insertsf),3,A68_INT ));
+(void)((*A_NILCHECK(NL(AIFACTR_inserts))) = A_ISVEC(OJFACTR,NL(PEBACTR_insertsf),3,A68_INT ));
  /* line 6142: */
-(void)((*NL(BIFACTR_ignorable)) = A_ISVEC(PJFACTR,NL(REBACTR_ignorablef),4,A68_INT ));
+(void)((*A_NILCHECK(NL(BIFACTR_ignorable))) = A_ISVEC(PJFACTR,NL(REBACTR_ignorablef),4,A68_INT ));
  /* line 6143: */
-(void)((*NL(CIFACTR_nonstarter)) = A_ISVEC(QJFACTR,NL(TEBACTR_nonpicstart),15,A68_INT ));
+(void)((*A_NILCHECK(NL(CIFACTR_nonstarter))) = A_ISVEC(QJFACTR,NL(TEBACTR_nonpicstart),15,A68_INT ));
  /* line 6144: */
  /* line 6145: */
 NJFACTR = A68_TRUE;
@@ -6752,23 +6752,23 @@ LIFACTR_insert: A_UNUSED;
 GJFACTR_new = 1;
  /* line 6147: */
  /* line 6148: */
-SJFACTR = (*NL(AIFACTR_inserts)).upb;
+SJFACTR = (*A_NILCHECK(NL(AIFACTR_inserts))).upb;
 for ( RJFACTR_i = 1;
 RJFACTR_i <= SJFACTR;
 RJFACTR_i += 1 )
 { 
  /* line 6149: */
-if ( !((!A_CALLPROC(NL(WGBACTR_checkinsert),((*(&A_VINDEX((*NL(AIFACTR_inserts)),RJFACTR_i))), DIFACTR_checkt1),((*(&A_VINDEX((*NL(AIFACTR_inserts)),RJFACTR_i))), DIFACTR_checkt1,(NL(WGBACTR_checkinsert)).nonlocals)))) ) break;
+if ( !((!A_CALLPROC(NL(WGBACTR_checkinsert),((*A_NILCHECK((&A_VINDEX((*A_NILCHECK(NL(AIFACTR_inserts))),RJFACTR_i)))), DIFACTR_checkt1),((*A_NILCHECK((&A_VINDEX((*A_NILCHECK(NL(AIFACTR_inserts))),RJFACTR_i)))), DIFACTR_checkt1,(NL(WGBACTR_checkinsert)).nonlocals)))) ) break;
 GJFACTR_new+=1;
 }
  /* line 6151: */
  /* line 6152: */
-if (GJFACTR_new==((*NL(AIFACTR_inserts)).upb+1))
+if (GJFACTR_new==((*A_NILCHECK(NL(AIFACTR_inserts))).upb+1))
 { 
 HJFACTR_notfound = A68_TRUE;
  /* line 6153: */
  /* line 6154: */
-UJFACTR = (*NL(BIFACTR_ignorable)).upb;
+UJFACTR = (*A_NILCHECK(NL(BIFACTR_ignorable))).upb;
 for ( TJFACTR_i = 1;
 TJFACTR_i <= UJFACTR;
 TJFACTR_i += 1 )
@@ -6776,7 +6776,7 @@ TJFACTR_i += 1 )
  /* line 6155: */
 if ( !(HJFACTR_notfound) ) break;
  /* line 6156: */
-if ((*NL(MFBACTR_t1))==(*(&A_VINDEX((*NL(BIFACTR_ignorable)),TJFACTR_i))))
+if ((*A_NILCHECK(NL(MFBACTR_t1)))==(*A_NILCHECK((&A_VINDEX((*A_NILCHECK(NL(BIFACTR_ignorable))),TJFACTR_i)))))
 { 
  /* line 6157: */
  /* line 6158: */
@@ -6794,15 +6794,15 @@ else
 { 
 VJFACTR = 1 ;
 WJFACTR = (&A_VINDEX(YIFACTR_ignoremess,VJFACTR)) ;
-(void)((*WJFACTR) = (A68_SSBITS)(A68_INT )(A68_BITS )((A68_BITS )(*NL(MFBACTR_t1))&(A68_BITS )63));
+(void)((*A_NILCHECK(WJFACTR)) = (A68_SSBITS)(A68_INT )(A68_BITS )((A68_BITS )(*A_NILCHECK(NL(MFBACTR_t1)))&(A68_BITS )63));
  /* line 6163: */
  /* line 6164: */
-if ((*NL(MFBACTR_t1))==74)
+if ((*A_NILCHECK(NL(MFBACTR_t1)))==74)
 { 
-XJFACTR = ((*NL(WDBACTR_recoverdepth))==0);
+XJFACTR = ((*A_NILCHECK(NL(WDBACTR_recoverdepth)))==0);
 if ( XJFACTR )
 { /* line 6165: */
-XJFACTR = ((*NL(ITAACTR_supflts))==0);
+XJFACTR = ((*A_NILCHECK(NL(ITAACTR_supflts)))==0);
 }
  /* line 6167: */
 if (XJFACTR)
@@ -6821,14 +6821,14 @@ YJFACTR = (-1);
  /* line 6171: */
 (void)(A_CALLPROC(NL(UIBACTR_faultchars),(YIFACTR_ignoremess),(YIFACTR_ignoremess,(NL(UIBACTR_faultchars)).nonlocals)));
  /* line 6172: */
-(*NL(ITAACTR_supflts)) = FEBACTR_fltgap;
+(*A_NILCHECK(NL(ITAACTR_supflts))) = FEBACTR_fltgap;
  /* line 6173: */
-(void)((*NL(MFBACTR_t1)) = A_CALLPROC(NL(LFDACTR_reader),(Readertype),(Readertype,(NL(LFDACTR_reader)).nonlocals)));
+(void)((*A_NILCHECK(NL(MFBACTR_t1))) = A_CALLPROC(NL(LFDACTR_reader),(Readertype),(Readertype,(NL(LFDACTR_reader)).nonlocals)));
  /* line 6174: */
  /* line 6175: */
-if (A_CALLPROC(NL(WGBACTR_checkinsert),((*NL(MFBACTR_t1)), EIFACTR_notcheckt1),((*NL(MFBACTR_t1)), EIFACTR_notcheckt1,(NL(WGBACTR_checkinsert)).nonlocals)))
+if (A_CALLPROC(NL(WGBACTR_checkinsert),((*A_NILCHECK(NL(MFBACTR_t1))), EIFACTR_notcheckt1),((*A_NILCHECK(NL(MFBACTR_t1))), EIFACTR_notcheckt1,(NL(WGBACTR_checkinsert)).nonlocals)))
 { 
-(void)((*NL(KFBACTR_crts)) = (*NL(LFBACTR_failpos)));
+(void)((*A_NILCHECK(NL(KFBACTR_crts))) = (*A_NILCHECK(NL(LFBACTR_failpos))));
  /* line 6176: */
  /* line 6177: */
 goto NIFACTR_endrecover;
@@ -6844,25 +6844,25 @@ goto LIFACTR_insert;
 } 
 else
 { 
-(void)((*NL(ODBACTR_next)) = ((*NL(MFBACTR_t1))+1000));
+(void)((*A_NILCHECK(NL(ODBACTR_next))) = ((*A_NILCHECK(NL(MFBACTR_t1)))+1000));
  /* line 6181: */
  /* line 6182: */
  /* line 6183: */
  /* line 6184: */
 ZJFACTR = 1 ;
 AKFACTR = (&A_VINDEX(WIFACTR_insertmess,ZJFACTR)) ;
-(void)((*AKFACTR) = (A68_SSBITS)(A68_INT )(A68_BITS )((A68_BITS )((*NL(MFBACTR_t1)) = (*(&A_VINDEX((*NL(AIFACTR_inserts)),GJFACTR_new))))&(A68_BITS )63));
+(void)((*A_NILCHECK(AKFACTR)) = (A68_SSBITS)(A68_INT )(A68_BITS )((A68_BITS )((*A_NILCHECK(NL(MFBACTR_t1))) = (*A_NILCHECK((&A_VINDEX((*A_NILCHECK(NL(AIFACTR_inserts))),GJFACTR_new)))))&(A68_BITS )63));
  /* line 6185: */
-if ((*NL(MFBACTR_t1))==32)
+if ((*A_NILCHECK(NL(MFBACTR_t1)))==32)
 { 
-(void)((*NL(PSAACTR_ident)) = NL(XTAACTR_spaces));
+(void)((*A_NILCHECK(NL(PSAACTR_ident))) = NL(XTAACTR_spaces));
 } 
  /* line 6186: */
 (void)(A_CALLPROC(NL(UIBACTR_faultchars),(WIFACTR_insertmess),(WIFACTR_insertmess,(NL(UIBACTR_faultchars)).nonlocals)));
  /* line 6187: */
-(*NL(ITAACTR_supflts))+=1;
+(*A_NILCHECK(NL(ITAACTR_supflts)))+=1;
  /* line 6188: */
-(void)((*NL(KFBACTR_crts)) = (*NL(LFBACTR_failpos)));
+(void)((*A_NILCHECK(NL(KFBACTR_crts))) = (*A_NILCHECK(NL(LFBACTR_failpos))));
  /* line 6189: */
  /* line 6190: */
 goto NIFACTR_endrecover;
@@ -6872,7 +6872,7 @@ PIFACTR_level2: A_UNUSED;
 HJFACTR_notfound = A68_TRUE;
  /* line 6193: */
  /* line 6194: */
-CKFACTR = (*NL(CIFACTR_nonstarter)).upb;
+CKFACTR = (*A_NILCHECK(NL(CIFACTR_nonstarter))).upb;
 for ( BKFACTR_i = 1;
 BKFACTR_i <= CKFACTR;
 BKFACTR_i += 1 )
@@ -6880,7 +6880,7 @@ BKFACTR_i += 1 )
  /* line 6195: */
 if ( !(HJFACTR_notfound) ) break;
  /* line 6196: */
-if ((*NL(MFBACTR_t1))==(*(&A_VINDEX((*NL(CIFACTR_nonstarter)),BKFACTR_i))))
+if ((*A_NILCHECK(NL(MFBACTR_t1)))==(*A_NILCHECK((&A_VINDEX((*A_NILCHECK(NL(CIFACTR_nonstarter))),BKFACTR_i)))))
 { 
  /* line 6197: */
  /* line 6198: */
@@ -6891,14 +6891,14 @@ HJFACTR_notfound = A68_FALSE;
  /* line 6201: */
 if (HJFACTR_notfound)
 { 
-DKFACTR = (&A_VINDEX((*NL(HFBACTR_sidstack)),(*NL(JFBACTR_stind)))) ;
-(void)((*DKFACTR) = (*NL(LFBACTR_failpos)));
+DKFACTR = (&A_VINDEX((*A_NILCHECK(NL(HFBACTR_sidstack))),(*A_NILCHECK(NL(JFBACTR_stind))))) ;
+(void)((*A_NILCHECK(DKFACTR)) = (*A_NILCHECK(NL(LFBACTR_failpos))));
  /* line 6202: */
-(*NL(JFBACTR_stind))+=1;
+(*A_NILCHECK(NL(JFBACTR_stind)))+=1;
  /* line 6203: */
-(*NL(KFBACTR_crts)) = 3;
+(*A_NILCHECK(NL(KFBACTR_crts))) = 3;
  /* line 6204: */
-(void)((*NL(ODBACTR_next)) = ((*NL(MFBACTR_t1))+1000));
+(void)((*A_NILCHECK(NL(ODBACTR_next))) = ((*A_NILCHECK(NL(MFBACTR_t1)))+1000));
  /* line 6205: */
  /* line 6206: */
  /* line 6207: */
@@ -6911,23 +6911,23 @@ else
 { 
 EKFACTR = DDBACTR_recoversymbol;
 } 
-(*NL(MFBACTR_t1)) = EKFACTR;
+(*A_NILCHECK(NL(MFBACTR_t1))) = EKFACTR;
  /* line 6209: */
  /* line 6210: */
-if (((*NL(WDBACTR_recoverdepth))+=1)>15)
+if (((*A_NILCHECK(NL(WDBACTR_recoverdepth)))+=1)>15)
 { 
  /* line 6212: */
 (void)(A_CALLPROC(NL(VJBACTR_abort),(133),(133,(NL(VJBACTR_abort)).nonlocals)));
 } 
  /* line 6213: */
-(void)((*NL(ITAACTR_supflts)) = (FEBACTR_fltgap+1));
+(void)((*A_NILCHECK(NL(ITAACTR_supflts))) = (FEBACTR_fltgap+1));
  /* line 6214: */
  /* line 6215: */
 if (IJFACTR_formatread)
 { 
 (void)(A_CALLPROC(NL(UIBACTR_faultchars),(GKFACTR),(GKFACTR,(NL(UIBACTR_faultchars)).nonlocals)));
  /* line 6216: */
-(void)(A_CALLPROC((*NL(FIFACTR_informat1)),(),(((*NL(FIFACTR_informat1))).nonlocals)));
+(void)(A_CALLPROC((*A_NILCHECK(NL(FIFACTR_informat1))),(),(((*A_NILCHECK(NL(FIFACTR_informat1)))).nonlocals)));
  /* line 6217: */
 HKFACTR.V.Props = MQAACTR_z;
 HKFACTR.V.Mode = ZKAACTR_faultmode;
@@ -6935,9 +6935,9 @@ HKFACTR.V.Vlist = (A68_124 *)A68_NIL;
 HKFACTR.V.Labs = (A68_69 *)A68_NIL;
 HKFACTR.Type = 0;
 HKFACTR.Rest = (A68_124 *)A68_NIL;
-(*NL(XGFACTR_vlist)) = HKFACTR;
+(*A_NILCHECK(NL(XGFACTR_vlist))) = HKFACTR;
  /* line 6218: */
-(*NL(ITAACTR_supflts)) = FEBACTR_fltgap;
+(*A_NILCHECK(NL(ITAACTR_supflts))) = FEBACTR_fltgap;
  /* line 6219: */
  /* line 6220: */
 (void)(A_CALLPROC(NL(UIBACTR_faultchars),(JKFACTR),(JKFACTR,(NL(UIBACTR_faultchars)).nonlocals)));
@@ -6946,38 +6946,38 @@ else
 { 
 (void)(A_CALLPROC(NL(UIBACTR_faultchars),(LKFACTR),(LKFACTR,(NL(UIBACTR_faultchars)).nonlocals)));
  /* line 6221: */
-(*NL(QDBACTR_look)) = 2;
+(*A_NILCHECK(NL(QDBACTR_look))) = 2;
  /* line 6222: */
 A_CALLPROC(NL(GFFACTR_range),(NL(NFFACTR_current), (A68_67 *)A68_NIL, (A68_110 *)A68_NIL, (A68_BOOL *)A68_NIL, &MKFACTR),(NL(NFFACTR_current), (A68_67 *)A68_NIL, (A68_110 *)A68_NIL, (A68_BOOL *)A68_NIL, &MKFACTR,(NL(GFFACTR_range)).nonlocals));
-(*NL(XGFACTR_vlist)) = MKFACTR;
+(*A_NILCHECK(NL(XGFACTR_vlist))) = MKFACTR;
  /* line 6223: */
-(*NL(ITAACTR_supflts)) = FEBACTR_fltgap;
+(*A_NILCHECK(NL(ITAACTR_supflts))) = FEBACTR_fltgap;
  /* line 6224: */
 (void)(A_CALLPROC(NL(UIBACTR_faultchars),(OKFACTR),(OKFACTR,(NL(UIBACTR_faultchars)).nonlocals)));
  /* line 6225: */
-PKFACTR = (*NL(JFBACTR_stind))-=1 ;
-(void)((*NL(KFBACTR_crts)) = (*(&A_VINDEX((*NL(HFBACTR_sidstack)),PKFACTR))));
+PKFACTR = (*A_NILCHECK(NL(JFBACTR_stind)))-=1 ;
+(void)((*A_NILCHECK(NL(KFBACTR_crts))) = (*A_NILCHECK((&A_VINDEX((*A_NILCHECK(NL(HFBACTR_sidstack))),PKFACTR)))));
  /* line 6226: */
  /* line 6227: */
 QKFACTR = (Readertype==UDBACTR_formatreader);
 if ( QKFACTR )
-{QKFACTR = ((*NL(MFBACTR_t1))!=25);
+{QKFACTR = ((*A_NILCHECK(NL(MFBACTR_t1)))!=25);
 }
 if ( QKFACTR )
 { /* line 6228: */
-QKFACTR = ((*NL(MFBACTR_t1))!=28);
+QKFACTR = ((*A_NILCHECK(NL(MFBACTR_t1)))!=28);
 }
 if (QKFACTR)
 { 
-(void)((*NL(ODBACTR_next)) = ((*NL(MFBACTR_t1))+HCBACTR_illegaltok));
+(void)((*A_NILCHECK(NL(ODBACTR_next))) = ((*A_NILCHECK(NL(MFBACTR_t1)))+HCBACTR_illegaltok));
  /* line 6229: */
  /* line 6230: */
  /* line 6232: */
-(*NL(MFBACTR_t1)) = 0;
+(*A_NILCHECK(NL(MFBACTR_t1))) = 0;
 } 
 } 
  /* line 6233: */
-(*NL(WDBACTR_recoverdepth))-=1;
+(*A_NILCHECK(NL(WDBACTR_recoverdepth)))-=1;
  /* line 6234: */
  /* line 6235: */
 goto NIFACTR_endrecover;
@@ -6987,18 +6987,18 @@ else
  /* line 6236: */
 RKFACTR = IJFACTR_formatread;
 if ( RKFACTR )
-{SKFACTR = ((*NL(MFBACTR_t1))==0);
+{SKFACTR = ((*A_NILCHECK(NL(MFBACTR_t1)))==0);
 if ( ! SKFACTR )
-{SKFACTR = ((*NL(MFBACTR_t1))==38);
+{SKFACTR = ((*A_NILCHECK(NL(MFBACTR_t1)))==38);
 }
 if ( ! SKFACTR )
-{SKFACTR = ((*NL(MFBACTR_t1))==60);
+{SKFACTR = ((*A_NILCHECK(NL(MFBACTR_t1)))==60);
 }
  /* line 6237: */
 if ( ! SKFACTR )
-{TKFACTR = ((*NL(MFBACTR_t1))>39);
+{TKFACTR = ((*A_NILCHECK(NL(MFBACTR_t1)))>39);
 if ( TKFACTR )
-{TKFACTR = ((*NL(MFBACTR_t1))<54);
+{TKFACTR = ((*A_NILCHECK(NL(MFBACTR_t1)))<54);
 }
 SKFACTR = TKFACTR;
 }
@@ -7007,30 +7007,30 @@ RKFACTR = SKFACTR;
 }
 if (RKFACTR)
 { 
-UKFACTR = ((*NL(MFBACTR_t1))>0);
+UKFACTR = ((*A_NILCHECK(NL(MFBACTR_t1)))>0);
 if ( UKFACTR )
 { /* line 6239: */
-UKFACTR = ((*NL(MFBACTR_t1))<60);
+UKFACTR = ((*A_NILCHECK(NL(MFBACTR_t1)))<60);
 }
 if (UKFACTR)
 { 
  /* line 6240: */
-(*NL(LSAACTR_tind))-=1;
+(*A_NILCHECK(NL(LSAACTR_tind)))-=1;
 } 
  /* line 6242: */
  /* line 6244: */
-if ((*NL(VGFACTR_formatbrind))>=(*NL(VBBACTR_brind)))
+if ((*A_NILCHECK(NL(VGFACTR_formatbrind)))>=(*A_NILCHECK(NL(VBBACTR_brind))))
 { 
-VKFACTR = (*NL(JFBACTR_stind)) = (*NL(UGFACTR_formatstind)) ;
-(void)((*NL(KFBACTR_crts)) = (*(&A_VINDEX((*NL(HFBACTR_sidstack)),VKFACTR))));
+VKFACTR = (*A_NILCHECK(NL(JFBACTR_stind))) = (*A_NILCHECK(NL(UGFACTR_formatstind))) ;
+(void)((*A_NILCHECK(NL(KFBACTR_crts))) = (*A_NILCHECK((&A_VINDEX((*A_NILCHECK(NL(HFBACTR_sidstack))),VKFACTR)))));
  /* line 6245: */
-(*NL(ITAACTR_supflts)) = FEBACTR_fltgap;
+(*A_NILCHECK(NL(ITAACTR_supflts))) = FEBACTR_fltgap;
  /* line 6246: */
 (void)(A_CALLPROC(NL(UIBACTR_faultchars),(XKFACTR),(XKFACTR,(NL(UIBACTR_faultchars)).nonlocals)));
  /* line 6247: */
 JJFACTR_result = A68_TRUE;
  /* line 6248: */
-(*NL(MFBACTR_t1)) = 0;
+(*A_NILCHECK(NL(MFBACTR_t1))) = 0;
  /* line 6249: */
  /* line 6250: */
 goto NIFACTR_endrecover;
@@ -7039,13 +7039,13 @@ else
 { 
 IJFACTR_formatread = A68_FALSE;
  /* line 6251: */
-(void)((*NL(AIFACTR_inserts)) = A_ISVEC(YKFACTR,NL(JEBACTR_insertsn),13,A68_INT ));
+(void)((*A_NILCHECK(NL(AIFACTR_inserts))) = A_ISVEC(YKFACTR,NL(JEBACTR_insertsn),13,A68_INT ));
  /* line 6252: */
-(void)((*NL(BIFACTR_ignorable)) = A_ISVEC(ZKFACTR,NL(LEBACTR_ignorablen),17,A68_INT ));
+(void)((*A_NILCHECK(NL(BIFACTR_ignorable))) = A_ISVEC(ZKFACTR,NL(LEBACTR_ignorablen),17,A68_INT ));
  /* line 6253: */
-(void)((*NL(CIFACTR_nonstarter)) = A_ISVEC(ALFACTR,NL(NEBACTR_nonducstart),24,A68_INT ));
+(void)((*A_NILCHECK(NL(CIFACTR_nonstarter))) = A_ISVEC(ALFACTR,NL(NEBACTR_nonducstart),24,A68_INT ));
  /* line 6254: */
-(void)((*NL(MFBACTR_t1)) = A_CALLPROC(NL(LFDACTR_reader),(TDBACTR_screader),(TDBACTR_screader,(NL(LFDACTR_reader)).nonlocals)));
+(void)((*A_NILCHECK(NL(MFBACTR_t1))) = A_CALLPROC(NL(LFDACTR_reader),(TDBACTR_screader),(TDBACTR_screader,(NL(LFDACTR_reader)).nonlocals)));
  /* line 6255: */
  /* line 6256: */
  /* line 6257: */
@@ -7054,35 +7054,35 @@ goto PIFACTR_level2;
 } 
 else
 { 
-BLFACTR = ((*NL(MFBACTR_t1))!=25);
+BLFACTR = ((*A_NILCHECK(NL(MFBACTR_t1)))!=25);
 if ( BLFACTR )
-{BLFACTR = ((*NL(MFBACTR_t1))!=45);
+{BLFACTR = ((*A_NILCHECK(NL(MFBACTR_t1)))!=45);
 }
  /* line 6258: */
 if ( ! BLFACTR )
-{BLFACTR = ((*NL(VBBACTR_brind))>=(*NL(TGFACTR_rangebrind)));
+{BLFACTR = ((*A_NILCHECK(NL(VBBACTR_brind)))>=(*A_NILCHECK(NL(TGFACTR_rangebrind))));
 }
 if ( ! BLFACTR )
-{BLFACTR = ((*NL(TGFACTR_rangebrind))==2);
+{BLFACTR = ((*A_NILCHECK(NL(TGFACTR_rangebrind)))==2);
 }
  /* line 6259: */
 if ( BLFACTR )
 { /* line 6260: */
-BLFACTR = ((*NL(MFBACTR_t1))!=60);
+BLFACTR = ((*A_NILCHECK(NL(MFBACTR_t1)))!=60);
 }
 if (BLFACTR)
 { 
 CLFACTR = 1 ;
 DLFACTR = (&A_VINDEX(YIFACTR_ignoremess,CLFACTR)) ;
-(void)((*DLFACTR) = (A68_SSBITS)(A68_INT )(A68_BITS )((A68_BITS )(*NL(MFBACTR_t1))&(A68_BITS )63));
+(void)((*A_NILCHECK(DLFACTR)) = (A68_SSBITS)(A68_INT )(A68_BITS )((A68_BITS )(*A_NILCHECK(NL(MFBACTR_t1)))&(A68_BITS )63));
  /* line 6261: */
  /* line 6262: */
-if ((*NL(MFBACTR_t1))==74)
+if ((*A_NILCHECK(NL(MFBACTR_t1)))==74)
 { 
-ELFACTR = ((*NL(WDBACTR_recoverdepth))==0);
+ELFACTR = ((*A_NILCHECK(NL(WDBACTR_recoverdepth)))==0);
 if ( ELFACTR )
 { /* line 6263: */
-ELFACTR = ((*NL(ITAACTR_supflts))==0);
+ELFACTR = ((*A_NILCHECK(NL(ITAACTR_supflts)))==0);
 }
  /* line 6265: */
 if (ELFACTR)
@@ -7101,28 +7101,28 @@ FLFACTR = (-1);
  /* line 6269: */
 GLFACTR = 10 ;
 HLFACTR = (&A_VINDEX(YIFACTR_ignoremess,GLFACTR)) ;
-(*HLFACTR) = '2';
+(*A_NILCHECK(HLFACTR)) = '2';
  /* line 6270: */
-(*NL(ITAACTR_supflts)) = FEBACTR_fltgap;
+(*A_NILCHECK(NL(ITAACTR_supflts))) = FEBACTR_fltgap;
  /* line 6271: */
 (void)(A_CALLPROC(NL(UIBACTR_faultchars),(YIFACTR_ignoremess),(YIFACTR_ignoremess,(NL(UIBACTR_faultchars)).nonlocals)));
  /* line 6272: */
 ILFACTR = 10 ;
 JLFACTR = (&A_VINDEX(YIFACTR_ignoremess,ILFACTR)) ;
-(*JLFACTR) = '1';
+(*A_NILCHECK(JLFACTR)) = '1';
  /* line 6273: */
-(void)((*NL(MFBACTR_t1)) = A_CALLPROC(NL(LFDACTR_reader),(Readertype),(Readertype,(NL(LFDACTR_reader)).nonlocals)));
+(void)((*A_NILCHECK(NL(MFBACTR_t1))) = A_CALLPROC(NL(LFDACTR_reader),(Readertype),(Readertype,(NL(LFDACTR_reader)).nonlocals)));
  /* line 6274: */
  /* line 6275: */
 goto PIFACTR_level2;
 } 
 else
 { 
-(void)((*NL(JFBACTR_stind)) = (*NL(SGFACTR_rangestind)));
+(void)((*A_NILCHECK(NL(JFBACTR_stind))) = (*A_NILCHECK(NL(SGFACTR_rangestind))));
  /* line 6276: */
 (void)(A_CALLPROC(NL(UIBACTR_faultchars),(LLFACTR),(LLFACTR,(NL(UIBACTR_faultchars)).nonlocals)));
  /* line 6277: */
-(void)((*NL(KFBACTR_crts)) = (*(&A_VINDEX((*NL(HFBACTR_sidstack)),(*NL(JFBACTR_stind))))));
+(void)((*A_NILCHECK(NL(KFBACTR_crts))) = (*A_NILCHECK((&A_VINDEX((*A_NILCHECK(NL(HFBACTR_sidstack))),(*A_NILCHECK(NL(JFBACTR_stind))))))));
  /* line 6278: */
 MLFACTR.V.Props = MQAACTR_z;
 MLFACTR.V.Mode = ZKAACTR_faultmode;
@@ -7130,11 +7130,11 @@ MLFACTR.V.Vlist = (A68_124 *)A68_NIL;
 MLFACTR.V.Labs = (A68_69 *)A68_NIL;
 MLFACTR.Type = 0;
 MLFACTR.Rest = (A68_124 *)A68_NIL;
-(*NL(XGFACTR_vlist)) = MLFACTR;
+(*A_NILCHECK(NL(XGFACTR_vlist))) = MLFACTR;
  /* line 6279: */
-if ((*NL(MFBACTR_t1))==60)
+if ((*A_NILCHECK(NL(MFBACTR_t1)))==60)
 { 
-(void)((*NL(MFBACTR_t1)) = A_CALLPROC(NL(LFDACTR_reader),(TDBACTR_screader),(TDBACTR_screader,(NL(LFDACTR_reader)).nonlocals)));
+(void)((*A_NILCHECK(NL(MFBACTR_t1))) = A_CALLPROC(NL(LFDACTR_reader),(TDBACTR_screader),(TDBACTR_screader,(NL(LFDACTR_reader)).nonlocals)));
 } 
  /* line 6280: */
  /* line 6281: */
@@ -7298,11 +7298,11 @@ MMFACTR_modelist = (A68_54 *)A68_NIL;
  /* line 6298: */
 NMFACTR_modestack = (A68_54 *)A68_NIL;
  /* line 6299: */
-(*NL(GGFACTR_type)) = 0;
+(*A_NILCHECK(NL(GGFACTR_type))) = 0;
  /* line 6300: */
 if (!Modedec)
 { 
-(*NL(HGFACTR_descno)) = 1;
+(*A_NILCHECK(NL(HGFACTR_descno))) = 1;
 } 
  /* line 6304: */
 for ( ;; )
@@ -7313,11 +7313,11 @@ switch ( A_CALLPROC(NL(PFBACTR_analyser),(),((NL(PFBACTR_analyser)).nonlocals)) 
 { 
 case 1: 
 { 
-(void)((*NL(JBBACTR_oldtind)) = (*NL(LSAACTR_tind)));
+(void)((*A_NILCHECK(NL(JBBACTR_oldtind))) = (*A_NILCHECK(NL(LSAACTR_tind))));
  /* line 6310: */
  /* line 6311: */
  /* line 6314: */
-(void)((*NL(MFBACTR_t1)) = A_CALLPROC(NL(LFDACTR_reader),(RDBACTR_decreader),(RDBACTR_decreader,(NL(LFDACTR_reader)).nonlocals)));
+(void)((*A_NILCHECK(NL(MFBACTR_t1))) = A_CALLPROC(NL(LFDACTR_reader),(RDBACTR_decreader),(RDBACTR_decreader,(NL(LFDACTR_reader)).nonlocals)));
 } 
 break;
 case 2: 
@@ -7366,18 +7366,18 @@ TMFACTR.Mode = (XLFACTR_n/2);
 TMFACTR.Rest = LMFACTR_intstack;
  /* line 6328: */
 UMFACTR = A_LOC(A68_54 ) ;
-(void)((*UMFACTR) = TMFACTR) ;
+(void)((*A_NILCHECK(UMFACTR)) = TMFACTR) ;
 LMFACTR_intstack = UMFACTR;
 break;
 case 6: 
 { 
-(void)(WLFACTR_j = (*(&(NMFACTR_modestack->Mode))));
+(void)(WLFACTR_j = (*A_NILCHECK((&(A_NILCHECK(NMFACTR_modestack)->Mode)))));
  /* line 6329: */
-(void)(NMFACTR_modestack = (*(&(NMFACTR_modestack->Rest))));
+(void)(NMFACTR_modestack = (*A_NILCHECK((&(A_NILCHECK(NMFACTR_modestack)->Rest)))));
  /* line 6330: */
-(void)(XLFACTR_n = (*(&(LMFACTR_intstack->Mode))));
+(void)(XLFACTR_n = (*A_NILCHECK((&(A_NILCHECK(LMFACTR_intstack)->Mode)))));
  /* line 6331: */
-(void)(LMFACTR_intstack = (*(&(LMFACTR_intstack->Rest))));
+(void)(LMFACTR_intstack = (*A_NILCHECK((&(A_NILCHECK(LMFACTR_intstack)->Rest)))));
  /* line 6332: */
  /* line 6333: */
 WMFACTR = (XLFACTR_n-1);
@@ -7402,28 +7402,28 @@ XMFACTR_i += 1 )
 { 
  /* line 6340: */
 if ( !((JMFACTR_sl!=RQAACTR_nilsel)) ) break;
-YMFACTR = (&(JMFACTR_sl->Fieldno)) ;
-(*YMFACTR) = XMFACTR_i;
+YMFACTR = (&(A_NILCHECK(JMFACTR_sl)->Fieldno)) ;
+(*A_NILCHECK(YMFACTR)) = XMFACTR_i;
  /* line 6341: */
 KMFACTR_sl1 = JMFACTR_sl;
  /* line 6342: */
 for ( ;; )
 { 
  /* line 6343: */
-if ( !(((KMFACTR_sl1 = (*(&(KMFACTR_sl1->Rest))))!=RQAACTR_nilsel)) ) break;
+if ( !(((KMFACTR_sl1 = (*A_NILCHECK((&(A_NILCHECK(KMFACTR_sl1)->Rest)))))!=RQAACTR_nilsel)) ) break;
  /* line 6344: */
-ANFACTR = (*(&(KMFACTR_sl1->Name))) ;
-CNFACTR = (*(&(JMFACTR_sl->Name))) ;
+ANFACTR = (*A_NILCHECK((&(A_NILCHECK(KMFACTR_sl1)->Name)))) ;
+CNFACTR = (*A_NILCHECK((&(A_NILCHECK(JMFACTR_sl)->Name)))) ;
 if (A_VC_EQ(A_HISVEC(ZMFACTR,ANFACTR,32,A68_CHAR ),A_HISVEC(BNFACTR,CNFACTR,32,A68_CHAR )))
 { 
  /* line 6346: */
  /* line 6347: */
-(void)(A_CALLPROC(NL(PZBACTR_faultp),(187, 0, 0, (&(JMFACTR_sl->Name))),(187, 0, 0, (&(JMFACTR_sl->Name)),(NL(PZBACTR_faultp)).nonlocals)));
+(void)(A_CALLPROC(NL(PZBACTR_faultp),(187, 0, 0, (&(A_NILCHECK(JMFACTR_sl)->Name))),(187, 0, 0, (&(A_NILCHECK(JMFACTR_sl)->Name)),(NL(PZBACTR_faultp)).nonlocals)));
 } 
 }
  /* line 6348: */
  /* line 6349: */
-(void)(JMFACTR_sl = (*(&(JMFACTR_sl->Rest))));
+(void)(JMFACTR_sl = (*A_NILCHECK((&(A_NILCHECK(JMFACTR_sl)->Rest)))));
 }
  /* line 6350: */
  /* line 6351: */
@@ -7433,18 +7433,18 @@ if (A_VC_EQ(A_HISVEC(ZMFACTR,ANFACTR,32,A68_CHAR ),A_HISVEC(BNFACTR,CNFACTR,32,A
 break;
 case 8: 
  /* line 6357: */
-(void)(YLFACTR_mode = (*(&((*NL(JDBACTR_decmode))->Mode))));
+(void)(YLFACTR_mode = (*A_NILCHECK((&(A_NILCHECK((*A_NILCHECK(NL(JDBACTR_decmode))))->Mode)))));
 break;
 case 9: 
 { 
-DNFACTR.Mode = (*NL(HTAACTR_iv));
+DNFACTR.Mode = (*A_NILCHECK(NL(HTAACTR_iv)));
 DNFACTR.Rest = NMFACTR_modestack;
 ENFACTR = A_LOC(A68_54 ) ;
-(void)((*ENFACTR) = DNFACTR) ;
+(void)((*A_NILCHECK(ENFACTR)) = DNFACTR) ;
 NMFACTR_modestack = ENFACTR;
  /* line 6358: */
  /* line 6359: */
-if ((*NL(HTAACTR_iv))==0)
+if ((*A_NILCHECK(NL(HTAACTR_iv)))==0)
 { 
  /* line 6361: */
 (void)(A_CALLPROC(NL(QJBACTR_fault),(135),(135,(NL(QJBACTR_fault)).nonlocals)));
@@ -7452,7 +7452,7 @@ if ((*NL(HTAACTR_iv))==0)
 else
 { 
  /* line 6362: */
-if ((*NL(HTAACTR_iv))>YDAACTR_maxistruct)
+if ((*A_NILCHECK(NL(HTAACTR_iv)))>YDAACTR_maxistruct)
 { 
  /* line 6364: */
  /* line 6365: */
@@ -7464,18 +7464,18 @@ if ((*NL(HTAACTR_iv))>YDAACTR_maxistruct)
 break;
 case 10: 
 { 
-(void)(YLFACTR_mode = A_CALLPROC(NL(TWBACTR_insertis),(YLFACTR_mode, (*(&(NMFACTR_modestack->Mode)))),(YLFACTR_mode, (*(&(NMFACTR_modestack->Mode))),(NL(TWBACTR_insertis)).nonlocals)));
+(void)(YLFACTR_mode = A_CALLPROC(NL(TWBACTR_insertis),(YLFACTR_mode, (*A_NILCHECK((&(A_NILCHECK(NMFACTR_modestack)->Mode))))),(YLFACTR_mode, (*A_NILCHECK((&(A_NILCHECK(NMFACTR_modestack)->Mode)))),(NL(TWBACTR_insertis)).nonlocals)));
  /* line 6369: */
  /* line 6370: */
  /* line 6373: */
-(void)(NMFACTR_modestack = (*(&(NMFACTR_modestack->Rest))));
+(void)(NMFACTR_modestack = (*A_NILCHECK((&(A_NILCHECK(NMFACTR_modestack)->Rest)))));
 } 
 break;
 case 11: 
 { 
-(void)(WLFACTR_j = (*(&(NMFACTR_modestack->Mode))));
+(void)(WLFACTR_j = (*A_NILCHECK((&(A_NILCHECK(NMFACTR_modestack)->Mode)))));
  /* line 6374: */
-(void)(NMFACTR_modestack = (*(&(NMFACTR_modestack->Rest))));
+(void)(NMFACTR_modestack = (*A_NILCHECK((&(A_NILCHECK(NMFACTR_modestack)->Rest)))));
  /* line 6375: */
  /* line 6376: */
  /* line 6379: */
@@ -7485,21 +7485,21 @@ break;
 case 12: 
 FNFACTR.Mode = YLFACTR_mode;
 FNFACTR.Fieldno = 0;
-FNFACTR.Name = (*NL(PSAACTR_ident));
+FNFACTR.Name = (*A_NILCHECK(NL(PSAACTR_ident)));
 FNFACTR.Rest = HMFACTR_selstack;
  /* line 6382: */
 GNFACTR = A_HEAP(A68_58 ) ;
-(void)((*GNFACTR) = FNFACTR) ;
+(void)((*A_NILCHECK(GNFACTR)) = FNFACTR) ;
 HMFACTR_selstack = GNFACTR;
 break;
 case 13: 
 { 
 JMFACTR_sl = HMFACTR_selstack;
  /* line 6383: */
-(void)(HMFACTR_selstack = (*(&(HMFACTR_selstack->Rest))));
+(void)(HMFACTR_selstack = (*A_NILCHECK((&(A_NILCHECK(HMFACTR_selstack)->Rest)))));
  /* line 6384: */
-HNFACTR = (&(JMFACTR_sl->Rest)) ;
-(*HNFACTR) = IMFACTR_selist;
+HNFACTR = (&(A_NILCHECK(JMFACTR_sl)->Rest)) ;
+(*A_NILCHECK(HNFACTR)) = IMFACTR_selist;
  /* line 6385: */
  /* line 6386: */
  /* line 6389: */
@@ -7509,11 +7509,11 @@ break;
 case 14: 
 INFACTR.Mode = YLFACTR_mode;
 INFACTR.Fieldno = 0;
-INFACTR.Name = (*NL(PSAACTR_ident));
+INFACTR.Name = (*A_NILCHECK(NL(PSAACTR_ident)));
 INFACTR.Rest = (A68_58 *)A68_NIL;
  /* line 6392: */
 JNFACTR = A_HEAP(A68_58 ) ;
-(void)((*JNFACTR) = INFACTR) ;
+(void)((*A_NILCHECK(JNFACTR)) = INFACTR) ;
 IMFACTR_selist = JNFACTR;
 break;
 case 15: 
@@ -7521,7 +7521,7 @@ KNFACTR.Mode = 1;
 KNFACTR.Rest = NMFACTR_modestack;
  /* line 6395: */
 LNFACTR = A_LOC(A68_54 ) ;
-(void)((*LNFACTR) = KNFACTR) ;
+(void)((*A_NILCHECK(LNFACTR)) = KNFACTR) ;
 NMFACTR_modestack = LNFACTR;
 break;
 case 16: 
@@ -7529,7 +7529,7 @@ MNFACTR.Mode = (-1);
 MNFACTR.Rest = NMFACTR_modestack;
  /* line 6398: */
 NNFACTR = A_LOC(A68_54 ) ;
-(void)((*NNFACTR) = MNFACTR) ;
+(void)((*A_NILCHECK(NNFACTR)) = MNFACTR) ;
 NMFACTR_modestack = NNFACTR;
 break;
 case 17: 
@@ -7545,8 +7545,8 @@ if (VLFACTR_i==YLFACTR_mode)
 else
 { 
  /* line 6403: */
-ONFACTR = (&(DMFACTR_amode->Mode)) ;
-(*ONFACTR) = VLFACTR_i;
+ONFACTR = (&(A_NILCHECK(DMFACTR_amode)->Mode)) ;
+(*A_NILCHECK(ONFACTR)) = VLFACTR_i;
 } 
  /* line 6404: */
  /* line 6405: */
@@ -7568,9 +7568,9 @@ case 20:
 break;
 case 21: 
 { 
-(void)(MMFACTR_modelist = (*(&(CMFACTR_mll->Ml))));
+(void)(MMFACTR_modelist = (*A_NILCHECK((&(A_NILCHECK(CMFACTR_mll)->Ml)))));
  /* line 6419: */
-(void)(CMFACTR_mll = (*(&(CMFACTR_mll->Rest))));
+(void)(CMFACTR_mll = (*A_NILCHECK((&(A_NILCHECK(CMFACTR_mll)->Rest)))));
  /* line 6420: */
  /* line 6421: */
  /* line 6424: */
@@ -7586,7 +7586,7 @@ case 23:
 PNFACTR.Mode = A_CALLPROC(NL(JGCACTR_deflex),(YLFACTR_mode),(YLFACTR_mode,(NL(JGCACTR_deflex)).nonlocals));
 PNFACTR.Rest = NMFACTR_modestack;
 QNFACTR = A_HEAP(A68_54 ) ;
-(void)((*QNFACTR) = PNFACTR) ;
+(void)((*A_NILCHECK(QNFACTR)) = PNFACTR) ;
 NMFACTR_modestack = QNFACTR;
  /* line 6428: */
  /* line 6429: */
@@ -7598,10 +7598,10 @@ case 24:
 { 
 OMFACTR_ml = NMFACTR_modestack;
  /* line 6433: */
-(void)(NMFACTR_modestack = (*(&(NMFACTR_modestack->Rest))));
+(void)(NMFACTR_modestack = (*A_NILCHECK((&(A_NILCHECK(NMFACTR_modestack)->Rest)))));
  /* line 6434: */
-RNFACTR = (&(OMFACTR_ml->Rest)) ;
-(*RNFACTR) = MMFACTR_modelist;
+RNFACTR = (&(A_NILCHECK(OMFACTR_ml)->Rest)) ;
+(*A_NILCHECK(RNFACTR)) = MMFACTR_modelist;
  /* line 6435: */
  /* line 6436: */
  /* line 6439: */
@@ -7611,7 +7611,7 @@ break;
 case 25: 
 { 
  /* line 6440: */
-if ((*(&(NMFACTR_modestack->Mode)))>KQAACTR_refmark)
+if ((*A_NILCHECK((&(A_NILCHECK(NMFACTR_modestack)->Mode))))>KQAACTR_refmark)
 { 
  /* line 6441: */
 VLFACTR_i = 1;
@@ -7619,17 +7619,17 @@ VLFACTR_i = 1;
 else
 { 
  /* line 6442: */
-SNFACTR = (*(&(NMFACTR_modestack->Mode))) ;
-TNFACTR = (*(&A_VINDEX(NL(KUAACTR_modes),SNFACTR))) ;
+SNFACTR = (*A_NILCHECK((&(A_NILCHECK(NMFACTR_modestack)->Mode)))) ;
+TNFACTR = (*A_NILCHECK((&A_VINDEX(NL(KUAACTR_modes),SNFACTR)))) ;
 switch ( TNFACTR.mode )
 { 
 case 2: /* REF STRUCT(INT,REF MODE54)  */
 UNFACTR_u = (TNFACTR.data.mode2);
  /* line 6443: */
 { 
-(void)(OMFACTR_ml = (*(&(UNFACTR_u->Modelist))));
+(void)(OMFACTR_ml = (*A_NILCHECK((&(A_NILCHECK(UNFACTR_u)->Modelist)))));
  /* line 6444: */
-(void)(NMFACTR_modestack = (*(&(NMFACTR_modestack->Rest))));
+(void)(NMFACTR_modestack = (*A_NILCHECK((&(A_NILCHECK(NMFACTR_modestack)->Rest)))));
  /* line 6445: */
 for ( VNFACTR_j = 1;;
 VNFACTR_j += 1 ) 
@@ -7637,13 +7637,13 @@ VNFACTR_j += 1 )
  /* line 6446: */
 if ( !((OMFACTR_ml!=OQAACTR_nilml)) ) break;
  /* line 6447: */
-WNFACTR.Mode = (*(&(OMFACTR_ml->Mode)));
+WNFACTR.Mode = (*A_NILCHECK((&(A_NILCHECK(OMFACTR_ml)->Mode))));
 WNFACTR.Rest = NMFACTR_modestack;
 XNFACTR = A_HEAP(A68_54 ) ;
-(void)((*XNFACTR) = WNFACTR) ;
+(void)((*A_NILCHECK(XNFACTR)) = WNFACTR) ;
 NMFACTR_modestack = XNFACTR;
  /* line 6448: */
-(void)(OMFACTR_ml = (*(&(OMFACTR_ml->Rest))));
+(void)(OMFACTR_ml = (*A_NILCHECK((&(A_NILCHECK(OMFACTR_ml)->Rest)))));
  /* line 6449: */
  /* line 6450: */
 VLFACTR_i = VNFACTR_j;
@@ -7668,10 +7668,10 @@ ZNFACTR += 1 )
 { 
 OMFACTR_ml = NMFACTR_modestack;
  /* line 6458: */
-(void)(NMFACTR_modestack = (*(&(NMFACTR_modestack->Rest))));
+(void)(NMFACTR_modestack = (*A_NILCHECK((&(A_NILCHECK(NMFACTR_modestack)->Rest)))));
  /* line 6459: */
-AOFACTR = (&(OMFACTR_ml->Rest)) ;
-(*AOFACTR) = MMFACTR_modelist;
+AOFACTR = (&(A_NILCHECK(OMFACTR_ml)->Rest)) ;
+(*A_NILCHECK(AOFACTR)) = MMFACTR_modelist;
  /* line 6460: */
  /* line 6461: */
 MMFACTR_modelist = OMFACTR_ml;
@@ -7687,33 +7687,33 @@ BOFACTR.Ml = MMFACTR_modelist;
 BOFACTR.Rest = CMFACTR_mll;
  /* line 6469: */
 COFACTR = A_LOC(A68_241 ) ;
-(void)((*COFACTR) = BOFACTR) ;
+(void)((*A_NILCHECK(COFACTR)) = BOFACTR) ;
 CMFACTR_mll = COFACTR;
 break;
 case 27: 
  /* line 6472: */
-(*NL(ZYAACTR_nolongs)) = 2;
+(*A_NILCHECK(NL(ZYAACTR_nolongs))) = 2;
 break;
 case 28: 
  /* line 6475: */
-(*NL(ZYAACTR_nolongs)) = 1;
+(*A_NILCHECK(NL(ZYAACTR_nolongs))) = 1;
 break;
 case 29: 
  /* line 6478: */
-(*NL(ZYAACTR_nolongs)) = 0;
+(*A_NILCHECK(NL(ZYAACTR_nolongs))) = 0;
 break;
 case 30: 
  /* line 6481: */
-(void)((*NL(ZYAACTR_nolongs)) = (-1));
+(void)((*A_NILCHECK(NL(ZYAACTR_nolongs))) = (-1));
 break;
 case 31: 
  /* line 6484: */
-(void)(YLFACTR_mode = (((4*(*NL(MFBACTR_t1)))-137)+(*NL(ZYAACTR_nolongs))));
+(void)(YLFACTR_mode = (((4*(*A_NILCHECK(NL(MFBACTR_t1))))-137)+(*A_NILCHECK(NL(ZYAACTR_nolongs)))));
 break;
 case 32: 
  /* line 6485: */
  /* line 6486: */
-if ((*NL(MFBACTR_t1))==94)
+if ((*A_NILCHECK(NL(MFBACTR_t1)))==94)
 { 
 DOFACTR = JLAACTR_xtype;
 } 
@@ -7721,14 +7721,14 @@ else
 { 
  /* line 6487: */
  /* line 6488: */
-if ((*NL(MFBACTR_t1))==95)
+if ((*A_NILCHECK(NL(MFBACTR_t1)))==95)
 { 
 DOFACTR = KLAACTR_ytype;
 } 
 else
 { 
  /* line 6489: */
-DOFACTR = ((*NL(MFBACTR_t1))-27);
+DOFACTR = ((*A_NILCHECK(NL(MFBACTR_t1)))-27);
 } 
 } 
  /* line 6492: */
@@ -7743,20 +7743,20 @@ case 34:
 GOFACTR_k = A_CALLPROC(NL(JGCACTR_deflex),(YLFACTR_mode),(YLFACTR_mode,(NL(JGCACTR_deflex)).nonlocals));
  /* line 6496: */
  /* line 6497: */
-IOFACTR = (*NL(VYAACTR_lastmode));
+IOFACTR = (*A_NILCHECK(NL(VYAACTR_lastmode)));
 for ( HOFACTR_i = NL(YYAACTR_newmode1);
 HOFACTR_i <= IOFACTR;
 HOFACTR_i += 1 )
 { 
  /* line 6498: */
-JOFACTR = (*(&A_VINDEX(NL(KUAACTR_modes),HOFACTR_i))) ;
+JOFACTR = (*A_NILCHECK((&A_VINDEX(NL(KUAACTR_modes),HOFACTR_i)))) ;
 switch ( JOFACTR.mode )
 { 
 case 9: /* REF STRUCT(INT,REF MODE63)  */
 KOFACTR_st = (JOFACTR.data.mode9);
  /* line 6499: */
  /* line 6500: */
-if (GOFACTR_k==(*(&(KOFACTR_st->Mode))))
+if (GOFACTR_k==(*A_NILCHECK((&(A_NILCHECK(KOFACTR_st)->Mode)))))
 { 
 YLFACTR_mode = HOFACTR_i;
  /* line 6501: */
@@ -7774,16 +7774,16 @@ break;
 }
  /* line 6507: */
  /* line 6508: */
-if ((*NL(VYAACTR_lastmode))<TDAACTR_upbofmodes)
+if ((*A_NILCHECK(NL(VYAACTR_lastmode)))<TDAACTR_upbofmodes)
 { 
 LOFACTR.Mode = GOFACTR_k;
  /* line 6509: */
 LOFACTR.Stenlist = (A68_63 *)A68_NIL;
-MOFACTR = YLFACTR_mode = (*NL(VYAACTR_lastmode))+=1 ;
+MOFACTR = YLFACTR_mode = (*A_NILCHECK(NL(VYAACTR_lastmode)))+=1 ;
 NOFACTR = A_HEAP(A68_64 ) ;
-(void)((*NOFACTR) = LOFACTR) ;
+(void)((*A_NILCHECK(NOFACTR)) = LOFACTR) ;
 POFACTR = (&A_VINDEX(NL(KUAACTR_modes),MOFACTR)) ;
-(void)((*POFACTR) = A_UNITE(OOFACTR,mode9,9,NOFACTR));
+(void)((*A_NILCHECK(POFACTR)) = A_UNITE(OOFACTR,mode9,9,NOFACTR));
 } 
 else
 { 
@@ -7799,20 +7799,20 @@ FOFACTR_end: A_UNUSED;
 break;
 case 35: 
 { 
-(*NL(FZAACTR_outlevel))+=1;
+(*A_NILCHECK(NL(FZAACTR_outlevel)))+=1;
  /* line 6518: */
 XLFACTR_n = 2;
  /* line 6519: */
-(void)(BMFACTR_lic = (*NL(GBBACTR_lastidchanged)));
+(void)(BMFACTR_lic = (*A_NILCHECK(NL(GBBACTR_lastidchanged))));
  /* line 6520: */
  /* line 6521: */
  /* line 6524: */
-(*NL(GBBACTR_lastidchanged)) = A68_FALSE;
+(*A_NILCHECK(NL(GBBACTR_lastidchanged))) = A68_FALSE;
 } 
 break;
 case 36: 
  /* line 6525: */
-if ((*NL(GGFACTR_type))==2)
+if ((*A_NILCHECK(NL(GGFACTR_type)))==2)
 { 
  /* line 6527: */
 (void)(A_CALLPROC(NL(QJBACTR_fault),(188),(188,(NL(QJBACTR_fault)).nonlocals)));
@@ -7821,41 +7821,41 @@ else
 { 
  /* line 6528: */
  /* line 6531: */
-(*NL(GGFACTR_type)) = 1;
+(*A_NILCHECK(NL(GGFACTR_type))) = 1;
 } 
 break;
 case 37: 
 { 
  /* line 6532: */
-if (*NL(GBBACTR_lastidchanged))
+if (*A_NILCHECK(NL(GBBACTR_lastidchanged)))
 { 
  /* line 6533: */
 QOFACTR.Type = DPAACTR_xdummydec;
 ROFACTR.Name = NL(BZAACTR_nullid);
  /* line 6534: */
-ROFACTR.Decno = (*NL(GZAACTR_maxident));
-ROFACTR.Level = (*(&((*NL(QYAACTR_globcurrent))->Level)));
+ROFACTR.Decno = (*A_NILCHECK(NL(GZAACTR_maxident)));
+ROFACTR.Level = (*A_NILCHECK((&(A_NILCHECK((*A_NILCHECK(NL(QYAACTR_globcurrent))))->Level))));
  /* line 6535: */
 ROFACTR.Mode = 0;
  /* line 6536: */
-ROFACTR.Scope = (*(&((*NL(QYAACTR_globcurrent))->Lastid)));
+ROFACTR.Scope = (*A_NILCHECK((&(A_NILCHECK((*A_NILCHECK(NL(QYAACTR_globcurrent))))->Lastid))));
 ROFACTR.Rest = (A68_67 *)A68_NIL;
 SOFACTR = A_LOC(A68_67 ) ;
-(void)((*SOFACTR) = ROFACTR) ;
+(void)((*A_NILCHECK(SOFACTR)) = ROFACTR) ;
 QOFACTR.Iddec = SOFACTR;
  /* line 6537: */
  /* line 6538: */
-(void)(A_CALLPROC(NL(Output),(A_UNITE(TOFACTR,mode12,12,QOFACTR), ((*NL(FZAACTR_outlevel))-1)),(A_UNITE(TOFACTR,mode12,12,QOFACTR), ((*NL(FZAACTR_outlevel))-1),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(TOFACTR,mode12,12,QOFACTR), ((*A_NILCHECK(NL(FZAACTR_outlevel)))-1)),(A_UNITE(TOFACTR,mode12,12,QOFACTR), ((*A_NILCHECK(NL(FZAACTR_outlevel)))-1),(NL(Output)).nonlocals)));
  /* line 6539: */
  /* line 6540: */
-UOFACTR = (&((*NL(QYAACTR_globcurrent))->Lastid)) ;
-(void)((*UOFACTR) = (*NL(GZAACTR_maxident)));
+UOFACTR = (&(A_NILCHECK((*A_NILCHECK(NL(QYAACTR_globcurrent))))->Lastid)) ;
+(void)((*A_NILCHECK(UOFACTR)) = (*A_NILCHECK(NL(GZAACTR_maxident))));
 } 
  /* line 6542: */
-(*NL(GBBACTR_lastidchanged)) = BMFACTR_lic;
+(*A_NILCHECK(NL(GBBACTR_lastidchanged))) = BMFACTR_lic;
  /* line 6543: */
  /* line 6544: */
-if ((*NL(GGFACTR_type))==1)
+if ((*A_NILCHECK(NL(GGFACTR_type)))==1)
 { 
  /* line 6546: */
 (void)(A_CALLPROC(NL(QJBACTR_fault),(188),(188,(NL(QJBACTR_fault)).nonlocals)));
@@ -7863,19 +7863,19 @@ if ((*NL(GGFACTR_type))==1)
 else
 { 
  /* line 6547: */
-(*NL(GGFACTR_type)) = 2;
+(*A_NILCHECK(NL(GGFACTR_type))) = 2;
 } 
  /* line 6548: */
 VOFACTR.Fn = OMAACTR_xbdpack;
 VOFACTR.M = 0;
 VOFACTR.Param = XLFACTR_n;
-(void)(A_CALLPROC(NL(Output),(A_UNITE(WOFACTR,mode14,14,VOFACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(WOFACTR,mode14,14,VOFACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(WOFACTR,mode14,14,VOFACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(WOFACTR,mode14,14,VOFACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 6549: */
-(void)(A_CALLPROC(NL(Output),(QKAACTR_up, (*NL(FZAACTR_outlevel))),(QKAACTR_up, (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(QKAACTR_up, (*A_NILCHECK(NL(FZAACTR_outlevel)))),(QKAACTR_up, (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 6550: */
  /* line 6551: */
  /* line 6554: */
-(*NL(FZAACTR_outlevel))-=1;
+(*A_NILCHECK(NL(FZAACTR_outlevel)))-=1;
 } 
 break;
 case 38: 
@@ -7891,7 +7891,7 @@ XOFACTR.Fn = VMAACTR_xdefaultbd;
 XOFACTR.M = 0;
 XOFACTR.Param = 0;
  /* line 6563: */
-(void)(A_CALLPROC(NL(Output),(A_UNITE(YOFACTR,mode14,14,XOFACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(YOFACTR,mode14,14,XOFACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(YOFACTR,mode14,14,XOFACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(YOFACTR,mode14,14,XOFACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
 break;
 case 41: 
  /* line 6566: */
@@ -7899,30 +7899,30 @@ XLFACTR_n = 1;
 break;
 case 42: 
 { 
-(void)(ZLFACTR_dectype = (*NL(GGFACTR_type)));
+(void)(ZLFACTR_dectype = (*A_NILCHECK(NL(GGFACTR_type))));
  /* line 6567: */
-(*NL(SYAACTR_modedecdepth))+=1;
+(*A_NILCHECK(NL(SYAACTR_modedecdepth)))+=1;
  /* line 6568: */
-(void)(AMFACTR_decdescno = (*NL(HGFACTR_descno)));
+(void)(AMFACTR_decdescno = (*A_NILCHECK(NL(HGFACTR_descno))));
  /* line 6569: */
-A_CALLPROC((*NL(LGFACTR_uc1)),(ELAACTR_int, &ZOFACTR),(ELAACTR_int, &ZOFACTR,((*NL(LGFACTR_uc1))).nonlocals));
+A_CALLPROC((*A_NILCHECK(NL(LGFACTR_uc1))),(ELAACTR_int, &ZOFACTR),(ELAACTR_int, &ZOFACTR,((*A_NILCHECK(NL(LGFACTR_uc1)))).nonlocals));
 ;
  /* line 6570: */
-(*NL(HGFACTR_descno)) = AMFACTR_decdescno;
+(*A_NILCHECK(NL(HGFACTR_descno))) = AMFACTR_decdescno;
  /* line 6571: */
-(*NL(SYAACTR_modedecdepth))-=1;
+(*A_NILCHECK(NL(SYAACTR_modedecdepth)))-=1;
  /* line 6572: */
-(*NL(GGFACTR_type)) = ZLFACTR_dectype;
+(*A_NILCHECK(NL(GGFACTR_type))) = ZLFACTR_dectype;
  /* line 6573: */
  /* line 6574: */
  /* line 6577: */
-APFACTR = (&(NL(NFFACTR_current)->Dybits)) ;
-(*APFACTR) = MQAACTR_z;
+APFACTR = (&(A_NILCHECK(NL(NFFACTR_current))->Dybits)) ;
+(*A_NILCHECK(APFACTR)) = MQAACTR_z;
 } 
 break;
 case 43: 
  /* line 6578: */
-if ((*NL(GGFACTR_type))==2)
+if ((*A_NILCHECK(NL(GGFACTR_type)))==2)
 { 
  /* line 6579: */
 if (DMFACTR_amode!=QQAACTR_nilam)
@@ -7942,7 +7942,7 @@ CPFACTR.Am = DMFACTR_amode;
  /* line 6583: */
 CPFACTR.Rest = (A68_53 *)A68_NIL;
  /* line 6584: */
-(void)((*BPFACTR) = CPFACTR) ;
+(void)((*A_NILCHECK(BPFACTR)) = CPFACTR) ;
 DPFACTR = BPFACTR;
 } 
 else
@@ -7964,13 +7964,13 @@ else
 EPFACTR = A_LOC(A68_52 );
 } 
 FPFACTR.Mode = YLFACTR_mode;
-FPFACTR.Modeproc = (-(*(&(LMFACTR_intstack->Mode))));
+FPFACTR.Modeproc = (-(*A_NILCHECK((&(A_NILCHECK(LMFACTR_intstack)->Mode)))));
 FPFACTR.El = EMFACTR_amodelist;
-(void)((*EPFACTR) = FPFACTR) ;
+(void)((*A_NILCHECK(EPFACTR)) = FPFACTR) ;
 DMFACTR_amode = EPFACTR;
  /* line 6590: */
  /* line 6591: */
-(void)(LMFACTR_intstack = (*(&(LMFACTR_intstack->Rest))));
+(void)(LMFACTR_intstack = (*A_NILCHECK((&(A_NILCHECK(LMFACTR_intstack)->Rest)))));
 } 
 else
 { 
@@ -7983,7 +7983,7 @@ case 44:
 GPFACTR = (EMFACTR_amodelist!=PQAACTR_nilaml);
 if ( GPFACTR )
 { /* line 6596: */
-GPFACTR = ((*NL(GGFACTR_type))!=1);
+GPFACTR = ((*A_NILCHECK(NL(GGFACTR_type)))!=1);
 }
 if (GPFACTR)
 { 
@@ -8003,7 +8003,7 @@ IPFACTR.Modeproc = 1;
  /* line 6600: */
 IPFACTR.El = EMFACTR_amodelist;
  /* line 6601: */
-(void)((*HPFACTR) = IPFACTR) ;
+(void)((*A_NILCHECK(HPFACTR)) = IPFACTR) ;
 JPFACTR = HPFACTR;
 } 
 else
@@ -8015,14 +8015,14 @@ DMFACTR_amode = JPFACTR;
 break;
 case 45: 
 { 
-(void)(DMFACTR_amode = (*NL(JDBACTR_decmode)));
+(void)(DMFACTR_amode = (*A_NILCHECK(NL(JDBACTR_decmode))));
  /* line 6605: */
-(void)(YLFACTR_mode = (*(&(DMFACTR_amode->Mode))));
+(void)(YLFACTR_mode = (*A_NILCHECK((&(A_NILCHECK(DMFACTR_amode)->Mode)))));
  /* line 6606: */
-KPFACTR = ((*(&(DMFACTR_amode->Modeproc)))==0);
+KPFACTR = ((*A_NILCHECK((&(A_NILCHECK(DMFACTR_amode)->Modeproc))))==0);
 if ( ! KPFACTR )
 { /* line 6607: */
-KPFACTR = ((*NL(GGFACTR_type))==1);
+KPFACTR = ((*A_NILCHECK(NL(GGFACTR_type)))==1);
 }
 if (KPFACTR)
 { 
@@ -8031,12 +8031,12 @@ DMFACTR_amode = (A68_52 *)A68_NIL;
 } 
 else
 { 
-(void)(RNDACTR_adjscope((*(&(NL(NFFACTR_current)->Rd))), (*(&((*NL(KDBACTR_cindic))->Level))), (*(&((*NL(KDBACTR_cindic))->Scope)))));
+(void)(RNDACTR_adjscope((*A_NILCHECK((&(A_NILCHECK(NL(NFFACTR_current))->Rd)))), (*A_NILCHECK((&(A_NILCHECK((*A_NILCHECK(NL(KDBACTR_cindic))))->Level)))), (*A_NILCHECK((&(A_NILCHECK((*A_NILCHECK(NL(KDBACTR_cindic))))->Scope))))));
  /* line 6609: */
 LPFACTR = (!Modedec);
 if ( LPFACTR )
 { /* line 6610: */
-LPFACTR = ((*(&(DMFACTR_amode->Modeproc)))<=2);
+LPFACTR = ((*A_NILCHECK((&(A_NILCHECK(DMFACTR_amode)->Modeproc))))<=2);
 }
 if (LPFACTR)
 { 
@@ -8057,14 +8057,14 @@ DMFACTR_amode = (A68_52 *)A68_NIL;
 break;
 case 47: 
  /* line 6622: */
-if ((*NL(GGFACTR_type))==2)
+if ((*A_NILCHECK(NL(GGFACTR_type)))==2)
 { 
-MPFACTR.Mode = (*NL(HGFACTR_descno))+=1;
+MPFACTR.Mode = (*A_NILCHECK(NL(HGFACTR_descno)))+=1;
  /* line 6623: */
 MPFACTR.Rest = LMFACTR_intstack;
  /* line 6626: */
 NPFACTR = A_LOC(A68_54 ) ;
-(void)((*NPFACTR) = MPFACTR) ;
+(void)((*A_NILCHECK(NPFACTR)) = MPFACTR) ;
 LMFACTR_intstack = NPFACTR;
 } 
 break;
@@ -8072,7 +8072,7 @@ case 48:
 OPFACTR = (DMFACTR_amode!=QQAACTR_nilam);
 if ( OPFACTR )
 { /* line 6627: */
-OPFACTR = ((*NL(GGFACTR_type))!=1);
+OPFACTR = ((*A_NILCHECK(NL(GGFACTR_type)))!=1);
 }
 if (OPFACTR)
 { 
@@ -8101,10 +8101,10 @@ RPFACTR = A_LOC(A68_53 );
 SPFACTR.Am = DMFACTR_amode;
 SPFACTR.Rest = (A68_53 *)A68_NIL;
  /* line 6632: */
-(void)((*RPFACTR) = SPFACTR) ;
+(void)((*A_NILCHECK(RPFACTR)) = SPFACTR) ;
 QPFACTR.El = RPFACTR;
  /* line 6633: */
-(void)((*PPFACTR) = QPFACTR) ;
+(void)((*A_NILCHECK(PPFACTR)) = QPFACTR) ;
 TPFACTR = PPFACTR;
 } 
 else
@@ -8119,7 +8119,7 @@ case 49:
 UPFACTR = (DMFACTR_amode!=QQAACTR_nilam);
 if ( UPFACTR )
 { /* line 6637: */
-UPFACTR = ((*NL(GGFACTR_type))!=1);
+UPFACTR = ((*A_NILCHECK(NL(GGFACTR_type)))!=1);
 }
 if (UPFACTR)
 { 
@@ -8138,7 +8138,7 @@ WPFACTR.Am = DMFACTR_amode;
  /* line 6641: */
 WPFACTR.Rest = (A68_53 *)A68_NIL;
  /* line 6642: */
-(void)((*VPFACTR) = WPFACTR) ;
+(void)((*A_NILCHECK(VPFACTR)) = WPFACTR) ;
 XPFACTR = VPFACTR;
 } 
 else
@@ -8149,12 +8149,12 @@ EMFACTR_amodelist = XPFACTR;
  /* line 6643: */
 YPFACTR.Mode = YLFACTR_mode;
 YPFACTR.Fieldno = 0;
-YPFACTR.Name = (*NL(PSAACTR_ident));
+YPFACTR.Name = (*A_NILCHECK(NL(PSAACTR_ident)));
  /* line 6644: */
 YPFACTR.Rest = (A68_58 *)A68_NIL;
  /* line 6647: */
 ZPFACTR = A_HEAP(A68_58 ) ;
-(void)((*ZPFACTR) = YPFACTR) ;
+(void)((*A_NILCHECK(ZPFACTR)) = YPFACTR) ;
 IMFACTR_selist = ZPFACTR;
 } 
 break;
@@ -8163,7 +8163,7 @@ case 50:
 AQFACTR = (DMFACTR_amode!=QQAACTR_nilam);
 if ( AQFACTR )
 { /* line 6648: */
-AQFACTR = ((*NL(GGFACTR_type))!=1);
+AQFACTR = ((*A_NILCHECK(NL(GGFACTR_type)))!=1);
 }
 if (AQFACTR)
 { 
@@ -8181,7 +8181,7 @@ BQFACTR = A_LOC(A68_53 );
 } 
 CQFACTR.Am = DMFACTR_amode;
 CQFACTR.Rest = FMFACTR_amodestack;
-(void)((*BQFACTR) = CQFACTR) ;
+(void)((*A_NILCHECK(BQFACTR)) = CQFACTR) ;
 FMFACTR_amodestack = BQFACTR;
  /* line 6653: */
  /* line 6654: */
@@ -8196,12 +8196,12 @@ VLFACTR_i = DQFACTR;
  /* line 6656: */
 EQFACTR.Mode = YLFACTR_mode;
 EQFACTR.Fieldno = VLFACTR_i;
-EQFACTR.Name = (*NL(PSAACTR_ident));
+EQFACTR.Name = (*A_NILCHECK(NL(PSAACTR_ident)));
  /* line 6657: */
 EQFACTR.Rest = HMFACTR_selstack;
  /* line 6660: */
 FQFACTR = A_HEAP(A68_58 ) ;
-(void)((*FQFACTR) = EQFACTR) ;
+(void)((*A_NILCHECK(FQFACTR)) = EQFACTR) ;
 HMFACTR_selstack = FQFACTR;
 } 
 break;
@@ -8209,22 +8209,22 @@ case 51:
 { 
 JMFACTR_sl = HMFACTR_selstack;
  /* line 6661: */
-(void)(HMFACTR_selstack = (*(&(HMFACTR_selstack->Rest))));
+(void)(HMFACTR_selstack = (*A_NILCHECK((&(A_NILCHECK(HMFACTR_selstack)->Rest)))));
  /* line 6662: */
-GQFACTR = (&(JMFACTR_sl->Rest)) ;
-(*GQFACTR) = IMFACTR_selist;
+GQFACTR = (&(A_NILCHECK(JMFACTR_sl)->Rest)) ;
+(*A_NILCHECK(GQFACTR)) = IMFACTR_selist;
  /* line 6663: */
 IMFACTR_selist = JMFACTR_sl;
  /* line 6664: */
  /* line 6665: */
-if ((*(&(IMFACTR_selist->Fieldno)))!=0)
+if ((*A_NILCHECK((&(A_NILCHECK(IMFACTR_selist)->Fieldno))))!=0)
 { 
 GMFACTR_aml = FMFACTR_amodestack;
  /* line 6666: */
-(void)(FMFACTR_amodestack = (*(&(FMFACTR_amodestack->Rest))));
+(void)(FMFACTR_amodestack = (*A_NILCHECK((&(A_NILCHECK(FMFACTR_amodestack)->Rest)))));
  /* line 6667: */
-HQFACTR = (&(GMFACTR_aml->Rest)) ;
-(*HQFACTR) = EMFACTR_amodelist;
+HQFACTR = (&(A_NILCHECK(GMFACTR_aml)->Rest)) ;
+(*A_NILCHECK(HQFACTR)) = EMFACTR_amodelist;
  /* line 6668: */
  /* line 6669: */
  /* line 6670: */
@@ -8238,20 +8238,20 @@ case 52:
  /* line 6674: */
 if (!Modedec)
 { 
-IQFACTR = ((*NL(MFBACTR_t1))!=32);
+IQFACTR = ((*A_NILCHECK(NL(MFBACTR_t1)))!=32);
 if ( IQFACTR )
-{IQFACTR = ((*NL(MFBACTR_t1))!=29);
+{IQFACTR = ((*A_NILCHECK(NL(MFBACTR_t1)))!=29);
 }
 if ( IQFACTR )
 { /* line 6675: */
-IQFACTR = ((*NL(MFBACTR_t1))!=10);
+IQFACTR = ((*A_NILCHECK(NL(MFBACTR_t1)))!=10);
 }
 if ( IQFACTR )
-{IQFACTR = ((*NL(MFBACTR_t1))!=24);
+{IQFACTR = ((*A_NILCHECK(NL(MFBACTR_t1)))!=24);
 }
 if ( IQFACTR )
 { /* line 6677: */
-IQFACTR = ((*NL(MFBACTR_t1))!=62);
+IQFACTR = ((*A_NILCHECK(NL(MFBACTR_t1)))!=62);
 }
  /* line 6678: */
 if (IQFACTR)
@@ -8264,14 +8264,14 @@ else
 JQFACTR = WNDACTR_decam;
 } 
  /* line 6680: */
-(void)(A_CALLPROC(NL(LODACTR_treatam),(DMFACTR_amode, JQFACTR, (*(&(NL(NFFACTR_current)->Lastid)))),(DMFACTR_amode, JQFACTR, (*(&(NL(NFFACTR_current)->Lastid))),(NL(LODACTR_treatam)).nonlocals)));
+(void)(A_CALLPROC(NL(LODACTR_treatam),(DMFACTR_amode, JQFACTR, (*A_NILCHECK((&(A_NILCHECK(NL(NFFACTR_current))->Lastid))))),(DMFACTR_amode, JQFACTR, (*A_NILCHECK((&(A_NILCHECK(NL(NFFACTR_current))->Lastid)))),(NL(LODACTR_treatam)).nonlocals)));
 } 
  /* line 6681: */
  /* line 6682: */
  /* line 6683: */
 if (DMFACTR_amode!=QQAACTR_nilam)
 { 
-KQFACTR = (*DMFACTR_amode);
+KQFACTR = (*A_NILCHECK(DMFACTR_amode));
 } 
 else
 { 
@@ -8280,7 +8280,7 @@ KQFACTR.Modeproc = 0;
  /* line 6684: */
 KQFACTR.El = (A68_53 *)A68_NIL;
 } 
-(*Am) = KQFACTR;
+(*A_NILCHECK(Am)) = KQFACTR;
  /* line 6685: */
  /* line 6686: */
  /* line 6689: */
@@ -8292,7 +8292,7 @@ case 53:
 MQFACTR = (YLFACTR_mode>1);
 if ( MQFACTR )
 { /* line 6690: */
-MQFACTR = (YLFACTR_mode<=(*NL(VYAACTR_lastmode)));
+MQFACTR = (YLFACTR_mode<=(*A_NILCHECK(NL(VYAACTR_lastmode))));
 }
 if (MQFACTR)
 { 
@@ -8307,7 +8307,7 @@ NQFACTR = YLFACTR_mode;
 LQFACTR.Mode = YLFACTR_mode = NQFACTR;
 LQFACTR.Modeproc = 0;
 LQFACTR.El = (A68_53 *)A68_NIL;
-(*Am) = LQFACTR;
+(*A_NILCHECK(Am)) = LQFACTR;
  /* line 6693: */
  /* line 6694: */
  /* line 6697: */
@@ -8316,7 +8316,7 @@ goto ULFACTR_end;
 break;
 case 54: 
  /* line 6700: */
-(*NL(QDBACTR_look)) = 1;
+(*A_NILCHECK(NL(QDBACTR_look))) = 1;
 break;
 case 55: 
  /* line 6703: */
@@ -8351,9 +8351,9 @@ A68_INT  ZQFACTR;  /* YIELD */
 A68_INT  ARFACTR;  /* clause result */
 A_PROC_ENTRY(lookahead);
 { 
-UQFACTR_oldstind = (*NL(JFBACTR_stind));
+UQFACTR_oldstind = (*A_NILCHECK(NL(JFBACTR_stind)));
  /* line 6717: */
-(*NL(BEBACTR_lkmodeins)) = 0;
+(*A_NILCHECK(NL(BEBACTR_lkmodeins))) = 0;
  /* line 6719: */
 for ( ;; )
 { 
@@ -8363,16 +8363,16 @@ switch ( A_CALLPROC(NL(PFBACTR_analyser),(),((NL(PFBACTR_analyser)).nonlocals)) 
 { 
 case 1: 
 { 
-(void)((*NL(JBBACTR_oldtind)) = (*NL(LSAACTR_tind)));
+(void)((*A_NILCHECK(NL(JBBACTR_oldtind))) = (*A_NILCHECK(NL(LSAACTR_tind))));
  /* line 6726: */
  /* line 6727: */
  /* line 6730: */
-(void)((*NL(MFBACTR_t1)) = A_CALLPROC(NL(LFDACTR_reader),(0),(0,(NL(LFDACTR_reader)).nonlocals)));
+(void)((*A_NILCHECK(NL(MFBACTR_t1))) = A_CALLPROC(NL(LFDACTR_reader),(0),(0,(NL(LFDACTR_reader)).nonlocals)));
 } 
 break;
 case 2: 
 { 
-(*NL(AEBACTR_lkinserts)) = 1;
+(*A_NILCHECK(NL(AEBACTR_lkinserts))) = 1;
  /* line 6731: */
  /* line 6732: */
  /* line 6735: */
@@ -8381,10 +8381,10 @@ goto TQFACTR_end;
 break;
 case 3: 
 { 
-VQFACTR = ((*NL(MFBACTR_t1))<12);
+VQFACTR = ((*A_NILCHECK(NL(MFBACTR_t1)))<12);
 if ( ! VQFACTR )
 { /* line 6736: */
-VQFACTR = ((*NL(MFBACTR_t1))==63);
+VQFACTR = ((*A_NILCHECK(NL(MFBACTR_t1)))==63);
 }
  /* line 6737: */
 if (VQFACTR)
@@ -8396,7 +8396,7 @@ else
 { 
 WQFACTR = 0;
 } 
-(*NL(AEBACTR_lkinserts)) = WQFACTR;
+(*A_NILCHECK(NL(AEBACTR_lkinserts))) = WQFACTR;
  /* line 6739: */
  /* line 6740: */
  /* line 6743: */
@@ -8406,37 +8406,37 @@ break;
 case 4: 
 { 
  /* line 6744: */
-XQFACTR.Id = (*NL(PSAACTR_ident));
-XQFACTR.Idsize = (*NL(SSAACTR_idsize));
-XQFACTR.Idhash = (*NL(TSAACTR_idhash));
+XQFACTR.Id = (*A_NILCHECK(NL(PSAACTR_ident)));
+XQFACTR.Idsize = (*A_NILCHECK(NL(SSAACTR_idsize)));
+XQFACTR.Idhash = (*A_NILCHECK(NL(TSAACTR_idhash)));
 XQFACTR.Rest = (A68_133 *)A68_NIL;
 YQFACTR = A_HEAP(A68_133 ) ;
-(void)((*YQFACTR) = XQFACTR) ;
-(**NL(ZDBACTR_lkend)) = YQFACTR;
+(void)((*A_NILCHECK(YQFACTR)) = XQFACTR) ;
+(*A_NILCHECK(*A_NILCHECK(NL(ZDBACTR_lkend)))) = YQFACTR;
  /* line 6745: */
  /* line 6746: */
  /* line 6749: */
-(void)((*NL(ZDBACTR_lkend)) = (&((**NL(ZDBACTR_lkend))->Rest)));
+(void)((*A_NILCHECK(NL(ZDBACTR_lkend))) = (&(A_NILCHECK((*A_NILCHECK(*A_NILCHECK(NL(ZDBACTR_lkend)))))->Rest)));
 } 
 break;
 case 5: 
 { 
-(*NL(FZAACTR_outlevel))+=1;
+(*A_NILCHECK(NL(FZAACTR_outlevel)))+=1;
  /* line 6750: */
 (void)(A_CALLPROC(NL(QLFACTR_declarer),(A68_FALSE, NL(DEBACTR_lkscam)),(A68_FALSE, NL(DEBACTR_lkscam),(NL(QLFACTR_declarer)).nonlocals)));
  /* line 6751: */
-(*NL(FZAACTR_outlevel))-=1;
+(*A_NILCHECK(NL(FZAACTR_outlevel)))-=1;
  /* line 6752: */
  /* line 6753: */
  /* line 6756: */
-(void)((*NL(CEBACTR_lktype)) = (*NL(GGFACTR_type)));
+(void)((*A_NILCHECK(NL(CEBACTR_lktype))) = (*A_NILCHECK(NL(GGFACTR_type))));
 } 
 break;
 case 6: 
 { 
-(*NL(BEBACTR_lkmodeins)) = 44;
+(*A_NILCHECK(NL(BEBACTR_lkmodeins))) = 44;
  /* line 6757: */
-(*NL(AEBACTR_lkinserts)) = 1;
+(*A_NILCHECK(NL(AEBACTR_lkinserts))) = 1;
  /* line 6758: */
  /* line 6759: */
  /* line 6762: */
@@ -8445,13 +8445,13 @@ goto TQFACTR_end;
 break;
 case 7: 
  /* line 6765: */
-(*NL(BEBACTR_lkmodeins)) = 91;
+(*A_NILCHECK(NL(BEBACTR_lkmodeins))) = 91;
 break;
 case 8: 
 { 
-(*NL(ZYAACTR_nolongs))+=10;
+(*A_NILCHECK(NL(ZYAACTR_nolongs)))+=10;
  /* line 6766: */
-(*NL(AEBACTR_lkinserts)) = 1;
+(*A_NILCHECK(NL(AEBACTR_lkinserts))) = 1;
  /* line 6767: */
  /* line 6768: */
  /* line 6771: */
@@ -8460,9 +8460,9 @@ goto TQFACTR_end;
 break;
 case 9: 
 { 
-(*NL(ODBACTR_next)) = 1028;
+(*A_NILCHECK(NL(ODBACTR_next))) = 1028;
  /* line 6772: */
-(*NL(AEBACTR_lkinserts)) = 0;
+(*A_NILCHECK(NL(AEBACTR_lkinserts))) = 0;
  /* line 6773: */
  /* line 6774: */
  /* line 6777: */
@@ -8478,60 +8478,60 @@ break;
 }
  /* line 6782: */
 TQFACTR_end: A_UNUSED;
-ZQFACTR = (*NL(JFBACTR_stind)) = UQFACTR_oldstind ;
-(void)((*NL(KFBACTR_crts)) = (*(&A_VINDEX((*NL(HFBACTR_sidstack)),ZQFACTR))));
+ZQFACTR = (*A_NILCHECK(NL(JFBACTR_stind))) = UQFACTR_oldstind ;
+(void)((*A_NILCHECK(NL(KFBACTR_crts))) = (*A_NILCHECK((&A_VINDEX((*A_NILCHECK(NL(HFBACTR_sidstack))),ZQFACTR)))));
  /* line 6783: */
  /* line 6784: */
-if ((*NL(MFBACTR_t1))!=10)
+if ((*A_NILCHECK(NL(MFBACTR_t1)))!=10)
 { 
-(void)((*NL(LSAACTR_tind)) = (*NL(JBBACTR_oldtind)));
+(void)((*A_NILCHECK(NL(LSAACTR_tind))) = (*A_NILCHECK(NL(JBBACTR_oldtind))));
  /* line 6785: */
-if ((*NL(ODBACTR_next))!=1028)
+if ((*A_NILCHECK(NL(ODBACTR_next)))!=1028)
 { 
  /* line 6786: */
-(void)((*NL(ODBACTR_next)) = (-1));
+(void)((*A_NILCHECK(NL(ODBACTR_next))) = (-1));
 } 
 } 
 else
 { 
  /* line 6787: */
-(*NL(ODBACTR_next)) = 1010;
+(*A_NILCHECK(NL(ODBACTR_next))) = 1010;
 } 
  /* line 6788: */
  /* line 6789: */
-if ((*NL(MFBACTR_t1))==25)
+if ((*A_NILCHECK(NL(MFBACTR_t1)))==25)
 { 
  /* line 6790: */
-(*NL(VBBACTR_brind))+=1;
+(*A_NILCHECK(NL(VBBACTR_brind)))+=1;
 } 
 else
 { 
  /* line 6791: */
-if ((*NL(MFBACTR_t1))==24)
+if ((*A_NILCHECK(NL(MFBACTR_t1)))==24)
 { 
  /* line 6792: */
-(*NL(VBBACTR_brind))-=1;
+(*A_NILCHECK(NL(VBBACTR_brind)))-=1;
 } 
 } 
  /* line 6793: */
  /* line 6794: */
  /* line 6795: */
-if ((*NL(AEBACTR_lkinserts))==0)
+if ((*A_NILCHECK(NL(AEBACTR_lkinserts)))==0)
 { 
 ARFACTR = 71;
 } 
 else
 { 
-if ((*NL(BEBACTR_lkmodeins))==0)
+if ((*A_NILCHECK(NL(BEBACTR_lkmodeins)))==0)
 { 
-(void)((*NL(AEBACTR_lkinserts)) = (-1));
+(void)((*A_NILCHECK(NL(AEBACTR_lkinserts))) = (-1));
 } 
  /* line 6796: */
  /* line 6797: */
  /* line 6798: */
 ARFACTR = 24;
 } 
-(*NL(MFBACTR_t1)) = ARFACTR;
+(*A_NILCHECK(NL(MFBACTR_t1))) = ARFACTR;
 } 
 A_PROC_EXIT(lookahead);
 return;
@@ -8610,7 +8610,7 @@ WRFACTR.V.Labs = (A68_69 *)A68_NIL;
 WRFACTR.Type = XMAACTR_xcase;
 WRFACTR.Rest = (A68_124 *)A68_NIL;
 YRFACTR = A_LOC(A68_124 ) ;
-(void)((*YRFACTR) = WRFACTR) ;
+(void)((*A_NILCHECK(YRFACTR)) = WRFACTR) ;
 XRFACTR_case = YRFACTR;
  /* line 6807: */
 ZRFACTR.Props = MQAACTR_z;
@@ -8619,23 +8619,23 @@ ZRFACTR.Vlist = XRFACTR_case;
 ZRFACTR.Labs = (A68_69 *)A68_NIL;
 ASFACTR_vcase = ZRFACTR;
  /* line 6808: */
-BSFACTR_lastcase = (&(XRFACTR_case->Rest));
+BSFACTR_lastcase = (&(A_NILCHECK(XRFACTR_case)->Rest));
  /* line 6809: */
-(*NL(NSAACTR_find)) = 1;
+(*A_NILCHECK(NL(NSAACTR_find))) = 1;
  /* line 6810: */
 CSFACTR = 1 ;
 DSFACTR = (&A_VINDEX(NL(JSAACTR_globfbuff),CSFACTR)) ;
-(*DSFACTR) = ' ';
+(*A_NILCHECK(DSFACTR)) = ' ';
  /* line 6811: */
-(*NL(IBBACTR_noofstrings)) = 0;
+(*A_NILCHECK(NL(IBBACTR_noofstrings))) = 0;
  /* line 6812: */
-(void)((*NL(VGFACTR_formatbrind)) = (*NL(VBBACTR_brind)));
+(void)((*A_NILCHECK(NL(VGFACTR_formatbrind))) = (*A_NILCHECK(NL(VBBACTR_brind))));
  /* line 6813: */
-(void)((*NL(UGFACTR_formatstind)) = (*NL(JFBACTR_stind)));
+(void)((*A_NILCHECK(NL(UGFACTR_formatstind))) = (*A_NILCHECK(NL(JFBACTR_stind))));
  /* line 6814: */
-(void)(A_CALLPROC(NL(Output),(SKAACTR_down, ((*NL(FZAACTR_outlevel))+1)),(SKAACTR_down, ((*NL(FZAACTR_outlevel))+1),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(SKAACTR_down, ((*A_NILCHECK(NL(FZAACTR_outlevel)))+1)),(SKAACTR_down, ((*A_NILCHECK(NL(FZAACTR_outlevel)))+1),(NL(Output)).nonlocals)));
  /* line 6815: */
-(void)(A_CALLPROC(NL(Output),(QKAACTR_up, ((*NL(FZAACTR_outlevel))+1)),(QKAACTR_up, ((*NL(FZAACTR_outlevel))+1),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(QKAACTR_up, ((*A_NILCHECK(NL(FZAACTR_outlevel)))+1)),(QKAACTR_up, ((*A_NILCHECK(NL(FZAACTR_outlevel)))+1),(NL(Output)).nonlocals)));
  /* line 6817: */
 A_CLOSURE( FSFACTR_outint, GSFACTR_outint, HSFACTR_outint );
 (( HSFACTR_outint * ) ( FSFACTR_outint.nonlocals )) -> FSFACTR_outint = FSFACTR_outint;
@@ -8658,7 +8658,7 @@ switch ( A_CALLPROC(NL(PFBACTR_analyser),(),((NL(PFBACTR_analyser)).nonlocals)) 
 { 
 case 1: 
 { 
-(void)((*NL(MFBACTR_t1)) = A_CALLPROC(NL(LFDACTR_reader),(UDBACTR_formatreader),(UDBACTR_formatreader,(NL(LFDACTR_reader)).nonlocals)));
+(void)((*A_NILCHECK(NL(MFBACTR_t1))) = A_CALLPROC(NL(LFDACTR_reader),(UDBACTR_formatreader),(UDBACTR_formatreader,(NL(LFDACTR_reader)).nonlocals)));
  /* line 6839: */
  /* line 6840: */
  /* line 6843: */
@@ -8731,17 +8731,17 @@ case 8:
 PRFACTR_norf = ELAACTR_int;
  /* line 6872: */
  /* line 6874: */
-if ((*NL(MFBACTR_t1))!=24)
+if ((*A_NILCHECK(NL(MFBACTR_t1)))!=24)
 { 
  /* line 6875: */
-XSFACTR = (*NL(NSAACTR_find))+=1 ;
+XSFACTR = (*A_NILCHECK(NL(NSAACTR_find)))+=1 ;
 YSFACTR = (&A_VINDEX(NL(JSAACTR_globfbuff),XSFACTR)) ;
-(*YSFACTR) = ',';
+(*A_NILCHECK(YSFACTR)) = ',';
 } 
  /* line 6876: */
-ZSFACTR = (*NL(NSAACTR_find))+=1 ;
+ZSFACTR = (*A_NILCHECK(NL(NSAACTR_find)))+=1 ;
 ATFACTR = (&A_VINDEX(NL(JSAACTR_globfbuff),ZSFACTR)) ;
-(*ATFACTR) = 'N';
+(*A_NILCHECK(ATFACTR)) = 'N';
  /* line 6877: */
  /* line 6878: */
  /* line 6881: */
@@ -8750,32 +8750,32 @@ ATFACTR = (&A_VINDEX(NL(JSAACTR_globfbuff),ZSFACTR)) ;
 break;
 case 9: 
  /* line 6884: */
-BTFACTR = (*NL(NSAACTR_find))+=1 ;
+BTFACTR = (*A_NILCHECK(NL(NSAACTR_find)))+=1 ;
 CTFACTR = (&A_VINDEX(NL(JSAACTR_globfbuff),BTFACTR)) ;
-(*CTFACTR) = ')';
+(*A_NILCHECK(CTFACTR)) = ')';
 break;
 case 10: 
 { 
 (void)(A_VASSIGN2(NL(JSAACTR_globfbuff),MRFACTR_locfbuff,A68_CHAR ));
  /* line 6885: */
-(void)(ORFACTR_locfind = (*NL(NSAACTR_find)));
+(void)(ORFACTR_locfind = (*A_NILCHECK(NL(NSAACTR_find))));
  /* line 6886: */
-(void)(QRFACTR_locstrings = (*NL(IBBACTR_noofstrings)));
+(void)(QRFACTR_locstrings = (*A_NILCHECK(NL(IBBACTR_noofstrings))));
  /* line 6887: */
-(void)(URFACTR_tt = (*NL(LSAACTR_tind)));
+(void)(URFACTR_tt = (*A_NILCHECK(NL(LSAACTR_tind))));
  /* line 6888: */
-(*NL(FZAACTR_outlevel))+=4;
+(*A_NILCHECK(NL(FZAACTR_outlevel)))+=4;
  /* line 6889: */
  /* line 6890: */
-if ((*NL(WGFACTR_formatcaseno))==0)
+if ((*A_NILCHECK(NL(WGFACTR_formatcaseno)))==0)
 { 
  /* line 6891: */
 DTFACTR.Type = YOAACTR_xfdec;
  /* line 6892: */
 ETFACTR.Name = NL(BZAACTR_nullid);
  /* line 6893: */
-FTFACTR = (&(NL(NFFACTR_current)->Lastid)) ;
-ETFACTR.Decno = (*FTFACTR)+=1;
+FTFACTR = (&(A_NILCHECK(NL(NFFACTR_current))->Lastid)) ;
+ETFACTR.Decno = (*A_NILCHECK(FTFACTR))+=1;
 ETFACTR.Level = 0;
 ETFACTR.Mode = ELAACTR_int;
  /* line 6894: */
@@ -8783,28 +8783,28 @@ ETFACTR.Scope = 0;
  /* line 6895: */
 ETFACTR.Rest = (A68_67 *)A68_NIL;
 GTFACTR = A_LOC(A68_67 ) ;
-(void)((*GTFACTR) = ETFACTR) ;
+(void)((*A_NILCHECK(GTFACTR)) = ETFACTR) ;
 DTFACTR.Iddec = GTFACTR;
  /* line 6896: */
  /* line 6897: */
-(void)(A_CALLPROC(NL(Output),(A_UNITE(HTFACTR,mode12,12,DTFACTR), ((*NL(FZAACTR_outlevel))-1)),(A_UNITE(HTFACTR,mode12,12,DTFACTR), ((*NL(FZAACTR_outlevel))-1),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(HTFACTR,mode12,12,DTFACTR), ((*A_NILCHECK(NL(FZAACTR_outlevel)))-1)),(A_UNITE(HTFACTR,mode12,12,DTFACTR), ((*A_NILCHECK(NL(FZAACTR_outlevel)))-1),(NL(Output)).nonlocals)));
  /* line 6898: */
-JTFACTR = (*(&(NL(NFFACTR_current)->Lastid))) ;
-(void)(A_CALLPROC(NL(Output),(A_UNITE(ITFACTR,mode3,3,JTFACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(ITFACTR,mode3,3,JTFACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+JTFACTR = (*A_NILCHECK((&(A_NILCHECK(NL(NFFACTR_current))->Lastid)))) ;
+(void)(A_CALLPROC(NL(Output),(A_UNITE(ITFACTR,mode3,3,JTFACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(ITFACTR,mode3,3,JTFACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 6899: */
-(void)(A_CALLPROC(NL(Output),(QKAACTR_up, (*NL(FZAACTR_outlevel))),(QKAACTR_up, (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(QKAACTR_up, (*A_NILCHECK(NL(FZAACTR_outlevel)))),(QKAACTR_up, (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 6900: */
  /* line 6901: */
-(*NL(GBBACTR_lastidchanged)) = A68_TRUE;
+(*A_NILCHECK(NL(GBBACTR_lastidchanged))) = A68_TRUE;
 } 
  /* line 6902: */
  /* line 6903: */
  /* line 6904: */
-A_CALLPROC((*NL(LGFACTR_uc1)),(PRFACTR_norf, &LTFACTR),(PRFACTR_norf, &LTFACTR,((*NL(LGFACTR_uc1))).nonlocals));
+A_CALLPROC((*A_NILCHECK(NL(LGFACTR_uc1))),(PRFACTR_norf, &LTFACTR),(PRFACTR_norf, &LTFACTR,((*A_NILCHECK(NL(LGFACTR_uc1)))).nonlocals));
 KTFACTR.V = LTFACTR;
  /* line 6905: */
  /* line 6906: */
-if ((*NL(WGFACTR_formatcaseno))==0)
+if ((*A_NILCHECK(NL(WGFACTR_formatcaseno)))==0)
 { 
  /* line 6907: */
 KTFACTR.Type = BNAACTR_xin;
@@ -8816,35 +8816,35 @@ KTFACTR.Type = DNAACTR_xcomma;
 } 
 KTFACTR.Rest = (A68_124 *)A68_NIL;
 MTFACTR = A_LOC(A68_124 ) ;
-(void)((*MTFACTR) = KTFACTR) ;
-(*BSFACTR_lastcase) = MTFACTR;
+(void)((*A_NILCHECK(MTFACTR)) = KTFACTR) ;
+(*A_NILCHECK(BSFACTR_lastcase)) = MTFACTR;
  /* line 6910: */
-(void)(A_CALLPROC(NL(Output),(QKAACTR_up, (*NL(FZAACTR_outlevel))),(QKAACTR_up, (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(QKAACTR_up, (*A_NILCHECK(NL(FZAACTR_outlevel)))),(QKAACTR_up, (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 6911: */
-NTFACTR = (&((&((*BSFACTR_lastcase)->V))->Props)) ;
-(void)((*NTFACTR) = (A68_BITS )((*(&((&((*BSFACTR_lastcase)->V))->Props)))|BRAACTR_downbit));
+NTFACTR = (&(A_NILCHECK((&(A_NILCHECK((*A_NILCHECK(BSFACTR_lastcase)))->V)))->Props)) ;
+(void)((*A_NILCHECK(NTFACTR)) = (A68_BITS )((*A_NILCHECK((&(A_NILCHECK((&(A_NILCHECK((*A_NILCHECK(BSFACTR_lastcase)))->V)))->Props))))|BRAACTR_downbit));
  /* line 6912: */
-(void)(BSFACTR_lastcase = (&((*BSFACTR_lastcase)->Rest)));
+(void)(BSFACTR_lastcase = (&(A_NILCHECK((*A_NILCHECK(BSFACTR_lastcase)))->Rest)));
  /* line 6913: */
-(*NL(WGFACTR_formatcaseno))+=1;
+(*A_NILCHECK(NL(WGFACTR_formatcaseno)))+=1;
  /* line 6914: */
-(*NL(FZAACTR_outlevel))-=4;
+(*A_NILCHECK(NL(FZAACTR_outlevel)))-=4;
  /* line 6915: */
-(*NL(IBBACTR_noofstrings)) = QRFACTR_locstrings;
+(*A_NILCHECK(NL(IBBACTR_noofstrings))) = QRFACTR_locstrings;
  /* line 6916: */
 (void)(A_VASSIGN2(MRFACTR_locfbuff,NL(JSAACTR_globfbuff),A68_CHAR ));
  /* line 6917: */
  /* line 6918: */
-if ((*NL(LSAACTR_tind))<URFACTR_tt)
+if ((*A_NILCHECK(NL(LSAACTR_tind)))<URFACTR_tt)
 { 
 OTFACTR.Nochars = (-ORFACTR_locfind);
  /* line 6919: */
 OTFACTR.Base = 0;
  /* line 6920: */
 OTFACTR.Chars = A_VTRIM(PTFACTR,(NL(JSAACTR_globfbuff)),A_VTSCRIPT(&(PTFACTR.upb),(NL(JSAACTR_globfbuff)).upb,1,ORFACTR_locfind));
-(void)(A_CALLPROC(NL(Output),(A_UNITE(QTFACTR,mode35,35,OTFACTR), ((*NL(FZAACTR_outlevel))+1)),(A_UNITE(QTFACTR,mode35,35,OTFACTR), ((*NL(FZAACTR_outlevel))+1),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(QTFACTR,mode35,35,OTFACTR), ((*A_NILCHECK(NL(FZAACTR_outlevel)))+1)),(A_UNITE(QTFACTR,mode35,35,OTFACTR), ((*A_NILCHECK(NL(FZAACTR_outlevel)))+1),(NL(Output)).nonlocals)));
  /* line 6921: */
-(*NL(IBBACTR_noofstrings))+=ORFACTR_locfind;
+(*A_NILCHECK(NL(IBBACTR_noofstrings)))+=ORFACTR_locfind;
  /* line 6922: */
  /* line 6923: */
  /* line 6924: */
@@ -8856,37 +8856,37 @@ else
 RTFACTR = ORFACTR_locfind;
 } 
  /* line 6928: */
-(*NL(NSAACTR_find)) = RTFACTR;
+(*A_NILCHECK(NL(NSAACTR_find))) = RTFACTR;
 } 
 break;
 case 11: 
 { 
  /* line 6929: */
-if ((*NL(WGFACTR_formatcaseno))!=0)
+if ((*A_NILCHECK(NL(WGFACTR_formatcaseno)))!=0)
 { 
-(*NL(FZAACTR_outlevel))+=3;
+(*A_NILCHECK(NL(FZAACTR_outlevel)))+=3;
  /* line 6930: */
-(void)(A_CALLPROC(NL(RYCACTR_strong),((&ASFACTR_vcase), (*NL(OYAACTR_formatunion)), A68_TRUE),((&ASFACTR_vcase), (*NL(OYAACTR_formatunion)), A68_TRUE,(NL(RYCACTR_strong)).nonlocals)));
+(void)(A_CALLPROC(NL(RYCACTR_strong),((&ASFACTR_vcase), (*A_NILCHECK(NL(OYAACTR_formatunion))), A68_TRUE),((&ASFACTR_vcase), (*A_NILCHECK(NL(OYAACTR_formatunion))), A68_TRUE,(NL(RYCACTR_strong)).nonlocals)));
  /* line 6931: */
  /* line 6932: */
-(*NL(FZAACTR_outlevel))-=3;
+(*A_NILCHECK(NL(FZAACTR_outlevel)))-=3;
 } 
  /* line 6933: */
-(void)(A_CALLPROC(NL(Output),(SKAACTR_down, (*NL(FZAACTR_outlevel))),(SKAACTR_down, (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(SKAACTR_down, (*A_NILCHECK(NL(FZAACTR_outlevel)))),(SKAACTR_down, (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 6934: */
-STFACTR.Nochars = ((*NL(IBBACTR_noofstrings))+(*NL(NSAACTR_find)));
-STFACTR.Nocases = (*NL(WGFACTR_formatcaseno));
+STFACTR.Nochars = ((*A_NILCHECK(NL(IBBACTR_noofstrings)))+(*A_NILCHECK(NL(NSAACTR_find))));
+STFACTR.Nocases = (*A_NILCHECK(NL(WGFACTR_formatcaseno)));
 STFACTR.W = RRFACTR_worksp;
-(void)(A_CALLPROC(NL(Output),(A_UNITE(TTFACTR,mode8,8,STFACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(TTFACTR,mode8,8,STFACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(TTFACTR,mode8,8,STFACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(TTFACTR,mode8,8,STFACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 6935: */
-(void)(A_CALLPROC(NL(Output),(SKAACTR_down, (*NL(FZAACTR_outlevel))),(SKAACTR_down, (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(SKAACTR_down, (*A_NILCHECK(NL(FZAACTR_outlevel)))),(SKAACTR_down, (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 6936: */
-UTFACTR.Nochars = (*NL(NSAACTR_find));
+UTFACTR.Nochars = (*A_NILCHECK(NL(NSAACTR_find)));
 UTFACTR.Base = 0;
-UTFACTR.Chars = A_VTRIM(VTFACTR,(NL(JSAACTR_globfbuff)),A_VTSCRIPT(&(VTFACTR.upb),(NL(JSAACTR_globfbuff)).upb,1,(*NL(NSAACTR_find))));
-(void)(A_CALLPROC(NL(Output),(A_UNITE(WTFACTR,mode35,35,UTFACTR), ((*NL(FZAACTR_outlevel))+1)),(A_UNITE(WTFACTR,mode35,35,UTFACTR), ((*NL(FZAACTR_outlevel))+1),(NL(Output)).nonlocals)));
+UTFACTR.Chars = A_VTRIM(VTFACTR,(NL(JSAACTR_globfbuff)),A_VTSCRIPT(&(VTFACTR.upb),(NL(JSAACTR_globfbuff)).upb,1,(*A_NILCHECK(NL(NSAACTR_find)))));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(WTFACTR,mode35,35,UTFACTR), ((*A_NILCHECK(NL(FZAACTR_outlevel)))+1)),(A_UNITE(WTFACTR,mode35,35,UTFACTR), ((*A_NILCHECK(NL(FZAACTR_outlevel)))+1),(NL(Output)).nonlocals)));
  /* line 6937: */
-(void)(A_CALLPROC(NL(Output),(QKAACTR_up, ((*NL(FZAACTR_outlevel))+1)),(QKAACTR_up, ((*NL(FZAACTR_outlevel))+1),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(QKAACTR_up, ((*A_NILCHECK(NL(FZAACTR_outlevel)))+1)),(QKAACTR_up, ((*A_NILCHECK(NL(FZAACTR_outlevel)))+1),(NL(Output)).nonlocals)));
  /* line 6938: */
  /* line 6939: */
  /* line 6942: */
@@ -9274,7 +9274,7 @@ DUFACTR_am = (A68_52 *)A68_NIL;
  /* line 6970: */
  /* line 6971: */
  /* line 6972: */
-KUFACTR_v = (&((&JUFACTR_vlist)->V));
+KUFACTR_v = (&(A_NILCHECK((&JUFACTR_vlist))->V));
  /* line 6973: */
  /* line 6974: */
 PUFACTR_next = (-1);
@@ -9298,7 +9298,7 @@ case 1:
  /* line 6998: */
 if (PUFACTR_next>=0)
 { 
-(*NL(MFBACTR_t1)) = PUFACTR_next;
+(*A_NILCHECK(NL(MFBACTR_t1))) = PUFACTR_next;
  /* line 6999: */
  /* line 7000: */
 (void)(PUFACTR_next = (-1));
@@ -9307,7 +9307,7 @@ else
 { 
  /* line 7001: */
  /* line 7004: */
-(void)((*NL(MFBACTR_t1)) = A_CALLPROC(NL(LFDACTR_reader),(SDBACTR_ucreader),(SDBACTR_ucreader,(NL(LFDACTR_reader)).nonlocals)));
+(void)((*A_NILCHECK(NL(MFBACTR_t1))) = A_CALLPROC(NL(LFDACTR_reader),(SDBACTR_ucreader),(SDBACTR_ucreader,(NL(LFDACTR_reader)).nonlocals)));
 } 
 break;
 case 2: 
@@ -9354,9 +9354,9 @@ case 6:
 break;
 case 7: 
 { 
-(void)((*NL(OGFACTR_scam)) = (*DUFACTR_am));
+(void)((*A_NILCHECK(NL(OGFACTR_scam))) = (*A_NILCHECK(DUFACTR_am)));
  /* line 7025: */
-(*NL(GHFACTR_firstaidec)) = A68_TRUE;
+(*A_NILCHECK(NL(GHFACTR_firstaidec))) = A68_TRUE;
  /* line 7026: */
  /* line 7027: */
  /* line 7030: */
@@ -9365,7 +9365,7 @@ case 7:
 break;
 case 8: 
 { 
-(*NL(GHFACTR_firstaidec)) = A68_TRUE;
+(*A_NILCHECK(NL(GHFACTR_firstaidec))) = A68_TRUE;
  /* line 7031: */
  /* line 7032: */
  /* line 7035: */
@@ -9374,47 +9374,47 @@ case 8:
 break;
 case 9: 
 { 
-AVFACTR = ((*NL(MFBACTR_t1))==11);
+AVFACTR = ((*A_NILCHECK(NL(MFBACTR_t1)))==11);
 if ( ! AVFACTR )
-{AVFACTR = ((*NL(MFBACTR_t1))==45);
+{AVFACTR = ((*A_NILCHECK(NL(MFBACTR_t1)))==45);
 }
 if ( ! AVFACTR )
 { /* line 7037: */
-AVFACTR = ((*NL(MFBACTR_t1))==13);
+AVFACTR = ((*A_NILCHECK(NL(MFBACTR_t1)))==13);
 }
 if (AVFACTR)
 { 
  /* line 7038: */
-(void)(A_CALLPROC(NL(RYCACTR_strong),((&(EUFACTR_vss->V)), YKAACTR_voidmode, A68_TRUE),((&(EUFACTR_vss->V)), YKAACTR_voidmode, A68_TRUE,(NL(RYCACTR_strong)).nonlocals)));
+(void)(A_CALLPROC(NL(RYCACTR_strong),((&(A_NILCHECK(EUFACTR_vss)->V)), YKAACTR_voidmode, A68_TRUE),((&(A_NILCHECK(EUFACTR_vss)->V)), YKAACTR_voidmode, A68_TRUE,(NL(RYCACTR_strong)).nonlocals)));
 } 
 else
 { 
  /* line 7039: */
-(void)(A_CALLPROC(NL(NYBACTR_heapvalue),((&(EUFACTR_vss->V))),((&(EUFACTR_vss->V)),(NL(NYBACTR_heapvalue)).nonlocals)));
+(void)(A_CALLPROC(NL(NYBACTR_heapvalue),((&(A_NILCHECK(EUFACTR_vss)->V))),((&(A_NILCHECK(EUFACTR_vss)->V)),(NL(NYBACTR_heapvalue)).nonlocals)));
 } 
  /* line 7041: */
  /* line 7042: */
-if ((*NL(MFBACTR_t1))==11)
+if ((*A_NILCHECK(NL(MFBACTR_t1)))==11)
 { 
  /* line 7043: */
-BVFACTR = (&(NL(NFFACTR_current)->Props)) ;
-(void)((*BVFACTR) = (A68_BITS )((*(&(NL(NFFACTR_current)->Props)))|(*(&(NL(NFFACTR_current)->Dybits)))));
+BVFACTR = (&(A_NILCHECK(NL(NFFACTR_current))->Props)) ;
+(void)((*A_NILCHECK(BVFACTR)) = (A68_BITS )((*A_NILCHECK((&(A_NILCHECK(NL(NFFACTR_current))->Props))))|(*A_NILCHECK((&(A_NILCHECK(NL(NFFACTR_current))->Dybits))))));
 } 
 else
 { 
  /* line 7044: */
-if ((*(&(NL(NFFACTR_current)->Dybits)))!=MQAACTR_z)
+if ((*A_NILCHECK((&(A_NILCHECK(NL(NFFACTR_current))->Dybits))))!=MQAACTR_z)
 { 
-CVFACTR = (&(NL(NFFACTR_current)->Props)) ;
-(void)((*CVFACTR) = (A68_BITS )((*(&(NL(NFFACTR_current)->Props)))|ZLAACTR_dontpullbit));
+CVFACTR = (&(A_NILCHECK(NL(NFFACTR_current))->Props)) ;
+(void)((*A_NILCHECK(CVFACTR)) = (A68_BITS )((*A_NILCHECK((&(A_NILCHECK(NL(NFFACTR_current))->Props))))|ZLAACTR_dontpullbit));
  /* line 7045: */
  /* line 7046: */
-DVFACTR = (&(NL(External)->Dybits)) ;
-(void)((*DVFACTR) = (A68_BITS )((*(&(NL(External)->Dybits)))|(*(&(NL(NFFACTR_current)->Dybits)))));
+DVFACTR = (&(A_NILCHECK(NL(External))->Dybits)) ;
+(void)((*A_NILCHECK(DVFACTR)) = (A68_BITS )((*A_NILCHECK((&(A_NILCHECK(NL(External))->Dybits))))|(*A_NILCHECK((&(A_NILCHECK(NL(NFFACTR_current))->Dybits))))));
 } 
 } 
  /* line 7047: */
-(void)((*KUFACTR_v) = (*(&(EUFACTR_vss->V))));
+(void)((*A_NILCHECK(KUFACTR_v)) = (*A_NILCHECK((&(A_NILCHECK(EUFACTR_vss)->V)))));
  /* line 7048: */
  /* line 7049: */
  /* line 7052: */
@@ -9423,24 +9423,24 @@ goto CUFACTR_exituc;
 break;
 case 10: 
  /* line 7053: */
-EVFACTR = ((MUFACTR_vl1 = (*(&((&(EUFACTR_vss->V))->Vlist))))!=UQAACTR_nilvl);
+EVFACTR = ((MUFACTR_vl1 = (*A_NILCHECK((&(A_NILCHECK((&(A_NILCHECK(EUFACTR_vss)->V)))->Vlist)))))!=UQAACTR_nilvl);
 if ( EVFACTR )
 { /* line 7054: */
-EVFACTR = ((*(&(MUFACTR_vl1->Type)))!=NNAACTR_xcoll);
+EVFACTR = ((*A_NILCHECK((&(A_NILCHECK(MUFACTR_vl1)->Type))))!=NNAACTR_xcoll);
 }
 if (EVFACTR)
 { 
  /* line 7055: */
  /* line 7058: */
-FVFACTR = (&((*(&(NL(NFFACTR_current)->Rd)))->Props)) ;
-(void)((*FVFACTR) = (A68_BITS )((*(&((*(&(NL(NFFACTR_current)->Rd)))->Props)))|LLAACTR_ccbit));
+FVFACTR = (&(A_NILCHECK((*A_NILCHECK((&(A_NILCHECK(NL(NFFACTR_current))->Rd)))))->Props)) ;
+(void)((*A_NILCHECK(FVFACTR)) = (A68_BITS )((*A_NILCHECK((&(A_NILCHECK((*A_NILCHECK((&(A_NILCHECK(NL(NFFACTR_current))->Rd)))))->Props))))|LLAACTR_ccbit));
 } 
 break;
 case 11: 
 { 
-(void)(A_CALLPROC(NL(RYCACTR_strong),((&(EUFACTR_vss->V)), Mode, A68_TRUE),((&(EUFACTR_vss->V)), Mode, A68_TRUE,(NL(RYCACTR_strong)).nonlocals)));
+(void)(A_CALLPROC(NL(RYCACTR_strong),((&(A_NILCHECK(EUFACTR_vss)->V)), Mode, A68_TRUE),((&(A_NILCHECK(EUFACTR_vss)->V)), Mode, A68_TRUE,(NL(RYCACTR_strong)).nonlocals)));
  /* line 7059: */
-(void)((*KUFACTR_v) = (*(&(EUFACTR_vss->V))));
+(void)((*A_NILCHECK(KUFACTR_v)) = (*A_NILCHECK((&(A_NILCHECK(EUFACTR_vss)->V)))));
  /* line 7060: */
  /* line 7061: */
  /* line 7064: */
@@ -9465,7 +9465,7 @@ HVFACTR.Type = 0;
 HVFACTR.Rest = EUFACTR_vss;
  /* line 7072: */
 IVFACTR = A_LOC(A68_124 ) ;
-(void)((*IVFACTR) = HVFACTR) ;
+(void)((*A_NILCHECK(IVFACTR)) = HVFACTR) ;
 EUFACTR_vss = IVFACTR;
 } 
 break;
@@ -9476,19 +9476,19 @@ JVFACTR.Type = 0;
 JVFACTR.Rest = EUFACTR_vss;
  /* line 7075: */
 LVFACTR = A_LOC(A68_124 ) ;
-(void)((*LVFACTR) = JVFACTR) ;
+(void)((*A_NILCHECK(LVFACTR)) = JVFACTR) ;
 EUFACTR_vss = LVFACTR;
 break;
 case 15: 
 { 
  /* line 7076: */
-if ((*NL(GGFACTR_type))==2)
+if ((*A_NILCHECK(NL(GGFACTR_type)))==2)
 { 
  /* line 7078: */
 (void)(A_CALLPROC(NL(QJBACTR_fault),(139),(139,(NL(QJBACTR_fault)).nonlocals)));
 } 
  /* line 7079: */
-(void)((*NL(EZAACTR_rdmode)) = A_CALLPROC(NL(JGCACTR_deflex),((*(&(DUFACTR_am->Mode)))),((*(&(DUFACTR_am->Mode))),(NL(JGCACTR_deflex)).nonlocals)));
+(void)((*A_NILCHECK(NL(EZAACTR_rdmode))) = A_CALLPROC(NL(JGCACTR_deflex),((*A_NILCHECK((&(A_NILCHECK(DUFACTR_am)->Mode))))),((*A_NILCHECK((&(A_NILCHECK(DUFACTR_am)->Mode)))),(NL(JGCACTR_deflex)).nonlocals)));
  /* line 7080: */
 A_CALLPROC(NL(GFFACTR_range),(NL(NFFACTR_current), (A68_67 *)A68_NIL, (A68_110 *)A68_NIL, (A68_BOOL *)A68_NIL, &NVFACTR),(NL(NFFACTR_current), (A68_67 *)A68_NIL, (A68_110 *)A68_NIL, (A68_BOOL *)A68_NIL, &NVFACTR,(NL(GFFACTR_range)).nonlocals));
 MVFACTR.V = NVFACTR.V;
@@ -9497,13 +9497,13 @@ MVFACTR.Type = 0;
 MVFACTR.Rest = EUFACTR_vss;
  /* line 7084: */
 OVFACTR = A_LOC(A68_124 ) ;
-(void)((*OVFACTR) = MVFACTR) ;
+(void)((*A_NILCHECK(OVFACTR)) = MVFACTR) ;
 EUFACTR_vss = OVFACTR;
 } 
 break;
 case 16: 
 { 
-(*NL(EZAACTR_rdmode)) = YKAACTR_voidmode;
+(*A_NILCHECK(NL(EZAACTR_rdmode))) = YKAACTR_voidmode;
  /* line 7085: */
 A_CALLPROC(NL(GFFACTR_range),(NL(NFFACTR_current), (A68_67 *)A68_NIL, (A68_110 *)A68_NIL, (A68_BOOL *)A68_NIL, &QVFACTR),(NL(NFFACTR_current), (A68_67 *)A68_NIL, (A68_110 *)A68_NIL, (A68_BOOL *)A68_NIL, &QVFACTR,(NL(GFFACTR_range)).nonlocals));
 PVFACTR.V = QVFACTR.V;
@@ -9512,28 +9512,28 @@ PVFACTR.Type = 0;
 PVFACTR.Rest = EUFACTR_vss;
  /* line 7090: */
 RVFACTR = A_LOC(A68_124 ) ;
-(void)((*RVFACTR) = PVFACTR) ;
+(void)((*A_NILCHECK(RVFACTR)) = PVFACTR) ;
 EUFACTR_vss = RVFACTR;
 } 
 break;
 case 17: 
 { 
  /* line 7091: */
-if ((*NL(MFBACTR_t1))==32)
+if ((*A_NILCHECK(NL(MFBACTR_t1)))==32)
 { 
-(void)(TUFACTR_i = (*NL(LSAACTR_tind)));
+(void)(TUFACTR_i = (*A_NILCHECK(NL(LSAACTR_tind))));
  /* line 7092: */
  /* line 7093: */
 if (A_CALLPROC(NL(ZJBACTR_primread),(),((NL(ZJBACTR_primread)).nonlocals))==84)
 { 
  /* line 7094: */
-(*NL(MFBACTR_t1)) = 27;
+(*A_NILCHECK(NL(MFBACTR_t1))) = 27;
 } 
 else
 { 
  /* line 7095: */
  /* line 7096: */
-(*NL(LSAACTR_tind)) = TUFACTR_i;
+(*A_NILCHECK(NL(LSAACTR_tind))) = TUFACTR_i;
 } 
 } 
  /* line 7097: */
@@ -9543,39 +9543,39 @@ A_CALLPROC(NL(GFFACTR_range),(NL(NFFACTR_current), (A68_67 *)A68_NIL, (A68_110 *
 JUFACTR_vlist = SVFACTR;
  /* line 7099: */
  /* line 7100: */
-if ((*(&((&JUFACTR_vlist)->Rest)))!=UQAACTR_nilvl)
+if ((*A_NILCHECK((&(A_NILCHECK((&JUFACTR_vlist))->Rest))))!=UQAACTR_nilvl)
 { 
 TVFACTR.Props = MQAACTR_z;
 TVFACTR.Mode = (-1);
 UVFACTR = A_LOC(A68_124 ) ;
-(void)((*UVFACTR) = JUFACTR_vlist) ;
+(void)((*A_NILCHECK(UVFACTR)) = JUFACTR_vlist) ;
 TVFACTR.Vlist = UVFACTR;
  /* line 7101: */
 TVFACTR.Labs = (A68_69 *)A68_NIL;
  /* line 7102: */
  /* line 7105: */
-(*KUFACTR_v) = TVFACTR;
+(*A_NILCHECK(KUFACTR_v)) = TVFACTR;
 } 
 } 
 break;
 case 18: 
  /* line 7108: */
-(*NL(FZAACTR_outlevel))+=1;
+(*A_NILCHECK(NL(FZAACTR_outlevel)))+=1;
 break;
 case 19: 
  /* line 7109: */
-VVFACTR = ((*(&((&JUFACTR_vlist)->Rest)))==UQAACTR_nilvl);
+VVFACTR = ((*A_NILCHECK((&(A_NILCHECK((&JUFACTR_vlist))->Rest))))==UQAACTR_nilvl);
 if ( VVFACTR )
 { /* line 7110: */
-WVFACTR = ((*(&((&((&JUFACTR_vlist)->V))->Vlist)))!=UQAACTR_nilvl);
+WVFACTR = ((*A_NILCHECK((&(A_NILCHECK((&(A_NILCHECK((&JUFACTR_vlist))->V)))->Vlist))))!=UQAACTR_nilvl);
 if ( ! WVFACTR )
 { /* line 7111: */
-XVFACTR = (*(&(KUFACTR_v->Props))) ;
+XVFACTR = (*A_NILCHECK((&(A_NILCHECK(KUFACTR_v)->Props)))) ;
 WVFACTR = A_LB_GE(XVFACTR,SLAACTR_semibit);
 }
 if ( ! WVFACTR )
 { /* line 7112: */
-WVFACTR = ((*(&(KUFACTR_v->Labs)))!=XQAACTR_nillab);
+WVFACTR = ((*A_NILCHECK((&(A_NILCHECK(KUFACTR_v)->Labs))))!=XQAACTR_nillab);
 }
  /* line 7113: */
 VVFACTR = WVFACTR;
@@ -9585,24 +9585,24 @@ if (VVFACTR)
 YVFACTR.Props = MQAACTR_z;
 YVFACTR.Mode = (-1);
 ZVFACTR = A_LOC(A68_124 ) ;
-(void)((*ZVFACTR) = JUFACTR_vlist) ;
+(void)((*A_NILCHECK(ZVFACTR)) = JUFACTR_vlist) ;
 YVFACTR.Vlist = ZVFACTR;
  /* line 7114: */
 YVFACTR.Labs = (A68_69 *)A68_NIL;
  /* line 7117: */
-(*KUFACTR_v) = YVFACTR;
+(*A_NILCHECK(KUFACTR_v)) = YVFACTR;
 } 
 break;
 case 20: 
 { 
 (void)(TUFACTR_i = A_CALLPROC(NL(XJCACTR_pmode),(A_CALLPROC(NL(CXCACTR_hcf),(KUFACTR_v),(KUFACTR_v,(NL(CXCACTR_hcf)).nonlocals))),(A_CALLPROC(NL(CXCACTR_hcf),(KUFACTR_v),(KUFACTR_v,(NL(CXCACTR_hcf)).nonlocals)),(NL(XJCACTR_pmode)).nonlocals)));
  /* line 7118: */
-(void)(PUFACTR_next = (*NL(MFBACTR_t1)));
+(void)(PUFACTR_next = (*A_NILCHECK(NL(MFBACTR_t1))));
  /* line 7119: */
 IUFACTR_bangdi = A68_FALSE;
  /* line 7120: */
-AWFACTR = (((*NL(VBBACTR_brind))-1)-((PUFACTR_next==24))) ;
-(void)(UUFACTR_j = (*(&A_VINDEX(NL(TBBACTR_brackets),AWFACTR))));
+AWFACTR = (((*A_NILCHECK(NL(VBBACTR_brind)))-1)-((PUFACTR_next==24))) ;
+(void)(UUFACTR_j = (*A_NILCHECK((&A_VINDEX(NL(TBBACTR_brackets),AWFACTR)))));
  /* line 7121: */
 BWFACTR.V.Props = MQAACTR_z;
 BWFACTR.V.Mode = (-TUFACTR_i);
@@ -9611,25 +9611,25 @@ BWFACTR.V.Labs = (A68_69 *)A68_NIL;
 BWFACTR.Type = 0;
 BWFACTR.Rest = EUFACTR_vss;
 CWFACTR = A_LOC(A68_124 ) ;
-(void)((*CWFACTR) = BWFACTR) ;
+(void)((*A_NILCHECK(CWFACTR)) = BWFACTR) ;
 EUFACTR_vss = CWFACTR;
  /* line 7122: */
-DWFACTR.V = (*KUFACTR_v);
+DWFACTR.V = (*A_NILCHECK(KUFACTR_v));
 DWFACTR.Type = 0;
 DWFACTR.Rest = EUFACTR_vss;
 EWFACTR = A_LOC(A68_124 ) ;
-(void)((*EWFACTR) = DWFACTR) ;
+(void)((*A_NILCHECK(EWFACTR)) = DWFACTR) ;
 EUFACTR_vss = EWFACTR;
  /* line 7123: */
  /* line 7124: */
-FWFACTR = (*(&A_VINDEX(NL(KUAACTR_modes),TUFACTR_i))) ;
+FWFACTR = (*A_NILCHECK((&A_VINDEX(NL(KUAACTR_modes),TUFACTR_i)))) ;
 switch ( FWFACTR.mode )
 { 
 case 2: /* REF STRUCT(INT,REF MODE54)  */
 GWFACTR_u = (FWFACTR.data.mode2);
  /* line 7125: */
 { 
-(*NL(AZAACTR_globccmode)) = TUFACTR_i;
+(*A_NILCHECK(NL(AZAACTR_globccmode))) = TUFACTR_i;
  /* line 7126: */
 IUFACTR_bangdi = A68_TRUE;
  /* line 7127: */
@@ -9682,7 +9682,7 @@ HWFACTR = XMAACTR_xcase;
 } 
 break;
 } 
-(*NL(MFBACTR_t1)) = HWFACTR;
+(*A_NILCHECK(NL(MFBACTR_t1))) = HWFACTR;
  /* line 7145: */
 JWFACTR = IUFACTR_bangdi;
 if ( JWFACTR )
@@ -9702,21 +9702,21 @@ if (JWFACTR)
  /* line 7150: */
  /* line 7151: */
  /* line 7154: */
-KWFACTR = (&(EUFACTR_vss->Type)) ;
-(void)((*KWFACTR) = (*NL(MFBACTR_t1)));
+KWFACTR = (&(A_NILCHECK(EUFACTR_vss)->Type)) ;
+(void)((*A_NILCHECK(KWFACTR)) = (*A_NILCHECK(NL(MFBACTR_t1))));
 } 
 break;
 case 21: 
 { 
-(*NL(FZAACTR_outlevel))-=1;
+(*A_NILCHECK(NL(FZAACTR_outlevel)))-=1;
  /* line 7155: */
-LWFACTR.V = (*KUFACTR_v);
+LWFACTR.V = (*A_NILCHECK(KUFACTR_v));
 LWFACTR.Type = 0;
  /* line 7156: */
 LWFACTR.Rest = EUFACTR_vss;
  /* line 7159: */
 MWFACTR = A_LOC(A68_124 ) ;
-(void)((*MWFACTR) = LWFACTR) ;
+(void)((*A_NILCHECK(MWFACTR)) = LWFACTR) ;
 EUFACTR_vss = MWFACTR;
 } 
 break;
@@ -9724,30 +9724,30 @@ case 22:
 { 
 MUFACTR_vl1 = EUFACTR_vss;
  /* line 7160: */
-(void)(EUFACTR_vss = (*(&(EUFACTR_vss->Rest))));
+(void)(EUFACTR_vss = (*A_NILCHECK((&(A_NILCHECK(EUFACTR_vss)->Rest)))));
  /* line 7161: */
-NWFACTR = (&(MUFACTR_vl1->Rest)) ;
-(*NWFACTR) = LUFACTR_vl;
+NWFACTR = (&(A_NILCHECK(MUFACTR_vl1)->Rest)) ;
+(*A_NILCHECK(NWFACTR)) = LUFACTR_vl;
  /* line 7162: */
-OWFACTR = (&((&(EUFACTR_vss->V))->Vlist)) ;
-(*OWFACTR) = MUFACTR_vl1;
+OWFACTR = (&(A_NILCHECK((&(A_NILCHECK(EUFACTR_vss)->V)))->Vlist)) ;
+(*A_NILCHECK(OWFACTR)) = MUFACTR_vl1;
  /* line 7163: */
 LUFACTR_vl = EUFACTR_vss;
  /* line 7164: */
-(void)((*KUFACTR_v) = (*(&(EUFACTR_vss->V))));
+(void)((*A_NILCHECK(KUFACTR_v)) = (*A_NILCHECK((&(A_NILCHECK(EUFACTR_vss)->V)))));
  /* line 7165: */
  /* line 7166: */
  /* line 7169: */
-(void)(EUFACTR_vss = (*(&(EUFACTR_vss->Rest))));
+(void)(EUFACTR_vss = (*A_NILCHECK((&(A_NILCHECK(EUFACTR_vss)->Rest)))));
 } 
 break;
 case 23: 
  /* line 7170: */
-if ((*NL(VBBACTR_brind))>1)
+if ((*A_NILCHECK(NL(VBBACTR_brind)))>1)
 { 
  /* line 7171: */
-PWFACTR = ((*NL(VBBACTR_brind))-1) ;
-switch ( ((*(&A_VINDEX(NL(TBBACTR_brackets),PWFACTR)))-53) )
+PWFACTR = ((*A_NILCHECK(NL(VBBACTR_brind)))-1) ;
+switch ( ((*A_NILCHECK((&A_VINDEX(NL(TBBACTR_brackets),PWFACTR))))-53) )
 { 
 case 1: 
 QWFACTR = 45;
@@ -9772,36 +9772,36 @@ TUFACTR_i = QWFACTR;
 if (TUFACTR_i==44)
 { 
  /* line 7176: */
-(void)((*NL(GDBACTR_id1)) = A_CALLPROC(NL(KTAACTR_idmess),(((*NL(PDBACTR_bangtype))+3)),(((*NL(PDBACTR_bangtype))+3),(NL(KTAACTR_idmess)).nonlocals))) ;
+(void)((*A_NILCHECK(NL(GDBACTR_id1))) = A_CALLPROC(NL(KTAACTR_idmess),(((*A_NILCHECK(NL(PDBACTR_bangtype)))+3)),(((*A_NILCHECK(NL(PDBACTR_bangtype)))+3),(NL(KTAACTR_idmess)).nonlocals))) ;
 (void)(A_CALLPROC(NL(PZBACTR_faultp),(203, 0, 0, NL(GDBACTR_id1)),(203, 0, 0, NL(GDBACTR_id1),(NL(PZBACTR_faultp)).nonlocals)));
 } 
 else
 { 
  /* line 7177: */
-if ((*NL(PDBACTR_bangtype))!=TUFACTR_i)
+if ((*A_NILCHECK(NL(PDBACTR_bangtype)))!=TUFACTR_i)
 { 
  /* line 7179: */
  /* line 7180: */
-(void)((*NL(GDBACTR_id1)) = A_CALLPROC(NL(KTAACTR_idmess),((TUFACTR_i+3)),((TUFACTR_i+3),(NL(KTAACTR_idmess)).nonlocals))) ;
+(void)((*A_NILCHECK(NL(GDBACTR_id1))) = A_CALLPROC(NL(KTAACTR_idmess),((TUFACTR_i+3)),((TUFACTR_i+3),(NL(KTAACTR_idmess)).nonlocals))) ;
 (void)(A_CALLPROC(NL(PZBACTR_faultp),(118, 0, 0, NL(GDBACTR_id1)),(118, 0, 0, NL(GDBACTR_id1),(NL(PZBACTR_faultp)).nonlocals)));
 } 
 } 
 } 
 else
 { 
-RWFACTR = (&A_VINDEX(NL(TBBACTR_brackets),(*NL(VBBACTR_brind)))) ;
-(*RWFACTR) = 54;
+RWFACTR = (&A_VINDEX(NL(TBBACTR_brackets),(*A_NILCHECK(NL(VBBACTR_brind))))) ;
+(*A_NILCHECK(RWFACTR)) = 54;
  /* line 7181: */
  /* line 7182: */
  /* line 7185: */
-(*NL(VBBACTR_brind))+=1;
+(*A_NILCHECK(NL(VBBACTR_brind)))+=1;
 } 
 break;
 case 24: 
 { 
  /* line 7186: */
-SWFACTR = ((*NL(VBBACTR_brind))-1) ;
-switch ( ((*(&A_VINDEX(NL(TBBACTR_brackets),SWFACTR)))-53) )
+SWFACTR = ((*A_NILCHECK(NL(VBBACTR_brind)))-1) ;
+switch ( ((*A_NILCHECK((&A_VINDEX(NL(TBBACTR_brackets),SWFACTR))))-53) )
 { 
 case 1: 
 TWFACTR = 45;
@@ -9826,71 +9826,71 @@ TUFACTR_i = TWFACTR;
 if (TUFACTR_i==44)
 { 
  /* line 7191: */
-(void)((*NL(GDBACTR_id1)) = A_CALLPROC(NL(KTAACTR_idmess),(((*NL(PDBACTR_bangtype))+3)),(((*NL(PDBACTR_bangtype))+3),(NL(KTAACTR_idmess)).nonlocals))) ;
+(void)((*A_NILCHECK(NL(GDBACTR_id1))) = A_CALLPROC(NL(KTAACTR_idmess),(((*A_NILCHECK(NL(PDBACTR_bangtype)))+3)),(((*A_NILCHECK(NL(PDBACTR_bangtype)))+3),(NL(KTAACTR_idmess)).nonlocals))) ;
 (void)(A_CALLPROC(NL(PZBACTR_faultp),(203, 0, 0, NL(GDBACTR_id1)),(203, 0, 0, NL(GDBACTR_id1),(NL(PZBACTR_faultp)).nonlocals)));
 } 
 else
 { 
  /* line 7192: */
-if ((*NL(PDBACTR_bangtype))!=TUFACTR_i)
+if ((*A_NILCHECK(NL(PDBACTR_bangtype)))!=TUFACTR_i)
 { 
  /* line 7194: */
  /* line 7195: */
  /* line 7199: */
-(void)((*NL(GDBACTR_id1)) = A_CALLPROC(NL(KTAACTR_idmess),((TUFACTR_i+3)),((TUFACTR_i+3),(NL(KTAACTR_idmess)).nonlocals))) ;
+(void)((*A_NILCHECK(NL(GDBACTR_id1))) = A_CALLPROC(NL(KTAACTR_idmess),((TUFACTR_i+3)),((TUFACTR_i+3),(NL(KTAACTR_idmess)).nonlocals))) ;
 (void)(A_CALLPROC(NL(PZBACTR_faultp),(118, 0, 0, NL(GDBACTR_id1)),(118, 0, 0, NL(GDBACTR_id1),(NL(PZBACTR_faultp)).nonlocals)));
 } 
 } 
 } 
 break;
 case 25: 
-UWFACTR.V = (*KUFACTR_v);
+UWFACTR.V = (*A_NILCHECK(KUFACTR_v));
 UWFACTR.Type = ANAACTR_xthen;
 UWFACTR.Rest = EUFACTR_vss;
  /* line 7202: */
 VWFACTR = A_LOC(A68_124 ) ;
-(void)((*VWFACTR) = UWFACTR) ;
+(void)((*A_NILCHECK(VWFACTR)) = UWFACTR) ;
 EUFACTR_vss = VWFACTR;
 break;
 case 26: 
 { 
 LUFACTR_vl = EUFACTR_vss;
  /* line 7203: */
-(void)(EUFACTR_vss = (*(&(EUFACTR_vss->Rest))));
+(void)(EUFACTR_vss = (*A_NILCHECK((&(A_NILCHECK(EUFACTR_vss)->Rest)))));
  /* line 7204: */
-WWFACTR.V = (*KUFACTR_v);
+WWFACTR.V = (*A_NILCHECK(KUFACTR_v));
 WWFACTR.Type = INAACTR_xelse;
  /* line 7205: */
 WWFACTR.Rest = (A68_124 *)A68_NIL;
  /* line 7208: */
 XWFACTR = A_LOC(A68_124 ) ;
-(void)((*XWFACTR) = WWFACTR) ;
-YWFACTR = (&(LUFACTR_vl->Rest)) ;
-(*YWFACTR) = XWFACTR;
+(void)((*A_NILCHECK(XWFACTR)) = WWFACTR) ;
+YWFACTR = (&(A_NILCHECK(LUFACTR_vl)->Rest)) ;
+(*A_NILCHECK(YWFACTR)) = XWFACTR;
 } 
 break;
 case 27: 
 { 
 LUFACTR_vl = EUFACTR_vss;
  /* line 7209: */
-(void)(EUFACTR_vss = (*(&(EUFACTR_vss->Rest))));
+(void)(EUFACTR_vss = (*A_NILCHECK((&(A_NILCHECK(EUFACTR_vss)->Rest)))));
  /* line 7210: */
  /* line 7211: */
  /* line 7214: */
-ZWFACTR = (&(LUFACTR_vl->Rest)) ;
-(*ZWFACTR) = (A68_124 *)A68_NIL;
+ZWFACTR = (&(A_NILCHECK(LUFACTR_vl)->Rest)) ;
+(*A_NILCHECK(ZWFACTR)) = (A68_124 *)A68_NIL;
 } 
 break;
 case 28: 
 { 
-AXFACTR.V = (*KUFACTR_v);
+AXFACTR.V = (*A_NILCHECK(KUFACTR_v));
 AXFACTR.Type = DNAACTR_xcomma;
 AXFACTR.Rest = EUFACTR_vss;
 BXFACTR = A_LOC(A68_124 ) ;
-(void)((*BXFACTR) = AXFACTR) ;
+(void)((*A_NILCHECK(BXFACTR)) = AXFACTR) ;
 EUFACTR_vss = BXFACTR;
  /* line 7215: */
-CXFACTR = ((A68_BITS )((*(&((&((&JUFACTR_vlist)->V))->Props)))&ERAACTR_labsemi)!=MQAACTR_z);
+CXFACTR = ((A68_BITS )((*A_NILCHECK((&(A_NILCHECK((&(A_NILCHECK((&JUFACTR_vlist))->V)))->Props))))&ERAACTR_labsemi)!=MQAACTR_z);
 if ( ! CXFACTR )
 {CXFACTR = HUFACTR_exitinrange;
 }
@@ -9909,14 +9909,14 @@ if (CXFACTR)
 break;
 case 29: 
 { 
-DXFACTR.V = (*KUFACTR_v);
+DXFACTR.V = (*A_NILCHECK(KUFACTR_v));
 DXFACTR.Type = BNAACTR_xin;
 DXFACTR.Rest = EUFACTR_vss;
 EXFACTR = A_LOC(A68_124 ) ;
-(void)((*EXFACTR) = DXFACTR) ;
+(void)((*A_NILCHECK(EXFACTR)) = DXFACTR) ;
 EUFACTR_vss = EXFACTR;
  /* line 7224: */
-FXFACTR = ((A68_BITS )((*(&((&((&JUFACTR_vlist)->V))->Props)))&ERAACTR_labsemi)!=MQAACTR_z);
+FXFACTR = ((A68_BITS )((*A_NILCHECK((&(A_NILCHECK((&(A_NILCHECK((&JUFACTR_vlist))->V)))->Props))))&ERAACTR_labsemi)!=MQAACTR_z);
 if ( ! FXFACTR )
 {FXFACTR = HUFACTR_exitinrange;
 }
@@ -9934,12 +9934,12 @@ if (FXFACTR)
 } 
 break;
 case 30: 
-GXFACTR.V = (*KUFACTR_v);
+GXFACTR.V = (*A_NILCHECK(KUFACTR_v));
 GXFACTR.Type = GNAACTR_xout;
 GXFACTR.Rest = (A68_124 *)A68_NIL;
  /* line 7235: */
 HXFACTR = A_LOC(A68_124 ) ;
-(void)((*HXFACTR) = GXFACTR) ;
+(void)((*A_NILCHECK(HXFACTR)) = GXFACTR) ;
 LUFACTR_vl = HXFACTR;
 break;
 case 31: 
@@ -9950,10 +9950,10 @@ case 32:
 { 
 MUFACTR_vl1 = EUFACTR_vss;
  /* line 7239: */
-(void)(EUFACTR_vss = (*(&(EUFACTR_vss->Rest))));
+(void)(EUFACTR_vss = (*A_NILCHECK((&(A_NILCHECK(EUFACTR_vss)->Rest)))));
  /* line 7240: */
-IXFACTR = (&(MUFACTR_vl1->Rest)) ;
-(*IXFACTR) = LUFACTR_vl;
+IXFACTR = (&(A_NILCHECK(MUFACTR_vl1)->Rest)) ;
+(*A_NILCHECK(IXFACTR)) = LUFACTR_vl;
  /* line 7241: */
  /* line 7242: */
  /* line 7245: */
@@ -9964,24 +9964,24 @@ case 33:
  /* line 7246: */
 if (!IUFACTR_bangdi)
 { 
-(void)(PUFACTR_next = (*NL(MFBACTR_t1)));
+(void)(PUFACTR_next = (*A_NILCHECK(NL(MFBACTR_t1))));
  /* line 7247: */
  /* line 7249: */
  /* line 7252: */
-(*NL(MFBACTR_t1)) = 29;
+(*A_NILCHECK(NL(MFBACTR_t1))) = 29;
 } 
 break;
 case 34: 
 { 
-JXFACTR.V = (*KUFACTR_v);
+JXFACTR.V = (*A_NILCHECK(KUFACTR_v));
 JXFACTR.Type = ONAACTR_xcollcomma;
 JXFACTR.Rest = EUFACTR_vss;
 KXFACTR = A_LOC(A68_124 ) ;
-(void)((*KXFACTR) = JXFACTR) ;
+(void)((*A_NILCHECK(KXFACTR)) = JXFACTR) ;
 EUFACTR_vss = KXFACTR;
  /* line 7253: */
  /* line 7254: */
-LXFACTR = ((A68_BITS )((*(&((&((&JUFACTR_vlist)->V))->Props)))&ERAACTR_labsemi)!=MQAACTR_z);
+LXFACTR = ((A68_BITS )((*A_NILCHECK((&(A_NILCHECK((&(A_NILCHECK((&JUFACTR_vlist))->V)))->Props))))&ERAACTR_labsemi)!=MQAACTR_z);
 if ( ! LXFACTR )
 {LXFACTR = HUFACTR_exitinrange;
 }
@@ -9996,8 +9996,8 @@ if (LXFACTR)
 break;
 case 35: 
 { 
-MXFACTR = (&(LUFACTR_vl->Type)) ;
-(*MXFACTR) = NNAACTR_xcoll;
+MXFACTR = (&(A_NILCHECK(LUFACTR_vl)->Type)) ;
+(*A_NILCHECK(MXFACTR)) = NNAACTR_xcoll;
  /* line 7261: */
 NXFACTR.Props = MQAACTR_z;
 NXFACTR.Mode = (-2);
@@ -10005,20 +10005,20 @@ NXFACTR.Vlist = LUFACTR_vl;
  /* line 7262: */
 NXFACTR.Labs = (A68_69 *)A68_NIL;
  /* line 7265: */
-(*KUFACTR_v) = NXFACTR;
+(*A_NILCHECK(KUFACTR_v)) = NXFACTR;
 } 
 break;
 case 36: 
 { 
-OXFACTR.V = (*KUFACTR_v);
+OXFACTR.V = (*A_NILCHECK(KUFACTR_v));
 OXFACTR.Type = ONAACTR_xcollcomma;
 OXFACTR.Rest = (A68_124 *)A68_NIL;
 PXFACTR = A_LOC(A68_124 ) ;
-(void)((*PXFACTR) = OXFACTR) ;
+(void)((*A_NILCHECK(PXFACTR)) = OXFACTR) ;
 LUFACTR_vl = PXFACTR;
  /* line 7266: */
  /* line 7267: */
-QXFACTR = ((A68_BITS )((*(&((&((&JUFACTR_vlist)->V))->Props)))&ERAACTR_labsemi)!=MQAACTR_z);
+QXFACTR = ((A68_BITS )((*A_NILCHECK((&(A_NILCHECK((&(A_NILCHECK((&JUFACTR_vlist))->V)))->Props))))&ERAACTR_labsemi)!=MQAACTR_z);
 if ( ! QXFACTR )
 {QXFACTR = HUFACTR_exitinrange;
 }
@@ -10033,15 +10033,15 @@ if (QXFACTR)
 break;
 case 37: 
 { 
-RXFACTR.V = (*KUFACTR_v);
+RXFACTR.V = (*A_NILCHECK(KUFACTR_v));
 RXFACTR.Type = ENAACTR_xcommau;
 RXFACTR.Rest = EUFACTR_vss;
 SXFACTR = A_LOC(A68_124 ) ;
-(void)((*SXFACTR) = RXFACTR) ;
+(void)((*A_NILCHECK(SXFACTR)) = RXFACTR) ;
 EUFACTR_vss = SXFACTR;
  /* line 7274: */
  /* line 7275: */
-TXFACTR = ((A68_BITS )((*(&((&((&JUFACTR_vlist)->V))->Props)))&ERAACTR_labsemi)!=MQAACTR_z);
+TXFACTR = ((A68_BITS )((*A_NILCHECK((&(A_NILCHECK((&(A_NILCHECK((&JUFACTR_vlist))->V)))->Props))))&ERAACTR_labsemi)!=MQAACTR_z);
 if ( ! TXFACTR )
 {TXFACTR = HUFACTR_exitinrange;
 }
@@ -10055,25 +10055,25 @@ if (TXFACTR)
 } 
 break;
 case 38: 
-UXFACTR.V = (*KUFACTR_v);
+UXFACTR.V = (*A_NILCHECK(KUFACTR_v));
 UXFACTR.Type = HNAACTR_xoutu;
 UXFACTR.Rest = (A68_124 *)A68_NIL;
  /* line 7284: */
 VXFACTR = A_LOC(A68_124 ) ;
-(void)((*VXFACTR) = UXFACTR) ;
+(void)((*A_NILCHECK(VXFACTR)) = UXFACTR) ;
 LUFACTR_vl = VXFACTR;
 break;
 case 39: 
 { 
-WXFACTR.V = (*KUFACTR_v);
+WXFACTR.V = (*A_NILCHECK(KUFACTR_v));
 WXFACTR.Type = CNAACTR_xinu;
 WXFACTR.Rest = EUFACTR_vss;
 XXFACTR = A_LOC(A68_124 ) ;
-(void)((*XXFACTR) = WXFACTR) ;
+(void)((*A_NILCHECK(XXFACTR)) = WXFACTR) ;
 EUFACTR_vss = XXFACTR;
  /* line 7285: */
  /* line 7286: */
-YXFACTR = ((A68_BITS )((*(&((&((&JUFACTR_vlist)->V))->Props)))&ERAACTR_labsemi)!=MQAACTR_z);
+YXFACTR = ((A68_BITS )((*A_NILCHECK((&(A_NILCHECK((&(A_NILCHECK((&JUFACTR_vlist))->V)))->Props))))&ERAACTR_labsemi)!=MQAACTR_z);
 if ( ! YXFACTR )
 {YXFACTR = HUFACTR_exitinrange;
 }
@@ -10088,27 +10088,27 @@ if (YXFACTR)
 break;
 case 40: 
  /* line 7295: */
-ZXFACTR = (&(KUFACTR_v->Props)) ;
-(void)((*ZXFACTR) = (A68_BITS )((*(&(KUFACTR_v->Props)))|XLAACTR_elifousebit));
+ZXFACTR = (&(A_NILCHECK(KUFACTR_v)->Props)) ;
+(void)((*A_NILCHECK(ZXFACTR)) = (A68_BITS )((*A_NILCHECK((&(A_NILCHECK(KUFACTR_v)->Props))))|XLAACTR_elifousebit));
 break;
 case 41: 
 { 
 (void)(FUFACTR_id = A_CALLPROC(NL(JEFACTR_findid),(),((NL(JEFACTR_findid)).nonlocals)));
  /* line 7296: */
-BYFACTR = (*(&(FUFACTR_id->Decno))) ;
-(void)(A_CALLPROC(NL(Output),(A_UNITE(AYFACTR,mode3,3,BYFACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(AYFACTR,mode3,3,BYFACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+BYFACTR = (*A_NILCHECK((&(A_NILCHECK(FUFACTR_id)->Decno)))) ;
+(void)(A_CALLPROC(NL(Output),(A_UNITE(AYFACTR,mode3,3,BYFACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(AYFACTR,mode3,3,BYFACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 7297: */
  /* line 7298: */
-CYFACTR = (*NL(XZAACTR_burestrict));
+CYFACTR = (*A_NILCHECK(NL(XZAACTR_burestrict)));
 if ( CYFACTR )
-{DYFACTR = ((*(&(FUFACTR_id->Decno)))<=(*NL(WZAACTR_lastkept)));
+{DYFACTR = ((*A_NILCHECK((&(A_NILCHECK(FUFACTR_id)->Decno))))<=(*A_NILCHECK(NL(WZAACTR_lastkept))));
 if ( DYFACTR )
 { /* line 7299: */
-DYFACTR = ((*(&(FUFACTR_id->Decno)))>=0);
+DYFACTR = ((*A_NILCHECK((&(A_NILCHECK(FUFACTR_id)->Decno))))>=0);
 }
 if ( ! DYFACTR )
 { /* line 7300: */
-DYFACTR = ((*(&(FUFACTR_id->Decno)))>=FKAACTR_startlib);
+DYFACTR = ((*A_NILCHECK((&(A_NILCHECK(FUFACTR_id)->Decno))))>=FKAACTR_startlib);
 }
  /* line 7301: */
 CYFACTR = DYFACTR;
@@ -10116,22 +10116,22 @@ CYFACTR = DYFACTR;
 if (CYFACTR)
 { 
  /* line 7302: */
-(void)(A_CALLPROC(NL(YMDACTR_testkept),((*(&(FUFACTR_id->Mode)))),((*(&(FUFACTR_id->Mode))),(NL(YMDACTR_testkept)).nonlocals)));
+(void)(A_CALLPROC(NL(YMDACTR_testkept),((*A_NILCHECK((&(A_NILCHECK(FUFACTR_id)->Mode))))),((*A_NILCHECK((&(A_NILCHECK(FUFACTR_id)->Mode)))),(NL(YMDACTR_testkept)).nonlocals)));
 } 
  /* line 7303: */
-(void)(RNDACTR_adjscope((*(&(NL(NFFACTR_current)->Rd))), (*(&(FUFACTR_id->Level))), (*(&(FUFACTR_id->Scope)))));
+(void)(RNDACTR_adjscope((*A_NILCHECK((&(A_NILCHECK(NL(NFFACTR_current))->Rd)))), (*A_NILCHECK((&(A_NILCHECK(FUFACTR_id)->Level)))), (*A_NILCHECK((&(A_NILCHECK(FUFACTR_id)->Scope))))));
  /* line 7304: */
 EYFACTR.V.Props = MQAACTR_z;
  /* line 7306: */
  /* line 7307: */
-if ((*(&(FUFACTR_id->Mode)))==0)
+if ((*A_NILCHECK((&(A_NILCHECK(FUFACTR_id)->Mode))))==0)
 { 
  /* line 7308: */
 EYFACTR.V.Mode = ZKAACTR_faultmode;
 } 
 else
 { 
-EYFACTR.V.Mode = (*(&(FUFACTR_id->Mode)));
+EYFACTR.V.Mode = (*A_NILCHECK((&(A_NILCHECK(FUFACTR_id)->Mode))));
 } 
  /* line 7309: */
 EYFACTR.V.Vlist = (A68_124 *)A68_NIL;
@@ -10142,65 +10142,65 @@ EYFACTR.Type = 0;
 EYFACTR.Rest = EUFACTR_vss;
  /* line 7314: */
 FYFACTR = A_LOC(A68_124 ) ;
-(void)((*FYFACTR) = EYFACTR) ;
+(void)((*A_NILCHECK(FYFACTR)) = EYFACTR) ;
 EUFACTR_vss = FYFACTR;
 } 
 break;
 case 42: 
 { 
  /* line 7315: */
-if ((*NL(GGFACTR_type))==1)
+if ((*A_NILCHECK(NL(GGFACTR_type)))==1)
 { 
  /* line 7317: */
 (void)(A_CALLPROC(NL(QJBACTR_fault),(141),(141,(NL(QJBACTR_fault)).nonlocals)));
 } 
  /* line 7318: */
-(*NL(GGFACTR_type)) = 1;
+(*A_NILCHECK(NL(GGFACTR_type))) = 1;
  /* line 7319: */
  /* line 7320: */
-if (!(*NL(ZGFACTR_heap)))
+if (!(*A_NILCHECK(NL(ZGFACTR_heap))))
 { 
  /* line 7321: */
-GYFACTR = (&(NL(NFFACTR_current)->Props)) ;
-(void)((*GYFACTR) = (A68_BITS )((*(&(NL(NFFACTR_current)->Props)))|EMAACTR_locgenbit));
+GYFACTR = (&(A_NILCHECK(NL(NFFACTR_current))->Props)) ;
+(void)((*A_NILCHECK(GYFACTR)) = (A68_BITS )((*A_NILCHECK((&(A_NILCHECK(NL(NFFACTR_current))->Props))))|EMAACTR_locgenbit));
 } 
  /* line 7323: */
  /* line 7324: */
-if ((*(&(DUFACTR_am->Modeproc)))==0)
+if ((*A_NILCHECK((&(A_NILCHECK(DUFACTR_am)->Modeproc))))==0)
 { 
-HYFACTR.Mode = ((*(&(DUFACTR_am->Mode)))+KQAACTR_refmark);
-HYFACTR.Loc = (!(*NL(ZGFACTR_heap)));
+HYFACTR.Mode = ((*A_NILCHECK((&(A_NILCHECK(DUFACTR_am)->Mode))))+KQAACTR_refmark);
+HYFACTR.Loc = (!(*A_NILCHECK(NL(ZGFACTR_heap))));
  /* line 7325: */
-(void)(A_CALLPROC(NL(Output),(A_UNITE(IYFACTR,mode6,6,HYFACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(IYFACTR,mode6,6,HYFACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(IYFACTR,mode6,6,HYFACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(IYFACTR,mode6,6,HYFACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
 } 
 else
 { 
-KYFACTR = (!(*NL(ZGFACTR_heap))) ;
-(void)(A_CALLPROC(NL(Output),(A_UNITE(JYFACTR,mode2,2,KYFACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(JYFACTR,mode2,2,KYFACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+KYFACTR = (!(*A_NILCHECK(NL(ZGFACTR_heap)))) ;
+(void)(A_CALLPROC(NL(Output),(A_UNITE(JYFACTR,mode2,2,KYFACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(JYFACTR,mode2,2,KYFACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 7326: */
 LYFACTR.Fn = HMAACTR_xparampack;
-LYFACTR.M = A_CALLPROC(NL(ZICACTR_mproc),((*(&(DUFACTR_am->Mode)))),((*(&(DUFACTR_am->Mode))),(NL(ZICACTR_mproc)).nonlocals));
+LYFACTR.M = A_CALLPROC(NL(ZICACTR_mproc),((*A_NILCHECK((&(A_NILCHECK(DUFACTR_am)->Mode))))),((*A_NILCHECK((&(A_NILCHECK(DUFACTR_am)->Mode)))),(NL(ZICACTR_mproc)).nonlocals));
 LYFACTR.Param = 1;
-(void)(A_CALLPROC(NL(Output),(A_UNITE(MYFACTR,mode14,14,LYFACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(MYFACTR,mode14,14,LYFACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(MYFACTR,mode14,14,LYFACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(MYFACTR,mode14,14,LYFACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 7327: */
 NYFACTR.Fn = AOAACTR_xcall;
-NYFACTR.M = (*(&(DUFACTR_am->Mode)));
-NYFACTR.Param = (1+((*NL(ZGFACTR_heap))));
-(void)(A_CALLPROC(NL(Output),(A_UNITE(OYFACTR,mode14,14,NYFACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(OYFACTR,mode14,14,NYFACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+NYFACTR.M = (*A_NILCHECK((&(A_NILCHECK(DUFACTR_am)->Mode))));
+NYFACTR.Param = (1+((*A_NILCHECK(NL(ZGFACTR_heap)))));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(OYFACTR,mode14,14,NYFACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(OYFACTR,mode14,14,NYFACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 7328: */
 PYFACTR.Fn = GMAACTR_xstatgrab;
  /* line 7330: */
-PYFACTR.M = ((*(&(DUFACTR_am->Mode)))+KQAACTR_refmark);
-PYFACTR.Param = ((!(*NL(ZGFACTR_heap))));
+PYFACTR.M = ((*A_NILCHECK((&(A_NILCHECK(DUFACTR_am)->Mode))))+KQAACTR_refmark);
+PYFACTR.Param = ((!(*A_NILCHECK(NL(ZGFACTR_heap)))));
  /* line 7331: */
-(void)(A_CALLPROC(NL(Output),(A_UNITE(QYFACTR,mode14,14,PYFACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(QYFACTR,mode14,14,PYFACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(QYFACTR,mode14,14,PYFACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(QYFACTR,mode14,14,PYFACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
 } 
  /* line 7332: */
-(*NL(ZGFACTR_heap)) = A68_FALSE;
+(*A_NILCHECK(NL(ZGFACTR_heap))) = A68_FALSE;
  /* line 7333: */
  /* line 7334: */
 RYFACTR.V.Props = CRAACTR_assmntbit;
-RYFACTR.V.Mode = ((*(&(DUFACTR_am->Mode)))+KQAACTR_refmark);
+RYFACTR.V.Mode = ((*A_NILCHECK((&(A_NILCHECK(DUFACTR_am)->Mode))))+KQAACTR_refmark);
  /* line 7335: */
 RYFACTR.V.Vlist = (A68_124 *)A68_NIL;
 RYFACTR.V.Labs = (A68_69 *)A68_NIL;
@@ -10209,46 +10209,46 @@ RYFACTR.Type = 0;
 RYFACTR.Rest = EUFACTR_vss;
  /* line 7339: */
 SYFACTR = A_LOC(A68_124 ) ;
-(void)((*SYFACTR) = RYFACTR) ;
+(void)((*A_NILCHECK(SYFACTR)) = RYFACTR) ;
 EUFACTR_vss = SYFACTR;
 } 
 break;
 case 43: 
  /* line 7342: */
-(*NL(ZGFACTR_heap)) = A68_TRUE;
+(*A_NILCHECK(NL(ZGFACTR_heap))) = A68_TRUE;
 break;
 case 44: 
 { 
-(void)((*NL(DHFACTR_lab)) = (*(&(NL(NFFACTR_current)->Labs))));
+(void)((*A_NILCHECK(NL(DHFACTR_lab))) = (*A_NILCHECK((&(A_NILCHECK(NL(NFFACTR_current))->Labs)))));
  /* line 7343: */
 for ( ;; )
 { 
-TYFACTR = ((*NL(DHFACTR_lab))!=XQAACTR_nillab);
+TYFACTR = ((*A_NILCHECK(NL(DHFACTR_lab)))!=XQAACTR_nillab);
 if ( TYFACTR )
 { /* line 7344: */
-VYFACTR = (*(&((*NL(DHFACTR_lab))->Name))) ;
-TYFACTR = A_VC_NE(A_HISVEC(UYFACTR,VYFACTR,32,A68_CHAR ),A_HISVEC(WYFACTR,(*NL(PSAACTR_ident)),32,A68_CHAR ));
+VYFACTR = (*A_NILCHECK((&(A_NILCHECK((*A_NILCHECK(NL(DHFACTR_lab))))->Name)))) ;
+TYFACTR = A_VC_NE(A_HISVEC(UYFACTR,VYFACTR,32,A68_CHAR ),A_HISVEC(WYFACTR,(*A_NILCHECK(NL(PSAACTR_ident))),32,A68_CHAR ));
 }
 if ( !(TYFACTR) ) break;
-(void)((*NL(DHFACTR_lab)) = (*(&((*NL(DHFACTR_lab))->Rest))));
+(void)((*A_NILCHECK(NL(DHFACTR_lab))) = (*A_NILCHECK((&(A_NILCHECK((*A_NILCHECK(NL(DHFACTR_lab))))->Rest)))));
 }
  /* line 7345: */
  /* line 7346: */
-if ((*NL(DHFACTR_lab))==XQAACTR_nillab)
+if ((*A_NILCHECK(NL(DHFACTR_lab)))==XQAACTR_nillab)
 { 
  /* line 7347: */
-XYFACTR.Name = (*NL(PSAACTR_ident));
-XYFACTR.Labno = (*NL(DZAACTR_labno))+=1;
+XYFACTR.Name = (*A_NILCHECK(NL(PSAACTR_ident)));
+XYFACTR.Labno = (*A_NILCHECK(NL(DZAACTR_labno)))+=1;
 XYFACTR.Status = 1;
  /* line 7348: */
-XYFACTR.Rest = (*(&(NL(NFFACTR_current)->Labs)));
+XYFACTR.Rest = (*A_NILCHECK((&(A_NILCHECK(NL(NFFACTR_current))->Labs))));
 YYFACTR = A_HEAP(A68_69 ) ;
-(void)((*YYFACTR) = XYFACTR) ;
-ZYFACTR = (&(NL(NFFACTR_current)->Labs)) ;
-(*NL(DHFACTR_lab)) = (*ZYFACTR) = YYFACTR;
+(void)((*A_NILCHECK(YYFACTR)) = XYFACTR) ;
+ZYFACTR = (&(A_NILCHECK(NL(NFFACTR_current))->Labs)) ;
+(*A_NILCHECK(NL(DHFACTR_lab))) = (*A_NILCHECK(ZYFACTR)) = YYFACTR;
 } 
  /* line 7349: */
-(void)(A_CALLPROC(NL(Output),(A_UNITE(AZFACTR,mode4,4,(*NL(DHFACTR_lab))), (*NL(FZAACTR_outlevel))),(A_UNITE(AZFACTR,mode4,4,(*NL(DHFACTR_lab))), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(AZFACTR,mode4,4,(*A_NILCHECK(NL(DHFACTR_lab)))), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(AZFACTR,mode4,4,(*A_NILCHECK(NL(DHFACTR_lab)))), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 7350: */
 BZFACTR.V.Props = MQAACTR_z;
 BZFACTR.V.Mode = XKAACTR_gotomode;
@@ -10259,30 +10259,30 @@ BZFACTR.Type = 0;
 BZFACTR.Rest = EUFACTR_vss;
  /* line 7355: */
 CZFACTR = A_LOC(A68_124 ) ;
-(void)((*CZFACTR) = BZFACTR) ;
+(void)((*A_NILCHECK(CZFACTR)) = BZFACTR) ;
 EUFACTR_vss = CZFACTR;
 } 
 break;
 case 45: 
 { 
-(void)(TUFACTR_i = A_CALLPROC(NL(XJCACTR_pmode),(A_CALLPROC(NL(CXCACTR_hcf),((&(EUFACTR_vss->V))),((&(EUFACTR_vss->V)),(NL(CXCACTR_hcf)).nonlocals))),(A_CALLPROC(NL(CXCACTR_hcf),((&(EUFACTR_vss->V))),((&(EUFACTR_vss->V)),(NL(CXCACTR_hcf)).nonlocals)),(NL(XJCACTR_pmode)).nonlocals)));
+(void)(TUFACTR_i = A_CALLPROC(NL(XJCACTR_pmode),(A_CALLPROC(NL(CXCACTR_hcf),((&(A_NILCHECK(EUFACTR_vss)->V))),((&(A_NILCHECK(EUFACTR_vss)->V)),(NL(CXCACTR_hcf)).nonlocals))),(A_CALLPROC(NL(CXCACTR_hcf),((&(A_NILCHECK(EUFACTR_vss)->V))),((&(A_NILCHECK(EUFACTR_vss)->V)),(NL(CXCACTR_hcf)).nonlocals)),(NL(XJCACTR_pmode)).nonlocals)));
  /* line 7356: */
-(void)(A_CALLPROC(NL(RYCACTR_strong),((&(EUFACTR_vss->V)), TUFACTR_i, A68_TRUE),((&(EUFACTR_vss->V)), TUFACTR_i, A68_TRUE,(NL(RYCACTR_strong)).nonlocals)));
+(void)(A_CALLPROC(NL(RYCACTR_strong),((&(A_NILCHECK(EUFACTR_vss)->V)), TUFACTR_i, A68_TRUE),((&(A_NILCHECK(EUFACTR_vss)->V)), TUFACTR_i, A68_TRUE,(NL(RYCACTR_strong)).nonlocals)));
  /* line 7357: */
  /* line 7358: */
-DZFACTR = (*(&A_VINDEX(NL(KUAACTR_modes),TUFACTR_i))) ;
+DZFACTR = (*A_NILCHECK((&A_VINDEX(NL(KUAACTR_modes),TUFACTR_i)))) ;
 switch ( DZFACTR.mode )
 { 
 case 3: /* REF STRUCT(INT,REF MODE54)  */
 EZFACTR_pp = (DZFACTR.data.mode3);
  /* line 7359: */
-FZFACTR.P = (*EZFACTR_pp);
+FZFACTR.P = (*A_NILCHECK(EZFACTR_pp));
 FZFACTR.N = 0;
 FZFACTR.Procmode = TUFACTR_i;
  /* line 7360: */
 FZFACTR.Rest = RUFACTR_proclist;
 GZFACTR = A_LOC(A68_242 ) ;
-(void)((*GZFACTR) = FZFACTR) ;
+(void)((*A_NILCHECK(GZFACTR)) = FZFACTR) ;
 RUFACTR_proclist = GZFACTR;
 break;
 default: 
@@ -10302,7 +10302,7 @@ HZFACTR.Rest = RUFACTR_proclist;
  /* line 7366: */
  /* line 7369: */
 IZFACTR = A_LOC(A68_242 ) ;
-(void)((*IZFACTR) = HZFACTR) ;
+(void)((*A_NILCHECK(IZFACTR)) = HZFACTR) ;
 RUFACTR_proclist = IZFACTR;
 break;
 } 
@@ -10311,27 +10311,27 @@ break;
 case 46: 
 { 
  /* line 7370: */
-if ((*(&((&(RUFACTR_proclist->P))->Deproc)))!=ZKAACTR_faultmode)
+if ((*A_NILCHECK((&(A_NILCHECK((&(A_NILCHECK(RUFACTR_proclist)->P)))->Deproc))))!=ZKAACTR_faultmode)
 { 
  /* line 7371: */
-if ((*(&((&(RUFACTR_proclist->P))->Pars)))!=OQAACTR_nilml)
+if ((*A_NILCHECK((&(A_NILCHECK((&(A_NILCHECK(RUFACTR_proclist)->P)))->Pars))))!=OQAACTR_nilml)
 { 
  /* line 7372: */
  /* line 7373: */
-(void)(A_CALLPROC(NL(RYCACTR_strong),((&(EUFACTR_vss->V)), (*(&((*(&((&(RUFACTR_proclist->P))->Pars)))->Mode))), A68_TRUE),((&(EUFACTR_vss->V)), (*(&((*(&((&(RUFACTR_proclist->P))->Pars)))->Mode))), A68_TRUE,(NL(RYCACTR_strong)).nonlocals)));
+(void)(A_CALLPROC(NL(RYCACTR_strong),((&(A_NILCHECK(EUFACTR_vss)->V)), (*A_NILCHECK((&(A_NILCHECK((*A_NILCHECK((&(A_NILCHECK((&(A_NILCHECK(RUFACTR_proclist)->P)))->Pars)))))->Mode)))), A68_TRUE),((&(A_NILCHECK(EUFACTR_vss)->V)), (*A_NILCHECK((&(A_NILCHECK((*A_NILCHECK((&(A_NILCHECK((&(A_NILCHECK(RUFACTR_proclist)->P)))->Pars)))))->Mode)))), A68_TRUE,(NL(RYCACTR_strong)).nonlocals)));
  /* line 7374: */
  /* line 7375: */
-JZFACTR = (&((&(RUFACTR_proclist->P))->Pars)) ;
-(void)((*JZFACTR) = (*(&((*(&((&(RUFACTR_proclist->P))->Pars)))->Rest))));
+JZFACTR = (&(A_NILCHECK((&(A_NILCHECK(RUFACTR_proclist)->P)))->Pars)) ;
+(void)((*A_NILCHECK(JZFACTR)) = (*A_NILCHECK((&(A_NILCHECK((*A_NILCHECK((&(A_NILCHECK((&(A_NILCHECK(RUFACTR_proclist)->P)))->Pars)))))->Rest)))));
  /* line 7376: */
  /* line 7377: */
-KZFACTR = (&(RUFACTR_proclist->N)) ;
-(*KZFACTR)+=1;
+KZFACTR = (&(A_NILCHECK(RUFACTR_proclist)->N)) ;
+(*A_NILCHECK(KZFACTR))+=1;
 } 
 else
 { 
-LZFACTR = (&((&(RUFACTR_proclist->P))->Deproc)) ;
-(*LZFACTR) = ZKAACTR_faultmode;
+LZFACTR = (&(A_NILCHECK((&(A_NILCHECK(RUFACTR_proclist)->P)))->Deproc)) ;
+(*A_NILCHECK(LZFACTR)) = ZKAACTR_faultmode;
  /* line 7378: */
  /* line 7380: */
  /* line 7381: */
@@ -10341,13 +10341,13 @@ LZFACTR = (&((&(RUFACTR_proclist->P))->Deproc)) ;
  /* line 7382: */
  /* line 7383: */
  /* line 7386: */
-(void)(EUFACTR_vss = (*(&(EUFACTR_vss->Rest))));
+(void)(EUFACTR_vss = (*A_NILCHECK((&(A_NILCHECK(EUFACTR_vss)->Rest)))));
 } 
 break;
 case 47: 
 { 
  /* line 7387: */
-if (*NL(XZAACTR_burestrict))
+if (*A_NILCHECK(NL(XZAACTR_burestrict)))
 { 
  /* line 7389: */
 (void)(A_CALLPROC(NL(QJBACTR_fault),(108),(108,(NL(QJBACTR_fault)).nonlocals)));
@@ -10355,25 +10355,25 @@ if (*NL(XZAACTR_burestrict))
  /* line 7390: */
 MZFACTR.Fn = HMAACTR_xparampack;
  /* line 7392: */
-MZFACTR.M = (*(&(RUFACTR_proclist->Procmode)));
-MZFACTR.Param = (*(&(RUFACTR_proclist->N)));
-(void)(A_CALLPROC(NL(Output),(A_UNITE(NZFACTR,mode14,14,MZFACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(NZFACTR,mode14,14,MZFACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+MZFACTR.M = (*A_NILCHECK((&(A_NILCHECK(RUFACTR_proclist)->Procmode))));
+MZFACTR.Param = (*A_NILCHECK((&(A_NILCHECK(RUFACTR_proclist)->N))));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(NZFACTR,mode14,14,MZFACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(NZFACTR,mode14,14,MZFACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 7393: */
 OZFACTR.Fn = AOAACTR_xcall;
-OZFACTR.M = TUFACTR_i = (*(&((&(RUFACTR_proclist->P))->Deproc)));
+OZFACTR.M = TUFACTR_i = (*A_NILCHECK((&(A_NILCHECK((&(A_NILCHECK(RUFACTR_proclist)->P)))->Deproc))));
 OZFACTR.Param = 0;
-(void)(A_CALLPROC(NL(Output),(A_UNITE(PZFACTR,mode14,14,OZFACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(PZFACTR,mode14,14,OZFACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(PZFACTR,mode14,14,OZFACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(PZFACTR,mode14,14,OZFACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 7394: */
  /* line 7395: */
 QZFACTR = A_CALLPROC(NL(VECACTR_marker),(TUFACTR_i),(TUFACTR_i,(NL(VECACTR_marker)).nonlocals)) ;
 if (A_ABS(QZFACTR)>=2)
 { 
  /* line 7396: */
-RZFACTR = (&(NL(NFFACTR_current)->Dybits)) ;
-(void)((*RZFACTR) = (A68_BITS )((*(&(NL(NFFACTR_current)->Dybits)))|AMAACTR_dyprocbit));
+RZFACTR = (&(A_NILCHECK(NL(NFFACTR_current))->Dybits)) ;
+(void)((*A_NILCHECK(RZFACTR)) = (A68_BITS )((*A_NILCHECK((&(A_NILCHECK(NL(NFFACTR_current))->Dybits))))|AMAACTR_dyprocbit));
 } 
  /* line 7397: */
-SZFACTR = ((*(&((&(RUFACTR_proclist->P))->Pars)))!=OQAACTR_nilml);
+SZFACTR = ((*A_NILCHECK((&(A_NILCHECK((&(A_NILCHECK(RUFACTR_proclist)->P)))->Pars))))!=OQAACTR_nilml);
 if ( SZFACTR )
 { /* line 7398: */
 SZFACTR = (TUFACTR_i!=ZKAACTR_faultmode);
@@ -10388,12 +10388,12 @@ TZFACTR.Props = MQAACTR_z;
 TZFACTR.Mode = TUFACTR_i;
 TZFACTR.Vlist = (A68_124 *)A68_NIL;
 TZFACTR.Labs = (A68_69 *)A68_NIL;
-UZFACTR = (&(EUFACTR_vss->V)) ;
-(*UZFACTR) = TZFACTR;
+UZFACTR = (&(A_NILCHECK(EUFACTR_vss)->V)) ;
+(*A_NILCHECK(UZFACTR)) = TZFACTR;
  /* line 7402: */
  /* line 7403: */
  /* line 7406: */
-(void)(RUFACTR_proclist = (*(&(RUFACTR_proclist->Rest))));
+(void)(RUFACTR_proclist = (*A_NILCHECK((&(A_NILCHECK(RUFACTR_proclist)->Rest)))));
 } 
 break;
 case 48: 
@@ -10402,7 +10402,7 @@ case 48:
 if (DUFACTR_am!=QQAACTR_nilam)
 { 
  /* line 7409: */
-VZFACTR.Mode = (*(&(DUFACTR_am->Mode)));
+VZFACTR.Mode = (*A_NILCHECK((&(A_NILCHECK(DUFACTR_am)->Mode))));
 } 
 else
 { 
@@ -10413,38 +10413,38 @@ VZFACTR.Nopars = 0;
 VZFACTR.Rest = QUFACTR_codestack;
  /* line 7413: */
 WZFACTR = A_LOC(A68_243 ) ;
-(void)((*WZFACTR) = VZFACTR) ;
+(void)((*A_NILCHECK(WZFACTR)) = VZFACTR) ;
 QUFACTR_codestack = WZFACTR;
 break;
 case 49: 
 { 
-XZFACTR = (&(QUFACTR_codestack->Nopars)) ;
-(*XZFACTR)+=1;
+XZFACTR = (&(A_NILCHECK(QUFACTR_codestack)->Nopars)) ;
+(*A_NILCHECK(XZFACTR))+=1;
  /* line 7414: */
  /* line 7415: */
  /* line 7418: */
-(void)(EUFACTR_vss = (*(&(EUFACTR_vss->Rest))));
+(void)(EUFACTR_vss = (*A_NILCHECK((&(A_NILCHECK(EUFACTR_vss)->Rest)))));
 } 
 break;
 case 50: 
 { 
-YZFACTR.Mode = (*(&(QUFACTR_codestack->Mode)));
-YZFACTR.Nopars = (*(&(QUFACTR_codestack->Nopars)));
-(void)(A_CALLPROC(NL(Output),(A_UNITE(ZZFACTR,mode11,11,YZFACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(ZZFACTR,mode11,11,YZFACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+YZFACTR.Mode = (*A_NILCHECK((&(A_NILCHECK(QUFACTR_codestack)->Mode))));
+YZFACTR.Nopars = (*A_NILCHECK((&(A_NILCHECK(QUFACTR_codestack)->Nopars))));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(ZZFACTR,mode11,11,YZFACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(ZZFACTR,mode11,11,YZFACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 7419: */
 AAGACTR.V.Props = MQAACTR_z;
-AAGACTR.V.Mode = (*(&(QUFACTR_codestack->Mode)));
+AAGACTR.V.Mode = (*A_NILCHECK((&(A_NILCHECK(QUFACTR_codestack)->Mode))));
 AAGACTR.V.Vlist = (A68_124 *)A68_NIL;
 AAGACTR.V.Labs = (A68_69 *)A68_NIL;
 AAGACTR.Type = 0;
 AAGACTR.Rest = EUFACTR_vss;
 BAGACTR = A_LOC(A68_124 ) ;
-(void)((*BAGACTR) = AAGACTR) ;
+(void)((*A_NILCHECK(BAGACTR)) = AAGACTR) ;
 EUFACTR_vss = BAGACTR;
  /* line 7420: */
  /* line 7421: */
  /* line 7424: */
-(void)(QUFACTR_codestack = (*(&(QUFACTR_codestack->Rest))));
+(void)(QUFACTR_codestack = (*A_NILCHECK((&(A_NILCHECK(QUFACTR_codestack)->Rest)))));
 } 
 break;
 case 51: 
@@ -10460,7 +10460,7 @@ CAGACTR.Type = 0;
 CAGACTR.Rest = EUFACTR_vss;
  /* line 7430: */
 DAGACTR = A_LOC(A68_124 ) ;
-(void)((*DAGACTR) = CAGACTR) ;
+(void)((*A_NILCHECK(DAGACTR)) = CAGACTR) ;
 EUFACTR_vss = DAGACTR;
 break;
 case 53: 
@@ -10469,8 +10469,8 @@ NUFACTR_m = ALAACTR_bool;
  /* line 7431: */
  /* line 7432: */
  /* line 7435: */
-FAGACTR = ((*NL(MFBACTR_t1))==19) ;
-(void)(A_CALLPROC(NL(Output),(A_UNITE(EAGACTR,mode2,2,FAGACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(EAGACTR,mode2,2,FAGACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+FAGACTR = ((*A_NILCHECK(NL(MFBACTR_t1)))==19) ;
+(void)(A_CALLPROC(NL(Output),(A_UNITE(EAGACTR,mode2,2,FAGACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(EAGACTR,mode2,2,FAGACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
 } 
 break;
 case 54: 
@@ -10479,7 +10479,7 @@ NUFACTR_m = WKAACTR_nilmode;
  /* line 7436: */
  /* line 7437: */
  /* line 7440: */
-(void)(A_CALLPROC(NL(Output),(A_UNITE(GAGACTR,mode5,5,TPAACTR_nil), (*NL(FZAACTR_outlevel))),(A_UNITE(GAGACTR,mode5,5,TPAACTR_nil), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(GAGACTR,mode5,5,TPAACTR_nil), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(GAGACTR,mode5,5,TPAACTR_nil), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
 } 
 break;
 case 55: 
@@ -10488,7 +10488,7 @@ NUFACTR_m = VKAACTR_skipmode;
  /* line 7441: */
  /* line 7442: */
  /* line 7445: */
-(void)(A_CALLPROC(NL(Output),(A_UNITE(HAGACTR,mode5,5,SPAACTR_skip), (*NL(FZAACTR_outlevel))),(A_UNITE(HAGACTR,mode5,5,SPAACTR_skip), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(HAGACTR,mode5,5,SPAACTR_skip), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(HAGACTR,mode5,5,SPAACTR_skip), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
 } 
 break;
 case 56: 
@@ -10497,58 +10497,58 @@ NUFACTR_m = YKAACTR_voidmode;
  /* line 7446: */
  /* line 7447: */
  /* line 7450: */
-(void)(A_CALLPROC(NL(Output),(A_UNITE(IAGACTR,mode5,5,UPAACTR_empty), (*NL(FZAACTR_outlevel))),(A_UNITE(IAGACTR,mode5,5,UPAACTR_empty), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(IAGACTR,mode5,5,UPAACTR_empty), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(IAGACTR,mode5,5,UPAACTR_empty), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
 } 
 break;
 case 57: 
 { 
-LAGACTR = A_VTRIM(JAGACTR,(NL(CTAACTR_str)),A_VTSCRIPT(&(JAGACTR.upb),(NL(CTAACTR_str)).upb,1,(*NL(ETAACTR_stringsize)))) ;
-MAGACTR = A_VTRIM(KAGACTR,(NL(ATAACTR_string)),A_VTSCRIPT(&(KAGACTR.upb),(NL(ATAACTR_string)).upb,1,(*NL(ETAACTR_stringsize)))) ;
+LAGACTR = A_VTRIM(JAGACTR,(NL(CTAACTR_str)),A_VTSCRIPT(&(JAGACTR.upb),(NL(CTAACTR_str)).upb,1,(*A_NILCHECK(NL(ETAACTR_stringsize))))) ;
+MAGACTR = A_VTRIM(KAGACTR,(NL(ATAACTR_string)),A_VTSCRIPT(&(KAGACTR.upb),(NL(ATAACTR_string)).upb,1,(*A_NILCHECK(NL(ETAACTR_stringsize))))) ;
 (void)(A_VASSIGN2(MAGACTR,LAGACTR,A68_CHAR ));
  /* line 7451: */
-(void)(OUFACTR_n = (*NL(FTAACTR_noofchars)));
+(void)(OUFACTR_n = (*A_NILCHECK(NL(FTAACTR_noofchars))));
  /* line 7452: */
-(void)((*NL(HDBACTR_strsize)) = (*NL(ETAACTR_stringsize)));
+(void)((*A_NILCHECK(NL(HDBACTR_strsize))) = (*A_NILCHECK(NL(ETAACTR_stringsize))));
  /* line 7453: */
  /* line 7454: */
  /* line 7457: */
-(void)((*NL(IDBACTR_strbase)) = (*NL(GTAACTR_stringbase)));
+(void)((*A_NILCHECK(NL(IDBACTR_strbase))) = (*A_NILCHECK(NL(GTAACTR_stringbase))));
 } 
 break;
 case 58: 
 { 
  /* line 7458: */
-if ((*NL(HDBACTR_strsize))!=0)
+if ((*A_NILCHECK(NL(HDBACTR_strsize)))!=0)
 { 
-NAGACTR.Nochars = (-(*NL(HDBACTR_strsize)));
-NAGACTR.Base = (*NL(IDBACTR_strbase));
-NAGACTR.Chars = A_VTRIM(OAGACTR,(NL(CTAACTR_str)),A_VTSCRIPT(&(OAGACTR.upb),(NL(CTAACTR_str)).upb,1,(*NL(HDBACTR_strsize))));
+NAGACTR.Nochars = (-(*A_NILCHECK(NL(HDBACTR_strsize))));
+NAGACTR.Base = (*A_NILCHECK(NL(IDBACTR_strbase)));
+NAGACTR.Chars = A_VTRIM(OAGACTR,(NL(CTAACTR_str)),A_VTSCRIPT(&(OAGACTR.upb),(NL(CTAACTR_str)).upb,1,(*A_NILCHECK(NL(HDBACTR_strsize)))));
  /* line 7459: */
-(void)(A_CALLPROC(NL(Output),(A_UNITE(PAGACTR,mode35,35,NAGACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(PAGACTR,mode35,35,NAGACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(PAGACTR,mode35,35,NAGACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(PAGACTR,mode35,35,NAGACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
 } 
  /* line 7460: */
-SAGACTR = A_VTRIM(QAGACTR,(NL(CTAACTR_str)),A_VTSCRIPT(&(QAGACTR.upb),(NL(CTAACTR_str)).upb,1,(*NL(ETAACTR_stringsize)))) ;
-TAGACTR = A_VTRIM(RAGACTR,(NL(ATAACTR_string)),A_VTSCRIPT(&(RAGACTR.upb),(NL(ATAACTR_string)).upb,1,(*NL(ETAACTR_stringsize)))) ;
+SAGACTR = A_VTRIM(QAGACTR,(NL(CTAACTR_str)),A_VTSCRIPT(&(QAGACTR.upb),(NL(CTAACTR_str)).upb,1,(*A_NILCHECK(NL(ETAACTR_stringsize))))) ;
+TAGACTR = A_VTRIM(RAGACTR,(NL(ATAACTR_string)),A_VTSCRIPT(&(RAGACTR.upb),(NL(ATAACTR_string)).upb,1,(*A_NILCHECK(NL(ETAACTR_stringsize))))) ;
 (void)(A_VASSIGN2(TAGACTR,SAGACTR,A68_CHAR ));
  /* line 7461: */
-(void)(OUFACTR_n+=(*NL(FTAACTR_noofchars)));
+(void)(OUFACTR_n+=(*A_NILCHECK(NL(FTAACTR_noofchars))));
  /* line 7462: */
-(void)((*NL(HDBACTR_strsize)) = (*NL(ETAACTR_stringsize)));
+(void)((*A_NILCHECK(NL(HDBACTR_strsize))) = (*A_NILCHECK(NL(ETAACTR_stringsize))));
  /* line 7463: */
  /* line 7464: */
  /* line 7467: */
-(void)((*NL(IDBACTR_strbase)) = (*NL(GTAACTR_stringbase)));
+(void)((*A_NILCHECK(NL(IDBACTR_strbase))) = (*A_NILCHECK(NL(GTAACTR_stringbase))));
 } 
 break;
 case 59: 
-UAGACTR.Nochars = (*NL(HDBACTR_strsize));
-UAGACTR.Base = (*NL(IDBACTR_strbase));
+UAGACTR.Nochars = (*A_NILCHECK(NL(HDBACTR_strsize)));
+UAGACTR.Base = (*A_NILCHECK(NL(IDBACTR_strbase)));
  /* line 7468: */
-if ((*NL(HDBACTR_strsize))!=0)
+if ((*A_NILCHECK(NL(HDBACTR_strsize)))!=0)
 { 
  /* line 7469: */
  /* line 7470: */
-UAGACTR.Chars = A_VTRIM(VAGACTR,(NL(CTAACTR_str)),A_VTSCRIPT(&(VAGACTR.upb),(NL(CTAACTR_str)).upb,1,(*NL(HDBACTR_strsize))));
+UAGACTR.Chars = A_VTRIM(VAGACTR,(NL(CTAACTR_str)),A_VTSCRIPT(&(VAGACTR.upb),(NL(CTAACTR_str)).upb,1,(*A_NILCHECK(NL(HDBACTR_strsize)))));
 } 
 else
 { 
@@ -10556,11 +10556,11 @@ else
 UAGACTR.Chars = CQAACTR_emptystring;
 } 
  /* line 7474: */
-(void)(A_CALLPROC(NL(Output),(A_UNITE(WAGACTR,mode35,35,UAGACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(WAGACTR,mode35,35,UAGACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(WAGACTR,mode35,35,UAGACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(WAGACTR,mode35,35,UAGACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
 break;
 case 60: 
  /* line 7477: */
-(*NL(FZAACTR_outlevel))+=1;
+(*A_NILCHECK(NL(FZAACTR_outlevel)))+=1;
 break;
 case 61: 
 { 
@@ -10577,71 +10577,71 @@ XAGACTR = A_CALLPROC(NL(TWBACTR_insertis),(BLAACTR_char, OUFACTR_n),(BLAACTR_cha
 } 
 NUFACTR_m = XAGACTR;
  /* line 7481: */
-(void)(A_CALLPROC(NL(Output),(QKAACTR_up, (*NL(FZAACTR_outlevel))),(QKAACTR_up, (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(QKAACTR_up, (*A_NILCHECK(NL(FZAACTR_outlevel)))),(QKAACTR_up, (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 7482: */
-(*NL(FZAACTR_outlevel))-=1;
+(*A_NILCHECK(NL(FZAACTR_outlevel)))-=1;
  /* line 7483: */
  /* line 7484: */
-ZAGACTR = (&((&YAGACTR_xst)->Strmode)) ;
-(*ZAGACTR) = NUFACTR_m;
+ZAGACTR = (&(A_NILCHECK((&YAGACTR_xst))->Strmode)) ;
+(*A_NILCHECK(ZAGACTR)) = NUFACTR_m;
  /* line 7485: */
-(void)(A_CALLPROC(NL(Output),(A_UNITE(ABGACTR,mode7,7,YAGACTR_xst), (*NL(FZAACTR_outlevel))),(A_UNITE(ABGACTR,mode7,7,YAGACTR_xst), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(ABGACTR,mode7,7,YAGACTR_xst), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(ABGACTR,mode7,7,YAGACTR_xst), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 7486: */
  /* line 7487: */
  /* line 7490: */
-(void)(A_CALLPROC(NL(Output),(SKAACTR_down, (*NL(FZAACTR_outlevel))),(SKAACTR_down, (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(SKAACTR_down, (*A_NILCHECK(NL(FZAACTR_outlevel)))),(SKAACTR_down, (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
 } 
 break;
 case 62: 
  /* line 7493: */
-(*NL(ETAACTR_stringsize)) = 1;
+(*A_NILCHECK(NL(ETAACTR_stringsize))) = 1;
 break;
 case 63: 
 { 
-(*NL(DUAACTR_string1)) = 'r';
+(*A_NILCHECK(NL(DUAACTR_string1))) = 'r';
  /* line 7494: */
-(*NL(ZRAACTR_isint)) = A68_FALSE;
+(*A_NILCHECK(NL(ZRAACTR_isint))) = A68_FALSE;
  /* line 7495: */
  /* line 7496: */
  /* line 7499: */
-BBGACTR = (*NL(ETAACTR_stringsize))+=1 ;
+BBGACTR = (*A_NILCHECK(NL(ETAACTR_stringsize)))+=1 ;
 CBGACTR = (&A_VINDEX(NL(ATAACTR_string),BBGACTR)) ;
-(*CBGACTR) = HKAACTR_dchar;
+(*A_NILCHECK(CBGACTR)) = HKAACTR_dchar;
 } 
 break;
 case 64: 
 { 
-(*NL(DUAACTR_string1)) = 'r';
+(*A_NILCHECK(NL(DUAACTR_string1))) = 'r';
  /* line 7500: */
-(*NL(ZRAACTR_isint)) = A68_FALSE;
+(*A_NILCHECK(NL(ZRAACTR_isint))) = A68_FALSE;
  /* line 7501: */
  /* line 7502: */
  /* line 7505: */
-DBGACTR = (*NL(ETAACTR_stringsize))+=1 ;
+DBGACTR = (*A_NILCHECK(NL(ETAACTR_stringsize)))+=1 ;
 EBGACTR = (&A_VINDEX(NL(ATAACTR_string),DBGACTR)) ;
-(*EBGACTR) = IKAACTR_pchar;
+(*A_NILCHECK(EBGACTR)) = IKAACTR_pchar;
 } 
 break;
 case 65: 
 { 
-FBGACTR = ((*NL(MFBACTR_t1))>0);
+FBGACTR = ((*A_NILCHECK(NL(MFBACTR_t1)))>0);
 if ( FBGACTR )
 { /* line 7506: */
-FBGACTR = ((*NL(MFBACTR_t1))<10);
+FBGACTR = ((*A_NILCHECK(NL(MFBACTR_t1)))<10);
 }
 if (FBGACTR)
 { 
  /* line 7507: */
-if ((*NL(MDBACTR_cbiop))==ZCBACTR_biminus)
+if ((*A_NILCHECK(NL(MDBACTR_cbiop)))==ZCBACTR_biminus)
 { 
  /* line 7508: */
-GBGACTR = (&A_VINDEX(NL(ATAACTR_string),(*NL(ETAACTR_stringsize)))) ;
-(*GBGACTR) = JKAACTR_nchar;
+GBGACTR = (&A_VINDEX(NL(ATAACTR_string),(*A_NILCHECK(NL(ETAACTR_stringsize))))) ;
+(*A_NILCHECK(GBGACTR)) = JKAACTR_nchar;
 } 
 else
 { 
  /* line 7509: */
-if ((*NL(MDBACTR_cbiop))!=YCBACTR_biplus)
+if ((*A_NILCHECK(NL(MDBACTR_cbiop)))!=YCBACTR_biplus)
 { 
  /* line 7511: */
  /* line 7512: */
@@ -10652,14 +10652,14 @@ if ((*NL(MDBACTR_cbiop))!=YCBACTR_biplus)
  /* line 7513: */
  /* line 7514: */
  /* line 7517: */
-(*NL(ZRAACTR_isint)) = A68_FALSE;
+(*A_NILCHECK(NL(ZRAACTR_isint))) = A68_FALSE;
 } 
 break;
 case 66: 
 { 
  /* line 7518: */
  /* line 7519: */
-if ((*NL(DUAACTR_string1))=='r')
+if ((*A_NILCHECK(NL(DUAACTR_string1)))=='r')
 { 
 HBGACTR = FLAACTR_real;
 } 
@@ -10667,7 +10667,7 @@ else
 { 
  /* line 7520: */
  /* line 7521: */
-if ((*NL(DUAACTR_string1))=='a')
+if ((*A_NILCHECK(NL(DUAACTR_string1)))=='a')
 { 
  /* line 7522: */
 HBGACTR = ELAACTR_int;
@@ -10677,15 +10677,15 @@ else
 HBGACTR = DLAACTR_bits;
 } 
 } 
-(void)(NUFACTR_m = (HBGACTR+(*NL(ZYAACTR_nolongs))));
+(void)(NUFACTR_m = (HBGACTR+(*A_NILCHECK(NL(ZYAACTR_nolongs)))));
  /* line 7523: */
 IBGACTR.Mode = NUFACTR_m;
  /* line 7524: */
-if ((*NL(ETAACTR_stringsize))!=0)
+if ((*A_NILCHECK(NL(ETAACTR_stringsize)))!=0)
 { 
  /* line 7525: */
  /* line 7526: */
-IBGACTR.Nu = A_VTRIM(JBGACTR,(NL(ATAACTR_string)),A_VTSCRIPT(&(JBGACTR.upb),(NL(ATAACTR_string)).upb,1,(*NL(ETAACTR_stringsize))));
+IBGACTR.Nu = A_VTRIM(JBGACTR,(NL(ATAACTR_string)),A_VTSCRIPT(&(JBGACTR.upb),(NL(ATAACTR_string)).upb,1,(*A_NILCHECK(NL(ETAACTR_stringsize)))));
 } 
 else
 { 
@@ -10694,7 +10694,7 @@ IBGACTR.Nu = CQAACTR_emptystring;
 } 
  /* line 7528: */
  /* line 7531: */
-(void)(A_CALLPROC(NL(Output),(A_UNITE(KBGACTR,mode9,9,IBGACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(KBGACTR,mode9,9,IBGACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(KBGACTR,mode9,9,IBGACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(KBGACTR,mode9,9,IBGACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
 } 
 break;
 case 67: 
@@ -10706,29 +10706,29 @@ LBGACTR.V.Labs = (A68_69 *)A68_NIL;
 LBGACTR.Type = 0;
 LBGACTR.Rest = (A68_124 *)A68_NIL;
 MBGACTR = A_LOC(A68_124 ) ;
-(void)((*MBGACTR) = LBGACTR) ;
+(void)((*A_NILCHECK(MBGACTR)) = LBGACTR) ;
 EUFACTR_vss = MBGACTR;
  /* line 7532: */
-NBGACTR = (&((&XUFACTR_xal)->Almode)) ;
-(*NBGACTR) = Mode;
+NBGACTR = (&(A_NILCHECK((&XUFACTR_xal))->Almode)) ;
+(*A_NILCHECK(NBGACTR)) = Mode;
  /* line 7533: */
  /* line 7534: */
  /* line 7537: */
-(void)(A_CALLPROC(NL(Output),(A_UNITE(OBGACTR,mode10,10,XUFACTR_xal), (*NL(FZAACTR_outlevel))),(A_UNITE(OBGACTR,mode10,10,XUFACTR_xal), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(OBGACTR,mode10,10,XUFACTR_xal), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(OBGACTR,mode10,10,XUFACTR_xal), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
 } 
 break;
 case 68: 
  /* line 7538: */
-if ((*NL(ZYAACTR_nolongs))<6)
+if ((*A_NILCHECK(NL(ZYAACTR_nolongs)))<6)
 { 
  /* line 7539: */
-(*NL(ZYAACTR_nolongs)) = 0;
+(*A_NILCHECK(NL(ZYAACTR_nolongs))) = 0;
 } 
 else
 { 
  /* line 7540: */
  /* line 7543: */
-(*NL(ZYAACTR_nolongs))-=10;
+(*A_NILCHECK(NL(ZYAACTR_nolongs)))-=10;
 } 
 break;
 case 69: 
@@ -10737,61 +10737,61 @@ NUFACTR_m = UKAACTR_vacmode;
  /* line 7544: */
  /* line 7545: */
  /* line 7548: */
-(void)(A_CALLPROC(NL(Output),(A_UNITE(PBGACTR,mode5,5,UPAACTR_empty), (*NL(FZAACTR_outlevel))),(A_UNITE(PBGACTR,mode5,5,UPAACTR_empty), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(PBGACTR,mode5,5,UPAACTR_empty), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(PBGACTR,mode5,5,UPAACTR_empty), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
 } 
 break;
 case 70: 
 { 
-(*NL(FZAACTR_outlevel))+=1;
+(*A_NILCHECK(NL(FZAACTR_outlevel)))+=1;
  /* line 7549: */
-QBGACTR.Name = (*NL(OSAACTR_compsymb));
-QBGACTR.Hash = (*NL(RSAACTR_comphash));
+QBGACTR.Name = (*A_NILCHECK(NL(OSAACTR_compsymb)));
+QBGACTR.Hash = (*A_NILCHECK(NL(RSAACTR_comphash)));
  /* line 7550: */
-QBGACTR.I = (*NL(LDBACTR_cinst));
+QBGACTR.I = (*A_NILCHECK(NL(LDBACTR_cinst)));
 QBGACTR.Diadic = A68_TRUE;
-QBGACTR.Biop = (*NL(MDBACTR_cbiop));
+QBGACTR.Biop = (*A_NILCHECK(NL(MDBACTR_cbiop)));
  /* line 7551: */
-QBGACTR.Lib = (*NL(NDBACTR_clibop));
+QBGACTR.Lib = (*A_NILCHECK(NL(NDBACTR_clibop)));
  /* line 7552: */
 QBGACTR.Rest = GUFACTR_opstack;
  /* line 7555: */
 RBGACTR = A_LOC(A68_129 ) ;
-(void)((*RBGACTR) = QBGACTR) ;
+(void)((*A_NILCHECK(RBGACTR)) = QBGACTR) ;
 GUFACTR_opstack = RBGACTR;
 } 
 break;
 case 71: 
-SBGACTR.Name = (*NL(OSAACTR_compsymb));
-SBGACTR.Hash = (*NL(RSAACTR_comphash));
+SBGACTR.Name = (*A_NILCHECK(NL(OSAACTR_compsymb)));
+SBGACTR.Hash = (*A_NILCHECK(NL(RSAACTR_comphash)));
  /* line 7556: */
-SBGACTR.I = (*NL(LDBACTR_cinst));
+SBGACTR.I = (*A_NILCHECK(NL(LDBACTR_cinst)));
 SBGACTR.Diadic = A68_FALSE;
-SBGACTR.Biop = (*NL(MDBACTR_cbiop));
+SBGACTR.Biop = (*A_NILCHECK(NL(MDBACTR_cbiop)));
  /* line 7557: */
-SBGACTR.Lib = (*NL(NDBACTR_clibop));
+SBGACTR.Lib = (*A_NILCHECK(NL(NDBACTR_clibop)));
 SBGACTR.Rest = GUFACTR_opstack;
  /* line 7560: */
 TBGACTR = A_LOC(A68_129 ) ;
-(void)((*TBGACTR) = SBGACTR) ;
+(void)((*A_NILCHECK(TBGACTR)) = SBGACTR) ;
 GUFACTR_opstack = TBGACTR;
 break;
 case 72: 
 { 
  /* line 7561: */
  /* line 7562: */
-JCGACTR_di = (*(&(GUFACTR_opstack->Diadic)));
+JCGACTR_di = (*A_NILCHECK((&(A_NILCHECK(GUFACTR_opstack)->Diadic))));
  /* line 7563: */
-KCGACTR_libop = (*(&(GUFACTR_opstack->Lib)));
+KCGACTR_libop = (*A_NILCHECK((&(A_NILCHECK(GUFACTR_opstack)->Lib))));
  /* line 7564: */
  /* line 7571: */
-(void)(DCGACTR_r1 = (*(&((&(EUFACTR_vss->V))->Mode))));
+(void)(DCGACTR_r1 = (*A_NILCHECK((&(A_NILCHECK((&(A_NILCHECK(EUFACTR_vss)->V)))->Mode)))));
  /* line 7572: */
  /* line 7573: */
  /* line 7574: */
 if (JCGACTR_di)
 { 
  /* line 7575: */
-MCGACTR = (*(&((&((*(&(EUFACTR_vss->Rest)))->V))->Mode)));
+MCGACTR = (*A_NILCHECK((&(A_NILCHECK((&(A_NILCHECK((*A_NILCHECK((&(A_NILCHECK(EUFACTR_vss)->Rest)))))->V)))->Mode))));
 } 
 else
 { 
@@ -10817,13 +10817,13 @@ if (SCGACTR)
 goto PCGACTR_notfound;
 } 
  /* line 7582: */
-(void)(ICGACTR_inst1 = (*(&(GUFACTR_opstack->I))));
+(void)(ICGACTR_inst1 = (*A_NILCHECK((&(A_NILCHECK(GUFACTR_opstack)->I)))));
  /* line 7583: */
  /* line 7584: */
 TCGACTR = (ICGACTR_inst1!=VQAACTR_nilinst);
 if ( TCGACTR )
 { /* line 7585: */
-TCGACTR = ((*(&(ICGACTR_inst1->Level)))==(-1));
+TCGACTR = ((*A_NILCHECK((&(A_NILCHECK(ICGACTR_inst1)->Level))))==(-1));
 }
 (void)(LCGACTR_usedlib = (TCGACTR));
  /* line 7586: */
@@ -10838,18 +10838,18 @@ UCGACTR = (ICGACTR_inst1!=VQAACTR_nilinst);
 if ( UCGACTR )
 {VCGACTR = (FCGACTR_found<=1);
 if ( ! VCGACTR )
-{VCGACTR = (TUFACTR_i==(*(&(ICGACTR_inst1->Level))));
+{VCGACTR = (TUFACTR_i==(*A_NILCHECK((&(A_NILCHECK(ICGACTR_inst1)->Level)))));
 }
  /* line 7590: */
 UCGACTR = VCGACTR;
 }
 if ( !(UCGACTR) ) break;
  /* line 7591: */
-if (JCGACTR_di==((*(&(ICGACTR_inst1->Lmode)))!=0))
+if (JCGACTR_di==((*A_NILCHECK((&(A_NILCHECK(ICGACTR_inst1)->Lmode))))!=0))
 { 
  /* line 7592: */
  /* line 7593: */
-WCGACTR = A_CALLPROC(NL(MXCACTR_firmto),((&(EUFACTR_vss->V)), (*(&(ICGACTR_inst1->Rmode)))),((&(EUFACTR_vss->V)), (*(&(ICGACTR_inst1->Rmode))),(NL(MXCACTR_firmto)).nonlocals));
+WCGACTR = A_CALLPROC(NL(MXCACTR_firmto),((&(A_NILCHECK(EUFACTR_vss)->V)), (*A_NILCHECK((&(A_NILCHECK(ICGACTR_inst1)->Rmode))))),((&(A_NILCHECK(EUFACTR_vss)->V)), (*A_NILCHECK((&(A_NILCHECK(ICGACTR_inst1)->Rmode)))),(NL(MXCACTR_firmto)).nonlocals));
 } 
 else
 { 
@@ -10864,7 +10864,7 @@ if ( XCGACTR )
 }
 if (XCGACTR)
 { 
-(void)(UUFACTR_j = A_CALLPROC(NL(MXCACTR_firmto),((&((*(&(EUFACTR_vss->Rest)))->V)), (*(&(ICGACTR_inst1->Lmode)))),((&((*(&(EUFACTR_vss->Rest)))->V)), (*(&(ICGACTR_inst1->Lmode))),(NL(MXCACTR_firmto)).nonlocals)));
+(void)(UUFACTR_j = A_CALLPROC(NL(MXCACTR_firmto),((&(A_NILCHECK((*A_NILCHECK((&(A_NILCHECK(EUFACTR_vss)->Rest)))))->V)), (*A_NILCHECK((&(A_NILCHECK(ICGACTR_inst1)->Lmode))))),((&(A_NILCHECK((*A_NILCHECK((&(A_NILCHECK(EUFACTR_vss)->Rest)))))->V)), (*A_NILCHECK((&(A_NILCHECK(ICGACTR_inst1)->Lmode)))),(NL(MXCACTR_firmto)).nonlocals)));
  /* line 7596: */
 if (UUFACTR_j<TUFACTR_i)
 { 
@@ -10879,11 +10879,11 @@ if ( YCGACTR )
 }
 if ( YCGACTR )
 { /* line 7599: */
-YCGACTR = ((*(&(ICGACTR_inst1->Level)))>0);
+YCGACTR = ((*A_NILCHECK((&(A_NILCHECK(ICGACTR_inst1)->Level))))>0);
 }
 if (YCGACTR)
 { 
-(void)(A_CALLPROC(NL(PZBACTR_faultp),(146, 0, 0, (&(GUFACTR_opstack->Name))),(146, 0, 0, (&(GUFACTR_opstack->Name)),(NL(PZBACTR_faultp)).nonlocals)));
+(void)(A_CALLPROC(NL(PZBACTR_faultp),(146, 0, 0, (&(A_NILCHECK(GUFACTR_opstack)->Name))),(146, 0, 0, (&(A_NILCHECK(GUFACTR_opstack)->Name)),(NL(PZBACTR_faultp)).nonlocals)));
  /* line 7601: */
  /* line 7602: */
 goto XBGACTR_flt;
@@ -10900,24 +10900,24 @@ HCGACTR_inst = ICGACTR_inst1;
 } 
 } 
  /* line 7606: */
-(void)(TUFACTR_i = (*(&(ICGACTR_inst1->Level))));
+(void)(TUFACTR_i = (*A_NILCHECK((&(A_NILCHECK(ICGACTR_inst1)->Level)))));
  /* line 7607: */
  /* line 7608: */
-(void)(ICGACTR_inst1 = (*(&(ICGACTR_inst1->Rest))));
+(void)(ICGACTR_inst1 = (*A_NILCHECK((&(A_NILCHECK(ICGACTR_inst1)->Rest)))));
 }
  /* line 7610: */
  /* line 7611: */
 if (FCGACTR_found>1)
 { 
-(void)(ACGACTR_l = (*(&(HCGACTR_inst->Lmode))));
+(void)(ACGACTR_l = (*A_NILCHECK((&(A_NILCHECK(HCGACTR_inst)->Lmode)))));
  /* line 7612: */
-(void)(BCGACTR_r = (*(&(HCGACTR_inst->Rmode))));
+(void)(BCGACTR_r = (*A_NILCHECK((&(A_NILCHECK(HCGACTR_inst)->Rmode)))));
  /* line 7613: */
-(void)(GCGACTR_ans = (*(&(HCGACTR_inst->Ans))));
+(void)(GCGACTR_ans = (*A_NILCHECK((&(A_NILCHECK(HCGACTR_inst)->Ans)))));
  /* line 7614: */
-(void)(ECGACTR_op = (*(&(HCGACTR_inst->Decno))));
+(void)(ECGACTR_op = (*A_NILCHECK((&(A_NILCHECK(HCGACTR_inst)->Decno)))));
  /* line 7615: */
-(void)(RNDACTR_adjscope((*(&(NL(NFFACTR_current)->Rd))), (*(&(HCGACTR_inst->Level))), (*(&(HCGACTR_inst->Scope)))));
+(void)(RNDACTR_adjscope((*A_NILCHECK((&(A_NILCHECK(NL(NFFACTR_current))->Rd)))), (*A_NILCHECK((&(A_NILCHECK(HCGACTR_inst)->Level)))), (*A_NILCHECK((&(A_NILCHECK(HCGACTR_inst)->Scope))))));
  /* line 7616: */
  /* line 7617: */
 goto VBGACTR_fnd;
@@ -10927,14 +10927,14 @@ else
  /* line 7618: */
 if (LCGACTR_usedlib<2)
 { 
-(void)(BCGACTR_r = A_CALLPROC(NL(CXCACTR_hcf),((&(EUFACTR_vss->V))),((&(EUFACTR_vss->V)),(NL(CXCACTR_hcf)).nonlocals)));
+(void)(BCGACTR_r = A_CALLPROC(NL(CXCACTR_hcf),((&(A_NILCHECK(EUFACTR_vss)->V))),((&(A_NILCHECK(EUFACTR_vss)->V)),(NL(CXCACTR_hcf)).nonlocals)));
  /* line 7619: */
  /* line 7620: */
 if (JCGACTR_di)
 { 
  /* line 7621: */
  /* line 7622: */
-ZCGACTR = A_CALLPROC(NL(CXCACTR_hcf),((&((*(&(EUFACTR_vss->Rest)))->V))),((&((*(&(EUFACTR_vss->Rest)))->V)),(NL(CXCACTR_hcf)).nonlocals));
+ZCGACTR = A_CALLPROC(NL(CXCACTR_hcf),((&(A_NILCHECK((*A_NILCHECK((&(A_NILCHECK(EUFACTR_vss)->Rest)))))->V))),((&(A_NILCHECK((*A_NILCHECK((&(A_NILCHECK(EUFACTR_vss)->Rest)))))->V)),(NL(CXCACTR_hcf)).nonlocals));
 } 
 else
 { 
@@ -10943,7 +10943,7 @@ ZCGACTR = 0;
 ACGACTR_l = ZCGACTR;
  /* line 7623: */
  /* line 7624: */
-ADGACTR = ((ECGACTR_op = (*(&(GUFACTR_opstack->Biop))))!=0);
+ADGACTR = ((ECGACTR_op = (*A_NILCHECK((&(A_NILCHECK(GUFACTR_opstack)->Biop)))))!=0);
 if ( ADGACTR )
 { /* line 7625: */
 ADGACTR = A_CALLPROC(NL(VBDACTR_findbiop),((&ACGACTR_l), (&BCGACTR_r), (&GCGACTR_ans), (&ECGACTR_op)),((&ACGACTR_l), (&BCGACTR_r), (&GCGACTR_ans), (&ECGACTR_op),(NL(VBDACTR_findbiop)).nonlocals));
@@ -10959,8 +10959,8 @@ if (LCGACTR_usedlib==0)
 { 
 LCGACTR_usedlib = 2;
  /* line 7631: */
-EDGACTR = (*(&(GUFACTR_opstack->Hash))) ;
-DDGACTR_ri = (*(&A_VINDEX(NL(MABACTR_libinds),EDGACTR)));
+EDGACTR = (*A_NILCHECK((&(A_NILCHECK(GUFACTR_opstack)->Hash)))) ;
+DDGACTR_ri = (*A_NILCHECK((&A_VINDEX(NL(MABACTR_libinds),EDGACTR))));
  /* line 7632: */
 KCGACTR_libop = A68_TRUE;
  /* line 7633: */
@@ -10970,19 +10970,19 @@ for ( ;; )
  /* line 7634: */
 if ( !((DDGACTR_ri!=SQAACTR_nilind)) ) break;
  /* line 7635: */
-GDGACTR = (*(&(GUFACTR_opstack->Name))) ;
-IDGACTR = (*(&(DDGACTR_ri->Name))) ;
+GDGACTR = (*A_NILCHECK((&(A_NILCHECK(GUFACTR_opstack)->Name)))) ;
+IDGACTR = (*A_NILCHECK((&(A_NILCHECK(DDGACTR_ri)->Name)))) ;
 if (A_VC_EQ(A_HISVEC(FDGACTR,GDGACTR,32,A68_CHAR ),A_HISVEC(HDGACTR,IDGACTR,32,A68_CHAR )))
 { 
  /* line 7636: */
-JDGACTR = (*(&(DDGACTR_ri->U))) ;
+JDGACTR = (*A_NILCHECK((&(A_NILCHECK(DDGACTR_ri)->U)))) ;
 switch ( JDGACTR.mode )
 { 
 case 1: /* REF STRUCT(INT,REF MODE108)  */
 KDGACTR_op = (JDGACTR.data.mode1);
  /* line 7637: */
 { 
-(void)(ICGACTR_inst1 = (*(&(KDGACTR_op->I))));
+(void)(ICGACTR_inst1 = (*A_NILCHECK((&(A_NILCHECK(KDGACTR_op)->I)))));
  /* line 7638: */
  /* line 7639: */
  /* line 7640: */
@@ -11000,7 +11000,7 @@ else
 { 
  /* line 7643: */
  /* line 7644: */
-(void)(DDGACTR_ri = (*(&(DDGACTR_ri->Rest))));
+(void)(DDGACTR_ri = (*A_NILCHECK((&(A_NILCHECK(DDGACTR_ri)->Rest)))));
 } 
 }
  /* line 7646: */
@@ -11010,11 +11010,11 @@ if (LCGACTR_usedlib==2)
 LCGACTR_usedlib = 3;
  /* line 7648: */
  /* line 7649: */
-MDGACTR = (&(GUFACTR_opstack->Name)) ;
+MDGACTR = (&(A_NILCHECK(GUFACTR_opstack)->Name)) ;
 NDGACTR = A_ISVEC(LDGACTR,MDGACTR,32,A68_CHAR ) ;
 ODGACTR = 1 ;
-PDGACTR = (A68_INT)(unsigned char)(*(&A_VINDEX(NDGACTR,ODGACTR))) ;
-(void)(ECGACTR_op = (*(&((&A_R1INDEX(NL(Charset),PDGACTR))->Type))));
+PDGACTR = (A68_INT)(unsigned char)(*A_NILCHECK((&A_VINDEX(NDGACTR,ODGACTR)))) ;
+(void)(ECGACTR_op = (*A_NILCHECK((&(A_NILCHECK((&A_R1INDEX(NL(Charset),PDGACTR)))->Type)))));
  /* line 7650: */
  /* line 7651: */
 QDGACTR = (ECGACTR_op!=3);
@@ -11022,12 +11022,12 @@ if ( QDGACTR )
 {QDGACTR = (ECGACTR_op!=6);
 }
  /* line 7652: */
-(void)(A_CALLPROC((*NL(FFDACTR_bumodule)),((&(GUFACTR_opstack->Name)), (2+((!QDGACTR)))),((&(GUFACTR_opstack->Name)), (2+((!QDGACTR))),((*NL(FFDACTR_bumodule))).nonlocals)));
+(void)(A_CALLPROC((*A_NILCHECK(NL(FFDACTR_bumodule))),((&(A_NILCHECK(GUFACTR_opstack)->Name)), (2+((!QDGACTR)))),((&(A_NILCHECK(GUFACTR_opstack)->Name)), (2+((!QDGACTR))),((*A_NILCHECK(NL(FFDACTR_bumodule)))).nonlocals)));
  /* line 7653: */
 KCGACTR_libop = A68_TRUE;
  /* line 7654: */
-RDGACTR = (*(&(GUFACTR_opstack->Hash))) ;
-(void)(DDGACTR_ri = (*(&A_VINDEX(NL(MABACTR_libinds),RDGACTR))));
+RDGACTR = (*A_NILCHECK((&(A_NILCHECK(GUFACTR_opstack)->Hash)))) ;
+(void)(DDGACTR_ri = (*A_NILCHECK((&A_VINDEX(NL(MABACTR_libinds),RDGACTR)))));
  /* line 7655: */
  /* line 7656: */
  /* line 7657: */
@@ -11043,13 +11043,13 @@ PCGACTR_notfound: A_UNUSED;
 if (JCGACTR_di)
 { 
  /* line 7663: */
-(void)(A_CALLPROC(NL(PZBACTR_faultp),(147, CCGACTR_l1, DCGACTR_r1, (&(GUFACTR_opstack->Name))),(147, CCGACTR_l1, DCGACTR_r1, (&(GUFACTR_opstack->Name)),(NL(PZBACTR_faultp)).nonlocals)));
+(void)(A_CALLPROC(NL(PZBACTR_faultp),(147, CCGACTR_l1, DCGACTR_r1, (&(A_NILCHECK(GUFACTR_opstack)->Name))),(147, CCGACTR_l1, DCGACTR_r1, (&(A_NILCHECK(GUFACTR_opstack)->Name)),(NL(PZBACTR_faultp)).nonlocals)));
 } 
 else
 { 
  /* line 7664: */
  /* line 7665: */
-(void)(A_CALLPROC(NL(PZBACTR_faultp),(148, DCGACTR_r1, 0, (&(GUFACTR_opstack->Name))),(148, DCGACTR_r1, 0, (&(GUFACTR_opstack->Name)),(NL(PZBACTR_faultp)).nonlocals)));
+(void)(A_CALLPROC(NL(PZBACTR_faultp),(148, DCGACTR_r1, 0, (&(A_NILCHECK(GUFACTR_opstack)->Name))),(148, DCGACTR_r1, 0, (&(A_NILCHECK(GUFACTR_opstack)->Name)),(NL(PZBACTR_faultp)).nonlocals)));
 } 
 } 
  /* line 7666: */
@@ -11057,7 +11057,7 @@ XBGACTR_flt: A_UNUSED;
  /* line 7667: */
 if (JCGACTR_di)
 { 
-(*NL(FZAACTR_outlevel))-=1;
+(*A_NILCHECK(NL(FZAACTR_outlevel)))-=1;
 } 
  /* line 7668: */
 GCGACTR_ans = ZKAACTR_faultmode;
@@ -11066,22 +11066,22 @@ goto ZBGACTR_anslab;
  /* line 7670: */
 VBGACTR_fnd: A_UNUSED;
  /* line 7671: */
-(void)(A_CALLPROC(NL(RYCACTR_strong),((&(EUFACTR_vss->V)), BCGACTR_r, A68_TRUE),((&(EUFACTR_vss->V)), BCGACTR_r, A68_TRUE,(NL(RYCACTR_strong)).nonlocals)));
+(void)(A_CALLPROC(NL(RYCACTR_strong),((&(A_NILCHECK(EUFACTR_vss)->V)), BCGACTR_r, A68_TRUE),((&(A_NILCHECK(EUFACTR_vss)->V)), BCGACTR_r, A68_TRUE,(NL(RYCACTR_strong)).nonlocals)));
  /* line 7673: */
  /* line 7674: */
 if (JCGACTR_di)
 { 
-(void)(A_CALLPROC(NL(Output),(QKAACTR_up, (*NL(FZAACTR_outlevel))),(QKAACTR_up, (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(QKAACTR_up, (*A_NILCHECK(NL(FZAACTR_outlevel)))),(QKAACTR_up, (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 7675: */
-(*NL(FZAACTR_outlevel))-=1;
+(*A_NILCHECK(NL(FZAACTR_outlevel)))-=1;
  /* line 7676: */
-(void)(A_CALLPROC(NL(RYCACTR_strong),((&((*(&(EUFACTR_vss->Rest)))->V)), ACGACTR_l, A68_TRUE),((&((*(&(EUFACTR_vss->Rest)))->V)), ACGACTR_l, A68_TRUE,(NL(RYCACTR_strong)).nonlocals)));
+(void)(A_CALLPROC(NL(RYCACTR_strong),((&(A_NILCHECK((*A_NILCHECK((&(A_NILCHECK(EUFACTR_vss)->Rest)))))->V)), ACGACTR_l, A68_TRUE),((&(A_NILCHECK((*A_NILCHECK((&(A_NILCHECK(EUFACTR_vss)->Rest)))))->V)), ACGACTR_l, A68_TRUE,(NL(RYCACTR_strong)).nonlocals)));
  /* line 7677: */
  /* line 7678: */
 if ((-ECGACTR_op)==OIBACTR_booland)
 { 
  /* line 7679: */
-(void)(A_CALLPROC(NL(Output),(A_UNITE(SDGACTR,mode16,16,FPAACTR_xwandth), (*NL(FZAACTR_outlevel))),(A_UNITE(SDGACTR,mode16,16,FPAACTR_xwandth), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(SDGACTR,mode16,16,FPAACTR_xwandth), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(SDGACTR,mode16,16,FPAACTR_xwandth), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
 } 
 else
 { 
@@ -11089,7 +11089,7 @@ else
 if ((-ECGACTR_op)==PIBACTR_boolor)
 { 
  /* line 7681: */
-(void)(A_CALLPROC(NL(Output),(A_UNITE(TDGACTR,mode16,16,GPAACTR_xworel), (*NL(FZAACTR_outlevel))),(A_UNITE(TDGACTR,mode16,16,GPAACTR_xworel), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(TDGACTR,mode16,16,GPAACTR_xworel), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(TDGACTR,mode16,16,GPAACTR_xworel), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
 } 
 else
 { 
@@ -11101,13 +11101,13 @@ UDGACTR = ((-ECGACTR_op)<=RIBACTR_maxdiv);
 if (UDGACTR)
 { 
  /* line 7683: */
-(void)(A_CALLPROC(NL(Output),(A_UNITE(VDGACTR,mode16,16,IPAACTR_xwplusabetc), (*NL(FZAACTR_outlevel))),(A_UNITE(VDGACTR,mode16,16,IPAACTR_xwplusabetc), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(VDGACTR,mode16,16,IPAACTR_xwplusabetc), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(VDGACTR,mode16,16,IPAACTR_xwplusabetc), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
 } 
 } 
 } 
  /* line 7684: */
  /* line 7685: */
-(void)(A_CALLPROC(NL(Output),(SKAACTR_down, (*NL(FZAACTR_outlevel))),(SKAACTR_down, (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(SKAACTR_down, (*A_NILCHECK(NL(FZAACTR_outlevel)))),(SKAACTR_down, (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
 } 
  /* line 7687: */
  /* line 7688: */
@@ -11115,8 +11115,8 @@ WDGACTR = A_CALLPROC(NL(VECACTR_marker),(GCGACTR_ans),(GCGACTR_ans,(NL(VECACTR_m
 if (A_ABS(WDGACTR)>=2)
 { 
  /* line 7689: */
-XDGACTR = (&(NL(NFFACTR_current)->Dybits)) ;
-(void)((*XDGACTR) = (A68_BITS )((*(&(NL(NFFACTR_current)->Dybits)))|AMAACTR_dyprocbit));
+XDGACTR = (&(A_NILCHECK(NL(NFFACTR_current))->Dybits)) ;
+(void)((*A_NILCHECK(XDGACTR)) = (A68_BITS )((*A_NILCHECK((&(A_NILCHECK(NL(NFFACTR_current))->Dybits))))|AMAACTR_dyprocbit));
 } 
  /* line 7691: */
  /* line 7692: */
@@ -11136,12 +11136,12 @@ YDGACTR.Fn = QMAACTR_xmonop;
 YDGACTR.M = GCGACTR_ans;
 YDGACTR.Param = (-ECGACTR_op);
  /* line 7696: */
-(void)(A_CALLPROC(NL(Output),(A_UNITE(ZDGACTR,mode14,14,YDGACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(ZDGACTR,mode14,14,YDGACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(ZDGACTR,mode14,14,YDGACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(ZDGACTR,mode14,14,YDGACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
 } 
 else
 { 
  /* line 7697: */
-AEGACTR = (*NL(XZAACTR_burestrict));
+AEGACTR = (*A_NILCHECK(NL(XZAACTR_burestrict)));
 if ( AEGACTR )
 {AEGACTR = (!KCGACTR_libop);
 }
@@ -11163,60 +11163,60 @@ else
  /* line 7702: */
 BEGACTR.Param = 1;
 } 
-(void)(A_CALLPROC(NL(Output),(A_UNITE(CEGACTR,mode14,14,BEGACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(CEGACTR,mode14,14,BEGACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(CEGACTR,mode14,14,BEGACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(CEGACTR,mode14,14,BEGACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 7703: */
-(void)(A_CALLPROC(NL(Output),(A_UNITE(DEGACTR,mode3,3,ECGACTR_op), (*NL(FZAACTR_outlevel))),(A_UNITE(DEGACTR,mode3,3,ECGACTR_op), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(DEGACTR,mode3,3,ECGACTR_op), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(DEGACTR,mode3,3,ECGACTR_op), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 7704: */
 EEGACTR.Fn = AOAACTR_xcall;
 EEGACTR.M = GCGACTR_ans;
 EEGACTR.Param = 4;
  /* line 7705: */
-(void)(A_CALLPROC(NL(Output),(A_UNITE(FEGACTR,mode14,14,EEGACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(FEGACTR,mode14,14,EEGACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(FEGACTR,mode14,14,EEGACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(FEGACTR,mode14,14,EEGACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
 } 
  /* line 7706: */
 ZBGACTR_anslab: A_UNUSED;
  /* line 7707: */
 if (JCGACTR_di)
 { 
-(void)(EUFACTR_vss = (*(&(EUFACTR_vss->Rest))));
+(void)(EUFACTR_vss = (*A_NILCHECK((&(A_NILCHECK(EUFACTR_vss)->Rest)))));
 } 
  /* line 7708: */
 GEGACTR.Props = MQAACTR_z;
 GEGACTR.Mode = GCGACTR_ans;
 GEGACTR.Vlist = (A68_124 *)A68_NIL;
 GEGACTR.Labs = (A68_69 *)A68_NIL;
-HEGACTR = (&(EUFACTR_vss->V)) ;
-(*HEGACTR) = GEGACTR;
+HEGACTR = (&(A_NILCHECK(EUFACTR_vss)->V)) ;
+(*A_NILCHECK(HEGACTR)) = GEGACTR;
  /* line 7709: */
  /* line 7710: */
  /* line 7713: */
-(void)(GUFACTR_opstack = (*(&(GUFACTR_opstack->Rest))));
+(void)(GUFACTR_opstack = (*A_NILCHECK((&(A_NILCHECK(GUFACTR_opstack)->Rest)))));
 } 
 break;
 case 73: 
 { 
-(void)(EUFACTR_vss = (*(&(EUFACTR_vss->Rest))));
+(void)(EUFACTR_vss = (*A_NILCHECK((&(A_NILCHECK(EUFACTR_vss)->Rest)))));
  /* line 7714: */
  /* line 7715: */
  /* line 7718: */
-IEGACTR = (&((&(EUFACTR_vss->V))->Mode)) ;
-(*IEGACTR) = ZKAACTR_faultmode;
+IEGACTR = (&(A_NILCHECK((&(A_NILCHECK(EUFACTR_vss)->V)))->Mode)) ;
+(*A_NILCHECK(IEGACTR)) = ZKAACTR_faultmode;
 } 
 break;
 case 74: 
 { 
-(void)(A_CALLPROC(NL(RYCACTR_strong),((&(EUFACTR_vss->V)), (*(&(DUFACTR_am->Mode))), A68_TRUE),((&(EUFACTR_vss->V)), (*(&(DUFACTR_am->Mode))), A68_TRUE,(NL(RYCACTR_strong)).nonlocals)));
+(void)(A_CALLPROC(NL(RYCACTR_strong),((&(A_NILCHECK(EUFACTR_vss)->V)), (*A_NILCHECK((&(A_NILCHECK(DUFACTR_am)->Mode)))), A68_TRUE),((&(A_NILCHECK(EUFACTR_vss)->V)), (*A_NILCHECK((&(A_NILCHECK(DUFACTR_am)->Mode)))), A68_TRUE,(NL(RYCACTR_strong)).nonlocals)));
  /* line 7719: */
  /* line 7720: */
  /* line 7723: */
-JEGACTR = (&((&(EUFACTR_vss->V))->Props)) ;
-(void)((*JEGACTR) = (A68_BITS )((*(&((&(EUFACTR_vss->V))->Props)))|CRAACTR_assmntbit));
+JEGACTR = (&(A_NILCHECK((&(A_NILCHECK(EUFACTR_vss)->V)))->Props)) ;
+(void)((*A_NILCHECK(JEGACTR)) = (A68_BITS )((*A_NILCHECK((&(A_NILCHECK((&(A_NILCHECK(EUFACTR_vss)->V)))->Props))))|CRAACTR_assmntbit));
 } 
 break;
 case 75: 
 { 
  /* line 7724: */
-if ((*NL(GGFACTR_type))==2)
+if ((*A_NILCHECK(NL(GGFACTR_type)))==2)
 { 
  /* line 7726: */
 (void)(A_CALLPROC(NL(QJBACTR_fault),(150),(150,(NL(QJBACTR_fault)).nonlocals)));
@@ -11224,38 +11224,38 @@ if ((*NL(GGFACTR_type))==2)
  /* line 7727: */
  /* line 7728: */
  /* line 7731: */
-KEGACTR = (&(DUFACTR_am->Mode)) ;
-(void)((*KEGACTR) = A_CALLPROC(NL(JGCACTR_deflex),((*(&(DUFACTR_am->Mode)))),((*(&(DUFACTR_am->Mode))),(NL(JGCACTR_deflex)).nonlocals)));
+KEGACTR = (&(A_NILCHECK(DUFACTR_am)->Mode)) ;
+(void)((*A_NILCHECK(KEGACTR)) = A_CALLPROC(NL(JGCACTR_deflex),((*A_NILCHECK((&(A_NILCHECK(DUFACTR_am)->Mode))))),((*A_NILCHECK((&(A_NILCHECK(DUFACTR_am)->Mode)))),(NL(JGCACTR_deflex)).nonlocals)));
 } 
 break;
 case 76: 
  /* line 7734: */
-(void)(A_CALLPROC(NL(RYCACTR_strong),((&(EUFACTR_vss->V)), YKAACTR_voidmode, A68_TRUE),((&(EUFACTR_vss->V)), YKAACTR_voidmode, A68_TRUE,(NL(RYCACTR_strong)).nonlocals)));
+(void)(A_CALLPROC(NL(RYCACTR_strong),((&(A_NILCHECK(EUFACTR_vss)->V)), YKAACTR_voidmode, A68_TRUE),((&(A_NILCHECK(EUFACTR_vss)->V)), YKAACTR_voidmode, A68_TRUE,(NL(RYCACTR_strong)).nonlocals)));
 break;
 case 77: 
 { 
  /* line 7735: */
-if ((NUFACTR_m = A_CALLPROC(NL(CXCACTR_hcf),((&(EUFACTR_vss->V))),((&(EUFACTR_vss->V)),(NL(CXCACTR_hcf)).nonlocals)))!=ZKAACTR_faultmode)
+if ((NUFACTR_m = A_CALLPROC(NL(CXCACTR_hcf),((&(A_NILCHECK(EUFACTR_vss)->V))),((&(A_NILCHECK(EUFACTR_vss)->V)),(NL(CXCACTR_hcf)).nonlocals)))!=ZKAACTR_faultmode)
 { 
 for ( ;; )
 { 
  /* line 7736: */
 if ( !((NUFACTR_m<KQAACTR_refmark)) ) break;
  /* line 7737: */
-NEGACTR = (*(&A_VINDEX(NL(KUAACTR_modes),NUFACTR_m))) ;
+NEGACTR = (*A_NILCHECK((&A_VINDEX(NL(KUAACTR_modes),NUFACTR_m)))) ;
 switch ( NEGACTR.mode )
 { 
 case 6: /* REF STRUCT(INT)  */
 OEGACTR_p = (NEGACTR.data.mode6);
  /* line 7738: */
  /* line 7739: */
-(void)(NUFACTR_m = (*(&(OEGACTR_p->Deproc))));
+(void)(NUFACTR_m = (*A_NILCHECK((&(A_NILCHECK(OEGACTR_p)->Deproc)))));
 break;
 default: 
 (void)(A_CALLPROC(NL(QJBACTR_fault),(151),(151,(NL(QJBACTR_fault)).nonlocals)));
  /* line 7741: */
-PEGACTR = (&((&(EUFACTR_vss->V))->Mode)) ;
-(*PEGACTR) = ZKAACTR_faultmode;
+PEGACTR = (&(A_NILCHECK((&(A_NILCHECK(EUFACTR_vss)->V)))->Mode)) ;
+(*A_NILCHECK(PEGACTR)) = ZKAACTR_faultmode;
  /* line 7742: */
  /* line 7743: */
  /* line 7744: */
@@ -11266,14 +11266,14 @@ break;
  /* line 7745: */
 } 
  /* line 7746: */
-(void)(A_CALLPROC(NL(RYCACTR_strong),((&(EUFACTR_vss->V)), NUFACTR_m, A68_TRUE),((&(EUFACTR_vss->V)), NUFACTR_m, A68_TRUE,(NL(RYCACTR_strong)).nonlocals)));
+(void)(A_CALLPROC(NL(RYCACTR_strong),((&(A_NILCHECK(EUFACTR_vss)->V)), NUFACTR_m, A68_TRUE),((&(A_NILCHECK(EUFACTR_vss)->V)), NUFACTR_m, A68_TRUE,(NL(RYCACTR_strong)).nonlocals)));
  /* line 7747: */
  /* line 7748: */
 QEGACTR = A_CALLPROC(NL(ZFCACTR_assmarker),((NUFACTR_m-KQAACTR_refmark)),((NUFACTR_m-KQAACTR_refmark),(NL(ZFCACTR_assmarker)).nonlocals)) ;
 if (A_ABS(QEGACTR)<=2)
 { 
  /* line 7749: */
-(void)(A_CALLPROC(NL(Output),(A_UNITE(REGACTR,mode16,16,EPAACTR_xwass), (*NL(FZAACTR_outlevel))),(A_UNITE(REGACTR,mode16,16,EPAACTR_xwass), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(REGACTR,mode16,16,EPAACTR_xwass), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(REGACTR,mode16,16,EPAACTR_xwass), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
 } 
  /* line 7750: */
 MEGACTR_l: A_UNUSED;
@@ -11284,39 +11284,39 @@ MEGACTR_l: A_UNUSED;
 break;
 case 78: 
 { 
-(void)(NUFACTR_m = (*(&((&((*(&(EUFACTR_vss->Rest)))->V))->Mode))));
+(void)(NUFACTR_m = (*A_NILCHECK((&(A_NILCHECK((&(A_NILCHECK((*A_NILCHECK((&(A_NILCHECK(EUFACTR_vss)->Rest)))))->V)))->Mode)))));
  /* line 7755: */
  /* line 7756: */
 if (NUFACTR_m!=ZKAACTR_faultmode)
 { 
-(void)(A_CALLPROC(NL(RYCACTR_strong),((&(EUFACTR_vss->V)), A_CALLPROC(NL(JGCACTR_deflex),(NUFACTR_m-=KQAACTR_refmark),(NUFACTR_m-=KQAACTR_refmark,(NL(JGCACTR_deflex)).nonlocals)), A68_TRUE),((&(EUFACTR_vss->V)), A_CALLPROC(NL(JGCACTR_deflex),(NUFACTR_m-=KQAACTR_refmark),(NUFACTR_m-=KQAACTR_refmark,(NL(JGCACTR_deflex)).nonlocals)), A68_TRUE,(NL(RYCACTR_strong)).nonlocals)));
+(void)(A_CALLPROC(NL(RYCACTR_strong),((&(A_NILCHECK(EUFACTR_vss)->V)), A_CALLPROC(NL(JGCACTR_deflex),(NUFACTR_m-=KQAACTR_refmark),(NUFACTR_m-=KQAACTR_refmark,(NL(JGCACTR_deflex)).nonlocals)), A68_TRUE),((&(A_NILCHECK(EUFACTR_vss)->V)), A_CALLPROC(NL(JGCACTR_deflex),(NUFACTR_m-=KQAACTR_refmark),(NUFACTR_m-=KQAACTR_refmark,(NL(JGCACTR_deflex)).nonlocals)), A68_TRUE,(NL(RYCACTR_strong)).nonlocals)));
  /* line 7757: */
  /* line 7758: */
 (void)(A_CALLPROC(NL(VCEACTR_assign),(NUFACTR_m),(NUFACTR_m,(NL(VCEACTR_assign)).nonlocals)));
 } 
  /* line 7759: */
-(void)(EUFACTR_vss = (*(&(EUFACTR_vss->Rest))));
+(void)(EUFACTR_vss = (*A_NILCHECK((&(A_NILCHECK(EUFACTR_vss)->Rest)))));
  /* line 7760: */
  /* line 7761: */
  /* line 7764: */
-SEGACTR = (&((&(EUFACTR_vss->V))->Props)) ;
-(void)((*SEGACTR) = (A68_BITS )((*(&((&(EUFACTR_vss->V))->Props)))|CRAACTR_assmntbit));
+SEGACTR = (&(A_NILCHECK((&(A_NILCHECK(EUFACTR_vss)->V)))->Props)) ;
+(void)((*A_NILCHECK(SEGACTR)) = (A68_BITS )((*A_NILCHECK((&(A_NILCHECK((&(A_NILCHECK(EUFACTR_vss)->V)))->Props))))|CRAACTR_assmntbit));
 } 
 break;
 case 79: 
-TEGACTR.Name = (*NL(PSAACTR_ident));
+TEGACTR.Name = (*A_NILCHECK(NL(PSAACTR_ident)));
 TEGACTR.Rest = SUFACTR_selstack;
  /* line 7767: */
 UEGACTR = A_LOC(A68_130 ) ;
-(void)((*UEGACTR) = TEGACTR) ;
+(void)((*A_NILCHECK(UEGACTR)) = TEGACTR) ;
 SUFACTR_selstack = UEGACTR;
 break;
 case 80: 
 { 
-(void)(A_CALLPROC(NL(OBDACTR_weak),((&(EUFACTR_vss->V))),((&(EUFACTR_vss->V)),(NL(OBDACTR_weak)).nonlocals)));
+(void)(A_CALLPROC(NL(OBDACTR_weak),((&(A_NILCHECK(EUFACTR_vss)->V))),((&(A_NILCHECK(EUFACTR_vss)->V)),(NL(OBDACTR_weak)).nonlocals)));
  /* line 7768: */
  /* line 7769: */
-if ((NUFACTR_m = (*(&((&(EUFACTR_vss->V))->Mode))))!=ZKAACTR_faultmode)
+if ((NUFACTR_m = (*A_NILCHECK((&(A_NILCHECK((&(A_NILCHECK(EUFACTR_vss)->V)))->Mode)))))!=ZKAACTR_faultmode)
 { 
 OUFACTR_n = 0;
  /* line 7770: */
@@ -11325,16 +11325,16 @@ OUFACTR_n = 0;
 (void)(NUFACTR_m = (A68_INT )(A68_BITS )((A68_BITS )NUFACTR_m&LQAACTR_decsmask));
  /* line 7773: */
  /* line 7774: */
-VEGACTR = (*(&A_VINDEX(NL(KUAACTR_modes),NUFACTR_m))) ;
+VEGACTR = (*A_NILCHECK((&A_VINDEX(NL(KUAACTR_modes),NUFACTR_m)))) ;
 switch ( VEGACTR.mode )
 { 
 case 8: /* REF STRUCT(INT,INT,INT,INT)  */
 WEGACTR_a = (VEGACTR.data.mode8);
  /* line 7775: */
 { 
-(void)(NUFACTR_m = (*(&(WEGACTR_a->Mode))));
+(void)(NUFACTR_m = (*A_NILCHECK((&(A_NILCHECK(WEGACTR_a)->Mode)))));
  /* line 7776: */
-(void)(OUFACTR_n = (*(&(WEGACTR_a->Nods))));
+(void)(OUFACTR_n = (*A_NILCHECK((&(A_NILCHECK(WEGACTR_a)->Nods)))));
  /* line 7777: */
  /* line 7778: */
 XEGACTR = (OUFACTR_n-1);
@@ -11343,7 +11343,7 @@ YEGACTR <= XEGACTR;
 YEGACTR += 1 )
 { 
  /* line 7779: */
-ZEGACTR = (*(&A_VINDEX(NL(KUAACTR_modes),NUFACTR_m))) ;
+ZEGACTR = (*A_NILCHECK((&A_VINDEX(NL(KUAACTR_modes),NUFACTR_m)))) ;
 switch ( ZEGACTR.mode )
 { 
 case 8: /* REF STRUCT(INT,INT,INT,INT)  */
@@ -11351,7 +11351,7 @@ AFGACTR_a1 = (ZEGACTR.data.mode8);
  /* line 7780: */
  /* line 7781: */
  /* line 7782: */
-(void)(NUFACTR_m = (*(&(AFGACTR_a1->Mode))));
+(void)(NUFACTR_m = (*A_NILCHECK((&(A_NILCHECK(AFGACTR_a1)->Mode)))));
 break;
 default: 
 A_IMP_SKIP ;
@@ -11369,14 +11369,14 @@ break;
 } 
  /* line 7787: */
  /* line 7788: */
-BFGACTR = (*(&A_VINDEX(NL(KUAACTR_modes),NUFACTR_m))) ;
+BFGACTR = (*A_NILCHECK((&A_VINDEX(NL(KUAACTR_modes),NUFACTR_m)))) ;
 switch ( BFGACTR.mode )
 { 
 case 4: /* REF STRUCT(INT,INT,REF MODE58)  */
 CFGACTR_s = (BFGACTR.data.mode4);
  /* line 7789: */
 { 
-DFGACTR_sels = (*(&(CFGACTR_s->Sels)));
+DFGACTR_sels = (*A_NILCHECK((&(A_NILCHECK(CFGACTR_s)->Sels))));
  /* line 7790: */
 EFGACTR_found = A68_FALSE;
  /* line 7791: */
@@ -11391,13 +11391,13 @@ if ( GFGACTR )
 }
 if ( !(GFGACTR) ) break;
  /* line 7794: */
-IFGACTR = (*(&(DFGACTR_sels->Name))) ;
-KFGACTR = (*(&(SUFACTR_selstack->Name))) ;
+IFGACTR = (*A_NILCHECK((&(A_NILCHECK(DFGACTR_sels)->Name)))) ;
+KFGACTR = (*A_NILCHECK((&(A_NILCHECK(SUFACTR_selstack)->Name)))) ;
 if (A_VC_EQ(A_HISVEC(HFGACTR,IFGACTR,32,A68_CHAR ),A_HISVEC(JFGACTR,KFGACTR,32,A68_CHAR )))
 { 
 TUFACTR_i = FFGACTR_j;
  /* line 7795: */
-(void)(NUFACTR_m = (*(&(DFGACTR_sels->Mode))));
+(void)(NUFACTR_m = (*A_NILCHECK((&(A_NILCHECK(DFGACTR_sels)->Mode)))));
  /* line 7796: */
 EFGACTR_found = A68_TRUE;
  /* line 7797: */
@@ -11415,20 +11415,20 @@ NFGACTR.M = NUFACTR_m+=VUFACTR_qref;
 NFGACTR.Param = TUFACTR_i;
  /* line 7800: */
  /* line 7801: */
-(void)(A_CALLPROC(NL(Output),(A_UNITE(OFGACTR,mode14,14,NFGACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(OFGACTR,mode14,14,NFGACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(OFGACTR,mode14,14,NFGACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(OFGACTR,mode14,14,NFGACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
 } 
 else
 { 
  /* line 7802: */
  /* line 7803: */
-(void)(DFGACTR_sels = (*(&(DFGACTR_sels->Rest))));
+(void)(DFGACTR_sels = (*A_NILCHECK((&(A_NILCHECK(DFGACTR_sels)->Rest)))));
 } 
 }
  /* line 7804: */
  /* line 7805: */
 if (!EFGACTR_found)
 { 
-(void)(A_CALLPROC(NL(PZBACTR_faultp),(152, 0, 0, (&(SUFACTR_selstack->Name))),(152, 0, 0, (&(SUFACTR_selstack->Name)),(NL(PZBACTR_faultp)).nonlocals)));
+(void)(A_CALLPROC(NL(PZBACTR_faultp),(152, 0, 0, (&(A_NILCHECK(SUFACTR_selstack)->Name))),(152, 0, 0, (&(A_NILCHECK(SUFACTR_selstack)->Name)),(NL(PZBACTR_faultp)).nonlocals)));
  /* line 7807: */
  /* line 7808: */
  /* line 7809: */
@@ -11438,7 +11438,7 @@ NUFACTR_m = ZKAACTR_faultmode;
 } 
 break;
 default: 
-(void)(A_CALLPROC(NL(PZBACTR_faultp),(153, (*(&((&(EUFACTR_vss->V))->Mode))), 0, (A68_31 *)A68_NIL),(153, (*(&((&(EUFACTR_vss->V))->Mode))), 0, (A68_31 *)A68_NIL,(NL(PZBACTR_faultp)).nonlocals)));
+(void)(A_CALLPROC(NL(PZBACTR_faultp),(153, (*A_NILCHECK((&(A_NILCHECK((&(A_NILCHECK(EUFACTR_vss)->V)))->Mode)))), 0, (A68_31 *)A68_NIL),(153, (*A_NILCHECK((&(A_NILCHECK((&(A_NILCHECK(EUFACTR_vss)->V)))->Mode)))), 0, (A68_31 *)A68_NIL,(NL(PZBACTR_faultp)).nonlocals)));
  /* line 7812: */
  /* line 7813: */
 NUFACTR_m = ZKAACTR_faultmode;
@@ -11450,77 +11450,77 @@ PFGACTR.Mode = NUFACTR_m;
 PFGACTR.Vlist = (A68_124 *)A68_NIL;
  /* line 7816: */
 PFGACTR.Labs = (A68_69 *)A68_NIL;
-QFGACTR = (&(EUFACTR_vss->V)) ;
-(*QFGACTR) = PFGACTR;
+QFGACTR = (&(A_NILCHECK(EUFACTR_vss)->V)) ;
+(*A_NILCHECK(QFGACTR)) = PFGACTR;
 } 
  /* line 7817: */
  /* line 7818: */
  /* line 7821: */
-(void)(SUFACTR_selstack = (*(&(SUFACTR_selstack->Rest))));
+(void)(SUFACTR_selstack = (*A_NILCHECK((&(A_NILCHECK(SUFACTR_selstack)->Rest)))));
 } 
 break;
 case 81: 
 { 
-(void)(A_CALLPROC(NL(RYCACTR_strong),((&(EUFACTR_vss->V)), ELAACTR_int, A68_TRUE),((&(EUFACTR_vss->V)), ELAACTR_int, A68_TRUE,(NL(RYCACTR_strong)).nonlocals)));
+(void)(A_CALLPROC(NL(RYCACTR_strong),((&(A_NILCHECK(EUFACTR_vss)->V)), ELAACTR_int, A68_TRUE),((&(A_NILCHECK(EUFACTR_vss)->V)), ELAACTR_int, A68_TRUE,(NL(RYCACTR_strong)).nonlocals)));
  /* line 7822: */
-(void)(EUFACTR_vss = (*(&(EUFACTR_vss->Rest))));
+(void)(EUFACTR_vss = (*A_NILCHECK((&(A_NILCHECK(EUFACTR_vss)->Rest)))));
  /* line 7823: */
  /* line 7824: */
  /* line 7827: */
-RFGACTR = (&(WUFACTR_indstack->Noofinds)) ;
-(*RFGACTR)+=1;
+RFGACTR = (&(A_NILCHECK(WUFACTR_indstack)->Noofinds)) ;
+(*A_NILCHECK(RFGACTR))+=1;
 } 
 break;
 case 82: 
 { 
-(void)(A_CALLPROC(NL(RYCACTR_strong),((&(EUFACTR_vss->V)), ELAACTR_int, A68_TRUE),((&(EUFACTR_vss->V)), ELAACTR_int, A68_TRUE,(NL(RYCACTR_strong)).nonlocals)));
+(void)(A_CALLPROC(NL(RYCACTR_strong),((&(A_NILCHECK(EUFACTR_vss)->V)), ELAACTR_int, A68_TRUE),((&(A_NILCHECK(EUFACTR_vss)->V)), ELAACTR_int, A68_TRUE,(NL(RYCACTR_strong)).nonlocals)));
  /* line 7828: */
-(void)(EUFACTR_vss = (*(&(EUFACTR_vss->Rest))));
+(void)(EUFACTR_vss = (*A_NILCHECK((&(A_NILCHECK(EUFACTR_vss)->Rest)))));
  /* line 7829: */
  /* line 7830: */
  /* line 7833: */
-SFGACTR = (&(WUFACTR_indstack->Bits)) ;
-(void)((*SFGACTR) = (A68_BITS )((*(&(WUFACTR_indstack->Bits)))|(A68_BITS )9));
+SFGACTR = (&(A_NILCHECK(WUFACTR_indstack)->Bits)) ;
+(void)((*A_NILCHECK(SFGACTR)) = (A68_BITS )((*A_NILCHECK((&(A_NILCHECK(WUFACTR_indstack)->Bits))))|(A68_BITS )9));
 } 
 break;
 case 83: 
 { 
-(void)(A_CALLPROC(NL(RYCACTR_strong),((&(EUFACTR_vss->V)), ELAACTR_int, A68_TRUE),((&(EUFACTR_vss->V)), ELAACTR_int, A68_TRUE,(NL(RYCACTR_strong)).nonlocals)));
+(void)(A_CALLPROC(NL(RYCACTR_strong),((&(A_NILCHECK(EUFACTR_vss)->V)), ELAACTR_int, A68_TRUE),((&(A_NILCHECK(EUFACTR_vss)->V)), ELAACTR_int, A68_TRUE,(NL(RYCACTR_strong)).nonlocals)));
  /* line 7834: */
-(void)(EUFACTR_vss = (*(&(EUFACTR_vss->Rest))));
+(void)(EUFACTR_vss = (*A_NILCHECK((&(A_NILCHECK(EUFACTR_vss)->Rest)))));
  /* line 7835: */
  /* line 7836: */
  /* line 7839: */
-TFGACTR = (&(WUFACTR_indstack->Bits)) ;
-(void)((*TFGACTR) = (A68_BITS )((*(&(WUFACTR_indstack->Bits)))|(A68_BITS )10));
+TFGACTR = (&(A_NILCHECK(WUFACTR_indstack)->Bits)) ;
+(void)((*A_NILCHECK(TFGACTR)) = (A68_BITS )((*A_NILCHECK((&(A_NILCHECK(WUFACTR_indstack)->Bits))))|(A68_BITS )10));
 } 
 break;
 case 84: 
 { 
-(void)(A_CALLPROC(NL(RYCACTR_strong),((&(EUFACTR_vss->V)), ELAACTR_int, A68_TRUE),((&(EUFACTR_vss->V)), ELAACTR_int, A68_TRUE,(NL(RYCACTR_strong)).nonlocals)));
+(void)(A_CALLPROC(NL(RYCACTR_strong),((&(A_NILCHECK(EUFACTR_vss)->V)), ELAACTR_int, A68_TRUE),((&(A_NILCHECK(EUFACTR_vss)->V)), ELAACTR_int, A68_TRUE,(NL(RYCACTR_strong)).nonlocals)));
  /* line 7840: */
-(void)(EUFACTR_vss = (*(&(EUFACTR_vss->Rest))));
+(void)(EUFACTR_vss = (*A_NILCHECK((&(A_NILCHECK(EUFACTR_vss)->Rest)))));
  /* line 7841: */
-UFGACTR = (&(WUFACTR_indstack->Bits)) ;
-(void)((*UFGACTR) = (A68_BITS )((*(&(WUFACTR_indstack->Bits)))|(A68_BITS )12));
+UFGACTR = (&(A_NILCHECK(WUFACTR_indstack)->Bits)) ;
+(void)((*A_NILCHECK(UFGACTR)) = (A68_BITS )((*A_NILCHECK((&(A_NILCHECK(WUFACTR_indstack)->Bits))))|(A68_BITS )12));
  /* line 7842: */
  /* line 7843: */
  /* line 7846: */
-VFGACTR = (&(WUFACTR_indstack->Vector)) ;
-(*VFGACTR) = A68_FALSE;
+VFGACTR = (&(A_NILCHECK(WUFACTR_indstack)->Vector)) ;
+(*A_NILCHECK(VFGACTR)) = A68_FALSE;
 } 
 break;
 case 85: 
  /* line 7849: */
-WFGACTR = (&(WUFACTR_indstack->Bits)) ;
-(void)((*WFGACTR) = (A68_BITS )((*(&(WUFACTR_indstack->Bits)))|(A68_BITS )8));
+WFGACTR = (&(A_NILCHECK(WUFACTR_indstack)->Bits)) ;
+(void)((*A_NILCHECK(WFGACTR)) = (A68_BITS )((*A_NILCHECK((&(A_NILCHECK(WUFACTR_indstack)->Bits))))|(A68_BITS )8));
 break;
 case 86: 
 { 
-XFGACTR = (&(WUFACTR_indstack->Nooftrims)) ;
-(*XFGACTR)+=1;
+XFGACTR = (&(A_NILCHECK(WUFACTR_indstack)->Nooftrims)) ;
+(*A_NILCHECK(XFGACTR))+=1;
  /* line 7850: */
-YFGACTR_bi = (*(&(WUFACTR_indstack->Bits)));
+YFGACTR_bi = (*A_NILCHECK((&(A_NILCHECK(WUFACTR_indstack)->Bits))));
  /* line 7851: */
 (void)(UUFACTR_j = (A_LB_GE(YFGACTR_bi,NQAACTR_z1)));
  /* line 7852: */
@@ -11539,12 +11539,12 @@ UUFACTR_j+=1;
 BGGACTR.Fn = KMAACTR_xtrim;
 BGGACTR.M = (A68_INT )YFGACTR_bi;
 BGGACTR.Param = UUFACTR_j;
-(void)(A_CALLPROC(NL(Output),(A_UNITE(CGGACTR,mode14,14,BGGACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(CGGACTR,mode14,14,BGGACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(CGGACTR,mode14,14,BGGACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(CGGACTR,mode14,14,BGGACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 7855: */
  /* line 7856: */
  /* line 7859: */
-DGGACTR = (&(WUFACTR_indstack->Bits)) ;
-(*DGGACTR) = MQAACTR_z;
+DGGACTR = (&(A_NILCHECK(WUFACTR_indstack)->Bits)) ;
+(*A_NILCHECK(DGGACTR)) = MQAACTR_z;
 } 
 break;
 case 87: 
@@ -11555,25 +11555,25 @@ EGGACTR.Vector = A68_TRUE;
 EGGACTR.Bits = MQAACTR_z;
 EGGACTR.Rest = WUFACTR_indstack;
 FGGACTR = A_LOC(A68_131 ) ;
-(void)((*FGGACTR) = EGGACTR) ;
+(void)((*A_NILCHECK(FGGACTR)) = EGGACTR) ;
 WUFACTR_indstack = FGGACTR;
  /* line 7860: */
-(void)(A_CALLPROC(NL(OBDACTR_weak),((&(EUFACTR_vss->V))),((&(EUFACTR_vss->V)),(NL(OBDACTR_weak)).nonlocals)));
+(void)(A_CALLPROC(NL(OBDACTR_weak),((&(A_NILCHECK(EUFACTR_vss)->V))),((&(A_NILCHECK(EUFACTR_vss)->V)),(NL(OBDACTR_weak)).nonlocals)));
  /* line 7861: */
  /* line 7862: */
-if ((NUFACTR_m = (*(&((&(EUFACTR_vss->V))->Mode))))!=ZKAACTR_faultmode)
+if ((NUFACTR_m = (*A_NILCHECK((&(A_NILCHECK((&(A_NILCHECK(EUFACTR_vss)->V)))->Mode)))))!=ZKAACTR_faultmode)
 { 
  /* line 7863: */
 GGGACTR = (A68_INT )(A68_BITS )((A68_BITS )NUFACTR_m&LQAACTR_decsmask) ;
-HGGACTR = (*(&A_VINDEX(NL(KUAACTR_modes),GGGACTR))) ;
+HGGACTR = (*A_NILCHECK((&A_VINDEX(NL(KUAACTR_modes),GGGACTR)))) ;
 switch ( HGGACTR.mode )
 { 
 case 8: /* REF STRUCT(INT,INT,INT,INT)  */
 IGGACTR_a = (HGGACTR.data.mode8);
  /* line 7864: */
  /* line 7865: */
-JGGACTR = (&(WUFACTR_indstack->Vector)) ;
-(*JGGACTR) = A68_FALSE;
+JGGACTR = (&(A_NILCHECK(WUFACTR_indstack)->Vector)) ;
+(*A_NILCHECK(JGGACTR)) = A68_FALSE;
 break;
 case 7: /* REF STRUCT(INT,INT,INT)  */
 KGGACTR_v1 = (HGGACTR.data.mode7);
@@ -11589,7 +11589,7 @@ LGGACTR_is = (HGGACTR.data.mode5);
  /* line 7871: */
  /* line 7872: */
  /* line 7873: */
-(void)(A_CALLPROC(NL(OSCACTR_coerce),((&(EUFACTR_vss->V)), NUFACTR_m, (A_CALLPROC(NL(ZVBACTR_insertvec),((*(&(LGGACTR_is->Imode))), 1),((*(&(LGGACTR_is->Imode))), 1,(NL(ZVBACTR_insertvec)).nonlocals))+(A68_INT )(A68_BITS )((A68_BITS )NUFACTR_m&(A68_BITS )KQAACTR_refmark)), ISCACTR_all, A68_TRUE),((&(EUFACTR_vss->V)), NUFACTR_m, (A_CALLPROC(NL(ZVBACTR_insertvec),((*(&(LGGACTR_is->Imode))), 1),((*(&(LGGACTR_is->Imode))), 1,(NL(ZVBACTR_insertvec)).nonlocals))+(A68_INT )(A68_BITS )((A68_BITS )NUFACTR_m&(A68_BITS )KQAACTR_refmark)), ISCACTR_all, A68_TRUE,(NL(OSCACTR_coerce)).nonlocals)));
+(void)(A_CALLPROC(NL(OSCACTR_coerce),((&(A_NILCHECK(EUFACTR_vss)->V)), NUFACTR_m, (A_CALLPROC(NL(ZVBACTR_insertvec),((*A_NILCHECK((&(A_NILCHECK(LGGACTR_is)->Imode)))), 1),((*A_NILCHECK((&(A_NILCHECK(LGGACTR_is)->Imode)))), 1,(NL(ZVBACTR_insertvec)).nonlocals))+(A68_INT )(A68_BITS )((A68_BITS )NUFACTR_m&(A68_BITS )KQAACTR_refmark)), ISCACTR_all, A68_TRUE),((&(A_NILCHECK(EUFACTR_vss)->V)), NUFACTR_m, (A_CALLPROC(NL(ZVBACTR_insertvec),((*A_NILCHECK((&(A_NILCHECK(LGGACTR_is)->Imode)))), 1),((*A_NILCHECK((&(A_NILCHECK(LGGACTR_is)->Imode)))), 1,(NL(ZVBACTR_insertvec)).nonlocals))+(A68_INT )(A68_BITS )((A68_BITS )NUFACTR_m&(A68_BITS )KQAACTR_refmark)), ISCACTR_all, A68_TRUE,(NL(OSCACTR_coerce)).nonlocals)));
 break;
 case 9: /* REF STRUCT(INT,REF MODE63)  */
 MGGACTR_rs = (HGGACTR.data.mode9);
@@ -11599,7 +11599,7 @@ if (NUFACTR_m>KQAACTR_refmark)
 { 
  /* line 7876: */
  /* line 7877: */
-(void)(A_CALLPROC(NL(EJCACTR_deref),((&(EUFACTR_vss->V))),((&(EUFACTR_vss->V)),(NL(EJCACTR_deref)).nonlocals)));
+(void)(A_CALLPROC(NL(EJCACTR_deref),((&(A_NILCHECK(EUFACTR_vss)->V))),((&(A_NILCHECK(EUFACTR_vss)->V)),(NL(EJCACTR_deref)).nonlocals)));
 } 
 break;
 default: 
@@ -11607,13 +11607,13 @@ default:
  /* line 7879: */
  /* line 7880: */
  /* line 7881: */
-NGGACTR = (&((&(EUFACTR_vss->V))->Mode)) ;
-(*NGGACTR) = ZKAACTR_faultmode;
+NGGACTR = (&(A_NILCHECK((&(A_NILCHECK(EUFACTR_vss)->V)))->Mode)) ;
+(*A_NILCHECK(NGGACTR)) = ZKAACTR_faultmode;
 break;
 } 
 } 
  /* line 7882: */
-if ((*NL(MFBACTR_t1))==59)
+if ((*A_NILCHECK(NL(MFBACTR_t1)))==59)
 { 
 OGGACTR = A_UNITE(PGGACTR,mode16,16,HPAACTR_xwindex);
 } 
@@ -11623,12 +11623,12 @@ OGGACTR = A_UNITE(QGGACTR,mode16,16,JPAACTR_xwforall);
 } 
  /* line 7883: */
  /* line 7886: */
-(void)(A_CALLPROC(NL(Output),(OGGACTR, (*NL(FZAACTR_outlevel))),(OGGACTR, (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(OGGACTR, (*A_NILCHECK(NL(FZAACTR_outlevel)))),(OGGACTR, (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
 } 
 break;
 case 88: 
 { 
-(void)(NUFACTR_m = (*(&((&(EUFACTR_vss->V))->Mode))));
+(void)(NUFACTR_m = (*A_NILCHECK((&(A_NILCHECK((&(A_NILCHECK(EUFACTR_vss)->V)))->Mode)))));
  /* line 7887: */
 OUFACTR_n = LMAACTR_xsimpleindex;
  /* line 7888: */
@@ -11639,19 +11639,19 @@ if (NUFACTR_m!=ZKAACTR_faultmode)
  /* line 7890: */
 (void)(NUFACTR_m = (A68_INT )(A68_BITS )((A68_BITS )NUFACTR_m&LQAACTR_decsmask));
  /* line 7891: */
-(void)(TUFACTR_i = (*(&(WUFACTR_indstack->Noofinds))));
+(void)(TUFACTR_i = (*A_NILCHECK((&(A_NILCHECK(WUFACTR_indstack)->Noofinds)))));
  /* line 7892: */
-(void)(UUFACTR_j = (*(&(WUFACTR_indstack->Nooftrims))));
+(void)(UUFACTR_j = (*A_NILCHECK((&(A_NILCHECK(WUFACTR_indstack)->Nooftrims)))));
  /* line 7893: */
  /* line 7894: */
-RGGACTR = (*(&A_VINDEX(NL(KUAACTR_modes),NUFACTR_m))) ;
+RGGACTR = (*A_NILCHECK((&A_VINDEX(NL(KUAACTR_modes),NUFACTR_m)))) ;
 switch ( RGGACTR.mode )
 { 
 case 8: /* REF STRUCT(INT,INT,INT,INT)  */
 SGGACTR_a = (RGGACTR.data.mode8);
  /* line 7895: */
  /* line 7896: */
-if ((*(&(SGGACTR_a->Nods)))!=(TUFACTR_i+UUFACTR_j))
+if ((*A_NILCHECK((&(A_NILCHECK(SGGACTR_a)->Nods))))!=(TUFACTR_i+UUFACTR_j))
 { 
 (void)(A_CALLPROC(NL(QJBACTR_fault),(156),(156,(NL(QJBACTR_fault)).nonlocals)));
  /* line 7898: */
@@ -11663,13 +11663,13 @@ else
 TGGACTR = (TUFACTR_i==0);
 if ( TGGACTR )
 { /* line 7900: */
-TGGACTR = ((*(&(SGGACTR_a->Deflex)))<0);
+TGGACTR = ((*A_NILCHECK((&(A_NILCHECK(SGGACTR_a)->Deflex))))<0);
 }
 if (TGGACTR)
 { 
  /* line 7901: */
  /* line 7902: */
-(void)(NUFACTR_m = (A_CALLPROC(NL(FVBACTR_insertarray),((*(&(SGGACTR_a->Mode))), (*(&(SGGACTR_a->Nods))), 1),((*(&(SGGACTR_a->Mode))), (*(&(SGGACTR_a->Nods))), 1,(NL(FVBACTR_insertarray)).nonlocals))+VUFACTR_qref));
+(void)(NUFACTR_m = (A_CALLPROC(NL(FVBACTR_insertarray),((*A_NILCHECK((&(A_NILCHECK(SGGACTR_a)->Mode)))), (*A_NILCHECK((&(A_NILCHECK(SGGACTR_a)->Nods)))), 1),((*A_NILCHECK((&(A_NILCHECK(SGGACTR_a)->Mode)))), (*A_NILCHECK((&(A_NILCHECK(SGGACTR_a)->Nods)))), 1,(NL(FVBACTR_insertarray)).nonlocals))+VUFACTR_qref));
 } 
 else
 { 
@@ -11680,7 +11680,7 @@ VGGACTR <= UGGACTR;
 VGGACTR += 1 )
 { 
  /* line 7904: */
-WGGACTR = (*(&A_VINDEX(NL(KUAACTR_modes),NUFACTR_m))) ;
+WGGACTR = (*A_NILCHECK((&A_VINDEX(NL(KUAACTR_modes),NUFACTR_m)))) ;
 switch ( WGGACTR.mode )
 { 
 case 8: /* REF STRUCT(INT,INT,INT,INT)  */
@@ -11688,7 +11688,7 @@ XGGACTR_a1 = (WGGACTR.data.mode8);
  /* line 7905: */
  /* line 7906: */
  /* line 7907: */
-(void)(NUFACTR_m = (*(&(XGGACTR_a1->Mode))));
+(void)(NUFACTR_m = (*A_NILCHECK((&(A_NILCHECK(XGGACTR_a1)->Mode)))));
 break;
 default: 
 A_IMP_SKIP ;
@@ -11716,22 +11716,22 @@ NUFACTR_m = ZKAACTR_faultmode;
 } 
 else
 { 
-if (!(*(&(WUFACTR_indstack->Vector))))
+if (!(*A_NILCHECK((&(A_NILCHECK(WUFACTR_indstack)->Vector)))))
 { 
  /* line 7917: */
-(void)(NUFACTR_m = (A_CALLPROC(NL(FVBACTR_insertarray),((*(&(YGGACTR_v1->Vecmode))), 1, 1),((*(&(YGGACTR_v1->Vecmode))), 1, 1,(NL(FVBACTR_insertarray)).nonlocals))+VUFACTR_qref));
+(void)(NUFACTR_m = (A_CALLPROC(NL(FVBACTR_insertarray),((*A_NILCHECK((&(A_NILCHECK(YGGACTR_v1)->Vecmode)))), 1, 1),((*A_NILCHECK((&(A_NILCHECK(YGGACTR_v1)->Vecmode)))), 1, 1,(NL(FVBACTR_insertarray)).nonlocals))+VUFACTR_qref));
 } 
 else
 { 
 ZGGACTR = (TUFACTR_i==0);
 if ( ZGGACTR )
 { /* line 7918: */
-ZGGACTR = ((*(&(YGGACTR_v1->Deflex)))<0);
+ZGGACTR = ((*A_NILCHECK((&(A_NILCHECK(YGGACTR_v1)->Deflex))))<0);
 }
 if (ZGGACTR)
 { 
  /* line 7919: */
-(void)(NUFACTR_m = (A_CALLPROC(NL(ZVBACTR_insertvec),((*(&(YGGACTR_v1->Vecmode))), 1),((*(&(YGGACTR_v1->Vecmode))), 1,(NL(ZVBACTR_insertvec)).nonlocals))+VUFACTR_qref));
+(void)(NUFACTR_m = (A_CALLPROC(NL(ZVBACTR_insertvec),((*A_NILCHECK((&(A_NILCHECK(YGGACTR_v1)->Vecmode)))), 1),((*A_NILCHECK((&(A_NILCHECK(YGGACTR_v1)->Vecmode)))), 1,(NL(ZVBACTR_insertvec)).nonlocals))+VUFACTR_qref));
 } 
 else
 { 
@@ -11745,7 +11745,7 @@ AHGACTR = NUFACTR_m;
 else
 { 
  /* line 7923: */
-AHGACTR = (*(&(YGGACTR_v1->Vecmode)));
+AHGACTR = (*A_NILCHECK((&(A_NILCHECK(YGGACTR_v1)->Vecmode))));
 } 
  /* line 7924: */
 (void)(NUFACTR_m = (AHGACTR+VUFACTR_qref));
@@ -11770,7 +11770,7 @@ NUFACTR_m = ZKAACTR_faultmode;
 } 
 else
 { 
-(void)(NUFACTR_m = (*(&(BHGACTR_rs->Mode))));
+(void)(NUFACTR_m = (*A_NILCHECK((&(A_NILCHECK(BHGACTR_rs)->Mode)))));
  /* line 7930: */
  /* line 7931: */
  /* line 7932: */
@@ -11795,25 +11795,25 @@ DHGACTR.Fn = MMAACTR_xtrimindex;
 } 
 DHGACTR.M = NUFACTR_m;
 DHGACTR.Param = (TUFACTR_i+UUFACTR_j);
-(void)(A_CALLPROC(NL(Output),(A_UNITE(EHGACTR,mode14,14,DHGACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(EHGACTR,mode14,14,DHGACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(EHGACTR,mode14,14,DHGACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(EHGACTR,mode14,14,DHGACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 7938: */
 FHGACTR.Props = MQAACTR_z;
 FHGACTR.Mode = NUFACTR_m;
 FHGACTR.Vlist = (A68_124 *)A68_NIL;
  /* line 7939: */
 FHGACTR.Labs = (A68_69 *)A68_NIL;
-GHGACTR = (&(EUFACTR_vss->V)) ;
-(*GHGACTR) = FHGACTR;
+GHGACTR = (&(A_NILCHECK(EUFACTR_vss)->V)) ;
+(*A_NILCHECK(GHGACTR)) = FHGACTR;
 } 
  /* line 7940: */
  /* line 7941: */
  /* line 7944: */
-(void)(WUFACTR_indstack = (*(&(WUFACTR_indstack->Rest))));
+(void)(WUFACTR_indstack = (*A_NILCHECK((&(A_NILCHECK(WUFACTR_indstack)->Rest)))));
 } 
 break;
 case 89: 
  /* line 7947: */
-(void)((*KUFACTR_v) = (*NL(RYAACTR_enqv)));
+(void)((*A_NILCHECK(KUFACTR_v)) = (*A_NILCHECK(NL(RYAACTR_enqv))));
 break;
 case 90: 
 { 
@@ -11827,24 +11827,24 @@ break;
 case 91: 
 { 
 HHGACTR = A_LOC(A68_52 ) ;
-(void)((*HHGACTR) = (*NL(DEBACTR_lkscam))) ;
+(void)((*A_NILCHECK(HHGACTR)) = (*A_NILCHECK(NL(DEBACTR_lkscam)))) ;
 DUFACTR_am = HHGACTR;
  /* line 7953: */
  /* line 7954: */
  /* line 7957: */
-(void)((*NL(GGFACTR_type)) = (*NL(CEBACTR_lktype)));
+(void)((*A_NILCHECK(NL(GGFACTR_type))) = (*A_NILCHECK(NL(CEBACTR_lktype))));
 } 
 break;
 case 92: 
  /* line 7958: */
-if ((*NL(MFBACTR_t1))==24)
+if ((*A_NILCHECK(NL(MFBACTR_t1)))==24)
 { 
-(*NL(MFBACTR_t1)) = 90;
+(*A_NILCHECK(NL(MFBACTR_t1))) = 90;
  /* line 7959: */
-IHGACTR = (&(NL(FHFACTR_xcharpos)->Charpos)) ;
-(void)((*IHGACTR) = (*NL(LSAACTR_tind)));
+IHGACTR = (&(A_NILCHECK(NL(FHFACTR_xcharpos))->Charpos)) ;
+(void)((*A_NILCHECK(IHGACTR)) = (*A_NILCHECK(NL(LSAACTR_tind))));
  /* line 7960: */
-(void)(A_CALLPROC(NL(Output),(A_UNITE(JHGACTR,mode15,15,(*NL(FHFACTR_xcharpos))), (*NL(FZAACTR_outlevel))),(A_UNITE(JHGACTR,mode15,15,(*NL(FHFACTR_xcharpos))), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(JHGACTR,mode15,15,(*A_NILCHECK(NL(FHFACTR_xcharpos)))), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(JHGACTR,mode15,15,(*A_NILCHECK(NL(FHFACTR_xcharpos)))), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 7961: */
  /* line 7962: */
  /* line 7965: */
@@ -11861,13 +11861,13 @@ break;
  /* line 7970: */
 CUFACTR_exituc: A_UNUSED;
  /* line 7971: */
-KHGACTR = (&(NL(FHFACTR_xcharpos)->Charpos)) ;
-(void)((*KHGACTR) = (*NL(LSAACTR_tind)));
+KHGACTR = (&(A_NILCHECK(NL(FHFACTR_xcharpos))->Charpos)) ;
+(void)((*A_NILCHECK(KHGACTR)) = (*A_NILCHECK(NL(LSAACTR_tind))));
  /* line 7972: */
-(void)(A_CALLPROC(NL(Output),(A_UNITE(LHGACTR,mode15,15,(*NL(FHFACTR_xcharpos))), (*NL(FZAACTR_outlevel))),(A_UNITE(LHGACTR,mode15,15,(*NL(FHFACTR_xcharpos))), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(LHGACTR,mode15,15,(*A_NILCHECK(NL(FHFACTR_xcharpos)))), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(LHGACTR,mode15,15,(*A_NILCHECK(NL(FHFACTR_xcharpos)))), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 7973: */
  /* line 7974: */
-MHGACTR = (*KUFACTR_v);
+MHGACTR = (*A_NILCHECK(KUFACTR_v));
 } 
 A_PROC_EXIT(uc);
 *ReturnedValue = (MHGACTR);
@@ -11884,7 +11884,7 @@ A68_100  KJGACTR;  /* OPERATORS - nil -> mode */
 A68_100  LJGACTR;  /* OPERATORS - nil -> mode */
 A68_VC  MJGACTR;  /* OPERATORS - nil -> mode */
 { 
-JJGACTR.upb = A_CALLPROC(NL(NYEACTR_makekeepinfo),((*NL(LZAACTR_kl)), A68_FALSE, A_VVAC(MJGACTR), A_VVAC(LJGACTR), A_VVAC(KJGACTR)),((*NL(LZAACTR_kl)), A68_FALSE, A_VVAC(MJGACTR), A_VVAC(LJGACTR), A_VVAC(KJGACTR),(NL(NYEACTR_makekeepinfo)).nonlocals)) ;
+JJGACTR.upb = A_CALLPROC(NL(NYEACTR_makekeepinfo),((*A_NILCHECK(NL(LZAACTR_kl))), A68_FALSE, A_VVAC(MJGACTR), A_VVAC(LJGACTR), A_VVAC(KJGACTR)),((*A_NILCHECK(NL(LZAACTR_kl))), A68_FALSE, A_VVAC(MJGACTR), A_VVAC(LJGACTR), A_VVAC(KJGACTR),(NL(NYEACTR_makekeepinfo)).nonlocals)) ;
 ( EJGACTR_anonymous? A_VLOC(A68_CHAR ,JJGACTR): A_VHEAP(A68_CHAR ,JJGACTR) );
 IJGACTR = JJGACTR;
 } 
@@ -11899,7 +11899,7 @@ A_STATIC A68_VOID  RJGACTR_generator(A68_BOOL  PJGACTR_anonymous, A68_100  *Retu
 A68_100  TJGACTR;  /* clause result */
 A68_100  UJGACTR;  /* OPERATORS - dynamic generator */
 { 
-UJGACTR.upb = (*NL(QSAACTR_compsize)) ;
+UJGACTR.upb = (*A_NILCHECK(NL(QSAACTR_compsize))) ;
 ( PJGACTR_anonymous? A_VLOC(A68_INT ,UJGACTR): A_VHEAP(A68_INT ,UJGACTR) );
 TJGACTR = UJGACTR;
 } 
@@ -11917,7 +11917,7 @@ A68_100  QMGACTR;  /* OPERATORS - nil -> mode */
 A68_100  RMGACTR;  /* OPERATORS - nil -> mode */
 A68_VC  SMGACTR;  /* OPERATORS - nil -> mode */
 { 
-PMGACTR.upb = A_CALLPROC(NL(NYEACTR_makekeepinfo),((*NL(LZAACTR_kl)), A68_FALSE, A_VVAC(SMGACTR), A_VVAC(RMGACTR), A_VVAC(QMGACTR)),((*NL(LZAACTR_kl)), A68_FALSE, A_VVAC(SMGACTR), A_VVAC(RMGACTR), A_VVAC(QMGACTR),(NL(NYEACTR_makekeepinfo)).nonlocals)) ;
+PMGACTR.upb = A_CALLPROC(NL(NYEACTR_makekeepinfo),((*A_NILCHECK(NL(LZAACTR_kl))), A68_FALSE, A_VVAC(SMGACTR), A_VVAC(RMGACTR), A_VVAC(QMGACTR)),((*A_NILCHECK(NL(LZAACTR_kl))), A68_FALSE, A_VVAC(SMGACTR), A_VVAC(RMGACTR), A_VVAC(QMGACTR),(NL(NYEACTR_makekeepinfo)).nonlocals)) ;
 ( KMGACTR_anonymous? A_VLOC(A68_CHAR ,PMGACTR): A_VHEAP(A68_CHAR ,PMGACTR) );
 OMGACTR = PMGACTR;
 } 
@@ -11932,7 +11932,7 @@ A_STATIC A68_VOID  XMGACTR_generator(A68_BOOL  VMGACTR_anonymous, A68_100  *Retu
 A68_100  ZMGACTR;  /* clause result */
 A68_100  ANGACTR;  /* OPERATORS - dynamic generator */
 { 
-ANGACTR.upb = (*NL(QSAACTR_compsize)) ;
+ANGACTR.upb = (*A_NILCHECK(NL(QSAACTR_compsize))) ;
 ( VMGACTR_anonymous? A_VLOC(A68_INT ,ANGACTR): A_VHEAP(A68_INT ,ANGACTR) );
 ZMGACTR = ANGACTR;
 } 
@@ -12057,7 +12057,7 @@ STAACTR = A_VINDEX(OTAACTR_rc,QTAACTR_i);
 } 
 UTAACTR = A_ISVEC(TTAACTR,(&PTAACTR_id),32,A68_CHAR ) ;
 VTAACTR = (&A_VINDEX(UTAACTR,QTAACTR_i)) ;
-(*VTAACTR) = STAACTR;
+(*A_NILCHECK(VTAACTR)) = STAACTR;
 }
  /* line 676: */
  /* line 677: */
@@ -12157,12 +12157,12 @@ A68_31  EBBACTR;  /* OPERATORS - istruct -> vector */
 A68_BOOL  FBBACTR;  /* clause result */
 A_PROC_ENTRY(/=);
  /* line 753: */
-XABACTR = (*(&(L->N))) ;
-ZABACTR = (*(&(R->N))) ;
+XABACTR = (*A_NILCHECK((&(A_NILCHECK(L)->N)))) ;
+ZABACTR = (*A_NILCHECK((&(A_NILCHECK(R)->N)))) ;
 ABBACTR = A_VC_NE(A_HISVEC(WABACTR,XABACTR,32,A68_CHAR ),A_HISVEC(YABACTR,ZABACTR,32,A68_CHAR ));
 if ( ! ABBACTR )
-{CBBACTR = (*(&(L->F))) ;
-EBBACTR = (*(&(R->F))) ;
+{CBBACTR = (*A_NILCHECK((&(A_NILCHECK(L)->F)))) ;
+EBBACTR = (*A_NILCHECK((&(A_NILCHECK(R)->F)))) ;
 ABBACTR = A_VC_NE(A_HISVEC(BBBACTR,CBBACTR,32,A68_CHAR ),A_HISVEC(DBBACTR,EBBACTR,32,A68_CHAR ));
 }
 FBBACTR = ABBACTR;
@@ -12192,7 +12192,7 @@ A_STATIC A68_VOID  DFBACTR_generator(A68_BOOL  BFBACTR_anonymous, A68_100  *Retu
 A68_100  FFBACTR;  /* clause result */
 A68_100  GFBACTR;  /* OPERATORS - dynamic generator */
 { 
-GFBACTR.upb = (*NL(AFBACTR_upbofsidstack)) ;
+GFBACTR.upb = (*A_NILCHECK(NL(AFBACTR_upbofsidstack))) ;
 ( BFBACTR_anonymous? A_VLOC(A68_INT ,GFBACTR): A_VHEAP(A68_INT ,GFBACTR) );
 FFBACTR = GFBACTR;
 } 
@@ -12226,13 +12226,13 @@ A68_INT  TGBACTR;  /* clause result */
 A_PROC_ENTRY(analyser);
 { 
  /* line 1104: */
-(*NL(LFBACTR_failpos)) = 0;
+(*A_NILCHECK(NL(LFBACTR_failpos))) = 0;
  /* line 1105: */
 for ( ;; )
 { 
-(void)(WFBACTR_u = (A68_INT)(unsigned char)A_VINDEX(NL(WEBACTR_sidcode),(*NL(KFBACTR_crts))));
+(void)(WFBACTR_u = (A68_INT)(unsigned char)A_VINDEX(NL(WEBACTR_sidcode),(*A_NILCHECK(NL(KFBACTR_crts)))));
  /* line 1106: */
-YFBACTR = ((*NL(KFBACTR_crts))+1) ;
+YFBACTR = ((*A_NILCHECK(NL(KFBACTR_crts)))+1) ;
 (void)(XFBACTR_v = (A68_INT)(unsigned char)A_VINDEX(NL(WEBACTR_sidcode),YFBACTR));
  /* line 1107: */
  /* line 1108: */
@@ -12246,47 +12246,47 @@ goto VFBACTR_action;
  /* line 1110: */
 if (WFBACTR_u<96)
 { 
-ZFBACTR = (&A_VINDEX((*NL(HFBACTR_sidstack)),(*NL(JFBACTR_stind)))) ;
-(void)((*ZFBACTR) = ((*NL(KFBACTR_crts))+2));
+ZFBACTR = (&A_VINDEX((*A_NILCHECK(NL(HFBACTR_sidstack))),(*A_NILCHECK(NL(JFBACTR_stind))))) ;
+(void)((*A_NILCHECK(ZFBACTR)) = ((*A_NILCHECK(NL(KFBACTR_crts)))+2));
  /* line 1111: */
  /* line 1112: */
-if ((*NL(JFBACTR_stind))==(*NL(AFBACTR_upbofsidstack)))
+if ((*A_NILCHECK(NL(JFBACTR_stind)))==(*A_NILCHECK(NL(AFBACTR_upbofsidstack))))
 { 
 A_CLOSURE( BGBACTR_generator, CGBACTR_generator, DGBACTR_generator );
 (( DGBACTR_generator * ) ( BGBACTR_generator.nonlocals )) -> AFBACTR_upbofsidstack = NL(AFBACTR_upbofsidstack);
 A_CALLPROC(BGBACTR_generator,(A68_FALSE, &GGBACTR),(A68_FALSE, &GGBACTR,(BGBACTR_generator).nonlocals));
 HGBACTR_new = GGBACTR;
  /* line 1113: */
-JGBACTR = A_VTRIM(IGBACTR,(HGBACTR_new),A_VTSCRIPT(&(IGBACTR.upb),(HGBACTR_new).upb,1,(*NL(HFBACTR_sidstack)).upb)) ;
-(void)(A_VASSIGN2((*NL(HFBACTR_sidstack)),JGBACTR,A68_INT ));
+JGBACTR = A_VTRIM(IGBACTR,(HGBACTR_new),A_VTSCRIPT(&(IGBACTR.upb),(HGBACTR_new).upb,1,(*A_NILCHECK(NL(HFBACTR_sidstack))).upb)) ;
+(void)(A_VASSIGN2((*A_NILCHECK(NL(HFBACTR_sidstack))),JGBACTR,A68_INT ));
  /* line 1114: */
  /* line 1115: */
-(*NL(HFBACTR_sidstack)) = HGBACTR_new;
+(*A_NILCHECK(NL(HFBACTR_sidstack))) = HGBACTR_new;
 } 
  /* line 1116: */
-(*NL(JFBACTR_stind))+=1;
+(*A_NILCHECK(NL(JFBACTR_stind)))+=1;
  /* line 1117: */
  /* line 1118: */
-(*NL(LFBACTR_failpos)) = 0;
+(*A_NILCHECK(NL(LFBACTR_failpos))) = 0;
 } 
  /* line 1119: */
  /* line 1120: */
 KGBACTR = 8 ;
 LGBACTR = (A68_BITS )((A68_BITS )WFBACTR_u&(A68_BITS )31) ;
-(void)((*NL(KFBACTR_crts)) = ((A68_INT )A_SHL(LGBACTR,KGBACTR)+XFBACTR_v));
+(void)((*A_NILCHECK(NL(KFBACTR_crts))) = ((A68_INT )A_SHL(LGBACTR,KGBACTR)+XFBACTR_v));
 } 
 else
 { 
-if ((*NL(LFBACTR_failpos))==0)
+if ((*A_NILCHECK(NL(LFBACTR_failpos)))==0)
 { 
-(void)((*NL(LFBACTR_failpos)) = (*NL(KFBACTR_crts)));
+(void)((*A_NILCHECK(NL(LFBACTR_failpos))) = (*A_NILCHECK(NL(KFBACTR_crts))));
 } 
  /* line 1121: */
  /* line 1122: */
 if (XFBACTR_v<128)
 { 
  /* line 1123: */
-MGBACTR = ((*NL(MFBACTR_t1))==XFBACTR_v);
+MGBACTR = ((*A_NILCHECK(NL(MFBACTR_t1)))==XFBACTR_v);
 } 
 else
 { 
@@ -12297,9 +12297,9 @@ else
  /* line 1128: */
  /* line 1129: */
 NGBACTR = 3 ;
-OGBACTR = (A68_BITS )(*NL(MFBACTR_t1)) ;
+OGBACTR = (A68_BITS )(*A_NILCHECK(NL(MFBACTR_t1))) ;
 PGBACTR = (((XFBACTR_v*NL(OFBACTR_boolwds3))+(A68_INT )A_SHR(OGBACTR,NGBACTR))+NL(NFBACTR_sidbwdm)) ;
-QGBACTR = (7-(A68_INT )(A68_BITS )((A68_BITS )(*NL(MFBACTR_t1))&(A68_BITS )7)) ;
+QGBACTR = (7-(A68_INT )(A68_BITS )((A68_BITS )(*A_NILCHECK(NL(MFBACTR_t1)))&(A68_BITS )7)) ;
 MGBACTR = ((A68_BITS )((A68_BITS )(A68_INT)(unsigned char)A_VINDEX(NL(WEBACTR_sidcode),PGBACTR)&A_SHL(NQAACTR_z1,QGBACTR))!=MQAACTR_z);
 } 
 if (MGBACTR)
@@ -12313,20 +12313,20 @@ XFBACTR_v = 1;
 goto VFBACTR_action;
 } 
  /* line 1133: */
-(*NL(LFBACTR_failpos)) = 0;
+(*A_NILCHECK(NL(LFBACTR_failpos))) = 0;
  /* line 1134: */
  /* line 1135: */
 if (WFBACTR_u<224)
 { 
  /* line 1136: */
-(*NL(KFBACTR_crts))+=2;
+(*A_NILCHECK(NL(KFBACTR_crts)))+=2;
 } 
 else
 { 
  /* line 1137: */
  /* line 1138: */
-RGBACTR = (*NL(JFBACTR_stind))-=1 ;
-(void)((*NL(KFBACTR_crts)) = (*(&A_VINDEX((*NL(HFBACTR_sidstack)),RGBACTR))));
+RGBACTR = (*A_NILCHECK(NL(JFBACTR_stind)))-=1 ;
+(void)((*A_NILCHECK(NL(KFBACTR_crts))) = (*A_NILCHECK((&A_VINDEX((*A_NILCHECK(NL(HFBACTR_sidstack))),RGBACTR)))));
 } 
 } 
 else
@@ -12342,7 +12342,7 @@ goto TFBACTR_out;
  /* line 1142: */
  /* line 1143: */
  /* line 1144: */
-(void)((*NL(KFBACTR_crts))+=(WFBACTR_u+WFBACTR_u));
+(void)((*A_NILCHECK(NL(KFBACTR_crts)))+=(WFBACTR_u+WFBACTR_u));
 } 
 } 
 }
@@ -12353,13 +12353,13 @@ VFBACTR_action: A_UNUSED;
 if ((A68_INT )(A68_BITS )((A68_BITS )WFBACTR_u&(A68_BITS )63)<32)
 { 
  /* line 1149: */
-(*NL(KFBACTR_crts))+=2;
+(*A_NILCHECK(NL(KFBACTR_crts)))+=2;
 } 
 else
 { 
  /* line 1150: */
-SGBACTR = (*NL(JFBACTR_stind))-=1 ;
-(void)((*NL(KFBACTR_crts)) = (*(&A_VINDEX((*NL(HFBACTR_sidstack)),SGBACTR))));
+SGBACTR = (*A_NILCHECK(NL(JFBACTR_stind)))-=1 ;
+(void)((*A_NILCHECK(NL(KFBACTR_crts))) = (*A_NILCHECK((&A_VINDEX((*A_NILCHECK(NL(HFBACTR_sidstack))),SGBACTR)))));
 } 
  /* line 1151: */
 TFBACTR_out: A_UNUSED;
@@ -12406,8 +12406,8 @@ A_PROC_ENTRY(checkinsert);
  /* line 1157: */
  /* line 1158: */
 { 
-BHBACTR_failcrts = (*NL(LFBACTR_failpos));
-CHBACTR_failstind = (*NL(JFBACTR_stind));
+BHBACTR_failcrts = (*A_NILCHECK(NL(LFBACTR_failpos)));
+CHBACTR_failstind = (*A_NILCHECK(NL(JFBACTR_stind)));
  /* line 1159: */
 DHBACTR_symbol = T;
 GHBACTR_rstind = 1;
@@ -12444,14 +12444,14 @@ if (GHBACTR_rstind==1)
 { 
  /* line 1171: */
 THBACTR = CHBACTR_failstind-=1 ;
-SHBACTR = (*(&A_VINDEX((*NL(HFBACTR_sidstack)),THBACTR)));
+SHBACTR = (*A_NILCHECK((&A_VINDEX((*A_NILCHECK(NL(HFBACTR_sidstack))),THBACTR))));
 } 
 else
 { 
  /* line 1172: */
  /* line 1173: */
 UHBACTR = GHBACTR_rstind-=1 ;
-SHBACTR = (*(&A_VINDEX(NHBACTR_rsidstack,UHBACTR)));
+SHBACTR = (*A_NILCHECK((&A_VINDEX(NHBACTR_rsidstack,UHBACTR))));
 } 
  /* line 1174: */
 BHBACTR_failcrts = SHBACTR;
@@ -12463,7 +12463,7 @@ else
 if (EHBACTR_u<96)
 { 
 VHBACTR = (&A_VINDEX(NHBACTR_rsidstack,GHBACTR_rstind)) ;
-(void)((*VHBACTR) = (BHBACTR_failcrts+2));
+(void)((*A_NILCHECK(VHBACTR)) = (BHBACTR_failcrts+2));
  /* line 1176: */
  /* line 1177: */
 GHBACTR_rstind+=1;
@@ -12527,14 +12527,14 @@ if (GHBACTR_rstind==1)
 { 
  /* line 1195: */
 FIBACTR = CHBACTR_failstind-=1 ;
-EIBACTR = (*(&A_VINDEX((*NL(HFBACTR_sidstack)),FIBACTR)));
+EIBACTR = (*A_NILCHECK((&A_VINDEX((*A_NILCHECK(NL(HFBACTR_sidstack))),FIBACTR))));
 } 
 else
 { 
  /* line 1196: */
  /* line 1197: */
 GIBACTR = GHBACTR_rstind-=1 ;
-EIBACTR = (*(&A_VINDEX(NHBACTR_rsidstack,GIBACTR)));
+EIBACTR = (*A_NILCHECK((&A_VINDEX(NHBACTR_rsidstack,GIBACTR))));
 } 
 BHBACTR_failcrts = EIBACTR;
 } 
@@ -12547,7 +12547,7 @@ PHBACTR_readt1 = A68_TRUE;
  /* line 1201: */
  /* line 1202: */
  /* line 1203: */
-(void)(DHBACTR_symbol = (*NL(MFBACTR_t1)));
+(void)(DHBACTR_symbol = (*A_NILCHECK(NL(MFBACTR_t1))));
 } 
 } 
 } 
@@ -12597,30 +12597,30 @@ A68_VC  OJBACTR;  /* YIELD */
 A_PROC_ENTRY(faultchars);
  /* line 1296: */
 { 
-XIBACTR_i = (*NL(LSAACTR_tind));
+XIBACTR_i = (*A_NILCHECK(NL(LSAACTR_tind)));
  /* line 1297: */
 for ( ;; )
 { 
 YIBACTR = (XIBACTR_i>0);
 if ( YIBACTR )
 { /* line 1298: */
-YIBACTR = ((*(&A_VINDEX(NL(HSAACTR_textbuff),XIBACTR_i)))==' ');
+YIBACTR = ((*A_NILCHECK((&A_VINDEX(NL(HSAACTR_textbuff),XIBACTR_i))))==' ');
 }
 if ( !(YIBACTR) ) break;
 XIBACTR_i-=1;
 }
  /* line 1300: */
  /* line 1301: */
-if ((*NL(ITAACTR_supflts))==0)
+if ((*A_NILCHECK(NL(ITAACTR_supflts)))==0)
 { 
 (void)(A_CALLPROC(NL(Flt),(Mess, XIBACTR_i),(Mess, XIBACTR_i,(NL(Flt)).nonlocals)));
  /* line 1302: */
-(*NL(EEBACTR_noflts))+=12;
+(*A_NILCHECK(NL(EEBACTR_noflts)))+=12;
  /* line 1303: */
-ZIBACTR = ((*NL(EEBACTR_noflts))>180);
+ZIBACTR = ((*A_NILCHECK(NL(EEBACTR_noflts)))>180);
 if ( ZIBACTR )
 { /* line 1304: */
-ZIBACTR = ((*NL(EEBACTR_noflts))<193);
+ZIBACTR = ((*A_NILCHECK(NL(EEBACTR_noflts)))<193);
 }
  /* line 1305: */
 if (ZIBACTR)
@@ -12628,12 +12628,12 @@ if (ZIBACTR)
  /* line 1306: */
  /* line 1307: */
  /* line 1308: */
-(void)(A_CALLPROC((*NL(MBBACTR_abort1)),(101),(101,((*NL(MBBACTR_abort1))).nonlocals)));
+(void)(A_CALLPROC((*A_NILCHECK(NL(MBBACTR_abort1))),(101),(101,((*A_NILCHECK(NL(MBBACTR_abort1)))).nonlocals)));
 } 
 } 
 else
 { 
-if (*NL(GEBACTR_fulldiags))
+if (*A_NILCHECK(NL(GEBACTR_fulldiags)))
 { 
 A_CLOSURE( BJBACTR_generator, CJBACTR_generator, DJBACTR_generator );
 (( DJBACTR_generator * ) ( BJBACTR_generator.nonlocals )) -> Mess = Mess;
@@ -12677,14 +12677,14 @@ A68_INT  YJBACTR;  /* loop control */
 A_PROC_ENTRY(abort);
  /* line 1318: */
 { 
-(*NL(ITAACTR_supflts)) = 0;
+(*A_NILCHECK(NL(ITAACTR_supflts))) = 0;
  /* line 1319: */
 if (Mess>=0)
 { 
 (void)(A_CALLPROC(NL(QJBACTR_fault),(Mess),(Mess,(NL(QJBACTR_fault)).nonlocals)));
 } 
  /* line 1320: */
-(*NL(MSAACTR_textend))-=1;
+(*A_NILCHECK(NL(MSAACTR_textend)))-=1;
  /* line 1321: */
  /* line 1322: */
 for ( YJBACTR = 1;
@@ -12692,8 +12692,8 @@ YJBACTR <= 10;
 YJBACTR += 1 )
 { 
  /* line 1323: */
-if ( !((*NL(SIBACTR_moreinput))) ) break;
-(void)((*NL(SIBACTR_moreinput)) = A_CALLPROC(NL(Input),(NL(LBBACTR_textbuff1), NL(MSAACTR_textend)),(NL(LBBACTR_textbuff1), NL(MSAACTR_textend),(NL(Input)).nonlocals)));
+if ( !((*A_NILCHECK(NL(SIBACTR_moreinput)))) ) break;
+(void)((*A_NILCHECK(NL(SIBACTR_moreinput))) = A_CALLPROC(NL(Input),(NL(LBBACTR_textbuff1), NL(MSAACTR_textend)),(NL(LBBACTR_textbuff1), NL(MSAACTR_textend),(NL(Input)).nonlocals)));
 }
  /* line 1324: */
  /* line 1325: */
@@ -12830,13 +12830,13 @@ MKBACTR_strop = 0;
  /* line 1355: */
 DKBACTR_l: A_UNUSED;
  /* line 1356: */
-YKBACTR = (*NL(LSAACTR_tind))+=1 ;
-(void)(GKBACTR_c = (*(&A_VINDEX(NL(HSAACTR_textbuff),YKBACTR))));
+YKBACTR = (*A_NILCHECK(NL(LSAACTR_tind)))+=1 ;
+(void)(GKBACTR_c = (*A_NILCHECK((&A_VINDEX(NL(HSAACTR_textbuff),YKBACTR)))));
  /* line 1357: */
  /* line 1361: */
  /* line 1364: */
 ALBACTR = (A68_INT)(unsigned char)GKBACTR_c ;
-ZKBACTR = EKBACTR_type = (*(&((&A_R1INDEX(NL(Charset),ALBACTR))->Type)));
+ZKBACTR = EKBACTR_type = (*A_NILCHECK((&(A_NILCHECK((&A_R1INDEX(NL(Charset),ALBACTR)))->Type))));
 switch ( ZKBACTR )
 { 
 case 1: 
@@ -12850,7 +12850,7 @@ goto DKBACTR_l;
 break;
 case 2: 
  /* line 1371: */
-if ((*NL(LSAACTR_tind))==(*NL(MSAACTR_textend)))
+if ((*A_NILCHECK(NL(LSAACTR_tind)))==(*A_NILCHECK(NL(MSAACTR_textend))))
 { 
  /* line 1372: */
 JKBACTR_ans = CCBACTR_rcnewline;
@@ -12864,36 +12864,36 @@ goto DKBACTR_l;
 break;
 case 3: 
 { 
-(*NL(SSAACTR_idsize)) = 0;
+(*A_NILCHECK(NL(SSAACTR_idsize))) = 0;
  /* line 1377: */
-(*NL(TSAACTR_idhash)) = 0;
+(*A_NILCHECK(NL(TSAACTR_idhash))) = 0;
  /* line 1378: */
-(void)((*NL(PSAACTR_ident)) = NL(XTAACTR_spaces));
+(void)((*A_NILCHECK(NL(PSAACTR_ident))) = NL(XTAACTR_spaces));
  /* line 1380: */
 CLBACTR_l1: A_UNUSED;
  /* line 1381: */
-if ((*NL(SSAACTR_idsize))!=VDAACTR_maxid)
+if ((*A_NILCHECK(NL(SSAACTR_idsize)))!=VDAACTR_maxid)
 { 
 GLBACTR = A_ISVEC(FLBACTR,NL(PSAACTR_ident),32,A68_CHAR ) ;
-HLBACTR = (*NL(SSAACTR_idsize))+=1 ;
+HLBACTR = (*A_NILCHECK(NL(SSAACTR_idsize)))+=1 ;
 ILBACTR = (&A_VINDEX(GLBACTR,HLBACTR)) ;
-(*ILBACTR) = GKBACTR_c;
+(*A_NILCHECK(ILBACTR)) = GKBACTR_c;
  /* line 1382: */
  /* line 1383: */
-(*NL(TSAACTR_idhash))+=(A68_INT)(unsigned char)GKBACTR_c;
+(*A_NILCHECK(NL(TSAACTR_idhash)))+=(A68_INT)(unsigned char)GKBACTR_c;
 } 
  /* line 1385: */
 ELBACTR_l2: A_UNUSED;
-JLBACTR = (*NL(LSAACTR_tind))+=1 ;
-(void)(GKBACTR_c = (*(&A_VINDEX(NL(HSAACTR_textbuff),JLBACTR))));
+JLBACTR = (*A_NILCHECK(NL(LSAACTR_tind)))+=1 ;
+(void)(GKBACTR_c = (*A_NILCHECK((&A_VINDEX(NL(HSAACTR_textbuff),JLBACTR)))));
  /* line 1386: */
 KLBACTR = (A68_INT)(unsigned char)GKBACTR_c ;
-(void)(EKBACTR_type = (*(&((&A_R1INDEX(NL(Charset),KLBACTR))->Type))));
+(void)(EKBACTR_type = (*A_NILCHECK((&(A_NILCHECK((&A_R1INDEX(NL(Charset),KLBACTR)))->Type)))));
  /* line 1387: */
 LLBACTR = (EKBACTR_type==OKBACTR_space);
 if ( LLBACTR )
 { /* line 1388: */
-LLBACTR = ((*NL(LSAACTR_tind))!=(*NL(MSAACTR_textend)));
+LLBACTR = ((*A_NILCHECK(NL(LSAACTR_tind)))!=(*A_NILCHECK(NL(MSAACTR_textend))));
 }
 if (LLBACTR)
 { 
@@ -12914,35 +12914,35 @@ goto CLBACTR_l1;
 } 
 } 
  /* line 1392: */
-(*NL(LSAACTR_tind))-=1;
+(*A_NILCHECK(NL(LSAACTR_tind)))-=1;
  /* line 1393: */
 JKBACTR_ans = DCBACTR_rcident;
  /* line 1394: */
  /* line 1395: */
  /* line 1398: */
-(void)((*NL(TSAACTR_idhash)) = ((A68_INT )(A68_BITS )((A68_BITS )(*NL(TSAACTR_idhash))&(A68_BITS )63)+1));
+(void)((*A_NILCHECK(NL(TSAACTR_idhash))) = ((A68_INT )(A68_BITS )((A68_BITS )(*A_NILCHECK(NL(TSAACTR_idhash)))&(A68_BITS )63)+1));
 } 
 break;
 case 4: 
 { 
-if (*NL(ZRAACTR_isint))
+if (*A_NILCHECK(NL(ZRAACTR_isint)))
 { 
-(*NL(ETAACTR_stringsize)) = 0;
+(*A_NILCHECK(NL(ETAACTR_stringsize))) = 0;
 } 
  /* line 1399: */
-(void)(LKBACTR_origsize = (*NL(ETAACTR_stringsize)));
+(void)(LKBACTR_origsize = (*A_NILCHECK(NL(ETAACTR_stringsize))));
  /* line 1400: */
 OLBACTR_l1: A_UNUSED;
-(*NL(HTAACTR_iv)) = 0;
+(*A_NILCHECK(NL(HTAACTR_iv))) = 0;
  /* line 1401: */
  /* line 1402: */
-RLBACTR = (*NL(ZRAACTR_isint));
+RLBACTR = (*A_NILCHECK(NL(ZRAACTR_isint)));
 if ( RLBACTR )
 { /* line 1403: */
-TLBACTR = (*NL(ETAACTR_stringsize))+=1 ;
+TLBACTR = (*A_NILCHECK(NL(ETAACTR_stringsize)))+=1 ;
 VLBACTR = ULBACTR ;
 WLBACTR = (&A_VINDEX(NL(ATAACTR_string),TLBACTR)) ;
-RLBACTR = (((*WLBACTR) = A_VINDEX(VLBACTR,KKBACTR_radix))=='0');
+RLBACTR = (((*A_NILCHECK(WLBACTR)) = A_VINDEX(VLBACTR,KKBACTR_radix))=='0');
 }
 if (RLBACTR)
 { 
@@ -12954,7 +12954,7 @@ for ( ;; )
 { 
  /* line 1408: */
 XLBACTR = (A68_INT)(unsigned char)GKBACTR_c ;
-(void)(FKBACTR_value = (*(&((&A_R1INDEX(NL(Charset),XLBACTR))->Value))));
+(void)(FKBACTR_value = (*A_NILCHECK((&(A_NILCHECK((&A_R1INDEX(NL(Charset),XLBACTR)))->Value)))));
  /* line 1409: */
 YLBACTR = (FKBACTR_value<KKBACTR_radix);
 if ( YLBACTR )
@@ -12964,16 +12964,16 @@ YLBACTR = (FKBACTR_value>=0);
  /* line 1411: */
 if (YLBACTR)
 { 
-ZLBACTR = (*NL(ETAACTR_stringsize))+=1 ;
+ZLBACTR = (*A_NILCHECK(NL(ETAACTR_stringsize)))+=1 ;
 AMBACTR = (&A_VINDEX(NL(ATAACTR_string),ZLBACTR)) ;
-(*AMBACTR) = GKBACTR_c;
+(*A_NILCHECK(AMBACTR)) = GKBACTR_c;
  /* line 1412: */
  /* line 1413: */
-if ((*NL(HTAACTR_iv))<=YDAACTR_maxistruct)
+if ((*A_NILCHECK(NL(HTAACTR_iv)))<=YDAACTR_maxistruct)
 { 
  /* line 1414: */
  /* line 1415: */
-(void)((*NL(HTAACTR_iv)) = (((*NL(HTAACTR_iv))*KKBACTR_radix)+FKBACTR_value));
+(void)((*A_NILCHECK(NL(HTAACTR_iv))) = (((*A_NILCHECK(NL(HTAACTR_iv)))*KKBACTR_radix)+FKBACTR_value));
 } 
 } 
 else
@@ -12982,7 +12982,7 @@ else
 BMBACTR = (FKBACTR_value!=37);
 if ( ! BMBACTR )
 { /* line 1417: */
-BMBACTR = ((*NL(LSAACTR_tind))==(*NL(MSAACTR_textend)));
+BMBACTR = ((*A_NILCHECK(NL(LSAACTR_tind)))==(*A_NILCHECK(NL(MSAACTR_textend))));
 }
 if (BMBACTR)
 { 
@@ -12992,8 +12992,8 @@ goto QLBACTR_out;
 } 
  /* line 1420: */
  /* line 1421: */
-CMBACTR = (*NL(LSAACTR_tind))+=1 ;
-(void)(GKBACTR_c = (*(&A_VINDEX(NL(HSAACTR_textbuff),CMBACTR))));
+CMBACTR = (*A_NILCHECK(NL(LSAACTR_tind)))+=1 ;
+(void)(GKBACTR_c = (*A_NILCHECK((&A_VINDEX(NL(HSAACTR_textbuff),CMBACTR)))));
 }
  /* line 1423: */
 QLBACTR_out: A_UNUSED;
@@ -13004,37 +13004,37 @@ if ( DMBACTR )
 }
 if (DMBACTR)
 { 
-EMBACTR = ((*NL(HTAACTR_iv))>16);
+EMBACTR = ((*A_NILCHECK(NL(HTAACTR_iv)))>16);
 if ( ! EMBACTR )
 { /* line 1425: */
-EMBACTR = ((*NL(HTAACTR_iv))<2);
+EMBACTR = ((*A_NILCHECK(NL(HTAACTR_iv)))<2);
 }
 if (EMBACTR)
 { 
-(*NL(HTAACTR_iv)) = 16;
+(*A_NILCHECK(NL(HTAACTR_iv))) = 16;
  /* line 1426: */
  /* line 1428: */
 (void)(A_CALLPROC(NL(QJBACTR_fault),(103),(103,(NL(QJBACTR_fault)).nonlocals)));
 } 
  /* line 1429: */
-(*NL(ETAACTR_stringsize)) = LKBACTR_origsize;
+(*A_NILCHECK(NL(ETAACTR_stringsize))) = LKBACTR_origsize;
  /* line 1430: */
 HKBACTR_radixgiven = A68_TRUE;
  /* line 1431: */
-(void)(KKBACTR_radix = (*NL(HTAACTR_iv)));
+(void)(KKBACTR_radix = (*A_NILCHECK(NL(HTAACTR_iv))));
  /* line 1433: */
 for ( ;; )
 { 
  /* line 1434: */
-FMBACTR = (*NL(LSAACTR_tind))+=1 ;
-(void)(GKBACTR_c = (*(&A_VINDEX(NL(HSAACTR_textbuff),FMBACTR))));
+FMBACTR = (*A_NILCHECK(NL(LSAACTR_tind)))+=1 ;
+(void)(GKBACTR_c = (*A_NILCHECK((&A_VINDEX(NL(HSAACTR_textbuff),FMBACTR)))));
  /* line 1435: */
  /* line 1436: */
 HMBACTR = (A68_INT)(unsigned char)GKBACTR_c ;
-GMBACTR = ((*(&((&A_R1INDEX(NL(Charset),HMBACTR))->Value)))==37);
+GMBACTR = ((*A_NILCHECK((&(A_NILCHECK((&A_R1INDEX(NL(Charset),HMBACTR)))->Value))))==37);
 if ( !GMBACTR ) break;
  /* line 1437: */
-if ((*NL(LSAACTR_tind))==(*NL(MSAACTR_textend)))
+if ((*A_NILCHECK(NL(LSAACTR_tind)))==(*A_NILCHECK(NL(MSAACTR_textend))))
 { 
  /* line 1438: */
  /* line 1439: */
@@ -13045,47 +13045,47 @@ goto QLBACTR_out;
  /* line 1442: */
  /* line 1443: */
 IMBACTR = (A68_INT)(unsigned char)GKBACTR_c ;
-if ((*(&((&A_R1INDEX(NL(Charset),IMBACTR))->Type)))!=RKBACTR_stringquote)
+if ((*A_NILCHECK((&(A_NILCHECK((&A_R1INDEX(NL(Charset),IMBACTR)))->Type))))!=RKBACTR_stringquote)
 { 
  /* line 1444: */
 goto OLBACTR_l1;
 } 
 else
 { 
-(*NL(FTAACTR_noofchars)) = 1;
+(*A_NILCHECK(NL(FTAACTR_noofchars))) = 1;
  /* line 1445: */
 IKBACTR_lastspace = A68_TRUE;
  /* line 1446: */
 for ( ;; )
 { 
  /* line 1447: */
-LMBACTR = (*NL(LSAACTR_tind))+=1 ;
-(void)(GKBACTR_c = (*(&A_VINDEX(NL(HSAACTR_textbuff),LMBACTR))));
+LMBACTR = (*A_NILCHECK(NL(LSAACTR_tind)))+=1 ;
+(void)(GKBACTR_c = (*A_NILCHECK((&A_VINDEX(NL(HSAACTR_textbuff),LMBACTR)))));
  /* line 1448: */
 MMBACTR = (A68_INT)(unsigned char)GKBACTR_c ;
-(void)(FKBACTR_value = (*(&((&A_R1INDEX(NL(Charset),MMBACTR))->Value))));
+(void)(FKBACTR_value = (*A_NILCHECK((&(A_NILCHECK((&A_R1INDEX(NL(Charset),MMBACTR)))->Value)))));
  /* line 1449: */
  /* line 1450: */
  /* line 1451: */
 OMBACTR = (A68_INT)(unsigned char)GKBACTR_c ;
-NMBACTR = ((*(&((&A_R1INDEX(NL(Charset),OMBACTR))->Type)))!=RKBACTR_stringquote);
+NMBACTR = ((*A_NILCHECK((&(A_NILCHECK((&A_R1INDEX(NL(Charset),OMBACTR)))->Type))))!=RKBACTR_stringquote);
 if ( !NMBACTR ) break;
-PMBACTR = (*NL(ETAACTR_stringsize))+=1 ;
+PMBACTR = (*A_NILCHECK(NL(ETAACTR_stringsize)))+=1 ;
 QMBACTR = (&A_VINDEX(NL(ATAACTR_string),PMBACTR)) ;
-(*QMBACTR) = GKBACTR_c;
+(*A_NILCHECK(QMBACTR)) = GKBACTR_c;
  /* line 1452: */
  /* line 1453: */
 if (FKBACTR_value==37)
 { 
  /* line 1454: */
  /* line 1455: */
-if ((*NL(LSAACTR_tind))==(*NL(MSAACTR_textend)))
+if ((*A_NILCHECK(NL(LSAACTR_tind)))==(*A_NILCHECK(NL(MSAACTR_textend))))
 { 
 (void)(A_CALLPROC(NL(QJBACTR_fault),(104),(104,(NL(QJBACTR_fault)).nonlocals)));
  /* line 1456: */
-(*NL(ITAACTR_supflts)) = FEBACTR_fltgap;
+(*A_NILCHECK(NL(ITAACTR_supflts))) = FEBACTR_fltgap;
  /* line 1457: */
-(*NL(LSAACTR_tind))-=1;
+(*A_NILCHECK(NL(LSAACTR_tind)))-=1;
  /* line 1458: */
  /* line 1459: */
  /* line 1460: */
@@ -13096,11 +13096,11 @@ else
 if (IKBACTR_lastspace)
 { 
  /* line 1461: */
-(*NL(ETAACTR_stringsize))-=1;
+(*A_NILCHECK(NL(ETAACTR_stringsize)))-=1;
 } 
 else
 { 
-(*NL(FTAACTR_noofchars))+=1;
+(*A_NILCHECK(NL(FTAACTR_noofchars)))+=1;
  /* line 1462: */
  /* line 1463: */
  /* line 1464: */
@@ -13134,23 +13134,23 @@ KMBACTR_end: A_UNUSED;
 SMBACTR = IKBACTR_lastspace;
 if ( ! SMBACTR )
 { /* line 1472: */
-SMBACTR = ((*NL(ETAACTR_stringsize))==0);
+SMBACTR = ((*A_NILCHECK(NL(ETAACTR_stringsize)))==0);
 }
 if (SMBACTR)
 { 
  /* line 1473: */
-(*NL(FTAACTR_noofchars))-=1;
+(*A_NILCHECK(NL(FTAACTR_noofchars)))-=1;
 } 
  /* line 1474: */
 TMBACTR = IKBACTR_lastspace;
 if ( TMBACTR )
 { /* line 1475: */
-TMBACTR = ((*NL(ETAACTR_stringsize))!=0);
+TMBACTR = ((*A_NILCHECK(NL(ETAACTR_stringsize)))!=0);
 }
 if (TMBACTR)
 { 
  /* line 1476: */
-(*NL(ETAACTR_stringsize))-=1;
+(*A_NILCHECK(NL(ETAACTR_stringsize)))-=1;
 } 
  /* line 1477: */
 HKBACTR_radixgiven = A68_FALSE;
@@ -13159,7 +13159,7 @@ JKBACTR_ans = LCBACTR_stringtok;
  /* line 1479: */
  /* line 1480: */
  /* line 1481: */
-(*NL(GTAACTR_stringbase)) = KKBACTR_radix;
+(*A_NILCHECK(NL(GTAACTR_stringbase))) = KKBACTR_radix;
 } 
 } 
 else
@@ -13172,7 +13172,7 @@ JKBACTR_ans = ECBACTR_rcintexp;
 } 
 else
 { 
-(*NL(LSAACTR_tind))-=1;
+(*A_NILCHECK(NL(LSAACTR_tind)))-=1;
  /* line 1484: */
  /* line 1485: */
  /* line 1486: */
@@ -13193,7 +13193,7 @@ JKBACTR_ans = UMBACTR;
 VMBACTR = HKBACTR_radixgiven;
 if ( VMBACTR )
 { /* line 1491: */
-VMBACTR = ((*NL(ETAACTR_stringsize))<=(LKBACTR_origsize+1));
+VMBACTR = ((*A_NILCHECK(NL(ETAACTR_stringsize)))<=(LKBACTR_origsize+1));
 }
 if (VMBACTR)
 { 
@@ -13202,22 +13202,22 @@ if (VMBACTR)
  /* line 1494: */
  /* line 1495: */
  /* line 1498: */
-(*NL(ITAACTR_supflts)) = FEBACTR_fltgap;
+(*A_NILCHECK(NL(ITAACTR_supflts))) = FEBACTR_fltgap;
 } 
 } 
 break;
 case 5: 
 { 
-(*NL(ETAACTR_stringsize)) = 0;
+(*A_NILCHECK(NL(ETAACTR_stringsize))) = 0;
  /* line 1500: */
 for ( ;; )
 { 
  /* line 1501: */
-if ((*NL(LSAACTR_tind))==(*NL(MSAACTR_textend)))
+if ((*A_NILCHECK(NL(LSAACTR_tind)))==(*A_NILCHECK(NL(MSAACTR_textend))))
 { 
 (void)(A_CALLPROC(NL(QJBACTR_fault),(104),(104,(NL(QJBACTR_fault)).nonlocals)));
  /* line 1503: */
-(*NL(ITAACTR_supflts)) = FEBACTR_fltgap;
+(*A_NILCHECK(NL(ITAACTR_supflts))) = FEBACTR_fltgap;
  /* line 1504: */
  /* line 1505: */
  /* line 1506: */
@@ -13225,21 +13225,21 @@ YMBACTR = A68_FALSE;
 } 
 else
 { 
-ZMBACTR = (*NL(LSAACTR_tind))+=1 ;
-(void)(GKBACTR_c = (*(&A_VINDEX(NL(HSAACTR_textbuff),ZMBACTR))));
+ZMBACTR = (*A_NILCHECK(NL(LSAACTR_tind)))+=1 ;
+(void)(GKBACTR_c = (*A_NILCHECK((&A_VINDEX(NL(HSAACTR_textbuff),ZMBACTR)))));
  /* line 1507: */
  /* line 1508: */
 ANBACTR = (A68_INT)(unsigned char)GKBACTR_c ;
-BNBACTR = ((*(&((&A_R1INDEX(NL(Charset),ANBACTR))->Type)))!=RKBACTR_stringquote);
+BNBACTR = ((*A_NILCHECK((&(A_NILCHECK((&A_R1INDEX(NL(Charset),ANBACTR)))->Type))))!=RKBACTR_stringquote);
 if ( ! BNBACTR )
 {{ 
-CNBACTR = (*NL(LSAACTR_tind))+=1 ;
-(void)(GKBACTR_c = (*(&A_VINDEX(NL(HSAACTR_textbuff),CNBACTR))));
+CNBACTR = (*A_NILCHECK(NL(LSAACTR_tind)))+=1 ;
+(void)(GKBACTR_c = (*A_NILCHECK((&A_VINDEX(NL(HSAACTR_textbuff),CNBACTR)))));
  /* line 1509: */
  /* line 1510: */
  /* line 1511: */
 ENBACTR = (A68_INT)(unsigned char)GKBACTR_c ;
-DNBACTR = ((*(&((&A_R1INDEX(NL(Charset),ENBACTR))->Type)))==RKBACTR_stringquote);
+DNBACTR = ((*A_NILCHECK((&(A_NILCHECK((&A_R1INDEX(NL(Charset),ENBACTR)))->Type))))==RKBACTR_stringquote);
 } 
 BNBACTR = DNBACTR;
 }
@@ -13250,17 +13250,17 @@ YMBACTR = BNBACTR;
 FNBACTR = YMBACTR;
 if ( !FNBACTR ) break;
  /* line 1514: */
-GNBACTR = (*NL(ETAACTR_stringsize))+=1 ;
+GNBACTR = (*A_NILCHECK(NL(ETAACTR_stringsize)))+=1 ;
 HNBACTR = (&A_VINDEX(NL(ATAACTR_string),GNBACTR)) ;
-(*HNBACTR) = GKBACTR_c;
+(*A_NILCHECK(HNBACTR)) = GKBACTR_c;
 }
  /* line 1516: */
 XMBACTR_out: A_UNUSED;
-(*NL(LSAACTR_tind))-=1;
+(*A_NILCHECK(NL(LSAACTR_tind)))-=1;
  /* line 1517: */
-(*NL(GTAACTR_stringbase)) = 0;
+(*A_NILCHECK(NL(GTAACTR_stringbase))) = 0;
  /* line 1518: */
-(void)((*NL(FTAACTR_noofchars)) = (*NL(ETAACTR_stringsize)));
+(void)((*A_NILCHECK(NL(FTAACTR_noofchars))) = (*A_NILCHECK(NL(ETAACTR_stringsize))));
  /* line 1519: */
  /* line 1520: */
  /* line 1524: */
@@ -13269,11 +13269,11 @@ JKBACTR_ans = LCBACTR_stringtok;
 break;
 case 6: 
 { 
-(*NL(QSAACTR_compsize)) = (*NL(RSAACTR_comphash)) = 0;
+(*A_NILCHECK(NL(QSAACTR_compsize))) = (*A_NILCHECK(NL(RSAACTR_comphash))) = 0;
  /* line 1525: */
-(void)((*NL(OSAACTR_compsymb)) = NL(XTAACTR_spaces));
+(void)((*A_NILCHECK(NL(OSAACTR_compsymb))) = NL(XTAACTR_spaces));
  /* line 1526: */
-(*NL(BUAACTR_typechar1)) = ASAACTR_bold;
+(*A_NILCHECK(NL(BUAACTR_typechar1))) = ASAACTR_bold;
  /* line 1528: */
 for ( ;; )
 { 
@@ -13284,7 +13284,7 @@ INBACTR = (EKBACTR_type==QKBACTR_digit);
 }
 if ( !(INBACTR) ) break;
  /* line 1530: */
-if ((*NL(QSAACTR_compsize))!=VDAACTR_maxid)
+if ((*A_NILCHECK(NL(QSAACTR_compsize)))!=VDAACTR_maxid)
 { 
  /* line 1531: */
 if (EKBACTR_type==ASAACTR_bold)
@@ -13292,7 +13292,7 @@ if (EKBACTR_type==ASAACTR_bold)
  /* line 1532: */
  /* line 1533: */
 KNBACTR = (A68_INT)(unsigned char)GKBACTR_c ;
-JNBACTR = ((-1)-(*(&((&A_R1INDEX(NL(Charset),KNBACTR))->Value))));
+JNBACTR = ((-1)-(*A_NILCHECK((&(A_NILCHECK((&A_R1INDEX(NL(Charset),KNBACTR)))->Value)))));
 } 
 else
 { 
@@ -13300,31 +13300,31 @@ JNBACTR = (A68_INT)(unsigned char)GKBACTR_c;
 } 
 JKBACTR_ans = JNBACTR;
  /* line 1534: */
-(*NL(RSAACTR_comphash))+=JKBACTR_ans;
+(*A_NILCHECK(NL(RSAACTR_comphash)))+=JKBACTR_ans;
  /* line 1535: */
  /* line 1536: */
 MNBACTR = A_ISVEC(LNBACTR,NL(OSAACTR_compsymb),32,A68_CHAR ) ;
-NNBACTR = (*NL(QSAACTR_compsize))+=1 ;
+NNBACTR = (*A_NILCHECK(NL(QSAACTR_compsize)))+=1 ;
 ONBACTR = (&A_VINDEX(MNBACTR,NNBACTR)) ;
-(*ONBACTR) = (A68_SSBITS)JKBACTR_ans;
+(*A_NILCHECK(ONBACTR)) = (A68_SSBITS)JKBACTR_ans;
 } 
  /* line 1537: */
-PNBACTR = (*NL(LSAACTR_tind))+=1 ;
-(void)(GKBACTR_c = (*(&A_VINDEX(NL(HSAACTR_textbuff),PNBACTR))));
+PNBACTR = (*A_NILCHECK(NL(LSAACTR_tind)))+=1 ;
+(void)(GKBACTR_c = (*A_NILCHECK((&A_VINDEX(NL(HSAACTR_textbuff),PNBACTR)))));
  /* line 1538: */
  /* line 1539: */
 QNBACTR = (A68_INT)(unsigned char)GKBACTR_c ;
-(void)(EKBACTR_type = (*(&((&A_R1INDEX(NL(Charset),QNBACTR))->Type))));
+(void)(EKBACTR_type = (*A_NILCHECK((&(A_NILCHECK((&A_R1INDEX(NL(Charset),QNBACTR)))->Type)))));
 }
  /* line 1541: */
-(void)((*NL(RSAACTR_comphash)) = ((A68_INT )(A68_BITS )((A68_BITS )(*NL(RSAACTR_comphash))&(A68_BITS )63)+1));
+(void)((*A_NILCHECK(NL(RSAACTR_comphash))) = ((A68_INT )(A68_BITS )((A68_BITS )(*A_NILCHECK(NL(RSAACTR_comphash)))&(A68_BITS )63)+1));
  /* line 1543: */
 SNBACTR = A_ISVEC(RNBACTR,NL(OSAACTR_compsymb),32,A68_CHAR ) ;
-(void)(JKBACTR_ans = A_CALLPROC(NL(Lookup),(A_VTRIM(TNBACTR,(SNBACTR),A_VTSCRIPT(&(TNBACTR.upb),(SNBACTR).upb,1,(*NL(QSAACTR_compsize)))), A68_TRUE),(A_VTRIM(TNBACTR,(SNBACTR),A_VTSCRIPT(&(TNBACTR.upb),(SNBACTR).upb,1,(*NL(QSAACTR_compsize)))), A68_TRUE,(NL(Lookup)).nonlocals)));
+(void)(JKBACTR_ans = A_CALLPROC(NL(Lookup),(A_VTRIM(TNBACTR,(SNBACTR),A_VTSCRIPT(&(TNBACTR.upb),(SNBACTR).upb,1,(*A_NILCHECK(NL(QSAACTR_compsize))))), A68_TRUE),(A_VTRIM(TNBACTR,(SNBACTR),A_VTSCRIPT(&(TNBACTR.upb),(SNBACTR).upb,1,(*A_NILCHECK(NL(QSAACTR_compsize))))), A68_TRUE,(NL(Lookup)).nonlocals)));
  /* line 1544: */
  /* line 1545: */
  /* line 1548: */
-(*NL(LSAACTR_tind))-=1;
+(*A_NILCHECK(NL(LSAACTR_tind)))-=1;
 } 
 break;
 case 7: 
@@ -13337,23 +13337,23 @@ case 8:
 MKBACTR_strop = 2;
 break;
 default: 
-(*NL(QSAACTR_compsize)) = (*NL(RSAACTR_comphash)) = 0;
+(*A_NILCHECK(NL(QSAACTR_compsize))) = (*A_NILCHECK(NL(RSAACTR_comphash))) = 0;
  /* line 1557: */
-(void)((*NL(OSAACTR_compsymb)) = NL(XTAACTR_spaces));
+(void)((*A_NILCHECK(NL(OSAACTR_compsymb))) = NL(XTAACTR_spaces));
  /* line 1558: */
-(*NL(BUAACTR_typechar1)) = EKBACTR_type;
+(*A_NILCHECK(NL(BUAACTR_typechar1))) = EKBACTR_type;
  /* line 1559: */
 VNBACTR_l1: A_UNUSED;
  /* line 1560: */
-if ((*NL(QSAACTR_compsize))!=VDAACTR_maxid)
+if ((*A_NILCHECK(NL(QSAACTR_compsize)))!=VDAACTR_maxid)
 { 
 XNBACTR = A_ISVEC(WNBACTR,NL(OSAACTR_compsymb),32,A68_CHAR ) ;
-YNBACTR = (*NL(QSAACTR_compsize))+=1 ;
+YNBACTR = (*A_NILCHECK(NL(QSAACTR_compsize)))+=1 ;
 ZNBACTR = (&A_VINDEX(XNBACTR,YNBACTR)) ;
-(*ZNBACTR) = GKBACTR_c;
+(*A_NILCHECK(ZNBACTR)) = GKBACTR_c;
  /* line 1561: */
  /* line 1562: */
-(*NL(RSAACTR_comphash))+=(A68_INT)(unsigned char)GKBACTR_c;
+(*A_NILCHECK(NL(RSAACTR_comphash)))+=(A68_INT)(unsigned char)GKBACTR_c;
 } 
  /* line 1564: */
 AOBACTR = (EKBACTR_type!=XKBACTR_compterm);
@@ -13363,11 +13363,11 @@ AOBACTR = (EKBACTR_type!=UKBACTR_simple);
 }
 if (AOBACTR)
 { 
-BOBACTR = (*NL(LSAACTR_tind))+=1 ;
-(void)(GKBACTR_c = (*(&A_VINDEX(NL(HSAACTR_textbuff),BOBACTR))));
+BOBACTR = (*A_NILCHECK(NL(LSAACTR_tind)))+=1 ;
+(void)(GKBACTR_c = (*A_NILCHECK((&A_VINDEX(NL(HSAACTR_textbuff),BOBACTR)))));
  /* line 1566: */
 COBACTR = (A68_INT)(unsigned char)GKBACTR_c ;
-(void)(EKBACTR_type = (*(&((&A_R1INDEX(NL(Charset),COBACTR))->Type))));
+(void)(EKBACTR_type = (*A_NILCHECK((&(A_NILCHECK((&A_R1INDEX(NL(Charset),COBACTR)))->Type)))));
  /* line 1567: */
 DOBACTR = (EKBACTR_type==WKBACTR_compound);
 if ( ! DOBACTR )
@@ -13383,27 +13383,27 @@ else
 { 
  /* line 1570: */
  /* line 1571: */
-(*NL(LSAACTR_tind))-=1;
+(*A_NILCHECK(NL(LSAACTR_tind)))-=1;
 } 
 } 
  /* line 1572: */
-(void)((*NL(RSAACTR_comphash)) = ((A68_INT )(A68_BITS )((A68_BITS )(*NL(RSAACTR_comphash))&(A68_BITS )63)+1));
+(void)((*A_NILCHECK(NL(RSAACTR_comphash))) = ((A68_INT )(A68_BITS )((A68_BITS )(*A_NILCHECK(NL(RSAACTR_comphash)))&(A68_BITS )63)+1));
  /* line 1574: */
  /* line 1575: */
-EOBACTR = ((*NL(QSAACTR_compsize))!=1);
+EOBACTR = ((*A_NILCHECK(NL(QSAACTR_compsize)))!=1);
 if ( ! EOBACTR )
 { /* line 1576: */
 GOBACTR = A_ISVEC(FOBACTR,NL(OSAACTR_compsymb),32,A68_CHAR ) ;
 HOBACTR = 1 ;
-IOBACTR = (A68_INT)(unsigned char)(*(&A_VINDEX(GOBACTR,HOBACTR))) ;
-EOBACTR = ((JKBACTR_ans = (*(&((&A_R1INDEX(NL(Charset),IOBACTR))->Value))))==FDBACTR_calllookup);
+IOBACTR = (A68_INT)(unsigned char)(*A_NILCHECK((&A_VINDEX(GOBACTR,HOBACTR)))) ;
+EOBACTR = ((JKBACTR_ans = (*A_NILCHECK((&(A_NILCHECK((&A_R1INDEX(NL(Charset),IOBACTR)))->Value)))))==FDBACTR_calllookup);
 }
 if (EOBACTR)
 { 
  /* line 1577: */
  /* line 1578: */
 KOBACTR = A_ISVEC(JOBACTR,NL(OSAACTR_compsymb),32,A68_CHAR ) ;
-(void)(JKBACTR_ans = A_CALLPROC(NL(Lookup),(A_VTRIM(LOBACTR,(KOBACTR),A_VTSCRIPT(&(LOBACTR.upb),(KOBACTR).upb,1,(*NL(QSAACTR_compsize)))), A68_FALSE),(A_VTRIM(LOBACTR,(KOBACTR),A_VTSCRIPT(&(LOBACTR.upb),(KOBACTR).upb,1,(*NL(QSAACTR_compsize)))), A68_FALSE,(NL(Lookup)).nonlocals)));
+(void)(JKBACTR_ans = A_CALLPROC(NL(Lookup),(A_VTRIM(LOBACTR,(KOBACTR),A_VTSCRIPT(&(LOBACTR.upb),(KOBACTR).upb,1,(*A_NILCHECK(NL(QSAACTR_compsize))))), A68_FALSE),(A_VTRIM(LOBACTR,(KOBACTR),A_VTSCRIPT(&(LOBACTR.upb),(KOBACTR).upb,1,(*A_NILCHECK(NL(QSAACTR_compsize))))), A68_FALSE,(NL(Lookup)).nonlocals)));
 } 
 break;
 } 
@@ -13413,31 +13413,31 @@ break;
 if (MKBACTR_strop!=0)
 { 
 MOBACTR = (A68_INT)(unsigned char)GKBACTR_c ;
-(void)(JKBACTR_ans = (*(&((&A_R1INDEX(NL(Charset),MOBACTR))->Value))));
+(void)(JKBACTR_ans = (*A_NILCHECK((&(A_NILCHECK((&A_R1INDEX(NL(Charset),MOBACTR)))->Value)))));
  /* line 1583: */
-NOBACTR = (*NL(LSAACTR_tind))+=1 ;
-(void)(GKBACTR_c = (*(&A_VINDEX(NL(HSAACTR_textbuff),NOBACTR))));
+NOBACTR = (*A_NILCHECK(NL(LSAACTR_tind)))+=1 ;
+(void)(GKBACTR_c = (*A_NILCHECK((&A_VINDEX(NL(HSAACTR_textbuff),NOBACTR)))));
  /* line 1584: */
 OOBACTR = (A68_INT)(unsigned char)GKBACTR_c ;
-(void)(EKBACTR_type = (*(&((&A_R1INDEX(NL(Charset),OOBACTR))->Type))));
+(void)(EKBACTR_type = (*A_NILCHECK((&(A_NILCHECK((&A_R1INDEX(NL(Charset),OOBACTR)))->Type)))));
  /* line 1585: */
 POBACTR = (A68_INT)(unsigned char)GKBACTR_c ;
-(void)(FKBACTR_value = (*(&((&A_R1INDEX(NL(Charset),POBACTR))->Value))));
+(void)(FKBACTR_value = (*A_NILCHECK((&(A_NILCHECK((&A_R1INDEX(NL(Charset),POBACTR)))->Value)))));
  /* line 1587: */
  /* line 1588: */
 if (EKBACTR_type!=PKBACTR_letter)
 { 
  /* line 1590: */
  /* line 1591: */
-(*NL(LSAACTR_tind))-=1;
+(*A_NILCHECK(NL(LSAACTR_tind)))-=1;
 } 
 else
 { 
-(*NL(QSAACTR_compsize)) = (*NL(RSAACTR_comphash)) = 0;
+(*A_NILCHECK(NL(QSAACTR_compsize))) = (*A_NILCHECK(NL(RSAACTR_comphash))) = 0;
  /* line 1592: */
-(void)((*NL(OSAACTR_compsymb)) = NL(XTAACTR_spaces));
+(void)((*A_NILCHECK(NL(OSAACTR_compsymb))) = NL(XTAACTR_spaces));
  /* line 1593: */
-(*NL(BUAACTR_typechar1)) = EKBACTR_type;
+(*A_NILCHECK(NL(BUAACTR_typechar1))) = EKBACTR_type;
  /* line 1595: */
 for ( ;; )
 { 
@@ -13448,53 +13448,53 @@ QOBACTR = (FKBACTR_value>=0);
 }
 if ( !(QOBACTR) ) break;
  /* line 1598: */
-if ((*NL(QSAACTR_compsize))!=VDAACTR_maxid)
+if ((*A_NILCHECK(NL(QSAACTR_compsize)))!=VDAACTR_maxid)
 { 
 SOBACTR = A_ISVEC(ROBACTR,NL(OSAACTR_compsymb),32,A68_CHAR ) ;
-TOBACTR = (*NL(QSAACTR_compsize))+=1 ;
+TOBACTR = (*A_NILCHECK(NL(QSAACTR_compsize)))+=1 ;
 UOBACTR = (&A_VINDEX(SOBACTR,TOBACTR)) ;
-(*UOBACTR) = GKBACTR_c;
+(*A_NILCHECK(UOBACTR)) = GKBACTR_c;
  /* line 1599: */
  /* line 1600: */
-(*NL(RSAACTR_comphash))+=(A68_INT)(unsigned char)GKBACTR_c;
+(*A_NILCHECK(NL(RSAACTR_comphash)))+=(A68_INT)(unsigned char)GKBACTR_c;
 } 
  /* line 1601: */
-VOBACTR = (*NL(LSAACTR_tind))+=1 ;
-(void)(GKBACTR_c = (*(&A_VINDEX(NL(HSAACTR_textbuff),VOBACTR))));
+VOBACTR = (*A_NILCHECK(NL(LSAACTR_tind)))+=1 ;
+(void)(GKBACTR_c = (*A_NILCHECK((&A_VINDEX(NL(HSAACTR_textbuff),VOBACTR)))));
  /* line 1602: */
 WOBACTR = (A68_INT)(unsigned char)GKBACTR_c ;
-(void)(EKBACTR_type = (*(&((&A_R1INDEX(NL(Charset),WOBACTR))->Type))));
+(void)(EKBACTR_type = (*A_NILCHECK((&(A_NILCHECK((&A_R1INDEX(NL(Charset),WOBACTR)))->Type)))));
  /* line 1603: */
  /* line 1604: */
 XOBACTR = (A68_INT)(unsigned char)GKBACTR_c ;
-(void)(FKBACTR_value = (*(&((&A_R1INDEX(NL(Charset),XOBACTR))->Value))));
+(void)(FKBACTR_value = (*A_NILCHECK((&(A_NILCHECK((&A_R1INDEX(NL(Charset),XOBACTR)))->Value)))));
 }
  /* line 1605: */
-(void)((*NL(RSAACTR_comphash)) = ((A68_INT )(A68_BITS )((A68_BITS )(*NL(RSAACTR_comphash))&(A68_BITS )63)+1));
+(void)((*A_NILCHECK(NL(RSAACTR_comphash))) = ((A68_INT )(A68_BITS )((A68_BITS )(*A_NILCHECK(NL(RSAACTR_comphash)))&(A68_BITS )63)+1));
  /* line 1607: */
 ZOBACTR = A_ISVEC(YOBACTR,NL(OSAACTR_compsymb),32,A68_CHAR ) ;
-(void)(JKBACTR_ans = A_CALLPROC(NL(Lookup),(A_VTRIM(APBACTR,(ZOBACTR),A_VTSCRIPT(&(APBACTR.upb),(ZOBACTR).upb,1,(*NL(QSAACTR_compsize)))), A68_TRUE),(A_VTRIM(APBACTR,(ZOBACTR),A_VTSCRIPT(&(APBACTR.upb),(ZOBACTR).upb,1,(*NL(QSAACTR_compsize)))), A68_TRUE,(NL(Lookup)).nonlocals)));
+(void)(JKBACTR_ans = A_CALLPROC(NL(Lookup),(A_VTRIM(APBACTR,(ZOBACTR),A_VTSCRIPT(&(APBACTR.upb),(ZOBACTR).upb,1,(*A_NILCHECK(NL(QSAACTR_compsize))))), A68_TRUE),(A_VTRIM(APBACTR,(ZOBACTR),A_VTSCRIPT(&(APBACTR.upb),(ZOBACTR).upb,1,(*A_NILCHECK(NL(QSAACTR_compsize))))), A68_TRUE,(NL(Lookup)).nonlocals)));
  /* line 1608: */
  /* line 1609: */
 if (MKBACTR_strop==1)
 { 
  /* line 1610: */
-(*NL(LSAACTR_tind))-=1;
+(*A_NILCHECK(NL(LSAACTR_tind)))-=1;
 } 
 else
 { 
  /* line 1611: */
 if (EKBACTR_type!=TKBACTR_matchstrop)
 { 
-(*NL(LSAACTR_tind))-=1;
+(*A_NILCHECK(NL(LSAACTR_tind)))-=1;
  /* line 1612: */
  /* line 1613: */
-if (!(*NL(HBBACTR_incom)))
+if (!(*A_NILCHECK(NL(HBBACTR_incom))))
 { 
 (void)(A_CALLPROC(NL(QJBACTR_fault),(107),(107,(NL(QJBACTR_fault)).nonlocals)));
  /* line 1615: */
  /* line 1616: */
-(*NL(ITAACTR_supflts)) = FEBACTR_fltgap;
+(*A_NILCHECK(NL(ITAACTR_supflts))) = FEBACTR_fltgap;
 } 
 else
 { 
@@ -13509,7 +13509,7 @@ JKBACTR_ans = HCBACTR_illegaltok;
 } 
 } 
  /* line 1621: */
-(*NL(ZRAACTR_isint)) = A68_TRUE;
+(*A_NILCHECK(NL(ZRAACTR_isint))) = A68_TRUE;
  /* line 1622: */
  /* line 1623: */
 BPBACTR = JKBACTR_ans;
@@ -13583,23 +13583,23 @@ A_PROC_ENTRY(fprimread);
 OPBACTR_radix = 0;
  /* line 1631: */
 GPBACTR_l: A_UNUSED;
-PPBACTR = (*NL(LSAACTR_tind))+=1 ;
-(void)(LPBACTR_c = (*(&A_VINDEX(NL(HSAACTR_textbuff),PPBACTR))));
+PPBACTR = (*A_NILCHECK(NL(LSAACTR_tind)))+=1 ;
+(void)(LPBACTR_c = (*A_NILCHECK((&A_VINDEX(NL(HSAACTR_textbuff),PPBACTR)))));
  /* line 1632: */
 QPBACTR = (A68_INT)(unsigned char)LPBACTR_c ;
-(void)(JPBACTR_type = (*(&((&A_R1INDEX(NL(Charset),QPBACTR))->Type))));
+(void)(JPBACTR_type = (*A_NILCHECK((&(A_NILCHECK((&A_R1INDEX(NL(Charset),QPBACTR)))->Type)))));
  /* line 1633: */
 RPBACTR = (A68_INT)(unsigned char)LPBACTR_c ;
-(void)(KPBACTR_value = (*(&((&A_R1INDEX(NL(Charset),RPBACTR))->Value))));
+(void)(KPBACTR_value = (*A_NILCHECK((&(A_NILCHECK((&A_R1INDEX(NL(Charset),RPBACTR)))->Value)))));
  /* line 1635: */
 IPBACTR_l1: A_UNUSED;
  /* line 1636: */
 if (JPBACTR_type>2)
 { 
  /* line 1637: */
-SPBACTR = (*NL(NSAACTR_find))+=1 ;
+SPBACTR = (*A_NILCHECK(NL(NSAACTR_find)))+=1 ;
 TPBACTR = (&A_VINDEX(NL(JSAACTR_globfbuff),SPBACTR)) ;
-(*TPBACTR) = LPBACTR_c;
+(*A_NILCHECK(TPBACTR)) = LPBACTR_c;
 } 
  /* line 1639: */
  /* line 1640: */
@@ -13618,22 +13618,22 @@ UPBACTR = (*(A68_INT *)A68_NIL);
 break;
 case 2: 
  /* line 1649: */
-if ((*NL(LSAACTR_tind))==(*NL(MSAACTR_textend)))
+if ((*A_NILCHECK(NL(LSAACTR_tind)))==(*A_NILCHECK(NL(MSAACTR_textend))))
 { 
  /* line 1650: */
-if ((*NL(NSAACTR_find))!=0)
+if ((*A_NILCHECK(NL(NSAACTR_find)))!=0)
 { 
-VPBACTR.Nochars = (-(*NL(NSAACTR_find)));
+VPBACTR.Nochars = (-(*A_NILCHECK(NL(NSAACTR_find))));
  /* line 1651: */
 VPBACTR.Base = 0;
  /* line 1652: */
-VPBACTR.Chars = A_VTRIM(WPBACTR,(NL(JSAACTR_globfbuff)),A_VTSCRIPT(&(WPBACTR.upb),(NL(JSAACTR_globfbuff)).upb,1,(*NL(NSAACTR_find))));
-(void)(A_CALLPROC(NL(Output),(A_UNITE(XPBACTR,mode35,35,VPBACTR), ((*NL(FZAACTR_outlevel))+1)),(A_UNITE(XPBACTR,mode35,35,VPBACTR), ((*NL(FZAACTR_outlevel))+1),(NL(Output)).nonlocals)));
+VPBACTR.Chars = A_VTRIM(WPBACTR,(NL(JSAACTR_globfbuff)),A_VTSCRIPT(&(WPBACTR.upb),(NL(JSAACTR_globfbuff)).upb,1,(*A_NILCHECK(NL(NSAACTR_find)))));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(XPBACTR,mode35,35,VPBACTR), ((*A_NILCHECK(NL(FZAACTR_outlevel)))+1)),(A_UNITE(XPBACTR,mode35,35,VPBACTR), ((*A_NILCHECK(NL(FZAACTR_outlevel)))+1),(NL(Output)).nonlocals)));
  /* line 1653: */
-(void)((*NL(IBBACTR_noofstrings))+=(*NL(NSAACTR_find)));
+(void)((*A_NILCHECK(NL(IBBACTR_noofstrings)))+=(*A_NILCHECK(NL(NSAACTR_find))));
  /* line 1654: */
  /* line 1655: */
-(*NL(NSAACTR_find)) = 0;
+(*A_NILCHECK(NL(NSAACTR_find))) = 0;
 } 
  /* line 1656: */
  /* line 1657: */
@@ -13654,19 +13654,19 @@ if (KPBACTR_value==28)
 for ( ;; )
 { 
  /* line 1664: */
-YPBACTR = (*NL(LSAACTR_tind))+=1 ;
-(void)(LPBACTR_c = (*(&A_VINDEX(NL(HSAACTR_textbuff),YPBACTR))));
+YPBACTR = (*A_NILCHECK(NL(LSAACTR_tind)))+=1 ;
+(void)(LPBACTR_c = (*A_NILCHECK((&A_VINDEX(NL(HSAACTR_textbuff),YPBACTR)))));
  /* line 1665: */
 ZPBACTR = (A68_INT)(unsigned char)LPBACTR_c ;
-(void)(JPBACTR_type = (*(&((&A_R1INDEX(NL(Charset),ZPBACTR))->Type))));
+(void)(JPBACTR_type = (*A_NILCHECK((&(A_NILCHECK((&A_R1INDEX(NL(Charset),ZPBACTR)))->Type)))));
  /* line 1666: */
 AQBACTR = (A68_INT)(unsigned char)LPBACTR_c ;
-(void)(KPBACTR_value = (*(&((&A_R1INDEX(NL(Charset),AQBACTR))->Value))));
+(void)(KPBACTR_value = (*A_NILCHECK((&(A_NILCHECK((&A_R1INDEX(NL(Charset),AQBACTR)))->Value)))));
  /* line 1668: */
 BQBACTR = (JPBACTR_type==2);
 if ( BQBACTR )
 { /* line 1669: */
-BQBACTR = ((*NL(LSAACTR_tind))!=(*NL(MSAACTR_textend)));
+BQBACTR = ((*A_NILCHECK(NL(LSAACTR_tind)))!=(*A_NILCHECK(NL(MSAACTR_textend))));
 }
 CQBACTR = BQBACTR;
 if ( !CQBACTR ) break;
@@ -13690,16 +13690,16 @@ DQBACTR = (KPBACTR_value==18);
 }
 if (DQBACTR)
 { 
-EQBACTR = (*NL(NSAACTR_find))+=1 ;
+EQBACTR = (*A_NILCHECK(NL(NSAACTR_find)))+=1 ;
 FQBACTR = (&A_VINDEX(NL(JSAACTR_globfbuff),EQBACTR)) ;
-(*FQBACTR) = LPBACTR_c;
+(*A_NILCHECK(FQBACTR)) = LPBACTR_c;
  /* line 1673: */
  /* line 1674: */
 UPBACTR = KPBACTR_value;
 } 
 else
 { 
-(*NL(LSAACTR_tind))-=1;
+(*A_NILCHECK(NL(LSAACTR_tind)))-=1;
  /* line 1675: */
  /* line 1676: */
  /* line 1677: */
@@ -13721,21 +13721,21 @@ HQBACTR_m: A_UNUSED;
 for ( ;; )
 { 
  /* line 1683: */
-IQBACTR = (*NL(LSAACTR_tind))+=1 ;
-(void)(LPBACTR_c = (*(&A_VINDEX(NL(HSAACTR_textbuff),IQBACTR))));
+IQBACTR = (*A_NILCHECK(NL(LSAACTR_tind)))+=1 ;
+(void)(LPBACTR_c = (*A_NILCHECK((&A_VINDEX(NL(HSAACTR_textbuff),IQBACTR)))));
  /* line 1684: */
 JQBACTR = (A68_INT)(unsigned char)LPBACTR_c ;
-(void)(JPBACTR_type = (*(&((&A_R1INDEX(NL(Charset),JQBACTR))->Type))));
+(void)(JPBACTR_type = (*A_NILCHECK((&(A_NILCHECK((&A_R1INDEX(NL(Charset),JQBACTR)))->Type)))));
  /* line 1685: */
 KQBACTR = (A68_INT)(unsigned char)LPBACTR_c ;
-(void)(KPBACTR_value = (*(&((&A_R1INDEX(NL(Charset),KQBACTR))->Value))));
+(void)(KPBACTR_value = (*A_NILCHECK((&(A_NILCHECK((&A_R1INDEX(NL(Charset),KQBACTR)))->Value)))));
  /* line 1687: */
  /* line 1688: */
 LQBACTR = (JPBACTR_type==4);
 if ( !LQBACTR ) break;
-MQBACTR = (*NL(NSAACTR_find))+=1 ;
+MQBACTR = (*A_NILCHECK(NL(NSAACTR_find)))+=1 ;
 NQBACTR = (&A_VINDEX(NL(JSAACTR_globfbuff),MQBACTR)) ;
-(*NQBACTR) = LPBACTR_c;
+(*A_NILCHECK(NQBACTR)) = LPBACTR_c;
  /* line 1689: */
  /* line 1690: */
 if (OPBACTR_radix<100)
@@ -13749,7 +13749,7 @@ if (OPBACTR_radix<100)
 OQBACTR = (JPBACTR_type==2);
 if ( OQBACTR )
 { /* line 1695: */
-OQBACTR = ((*NL(LSAACTR_tind))!=(*NL(MSAACTR_textend)));
+OQBACTR = ((*A_NILCHECK(NL(LSAACTR_tind)))!=(*A_NILCHECK(NL(MSAACTR_textend))));
 }
 if (OQBACTR)
 { 
@@ -13769,18 +13769,18 @@ OPBACTR_radix = 16;
 (void)(A_CALLPROC(NL(QJBACTR_fault),(103),(103,(NL(QJBACTR_fault)).nonlocals)));
 } 
  /* line 1704: */
-PQBACTR = (*NL(NSAACTR_find))+=1 ;
+PQBACTR = (*A_NILCHECK(NL(NSAACTR_find)))+=1 ;
 QQBACTR = (&A_VINDEX(NL(JSAACTR_globfbuff),PQBACTR)) ;
-(*QQBACTR) = LPBACTR_c;
+(*A_NILCHECK(QQBACTR)) = LPBACTR_c;
  /* line 1706: */
-RQBACTR = (*NL(LSAACTR_tind))+=1 ;
-(void)(LPBACTR_c = (*(&A_VINDEX(NL(HSAACTR_textbuff),RQBACTR))));
+RQBACTR = (*A_NILCHECK(NL(LSAACTR_tind)))+=1 ;
+(void)(LPBACTR_c = (*A_NILCHECK((&A_VINDEX(NL(HSAACTR_textbuff),RQBACTR)))));
  /* line 1707: */
 SQBACTR = (A68_INT)(unsigned char)LPBACTR_c ;
-(void)(JPBACTR_type = (*(&((&A_R1INDEX(NL(Charset),SQBACTR))->Type))));
+(void)(JPBACTR_type = (*A_NILCHECK((&(A_NILCHECK((&A_R1INDEX(NL(Charset),SQBACTR)))->Type)))));
  /* line 1708: */
 TQBACTR = (A68_INT)(unsigned char)LPBACTR_c ;
-(void)(KPBACTR_value = (*(&((&A_R1INDEX(NL(Charset),TQBACTR))->Value))));
+(void)(KPBACTR_value = (*A_NILCHECK((&(A_NILCHECK((&A_R1INDEX(NL(Charset),TQBACTR)))->Value)))));
  /* line 1709: */
  /* line 1710: */
 if (JPBACTR_type==5)
@@ -13791,7 +13791,7 @@ goto IPBACTR_l1;
 else
 { 
  /* line 1712: */
-(*NL(LSAACTR_tind))-=1;
+(*A_NILCHECK(NL(LSAACTR_tind)))-=1;
 } 
  /* line 1713: */
  /* line 1714: */
@@ -13799,7 +13799,7 @@ UPBACTR = (-2);
 } 
 else
 { 
-(*NL(LSAACTR_tind))-=1;
+(*A_NILCHECK(NL(LSAACTR_tind)))-=1;
  /* line 1715: */
  /* line 1716: */
  /* line 1717: */
@@ -13813,7 +13813,7 @@ case 5:
 for ( ;; )
 { 
  /* line 1721: */
-if ((*NL(LSAACTR_tind))==(*NL(MSAACTR_textend)))
+if ((*A_NILCHECK(NL(LSAACTR_tind)))==(*A_NILCHECK(NL(MSAACTR_textend))))
 { 
 (void)(A_CALLPROC(NL(QJBACTR_fault),(104),(104,(NL(QJBACTR_fault)).nonlocals)));
  /* line 1723: */
@@ -13823,31 +13823,31 @@ goto VQBACTR_out;
 } 
 else
 { 
-WQBACTR = (*NL(LSAACTR_tind))+=1 ;
-(void)(LPBACTR_c = (*(&A_VINDEX(NL(HSAACTR_textbuff),WQBACTR))));
+WQBACTR = (*A_NILCHECK(NL(LSAACTR_tind)))+=1 ;
+(void)(LPBACTR_c = (*A_NILCHECK((&A_VINDEX(NL(HSAACTR_textbuff),WQBACTR)))));
  /* line 1726: */
 XQBACTR = (A68_INT)(unsigned char)LPBACTR_c ;
-(void)(JPBACTR_type = (*(&((&A_R1INDEX(NL(Charset),XQBACTR))->Type))));
+(void)(JPBACTR_type = (*A_NILCHECK((&(A_NILCHECK((&A_R1INDEX(NL(Charset),XQBACTR)))->Type)))));
  /* line 1727: */
 YQBACTR = (A68_INT)(unsigned char)LPBACTR_c ;
-(void)(KPBACTR_value = (*(&((&A_R1INDEX(NL(Charset),YQBACTR))->Value))));
+(void)(KPBACTR_value = (*A_NILCHECK((&(A_NILCHECK((&A_R1INDEX(NL(Charset),YQBACTR)))->Value)))));
  /* line 1728: */
-ZQBACTR = (*NL(NSAACTR_find))+=1 ;
+ZQBACTR = (*A_NILCHECK(NL(NSAACTR_find)))+=1 ;
 ARBACTR = (&A_VINDEX(NL(JSAACTR_globfbuff),ZQBACTR)) ;
-(*ARBACTR) = LPBACTR_c;
+(*A_NILCHECK(ARBACTR)) = LPBACTR_c;
  /* line 1729: */
  /* line 1731: */
  /* line 1732: */
 if (JPBACTR_type==5)
 { 
-BRBACTR = (*NL(LSAACTR_tind))+=1 ;
-(void)(LPBACTR_c = (*(&A_VINDEX(NL(HSAACTR_textbuff),BRBACTR))));
+BRBACTR = (*A_NILCHECK(NL(LSAACTR_tind)))+=1 ;
+(void)(LPBACTR_c = (*A_NILCHECK((&A_VINDEX(NL(HSAACTR_textbuff),BRBACTR)))));
  /* line 1733: */
 CRBACTR = (A68_INT)(unsigned char)LPBACTR_c ;
-(void)(JPBACTR_type = (*(&((&A_R1INDEX(NL(Charset),CRBACTR))->Type))));
+(void)(JPBACTR_type = (*A_NILCHECK((&(A_NILCHECK((&A_R1INDEX(NL(Charset),CRBACTR)))->Type)))));
  /* line 1734: */
 DRBACTR = (A68_INT)(unsigned char)LPBACTR_c ;
-(void)(KPBACTR_value = (*(&((&A_R1INDEX(NL(Charset),DRBACTR))->Value))));
+(void)(KPBACTR_value = (*A_NILCHECK((&(A_NILCHECK((&A_R1INDEX(NL(Charset),DRBACTR)))->Value)))));
  /* line 1735: */
  /* line 1736: */
 if (JPBACTR_type!=5)
@@ -13859,9 +13859,9 @@ else
 { 
  /* line 1738: */
  /* line 1739: */
-ERBACTR = (*NL(NSAACTR_find))+=1 ;
+ERBACTR = (*A_NILCHECK(NL(NSAACTR_find)))+=1 ;
 FRBACTR = (&A_VINDEX(NL(JSAACTR_globfbuff),ERBACTR)) ;
-(*FRBACTR) = LPBACTR_c;
+(*A_NILCHECK(FRBACTR)) = LPBACTR_c;
 } 
 } 
  /* line 1740: */
@@ -13887,15 +13887,15 @@ if (GRBACTR)
 }
  /* line 1748: */
 VQBACTR_out: A_UNUSED;
-(*NL(LSAACTR_tind))-=1;
+(*A_NILCHECK(NL(LSAACTR_tind)))-=1;
  /* line 1749: */
  /* line 1750: */
 if (JPBACTR_type==2)
 { 
  /* line 1751: */
-HRBACTR = (*NL(NSAACTR_find))+=1 ;
+HRBACTR = (*A_NILCHECK(NL(NSAACTR_find)))+=1 ;
 IRBACTR = (&A_VINDEX(NL(JSAACTR_globfbuff),HRBACTR)) ;
-(*IRBACTR) = LPBACTR_c;
+(*A_NILCHECK(IRBACTR)) = LPBACTR_c;
 } 
  /* line 1752: */
  /* line 1753: */
@@ -13904,7 +13904,7 @@ UPBACTR = LCBACTR_stringtok;
 } 
 break;
 default: 
-NPBACTR_k = (*NL(LSAACTR_tind))-=1;
+NPBACTR_k = (*A_NILCHECK(NL(LSAACTR_tind)))-=1;
  /* line 1756: */
 JRBACTR = ((MPBACTR_j = A_CALLPROC(NL(ZJBACTR_primread),(),((NL(ZJBACTR_primread)).nonlocals)))>=ACBACTR_rccomment);
 if ( JRBACTR )
@@ -13921,7 +13921,7 @@ JRBACTR = KRBACTR;
 }
 if (JRBACTR)
 { 
-(*NL(NSAACTR_find))-=1;
+(*A_NILCHECK(NL(NSAACTR_find)))-=1;
  /* line 1759: */
  /* line 1760: */
 UPBACTR = MPBACTR_j;
@@ -13936,7 +13936,7 @@ if ( ! MRBACTR )
 {MRBACTR = (MPBACTR_j<60);
 }
 if ( MRBACTR )
-{MRBACTR = ((*NL(QSAACTR_compsize))==1);
+{MRBACTR = ((*A_NILCHECK(NL(QSAACTR_compsize)))==1);
 }
  /* line 1762: */
 LRBACTR = MRBACTR;
@@ -13955,7 +13955,7 @@ else
 NRBACTR = (MPBACTR_j==YCBACTR_biplus);
 if ( NRBACTR )
 { /* line 1765: */
-NRBACTR = ((*NL(QSAACTR_compsize))==1);
+NRBACTR = ((*A_NILCHECK(NL(QSAACTR_compsize)))==1);
 }
  /* line 1766: */
 if (NRBACTR)
@@ -13967,7 +13967,7 @@ else
 ORBACTR = (MPBACTR_j==ZCBACTR_biminus);
 if ( ORBACTR )
 { /* line 1767: */
-ORBACTR = ((*NL(QSAACTR_compsize))==1);
+ORBACTR = ((*A_NILCHECK(NL(QSAACTR_compsize)))==1);
 }
  /* line 1768: */
 if (ORBACTR)
@@ -13979,14 +13979,14 @@ else
  /* line 1769: */
 if (KPBACTR_value==130)
 { 
-(void)((*NL(LSAACTR_tind)) = (NPBACTR_k+1));
+(void)((*A_NILCHECK(NL(LSAACTR_tind))) = (NPBACTR_k+1));
  /* line 1770: */
  /* line 1771: */
 UPBACTR = 9;
 } 
 else
 { 
-(*NL(LSAACTR_tind)) = NPBACTR_k;
+(*A_NILCHECK(NL(LSAACTR_tind))) = NPBACTR_k;
  /* line 1772: */
  /* line 1773: */
  /* line 1774: */
@@ -14031,23 +14031,23 @@ A_PROC_ENTRY(insertprocp);
  /* line 1781: */
  /* line 1782: */
  /* line 1783: */
-ASBACTR = (*NL(VYAACTR_lastmode));
+ASBACTR = (*A_NILCHECK(NL(VYAACTR_lastmode)));
 for ( ZRBACTR_i = NL(YYAACTR_newmode1);
 ZRBACTR_i <= ASBACTR;
 ZRBACTR_i += 1 )
 { 
  /* line 1784: */
-BSBACTR = (*(&A_VINDEX(NL(KUAACTR_modes),ZRBACTR_i))) ;
+BSBACTR = (*A_NILCHECK((&A_VINDEX(NL(KUAACTR_modes),ZRBACTR_i)))) ;
 switch ( BSBACTR.mode )
 { 
 case 3: /* REF STRUCT(INT,REF MODE54)  */
 CSBACTR_pp = (BSBACTR.data.mode3);
  /* line 1785: */
  /* line 1786: */
-DSBACTR = ((*(&(CSBACTR_pp->Deproc)))==Deproc);
+DSBACTR = ((*A_NILCHECK((&(A_NILCHECK(CSBACTR_pp)->Deproc))))==Deproc);
 if ( DSBACTR )
 {{ 
-(void)(XRBACTR_ml1 = (*(&(CSBACTR_pp->Pars))));
+(void)(XRBACTR_ml1 = (*A_NILCHECK((&(A_NILCHECK(CSBACTR_pp)->Pars)))));
  /* line 1787: */
 YRBACTR_ml2 = Pars;
  /* line 1788: */
@@ -14061,13 +14061,13 @@ ESBACTR = (YRBACTR_ml2!=OQAACTR_nilml);
 }
 if ( ESBACTR )
 { /* line 1791: */
-ESBACTR = ((*(&(XRBACTR_ml1->Mode)))==(*(&(YRBACTR_ml2->Mode))));
+ESBACTR = ((*A_NILCHECK((&(A_NILCHECK(XRBACTR_ml1)->Mode))))==(*A_NILCHECK((&(A_NILCHECK(YRBACTR_ml2)->Mode)))));
 }
 if ( !(ESBACTR) ) break;
-(void)(XRBACTR_ml1 = (*(&(XRBACTR_ml1->Rest))));
+(void)(XRBACTR_ml1 = (*A_NILCHECK((&(A_NILCHECK(XRBACTR_ml1)->Rest)))));
  /* line 1792: */
  /* line 1793: */
-(void)(YRBACTR_ml2 = (*(&(YRBACTR_ml2->Rest))));
+(void)(YRBACTR_ml2 = (*A_NILCHECK((&(A_NILCHECK(YRBACTR_ml2)->Rest)))));
 }
  /* line 1794: */
 FSBACTR = (XRBACTR_ml1==OQAACTR_nilml);
@@ -14098,16 +14098,16 @@ break;
 }
  /* line 1803: */
  /* line 1804: */
-if ((*NL(VYAACTR_lastmode))<TDAACTR_upbofmodes)
+if ((*A_NILCHECK(NL(VYAACTR_lastmode)))<TDAACTR_upbofmodes)
 { 
 HSBACTR.Deproc = Deproc;
  /* line 1805: */
 HSBACTR.Pars = Pars;
-ISBACTR = WRBACTR_j = (*NL(VYAACTR_lastmode))+=1 ;
+ISBACTR = WRBACTR_j = (*A_NILCHECK(NL(VYAACTR_lastmode)))+=1 ;
 JSBACTR = A_HEAP(A68_57 ) ;
-(void)((*JSBACTR) = HSBACTR) ;
+(void)((*A_NILCHECK(JSBACTR)) = HSBACTR) ;
 LSBACTR = (&A_VINDEX(NL(KUAACTR_modes),ISBACTR)) ;
-(void)((*LSBACTR) = A_UNITE(KSBACTR,mode3,3,JSBACTR));
+(void)((*A_NILCHECK(LSBACTR)) = A_UNITE(KSBACTR,mode3,3,JSBACTR));
 } 
 else
 { 
@@ -14149,13 +14149,13 @@ A_PROC_ENTRY(insertunion);
  /* line 1814: */
  /* line 1815: */
  /* line 1816: */
-XSBACTR = (*NL(VYAACTR_lastmode));
+XSBACTR = (*A_NILCHECK(NL(VYAACTR_lastmode)));
 for ( WSBACTR_i = NL(YYAACTR_newmode1);
 WSBACTR_i <= XSBACTR;
 WSBACTR_i += 1 )
 { 
  /* line 1817: */
-YSBACTR = (*(&A_VINDEX(NL(KUAACTR_modes),WSBACTR_i))) ;
+YSBACTR = (*A_NILCHECK((&A_VINDEX(NL(KUAACTR_modes),WSBACTR_i)))) ;
 switch ( YSBACTR.mode )
 { 
 case 2: /* REF STRUCT(INT,REF MODE54)  */
@@ -14163,7 +14163,7 @@ ZSBACTR_u = (YSBACTR.data.mode2);
  /* line 1818: */
 USBACTR_ml1 = Rm;
  /* line 1819: */
-(void)(VSBACTR_ml2 = (*(&(ZSBACTR_u->Modelist))));
+(void)(VSBACTR_ml2 = (*A_NILCHECK((&(A_NILCHECK(ZSBACTR_u)->Modelist)))));
  /* line 1820: */
 for ( ;; )
 { 
@@ -14175,13 +14175,13 @@ ATBACTR = (VSBACTR_ml2!=OQAACTR_nilml);
 }
 if ( ATBACTR )
 { /* line 1823: */
-ATBACTR = ((*(&(USBACTR_ml1->Mode)))==(*(&(VSBACTR_ml2->Mode))));
+ATBACTR = ((*A_NILCHECK((&(A_NILCHECK(USBACTR_ml1)->Mode))))==(*A_NILCHECK((&(A_NILCHECK(VSBACTR_ml2)->Mode)))));
 }
 if ( !(ATBACTR) ) break;
-(void)(USBACTR_ml1 = (*(&(USBACTR_ml1->Rest))));
+(void)(USBACTR_ml1 = (*A_NILCHECK((&(A_NILCHECK(USBACTR_ml1)->Rest)))));
  /* line 1824: */
  /* line 1825: */
-(void)(VSBACTR_ml2 = (*(&(VSBACTR_ml2->Rest))));
+(void)(VSBACTR_ml2 = (*A_NILCHECK((&(A_NILCHECK(VSBACTR_ml2)->Rest)))));
 }
  /* line 1826: */
 BTBACTR = (USBACTR_ml1==OQAACTR_nilml);
@@ -14208,16 +14208,16 @@ break;
 }
  /* line 1834: */
  /* line 1835: */
-if ((*NL(VYAACTR_lastmode))<TDAACTR_upbofmodes)
+if ((*A_NILCHECK(NL(VYAACTR_lastmode)))<TDAACTR_upbofmodes)
 { 
 DTBACTR.Rdenno = 0;
  /* line 1836: */
 DTBACTR.Modelist = Rm;
-ETBACTR = TSBACTR_j = (*NL(VYAACTR_lastmode))+=1 ;
+ETBACTR = TSBACTR_j = (*A_NILCHECK(NL(VYAACTR_lastmode)))+=1 ;
 FTBACTR = A_HEAP(A68_56 ) ;
-(void)((*FTBACTR) = DTBACTR) ;
+(void)((*A_NILCHECK(FTBACTR)) = DTBACTR) ;
 HTBACTR = (&A_VINDEX(NL(KUAACTR_modes),ETBACTR)) ;
-(void)((*HTBACTR) = A_UNITE(GTBACTR,mode2,2,FTBACTR));
+(void)((*A_NILCHECK(HTBACTR)) = A_UNITE(GTBACTR,mode2,2,FTBACTR));
 } 
 else
 { 
@@ -14263,19 +14263,19 @@ A_PROC_ENTRY(insertstrct);
  /* line 1845: */
  /* line 1846: */
  /* line 1847: */
-UTBACTR = (*NL(VYAACTR_lastmode));
+UTBACTR = (*A_NILCHECK(NL(VYAACTR_lastmode)));
 for ( TTBACTR_i = 22;
 TTBACTR_i <= UTBACTR;
 TTBACTR_i += 1 )
 { 
  /* line 1848: */
-VTBACTR = (*(&A_VINDEX(NL(KUAACTR_modes),TTBACTR_i))) ;
+VTBACTR = (*A_NILCHECK((&A_VINDEX(NL(KUAACTR_modes),TTBACTR_i)))) ;
 switch ( VTBACTR.mode )
 { 
 case 4: /* REF STRUCT(INT,INT,REF MODE58)  */
 WTBACTR_str = (VTBACTR.data.mode4);
  /* line 1849: */
-(void)(RTBACTR_sl1 = (*(&(WTBACTR_str->Sels))));
+(void)(RTBACTR_sl1 = (*A_NILCHECK((&(A_NILCHECK(WTBACTR_str)->Sels)))));
  /* line 1850: */
 STBACTR_sl2 = Sels;
  /* line 1851: */
@@ -14289,19 +14289,19 @@ XTBACTR = (STBACTR_sl2!=RQAACTR_nilsel);
 }
 if ( XTBACTR )
 { /* line 1854: */
-ZTBACTR = (*(&(RTBACTR_sl1->Name))) ;
-BUBACTR = (*(&(STBACTR_sl2->Name))) ;
+ZTBACTR = (*A_NILCHECK((&(A_NILCHECK(RTBACTR_sl1)->Name)))) ;
+BUBACTR = (*A_NILCHECK((&(A_NILCHECK(STBACTR_sl2)->Name)))) ;
 XTBACTR = A_VC_EQ(A_HISVEC(YTBACTR,ZTBACTR,32,A68_CHAR ),A_HISVEC(AUBACTR,BUBACTR,32,A68_CHAR ));
 }
 if ( XTBACTR )
 { /* line 1855: */
-XTBACTR = ((*(&(RTBACTR_sl1->Mode)))==(*(&(STBACTR_sl2->Mode))));
+XTBACTR = ((*A_NILCHECK((&(A_NILCHECK(RTBACTR_sl1)->Mode))))==(*A_NILCHECK((&(A_NILCHECK(STBACTR_sl2)->Mode)))));
 }
 if ( !(XTBACTR) ) break;
-(void)(RTBACTR_sl1 = (*(&(RTBACTR_sl1->Rest))));
+(void)(RTBACTR_sl1 = (*A_NILCHECK((&(A_NILCHECK(RTBACTR_sl1)->Rest)))));
  /* line 1856: */
  /* line 1857: */
-(void)(STBACTR_sl2 = (*(&(STBACTR_sl2->Rest))));
+(void)(STBACTR_sl2 = (*A_NILCHECK((&(A_NILCHECK(STBACTR_sl2)->Rest)))));
 }
  /* line 1858: */
 CUBACTR = (RTBACTR_sl1==RQAACTR_nilsel);
@@ -14328,17 +14328,17 @@ break;
 }
  /* line 1866: */
  /* line 1867: */
-if ((*NL(VYAACTR_lastmode))<TDAACTR_upbofmodes)
+if ((*A_NILCHECK(NL(VYAACTR_lastmode)))<TDAACTR_upbofmodes)
 { 
 EUBACTR.Rdenno = 0;
 EUBACTR.Deflex = Deflex;
  /* line 1868: */
 EUBACTR.Sels = Sels;
-FUBACTR = QTBACTR_j = (*NL(VYAACTR_lastmode))+=1 ;
+FUBACTR = QTBACTR_j = (*A_NILCHECK(NL(VYAACTR_lastmode)))+=1 ;
 GUBACTR = A_HEAP(A68_59 ) ;
-(void)((*GUBACTR) = EUBACTR) ;
+(void)((*A_NILCHECK(GUBACTR)) = EUBACTR) ;
 IUBACTR = (&A_VINDEX(NL(KUAACTR_modes),FUBACTR)) ;
-(void)((*IUBACTR) = A_UNITE(HUBACTR,mode4,4,GUBACTR));
+(void)((*A_NILCHECK(IUBACTR)) = A_UNITE(HUBACTR,mode4,4,GUBACTR));
 } 
 else
 { 
@@ -14375,24 +14375,24 @@ A_PROC_ENTRY(insertprc);
 { 
  /* line 1877: */
  /* line 1878: */
-SUBACTR = (&((&RUBACTR_p)->Deproc)) ;
-(*SUBACTR) = Mode;
+SUBACTR = (&(A_NILCHECK((&RUBACTR_p))->Deproc)) ;
+(*A_NILCHECK(SUBACTR)) = Mode;
  /* line 1879: */
  /* line 1880: */
-UUBACTR = (*NL(VYAACTR_lastmode));
+UUBACTR = (*A_NILCHECK(NL(VYAACTR_lastmode)));
 for ( TUBACTR_i = NL(YYAACTR_newmode1);
 TUBACTR_i <= UUBACTR;
 TUBACTR_i += 1 )
 { 
  /* line 1881: */
-VUBACTR = (*(&A_VINDEX(NL(KUAACTR_modes),TUBACTR_i))) ;
+VUBACTR = (*A_NILCHECK((&A_VINDEX(NL(KUAACTR_modes),TUBACTR_i)))) ;
 switch ( VUBACTR.mode )
 { 
 case 6: /* REF STRUCT(INT)  */
 WUBACTR_pp = (VUBACTR.data.mode6);
  /* line 1882: */
  /* line 1883: */
-if ((*(&(WUBACTR_pp->Deproc)))==Mode)
+if ((*A_NILCHECK((&(A_NILCHECK(WUBACTR_pp)->Deproc))))==Mode)
 { 
 QUBACTR_j = TUBACTR_i;
  /* line 1884: */
@@ -14410,14 +14410,14 @@ break;
 }
  /* line 1890: */
  /* line 1891: */
-if ((*NL(VYAACTR_lastmode))<TDAACTR_upbofmodes)
+if ((*A_NILCHECK(NL(VYAACTR_lastmode)))<TDAACTR_upbofmodes)
 { 
  /* line 1892: */
-XUBACTR = QUBACTR_j = (*NL(VYAACTR_lastmode))+=1 ;
+XUBACTR = QUBACTR_j = (*A_NILCHECK(NL(VYAACTR_lastmode)))+=1 ;
 YUBACTR = A_HEAP(A68_55 ) ;
-(void)((*YUBACTR) = RUBACTR_p) ;
+(void)((*A_NILCHECK(YUBACTR)) = RUBACTR_p) ;
 AVBACTR = (&A_VINDEX(NL(KUAACTR_modes),XUBACTR)) ;
-(void)((*AVBACTR) = A_UNITE(ZUBACTR,mode6,6,YUBACTR));
+(void)((*A_NILCHECK(AVBACTR)) = A_UNITE(ZUBACTR,mode6,6,YUBACTR));
 } 
 else
 { 
@@ -14455,26 +14455,26 @@ A_PROC_ENTRY(insertarray);
 { 
  /* line 1902: */
  /* line 1903: */
-MVBACTR = (*NL(VYAACTR_lastmode));
+MVBACTR = (*A_NILCHECK(NL(VYAACTR_lastmode)));
 for ( LVBACTR_i = HLAACTR_arraychar;
 LVBACTR_i <= MVBACTR;
 LVBACTR_i += 1 )
 { 
  /* line 1904: */
-NVBACTR = (*(&A_VINDEX(NL(KUAACTR_modes),LVBACTR_i))) ;
+NVBACTR = (*A_NILCHECK((&A_VINDEX(NL(KUAACTR_modes),LVBACTR_i)))) ;
 switch ( NVBACTR.mode )
 { 
 case 8: /* REF STRUCT(INT,INT,INT,INT)  */
 OVBACTR_a = (NVBACTR.data.mode8);
  /* line 1905: */
-PVBACTR = ((*(&(OVBACTR_a->Mode)))==Mode);
+PVBACTR = ((*A_NILCHECK((&(A_NILCHECK(OVBACTR_a)->Mode))))==Mode);
 if ( PVBACTR )
 { /* line 1906: */
-PVBACTR = ((*(&(OVBACTR_a->Nods)))==Nods);
+PVBACTR = ((*A_NILCHECK((&(A_NILCHECK(OVBACTR_a)->Nods))))==Nods);
 }
 if ( PVBACTR )
 { /* line 1907: */
-if ((*(&(OVBACTR_a->Deflex)))>=0)
+if ((*A_NILCHECK((&(A_NILCHECK(OVBACTR_a)->Deflex))))>=0)
 { 
  /* line 1908: */
 QVBACTR = (Deflex>=0);
@@ -14505,7 +14505,7 @@ break;
 }
  /* line 1917: */
  /* line 1918: */
-if ((*NL(VYAACTR_lastmode))<TDAACTR_upbofmodes)
+if ((*A_NILCHECK(NL(VYAACTR_lastmode)))<TDAACTR_upbofmodes)
 { 
  /* line 1919: */
 RVBACTR.Rdenno = 0;
@@ -14513,11 +14513,11 @@ RVBACTR.Mode = Mode;
 RVBACTR.Nods = Nods;
  /* line 1920: */
 RVBACTR.Deflex = Deflex;
-SVBACTR = KVBACTR_j = (*NL(VYAACTR_lastmode))+=1 ;
+SVBACTR = KVBACTR_j = (*A_NILCHECK(NL(VYAACTR_lastmode)))+=1 ;
 TVBACTR = A_HEAP(A68_62 ) ;
-(void)((*TVBACTR) = RVBACTR) ;
+(void)((*A_NILCHECK(TVBACTR)) = RVBACTR) ;
 VVBACTR = (&A_VINDEX(NL(KUAACTR_modes),SVBACTR)) ;
-(void)((*VVBACTR) = A_UNITE(UVBACTR,mode8,8,TVBACTR));
+(void)((*A_NILCHECK(VVBACTR)) = A_UNITE(UVBACTR,mode8,8,TVBACTR));
 } 
 else
 { 
@@ -14555,23 +14555,23 @@ A_PROC_ENTRY(insertvec);
 { 
  /* line 1930: */
  /* line 1931: */
-GWBACTR = (*NL(VYAACTR_lastmode));
+GWBACTR = (*A_NILCHECK(NL(VYAACTR_lastmode)));
 for ( FWBACTR_i = GLAACTR_vecchar;
 FWBACTR_i <= GWBACTR;
 FWBACTR_i += 1 )
 { 
  /* line 1932: */
-HWBACTR = (*(&A_VINDEX(NL(KUAACTR_modes),FWBACTR_i))) ;
+HWBACTR = (*A_NILCHECK((&A_VINDEX(NL(KUAACTR_modes),FWBACTR_i)))) ;
 switch ( HWBACTR.mode )
 { 
 case 7: /* REF STRUCT(INT,INT,INT)  */
 IWBACTR_rv = (HWBACTR.data.mode7);
  /* line 1933: */
  /* line 1934: */
-JWBACTR = ((*(&(IWBACTR_rv->Vecmode)))==M);
+JWBACTR = ((*A_NILCHECK((&(A_NILCHECK(IWBACTR_rv)->Vecmode))))==M);
 if ( JWBACTR )
 { /* line 1935: */
-if ((*(&(IWBACTR_rv->Deflex)))>=0)
+if ((*A_NILCHECK((&(A_NILCHECK(IWBACTR_rv)->Deflex))))>=0)
 { 
  /* line 1936: */
 KWBACTR = (Deflex>=0);
@@ -14602,17 +14602,17 @@ break;
 }
  /* line 1945: */
  /* line 1946: */
-if ((*NL(VYAACTR_lastmode))<TDAACTR_upbofmodes)
+if ((*A_NILCHECK(NL(VYAACTR_lastmode)))<TDAACTR_upbofmodes)
 { 
 LWBACTR.Rdenno = 0;
 LWBACTR.Vecmode = M;
  /* line 1947: */
 LWBACTR.Deflex = Deflex;
-MWBACTR = EWBACTR_j = (*NL(VYAACTR_lastmode))+=1 ;
+MWBACTR = EWBACTR_j = (*A_NILCHECK(NL(VYAACTR_lastmode)))+=1 ;
 NWBACTR = A_HEAP(A68_61 ) ;
-(void)((*NWBACTR) = LWBACTR) ;
+(void)((*A_NILCHECK(NWBACTR)) = LWBACTR) ;
 PWBACTR = (&A_VINDEX(NL(KUAACTR_modes),MWBACTR)) ;
-(void)((*PWBACTR) = A_UNITE(OWBACTR,mode7,7,NWBACTR));
+(void)((*A_NILCHECK(PWBACTR)) = A_UNITE(OWBACTR,mode7,7,NWBACTR));
 } 
 else
 { 
@@ -14649,22 +14649,22 @@ A_PROC_ENTRY(insertis);
 { 
  /* line 1957: */
  /* line 1958: */
-AXBACTR = (*NL(VYAACTR_lastmode));
+AXBACTR = (*A_NILCHECK(NL(VYAACTR_lastmode)));
 for ( ZWBACTR_i = NL(YYAACTR_newmode1);
 ZWBACTR_i <= AXBACTR;
 ZWBACTR_i += 1 )
 { 
  /* line 1959: */
-BXBACTR = (*(&A_VINDEX(NL(KUAACTR_modes),ZWBACTR_i))) ;
+BXBACTR = (*A_NILCHECK((&A_VINDEX(NL(KUAACTR_modes),ZWBACTR_i)))) ;
 switch ( BXBACTR.mode )
 { 
 case 5: /* REF STRUCT(INT,INT,INT,INT)  */
 CXBACTR_ri = (BXBACTR.data.mode5);
  /* line 1960: */
-DXBACTR = ((*(&(CXBACTR_ri->Imode)))==M);
+DXBACTR = ((*A_NILCHECK((&(A_NILCHECK(CXBACTR_ri)->Imode))))==M);
 if ( DXBACTR )
 { /* line 1961: */
-DXBACTR = ((*(&(CXBACTR_ri->Length)))==L);
+DXBACTR = ((*A_NILCHECK((&(A_NILCHECK(CXBACTR_ri)->Length))))==L);
 }
 if (DXBACTR)
 { 
@@ -14684,18 +14684,18 @@ break;
 }
  /* line 1968: */
  /* line 1969: */
-if ((*NL(VYAACTR_lastmode))<TDAACTR_upbofmodes)
+if ((*A_NILCHECK(NL(VYAACTR_lastmode)))<TDAACTR_upbofmodes)
 { 
 EXBACTR.Rdenno = 0;
 EXBACTR.Imode = M;
 EXBACTR.Length = L;
  /* line 1970: */
 EXBACTR.Deflex = 1;
-FXBACTR = YWBACTR_j = (*NL(VYAACTR_lastmode))+=1 ;
+FXBACTR = YWBACTR_j = (*A_NILCHECK(NL(VYAACTR_lastmode)))+=1 ;
 GXBACTR = A_HEAP(A68_60 ) ;
-(void)((*GXBACTR) = EXBACTR) ;
+(void)((*A_NILCHECK(GXBACTR)) = EXBACTR) ;
 IXBACTR = (&A_VINDEX(NL(KUAACTR_modes),FXBACTR)) ;
-(void)((*IXBACTR) = A_UNITE(HXBACTR,mode5,5,GXBACTR));
+(void)((*A_NILCHECK(IXBACTR)) = A_UNITE(HXBACTR,mode5,5,GXBACTR));
 } 
 else
 { 
@@ -14728,10 +14728,10 @@ PXBACTR.Mode = M;
 PXBACTR.Rest = (A68_54 *)A68_NIL;
  /* line 1981: */
 QXBACTR = A_HEAP(A68_54 ) ;
-(void)((*QXBACTR) = PXBACTR) ;
+(void)((*A_NILCHECK(QXBACTR)) = PXBACTR) ;
 OXBACTR.Rest = QXBACTR;
 SXBACTR = A_HEAP(A68_54 ) ;
-(void)((*SXBACTR) = OXBACTR) ;
+(void)((*A_NILCHECK(SXBACTR)) = OXBACTR) ;
 RXBACTR = A_CALLPROC(NL(RRBACTR_insertprocp),((M+KQAACTR_refmark), SXBACTR),((M+KQAACTR_refmark), SXBACTR,(NL(RRBACTR_insertprocp)).nonlocals));
 A_PROC_EXIT(insertassmntproc);
 return( RXBACTR );
@@ -14750,25 +14750,25 @@ A68_INT  CYBACTR;  /* clause result */
 A_PROC_ENTRY(opproc);
  /* line 1984: */
 { 
-XXBACTR.Mode = (*(&(I->Rmode)));
+XXBACTR.Mode = (*A_NILCHECK((&(A_NILCHECK(I)->Rmode))));
 XXBACTR.Rest = (A68_54 *)A68_NIL;
 ZXBACTR = A_HEAP(A68_54 ) ;
-(void)((*ZXBACTR) = XXBACTR) ;
+(void)((*A_NILCHECK(ZXBACTR)) = XXBACTR) ;
 YXBACTR_ml = ZXBACTR;
  /* line 1985: */
  /* line 1986: */
-if ((*(&(I->Lmode)))!=0)
+if ((*A_NILCHECK((&(A_NILCHECK(I)->Lmode))))!=0)
 { 
-AYBACTR.Mode = (*(&(I->Lmode)));
+AYBACTR.Mode = (*A_NILCHECK((&(A_NILCHECK(I)->Lmode))));
  /* line 1987: */
 AYBACTR.Rest = YXBACTR_ml;
 BYBACTR = A_HEAP(A68_54 ) ;
-(void)((*BYBACTR) = AYBACTR) ;
+(void)((*A_NILCHECK(BYBACTR)) = AYBACTR) ;
 YXBACTR_ml = BYBACTR;
 } 
  /* line 1988: */
  /* line 1989: */
-CYBACTR = A_CALLPROC(NL(RRBACTR_insertprocp),((*(&(I->Ans))), YXBACTR_ml),((*(&(I->Ans))), YXBACTR_ml,(NL(RRBACTR_insertprocp)).nonlocals));
+CYBACTR = A_CALLPROC(NL(RRBACTR_insertprocp),((*A_NILCHECK((&(A_NILCHECK(I)->Ans)))), YXBACTR_ml),((*A_NILCHECK((&(A_NILCHECK(I)->Ans)))), YXBACTR_ml,(NL(RRBACTR_insertprocp)).nonlocals));
 } 
 A_PROC_EXIT(opproc);
 return( CYBACTR );
@@ -14784,10 +14784,10 @@ A68_124 ** IYBACTR;  /* YIELD */
 A_PROC_ENTRY(freevalue);
  /* line 1992: */
  /* line 1993: */
-FYBACTR = (*(&(V->Props))) ;
+FYBACTR = (*A_NILCHECK((&(A_NILCHECK(V)->Props)))) ;
 if (A_LB_GE(FYBACTR,TLAACTR_heapbit))
 { 
-GYBACTR_vl = (*(&(V->Vlist)));
+GYBACTR_vl = (*A_NILCHECK((&(A_NILCHECK(V)->Vlist))));
  /* line 1994: */
 for ( ;; )
 { 
@@ -14795,10 +14795,10 @@ for ( ;; )
 if ( !((GYBACTR_vl!=UQAACTR_nilvl)) ) break;
 HYBACTR_vl1 = GYBACTR_vl;
  /* line 1996: */
-(void)(GYBACTR_vl = (*(&(GYBACTR_vl->Rest))));
+(void)(GYBACTR_vl = (*A_NILCHECK((&(A_NILCHECK(GYBACTR_vl)->Rest)))));
  /* line 1997: */
-IYBACTR = (&(HYBACTR_vl1->Rest)) ;
-(*IYBACTR) = LRAACTR_freevl;
+IYBACTR = (&(A_NILCHECK(HYBACTR_vl1)->Rest)) ;
+(*A_NILCHECK(IYBACTR)) = LRAACTR_freevl;
  /* line 1998: */
  /* line 1999: */
 LRAACTR_freevl = HYBACTR_vl1;
@@ -14825,7 +14825,7 @@ else
 { 
 LYBACTR_vl = LRAACTR_freevl;
  /* line 2006: */
-(void)(LRAACTR_freevl = (*(&(LRAACTR_freevl->Rest))));
+(void)(LRAACTR_freevl = (*A_NILCHECK((&(A_NILCHECK(LRAACTR_freevl)->Rest)))));
  /* line 2007: */
  /* line 2008: */
 KYBACTR = LYBACTR_vl;
@@ -14845,28 +14845,28 @@ A68_BITS * TYBACTR;  /* YIELD */
 A_PROC_ENTRY(heapvalue);
  /* line 2011: */
  /* line 2012: */
-if ((A68_BITS )((*(&(V->Props)))&TLAACTR_heapbit)==MQAACTR_z)
+if ((A68_BITS )((*A_NILCHECK((&(A_NILCHECK(V)->Props))))&TLAACTR_heapbit)==MQAACTR_z)
 { 
-QYBACTR_vl = (&(V->Vlist));
+QYBACTR_vl = (&(A_NILCHECK(V)->Vlist));
  /* line 2013: */
  /* line 2015: */
 for ( ;; )
 { 
  /* line 2016: */
-if ( !(((*QYBACTR_vl)!=UQAACTR_nilvl)) ) break;
-(void)(A_CALLPROC(NL(NYBACTR_heapvalue),((&((*QYBACTR_vl)->V))),((&((*QYBACTR_vl)->V)),(NL(NYBACTR_heapvalue)).nonlocals)));
+if ( !(((*A_NILCHECK(QYBACTR_vl))!=UQAACTR_nilvl)) ) break;
+(void)(A_CALLPROC(NL(NYBACTR_heapvalue),((&(A_NILCHECK((*A_NILCHECK(QYBACTR_vl)))->V))),((&(A_NILCHECK((*A_NILCHECK(QYBACTR_vl)))->V)),(NL(NYBACTR_heapvalue)).nonlocals)));
  /* line 2017: */
 SYBACTR = JYBACTR_globvlist() ;
-(void)((*SYBACTR) = (**QYBACTR_vl)) ;
-(*QYBACTR_vl) = SYBACTR;
+(void)((*A_NILCHECK(SYBACTR)) = (*A_NILCHECK(*A_NILCHECK(QYBACTR_vl)))) ;
+(*A_NILCHECK(QYBACTR_vl)) = SYBACTR;
  /* line 2018: */
  /* line 2019: */
-(void)(QYBACTR_vl = (&((*QYBACTR_vl)->Rest)));
+(void)(QYBACTR_vl = (&(A_NILCHECK((*A_NILCHECK(QYBACTR_vl)))->Rest)));
 }
  /* line 2020: */
  /* line 2021: */
-TYBACTR = (&(V->Props)) ;
-(void)((*TYBACTR) = (A68_BITS )((*(&(V->Props)))|TLAACTR_heapbit));
+TYBACTR = (&(A_NILCHECK(V)->Props)) ;
+(void)((*A_NILCHECK(TYBACTR)) = (A68_BITS )((*A_NILCHECK((&(A_NILCHECK(V)->Props))))|TLAACTR_heapbit));
 } 
 A_PROC_EXIT(heapvalue);
 return;
@@ -14881,26 +14881,26 @@ A68_BITS  ZYBACTR;  /* ADICOPS - >= */
 A_PROC_ENTRY(downandups);
  /* line 2024: */
 { 
-YYBACTR_vl = (*(&(V->Vlist)));
+YYBACTR_vl = (*A_NILCHECK((&(A_NILCHECK(V)->Vlist))));
  /* line 2026: */
 for ( ;; )
 { 
  /* line 2027: */
 if ( !((YYBACTR_vl!=UQAACTR_nilvl)) ) break;
  /* line 2028: */
-ZYBACTR = (*(&((&(YYBACTR_vl->V))->Props))) ;
+ZYBACTR = (*A_NILCHECK((&(A_NILCHECK((&(A_NILCHECK(YYBACTR_vl)->V)))->Props)))) ;
 if (A_LB_GE(ZYBACTR,BRAACTR_downbit))
 { 
-(void)(A_CALLPROC(NL(Output),(SKAACTR_down, (*NL(FZAACTR_outlevel))),(SKAACTR_down, (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(SKAACTR_down, (*A_NILCHECK(NL(FZAACTR_outlevel)))),(SKAACTR_down, (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 2029: */
  /* line 2030: */
-(void)(A_CALLPROC(NL(Output),(QKAACTR_up, (*NL(FZAACTR_outlevel))),(QKAACTR_up, (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(QKAACTR_up, (*A_NILCHECK(NL(FZAACTR_outlevel)))),(QKAACTR_up, (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
 } 
  /* line 2031: */
-(void)(A_CALLPROC(NL(VYBACTR_downandups),((&(YYBACTR_vl->V))),((&(YYBACTR_vl->V)),(NL(VYBACTR_downandups)).nonlocals)));
+(void)(A_CALLPROC(NL(VYBACTR_downandups),((&(A_NILCHECK(YYBACTR_vl)->V))),((&(A_NILCHECK(YYBACTR_vl)->V)),(NL(VYBACTR_downandups)).nonlocals)));
  /* line 2032: */
  /* line 2033: */
-(void)(YYBACTR_vl = (*(&(YYBACTR_vl->Rest))));
+(void)(YYBACTR_vl = (*A_NILCHECK((&(A_NILCHECK(YYBACTR_vl)->Rest)))));
 }
  /* line 2034: */
 } 
@@ -14923,52 +14923,52 @@ A_PROC_ENTRY(tidyv);
  /* line 2037: */
 { 
  /* line 2038: */
-if ((*(&(V->Vlist)))==UQAACTR_nilvl)
+if ((*A_NILCHECK((&(A_NILCHECK(V)->Vlist))))==UQAACTR_nilvl)
 { 
  /* line 2039: */
-EZBACTR = (*(&(V->Props))) ;
+EZBACTR = (*A_NILCHECK((&(A_NILCHECK(V)->Props)))) ;
 if (A_LB_GE(EZBACTR,SLAACTR_semibit))
 { 
  /* line 2040: */
-FZBACTR.Props = (A68_BITS )((A68_BITS )((*(&((*NL(QYAACTR_globcurrent))->Props)))|BRAACTR_downbit)|TLAACTR_heapbit);
+FZBACTR.Props = (A68_BITS )((A68_BITS )((*A_NILCHECK((&(A_NILCHECK((*A_NILCHECK(NL(QYAACTR_globcurrent))))->Props))))|BRAACTR_downbit)|TLAACTR_heapbit);
 FZBACTR.Mode = (-1);
-GZBACTR.V = (*V);
+GZBACTR.V = (*A_NILCHECK(V));
 GZBACTR.Type = ZMAACTR_xbegin;
 GZBACTR.Rest = (A68_124 *)A68_NIL;
  /* line 2041: */
 HZBACTR = JYBACTR_globvlist() ;
-(void)((*HZBACTR) = GZBACTR) ;
+(void)((*A_NILCHECK(HZBACTR)) = GZBACTR) ;
 FZBACTR.Vlist = HZBACTR;
  /* line 2042: */
 FZBACTR.Labs = (A68_69 *)A68_NIL;
-(*V) = FZBACTR;
+(*A_NILCHECK(V)) = FZBACTR;
 } 
 else
 { 
  /* line 2043: */
-IZBACTR = (*(&(V->Props))) ;
+IZBACTR = (*A_NILCHECK((&(A_NILCHECK(V)->Props)))) ;
 if (A_LB_GE(IZBACTR,BRAACTR_downbit))
 { 
  /* line 2044: */
-(void)(A_CALLPROC(NL(Output),(SKAACTR_down, (*NL(FZAACTR_outlevel))),(SKAACTR_down, (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(SKAACTR_down, (*A_NILCHECK(NL(FZAACTR_outlevel)))),(SKAACTR_down, (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
 } 
  /* line 2045: */
  /* line 2046: */
  /* line 2047: */
  /* line 2048: */
-JZBACTR = (&(V->Props)) ;
-(void)((*JZBACTR) = (A68_BITS )((A68_BITS )((*(&(V->Props)))|BRAACTR_downbit)|(*(&((*NL(QYAACTR_globcurrent))->Props)))));
+JZBACTR = (&(A_NILCHECK(V)->Props)) ;
+(void)((*A_NILCHECK(JZBACTR)) = (A68_BITS )((A68_BITS )((*A_NILCHECK((&(A_NILCHECK(V)->Props))))|BRAACTR_downbit)|(*A_NILCHECK((&(A_NILCHECK((*A_NILCHECK(NL(QYAACTR_globcurrent))))->Props))))));
 } 
 } 
 else
 { 
  /* line 2049: */
  /* line 2050: */
-KZBACTR = (&(V->Props)) ;
-(void)((*KZBACTR) = (A68_BITS )((A68_BITS )((*(&((*NL(QYAACTR_globcurrent))->Props)))|BRAACTR_downbit)|(*(&(V->Props)))));
+KZBACTR = (&(A_NILCHECK(V)->Props)) ;
+(void)((*A_NILCHECK(KZBACTR)) = (A68_BITS )((A68_BITS )((*A_NILCHECK((&(A_NILCHECK((*A_NILCHECK(NL(QYAACTR_globcurrent))))->Props))))|BRAACTR_downbit)|(*A_NILCHECK((&(A_NILCHECK(V)->Props))))));
 } 
  /* line 2052: */
-(void)(A_CALLPROC(NL(Output),(QKAACTR_up, (*NL(FZAACTR_outlevel))),(QKAACTR_up, (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(QKAACTR_up, (*A_NILCHECK(NL(FZAACTR_outlevel)))),(QKAACTR_up, (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 2053: */
  /* line 2054: */
 (void)(A_CALLPROC(NL(VYBACTR_downandups),(V),(V,(NL(VYBACTR_downandups)).nonlocals)));
@@ -15096,7 +15096,7 @@ else
 if (GACACTR_c=='3')
 { 
  /* line 2269: */
-(void)(A_CALLPROC(UACACTR_outboldid,((*Id)),((*Id),(UACACTR_outboldid).nonlocals)));
+(void)(A_CALLPROC(UACACTR_outboldid,((*A_NILCHECK(Id))),((*A_NILCHECK(Id)),(UACACTR_outboldid).nonlocals)));
 } 
 else
 { 
@@ -15104,7 +15104,7 @@ else
 if (GACACTR_c=='4')
 { 
  /* line 2271: */
-(void)(A_CALLPROC(IACACTR_outid,((*Id)),((*Id),(IACACTR_outid).nonlocals)));
+(void)(A_CALLPROC(IACACTR_outid,((*A_NILCHECK(Id))),((*A_NILCHECK(Id)),(IACACTR_outid).nonlocals)));
 } 
 else
 { 
@@ -15132,7 +15132,7 @@ else
 { 
 RECACTR = EACACTR_mind+=1 ;
 SECACTR = (&A_VINDEX(CACACTR_m,RECACTR)) ;
-(*SECACTR) = GACACTR_c;
+(*A_NILCHECK(SECACTR)) = GACACTR_c;
  /* line 2276: */
  /* line 2277: */
  /* line 2278: */
@@ -15205,7 +15205,7 @@ HFCACTR = (-1);
 else
 { 
  /* line 2311: */
-IFCACTR = (*(&A_VINDEX(NL(KUAACTR_modes),Mode))) ;
+IFCACTR = (*A_NILCHECK((&A_VINDEX(NL(KUAACTR_modes),Mode)))) ;
 switch ( IFCACTR.mode )
 { 
 case 8: /* REF STRUCT(INT,INT,INT,INT)  */
@@ -15213,17 +15213,17 @@ JFCACTR_a = (IFCACTR.data.mode8);
  /* line 2312: */
 { 
  /* line 2313: */
-if ((*(&(JFCACTR_a->Rdenno)))==0)
+if ((*A_NILCHECK((&(A_NILCHECK(JFCACTR_a)->Rdenno))))==0)
 { 
  /* line 2314: */
-KFCACTR = (&(JFCACTR_a->Rdenno)) ;
-(void)((*KFCACTR) = 2) ;
-(void)(A_CALLPROC(BFCACTR_state,(KFCACTR, (*(&(JFCACTR_a->Mode)))),(KFCACTR, (*(&(JFCACTR_a->Mode))),(BFCACTR_state).nonlocals)));
+KFCACTR = (&(A_NILCHECK(JFCACTR_a)->Rdenno)) ;
+(void)((*A_NILCHECK(KFCACTR)) = 2) ;
+(void)(A_CALLPROC(BFCACTR_state,(KFCACTR, (*A_NILCHECK((&(A_NILCHECK(JFCACTR_a)->Mode))))),(KFCACTR, (*A_NILCHECK((&(A_NILCHECK(JFCACTR_a)->Mode)))),(BFCACTR_state).nonlocals)));
 } 
  /* line 2315: */
  /* line 2316: */
  /* line 2317: */
-HFCACTR = (*(&(JFCACTR_a->Rdenno)));
+HFCACTR = (*A_NILCHECK((&(A_NILCHECK(JFCACTR_a)->Rdenno))));
 } 
 break;
 case 4: /* REF STRUCT(INT,INT,REF MODE58)  */
@@ -15231,28 +15231,28 @@ LFCACTR_st = (IFCACTR.data.mode4);
  /* line 2318: */
 { 
  /* line 2319: */
-if ((*(&(LFCACTR_st->Rdenno)))==0)
+if ((*A_NILCHECK((&(A_NILCHECK(LFCACTR_st)->Rdenno))))==0)
 { 
-MFCACTR_s = (*(&(LFCACTR_st->Sels)));
+MFCACTR_s = (*A_NILCHECK((&(A_NILCHECK(LFCACTR_st)->Sels))));
  /* line 2320: */
-NFCACTR = (&(LFCACTR_st->Rdenno)) ;
-(*NFCACTR) = 1;
+NFCACTR = (&(A_NILCHECK(LFCACTR_st)->Rdenno)) ;
+(*A_NILCHECK(NFCACTR)) = 1;
  /* line 2322: */
 for ( ;; )
 { 
  /* line 2323: */
 if ( !((MFCACTR_s!=RQAACTR_nilsel)) ) break;
-(void)(A_CALLPROC(BFCACTR_state,((&(LFCACTR_st->Rdenno)), (*(&(MFCACTR_s->Mode)))),((&(LFCACTR_st->Rdenno)), (*(&(MFCACTR_s->Mode))),(BFCACTR_state).nonlocals)));
+(void)(A_CALLPROC(BFCACTR_state,((&(A_NILCHECK(LFCACTR_st)->Rdenno)), (*A_NILCHECK((&(A_NILCHECK(MFCACTR_s)->Mode))))),((&(A_NILCHECK(LFCACTR_st)->Rdenno)), (*A_NILCHECK((&(A_NILCHECK(MFCACTR_s)->Mode)))),(BFCACTR_state).nonlocals)));
  /* line 2324: */
  /* line 2325: */
-(void)(MFCACTR_s = (*(&(MFCACTR_s->Rest))));
+(void)(MFCACTR_s = (*A_NILCHECK((&(A_NILCHECK(MFCACTR_s)->Rest)))));
 }
  /* line 2326: */
 } 
  /* line 2327: */
  /* line 2328: */
  /* line 2329: */
-HFCACTR = (*(&(LFCACTR_st->Rdenno)));
+HFCACTR = (*A_NILCHECK((&(A_NILCHECK(LFCACTR_st)->Rdenno))));
 } 
 break;
 case 2: /* REF STRUCT(INT,REF MODE54)  */
@@ -15260,28 +15260,28 @@ OFCACTR_u = (IFCACTR.data.mode2);
  /* line 2330: */
 { 
  /* line 2331: */
-if ((*(&(OFCACTR_u->Rdenno)))==0)
+if ((*A_NILCHECK((&(A_NILCHECK(OFCACTR_u)->Rdenno))))==0)
 { 
-PFCACTR_ml = (*(&(OFCACTR_u->Modelist)));
+PFCACTR_ml = (*A_NILCHECK((&(A_NILCHECK(OFCACTR_u)->Modelist))));
  /* line 2332: */
-QFCACTR = (&(OFCACTR_u->Rdenno)) ;
-(*QFCACTR) = 1;
+QFCACTR = (&(A_NILCHECK(OFCACTR_u)->Rdenno)) ;
+(*A_NILCHECK(QFCACTR)) = 1;
  /* line 2334: */
 for ( ;; )
 { 
  /* line 2335: */
 if ( !((PFCACTR_ml!=OQAACTR_nilml)) ) break;
-(void)(A_CALLPROC(BFCACTR_state,((&(OFCACTR_u->Rdenno)), (*(&(PFCACTR_ml->Mode)))),((&(OFCACTR_u->Rdenno)), (*(&(PFCACTR_ml->Mode))),(BFCACTR_state).nonlocals)));
+(void)(A_CALLPROC(BFCACTR_state,((&(A_NILCHECK(OFCACTR_u)->Rdenno)), (*A_NILCHECK((&(A_NILCHECK(PFCACTR_ml)->Mode))))),((&(A_NILCHECK(OFCACTR_u)->Rdenno)), (*A_NILCHECK((&(A_NILCHECK(PFCACTR_ml)->Mode)))),(BFCACTR_state).nonlocals)));
  /* line 2336: */
  /* line 2337: */
-(void)(PFCACTR_ml = (*(&(PFCACTR_ml->Rest))));
+(void)(PFCACTR_ml = (*A_NILCHECK((&(A_NILCHECK(PFCACTR_ml)->Rest)))));
 }
  /* line 2338: */
 } 
  /* line 2339: */
  /* line 2340: */
  /* line 2341: */
-HFCACTR = (*(&(OFCACTR_u->Rdenno)));
+HFCACTR = (*A_NILCHECK((&(A_NILCHECK(OFCACTR_u)->Rdenno))));
 } 
 break;
 case 7: /* REF STRUCT(INT,INT,INT)  */
@@ -15289,17 +15289,17 @@ RFCACTR_v = (IFCACTR.data.mode7);
  /* line 2342: */
 { 
  /* line 2343: */
-if ((*(&(RFCACTR_v->Rdenno)))==0)
+if ((*A_NILCHECK((&(A_NILCHECK(RFCACTR_v)->Rdenno))))==0)
 { 
  /* line 2344: */
-SFCACTR = (&(RFCACTR_v->Rdenno)) ;
-(void)((*SFCACTR) = 2) ;
-(void)(A_CALLPROC(BFCACTR_state,(SFCACTR, (*(&(RFCACTR_v->Vecmode)))),(SFCACTR, (*(&(RFCACTR_v->Vecmode))),(BFCACTR_state).nonlocals)));
+SFCACTR = (&(A_NILCHECK(RFCACTR_v)->Rdenno)) ;
+(void)((*A_NILCHECK(SFCACTR)) = 2) ;
+(void)(A_CALLPROC(BFCACTR_state,(SFCACTR, (*A_NILCHECK((&(A_NILCHECK(RFCACTR_v)->Vecmode))))),(SFCACTR, (*A_NILCHECK((&(A_NILCHECK(RFCACTR_v)->Vecmode)))),(BFCACTR_state).nonlocals)));
 } 
  /* line 2345: */
  /* line 2346: */
  /* line 2347: */
-HFCACTR = (*(&(RFCACTR_v->Rdenno)));
+HFCACTR = (*A_NILCHECK((&(A_NILCHECK(RFCACTR_v)->Rdenno))));
 } 
 break;
 case 5: /* REF STRUCT(INT,INT,INT,INT)  */
@@ -15307,17 +15307,17 @@ TFCACTR_is = (IFCACTR.data.mode5);
  /* line 2348: */
 { 
  /* line 2349: */
-if ((*(&(TFCACTR_is->Rdenno)))==0)
+if ((*A_NILCHECK((&(A_NILCHECK(TFCACTR_is)->Rdenno))))==0)
 { 
  /* line 2350: */
-UFCACTR = (&(TFCACTR_is->Rdenno)) ;
-(void)((*UFCACTR) = 1) ;
-(void)(A_CALLPROC(BFCACTR_state,(UFCACTR, (*(&(TFCACTR_is->Imode)))),(UFCACTR, (*(&(TFCACTR_is->Imode))),(BFCACTR_state).nonlocals)));
+UFCACTR = (&(A_NILCHECK(TFCACTR_is)->Rdenno)) ;
+(void)((*A_NILCHECK(UFCACTR)) = 1) ;
+(void)(A_CALLPROC(BFCACTR_state,(UFCACTR, (*A_NILCHECK((&(A_NILCHECK(TFCACTR_is)->Imode))))),(UFCACTR, (*A_NILCHECK((&(A_NILCHECK(TFCACTR_is)->Imode)))),(BFCACTR_state).nonlocals)));
 } 
  /* line 2351: */
  /* line 2352: */
  /* line 2353: */
-HFCACTR = (*(&(TFCACTR_is->Rdenno)));
+HFCACTR = (*A_NILCHECK((&(A_NILCHECK(TFCACTR_is)->Rdenno))));
 } 
 break;
 case 6: /* REF STRUCT(INT)  */
@@ -15372,22 +15372,22 @@ CGCACTR_i = A_CALLPROC(NL(VECACTR_marker),(Mode),(Mode,(NL(VECACTR_marker)).nonl
 if (CGCACTR_i==3)
 { 
  /* line 2369: */
-DGCACTR = (*(&A_VINDEX(NL(KUAACTR_modes),Mode))) ;
+DGCACTR = (*A_NILCHECK((&A_VINDEX(NL(KUAACTR_modes),Mode)))) ;
 switch ( DGCACTR.mode )
 { 
 case 8: /* REF STRUCT(INT,INT,INT,INT)  */
 EGCACTR_a = (DGCACTR.data.mode8);
  /* line 2370: */
-FGCACTR = ((*(&(EGCACTR_a->Nods)))!=1);
+FGCACTR = ((*A_NILCHECK((&(A_NILCHECK(EGCACTR_a)->Nods))))!=1);
 if ( FGCACTR )
 { /* line 2371: */
-FGCACTR = ((*(&(EGCACTR_a->Deflex)))<0);
+FGCACTR = ((*A_NILCHECK((&(A_NILCHECK(EGCACTR_a)->Deflex))))<0);
 }
 if (FGCACTR)
 { 
  /* line 2372: */
  /* line 2373: */
-if (A_CALLPROC(NL(VECACTR_marker),((*(&(EGCACTR_a->Mode)))),((*(&(EGCACTR_a->Mode))),(NL(VECACTR_marker)).nonlocals))<0)
+if (A_CALLPROC(NL(VECACTR_marker),((*A_NILCHECK((&(A_NILCHECK(EGCACTR_a)->Mode))))),((*A_NILCHECK((&(A_NILCHECK(EGCACTR_a)->Mode)))),(NL(VECACTR_marker)).nonlocals))<0)
 { 
  /* line 2374: */
 GGCACTR = (-2);
@@ -15469,7 +15469,7 @@ MGCACTR = I;
 else
 { 
  /* line 2386: */
-NGCACTR = (*(&A_VINDEX(NL(KUAACTR_modes),I))) ;
+NGCACTR = (*A_NILCHECK((&A_VINDEX(NL(KUAACTR_modes),I)))) ;
 switch ( NGCACTR.mode )
 { 
 case 8: /* REF STRUCT(INT,INT,INT,INT)  */
@@ -15477,25 +15477,25 @@ OGCACTR_a = (NGCACTR.data.mode8);
  /* line 2387: */
  /* line 2388: */
  /* line 2389: */
-if ((*(&(OGCACTR_a->Deflex)))==0)
+if ((*A_NILCHECK((&(A_NILCHECK(OGCACTR_a)->Deflex))))==0)
 { 
 MGCACTR = I;
 } 
 else
 { 
  /* line 2390: */
-if ((*(&(OGCACTR_a->Deflex)))==1)
+if ((*A_NILCHECK((&(A_NILCHECK(OGCACTR_a)->Deflex))))==1)
 { 
  /* line 2391: */
-QGCACTR = (&(OGCACTR_a->Deflex)) ;
-(*QGCACTR) = 0;
+QGCACTR = (&(A_NILCHECK(OGCACTR_a)->Deflex)) ;
+(*A_NILCHECK(QGCACTR)) = 0;
  /* line 2392: */
  /* line 2393: */
-RGCACTR = ((PGCACTR_j = A_CALLPROC(NL(JGCACTR_deflex),((*(&(OGCACTR_a->Mode)))),((*(&(OGCACTR_a->Mode))),(NL(JGCACTR_deflex)).nonlocals)))==(*(&(OGCACTR_a->Mode))));
+RGCACTR = ((PGCACTR_j = A_CALLPROC(NL(JGCACTR_deflex),((*A_NILCHECK((&(A_NILCHECK(OGCACTR_a)->Mode))))),((*A_NILCHECK((&(A_NILCHECK(OGCACTR_a)->Mode)))),(NL(JGCACTR_deflex)).nonlocals)))==(*A_NILCHECK((&(A_NILCHECK(OGCACTR_a)->Mode)))));
 if (RGCACTR)
 { 
-SGCACTR = (&(OGCACTR_a->Deflex)) ;
-(*SGCACTR) = 0;
+SGCACTR = (&(A_NILCHECK(OGCACTR_a)->Deflex)) ;
+(*A_NILCHECK(SGCACTR)) = 0;
  /* line 2394: */
  /* line 2395: */
 MGCACTR = I;
@@ -15504,29 +15504,29 @@ else
 { 
  /* line 2396: */
  /* line 2397: */
-TGCACTR = (&(OGCACTR_a->Deflex)) ;
-MGCACTR = (*TGCACTR) = A_CALLPROC(NL(FVBACTR_insertarray),(PGCACTR_j, (*(&(OGCACTR_a->Nods))), 1),(PGCACTR_j, (*(&(OGCACTR_a->Nods))), 1,(NL(FVBACTR_insertarray)).nonlocals));
+TGCACTR = (&(A_NILCHECK(OGCACTR_a)->Deflex)) ;
+MGCACTR = (*A_NILCHECK(TGCACTR)) = A_CALLPROC(NL(FVBACTR_insertarray),(PGCACTR_j, (*A_NILCHECK((&(A_NILCHECK(OGCACTR_a)->Nods)))), 1),(PGCACTR_j, (*A_NILCHECK((&(A_NILCHECK(OGCACTR_a)->Nods)))), 1,(NL(FVBACTR_insertarray)).nonlocals));
 } 
 } 
 else
 { 
  /* line 2398: */
-if ((*(&(OGCACTR_a->Deflex)))==(-1))
+if ((*A_NILCHECK((&(A_NILCHECK(OGCACTR_a)->Deflex))))==(-1))
 { 
-UGCACTR = (&(OGCACTR_a->Deflex)) ;
-(void)((*UGCACTR) = (-I));
+UGCACTR = (&(A_NILCHECK(OGCACTR_a)->Deflex)) ;
+(void)((*A_NILCHECK(UGCACTR)) = (-I));
  /* line 2399: */
  /* line 2400: */
  /* line 2401: */
  /* line 2402: */
  /* line 2403: */
-VGCACTR = (&(OGCACTR_a->Deflex)) ;
-MGCACTR = (-((*VGCACTR) = (-A_CALLPROC(NL(FVBACTR_insertarray),(A_CALLPROC(NL(JGCACTR_deflex),((*(&(OGCACTR_a->Mode)))),((*(&(OGCACTR_a->Mode))),(NL(JGCACTR_deflex)).nonlocals)), (*(&(OGCACTR_a->Nods))), 1),(A_CALLPROC(NL(JGCACTR_deflex),((*(&(OGCACTR_a->Mode)))),((*(&(OGCACTR_a->Mode))),(NL(JGCACTR_deflex)).nonlocals)), (*(&(OGCACTR_a->Nods))), 1,(NL(FVBACTR_insertarray)).nonlocals)))));
+VGCACTR = (&(A_NILCHECK(OGCACTR_a)->Deflex)) ;
+MGCACTR = (-((*A_NILCHECK(VGCACTR)) = (-A_CALLPROC(NL(FVBACTR_insertarray),(A_CALLPROC(NL(JGCACTR_deflex),((*A_NILCHECK((&(A_NILCHECK(OGCACTR_a)->Mode))))),((*A_NILCHECK((&(A_NILCHECK(OGCACTR_a)->Mode)))),(NL(JGCACTR_deflex)).nonlocals)), (*A_NILCHECK((&(A_NILCHECK(OGCACTR_a)->Nods)))), 1),(A_CALLPROC(NL(JGCACTR_deflex),((*A_NILCHECK((&(A_NILCHECK(OGCACTR_a)->Mode))))),((*A_NILCHECK((&(A_NILCHECK(OGCACTR_a)->Mode)))),(NL(JGCACTR_deflex)).nonlocals)), (*A_NILCHECK((&(A_NILCHECK(OGCACTR_a)->Nods)))), 1,(NL(FVBACTR_insertarray)).nonlocals)))));
 } 
 else
 { 
  /* line 2404: */
-WGCACTR = (*(&(OGCACTR_a->Deflex))) ;
+WGCACTR = (*A_NILCHECK((&(A_NILCHECK(OGCACTR_a)->Deflex)))) ;
 MGCACTR = A_ABS(WGCACTR);
 } 
 } 
@@ -15537,25 +15537,25 @@ XGCACTR_v = (NGCACTR.data.mode7);
  /* line 2405: */
  /* line 2406: */
  /* line 2407: */
-if ((*(&(XGCACTR_v->Deflex)))==0)
+if ((*A_NILCHECK((&(A_NILCHECK(XGCACTR_v)->Deflex))))==0)
 { 
 MGCACTR = I;
 } 
 else
 { 
  /* line 2408: */
-if ((*(&(XGCACTR_v->Deflex)))==1)
+if ((*A_NILCHECK((&(A_NILCHECK(XGCACTR_v)->Deflex))))==1)
 { 
  /* line 2409: */
-ZGCACTR = (&(XGCACTR_v->Deflex)) ;
-(*ZGCACTR) = 0;
+ZGCACTR = (&(A_NILCHECK(XGCACTR_v)->Deflex)) ;
+(*A_NILCHECK(ZGCACTR)) = 0;
  /* line 2410: */
  /* line 2411: */
-AHCACTR = ((YGCACTR_j = A_CALLPROC(NL(JGCACTR_deflex),((*(&(XGCACTR_v->Vecmode)))),((*(&(XGCACTR_v->Vecmode))),(NL(JGCACTR_deflex)).nonlocals)))==(*(&(XGCACTR_v->Vecmode))));
+AHCACTR = ((YGCACTR_j = A_CALLPROC(NL(JGCACTR_deflex),((*A_NILCHECK((&(A_NILCHECK(XGCACTR_v)->Vecmode))))),((*A_NILCHECK((&(A_NILCHECK(XGCACTR_v)->Vecmode)))),(NL(JGCACTR_deflex)).nonlocals)))==(*A_NILCHECK((&(A_NILCHECK(XGCACTR_v)->Vecmode)))));
 if (AHCACTR)
 { 
-BHCACTR = (&(XGCACTR_v->Deflex)) ;
-(*BHCACTR) = 0;
+BHCACTR = (&(A_NILCHECK(XGCACTR_v)->Deflex)) ;
+(*A_NILCHECK(BHCACTR)) = 0;
  /* line 2412: */
  /* line 2413: */
 MGCACTR = I;
@@ -15564,29 +15564,29 @@ else
 { 
  /* line 2414: */
  /* line 2415: */
-CHCACTR = (&(XGCACTR_v->Deflex)) ;
-MGCACTR = (*CHCACTR) = A_CALLPROC(NL(ZVBACTR_insertvec),(YGCACTR_j, 1),(YGCACTR_j, 1,(NL(ZVBACTR_insertvec)).nonlocals));
+CHCACTR = (&(A_NILCHECK(XGCACTR_v)->Deflex)) ;
+MGCACTR = (*A_NILCHECK(CHCACTR)) = A_CALLPROC(NL(ZVBACTR_insertvec),(YGCACTR_j, 1),(YGCACTR_j, 1,(NL(ZVBACTR_insertvec)).nonlocals));
 } 
 } 
 else
 { 
  /* line 2416: */
-if ((*(&(XGCACTR_v->Deflex)))==(-1))
+if ((*A_NILCHECK((&(A_NILCHECK(XGCACTR_v)->Deflex))))==(-1))
 { 
-DHCACTR = (&(XGCACTR_v->Deflex)) ;
-(void)((*DHCACTR) = (-I));
+DHCACTR = (&(A_NILCHECK(XGCACTR_v)->Deflex)) ;
+(void)((*A_NILCHECK(DHCACTR)) = (-I));
  /* line 2417: */
  /* line 2418: */
  /* line 2419: */
  /* line 2420: */
  /* line 2421: */
-EHCACTR = (&(XGCACTR_v->Deflex)) ;
-MGCACTR = (-((*EHCACTR) = (-A_CALLPROC(NL(ZVBACTR_insertvec),(A_CALLPROC(NL(JGCACTR_deflex),((*(&(XGCACTR_v->Vecmode)))),((*(&(XGCACTR_v->Vecmode))),(NL(JGCACTR_deflex)).nonlocals)), 1),(A_CALLPROC(NL(JGCACTR_deflex),((*(&(XGCACTR_v->Vecmode)))),((*(&(XGCACTR_v->Vecmode))),(NL(JGCACTR_deflex)).nonlocals)), 1,(NL(ZVBACTR_insertvec)).nonlocals)))));
+EHCACTR = (&(A_NILCHECK(XGCACTR_v)->Deflex)) ;
+MGCACTR = (-((*A_NILCHECK(EHCACTR)) = (-A_CALLPROC(NL(ZVBACTR_insertvec),(A_CALLPROC(NL(JGCACTR_deflex),((*A_NILCHECK((&(A_NILCHECK(XGCACTR_v)->Vecmode))))),((*A_NILCHECK((&(A_NILCHECK(XGCACTR_v)->Vecmode)))),(NL(JGCACTR_deflex)).nonlocals)), 1),(A_CALLPROC(NL(JGCACTR_deflex),((*A_NILCHECK((&(A_NILCHECK(XGCACTR_v)->Vecmode))))),((*A_NILCHECK((&(A_NILCHECK(XGCACTR_v)->Vecmode)))),(NL(JGCACTR_deflex)).nonlocals)), 1,(NL(ZVBACTR_insertvec)).nonlocals)))));
 } 
 else
 { 
  /* line 2422: */
-FHCACTR = (*(&(XGCACTR_v->Deflex))) ;
+FHCACTR = (*A_NILCHECK((&(A_NILCHECK(XGCACTR_v)->Deflex)))) ;
 MGCACTR = A_ABS(FHCACTR);
 } 
 } 
@@ -15597,25 +15597,25 @@ GHCACTR_is = (NGCACTR.data.mode5);
  /* line 2423: */
  /* line 2424: */
  /* line 2425: */
-if ((*(&(GHCACTR_is->Deflex)))==0)
+if ((*A_NILCHECK((&(A_NILCHECK(GHCACTR_is)->Deflex))))==0)
 { 
 MGCACTR = I;
 } 
 else
 { 
  /* line 2426: */
-if ((*(&(GHCACTR_is->Deflex)))==1)
+if ((*A_NILCHECK((&(A_NILCHECK(GHCACTR_is)->Deflex))))==1)
 { 
  /* line 2427: */
-IHCACTR = (&(GHCACTR_is->Deflex)) ;
-(*IHCACTR) = 0;
+IHCACTR = (&(A_NILCHECK(GHCACTR_is)->Deflex)) ;
+(*A_NILCHECK(IHCACTR)) = 0;
  /* line 2428: */
  /* line 2429: */
-JHCACTR = ((HHCACTR_j = A_CALLPROC(NL(JGCACTR_deflex),((*(&(GHCACTR_is->Imode)))),((*(&(GHCACTR_is->Imode))),(NL(JGCACTR_deflex)).nonlocals)))==(*(&(GHCACTR_is->Imode))));
+JHCACTR = ((HHCACTR_j = A_CALLPROC(NL(JGCACTR_deflex),((*A_NILCHECK((&(A_NILCHECK(GHCACTR_is)->Imode))))),((*A_NILCHECK((&(A_NILCHECK(GHCACTR_is)->Imode)))),(NL(JGCACTR_deflex)).nonlocals)))==(*A_NILCHECK((&(A_NILCHECK(GHCACTR_is)->Imode)))));
 if (JHCACTR)
 { 
-KHCACTR = (&(GHCACTR_is->Deflex)) ;
-(*KHCACTR) = 0;
+KHCACTR = (&(A_NILCHECK(GHCACTR_is)->Deflex)) ;
+(*A_NILCHECK(KHCACTR)) = 0;
  /* line 2430: */
  /* line 2431: */
 MGCACTR = I;
@@ -15625,14 +15625,14 @@ else
  /* line 2432: */
  /* line 2433: */
  /* line 2434: */
-LHCACTR = (&(GHCACTR_is->Deflex)) ;
-MGCACTR = (*LHCACTR) = A_CALLPROC(NL(TWBACTR_insertis),(HHCACTR_j, (*(&(GHCACTR_is->Length)))),(HHCACTR_j, (*(&(GHCACTR_is->Length))),(NL(TWBACTR_insertis)).nonlocals));
+LHCACTR = (&(A_NILCHECK(GHCACTR_is)->Deflex)) ;
+MGCACTR = (*A_NILCHECK(LHCACTR)) = A_CALLPROC(NL(TWBACTR_insertis),(HHCACTR_j, (*A_NILCHECK((&(A_NILCHECK(GHCACTR_is)->Length))))),(HHCACTR_j, (*A_NILCHECK((&(A_NILCHECK(GHCACTR_is)->Length)))),(NL(TWBACTR_insertis)).nonlocals));
 } 
 } 
 else
 { 
  /* line 2435: */
-MGCACTR = (*(&(GHCACTR_is->Deflex)));
+MGCACTR = (*A_NILCHECK((&(A_NILCHECK(GHCACTR_is)->Deflex))));
 } 
 } 
 break;
@@ -15641,19 +15641,19 @@ MHCACTR_s = (NGCACTR.data.mode4);
  /* line 2436: */
  /* line 2437: */
  /* line 2438: */
-if ((*(&(MHCACTR_s->Deflex)))==0)
+if ((*A_NILCHECK((&(A_NILCHECK(MHCACTR_s)->Deflex))))==0)
 { 
 MGCACTR = I;
 } 
 else
 { 
  /* line 2439: */
-if ((*(&(MHCACTR_s->Deflex)))==1)
+if ((*A_NILCHECK((&(A_NILCHECK(MHCACTR_s)->Deflex))))==1)
 { 
-PHCACTR_sel = (*(&(MHCACTR_s->Sels)));
+PHCACTR_sel = (*A_NILCHECK((&(A_NILCHECK(MHCACTR_s)->Sels))));
  /* line 2440: */
-QHCACTR = (&(MHCACTR_s->Deflex)) ;
-(*QHCACTR) = 0;
+QHCACTR = (&(A_NILCHECK(MHCACTR_s)->Deflex)) ;
+(*A_NILCHECK(QHCACTR)) = 0;
  /* line 2442: */
 for ( ;; )
 { 
@@ -15661,24 +15661,24 @@ for ( ;; )
 RHCACTR = (PHCACTR_sel!=RQAACTR_nilsel);
 if ( RHCACTR )
 { /* line 2444: */
-RHCACTR = (A_CALLPROC(NL(JGCACTR_deflex),((*(&(PHCACTR_sel->Mode)))),((*(&(PHCACTR_sel->Mode))),(NL(JGCACTR_deflex)).nonlocals))==(*(&(PHCACTR_sel->Mode))));
+RHCACTR = (A_CALLPROC(NL(JGCACTR_deflex),((*A_NILCHECK((&(A_NILCHECK(PHCACTR_sel)->Mode))))),((*A_NILCHECK((&(A_NILCHECK(PHCACTR_sel)->Mode)))),(NL(JGCACTR_deflex)).nonlocals))==(*A_NILCHECK((&(A_NILCHECK(PHCACTR_sel)->Mode)))));
 }
 if ( !(RHCACTR) ) break;
-(void)(PHCACTR_sel = (*(&(PHCACTR_sel->Rest))));
+(void)(PHCACTR_sel = (*A_NILCHECK((&(A_NILCHECK(PHCACTR_sel)->Rest)))));
 }
  /* line 2446: */
  /* line 2447: */
 if (PHCACTR_sel==RQAACTR_nilsel)
 { 
-SHCACTR = (&(MHCACTR_s->Deflex)) ;
-(*SHCACTR) = 0;
+SHCACTR = (&(A_NILCHECK(MHCACTR_s)->Deflex)) ;
+(*A_NILCHECK(SHCACTR)) = 0;
  /* line 2448: */
  /* line 2449: */
 MGCACTR = I;
 } 
 else
 { 
-(void)(PHCACTR_sel = (*(&(MHCACTR_s->Sels))));
+(void)(PHCACTR_sel = (*A_NILCHECK((&(A_NILCHECK(MHCACTR_s)->Sels)))));
  /* line 2450: */
 NHCACTR_csel = (A68_58 *)A68_NIL;
  /* line 2452: */
@@ -15687,29 +15687,29 @@ for ( ;; )
  /* line 2453: */
 if ( !((PHCACTR_sel!=RQAACTR_nilsel)) ) break;
 THCACTR = A_HEAP(A68_58 ) ;
-(void)((*THCACTR) = (*PHCACTR_sel)) ;
+(void)((*A_NILCHECK(THCACTR)) = (*A_NILCHECK(PHCACTR_sel))) ;
 OHCACTR_dsel = THCACTR;
  /* line 2454: */
-UHCACTR = (&(OHCACTR_dsel->Rest)) ;
-(*UHCACTR) = NHCACTR_csel;
+UHCACTR = (&(A_NILCHECK(OHCACTR_dsel)->Rest)) ;
+(*A_NILCHECK(UHCACTR)) = NHCACTR_csel;
  /* line 2455: */
 NHCACTR_csel = OHCACTR_dsel;
  /* line 2456: */
-VHCACTR = (&(NHCACTR_csel->Mode)) ;
-(void)((*VHCACTR) = A_CALLPROC(NL(JGCACTR_deflex),((*(&(NHCACTR_csel->Mode)))),((*(&(NHCACTR_csel->Mode))),(NL(JGCACTR_deflex)).nonlocals)));
+VHCACTR = (&(A_NILCHECK(NHCACTR_csel)->Mode)) ;
+(void)((*A_NILCHECK(VHCACTR)) = A_CALLPROC(NL(JGCACTR_deflex),((*A_NILCHECK((&(A_NILCHECK(NHCACTR_csel)->Mode))))),((*A_NILCHECK((&(A_NILCHECK(NHCACTR_csel)->Mode)))),(NL(JGCACTR_deflex)).nonlocals)));
  /* line 2457: */
  /* line 2458: */
-(void)(PHCACTR_sel = (*(&(PHCACTR_sel->Rest))));
+(void)(PHCACTR_sel = (*A_NILCHECK((&(A_NILCHECK(PHCACTR_sel)->Rest)))));
 }
  /* line 2460: */
 for ( ;; )
 { 
  /* line 2461: */
 if ( !((NHCACTR_csel!=RQAACTR_nilsel)) ) break;
-(void)(OHCACTR_dsel = (*(&(NHCACTR_csel->Rest))));
+(void)(OHCACTR_dsel = (*A_NILCHECK((&(A_NILCHECK(NHCACTR_csel)->Rest)))));
  /* line 2462: */
-WHCACTR = (&(NHCACTR_csel->Rest)) ;
-(*WHCACTR) = PHCACTR_sel;
+WHCACTR = (&(A_NILCHECK(NHCACTR_csel)->Rest)) ;
+(*A_NILCHECK(WHCACTR)) = PHCACTR_sel;
  /* line 2463: */
 PHCACTR_sel = NHCACTR_csel;
  /* line 2464: */
@@ -15720,15 +15720,15 @@ NHCACTR_csel = OHCACTR_dsel;
  /* line 2467: */
  /* line 2468: */
  /* line 2469: */
-XHCACTR = (&(MHCACTR_s->Deflex)) ;
-MGCACTR = (*XHCACTR) = A_CALLPROC(NL(LTBACTR_insertstrct),(0, PHCACTR_sel),(0, PHCACTR_sel,(NL(LTBACTR_insertstrct)).nonlocals));
+XHCACTR = (&(A_NILCHECK(MHCACTR_s)->Deflex)) ;
+MGCACTR = (*A_NILCHECK(XHCACTR)) = A_CALLPROC(NL(LTBACTR_insertstrct),(0, PHCACTR_sel),(0, PHCACTR_sel,(NL(LTBACTR_insertstrct)).nonlocals));
 } 
 } 
 else
 { 
  /* line 2470: */
  /* line 2471: */
-MGCACTR = (*(&(MHCACTR_s->Deflex)));
+MGCACTR = (*A_NILCHECK((&(A_NILCHECK(MHCACTR_s)->Deflex))));
 } 
 } 
 break;
@@ -15793,23 +15793,23 @@ JICACTR = M;
 else
 { 
  /* line 2481: */
-KICACTR = (*(&A_VINDEX(NL(KUAACTR_modes),M))) ;
+KICACTR = (*A_NILCHECK((&A_VINDEX(NL(KUAACTR_modes),M)))) ;
 switch ( KICACTR.mode )
 { 
 case 8: /* REF STRUCT(INT,INT,INT,INT)  */
 LICACTR_a = (KICACTR.data.mode8);
  /* line 2482: */
 { 
-(void)(CICACTR_i = (*(&(LICACTR_a->Mode))));
+(void)(CICACTR_i = (*A_NILCHECK((&(A_NILCHECK(LICACTR_a)->Mode)))));
  /* line 2483: */
  /* line 2484: */
-MICACTR = ((*(&(LICACTR_a->Nods)))-1);
+MICACTR = ((*A_NILCHECK((&(A_NILCHECK(LICACTR_a)->Nods))))-1);
 for ( NICACTR = 1;
 NICACTR <= MICACTR;
 NICACTR += 1 )
 { 
  /* line 2485: */
-OICACTR = (*(&A_VINDEX(NL(KUAACTR_modes),CICACTR_i))) ;
+OICACTR = (*A_NILCHECK((&A_VINDEX(NL(KUAACTR_modes),CICACTR_i)))) ;
 switch ( OICACTR.mode )
 { 
 case 8: /* REF STRUCT(INT,INT,INT,INT)  */
@@ -15817,7 +15817,7 @@ PICACTR_a1 = (OICACTR.data.mode8);
  /* line 2486: */
  /* line 2487: */
  /* line 2488: */
-(void)(CICACTR_i = (*(&(PICACTR_a1->Mode))));
+(void)(CICACTR_i = (*A_NILCHECK((&(A_NILCHECK(PICACTR_a1)->Mode)))));
 break;
 default: 
 A_IMP_SKIP ;
@@ -15828,7 +15828,7 @@ break;
 (void)(CICACTR_i = A_CALLPROC(NL(ZHCACTR_enflex),(CICACTR_i),(CICACTR_i,(NL(ZHCACTR_enflex)).nonlocals)));
  /* line 2490: */
  /* line 2491: */
-RICACTR = ((*(&(LICACTR_a->Nods)))-1);
+RICACTR = ((*A_NILCHECK((&(A_NILCHECK(LICACTR_a)->Nods))))-1);
 for ( QICACTR_k = 1;
 QICACTR_k <= RICACTR;
 QICACTR_k += 1 )
@@ -15838,20 +15838,20 @@ QICACTR_k += 1 )
  /* line 2492: */
  /* line 2493: */
  /* line 2494: */
-JICACTR = A_CALLPROC(NL(FVBACTR_insertarray),(CICACTR_i, (*(&(LICACTR_a->Nods))), (-1)),(CICACTR_i, (*(&(LICACTR_a->Nods))), (-1),(NL(FVBACTR_insertarray)).nonlocals));
+JICACTR = A_CALLPROC(NL(FVBACTR_insertarray),(CICACTR_i, (*A_NILCHECK((&(A_NILCHECK(LICACTR_a)->Nods)))), (-1)),(CICACTR_i, (*A_NILCHECK((&(A_NILCHECK(LICACTR_a)->Nods)))), (-1),(NL(FVBACTR_insertarray)).nonlocals));
 } 
 break;
 case 7: /* REF STRUCT(INT,INT,INT)  */
 SICACTR_v = (KICACTR.data.mode7);
  /* line 2495: */
  /* line 2496: */
-JICACTR = A_CALLPROC(NL(ZVBACTR_insertvec),(A_CALLPROC(NL(ZHCACTR_enflex),((*(&(SICACTR_v->Vecmode)))),((*(&(SICACTR_v->Vecmode))),(NL(ZHCACTR_enflex)).nonlocals)), (-1)),(A_CALLPROC(NL(ZHCACTR_enflex),((*(&(SICACTR_v->Vecmode)))),((*(&(SICACTR_v->Vecmode))),(NL(ZHCACTR_enflex)).nonlocals)), (-1),(NL(ZVBACTR_insertvec)).nonlocals));
+JICACTR = A_CALLPROC(NL(ZVBACTR_insertvec),(A_CALLPROC(NL(ZHCACTR_enflex),((*A_NILCHECK((&(A_NILCHECK(SICACTR_v)->Vecmode))))),((*A_NILCHECK((&(A_NILCHECK(SICACTR_v)->Vecmode)))),(NL(ZHCACTR_enflex)).nonlocals)), (-1)),(A_CALLPROC(NL(ZHCACTR_enflex),((*A_NILCHECK((&(A_NILCHECK(SICACTR_v)->Vecmode))))),((*A_NILCHECK((&(A_NILCHECK(SICACTR_v)->Vecmode)))),(NL(ZHCACTR_enflex)).nonlocals)), (-1),(NL(ZVBACTR_insertvec)).nonlocals));
 break;
 case 5: /* REF STRUCT(INT,INT,INT,INT)  */
 TICACTR_is = (KICACTR.data.mode5);
  /* line 2497: */
  /* line 2498: */
-JICACTR = A_CALLPROC(NL(TWBACTR_insertis),(A_CALLPROC(NL(ZHCACTR_enflex),((*(&(TICACTR_is->Imode)))),((*(&(TICACTR_is->Imode))),(NL(ZHCACTR_enflex)).nonlocals)), (*(&(TICACTR_is->Length)))),(A_CALLPROC(NL(ZHCACTR_enflex),((*(&(TICACTR_is->Imode)))),((*(&(TICACTR_is->Imode))),(NL(ZHCACTR_enflex)).nonlocals)), (*(&(TICACTR_is->Length))),(NL(TWBACTR_insertis)).nonlocals));
+JICACTR = A_CALLPROC(NL(TWBACTR_insertis),(A_CALLPROC(NL(ZHCACTR_enflex),((*A_NILCHECK((&(A_NILCHECK(TICACTR_is)->Imode))))),((*A_NILCHECK((&(A_NILCHECK(TICACTR_is)->Imode)))),(NL(ZHCACTR_enflex)).nonlocals)), (*A_NILCHECK((&(A_NILCHECK(TICACTR_is)->Length))))),(A_CALLPROC(NL(ZHCACTR_enflex),((*A_NILCHECK((&(A_NILCHECK(TICACTR_is)->Imode))))),((*A_NILCHECK((&(A_NILCHECK(TICACTR_is)->Imode)))),(NL(ZHCACTR_enflex)).nonlocals)), (*A_NILCHECK((&(A_NILCHECK(TICACTR_is)->Length)))),(NL(TWBACTR_insertis)).nonlocals));
 break;
 case 4: /* REF STRUCT(INT,INT,REF MODE58)  */
 UICACTR_s = (KICACTR.data.mode4);
@@ -15859,7 +15859,7 @@ UICACTR_s = (KICACTR.data.mode4);
 { 
 (void)(EICACTR_rsel = (&GICACTR_new));
  /* line 2500: */
-(void)(FICACTR_old = (*(&(UICACTR_s->Sels))));
+(void)(FICACTR_old = (*A_NILCHECK((&(A_NILCHECK(UICACTR_s)->Sels)))));
  /* line 2502: */
 for ( ;; )
 { 
@@ -15867,17 +15867,17 @@ for ( ;; )
 if ( !((FICACTR_old!=RQAACTR_nilsel)) ) break;
  /* line 2504: */
 VICACTR = A_HEAP(A68_58 ) ;
-(void)((*VICACTR) = (*FICACTR_old)) ;
-(*EICACTR_rsel) = VICACTR;
+(void)((*A_NILCHECK(VICACTR)) = (*A_NILCHECK(FICACTR_old))) ;
+(*A_NILCHECK(EICACTR_rsel)) = VICACTR;
  /* line 2505: */
-WICACTR = (&((*EICACTR_rsel)->Mode)) ;
-(void)((*WICACTR) = A_CALLPROC(NL(ZHCACTR_enflex),((*(&(FICACTR_old->Mode)))),((*(&(FICACTR_old->Mode))),(NL(ZHCACTR_enflex)).nonlocals)));
+WICACTR = (&(A_NILCHECK((*A_NILCHECK(EICACTR_rsel)))->Mode)) ;
+(void)((*A_NILCHECK(WICACTR)) = A_CALLPROC(NL(ZHCACTR_enflex),((*A_NILCHECK((&(A_NILCHECK(FICACTR_old)->Mode))))),((*A_NILCHECK((&(A_NILCHECK(FICACTR_old)->Mode)))),(NL(ZHCACTR_enflex)).nonlocals)));
  /* line 2506: */
-(void)(FICACTR_old = (*(&(FICACTR_old->Rest))));
+(void)(FICACTR_old = (*A_NILCHECK((&(A_NILCHECK(FICACTR_old)->Rest)))));
  /* line 2507: */
  /* line 2508: */
-XICACTR = (&((*EICACTR_rsel)->Rest)) ;
-(void)((*XICACTR) = (A68_58 *)A68_NIL) ;
+XICACTR = (&(A_NILCHECK((*A_NILCHECK(EICACTR_rsel)))->Rest)) ;
+(void)((*A_NILCHECK(XICACTR)) = (A68_58 *)A68_NIL) ;
 EICACTR_rsel = XICACTR;
 }
  /* line 2509: */
@@ -15921,14 +15921,14 @@ A68_106  JJCACTR = {0};  /* OPERATORS - mode -> union mode */
 A_PROC_ENTRY(deref);
  /* line 2520: */
 { 
-HJCACTR = (&(V->Mode)) ;
-(void)((*HJCACTR) = A_CALLPROC(NL(JGCACTR_deflex),(((*(&(V->Mode)))-KQAACTR_refmark)),(((*(&(V->Mode)))-KQAACTR_refmark),(NL(JGCACTR_deflex)).nonlocals)));
+HJCACTR = (&(A_NILCHECK(V)->Mode)) ;
+(void)((*A_NILCHECK(HJCACTR)) = A_CALLPROC(NL(JGCACTR_deflex),(((*A_NILCHECK((&(A_NILCHECK(V)->Mode))))-KQAACTR_refmark)),(((*A_NILCHECK((&(A_NILCHECK(V)->Mode))))-KQAACTR_refmark),(NL(JGCACTR_deflex)).nonlocals)));
  /* line 2521: */
 IJCACTR.Fn = ZNAACTR_xderef;
-IJCACTR.M = (*(&(V->Mode)));
+IJCACTR.M = (*A_NILCHECK((&(A_NILCHECK(V)->Mode))));
 IJCACTR.Param = 0;
  /* line 2522: */
-(void)(A_CALLPROC(NL(Output),(A_UNITE(JJCACTR,mode14,14,IJCACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(JJCACTR,mode14,14,IJCACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(JJCACTR,mode14,14,IJCACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(JJCACTR,mode14,14,IJCACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
 } 
 A_PROC_EXIT(deref);
 return;
@@ -15949,8 +15949,8 @@ A68_BITS * VJCACTR;  /* YIELD */
 A_PROC_ENTRY(deproc);
  /* line 2525: */
  /* line 2526: */
-OJCACTR = (*(&(V->Mode))) ;
-PJCACTR = (*(&A_VINDEX(NL(KUAACTR_modes),OJCACTR))) ;
+OJCACTR = (*A_NILCHECK((&(A_NILCHECK(V)->Mode)))) ;
+PJCACTR = (*A_NILCHECK((&A_VINDEX(NL(KUAACTR_modes),OJCACTR)))) ;
 switch ( PJCACTR.mode )
 { 
 case 6: /* REF STRUCT(INT)  */
@@ -15958,28 +15958,28 @@ QJCACTR_p = (PJCACTR.data.mode6);
  /* line 2527: */
 { 
  /* line 2528: */
-if (*NL(XZAACTR_burestrict))
+if (*A_NILCHECK(NL(XZAACTR_burestrict)))
 { 
  /* line 2530: */
 (void)(A_CALLPROC(NL(QJBACTR_fault),(108),(108,(NL(QJBACTR_fault)).nonlocals)));
 } 
  /* line 2531: */
 RJCACTR.Fn = AOAACTR_xcall;
-RJCACTR.M = (*(&(QJCACTR_p->Deproc)));
+RJCACTR.M = (*A_NILCHECK((&(A_NILCHECK(QJCACTR_p)->Deproc))));
 RJCACTR.Param = 0;
-(void)(A_CALLPROC(NL(Output),(A_UNITE(SJCACTR,mode14,14,RJCACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(SJCACTR,mode14,14,RJCACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(SJCACTR,mode14,14,RJCACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(SJCACTR,mode14,14,RJCACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 2532: */
  /* line 2533: */
-TJCACTR = (&(V->Mode)) ;
-UJCACTR = A_CALLPROC(NL(VECACTR_marker),((*TJCACTR) = (*(&(QJCACTR_p->Deproc)))),((*TJCACTR) = (*(&(QJCACTR_p->Deproc))),(NL(VECACTR_marker)).nonlocals)) ;
+TJCACTR = (&(A_NILCHECK(V)->Mode)) ;
+UJCACTR = A_CALLPROC(NL(VECACTR_marker),((*A_NILCHECK(TJCACTR)) = (*A_NILCHECK((&(A_NILCHECK(QJCACTR_p)->Deproc))))),((*A_NILCHECK(TJCACTR)) = (*A_NILCHECK((&(A_NILCHECK(QJCACTR_p)->Deproc)))),(NL(VECACTR_marker)).nonlocals)) ;
 if (A_ABS(UJCACTR)>=2)
 { 
  /* line 2534: */
  /* line 2535: */
  /* line 2536: */
  /* line 2537: */
-VJCACTR = (&((*NL(QYAACTR_globcurrent))->Dybits)) ;
-(void)((*VJCACTR) = (A68_BITS )((*(&((*NL(QYAACTR_globcurrent))->Dybits)))|AMAACTR_dyprocbit));
+VJCACTR = (&(A_NILCHECK((*A_NILCHECK(NL(QYAACTR_globcurrent))))->Dybits)) ;
+(void)((*A_NILCHECK(VJCACTR)) = (A68_BITS )((*A_NILCHECK((&(A_NILCHECK((*A_NILCHECK(NL(QYAACTR_globcurrent))))->Dybits))))|AMAACTR_dyprocbit));
 } 
 } 
 break;
@@ -16009,14 +16009,14 @@ BKCACTR_aa: A_UNUSED;
 (void)(CKCACTR_ans = (A68_INT )(A68_BITS )((A68_BITS )CKCACTR_ans&LQAACTR_decsmask));
  /* line 2543: */
  /* line 2544: */
-DKCACTR = (*(&A_VINDEX(NL(KUAACTR_modes),CKCACTR_ans))) ;
+DKCACTR = (*A_NILCHECK((&A_VINDEX(NL(KUAACTR_modes),CKCACTR_ans)))) ;
 switch ( DKCACTR.mode )
 { 
 case 6: /* REF STRUCT(INT)  */
 EKCACTR_p = (DKCACTR.data.mode6);
  /* line 2545: */
 { 
-(void)(CKCACTR_ans = (*(&(EKCACTR_p->Deproc))));
+(void)(CKCACTR_ans = (*A_NILCHECK((&(A_NILCHECK(EKCACTR_p)->Deproc)))));
  /* line 2546: */
  /* line 2547: */
  /* line 2548: */
@@ -16050,7 +16050,7 @@ A68_55 * VKCACTR_p A_UNUSED = {0};
 A_PROC_ENTRY(depref);
  /* line 2558: */
  /* line 2559: */
-if (!(*NL(GKCACTR_deprefable)))
+if (!(*A_NILCHECK(NL(GKCACTR_deprefable))))
 { 
  /* line 2560: */
 PKCACTR = (Frommode==Tomode);
@@ -16084,7 +16084,7 @@ if (Code)
 else
 { 
  /* line 2568: */
-UKCACTR = (*(&A_VINDEX(NL(KUAACTR_modes),QKCACTR_f))) ;
+UKCACTR = (*A_NILCHECK((&A_VINDEX(NL(KUAACTR_modes),QKCACTR_f)))) ;
 switch ( UKCACTR.mode )
 { 
 case 6: /* REF STRUCT(INT)  */
@@ -16098,7 +16098,7 @@ if (Code)
  /* line 2570: */
  /* line 2571: */
  /* line 2572: */
-(void)(QKCACTR_f = (*(&(VKCACTR_p->Deproc))));
+(void)(QKCACTR_f = (*A_NILCHECK((&(A_NILCHECK(VKCACTR_p)->Deproc)))));
 } 
 break;
 default: 
@@ -16147,7 +16147,7 @@ CLCACTR_m-=KQAACTR_refmark;
 else
 { 
  /* line 2586: */
-ELCACTR = (*(&A_VINDEX(NL(KUAACTR_modes),CLCACTR_m))) ;
+ELCACTR = (*A_NILCHECK((&A_VINDEX(NL(KUAACTR_modes),CLCACTR_m)))) ;
 switch ( ELCACTR.mode )
 { 
 case 6: /* REF STRUCT(INT)  */
@@ -16158,7 +16158,7 @@ DLCACTR_qref = 0;
  /* line 2588: */
  /* line 2589: */
  /* line 2590: */
-(void)(CLCACTR_m = (*(&(FLCACTR_p->Deproc))));
+(void)(CLCACTR_m = (*A_NILCHECK((&(A_NILCHECK(FLCACTR_p)->Deproc)))));
 } 
 break;
 default: 
@@ -16194,7 +16194,7 @@ A68_INT  WLCACTR;  /* clause result */
 A_PROC_ENTRY(unite);
  /* line 2598: */
  /* line 2599: */
-PLCACTR = (*(&A_VINDEX(NL(KUAACTR_modes),T))) ;
+PLCACTR = (*A_NILCHECK((&A_VINDEX(NL(KUAACTR_modes),T)))) ;
 switch ( PLCACTR.mode )
 { 
 case 2: /* REF STRUCT(INT,REF MODE54)  */
@@ -16203,7 +16203,7 @@ QLCACTR_u = (PLCACTR.data.mode2);
 { 
 RLCACTR_ans = 0;
  /* line 2601: */
-SLCACTR_ml = (*(&(QLCACTR_u->Modelist)));
+SLCACTR_ml = (*A_NILCHECK((&(A_NILCHECK(QLCACTR_u)->Modelist))));
  /* line 2602: */
  /* line 2603: */
 for ( TLCACTR_i = 1;;
@@ -16216,7 +16216,7 @@ if ( ULCACTR )
 {ULCACTR = (RLCACTR_ans==0);
 }
  /* line 2605: */
-if (A_CALLPROC((*NL(HKCACTR_coerce1)),(V, F, (*(&(SLCACTR_ml->Mode))), Str, ULCACTR),(V, F, (*(&(SLCACTR_ml->Mode))), Str, ULCACTR,((*NL(HKCACTR_coerce1))).nonlocals)))
+if (A_CALLPROC((*A_NILCHECK(NL(HKCACTR_coerce1))),(V, F, (*A_NILCHECK((&(A_NILCHECK(SLCACTR_ml)->Mode)))), Str, ULCACTR),(V, F, (*A_NILCHECK((&(A_NILCHECK(SLCACTR_ml)->Mode)))), Str, ULCACTR,((*A_NILCHECK(NL(HKCACTR_coerce1)))).nonlocals)))
 { 
  /* line 2606: */
 VLCACTR = (RLCACTR_ans!=0);
@@ -16238,7 +16238,7 @@ RLCACTR_ans = TLCACTR_i;
 } 
  /* line 2611: */
  /* line 2612: */
-(void)(SLCACTR_ml = (*(&(SLCACTR_ml->Rest))));
+(void)(SLCACTR_ml = (*A_NILCHECK((&(A_NILCHECK(SLCACTR_ml)->Rest)))));
 }
  /* line 2613: */
  /* line 2614: */
@@ -16272,30 +16272,30 @@ BMCACTR_ans = M;
 if (M<KQAACTR_refmark)
 { 
  /* line 2621: */
-CMCACTR = (*(&A_VINDEX(NL(KUAACTR_modes),M))) ;
+CMCACTR = (*A_NILCHECK((&A_VINDEX(NL(KUAACTR_modes),M)))) ;
 switch ( CMCACTR.mode )
 { 
 case 7: /* REF STRUCT(INT,INT,INT)  */
 DMCACTR_v = (CMCACTR.data.mode7);
  /* line 2622: */
  /* line 2623: */
-if ((*(&(DMCACTR_v->Deflex)))>=0)
+if ((*A_NILCHECK((&(A_NILCHECK(DMCACTR_v)->Deflex))))>=0)
 { 
  /* line 2624: */
  /* line 2625: */
-(void)(BMCACTR_ans = A_CALLPROC(NL(ZVBACTR_insertvec),((*(&(DMCACTR_v->Vecmode))), (-1)),((*(&(DMCACTR_v->Vecmode))), (-1),(NL(ZVBACTR_insertvec)).nonlocals)));
+(void)(BMCACTR_ans = A_CALLPROC(NL(ZVBACTR_insertvec),((*A_NILCHECK((&(A_NILCHECK(DMCACTR_v)->Vecmode)))), (-1)),((*A_NILCHECK((&(A_NILCHECK(DMCACTR_v)->Vecmode)))), (-1),(NL(ZVBACTR_insertvec)).nonlocals)));
 } 
 break;
 case 8: /* REF STRUCT(INT,INT,INT,INT)  */
 EMCACTR_a = (CMCACTR.data.mode8);
  /* line 2626: */
  /* line 2627: */
-if ((*(&(EMCACTR_a->Deflex)))>=0)
+if ((*A_NILCHECK((&(A_NILCHECK(EMCACTR_a)->Deflex))))>=0)
 { 
  /* line 2628: */
  /* line 2629: */
  /* line 2630: */
-(void)(BMCACTR_ans = A_CALLPROC(NL(FVBACTR_insertarray),((*(&(EMCACTR_a->Mode))), (*(&(EMCACTR_a->Nods))), (-1)),((*(&(EMCACTR_a->Mode))), (*(&(EMCACTR_a->Nods))), (-1),(NL(FVBACTR_insertarray)).nonlocals)));
+(void)(BMCACTR_ans = A_CALLPROC(NL(FVBACTR_insertarray),((*A_NILCHECK((&(A_NILCHECK(EMCACTR_a)->Mode)))), (*A_NILCHECK((&(A_NILCHECK(EMCACTR_a)->Nods)))), (-1)),((*A_NILCHECK((&(A_NILCHECK(EMCACTR_a)->Mode)))), (*A_NILCHECK((&(A_NILCHECK(EMCACTR_a)->Nods)))), (-1),(NL(FVBACTR_insertarray)).nonlocals)));
 } 
 break;
 default: 
@@ -16329,7 +16329,7 @@ A68_56 * TMCACTR_u A_UNUSED = {0};
 A_PROC_ENTRY(strbd);
  /* line 2636: */
  /* line 2637: */
-KMCACTR = (*(&A_VINDEX(NL(KUAACTR_modes),M))) ;
+KMCACTR = (*A_NILCHECK((&A_VINDEX(NL(KUAACTR_modes),M)))) ;
 switch ( KMCACTR.mode )
 { 
 case 4: /* REF STRUCT(INT,INT,REF MODE58)  */
@@ -16337,7 +16337,7 @@ LMCACTR_s = (KMCACTR.data.mode4);
  /* line 2638: */
 { 
  /* line 2639: */
-NMCACTR_sels = (*(&(LMCACTR_s->Sels)));
+NMCACTR_sels = (*A_NILCHECK((&(A_NILCHECK(LMCACTR_s)->Sels))));
  /* line 2640: */
 for ( OMCACTR_i = 1;;
 OMCACTR_i += 1 ) 
@@ -16347,7 +16347,7 @@ if ( !((NMCACTR_sels!=RQAACTR_nilsel)) ) break;
 MMCACTR_j = OMCACTR_i;
  /* line 2642: */
  /* line 2643: */
-(void)(NMCACTR_sels = (*(&(NMCACTR_sels->Rest))));
+(void)(NMCACTR_sels = (*A_NILCHECK((&(A_NILCHECK(NMCACTR_sels)->Rest)))));
 }
  /* line 2644: */
  /* line 2645: */
@@ -16359,7 +16359,7 @@ case 5: /* REF STRUCT(INT,INT,INT,INT)  */
 QMCACTR_is = (KMCACTR.data.mode5);
  /* line 2647: */
  /* line 2648: */
-PMCACTR = (*(&(QMCACTR_is->Length)));
+PMCACTR = (*A_NILCHECK((&(A_NILCHECK(QMCACTR_is)->Length))));
 break;
 case 7: /* REF STRUCT(INT,INT,INT)  */
 RMCACTR_v = (KMCACTR.data.mode7);
@@ -16371,7 +16371,7 @@ case 8: /* REF STRUCT(INT,INT,INT,INT)  */
 SMCACTR_a = (KMCACTR.data.mode8);
  /* line 2651: */
  /* line 2652: */
-PMCACTR = ((-1)-(*(&(SMCACTR_a->Nods))));
+PMCACTR = ((-1)-(*A_NILCHECK((&(A_NILCHECK(SMCACTR_a)->Nods)))));
 break;
 case 2: /* REF STRUCT(INT,REF MODE54)  */
 TMCACTR_u = (KMCACTR.data.mode2);
@@ -16526,7 +16526,7 @@ ENCACTR_p = 1;
  /* line 2668: */
  /* line 2669: */
  /* line 2670: */
-RNCACTR_lastid = (&((*NL(QYAACTR_globcurrent))->Lastid));
+RNCACTR_lastid = (&(A_NILCHECK((*A_NILCHECK(NL(QYAACTR_globcurrent))))->Lastid));
  /* line 2672: */
 A_CLOSURE( UNCACTR_strcoerce, VNCACTR_strcoerce, WNCACTR_strcoerce );
 (( WNCACTR_strcoerce * ) ( UNCACTR_strcoerce.nonlocals )) -> Oldf = Oldf;
@@ -16535,28 +16535,28 @@ A_CLOSURE( UNCACTR_strcoerce, VNCACTR_strcoerce, WNCACTR_strcoerce );
 (( WNCACTR_strcoerce * ) ( UNCACTR_strcoerce.nonlocals )) -> HKCACTR_coerce1 = NL(HKCACTR_coerce1);
 (( WNCACTR_strcoerce * ) ( UNCACTR_strcoerce.nonlocals )) -> ENCACTR_p = (&ENCACTR_p);
  /* line 2684: */
-AOCACTR_olddeprefable = (*NL(GKCACTR_deprefable));
+AOCACTR_olddeprefable = (*A_NILCHECK(NL(GKCACTR_deprefable)));
  /* line 2685: */
-(*NL(GKCACTR_deprefable)) = A68_FALSE;
+(*A_NILCHECK(NL(GKCACTR_deprefable))) = A68_FALSE;
  /* line 2687: */
  /* line 2688: */
-BOCACTR = (*(&A_VINDEX(NL(KUAACTR_modes),T))) ;
+BOCACTR = (*A_NILCHECK((&A_VINDEX(NL(KUAACTR_modes),T)))) ;
 switch ( BOCACTR.mode )
 { 
 case 9: /* REF STRUCT(INT,REF MODE63)  */
 COCACTR_sten = (BOCACTR.data.mode9);
  /* line 2689: */
 { 
-(void)(GNCACTR_rs = (*(&(COCACTR_sten->Stenlist))));
+(void)(GNCACTR_rs = (*A_NILCHECK((&(A_NILCHECK(COCACTR_sten)->Stenlist)))));
  /* line 2691: */
 for ( ;; )
 { 
  /* line 2692: */
 if ( !((GNCACTR_rs!=(A68_63 *)A68_NIL)) ) break;
  /* line 2693: */
-if ((*(&(GNCACTR_rs->Mode)))==Oldf)
+if ((*A_NILCHECK((&(A_NILCHECK(GNCACTR_rs)->Mode))))==Oldf)
 { 
-(void)(ENCACTR_p = (*(&(GNCACTR_rs->Rdenno))));
+(void)(ENCACTR_p = (*A_NILCHECK((&(A_NILCHECK(GNCACTR_rs)->Rdenno)))));
  /* line 2694: */
  /* line 2695: */
 goto CNCACTR_out;
@@ -16565,24 +16565,24 @@ else
 { 
  /* line 2696: */
  /* line 2697: */
-(void)(GNCACTR_rs = (*(&(GNCACTR_rs->Rest))));
+(void)(GNCACTR_rs = (*A_NILCHECK((&(A_NILCHECK(GNCACTR_rs)->Rest)))));
 } 
 }
  /* line 2699: */
  /* line 2700: */
 if (Code)
 { 
-(void)(HNCACTR_lastid1 = (*RNCACTR_lastid));
+(void)(HNCACTR_lastid1 = (*A_NILCHECK(RNCACTR_lastid)));
  /* line 2701: */
-(*NL(GBBACTR_lastidchanged)) = A68_TRUE;
+(*A_NILCHECK(NL(GBBACTR_lastidchanged))) = A68_TRUE;
  /* line 2702: */
-(void)(LNCACTR_props1 = (*(&((*NL(QYAACTR_globcurrent))->Props))));
+(void)(LNCACTR_props1 = (*A_NILCHECK((&(A_NILCHECK((*A_NILCHECK(NL(QYAACTR_globcurrent))))->Props)))));
  /* line 2703: */
-(void)(MNCACTR_dybits1 = (*(&((*NL(QYAACTR_globcurrent))->Dybits))));
+(void)(MNCACTR_dybits1 = (*A_NILCHECK((&(A_NILCHECK((*A_NILCHECK(NL(QYAACTR_globcurrent))))->Dybits)))));
  /* line 2704: */
-INCACTR_ind = (*RNCACTR_lastid)+=1;
+INCACTR_ind = (*A_NILCHECK(RNCACTR_lastid))+=1;
  /* line 2705: */
-JNCACTR_param = (*RNCACTR_lastid)+=1;
+JNCACTR_param = (*A_NILCHECK(RNCACTR_lastid))+=1;
  /* line 2706: */
  /* line 2707: */
  /* line 2708: */
@@ -16591,25 +16591,25 @@ EOCACTR.Mode = F;
 EOCACTR.Rest = (A68_54 *)A68_NIL;
  /* line 2709: */
 FOCACTR = A_HEAP(A68_54 ) ;
-(void)((*FOCACTR) = EOCACTR) ;
+(void)((*A_NILCHECK(FOCACTR)) = EOCACTR) ;
 DOCACTR.Rest = FOCACTR;
 GOCACTR = A_HEAP(A68_54 ) ;
-(void)((*GOCACTR) = DOCACTR) ;
-(void)(DNCACTR_i = A_CALLPROC(NL(RRBACTR_insertprocp),((*(&(COCACTR_sten->Mode))), GOCACTR),((*(&(COCACTR_sten->Mode))), GOCACTR,(NL(RRBACTR_insertprocp)).nonlocals)));
+(void)((*A_NILCHECK(GOCACTR)) = DOCACTR) ;
+(void)(DNCACTR_i = A_CALLPROC(NL(RRBACTR_insertprocp),((*A_NILCHECK((&(A_NILCHECK(COCACTR_sten)->Mode)))), GOCACTR),((*A_NILCHECK((&(A_NILCHECK(COCACTR_sten)->Mode)))), GOCACTR,(NL(RRBACTR_insertprocp)).nonlocals)));
  /* line 2711: */
  /* line 2712: */
 HOCACTR.Name = A_CALLPROC(NL(KTAACTR_idmess),(62),(62,(NL(KTAACTR_idmess)).nonlocals));
 HOCACTR.Props = PLAACTR_globscopebit;
  /* line 2713: */
 HOCACTR.Mode = DNCACTR_i;
-HOCACTR.Rdenno = ENCACTR_p = (*NL(CZAACTR_lastrd))+=1;
+HOCACTR.Rdenno = ENCACTR_p = (*A_NILCHECK(NL(CZAACTR_lastrd)))+=1;
 HOCACTR.Maxname = 0;
  /* line 2714: */
 HOCACTR.Level = 0;
 HOCACTR.Rest = (A68_68 *)A68_NIL;
 NNCACTR_rd = HOCACTR;
  /* line 2715: */
-(void)(A_CALLPROC(NL(Output),(A_UNITE(IOCACTR,mode34,34,(&NNCACTR_rd)), (*NL(FZAACTR_outlevel))),(A_UNITE(IOCACTR,mode34,34,(&NNCACTR_rd)), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(IOCACTR,mode34,34,(&NNCACTR_rd)), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(IOCACTR,mode34,34,(&NNCACTR_rd)), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 2716: */
 JOCACTR.Type = YOAACTR_xfdec;
 KOCACTR.Name = NL(BZAACTR_nullid);
@@ -16622,7 +16622,7 @@ KOCACTR.Scope = 0;
 KOCACTR.Rest = (A68_67 *)A68_NIL;
 (void)(QNCACTR_iddec = KOCACTR) ;
 JOCACTR.Iddec = (&QNCACTR_iddec);
-(void)(A_CALLPROC(NL(Output),(A_UNITE(LOCACTR,mode12,12,JOCACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(LOCACTR,mode12,12,JOCACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(LOCACTR,mode12,12,JOCACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(LOCACTR,mode12,12,JOCACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 2719: */
 MOCACTR.Type = YOAACTR_xfdec;
 NOCACTR.Name = NL(BZAACTR_nullid);
@@ -16636,74 +16636,74 @@ NOCACTR.Rest = (A68_67 *)A68_NIL;
 (void)(QNCACTR_iddec = NOCACTR) ;
 MOCACTR.Iddec = (&QNCACTR_iddec);
  /* line 2722: */
-(void)(A_CALLPROC(NL(Output),(A_UNITE(OOCACTR,mode12,12,MOCACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(OOCACTR,mode12,12,MOCACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(OOCACTR,mode12,12,MOCACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(OOCACTR,mode12,12,MOCACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
 } 
  /* line 2724: */
  /* line 2725: */
 POCACTR = (A68_INT )(A68_BITS )((A68_BITS )Oldf&LQAACTR_decsmask) ;
-QOCACTR = (*(&A_VINDEX(NL(KUAACTR_modes),POCACTR))) ;
+QOCACTR = (*A_NILCHECK((&A_VINDEX(NL(KUAACTR_modes),POCACTR)))) ;
 switch ( QOCACTR.mode )
 { 
 case 7: /* REF STRUCT(INT,INT,INT)  */
 ROCACTR_rv = (QOCACTR.data.mode7);
  /* line 2726: */
 { 
-(void)(FNCACTR_m = ((*(&(ROCACTR_rv->Vecmode)))+KQAACTR_refmark));
+(void)(FNCACTR_m = ((*A_NILCHECK((&(A_NILCHECK(ROCACTR_rv)->Vecmode))))+KQAACTR_refmark));
  /* line 2727: */
  /* line 2728: */
 if (Code)
 { 
-(void)(A_CALLPROC(NL(Output),(A_UNITE(SOCACTR,mode3,3,JNCACTR_param), (*NL(FZAACTR_outlevel))),(A_UNITE(SOCACTR,mode3,3,JNCACTR_param), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(SOCACTR,mode3,3,JNCACTR_param), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(SOCACTR,mode3,3,JNCACTR_param), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 2729: */
-(void)(A_CALLPROC(NL(Output),(A_UNITE(TOCACTR,mode16,16,HPAACTR_xwindex), (*NL(FZAACTR_outlevel))),(A_UNITE(TOCACTR,mode16,16,HPAACTR_xwindex), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(TOCACTR,mode16,16,HPAACTR_xwindex), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(TOCACTR,mode16,16,HPAACTR_xwindex), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 2730: */
-(void)(A_CALLPROC(NL(Output),(A_UNITE(UOCACTR,mode3,3,INCACTR_ind), (*NL(FZAACTR_outlevel))),(A_UNITE(UOCACTR,mode3,3,INCACTR_ind), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(UOCACTR,mode3,3,INCACTR_ind), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(UOCACTR,mode3,3,INCACTR_ind), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 2731: */
 VOCACTR.Fn = LMAACTR_xsimpleindex;
 VOCACTR.M = FNCACTR_m;
 VOCACTR.Param = 1;
  /* line 2732: */
-(void)(A_CALLPROC(NL(Output),(A_UNITE(WOCACTR,mode14,14,VOCACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(WOCACTR,mode14,14,VOCACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(WOCACTR,mode14,14,VOCACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(WOCACTR,mode14,14,VOCACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
 } 
  /* line 2733: */
  /* line 2734: */
  /* line 2735: */
-(void)(A_CALLPROC(UNCACTR_strcoerce,(FNCACTR_m, (*(&(COCACTR_sten->Mode)))),(FNCACTR_m, (*(&(COCACTR_sten->Mode))),(UNCACTR_strcoerce).nonlocals)));
+(void)(A_CALLPROC(UNCACTR_strcoerce,(FNCACTR_m, (*A_NILCHECK((&(A_NILCHECK(COCACTR_sten)->Mode))))),(FNCACTR_m, (*A_NILCHECK((&(A_NILCHECK(COCACTR_sten)->Mode)))),(UNCACTR_strcoerce).nonlocals)));
 } 
 break;
 case 5: /* REF STRUCT(INT,INT,INT,INT)  */
 XOCACTR_ri = (QOCACTR.data.mode5);
  /* line 2736: */
 { 
-(void)(FNCACTR_m = ((*(&(XOCACTR_ri->Imode)))+KQAACTR_refmark));
+(void)(FNCACTR_m = ((*A_NILCHECK((&(A_NILCHECK(XOCACTR_ri)->Imode))))+KQAACTR_refmark));
  /* line 2737: */
  /* line 2738: */
 if (Code)
 { 
-(void)(A_CALLPROC(NL(Output),(A_UNITE(YOCACTR,mode3,3,JNCACTR_param), (*NL(FZAACTR_outlevel))),(A_UNITE(YOCACTR,mode3,3,JNCACTR_param), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(YOCACTR,mode3,3,JNCACTR_param), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(YOCACTR,mode3,3,JNCACTR_param), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 2739: */
  /* line 2740: */
 ZOCACTR.Fn = JOAACTR_xisvec;
  /* line 2741: */
  /* line 2743: */
-ZOCACTR.M = (A_CALLPROC(NL(ZVBACTR_insertvec),((*(&(XOCACTR_ri->Imode))), 1),((*(&(XOCACTR_ri->Imode))), 1,(NL(ZVBACTR_insertvec)).nonlocals))+KQAACTR_refmark);
+ZOCACTR.M = (A_CALLPROC(NL(ZVBACTR_insertvec),((*A_NILCHECK((&(A_NILCHECK(XOCACTR_ri)->Imode)))), 1),((*A_NILCHECK((&(A_NILCHECK(XOCACTR_ri)->Imode)))), 1,(NL(ZVBACTR_insertvec)).nonlocals))+KQAACTR_refmark);
 ZOCACTR.Param = 0;
-(void)(A_CALLPROC(NL(Output),(A_UNITE(APCACTR,mode14,14,ZOCACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(APCACTR,mode14,14,ZOCACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(APCACTR,mode14,14,ZOCACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(APCACTR,mode14,14,ZOCACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 2744: */
-(void)(A_CALLPROC(NL(Output),(A_UNITE(BPCACTR,mode16,16,HPAACTR_xwindex), (*NL(FZAACTR_outlevel))),(A_UNITE(BPCACTR,mode16,16,HPAACTR_xwindex), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(BPCACTR,mode16,16,HPAACTR_xwindex), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(BPCACTR,mode16,16,HPAACTR_xwindex), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 2745: */
-(void)(A_CALLPROC(NL(Output),(A_UNITE(CPCACTR,mode3,3,INCACTR_ind), (*NL(FZAACTR_outlevel))),(A_UNITE(CPCACTR,mode3,3,INCACTR_ind), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(CPCACTR,mode3,3,INCACTR_ind), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(CPCACTR,mode3,3,INCACTR_ind), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 2746: */
 DPCACTR.Fn = LMAACTR_xsimpleindex;
 DPCACTR.M = FNCACTR_m;
 DPCACTR.Param = 1;
  /* line 2747: */
-(void)(A_CALLPROC(NL(Output),(A_UNITE(EPCACTR,mode14,14,DPCACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(EPCACTR,mode14,14,DPCACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(EPCACTR,mode14,14,DPCACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(EPCACTR,mode14,14,DPCACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
 } 
  /* line 2748: */
  /* line 2749: */
  /* line 2750: */
-(void)(A_CALLPROC(UNCACTR_strcoerce,(FNCACTR_m, (*(&(COCACTR_sten->Mode)))),(FNCACTR_m, (*(&(COCACTR_sten->Mode))),(UNCACTR_strcoerce).nonlocals)));
+(void)(A_CALLPROC(UNCACTR_strcoerce,(FNCACTR_m, (*A_NILCHECK((&(A_NILCHECK(COCACTR_sten)->Mode))))),(FNCACTR_m, (*A_NILCHECK((&(A_NILCHECK(COCACTR_sten)->Mode)))),(UNCACTR_strcoerce).nonlocals)));
 } 
 break;
 case 4: /* REF STRUCT(INT,INT,REF MODE58)  */
@@ -16713,7 +16713,7 @@ FPCACTR_rst = (QOCACTR.data.mode4);
  /* line 2752: */
 if (Code)
 { 
-(void)(ONCACTR_sels = (*(&(FPCACTR_rst->Sels))));
+(void)(ONCACTR_sels = (*A_NILCHECK((&(A_NILCHECK(FPCACTR_rst)->Sels)))));
  /* line 2753: */
 for ( GPCACTR_j = 1;;
 GPCACTR_j += 1 ) 
@@ -16723,29 +16723,29 @@ if ( !((ONCACTR_sels!=RQAACTR_nilsel)) ) break;
 DNCACTR_i = GPCACTR_j;
  /* line 2755: */
  /* line 2756: */
-(void)(ONCACTR_sels = (*(&(ONCACTR_sels->Rest))));
+(void)(ONCACTR_sels = (*A_NILCHECK((&(A_NILCHECK(ONCACTR_sels)->Rest)))));
 }
  /* line 2757: */
 HPCACTR.Fn = XMAACTR_xcase;
 HPCACTR.M = ELAACTR_int;
  /* line 2759: */
 HPCACTR.Props = WLAACTR_compgenbit;
-HPCACTR.Param = (*(&(COCACTR_sten->Mode)));
-(void)(A_CALLPROC(NL(Output),(A_UNITE(IPCACTR,mode17,17,HPCACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(IPCACTR,mode17,17,HPCACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+HPCACTR.Param = (*A_NILCHECK((&(A_NILCHECK(COCACTR_sten)->Mode))));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(IPCACTR,mode17,17,HPCACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(IPCACTR,mode17,17,HPCACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 2760: */
-(void)(A_CALLPROC(NL(Output),(A_UNITE(JPCACTR,mode3,3,INCACTR_ind), (*NL(FZAACTR_outlevel))),(A_UNITE(JPCACTR,mode3,3,INCACTR_ind), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(JPCACTR,mode3,3,INCACTR_ind), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(JPCACTR,mode3,3,INCACTR_ind), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 2761: */
 KPCACTR.Fn = BNAACTR_xin;
  /* line 2762: */
-KPCACTR.M = (*(&(COCACTR_sten->Mode)));
+KPCACTR.M = (*A_NILCHECK((&(A_NILCHECK(COCACTR_sten)->Mode))));
  /* line 2763: */
 KPCACTR.Props = WLAACTR_compgenbit;
 KPCACTR.Param = DNCACTR_i;
  /* line 2764: */
-(void)(A_CALLPROC(NL(Output),(A_UNITE(LPCACTR,mode17,17,KPCACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(LPCACTR,mode17,17,KPCACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(LPCACTR,mode17,17,KPCACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(LPCACTR,mode17,17,KPCACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
 } 
  /* line 2765: */
-(void)(ONCACTR_sels = (*(&(FPCACTR_rst->Sels))));
+(void)(ONCACTR_sels = (*A_NILCHECK((&(A_NILCHECK(FPCACTR_rst)->Sels)))));
  /* line 2766: */
  /* line 2767: */
 for ( MPCACTR_j = 1;;
@@ -16753,7 +16753,7 @@ MPCACTR_j += 1 )
 { 
  /* line 2768: */
 if ( !((ONCACTR_sels!=RQAACTR_nilsel)) ) break;
-(void)(FNCACTR_m = ((*(&(ONCACTR_sels->Mode)))+KQAACTR_refmark));
+(void)(FNCACTR_m = ((*A_NILCHECK((&(A_NILCHECK(ONCACTR_sels)->Mode))))+KQAACTR_refmark));
  /* line 2769: */
  /* line 2770: */
 if (Code)
@@ -16764,27 +16764,27 @@ if (MPCACTR_j!=1)
  /* line 2772: */
 NPCACTR.Fn = DNAACTR_xcomma;
  /* line 2773: */
-NPCACTR.M = (*(&(COCACTR_sten->Mode)));
+NPCACTR.M = (*A_NILCHECK((&(A_NILCHECK(COCACTR_sten)->Mode))));
  /* line 2774: */
 NPCACTR.Props = WLAACTR_compgenbit;
 NPCACTR.Param = MPCACTR_j;
  /* line 2775: */
-(void)(A_CALLPROC(NL(Output),(A_UNITE(OPCACTR,mode17,17,NPCACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(OPCACTR,mode17,17,NPCACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(OPCACTR,mode17,17,NPCACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(OPCACTR,mode17,17,NPCACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
 } 
  /* line 2776: */
-(void)(A_CALLPROC(NL(Output),(A_UNITE(PPCACTR,mode3,3,JNCACTR_param), (*NL(FZAACTR_outlevel))),(A_UNITE(PPCACTR,mode3,3,JNCACTR_param), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(PPCACTR,mode3,3,JNCACTR_param), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(PPCACTR,mode3,3,JNCACTR_param), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 2777: */
 QPCACTR.Fn = IMAACTR_xselect;
 QPCACTR.M = FNCACTR_m;
 QPCACTR.Param = MPCACTR_j;
  /* line 2778: */
-(void)(A_CALLPROC(NL(Output),(A_UNITE(RPCACTR,mode14,14,QPCACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(RPCACTR,mode14,14,QPCACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(RPCACTR,mode14,14,QPCACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(RPCACTR,mode14,14,QPCACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
 } 
  /* line 2779: */
-(void)(A_CALLPROC(UNCACTR_strcoerce,(FNCACTR_m, (*(&(COCACTR_sten->Mode)))),(FNCACTR_m, (*(&(COCACTR_sten->Mode))),(UNCACTR_strcoerce).nonlocals)));
+(void)(A_CALLPROC(UNCACTR_strcoerce,(FNCACTR_m, (*A_NILCHECK((&(A_NILCHECK(COCACTR_sten)->Mode))))),(FNCACTR_m, (*A_NILCHECK((&(A_NILCHECK(COCACTR_sten)->Mode)))),(UNCACTR_strcoerce).nonlocals)));
  /* line 2780: */
  /* line 2781: */
-(void)(ONCACTR_sels = (*(&(ONCACTR_sels->Rest))));
+(void)(ONCACTR_sels = (*A_NILCHECK((&(A_NILCHECK(ONCACTR_sels)->Rest)))));
 }
  /* line 2782: */
  /* line 2783: */
@@ -16794,11 +16794,11 @@ SPCACTR.Fn = KNAACTR_xesac;
 SPCACTR.M = 0;
  /* line 2785: */
 SPCACTR.Props = WLAACTR_compgenbit;
-SPCACTR.Param = (*(&(COCACTR_sten->Mode)));
+SPCACTR.Param = (*A_NILCHECK((&(A_NILCHECK(COCACTR_sten)->Mode))));
  /* line 2786: */
  /* line 2787: */
  /* line 2788: */
-(void)(A_CALLPROC(NL(Output),(A_UNITE(TPCACTR,mode17,17,SPCACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(TPCACTR,mode17,17,SPCACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(TPCACTR,mode17,17,SPCACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(TPCACTR,mode17,17,SPCACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
 } 
 } 
 break;
@@ -16816,10 +16816,10 @@ else
  /* line 2792: */
 if (Code)
 { 
-VPCACTR = (&((*NL(QYAACTR_globcurrent))->Lastid)) ;
-KNCACTR_decl = (*VPCACTR)+=1;
+VPCACTR = (&(A_NILCHECK((*A_NILCHECK(NL(QYAACTR_globcurrent))))->Lastid)) ;
+KNCACTR_decl = (*A_NILCHECK(VPCACTR))+=1;
  /* line 2793: */
-(void)(PNCACTR_ml = (*(&(UPCACTR_ru->Modelist))));
+(void)(PNCACTR_ml = (*A_NILCHECK((&(A_NILCHECK(UPCACTR_ru)->Modelist)))));
  /* line 2794: */
  /* line 2795: */
 for ( WPCACTR_j = 1;;
@@ -16830,34 +16830,34 @@ if ( !((PNCACTR_ml!=OQAACTR_nilml)) ) break;
 DNCACTR_i = WPCACTR_j;
  /* line 2797: */
  /* line 2798: */
-(void)(PNCACTR_ml = (*(&(PNCACTR_ml->Rest))));
+(void)(PNCACTR_ml = (*A_NILCHECK((&(A_NILCHECK(PNCACTR_ml)->Rest)))));
 }
  /* line 2799: */
 XPCACTR.Fn = YMAACTR_xcaseu;
 XPCACTR.M = Oldf;
  /* line 2801: */
 XPCACTR.Props = WLAACTR_compgenbit;
-XPCACTR.Param = (*(&(COCACTR_sten->Mode)));
-(void)(A_CALLPROC(NL(Output),(A_UNITE(YPCACTR,mode17,17,XPCACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(YPCACTR,mode17,17,XPCACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+XPCACTR.Param = (*A_NILCHECK((&(A_NILCHECK(COCACTR_sten)->Mode))));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(YPCACTR,mode17,17,XPCACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(YPCACTR,mode17,17,XPCACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 2802: */
-(void)(A_CALLPROC(NL(Output),(A_UNITE(ZPCACTR,mode3,3,JNCACTR_param), (*NL(FZAACTR_outlevel))),(A_UNITE(ZPCACTR,mode3,3,JNCACTR_param), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(ZPCACTR,mode3,3,JNCACTR_param), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(ZPCACTR,mode3,3,JNCACTR_param), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 2803: */
 AQCACTR.Fn = ZNAACTR_xderef;
 AQCACTR.M = Oldf;
 AQCACTR.Param = 0;
-(void)(A_CALLPROC(NL(Output),(A_UNITE(BQCACTR,mode14,14,AQCACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(BQCACTR,mode14,14,AQCACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(BQCACTR,mode14,14,AQCACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(BQCACTR,mode14,14,AQCACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 2804: */
 CQCACTR.Fn = CNAACTR_xinu;
  /* line 2805: */
-CQCACTR.M = (*(&(COCACTR_sten->Mode)));
+CQCACTR.M = (*A_NILCHECK((&(A_NILCHECK(COCACTR_sten)->Mode))));
  /* line 2806: */
 CQCACTR.Props = WLAACTR_compgenbit;
 CQCACTR.Param = DNCACTR_i;
  /* line 2807: */
-(void)(A_CALLPROC(NL(Output),(A_UNITE(DQCACTR,mode17,17,CQCACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(DQCACTR,mode17,17,CQCACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(DQCACTR,mode17,17,CQCACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(DQCACTR,mode17,17,CQCACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
 } 
  /* line 2808: */
-(void)(PNCACTR_ml = (*(&(UPCACTR_ru->Modelist))));
+(void)(PNCACTR_ml = (*A_NILCHECK((&(A_NILCHECK(UPCACTR_ru)->Modelist)))));
  /* line 2809: */
  /* line 2810: */
 for ( EQCACTR_j = 1;;
@@ -16874,39 +16874,39 @@ if (EQCACTR_j!=1)
  /* line 2814: */
 FQCACTR.Fn = ENAACTR_xcommau;
  /* line 2815: */
-FQCACTR.M = (*(&(COCACTR_sten->Mode)));
+FQCACTR.M = (*A_NILCHECK((&(A_NILCHECK(COCACTR_sten)->Mode))));
  /* line 2816: */
 FQCACTR.Props = WLAACTR_compgenbit;
 FQCACTR.Param = EQCACTR_j;
  /* line 2817: */
-(void)(A_CALLPROC(NL(Output),(A_UNITE(GQCACTR,mode17,17,FQCACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(GQCACTR,mode17,17,FQCACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(GQCACTR,mode17,17,FQCACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(GQCACTR,mode17,17,FQCACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
 } 
  /* line 2818: */
  /* line 2819: */
 HQCACTR.Fn = WNAACTR_xuchoice;
  /* line 2820: */
-HQCACTR.M = (*(&(PNCACTR_ml->Mode)));
+HQCACTR.M = (*A_NILCHECK((&(A_NILCHECK(PNCACTR_ml)->Mode))));
  /* line 2821: */
 HQCACTR.Props = WLAACTR_compgenbit;
 HQCACTR.Param = EQCACTR_j;
-(void)(A_CALLPROC(NL(Output),(A_UNITE(IQCACTR,mode17,17,HQCACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(IQCACTR,mode17,17,HQCACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(IQCACTR,mode17,17,HQCACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(IQCACTR,mode17,17,HQCACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 2822: */
-(void)(A_CALLPROC(NL(Output),(A_UNITE(JQCACTR,mode3,3,JNCACTR_param), (*NL(FZAACTR_outlevel))),(A_UNITE(JQCACTR,mode3,3,JNCACTR_param), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(JQCACTR,mode3,3,JNCACTR_param), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(JQCACTR,mode3,3,JNCACTR_param), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 2823: */
  /* line 2824: */
 KQCACTR.Fn = ROAACTR_xdeunite;
  /* line 2825: */
-KQCACTR.M = ((*(&(PNCACTR_ml->Mode)))+KQAACTR_refmark);
+KQCACTR.M = ((*A_NILCHECK((&(A_NILCHECK(PNCACTR_ml)->Mode))))+KQAACTR_refmark);
 KQCACTR.Param = 0;
  /* line 2826: */
-(void)(A_CALLPROC(NL(Output),(A_UNITE(LQCACTR,mode14,14,KQCACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(LQCACTR,mode14,14,KQCACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(LQCACTR,mode14,14,KQCACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(LQCACTR,mode14,14,KQCACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
 } 
  /* line 2827: */
  /* line 2829: */
-(void)(A_CALLPROC(UNCACTR_strcoerce,(((*(&(PNCACTR_ml->Mode)))+KQAACTR_refmark), (*(&(COCACTR_sten->Mode)))),(((*(&(PNCACTR_ml->Mode)))+KQAACTR_refmark), (*(&(COCACTR_sten->Mode))),(UNCACTR_strcoerce).nonlocals)));
+(void)(A_CALLPROC(UNCACTR_strcoerce,(((*A_NILCHECK((&(A_NILCHECK(PNCACTR_ml)->Mode))))+KQAACTR_refmark), (*A_NILCHECK((&(A_NILCHECK(COCACTR_sten)->Mode))))),(((*A_NILCHECK((&(A_NILCHECK(PNCACTR_ml)->Mode))))+KQAACTR_refmark), (*A_NILCHECK((&(A_NILCHECK(COCACTR_sten)->Mode)))),(UNCACTR_strcoerce).nonlocals)));
  /* line 2830: */
  /* line 2831: */
-(void)(PNCACTR_ml = (*(&(PNCACTR_ml->Rest))));
+(void)(PNCACTR_ml = (*A_NILCHECK((&(A_NILCHECK(PNCACTR_ml)->Rest)))));
 }
  /* line 2832: */
  /* line 2833: */
@@ -16916,11 +16916,11 @@ MQCACTR.Fn = LNAACTR_xesacu;
 MQCACTR.M = 0;
  /* line 2835: */
 MQCACTR.Props = WLAACTR_compgenbit;
-MQCACTR.Param = (*(&(COCACTR_sten->Mode)));
+MQCACTR.Param = (*A_NILCHECK((&(A_NILCHECK(COCACTR_sten)->Mode))));
  /* line 2836: */
  /* line 2837: */
  /* line 2838: */
-(void)(A_CALLPROC(NL(Output),(A_UNITE(NQCACTR,mode17,17,MQCACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(NQCACTR,mode17,17,MQCACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(NQCACTR,mode17,17,MQCACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(NQCACTR,mode17,17,MQCACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
 } 
 } 
 break;
@@ -16928,28 +16928,28 @@ case 8: /* REF STRUCT(INT,INT,INT,INT)  */
 OQCACTR_ra = (QOCACTR.data.mode8);
  /* line 2839: */
 { 
-(void)(FNCACTR_m = ((*(&(OQCACTR_ra->Mode)))+KQAACTR_refmark));
+(void)(FNCACTR_m = ((*A_NILCHECK((&(A_NILCHECK(OQCACTR_ra)->Mode))))+KQAACTR_refmark));
  /* line 2840: */
  /* line 2841: */
 if (Code)
 { 
-(void)(A_CALLPROC(NL(Output),(A_UNITE(PQCACTR,mode3,3,JNCACTR_param), (*NL(FZAACTR_outlevel))),(A_UNITE(PQCACTR,mode3,3,JNCACTR_param), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(PQCACTR,mode3,3,JNCACTR_param), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(PQCACTR,mode3,3,JNCACTR_param), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 2842: */
-(void)(A_CALLPROC(NL(Output),(A_UNITE(QQCACTR,mode16,16,HPAACTR_xwindex), (*NL(FZAACTR_outlevel))),(A_UNITE(QQCACTR,mode16,16,HPAACTR_xwindex), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(QQCACTR,mode16,16,HPAACTR_xwindex), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(QQCACTR,mode16,16,HPAACTR_xwindex), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 2843: */
-(void)(A_CALLPROC(NL(Output),(A_UNITE(RQCACTR,mode3,3,JNCACTR_param), (*NL(FZAACTR_outlevel))),(A_UNITE(RQCACTR,mode3,3,JNCACTR_param), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(RQCACTR,mode3,3,JNCACTR_param), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(RQCACTR,mode3,3,JNCACTR_param), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 2844: */
  /* line 2845: */
 SQCACTR.Fn = ZNAACTR_xderef;
  /* line 2846: */
 SQCACTR.M = A_CALLPROC(NL(JGCACTR_deflex),((F-KQAACTR_refmark)),((F-KQAACTR_refmark),(NL(JGCACTR_deflex)).nonlocals));
 SQCACTR.Param = 0;
-(void)(A_CALLPROC(NL(Output),(A_UNITE(TQCACTR,mode14,14,SQCACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(TQCACTR,mode14,14,SQCACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(TQCACTR,mode14,14,SQCACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(TQCACTR,mode14,14,SQCACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 2847: */
 UQCACTR.Fn = QMAACTR_xmonop;
 UQCACTR.M = ELAACTR_int;
 UQCACTR.Param = 50;
-(void)(A_CALLPROC(NL(Output),(A_UNITE(VQCACTR,mode14,14,UQCACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(VQCACTR,mode14,14,UQCACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(VQCACTR,mode14,14,UQCACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(VQCACTR,mode14,14,UQCACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 2849: */
  /* line 2850: */
 WQCACTR.Mode = ELAACTR_int;
@@ -16958,22 +16958,22 @@ ARCACTR = A_VTRIM(YQCACTR,(NL(ATAACTR_string)),A_VTSCRIPT(&(YQCACTR.upb),(NL(ATA
 BRCACTR = ZQCACTR ;
 (void)(A_VASSIGN2(BRCACTR,ARCACTR,A68_CHAR )) ;
 WQCACTR.Nu = ARCACTR;
-(void)(A_CALLPROC(NL(Output),(A_UNITE(CRCACTR,mode9,9,WQCACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(CRCACTR,mode9,9,WQCACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(CRCACTR,mode9,9,WQCACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(CRCACTR,mode9,9,WQCACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 2852: */
 DRCACTR.Fn = PMAACTR_xdyop;
 DRCACTR.M = ELAACTR_int;
 DRCACTR.Param = 17;
-(void)(A_CALLPROC(NL(Output),(A_UNITE(ERCACTR,mode14,14,DRCACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(ERCACTR,mode14,14,DRCACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(ERCACTR,mode14,14,DRCACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(ERCACTR,mode14,14,DRCACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 2853: */
-(void)(A_CALLPROC(NL(Output),(A_UNITE(FRCACTR,mode3,3,INCACTR_ind), (*NL(FZAACTR_outlevel))),(A_UNITE(FRCACTR,mode3,3,INCACTR_ind), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(FRCACTR,mode3,3,INCACTR_ind), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(FRCACTR,mode3,3,INCACTR_ind), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 2854: */
 GRCACTR.Fn = PMAACTR_xdyop;
 GRCACTR.M = ELAACTR_int;
 GRCACTR.Param = 2;
-(void)(A_CALLPROC(NL(Output),(A_UNITE(HRCACTR,mode14,14,GRCACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(HRCACTR,mode14,14,GRCACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(HRCACTR,mode14,14,GRCACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(HRCACTR,mode14,14,GRCACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 2856: */
  /* line 2857: */
-if ((*(&(OQCACTR_ra->Nods)))==1)
+if ((*A_NILCHECK((&(A_NILCHECK(OQCACTR_ra)->Nods))))==1)
 { 
  /* line 2858: */
 IRCACTR.Fn = LMAACTR_xsimpleindex;
@@ -16981,12 +16981,12 @@ IRCACTR.Fn = LMAACTR_xsimpleindex;
 IRCACTR.M = FNCACTR_m;
 IRCACTR.Param = 1;
  /* line 2860: */
-(void)(A_CALLPROC(NL(Output),(A_UNITE(JRCACTR,mode14,14,IRCACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(JRCACTR,mode14,14,IRCACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(JRCACTR,mode14,14,IRCACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(JRCACTR,mode14,14,IRCACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
 } 
 else
 { 
  /* line 2861: */
-KRCACTR = ((*(&(OQCACTR_ra->Nods)))-1);
+KRCACTR = ((*A_NILCHECK((&(A_NILCHECK(OQCACTR_ra)->Nods))))-1);
 for ( LRCACTR = 1;
 LRCACTR <= KRCACTR;
 LRCACTR += 1 )
@@ -16995,14 +16995,14 @@ MRCACTR.Fn = KMAACTR_xtrim;
 MRCACTR.M = 0;
 MRCACTR.Param = 0;
  /* line 2862: */
-(void)(A_CALLPROC(NL(Output),(A_UNITE(NRCACTR,mode14,14,MRCACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(NRCACTR,mode14,14,MRCACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(NRCACTR,mode14,14,MRCACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(NRCACTR,mode14,14,MRCACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
 }
  /* line 2863: */
 ORCACTR.Fn = MMAACTR_xtrimindex;
  /* line 2865: */
 ORCACTR.M = FNCACTR_m;
-ORCACTR.Param = (*(&(OQCACTR_ra->Nods)));
-(void)(A_CALLPROC(NL(Output),(A_UNITE(PRCACTR,mode14,14,ORCACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(PRCACTR,mode14,14,ORCACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+ORCACTR.Param = (*A_NILCHECK((&(A_NILCHECK(OQCACTR_ra)->Nods))));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(PRCACTR,mode14,14,ORCACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(PRCACTR,mode14,14,ORCACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 2866: */
  /* line 2867: */
 if (Oldf<KQAACTR_refmark)
@@ -17018,7 +17018,7 @@ QRCACTR = FNCACTR_m;
  /* line 2870: */
  /* line 2871: */
  /* line 2873: */
-RRCACTR = (!A_CALLPROC((*NL(HKCACTR_coerce1)),((A68_125 *)A68_NIL, QRCACTR, (*(&(COCACTR_sten->Mode))), 6, A68_FALSE),((A68_125 *)A68_NIL, QRCACTR, (*(&(COCACTR_sten->Mode))), 6, A68_FALSE,((*NL(HKCACTR_coerce1))).nonlocals)));
+RRCACTR = (!A_CALLPROC((*A_NILCHECK(NL(HKCACTR_coerce1))),((A68_125 *)A68_NIL, QRCACTR, (*A_NILCHECK((&(A_NILCHECK(COCACTR_sten)->Mode)))), 6, A68_FALSE),((A68_125 *)A68_NIL, QRCACTR, (*A_NILCHECK((&(A_NILCHECK(COCACTR_sten)->Mode)))), 6, A68_FALSE,((*A_NILCHECK(NL(HKCACTR_coerce1)))).nonlocals)));
 if (RRCACTR)
 { 
  /* line 2874: */
@@ -17026,7 +17026,7 @@ SRCACTR.Fn = ZNAACTR_xderef;
  /* line 2875: */
 SRCACTR.M = (FNCACTR_m-KQAACTR_refmark);
 SRCACTR.Param = 0;
-(void)(A_CALLPROC(NL(Output),(A_UNITE(TRCACTR,mode14,14,SRCACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(TRCACTR,mode14,14,SRCACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(TRCACTR,mode14,14,SRCACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(TRCACTR,mode14,14,SRCACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 2876: */
  /* line 2877: */
 URCACTR.Fn = GMAACTR_xstatgrab;
@@ -17037,14 +17037,14 @@ URCACTR.Param = 0;
  /* line 2881: */
  /* line 2882: */
  /* line 2883: */
-(void)(A_CALLPROC(NL(Output),(A_UNITE(VRCACTR,mode14,14,URCACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(VRCACTR,mode14,14,URCACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(VRCACTR,mode14,14,URCACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(VRCACTR,mode14,14,URCACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
 } 
 } 
 } 
  /* line 2884: */
  /* line 2885: */
  /* line 2886: */
-(void)(A_CALLPROC(UNCACTR_strcoerce,(FNCACTR_m, (*(&(COCACTR_sten->Mode)))),(FNCACTR_m, (*(&(COCACTR_sten->Mode))),(UNCACTR_strcoerce).nonlocals)));
+(void)(A_CALLPROC(UNCACTR_strcoerce,(FNCACTR_m, (*A_NILCHECK((&(A_NILCHECK(COCACTR_sten)->Mode))))),(FNCACTR_m, (*A_NILCHECK((&(A_NILCHECK(COCACTR_sten)->Mode)))),(UNCACTR_strcoerce).nonlocals)));
 } 
 break;
 default: 
@@ -17071,23 +17071,23 @@ YRCACTR.M = 0;
 YRCACTR.Props = WLAACTR_compgenbit;
 YRCACTR.Param = 0;
  /* line 2895: */
-(void)(A_CALLPROC(NL(Output),(A_UNITE(ZRCACTR,mode17,17,YRCACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(ZRCACTR,mode17,17,YRCACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(ZRCACTR,mode17,17,YRCACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(ZRCACTR,mode17,17,YRCACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 2896: */
  /* line 2897: */
-if ((*RNCACTR_lastid)>(*NL(GZAACTR_maxident)))
+if ((*A_NILCHECK(RNCACTR_lastid))>(*A_NILCHECK(NL(GZAACTR_maxident))))
 { 
  /* line 2898: */
-(void)((*NL(GZAACTR_maxident)) = (*RNCACTR_lastid));
+(void)((*A_NILCHECK(NL(GZAACTR_maxident))) = (*A_NILCHECK(RNCACTR_lastid)));
 } 
  /* line 2899: */
-(*RNCACTR_lastid) = HNCACTR_lastid1;
+(*A_NILCHECK(RNCACTR_lastid)) = HNCACTR_lastid1;
  /* line 2900: */
-ASCACTR = (&((*NL(QYAACTR_globcurrent))->Props)) ;
-(*ASCACTR) = LNCACTR_props1;
+ASCACTR = (&(A_NILCHECK((*A_NILCHECK(NL(QYAACTR_globcurrent))))->Props)) ;
+(*A_NILCHECK(ASCACTR)) = LNCACTR_props1;
  /* line 2901: */
  /* line 2902: */
-BSCACTR = (&((*NL(QYAACTR_globcurrent))->Dybits)) ;
-(*BSCACTR) = MNCACTR_dybits1;
+BSCACTR = (&(A_NILCHECK((*A_NILCHECK(NL(QYAACTR_globcurrent))))->Dybits)) ;
+(*A_NILCHECK(BSCACTR)) = MNCACTR_dybits1;
 } 
  /* line 2903: */
  /* line 2904: */
@@ -17097,13 +17097,13 @@ if (ENCACTR_p>1)
 CSCACTR.Mode = Oldf;
 CSCACTR.Rdenno = ENCACTR_p;
  /* line 2906: */
-CSCACTR.Rest = (*(&(COCACTR_sten->Stenlist)));
+CSCACTR.Rest = (*A_NILCHECK((&(A_NILCHECK(COCACTR_sten)->Stenlist))));
  /* line 2907: */
  /* line 2908: */
 DSCACTR = A_HEAP(A68_63 ) ;
-(void)((*DSCACTR) = CSCACTR) ;
-ESCACTR = (&(COCACTR_sten->Stenlist)) ;
-(*ESCACTR) = DSCACTR;
+(void)((*A_NILCHECK(DSCACTR)) = CSCACTR) ;
+ESCACTR = (&(A_NILCHECK(COCACTR_sten)->Stenlist)) ;
+(*A_NILCHECK(ESCACTR)) = DSCACTR;
 } 
 } 
 break;
@@ -17115,7 +17115,7 @@ break;
  /* line 2910: */
 CNCACTR_out: A_UNUSED;
  /* line 2911: */
-(*NL(GKCACTR_deprefable)) = AOCACTR_olddeprefable;
+(*A_NILCHECK(NL(GKCACTR_deprefable))) = AOCACTR_olddeprefable;
  /* line 2912: */
  /* line 2913: */
 HSCACTR = ENCACTR_p;
@@ -17249,7 +17249,7 @@ if (F==XKAACTR_gotomode)
 ETCACTR = (T<KQAACTR_refmark);
 if ( ETCACTR )
 { /* line 2939: */
-FTCACTR = (*(&A_VINDEX(NL(KUAACTR_modes),T))) ;
+FTCACTR = (*A_NILCHECK((&A_VINDEX(NL(KUAACTR_modes),T)))) ;
 switch ( FTCACTR.mode )
 { 
 case 6: /* REF STRUCT(INT)  */
@@ -17293,7 +17293,7 @@ VSCACTR_f1 = F;
 KTCACTR = Code;
 if ( KTCACTR )
 { /* line 2949: */
-KTCACTR = ((A68_BITS )((*(&(V->Props)))&CRAACTR_assmntbit)==MQAACTR_z);
+KTCACTR = ((A68_BITS )((*A_NILCHECK((&(A_NILCHECK(V)->Props))))&CRAACTR_assmntbit)==MQAACTR_z);
 }
  /* line 2950: */
 if (KTCACTR)
@@ -17422,14 +17422,14 @@ WSCACTR_qref = RTCACTR;
 if (USCACTR_t1<KQAACTR_refmark)
 { 
  /* line 2985: */
-STCACTR = (*(&A_VINDEX(NL(KUAACTR_modes),USCACTR_t1))) ;
+STCACTR = (*A_NILCHECK((&A_VINDEX(NL(KUAACTR_modes),USCACTR_t1)))) ;
 switch ( STCACTR.mode )
 { 
 case 7: /* REF STRUCT(INT,INT,INT)  */
 TTCACTR_vec = (STCACTR.data.mode7);
  /* line 2986: */
  /* line 2987: */
-if ((*(&(TTCACTR_vec->Deflex)))>=0)
+if ((*A_NILCHECK((&(A_NILCHECK(TTCACTR_vec)->Deflex))))>=0)
 { 
  /* line 2988: */
 if ((XSCACTR_i = A_CALLPROC(NL(XKCACTR_weakmode),(F),(F,(NL(XKCACTR_weakmode)).nonlocals)))>WSCACTR_qref)
@@ -17448,14 +17448,14 @@ UTCACTR = (XSCACTR_i-KQAACTR_refmark);
 } 
  /* line 2993: */
 WTCACTR = VSCACTR_f1 = UTCACTR ;
-VTCACTR = (*(&A_VINDEX(NL(KUAACTR_modes),WTCACTR)));
+VTCACTR = (*A_NILCHECK((&A_VINDEX(NL(KUAACTR_modes),WTCACTR))));
 switch ( VTCACTR.mode )
 { 
 case 5: /* REF STRUCT(INT,INT,INT,INT)  */
 XTCACTR_ri = (VTCACTR.data.mode5);
  /* line 2994: */
  /* line 2996: */
-YTCACTR = ((*(&(XTCACTR_ri->Imode)))==(*(&(TTCACTR_vec->Vecmode))));
+YTCACTR = ((*A_NILCHECK((&(A_NILCHECK(XTCACTR_ri)->Imode))))==(*A_NILCHECK((&(A_NILCHECK(TTCACTR_vec)->Vecmode)))));
 if ( YTCACTR )
 { /* line 2997: */
  /* line 2998: */
@@ -17487,7 +17487,7 @@ if ( ZTCACTR )
 { /* line 3007: */
  /* line 3008: */
  /* line 3009: */
-ZTCACTR = A_CALLPROC(NL(OSCACTR_coerce),(V, F, ((*(&(TTCACTR_vec->Vecmode)))+WSCACTR_qref), 9, Code),(V, F, ((*(&(TTCACTR_vec->Vecmode)))+WSCACTR_qref), 9, Code,(NL(OSCACTR_coerce)).nonlocals));
+ZTCACTR = A_CALLPROC(NL(OSCACTR_coerce),(V, F, ((*A_NILCHECK((&(A_NILCHECK(TTCACTR_vec)->Vecmode))))+WSCACTR_qref), 9, Code),(V, F, ((*A_NILCHECK((&(A_NILCHECK(TTCACTR_vec)->Vecmode))))+WSCACTR_qref), 9, Code,(NL(OSCACTR_coerce)).nonlocals));
 }
 if (ZTCACTR)
 { 
@@ -17502,7 +17502,7 @@ AUCACTR = (Str>=8);
 }
 if ( AUCACTR )
 { /* line 3013: */
-AUCACTR = ((*(&(TTCACTR_vec->Vecmode)))==ALAACTR_bool);
+AUCACTR = ((*A_NILCHECK((&(A_NILCHECK(TTCACTR_vec)->Vecmode))))==ALAACTR_bool);
 }
 if ( AUCACTR )
 { /* line 3014: */
@@ -17530,7 +17530,7 @@ case 8: /* REF STRUCT(INT,INT,INT,INT)  */
 BUCACTR_a = (STCACTR.data.mode8);
  /* line 3020: */
  /* line 3021: */
-if ((*(&(BUCACTR_a->Deflex)))>=0)
+if ((*A_NILCHECK((&(A_NILCHECK(BUCACTR_a)->Deflex))))>=0)
 { 
 CUCACTR = (Str>=4);
 if ( CUCACTR )
@@ -17555,7 +17555,7 @@ XSCACTR_i = VSCACTR_f1 = DUCACTR;
 YSCACTR_j = USCACTR_t1;
  /* line 3027: */
  /* line 3028: */
-EUCACTR = (*(&(BUCACTR_a->Nods)));
+EUCACTR = (*A_NILCHECK((&(A_NILCHECK(BUCACTR_a)->Nods))));
 for ( FUCACTR = 1;
 FUCACTR <= EUCACTR;
 FUCACTR += 1 )
@@ -17571,14 +17571,14 @@ XSCACTR_i = 0;
 else
 { 
  /* line 3032: */
-GUCACTR = (*(&A_VINDEX(NL(KUAACTR_modes),XSCACTR_i))) ;
+GUCACTR = (*A_NILCHECK((&A_VINDEX(NL(KUAACTR_modes),XSCACTR_i)))) ;
 switch ( GUCACTR.mode )
 { 
 case 5: /* REF STRUCT(INT,INT,INT,INT)  */
 HUCACTR_is = (GUCACTR.data.mode5);
  /* line 3033: */
  /* line 3034: */
-(void)(XSCACTR_i = (*(&(HUCACTR_is->Imode))));
+(void)(XSCACTR_i = (*A_NILCHECK((&(A_NILCHECK(HUCACTR_is)->Imode)))));
 break;
 default: 
  /* line 3035: */
@@ -17589,7 +17589,7 @@ break;
 } 
  /* line 3038: */
  /* line 3039: */
-IUCACTR = (*(&A_VINDEX(NL(KUAACTR_modes),YSCACTR_j))) ;
+IUCACTR = (*A_NILCHECK((&A_VINDEX(NL(KUAACTR_modes),YSCACTR_j)))) ;
 switch ( IUCACTR.mode )
 { 
 case 8: /* REF STRUCT(INT,INT,INT,INT)  */
@@ -17597,7 +17597,7 @@ JUCACTR_a1 = (IUCACTR.data.mode8);
  /* line 3040: */
  /* line 3041: */
  /* line 3042: */
-(void)(YSCACTR_j = (*(&(JUCACTR_a1->Mode))));
+(void)(YSCACTR_j = (*A_NILCHECK((&(A_NILCHECK(JUCACTR_a1)->Mode)))));
 break;
 default: 
 A_IMP_SKIP ;
@@ -17613,7 +17613,7 @@ KUCACTR = A_CALLPROC(NL(OSCACTR_coerce),(V, F, (VSCACTR_f1+WSCACTR_qref), 2, Cod
 }
 if (KUCACTR)
 { 
-(void)(ZSCACTR_p3 = (*(&(BUCACTR_a->Nods))));
+(void)(ZSCACTR_p3 = (*A_NILCHECK((&(A_NILCHECK(BUCACTR_a)->Nods)))));
  /* line 3047: */
  /* line 3048: */
 TSCACTR_ans = NOAACTR_xisarr;
@@ -17621,10 +17621,10 @@ TSCACTR_ans = NOAACTR_xisarr;
 else
 { 
  /* line 3049: */
-if ((*(&(BUCACTR_a->Nods)))==1)
+if ((*A_NILCHECK((&(A_NILCHECK(BUCACTR_a)->Nods))))==1)
 { 
  /* line 3050: */
-LUCACTR = (*(&A_VINDEX(NL(KUAACTR_modes),VSCACTR_f1))) ;
+LUCACTR = (*A_NILCHECK((&A_VINDEX(NL(KUAACTR_modes),VSCACTR_f1)))) ;
 switch ( LUCACTR.mode )
 { 
 case 7: /* REF STRUCT(INT,INT,INT)  */
@@ -17632,7 +17632,7 @@ MUCACTR_rv = (LUCACTR.data.mode7);
  /* line 3051: */
  /* line 3052: */
  /* line 3053: */
-NUCACTR = ((*(&(MUCACTR_rv->Vecmode)))==(*(&(BUCACTR_a->Mode))));
+NUCACTR = ((*A_NILCHECK((&(A_NILCHECK(MUCACTR_rv)->Vecmode))))==(*A_NILCHECK((&(A_NILCHECK(BUCACTR_a)->Mode)))));
 if ( NUCACTR )
 { /* line 3054: */
  /* line 3055: */
@@ -17669,19 +17669,19 @@ if (OUCACTR)
  /* line 3067: */
  /* line 3068: */
  /* line 3069: */
-PUCACTR = A_CALLPROC(NL(OSCACTR_coerce),(V, F, ((*(&(BUCACTR_a->Mode)))+WSCACTR_qref), 9, Code),(V, F, ((*(&(BUCACTR_a->Mode)))+WSCACTR_qref), 9, Code,(NL(OSCACTR_coerce)).nonlocals));
+PUCACTR = A_CALLPROC(NL(OSCACTR_coerce),(V, F, ((*A_NILCHECK((&(A_NILCHECK(BUCACTR_a)->Mode))))+WSCACTR_qref), 9, Code),(V, F, ((*A_NILCHECK((&(A_NILCHECK(BUCACTR_a)->Mode))))+WSCACTR_qref), 9, Code,(NL(OSCACTR_coerce)).nonlocals));
 if ( ! PUCACTR )
 { /* line 3070: */
  /* line 3071: */
  /* line 3072: */
  /* line 3073: */
-PUCACTR = A_CALLPROC(NL(OSCACTR_coerce),(V, F, (A_CALLPROC(NL(YLCACTR_makeflex),((*(&(BUCACTR_a->Mode)))),((*(&(BUCACTR_a->Mode))),(NL(YLCACTR_makeflex)).nonlocals))+WSCACTR_qref), 9, Code),(V, F, (A_CALLPROC(NL(YLCACTR_makeflex),((*(&(BUCACTR_a->Mode)))),((*(&(BUCACTR_a->Mode))),(NL(YLCACTR_makeflex)).nonlocals))+WSCACTR_qref), 9, Code,(NL(OSCACTR_coerce)).nonlocals));
+PUCACTR = A_CALLPROC(NL(OSCACTR_coerce),(V, F, (A_CALLPROC(NL(YLCACTR_makeflex),((*A_NILCHECK((&(A_NILCHECK(BUCACTR_a)->Mode))))),((*A_NILCHECK((&(A_NILCHECK(BUCACTR_a)->Mode)))),(NL(YLCACTR_makeflex)).nonlocals))+WSCACTR_qref), 9, Code),(V, F, (A_CALLPROC(NL(YLCACTR_makeflex),((*A_NILCHECK((&(A_NILCHECK(BUCACTR_a)->Mode))))),((*A_NILCHECK((&(A_NILCHECK(BUCACTR_a)->Mode)))),(NL(YLCACTR_makeflex)).nonlocals))+WSCACTR_qref), 9, Code,(NL(OSCACTR_coerce)).nonlocals));
 }
 if (PUCACTR)
 { 
  /* line 3074: */
  /* line 3075: */
-if ((*(&(BUCACTR_a->Nods)))>1)
+if ((*A_NILCHECK((&(A_NILCHECK(BUCACTR_a)->Nods))))>1)
 { 
  /* line 3076: */
 QUCACTR = HOAACTR_xarrarr;
@@ -17699,10 +17699,10 @@ TSCACTR_ans = QUCACTR;
 RUCACTR = (TSCACTR_ans==(-1));
 if ( RUCACTR )
 { /* line 3080: */
-RUCACTR = ((*(&(BUCACTR_a->Mode)))==ALAACTR_bool);
+RUCACTR = ((*A_NILCHECK((&(A_NILCHECK(BUCACTR_a)->Mode))))==ALAACTR_bool);
 }
 if ( RUCACTR )
-{RUCACTR = ((*(&(BUCACTR_a->Nods)))==1);
+{RUCACTR = ((*A_NILCHECK((&(A_NILCHECK(BUCACTR_a)->Nods))))==1);
 }
 if ( RUCACTR )
 { /* line 3081: */
@@ -17713,7 +17713,7 @@ if ( RUCACTR )
  /* line 3083: */
  /* line 3084: */
  /* line 3085: */
-RUCACTR = A_CALLPROC(NL(OSCACTR_coerce),(V, F, (A_CALLPROC(NL(ZVBACTR_insertvec),((*(&(BUCACTR_a->Mode))), 1),((*(&(BUCACTR_a->Mode))), 1,(NL(ZVBACTR_insertvec)).nonlocals))+WSCACTR_qref), 8, Code),(V, F, (A_CALLPROC(NL(ZVBACTR_insertvec),((*(&(BUCACTR_a->Mode))), 1),((*(&(BUCACTR_a->Mode))), 1,(NL(ZVBACTR_insertvec)).nonlocals))+WSCACTR_qref), 8, Code,(NL(OSCACTR_coerce)).nonlocals));
+RUCACTR = A_CALLPROC(NL(OSCACTR_coerce),(V, F, (A_CALLPROC(NL(ZVBACTR_insertvec),((*A_NILCHECK((&(A_NILCHECK(BUCACTR_a)->Mode)))), 1),((*A_NILCHECK((&(A_NILCHECK(BUCACTR_a)->Mode)))), 1,(NL(ZVBACTR_insertvec)).nonlocals))+WSCACTR_qref), 8, Code),(V, F, (A_CALLPROC(NL(ZVBACTR_insertvec),((*A_NILCHECK((&(A_NILCHECK(BUCACTR_a)->Mode)))), 1),((*A_NILCHECK((&(A_NILCHECK(BUCACTR_a)->Mode)))), 1,(NL(ZVBACTR_insertvec)).nonlocals))+WSCACTR_qref), 8, Code,(NL(OSCACTR_coerce)).nonlocals));
 }
 if (RUCACTR)
 { 
@@ -17769,7 +17769,7 @@ XUCACTR.Fn = SMAACTR_xprestraight;
 XUCACTR.M = XSCACTR_i;
 XUCACTR.Param = 0;
  /* line 3103: */
-(void)(A_CALLPROC(NL(Output),(A_UNITE(YUCACTR,mode14,14,XUCACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(YUCACTR,mode14,14,XUCACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(YUCACTR,mode14,14,XUCACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(YUCACTR,mode14,14,XUCACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
 } 
  /* line 3104: */
  /* line 3105: */
@@ -17781,7 +17781,7 @@ if (YSCACTR_j==1)
  /* line 3107: */
  /* line 3108: */
  /* line 3109: */
-(void)(A_CALLPROC(NL(Output),(A_UNITE(ZUCACTR,mode3,3,YSCACTR_j), (*NL(FZAACTR_outlevel))),(A_UNITE(ZUCACTR,mode3,3,YSCACTR_j), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(ZUCACTR,mode3,3,YSCACTR_j), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(ZUCACTR,mode3,3,YSCACTR_j), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
 } 
 } 
 else
@@ -17812,14 +17812,14 @@ if (DVCACTR)
 { 
  /* line 3117: */
 GVCACTR = VSCACTR_f1 = A_CALLPROC(NL(XJCACTR_pmode),(F),(F,(NL(XJCACTR_pmode)).nonlocals)) ;
-HVCACTR = (*(&A_VINDEX(NL(KUAACTR_modes),GVCACTR))) ;
+HVCACTR = (*A_NILCHECK((&A_VINDEX(NL(KUAACTR_modes),GVCACTR)))) ;
 switch ( HVCACTR.mode )
 { 
 case 2: /* REF STRUCT(INT,REF MODE54)  */
 IVCACTR_u1 = (HVCACTR.data.mode2);
  /* line 3118: */
 { 
-(void)(ATCACTR_ml = (*(&(IVCACTR_u1->Modelist))));
+(void)(ATCACTR_ml = (*A_NILCHECK((&(A_NILCHECK(IVCACTR_u1)->Modelist)))));
  /* line 3120: */
 for ( ;; )
 { 
@@ -17828,7 +17828,7 @@ if ( !((ATCACTR_ml!=OQAACTR_nilml)) ) break;
  /* line 3122: */
  /* line 3123: */
  /* line 3124: */
-if (A_CALLPROC(NL(MLCACTR_unite),(V, (*(&(ATCACTR_ml->Mode))), T, 1, A68_FALSE),(V, (*(&(ATCACTR_ml->Mode))), T, 1, A68_FALSE,(NL(MLCACTR_unite)).nonlocals))==0)
+if (A_CALLPROC(NL(MLCACTR_unite),(V, (*A_NILCHECK((&(A_NILCHECK(ATCACTR_ml)->Mode)))), T, 1, A68_FALSE),(V, (*A_NILCHECK((&(A_NILCHECK(ATCACTR_ml)->Mode)))), T, 1, A68_FALSE,(NL(MLCACTR_unite)).nonlocals))==0)
 { 
  /* line 3125: */
 goto FVCACTR_s;
@@ -17837,7 +17837,7 @@ else
 { 
  /* line 3126: */
  /* line 3127: */
-(void)(ATCACTR_ml = (*(&(ATCACTR_ml->Rest))));
+(void)(ATCACTR_ml = (*A_NILCHECK((&(A_NILCHECK(ATCACTR_ml)->Rest)))));
 } 
 }
  /* line 3128: */
@@ -17960,14 +17960,14 @@ break;
 case 5: /* REF STRUCT(INT,INT,INT,INT)  */
 RVCACTR_ri = (STCACTR.data.mode5);
  /* line 3162: */
-SVCACTR = ((*(&(RVCACTR_ri->Length)))==1);
+SVCACTR = ((*A_NILCHECK((&(A_NILCHECK(RVCACTR_ri)->Length))))==1);
 if ( SVCACTR )
 { /* line 3163: */
 SVCACTR = (Str>=9);
 }
 if ( SVCACTR )
 { /* line 3164: */
-SVCACTR = A_CALLPROC(NL(OSCACTR_coerce),(V, F, ((*(&(RVCACTR_ri->Imode)))+WSCACTR_qref), 8, Code),(V, F, ((*(&(RVCACTR_ri->Imode)))+WSCACTR_qref), 8, Code,(NL(OSCACTR_coerce)).nonlocals));
+SVCACTR = A_CALLPROC(NL(OSCACTR_coerce),(V, F, ((*A_NILCHECK((&(A_NILCHECK(RVCACTR_ri)->Imode))))+WSCACTR_qref), 8, Code),(V, F, ((*A_NILCHECK((&(A_NILCHECK(RVCACTR_ri)->Imode))))+WSCACTR_qref), 8, Code,(NL(OSCACTR_coerce)).nonlocals));
 }
 if (SVCACTR)
 { 
@@ -18022,16 +18022,16 @@ goto SSCACTR_e;
  /* line 3177: */
 VVCACTR_l: A_UNUSED;
  /* line 3178: */
-YVCACTR = (*(&A_VINDEX(NL(KUAACTR_modes),YSCACTR_j))) ;
+YVCACTR = (*A_NILCHECK((&A_VINDEX(NL(KUAACTR_modes),YSCACTR_j)))) ;
 switch ( YVCACTR.mode )
 { 
 case 8: /* REF STRUCT(INT,INT,INT,INT)  */
 ZVCACTR_a = (YVCACTR.data.mode8);
  /* line 3179: */
  /* line 3180: */
-if ((*(&(ZVCACTR_a->Nods)))>1)
+if ((*A_NILCHECK((&(A_NILCHECK(ZVCACTR_a)->Nods))))>1)
 { 
-(void)(YSCACTR_j = (*(&(ZVCACTR_a->Mode))));
+(void)(YSCACTR_j = (*A_NILCHECK((&(A_NILCHECK(ZVCACTR_a)->Mode)))));
  /* line 3181: */
  /* line 3182: */
  /* line 3183: */
@@ -18103,7 +18103,7 @@ CWCACTR.Fn = TSCACTR_ans;
 CWCACTR.M = T;
 CWCACTR.Param = ZSCACTR_p3;
  /* line 3205: */
-(void)(A_CALLPROC(NL(Output),(A_UNITE(DWCACTR,mode14,14,CWCACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(DWCACTR,mode14,14,CWCACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(DWCACTR,mode14,14,CWCACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(DWCACTR,mode14,14,CWCACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
 } 
  /* line 3206: */
  /* line 3207: */
@@ -18112,7 +18112,7 @@ if (A_ABS(EWCACTR)>=2)
 { 
  /* line 3208: */
  /* line 3209: */
-FWCACTR = (*(&(V->Props))) ;
+FWCACTR = (*A_NILCHECK((&(A_NILCHECK(V)->Props)))) ;
 if (A_LB_GE(FWCACTR,VLAACTR_vardecbit))
 { 
 GWCACTR = BMAACTR_dyvardecbit;
@@ -18121,7 +18121,7 @@ else
 { 
  /* line 3210: */
  /* line 3211: */
-HWCACTR = (*(&(V->Props))) ;
+HWCACTR = (*A_NILCHECK((&(A_NILCHECK(V)->Props)))) ;
 if (A_LB_GE(HWCACTR,ULAACTR_decbit))
 { 
  /* line 3212: */
@@ -18139,19 +18139,19 @@ if (IWCACTR)
 { 
  /* line 3215: */
  /* line 3216: */
-JWCACTR = (&((*NL(QYAACTR_globcurrent))->Dybits)) ;
-(void)((*JWCACTR) = (A68_BITS )((*(&((*NL(QYAACTR_globcurrent))->Dybits)))|BTCACTR_b));
+JWCACTR = (&(A_NILCHECK((*A_NILCHECK(NL(QYAACTR_globcurrent))))->Dybits)) ;
+(void)((*A_NILCHECK(JWCACTR)) = (A68_BITS )((*A_NILCHECK((&(A_NILCHECK((*A_NILCHECK(NL(QYAACTR_globcurrent))))->Dybits))))|BTCACTR_b));
 } 
  /* line 3217: */
  /* line 3218: */
-KWCACTR = (&(V->Props)) ;
-(void)((*KWCACTR) = (A68_BITS )((*(&(V->Props)))|ZLAACTR_dontpullbit));
+KWCACTR = (&(A_NILCHECK(V)->Props)) ;
+(void)((*A_NILCHECK(KWCACTR)) = (A68_BITS )((*A_NILCHECK((&(A_NILCHECK(V)->Props))))|ZLAACTR_dontpullbit));
 } 
  /* line 3219: */
  /* line 3220: */
  /* line 3221: */
-LWCACTR = (&(V->Mode)) ;
-(*LWCACTR) = T;
+LWCACTR = (&(A_NILCHECK(V)->Mode)) ;
+(*A_NILCHECK(LWCACTR)) = T;
 } 
 } 
  /* line 3222: */
@@ -18203,14 +18203,14 @@ goto UWCACTR_aa;
 else
 { 
  /* line 3235: */
-XWCACTR = (*(&A_VINDEX(NL(KUAACTR_modes),VWCACTR_i))) ;
+XWCACTR = (*A_NILCHECK((&A_VINDEX(NL(KUAACTR_modes),VWCACTR_i)))) ;
 switch ( XWCACTR.mode )
 { 
 case 6: /* REF STRUCT(INT)  */
 YWCACTR_p = (XWCACTR.data.mode6);
  /* line 3236: */
 { 
-(void)(VWCACTR_i = (*(&(YWCACTR_p->Deproc))));
+(void)(VWCACTR_i = (*A_NILCHECK((&(A_NILCHECK(YWCACTR_p)->Deproc)))));
  /* line 3237: */
  /* line 3238: */
  /* line 3239: */
@@ -18267,41 +18267,41 @@ A_PROC_ENTRY(hcf);
  /* line 3252: */
  /* line 3253: */
  /* line 3254: */
-if ((*(&(V->Mode)))>=0)
+if ((*A_NILCHECK((&(A_NILCHECK(V)->Mode))))>=0)
 { 
-FXCACTR = (*(&(V->Mode)));
+FXCACTR = (*A_NILCHECK((&(A_NILCHECK(V)->Mode))));
 } 
 else
 { 
 { 
-GXCACTR_vl1 = (*(&(V->Vlist)));
+GXCACTR_vl1 = (*A_NILCHECK((&(A_NILCHECK(V)->Vlist))));
  /* line 3255: */
  /* line 3256: */
-HXCACTR = ((*(&(GXCACTR_vl1->Type)))!=NNAACTR_xcoll);
+HXCACTR = ((*A_NILCHECK((&(A_NILCHECK(GXCACTR_vl1)->Type))))!=NNAACTR_xcoll);
 if (HXCACTR)
 { 
  /* line 3257: */
-if ((*(&(GXCACTR_vl1->Type)))<ZMAACTR_xbegin)
+if ((*A_NILCHECK((&(A_NILCHECK(GXCACTR_vl1)->Type))))<ZMAACTR_xbegin)
 { 
  /* line 3258: */
-(void)(GXCACTR_vl1 = (*(&(GXCACTR_vl1->Rest))));
+(void)(GXCACTR_vl1 = (*A_NILCHECK((&(A_NILCHECK(GXCACTR_vl1)->Rest)))));
 } 
  /* line 3259: */
-IXCACTR_hmode = A_CALLPROC(NL(CXCACTR_hcf),((&(GXCACTR_vl1->V))),((&(GXCACTR_vl1->V)),(NL(CXCACTR_hcf)).nonlocals));
+IXCACTR_hmode = A_CALLPROC(NL(CXCACTR_hcf),((&(A_NILCHECK(GXCACTR_vl1)->V))),((&(A_NILCHECK(GXCACTR_vl1)->V)),(NL(CXCACTR_hcf)).nonlocals));
  /* line 3260: */
 for ( ;; )
 { 
  /* line 3261: */
 if ( !((GXCACTR_vl1!=UQAACTR_nilvl)) ) break;
  /* line 3262: */
-if ((JXCACTR_i = A_CALLPROC(NL(QWCACTR_hcfoftwo),(A_CALLPROC(NL(CXCACTR_hcf),((&(GXCACTR_vl1->V))),((&(GXCACTR_vl1->V)),(NL(CXCACTR_hcf)).nonlocals)), IXCACTR_hmode, A68_TRUE),(A_CALLPROC(NL(CXCACTR_hcf),((&(GXCACTR_vl1->V))),((&(GXCACTR_vl1->V)),(NL(CXCACTR_hcf)).nonlocals)), IXCACTR_hmode, A68_TRUE,(NL(QWCACTR_hcfoftwo)).nonlocals)))!=0)
+if ((JXCACTR_i = A_CALLPROC(NL(QWCACTR_hcfoftwo),(A_CALLPROC(NL(CXCACTR_hcf),((&(A_NILCHECK(GXCACTR_vl1)->V))),((&(A_NILCHECK(GXCACTR_vl1)->V)),(NL(CXCACTR_hcf)).nonlocals)), IXCACTR_hmode, A68_TRUE),(A_CALLPROC(NL(CXCACTR_hcf),((&(A_NILCHECK(GXCACTR_vl1)->V))),((&(A_NILCHECK(GXCACTR_vl1)->V)),(NL(CXCACTR_hcf)).nonlocals)), IXCACTR_hmode, A68_TRUE,(NL(QWCACTR_hcfoftwo)).nonlocals)))!=0)
 { 
  /* line 3263: */
 IXCACTR_hmode = JXCACTR_i;
 } 
  /* line 3264: */
  /* line 3265: */
-(void)(GXCACTR_vl1 = (*(&(GXCACTR_vl1->Rest))));
+(void)(GXCACTR_vl1 = (*A_NILCHECK((&(A_NILCHECK(GXCACTR_vl1)->Rest)))));
 }
  /* line 3266: */
  /* line 3267: */
@@ -18336,7 +18336,7 @@ RXCACTR_ans = 0;
  /* line 3273: */
  /* line 3274: */
  /* line 3275: */
-if ((*(&(V->Mode)))>0)
+if ((*A_NILCHECK((&(A_NILCHECK(V)->Mode))))>0)
 { 
  /* line 3276: */
 for ( UXCACTR_i = 1;
@@ -18364,7 +18364,7 @@ A_IMP_SKIP ;
 break;
 } 
  /* line 3279: */
-WXCACTR = A_CALLPROC(NL(OSCACTR_coerce),((A68_125 *)A68_NIL, (*(&(V->Mode))), T, VXCACTR, A68_FALSE),((A68_125 *)A68_NIL, (*(&(V->Mode))), T, VXCACTR, A68_FALSE,(NL(OSCACTR_coerce)).nonlocals));
+WXCACTR = A_CALLPROC(NL(OSCACTR_coerce),((A68_125 *)A68_NIL, (*A_NILCHECK((&(A_NILCHECK(V)->Mode)))), T, VXCACTR, A68_FALSE),((A68_125 *)A68_NIL, (*A_NILCHECK((&(A_NILCHECK(V)->Mode)))), T, VXCACTR, A68_FALSE,(NL(OSCACTR_coerce)).nonlocals));
 if (WXCACTR)
 { 
  /* line 3280: */
@@ -18382,7 +18382,7 @@ goto QXCACTR_out;
 else
 { 
  /* line 3284: */
-if ((*(&((TXCACTR_vl = (*(&(V->Vlist))))->Type)))==NNAACTR_xcoll)
+if ((*A_NILCHECK((&(A_NILCHECK((TXCACTR_vl = (*A_NILCHECK((&(A_NILCHECK(V)->Vlist))))))->Type))))==NNAACTR_xcoll)
 { 
  /* line 3285: */
 RXCACTR_ans = 1;
@@ -18390,10 +18390,10 @@ RXCACTR_ans = 1;
 else
 { 
  /* line 3286: */
-if ((*(&(TXCACTR_vl->Type)))<ZMAACTR_xbegin)
+if ((*A_NILCHECK((&(A_NILCHECK(TXCACTR_vl)->Type))))<ZMAACTR_xbegin)
 { 
  /* line 3287: */
-(void)(TXCACTR_vl = (*(&(TXCACTR_vl->Rest))));
+(void)(TXCACTR_vl = (*A_NILCHECK((&(A_NILCHECK(TXCACTR_vl)->Rest)))));
 } 
  /* line 3288: */
 for ( ;; )
@@ -18401,7 +18401,7 @@ for ( ;; )
  /* line 3289: */
 if ( !((TXCACTR_vl!=UQAACTR_nilvl)) ) break;
  /* line 3290: */
-if ((SXCACTR_i = A_CALLPROC(NL(MXCACTR_firmto),((&(TXCACTR_vl->V)), T),((&(TXCACTR_vl->V)), T,(NL(MXCACTR_firmto)).nonlocals)))==0)
+if ((SXCACTR_i = A_CALLPROC(NL(MXCACTR_firmto),((&(A_NILCHECK(TXCACTR_vl)->V)), T),((&(A_NILCHECK(TXCACTR_vl)->V)), T,(NL(MXCACTR_firmto)).nonlocals)))==0)
 { 
 RXCACTR_ans = 0;
  /* line 3291: */
@@ -18417,7 +18417,7 @@ RXCACTR_ans = SXCACTR_i;
  /* line 3293: */
  /* line 3294: */
  /* line 3295: */
-(void)(TXCACTR_vl = (*(&(TXCACTR_vl->Rest))));
+(void)(TXCACTR_vl = (*A_NILCHECK((&(A_NILCHECK(TXCACTR_vl)->Rest)))));
 } 
 }
  /* line 3296: */
@@ -18449,7 +18449,7 @@ A68_INT  NYCACTR;  /* clause result */
 A_PROC_ENTRY(ismode);
  /* line 3301: */
 { 
-EYCACTR_vl = (*(&(V->Vlist)));
+EYCACTR_vl = (*A_NILCHECK((&(A_NILCHECK(V)->Vlist))));
  /* line 3302: */
 FYCACTR_n = 0;
  /* line 3303: */
@@ -18464,7 +18464,7 @@ else
  /* line 3306: */
 if (EYCACTR_vl==UQAACTR_nilvl)
 { 
-(void)(GYCACTR_m = FYCACTR_n = A_CALLPROC(NL(XJCACTR_pmode),((*(&(V->Mode)))),((*(&(V->Mode))),(NL(XJCACTR_pmode)).nonlocals)));
+(void)(GYCACTR_m = FYCACTR_n = A_CALLPROC(NL(XJCACTR_pmode),((*A_NILCHECK((&(A_NILCHECK(V)->Mode))))),((*A_NILCHECK((&(A_NILCHECK(V)->Mode)))),(NL(XJCACTR_pmode)).nonlocals)));
  /* line 3307: */
 IYCACTR = Nods;
 for ( JYCACTR = 1;
@@ -18478,14 +18478,14 @@ KYCACTR = (FYCACTR_n<KQAACTR_refmark);
 }
 if ( !(KYCACTR) ) break;
  /* line 3309: */
-LYCACTR = (*(&A_VINDEX(NL(KUAACTR_modes),FYCACTR_n))) ;
+LYCACTR = (*A_NILCHECK((&A_VINDEX(NL(KUAACTR_modes),FYCACTR_n)))) ;
 switch ( LYCACTR.mode )
 { 
 case 5: /* REF STRUCT(INT,INT,INT,INT)  */
 MYCACTR_ri = (LYCACTR.data.mode5);
  /* line 3311: */
  /* line 3312: */
-NYCACTR = (*(&(MYCACTR_ri->Imode)));
+NYCACTR = (*A_NILCHECK((&(A_NILCHECK(MYCACTR_ri)->Imode))));
 break;
 default: 
  /* line 3313: */
@@ -18511,7 +18511,7 @@ HYCACTR = A_CALLPROC(NL(TWBACTR_insertis),(A_CALLPROC(NL(BYCACTR_ismode),(V, Mod
 else
 { 
  /* line 3320: */
-if ((*(&(EYCACTR_vl->Type)))==NNAACTR_xcoll)
+if ((*A_NILCHECK((&(A_NILCHECK(EYCACTR_vl)->Type))))==NNAACTR_xcoll)
 { 
 for ( ;; )
 { 
@@ -18520,26 +18520,26 @@ if ( !((EYCACTR_vl!=UQAACTR_nilvl)) ) break;
 FYCACTR_n+=1;
  /* line 3322: */
  /* line 3323: */
-(void)(EYCACTR_vl = (*(&(EYCACTR_vl->Rest))));
+(void)(EYCACTR_vl = (*A_NILCHECK((&(A_NILCHECK(EYCACTR_vl)->Rest)))));
 }
  /* line 3324: */
  /* line 3325: */
-HYCACTR = A_CALLPROC(NL(TWBACTR_insertis),(A_CALLPROC(NL(BYCACTR_ismode),((&((*(&(V->Vlist)))->V)), Mode, (Nods-1)),((&((*(&(V->Vlist)))->V)), Mode, (Nods-1),(NL(BYCACTR_ismode)).nonlocals)), FYCACTR_n),(A_CALLPROC(NL(BYCACTR_ismode),((&((*(&(V->Vlist)))->V)), Mode, (Nods-1)),((&((*(&(V->Vlist)))->V)), Mode, (Nods-1),(NL(BYCACTR_ismode)).nonlocals)), FYCACTR_n,(NL(TWBACTR_insertis)).nonlocals));
+HYCACTR = A_CALLPROC(NL(TWBACTR_insertis),(A_CALLPROC(NL(BYCACTR_ismode),((&(A_NILCHECK((*A_NILCHECK((&(A_NILCHECK(V)->Vlist)))))->V)), Mode, (Nods-1)),((&(A_NILCHECK((*A_NILCHECK((&(A_NILCHECK(V)->Vlist)))))->V)), Mode, (Nods-1),(NL(BYCACTR_ismode)).nonlocals)), FYCACTR_n),(A_CALLPROC(NL(BYCACTR_ismode),((&(A_NILCHECK((*A_NILCHECK((&(A_NILCHECK(V)->Vlist)))))->V)), Mode, (Nods-1)),((&(A_NILCHECK((*A_NILCHECK((&(A_NILCHECK(V)->Vlist)))))->V)), Mode, (Nods-1),(NL(BYCACTR_ismode)).nonlocals)), FYCACTR_n,(NL(TWBACTR_insertis)).nonlocals));
 } 
 else
 { 
  /* line 3326: */
-if ((*(&(EYCACTR_vl->Type)))==ZMAACTR_xbegin)
+if ((*A_NILCHECK((&(A_NILCHECK(EYCACTR_vl)->Type))))==ZMAACTR_xbegin)
 { 
  /* line 3327: */
-HYCACTR = A_CALLPROC(NL(BYCACTR_ismode),((&(EYCACTR_vl->V)), Mode, Nods),((&(EYCACTR_vl->V)), Mode, Nods,(NL(BYCACTR_ismode)).nonlocals));
+HYCACTR = A_CALLPROC(NL(BYCACTR_ismode),((&(A_NILCHECK(EYCACTR_vl)->V)), Mode, Nods),((&(A_NILCHECK(EYCACTR_vl)->V)), Mode, Nods,(NL(BYCACTR_ismode)).nonlocals));
 } 
 else
 { 
  /* line 3328: */
  /* line 3329: */
  /* line 3330: */
-HYCACTR = A_CALLPROC(NL(BYCACTR_ismode),((&((*(&(EYCACTR_vl->Rest)))->V)), Mode, Nods),((&((*(&(EYCACTR_vl->Rest)))->V)), Mode, Nods,(NL(BYCACTR_ismode)).nonlocals));
+HYCACTR = A_CALLPROC(NL(BYCACTR_ismode),((&(A_NILCHECK((*A_NILCHECK((&(A_NILCHECK(EYCACTR_vl)->Rest)))))->V)), Mode, Nods),((&(A_NILCHECK((*A_NILCHECK((&(A_NILCHECK(EYCACTR_vl)->Rest)))))->V)), Mode, Nods,(NL(BYCACTR_ismode)).nonlocals));
 } 
 } 
 } 
@@ -18650,39 +18650,39 @@ FZCACTR_pntomode = EZCACTR;
 for ( ;; )
 { 
  /* line 3351: */
-if ( !(((*(&(V->Labs)))!=XQAACTR_nillab)) ) break;
-GZCACTR.Lab = (*(&(V->Labs)));
+if ( !(((*A_NILCHECK((&(A_NILCHECK(V)->Labs))))!=XQAACTR_nillab)) ) break;
+GZCACTR.Lab = (*A_NILCHECK((&(A_NILCHECK(V)->Labs))));
 GZCACTR.Notsetting = A68_TRUE;
-(void)(A_CALLPROC(NL(Output),(A_UNITE(HZCACTR,mode13,13,GZCACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(HZCACTR,mode13,13,GZCACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(HZCACTR,mode13,13,GZCACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(HZCACTR,mode13,13,GZCACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 3352: */
  /* line 3353: */
-IZCACTR = (&(V->Labs)) ;
-(void)((*IZCACTR) = (*(&((*(&(V->Labs)))->Rest))));
+IZCACTR = (&(A_NILCHECK(V)->Labs)) ;
+(void)((*A_NILCHECK(IZCACTR)) = (*A_NILCHECK((&(A_NILCHECK((*A_NILCHECK((&(A_NILCHECK(V)->Labs)))))->Rest)))));
 }
  /* line 3355: */
  /* line 3356: */
-JZCACTR = (*(&(V->Props))) ;
+JZCACTR = (*A_NILCHECK((&(A_NILCHECK(V)->Props)))) ;
 if (A_LB_GE(JZCACTR,BRAACTR_downbit))
 { 
  /* line 3357: */
-(void)(A_CALLPROC(NL(Output),(SKAACTR_down, (*NL(FZAACTR_outlevel))),(SKAACTR_down, (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(SKAACTR_down, (*A_NILCHECK(NL(FZAACTR_outlevel)))),(SKAACTR_down, (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
 } 
  /* line 3359: */
  /* line 3360: */
-if ((*(&(V->Mode)))>=0)
+if ((*A_NILCHECK((&(A_NILCHECK(V)->Mode))))>=0)
 { 
-(void)(A_CALLPROC(NL(OSCACTR_coerce),(V, (*(&(V->Mode))), BZCACTR_tomode, ISCACTR_all, A68_TRUE),(V, (*(&(V->Mode))), BZCACTR_tomode, ISCACTR_all, A68_TRUE,(NL(OSCACTR_coerce)).nonlocals)));
+(void)(A_CALLPROC(NL(OSCACTR_coerce),(V, (*A_NILCHECK((&(A_NILCHECK(V)->Mode)))), BZCACTR_tomode, ISCACTR_all, A68_TRUE),(V, (*A_NILCHECK((&(A_NILCHECK(V)->Mode)))), BZCACTR_tomode, ISCACTR_all, A68_TRUE,(NL(OSCACTR_coerce)).nonlocals)));
  /* line 3361: */
-(void)(ZYCACTR_ans = (A68_BITS )((*(&(V->Props)))&ZLAACTR_dontpullbit));
+(void)(ZYCACTR_ans = (A68_BITS )((*A_NILCHECK((&(A_NILCHECK(V)->Props))))&ZLAACTR_dontpullbit));
  /* line 3362: */
  /* line 3363: */
-KZCACTR = (&(V->Props)) ;
-(*KZCACTR) = MQAACTR_z;
+KZCACTR = (&(A_NILCHECK(V)->Props)) ;
+(*A_NILCHECK(KZCACTR)) = MQAACTR_z;
 } 
 else
 { 
  /* line 3364: */
-if ((*(&((UYCACTR_vl = (*(&(V->Vlist))))->Type)))==NNAACTR_xcoll)
+if ((*A_NILCHECK((&(A_NILCHECK((UYCACTR_vl = (*A_NILCHECK((&(A_NILCHECK(V)->Vlist))))))->Type))))==NNAACTR_xcoll)
 { 
 A_CLOSURE( UZCACTR_elem, VZCACTR_elem, WZCACTR_elem );
 (( WZCACTR_elem * ) ( UZCACTR_elem.nonlocals )) -> Output = NL(Output);
@@ -18717,7 +18717,7 @@ ZZCACTR_i += 1 )
 if ( !((UYCACTR_vl!=UQAACTR_nilvl)) ) break;
 (void)(A_CALLPROC(UZCACTR_elem,(UYCACTR_vl, YKAACTR_voidmode),(UYCACTR_vl, YKAACTR_voidmode,(UZCACTR_elem).nonlocals)));
  /* line 3383: */
-(void)(UYCACTR_vl = (*(&(UYCACTR_vl->Rest))));
+(void)(UYCACTR_vl = (*A_NILCHECK((&(A_NILCHECK(UYCACTR_vl)->Rest)))));
  /* line 3384: */
  /* line 3385: */
 WYCACTR_n = ZZCACTR_i;
@@ -18728,7 +18728,7 @@ AADACTR.M = 0;
  /* line 3387: */
 AADACTR.Props = AZCACTR_qdontpull;
 AADACTR.Param = FZCACTR_pntomode;
-(void)(A_CALLPROC(NL(Output),(A_UNITE(BADACTR,mode17,17,AADACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(BADACTR,mode17,17,AADACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(BADACTR,mode17,17,AADACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(BADACTR,mode17,17,AADACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 3388: */
 (void)(EYBACTR_freevalue(V));
  /* line 3389: */
@@ -18736,7 +18736,7 @@ CADACTR.Props = MQAACTR_z;
 CADACTR.Mode = YKAACTR_voidmode;
 CADACTR.Vlist = (A68_124 *)A68_NIL;
 CADACTR.Labs = (A68_69 *)A68_NIL;
-(*V) = CADACTR;
+(*A_NILCHECK(V)) = CADACTR;
  /* line 3390: */
  /* line 3391: */
 goto OZCACTR_over;
@@ -18744,14 +18744,14 @@ goto OZCACTR_over;
 } 
  /* line 3393: */
  /* line 3394: */
-DADACTR = (*(&A_VINDEX(NL(KUAACTR_modes),BZCACTR_tomode))) ;
+DADACTR = (*A_NILCHECK((&A_VINDEX(NL(KUAACTR_modes),BZCACTR_tomode)))) ;
 switch ( DADACTR.mode )
 { 
 case 4: /* REF STRUCT(INT,INT,REF MODE58)  */
 EADACTR_rs = (DADACTR.data.mode4);
  /* line 3395: */
 { 
-(void)(VYCACTR_sl = (*(&(EADACTR_rs->Sels))));
+(void)(VYCACTR_sl = (*A_NILCHECK((&(A_NILCHECK(EADACTR_rs)->Sels)))));
  /* line 3396: */
 WYCACTR_n = FZCACTR_pntomode;
  /* line 3397: */
@@ -18765,11 +18765,11 @@ if ( GADACTR )
 GADACTR = (VYCACTR_sl!=RQAACTR_nilsel);
 }
 if ( !(GADACTR) ) break;
-(void)(A_CALLPROC(UZCACTR_elem,(UYCACTR_vl, (*(&(VYCACTR_sl->Mode)))),(UYCACTR_vl, (*(&(VYCACTR_sl->Mode))),(UZCACTR_elem).nonlocals)));
+(void)(A_CALLPROC(UZCACTR_elem,(UYCACTR_vl, (*A_NILCHECK((&(A_NILCHECK(VYCACTR_sl)->Mode))))),(UYCACTR_vl, (*A_NILCHECK((&(A_NILCHECK(VYCACTR_sl)->Mode)))),(UZCACTR_elem).nonlocals)));
  /* line 3400: */
-(void)(UYCACTR_vl = (*(&(UYCACTR_vl->Rest))));
+(void)(UYCACTR_vl = (*A_NILCHECK((&(A_NILCHECK(UYCACTR_vl)->Rest)))));
  /* line 3401: */
-(void)(VYCACTR_sl = (*(&(VYCACTR_sl->Rest))));
+(void)(VYCACTR_sl = (*A_NILCHECK((&(A_NILCHECK(VYCACTR_sl)->Rest)))));
  /* line 3402: */
  /* line 3403: */
 WYCACTR_n = FADACTR_i;
@@ -18792,7 +18792,7 @@ IADACTR.M = 0;
  /* line 3409: */
 IADACTR.Props = AZCACTR_qdontpull;
 IADACTR.Param = FZCACTR_pntomode;
-(void)(A_CALLPROC(NL(Output),(A_UNITE(JADACTR,mode17,17,IADACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(JADACTR,mode17,17,IADACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(JADACTR,mode17,17,IADACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(JADACTR,mode17,17,IADACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 3410: */
 (void)(EYBACTR_freevalue(V));
  /* line 3411: */
@@ -18800,7 +18800,7 @@ KADACTR.Props = MQAACTR_z;
 KADACTR.Mode = BZCACTR_tomode;
 KADACTR.Vlist = (A68_124 *)A68_NIL;
 KADACTR.Labs = (A68_69 *)A68_NIL;
-(*V) = KADACTR;
+(*A_NILCHECK(V)) = KADACTR;
  /* line 3412: */
  /* line 3413: */
  /* line 3414: */
@@ -18811,7 +18811,7 @@ case 5: /* REF STRUCT(INT,INT,INT,INT)  */
 LADACTR_ri = (DADACTR.data.mode5);
  /* line 3415: */
 { 
-(void)(XYCACTR_m = (*(&(LADACTR_ri->Imode))));
+(void)(XYCACTR_m = (*A_NILCHECK((&(A_NILCHECK(LADACTR_ri)->Imode)))));
  /* line 3416: */
  /* line 3417: */
  /* line 3418: */
@@ -18822,7 +18822,7 @@ case 7: /* REF STRUCT(INT,INT,INT)  */
 MADACTR_rv = (DADACTR.data.mode7);
  /* line 3419: */
 { 
-(void)(XYCACTR_m = (*(&(MADACTR_rv->Vecmode))));
+(void)(XYCACTR_m = (*A_NILCHECK((&(A_NILCHECK(MADACTR_rv)->Vecmode)))));
  /* line 3420: */
 ZYCACTR_ans = ZLAACTR_dontpullbit;
  /* line 3421: */
@@ -18840,13 +18840,13 @@ XYCACTR_m = BZCACTR_tomode;
 ZYCACTR_ans = ZLAACTR_dontpullbit;
  /* line 3426: */
  /* line 3427: */
-OADACTR = WYCACTR_n = (*(&(NADACTR_ra->Nods)));
+OADACTR = WYCACTR_n = (*A_NILCHECK((&(A_NILCHECK(NADACTR_ra)->Nods))));
 for ( PADACTR = 1;
 PADACTR <= OADACTR;
 PADACTR += 1 )
 { 
  /* line 3428: */
-QADACTR = (*(&A_VINDEX(NL(KUAACTR_modes),XYCACTR_m))) ;
+QADACTR = (*A_NILCHECK((&A_VINDEX(NL(KUAACTR_modes),XYCACTR_m)))) ;
 switch ( QADACTR.mode )
 { 
 case 8: /* REF STRUCT(INT,INT,INT,INT)  */
@@ -18854,7 +18854,7 @@ RADACTR_ra1 = (QADACTR.data.mode8);
  /* line 3429: */
  /* line 3430: */
  /* line 3431: */
-(void)(XYCACTR_m = (*(&(RADACTR_ra1->Mode))));
+(void)(XYCACTR_m = (*A_NILCHECK((&(A_NILCHECK(RADACTR_ra1)->Mode)))));
 break;
 default: 
 A_IMP_SKIP ;
@@ -18881,14 +18881,14 @@ DZCACTR_qneg = 1;
 } 
  /* line 3441: */
  /* line 3442: */
-SADACTR = (*(&A_VINDEX(NL(KUAACTR_modes),FZCACTR_pntomode))) ;
+SADACTR = (*A_NILCHECK((&A_VINDEX(NL(KUAACTR_modes),FZCACTR_pntomode)))) ;
 switch ( SADACTR.mode )
 { 
 case 5: /* REF STRUCT(INT,INT,INT,INT)  */
 TADACTR_ri = (SADACTR.data.mode5);
  /* line 3443: */
  /* line 3444: */
-(void)(XYCACTR_m = (*(&(TADACTR_ri->Imode))));
+(void)(XYCACTR_m = (*A_NILCHECK((&(A_NILCHECK(TADACTR_ri)->Imode)))));
 break;
 default: 
 A_IMP_SKIP ;
@@ -18906,7 +18906,7 @@ if (UADACTR)
 (void)(FZCACTR_pntomode = (-FZCACTR_pntomode));
 } 
  /* line 3449: */
-(void)(UYCACTR_vl = (*(&(V->Vlist))));
+(void)(UYCACTR_vl = (*A_NILCHECK((&(A_NILCHECK(V)->Vlist)))));
  /* line 3450: */
 WYCACTR_n = FZCACTR_pntomode;
  /* line 3451: */
@@ -18921,7 +18921,7 @@ if ( !((UYCACTR_vl!=UQAACTR_nilvl)) ) break;
 WYCACTR_n = VADACTR_i;
  /* line 3455: */
  /* line 3456: */
-(void)(UYCACTR_vl = (*(&(UYCACTR_vl->Rest))));
+(void)(UYCACTR_vl = (*A_NILCHECK((&(A_NILCHECK(UYCACTR_vl)->Rest)))));
 }
  /* line 3457: */
 WADACTR.Fn = RNAACTR_xendcoll;
@@ -18930,7 +18930,7 @@ WADACTR.M = 0;
  /* line 3459: */
 WADACTR.Props = AZCACTR_qdontpull;
 WADACTR.Param = FZCACTR_pntomode;
-(void)(A_CALLPROC(NL(Output),(A_UNITE(XADACTR,mode17,17,WADACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(XADACTR,mode17,17,WADACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(XADACTR,mode17,17,WADACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(XADACTR,mode17,17,WADACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 3460: */
 (void)(EYBACTR_freevalue(V));
  /* line 3461: */
@@ -18940,7 +18940,7 @@ YADACTR.Vlist = (A68_124 *)A68_NIL;
 YADACTR.Labs = (A68_69 *)A68_NIL;
  /* line 3462: */
  /* line 3463: */
-(void)((*V) = YADACTR) ;
+(void)((*A_NILCHECK(V)) = YADACTR) ;
 (void)(A_CALLPROC(NL(OSCACTR_coerce),(V, A_ABS(FZCACTR_pntomode), BZCACTR_tomode, ISCACTR_all, A68_TRUE),(V, A_ABS(FZCACTR_pntomode), BZCACTR_tomode, ISCACTR_all, A68_TRUE,(NL(OSCACTR_coerce)).nonlocals)));
  /* line 3464: */
  /* line 3465: */
@@ -18958,7 +18958,7 @@ ZADACTR.Props = MQAACTR_z;
 ZADACTR.Mode = BZCACTR_tomode;
 ZADACTR.Vlist = (A68_124 *)A68_NIL;
 ZADACTR.Labs = (A68_69 *)A68_NIL;
-(*V) = ZADACTR;
+(*A_NILCHECK(V)) = ZADACTR;
  /* line 3471: */
 OZCACTR_over: A_UNUSED;
  /* line 3473: */
@@ -18968,26 +18968,26 @@ else
 { 
  /* line 3474: */
  /* line 3475: */
-if ((*(&(UYCACTR_vl->Type)))==ZMAACTR_xbegin)
+if ((*A_NILCHECK((&(A_NILCHECK(UYCACTR_vl)->Type))))==ZMAACTR_xbegin)
 { 
  /* line 3476: */
 CBDACTR = BZCACTR_tomode;
 } 
 else
 { 
-CBDACTR = (-(*(&(V->Mode))));
+CBDACTR = (-(*A_NILCHECK((&(A_NILCHECK(V)->Mode)))));
 } 
 XYCACTR_m = CBDACTR;
  /* line 3477: */
-DBDACTR.Fn = (*(&(UYCACTR_vl->Type)));
+DBDACTR.Fn = (*A_NILCHECK((&(A_NILCHECK(UYCACTR_vl)->Type))));
  /* line 3478: */
 DBDACTR.M = (XYCACTR_m*DZCACTR_qneg);
  /* line 3479: */
-DBDACTR.Props = (A68_BITS )((*(&((&(UYCACTR_vl->V))->Props)))&GRAACTR_notdontpull);
+DBDACTR.Props = (A68_BITS )((*A_NILCHECK((&(A_NILCHECK((&(A_NILCHECK(UYCACTR_vl)->V)))->Props))))&GRAACTR_notdontpull);
 DBDACTR.Param = FZCACTR_pntomode;
-(void)(A_CALLPROC(NL(Output),(A_UNITE(EBDACTR,mode17,17,DBDACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(EBDACTR,mode17,17,DBDACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(EBDACTR,mode17,17,DBDACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(EBDACTR,mode17,17,DBDACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 3480: */
-(void)(ZYCACTR_ans = AZCACTR_qdontpull = A_CALLPROC(NL(RYCACTR_strong),((&(UYCACTR_vl->V)), (-XYCACTR_m), ((*(&(UYCACTR_vl->Type)))!=ZMAACTR_xbegin)),((&(UYCACTR_vl->V)), (-XYCACTR_m), ((*(&(UYCACTR_vl->Type)))!=ZMAACTR_xbegin),(NL(RYCACTR_strong)).nonlocals)));
+(void)(ZYCACTR_ans = AZCACTR_qdontpull = A_CALLPROC(NL(RYCACTR_strong),((&(A_NILCHECK(UYCACTR_vl)->V)), (-XYCACTR_m), ((*A_NILCHECK((&(A_NILCHECK(UYCACTR_vl)->Type))))!=ZMAACTR_xbegin)),((&(A_NILCHECK(UYCACTR_vl)->V)), (-XYCACTR_m), ((*A_NILCHECK((&(A_NILCHECK(UYCACTR_vl)->Type))))!=ZMAACTR_xbegin),(NL(RYCACTR_strong)).nonlocals)));
  /* line 3481: */
 (void)(WYCACTR_n = (-1));
  /* line 3482: */
@@ -18997,10 +18997,10 @@ for ( ;; )
 if ( !((UYCACTR_vl!=UQAACTR_nilvl)) ) break;
 WYCACTR_n+=1;
  /* line 3484: */
-(void)(YYCACTR_t = (*(&(UYCACTR_vl->Type))));
+(void)(YYCACTR_t = (*A_NILCHECK((&(A_NILCHECK(UYCACTR_vl)->Type)))));
  /* line 3485: */
  /* line 3486: */
-(void)(UYCACTR_vl = (*(&(UYCACTR_vl->Rest))));
+(void)(UYCACTR_vl = (*A_NILCHECK((&(A_NILCHECK(UYCACTR_vl)->Rest)))));
 }
  /* line 3487: */
 FBDACTR = (YYCACTR_t==GNAACTR_xout);
@@ -19014,39 +19014,39 @@ if (FBDACTR)
 (void)(WYCACTR_n = ((-WYCACTR_n)+1));
 } 
  /* line 3490: */
-(void)(UYCACTR_vl = (*(&((*(&(V->Vlist)))->Rest))));
+(void)(UYCACTR_vl = (*A_NILCHECK((&(A_NILCHECK((*A_NILCHECK((&(A_NILCHECK(V)->Vlist)))))->Rest)))));
  /* line 3492: */
 for ( GBDACTR_i = 2;;
 GBDACTR_i += 1 ) 
 { 
  /* line 3493: */
 if ( !((UYCACTR_vl!=UQAACTR_nilvl)) ) break;
-HBDACTR.Fn = (*(&(UYCACTR_vl->Type)));
+HBDACTR.Fn = (*A_NILCHECK((&(A_NILCHECK(UYCACTR_vl)->Type))));
  /* line 3495: */
 HBDACTR.M = BZCACTR_tomode;
  /* line 3496: */
-HBDACTR.Props = (A68_BITS )((A68_BITS )((*(&((&(UYCACTR_vl->V))->Props)))&GRAACTR_notdontpull)|AZCACTR_qdontpull);
+HBDACTR.Props = (A68_BITS )((A68_BITS )((*A_NILCHECK((&(A_NILCHECK((&(A_NILCHECK(UYCACTR_vl)->V)))->Props))))&GRAACTR_notdontpull)|AZCACTR_qdontpull);
 HBDACTR.Param = WYCACTR_n;
-(void)(A_CALLPROC(NL(Output),(A_UNITE(IBDACTR,mode17,17,HBDACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(IBDACTR,mode17,17,HBDACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(IBDACTR,mode17,17,HBDACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(IBDACTR,mode17,17,HBDACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 3497: */
-(void)(AZCACTR_qdontpull = A_CALLPROC(NL(RYCACTR_strong),((&(UYCACTR_vl->V)), (-BZCACTR_tomode), A68_FALSE),((&(UYCACTR_vl->V)), (-BZCACTR_tomode), A68_FALSE,(NL(RYCACTR_strong)).nonlocals)));
+(void)(AZCACTR_qdontpull = A_CALLPROC(NL(RYCACTR_strong),((&(A_NILCHECK(UYCACTR_vl)->V)), (-BZCACTR_tomode), A68_FALSE),((&(A_NILCHECK(UYCACTR_vl)->V)), (-BZCACTR_tomode), A68_FALSE,(NL(RYCACTR_strong)).nonlocals)));
  /* line 3498: */
 (void)(ZYCACTR_ans = (A68_BITS )(ZYCACTR_ans|AZCACTR_qdontpull));
  /* line 3499: */
 WYCACTR_n = GBDACTR_i;
  /* line 3500: */
  /* line 3501: */
-(void)(UYCACTR_vl = (*(&(UYCACTR_vl->Rest))));
+(void)(UYCACTR_vl = (*A_NILCHECK((&(A_NILCHECK(UYCACTR_vl)->Rest)))));
 }
  /* line 3502: */
-(void)(UYCACTR_vl = (*(&(V->Vlist))));
+(void)(UYCACTR_vl = (*A_NILCHECK((&(A_NILCHECK(V)->Vlist)))));
  /* line 3505: */
-JBDACTR.Fn = ((*(&(UYCACTR_vl->Type)))+13);
+JBDACTR.Fn = ((*A_NILCHECK((&(A_NILCHECK(UYCACTR_vl)->Type))))+13);
 JBDACTR.M = 0;
  /* line 3506: */
 JBDACTR.Props = AZCACTR_qdontpull;
 JBDACTR.Param = FZCACTR_pntomode;
-(void)(A_CALLPROC(NL(Output),(A_UNITE(KBDACTR,mode17,17,JBDACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(KBDACTR,mode17,17,JBDACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(KBDACTR,mode17,17,JBDACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(KBDACTR,mode17,17,JBDACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 3507: */
 BBDACTR_end: A_UNUSED;
 (void)(EYBACTR_freevalue(V));
@@ -19056,7 +19056,7 @@ LBDACTR.Mode = BZCACTR_tomode;
 LBDACTR.Vlist = (A68_124 *)A68_NIL;
  /* line 3509: */
 LBDACTR.Labs = (A68_69 *)A68_NIL;
-(*V) = LBDACTR;
+(*A_NILCHECK(V)) = LBDACTR;
 } 
 } 
  /* line 3510: */
@@ -19134,16 +19134,16 @@ A68_INT  BEDACTR;  /* clause result */
 A68_INT  CEDACTR;  /* clause result */
 A_PROC_ENTRY(findbiop);
  /* line 3519: */
-YBDACTR = ((*Lmode)==ZKAACTR_faultmode);
+YBDACTR = ((*A_NILCHECK(Lmode))==ZKAACTR_faultmode);
 if ( ! YBDACTR )
 { /* line 3520: */
-YBDACTR = ((*Rmode)==ZKAACTR_faultmode);
+YBDACTR = ((*A_NILCHECK(Rmode))==ZKAACTR_faultmode);
 }
 if (YBDACTR)
 { 
-(void)((*Biop) = (-1));
+(void)((*A_NILCHECK(Biop)) = (-1));
  /* line 3521: */
-(*Ans) = ZKAACTR_faultmode;
+(*A_NILCHECK(Ans)) = ZKAACTR_faultmode;
  /* line 3522: */
  /* line 3523: */
 ZBDACTR = A68_TRUE;
@@ -19154,14 +19154,14 @@ else
 HCDACTR_rr = 0;
  /* line 3524: */
  /* line 3525: */
-(void)(KCDACTR_b = (*Biop));
+(void)(KCDACTR_b = (*A_NILCHECK(Biop)));
  /* line 3526: */
-(void)(JCDACTR_r = A_CALLPROC(NL(XJCACTR_pmode),((*Rmode)),((*Rmode),(NL(XJCACTR_pmode)).nonlocals)));
+(void)(JCDACTR_r = A_CALLPROC(NL(XJCACTR_pmode),((*A_NILCHECK(Rmode))),((*A_NILCHECK(Rmode)),(NL(XJCACTR_pmode)).nonlocals)));
  /* line 3527: */
 QCDACTR = (KCDACTR_b<CDBACTR_diadiconly);
 if ( QCDACTR )
 { /* line 3528: */
-QCDACTR = ((*Lmode)==0);
+QCDACTR = ((*A_NILCHECK(Lmode))==0);
 }
 if (QCDACTR)
 { 
@@ -19172,7 +19172,7 @@ if (QCDACTR)
  /* line 3532: */
 if (KCDACTR_b>=BDBACTR_monadic)
 { 
-if ((*Lmode)!=0)
+if ((*A_NILCHECK(Lmode))!=0)
 { 
 goto CCDACTR_false;
 } 
@@ -19190,17 +19190,17 @@ MCDACTR_a = A_VINDEX(NL(NIBACTR_monops),SCDACTR).Ans;
 } 
 else
 { 
-if ((*Lmode)==0)
+if ((*A_NILCHECK(Lmode))==0)
 { 
 goto CCDACTR_false;
 } 
  /* line 3538: */
 KCDACTR_b-=YCBACTR_biplus;
  /* line 3539: */
-(void)(ICDACTR_l = A_CALLPROC(NL(XJCACTR_pmode),((*Lmode)),((*Lmode),(NL(XJCACTR_pmode)).nonlocals)));
+(void)(ICDACTR_l = A_CALLPROC(NL(XJCACTR_pmode),((*A_NILCHECK(Lmode))),((*A_NILCHECK(Lmode)),(NL(XJCACTR_pmode)).nonlocals)));
  /* line 3540: */
  /* line 3541: */
-TCDACTR = (*(&A_VINDEX(NL(KUAACTR_modes),ICDACTR_l))) ;
+TCDACTR = (*A_NILCHECK((&A_VINDEX(NL(KUAACTR_modes),ICDACTR_l)))) ;
 switch ( TCDACTR.mode )
 { 
 case 5: /* REF STRUCT(INT,INT,INT,INT)  */
@@ -19208,7 +19208,7 @@ UCDACTR_li = (TCDACTR.data.mode5);
  /* line 3542: */
  /* line 3543: */
  /* line 3544: */
-(void)(ICDACTR_l = A_CALLPROC(NL(ZVBACTR_insertvec),((*(&(UCDACTR_li->Imode))), 1),((*(&(UCDACTR_li->Imode))), 1,(NL(ZVBACTR_insertvec)).nonlocals)));
+(void)(ICDACTR_l = A_CALLPROC(NL(ZVBACTR_insertvec),((*A_NILCHECK((&(A_NILCHECK(UCDACTR_li)->Imode)))), 1),((*A_NILCHECK((&(A_NILCHECK(UCDACTR_li)->Imode)))), 1,(NL(ZVBACTR_insertvec)).nonlocals)));
 break;
 default: 
 /*SKIP*/;
@@ -19227,7 +19227,7 @@ MCDACTR_a = A_VINDEX(NL(KIBACTR_diops),XCDACTR).Ans;
 } 
  /* line 3551: */
  /* line 3552: */
-YCDACTR = (*(&A_VINDEX(NL(KUAACTR_modes),JCDACTR_r))) ;
+YCDACTR = (*A_NILCHECK((&A_VINDEX(NL(KUAACTR_modes),JCDACTR_r)))) ;
 switch ( YCDACTR.mode )
 { 
 case 5: /* REF STRUCT(INT,INT,INT,INT)  */
@@ -19235,7 +19235,7 @@ ZCDACTR_ri = (YCDACTR.data.mode5);
  /* line 3553: */
  /* line 3554: */
  /* line 3555: */
-(void)(JCDACTR_r = A_CALLPROC(NL(ZVBACTR_insertvec),((*(&(ZCDACTR_ri->Imode))), 1),((*(&(ZCDACTR_ri->Imode))), 1,(NL(ZVBACTR_insertvec)).nonlocals)));
+(void)(JCDACTR_r = A_CALLPROC(NL(ZVBACTR_insertvec),((*A_NILCHECK((&(A_NILCHECK(ZCDACTR_ri)->Imode)))), 1),((*A_NILCHECK((&(A_NILCHECK(ZCDACTR_ri)->Imode)))), 1,(NL(ZVBACTR_insertvec)).nonlocals)));
 break;
 default: 
 /*SKIP*/;
@@ -19264,7 +19264,7 @@ goto CCDACTR_false;
 break;
 case 3: 
  /* line 3566: */
-ADDACTR = (*(&A_VINDEX(NL(KUAACTR_modes),JCDACTR_r))) ;
+ADDACTR = (*A_NILCHECK((&A_VINDEX(NL(KUAACTR_modes),JCDACTR_r)))) ;
 switch ( ADDACTR.mode )
 { 
 case 8: /* REF STRUCT(INT,INT,INT,INT)  */
@@ -19369,7 +19369,7 @@ JCDACTR_r = ICDACTR_l;
 break;
 case 7: 
 { 
-(void)(ICDACTR_l = A_CALLPROC(NL(QWCACTR_hcfoftwo),((*Lmode), (*Rmode), A68_TRUE),((*Lmode), (*Rmode), A68_TRUE,(NL(QWCACTR_hcfoftwo)).nonlocals)));
+(void)(ICDACTR_l = A_CALLPROC(NL(QWCACTR_hcfoftwo),((*A_NILCHECK(Lmode)), (*A_NILCHECK(Rmode)), A68_TRUE),((*A_NILCHECK(Lmode)), (*A_NILCHECK(Rmode)), A68_TRUE,(NL(QWCACTR_hcfoftwo)).nonlocals)));
  /* line 3598: */
 for ( ;; )
 { 
@@ -19380,14 +19380,14 @@ GDDACTR = (ICDACTR_l<KQAACTR_refmark);
 }
 if ( GDDACTR )
 { /* line 3600: */
-HDDACTR = (*(&A_VINDEX(NL(KUAACTR_modes),ICDACTR_l))) ;
+HDDACTR = (*A_NILCHECK((&A_VINDEX(NL(KUAACTR_modes),ICDACTR_l)))) ;
 switch ( HDDACTR.mode )
 { 
 case 6: /* REF STRUCT(INT)  */
 IDDACTR_p = (HDDACTR.data.mode6);
  /* line 3601: */
 { 
-(void)(ICDACTR_l = (*(&(IDDACTR_p->Deproc))));
+(void)(ICDACTR_l = (*A_NILCHECK((&(A_NILCHECK(IDDACTR_p)->Deproc)))));
  /* line 3602: */
  /* line 3603: */
  /* line 3604: */
@@ -19577,7 +19577,7 @@ PDDACTR = (JCDACTR_r==HLAACTR_arraychar);
 break;
 case 10: 
  /* line 3664: */
-UDDACTR = (*(&A_VINDEX(NL(KUAACTR_modes),JCDACTR_r))) ;
+UDDACTR = (*A_NILCHECK((&A_VINDEX(NL(KUAACTR_modes),JCDACTR_r)))) ;
 switch ( UDDACTR.mode )
 { 
 case 7: /* REF STRUCT(INT,INT,INT)  */
@@ -19595,7 +19595,7 @@ break;
 break;
 case 11: 
  /* line 3670: */
-WDDACTR = (*(&A_VINDEX(NL(KUAACTR_modes),JCDACTR_r))) ;
+WDDACTR = (*A_NILCHECK((&A_VINDEX(NL(KUAACTR_modes),JCDACTR_r)))) ;
 switch ( WDDACTR.mode )
 { 
 case 8: /* REF STRUCT(INT,INT,INT,INT)  */
@@ -19613,7 +19613,7 @@ break;
 break;
 case 12: 
  /* line 3676: */
-YDDACTR = (*(&A_VINDEX(NL(KUAACTR_modes),JCDACTR_r))) ;
+YDDACTR = (*A_NILCHECK((&A_VINDEX(NL(KUAACTR_modes),JCDACTR_r)))) ;
 switch ( YDDACTR.mode )
 { 
 case 9: /* REF STRUCT(INT,REF MODE63)  */
@@ -19768,7 +19768,7 @@ BEDACTR = GLAACTR_vecchar;
 break;
 case 11: 
  /* line 3733: */
-BEDACTR = A_CALLPROC(NL(XKCACTR_weakmode),((*Rmode)),((*Rmode),(NL(XKCACTR_weakmode)).nonlocals));
+BEDACTR = A_CALLPROC(NL(XKCACTR_weakmode),((*A_NILCHECK(Rmode))),((*A_NILCHECK(Rmode)),(NL(XKCACTR_weakmode)).nonlocals));
 break;
 case 12: 
 { 
@@ -19788,7 +19788,7 @@ break;
 } 
 MCDACTR_a = BEDACTR;
  /* line 3740: */
-(*Lmode) = ICDACTR_l;
+(*A_NILCHECK(Lmode)) = ICDACTR_l;
  /* line 3741: */
  /* line 3743: */
  /* line 3744: */
@@ -19801,11 +19801,11 @@ else
 { 
 CEDACTR = JCDACTR_r;
 } 
-(*Rmode) = CEDACTR;
+(*A_NILCHECK(Rmode)) = CEDACTR;
  /* line 3746: */
-(*Ans) = MCDACTR_a;
+(*A_NILCHECK(Ans)) = MCDACTR_a;
  /* line 3747: */
-(void)((*Biop) = (-((16*KCDACTR_b)+OCDACTR_version)));
+(void)((*A_NILCHECK(Biop)) = (-((16*KCDACTR_b)+OCDACTR_version)));
  /* line 3748: */
  /* line 3749: */
  /* line 3750: */
@@ -19857,7 +19857,7 @@ if (Commenttype>=GCBACTR_rcpragmat)
 { 
  /* line 3758: */
  /* line 3759: */
-NEDACTR = ((*NL(LSAACTR_tind))+1);
+NEDACTR = ((*A_NILCHECK(NL(LSAACTR_tind)))+1);
 } 
 else
 { 
@@ -19869,7 +19869,7 @@ IEDACTR_l: A_UNUSED;
 for ( ;; )
 { 
  /* line 3762: */
-if ((*NL(LSAACTR_tind))==(*NL(MSAACTR_textend)))
+if ((*A_NILCHECK(NL(LSAACTR_tind)))==(*A_NILCHECK(NL(MSAACTR_textend))))
 { 
  /* line 3763: */
 if (LEDACTR_startcopy>0)
@@ -19877,34 +19877,34 @@ if (LEDACTR_startcopy>0)
  /* line 3764: */
 OEDACTR.All = A68_FALSE;
  /* line 3765: */
-OEDACTR.Pr = A_VTRIM(PEDACTR,(NL(HSAACTR_textbuff)),A_VTSCRIPT(&(PEDACTR.upb),(NL(HSAACTR_textbuff)).upb,LEDACTR_startcopy,(*NL(LSAACTR_tind))));
-(void)(A_CALLPROC(NL(Output),(A_UNITE(QEDACTR,mode20,20,OEDACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(QEDACTR,mode20,20,OEDACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+OEDACTR.Pr = A_VTRIM(PEDACTR,(NL(HSAACTR_textbuff)),A_VTSCRIPT(&(PEDACTR.upb),(NL(HSAACTR_textbuff)).upb,LEDACTR_startcopy,(*A_NILCHECK(NL(LSAACTR_tind)))));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(QEDACTR,mode20,20,OEDACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(QEDACTR,mode20,20,OEDACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 3766: */
  /* line 3767: */
 LEDACTR_startcopy = 0;
 } 
  /* line 3768: */
-(*NL(LSAACTR_tind)) = 0;
+(*A_NILCHECK(NL(LSAACTR_tind))) = 0;
  /* line 3769: */
  /* line 3770: */
-(*NL(MSAACTR_textend))-=1 ;
+(*A_NILCHECK(NL(MSAACTR_textend)))-=1 ;
 if (!A_CALLPROC(NL(Input),(NL(LBBACTR_textbuff1), NL(MSAACTR_textend)),(NL(LBBACTR_textbuff1), NL(MSAACTR_textend),(NL(Input)).nonlocals)))
 { 
-(*NL(SIBACTR_moreinput)) = A68_FALSE;
+(*A_NILCHECK(NL(SIBACTR_moreinput))) = A68_FALSE;
  /* line 3771: */
  /* line 3773: */
 (void)(A_CALLPROC(NL(VJBACTR_abort),(112),(112,(NL(VJBACTR_abort)).nonlocals)));
 } 
  /* line 3774: */
  /* line 3775: */
-REDACTR = (*NL(MSAACTR_textend))+=1 ;
+REDACTR = (*A_NILCHECK(NL(MSAACTR_textend)))+=1 ;
 SEDACTR = (&A_VINDEX(NL(HSAACTR_textbuff),REDACTR)) ;
-(*SEDACTR) = ' ';
+(*A_NILCHECK(SEDACTR)) = ' ';
 } 
  /* line 3781: */
-TEDACTR = (*NL(LSAACTR_tind))+=1 ;
-UEDACTR = (A68_INT)(unsigned char)(*(&A_VINDEX(NL(HSAACTR_textbuff),TEDACTR))) ;
-(void)(JEDACTR_i = (*(&((&A_R1INDEX(NL(Charset),UEDACTR))->Type))));
+TEDACTR = (*A_NILCHECK(NL(LSAACTR_tind)))+=1 ;
+UEDACTR = (A68_INT)(unsigned char)(*A_NILCHECK((&A_VINDEX(NL(HSAACTR_textbuff),TEDACTR)))) ;
+(void)(JEDACTR_i = (*A_NILCHECK((&(A_NILCHECK((&A_R1INDEX(NL(Charset),UEDACTR)))->Type)))));
  /* line 3783: */
  /* line 3784: */
 VEDACTR = (JEDACTR_i<ASAACTR_bold);
@@ -19917,7 +19917,7 @@ if ( !VEDACTR ) break;
 if (JEDACTR_i==8)
 { 
  /* line 3790: */
-WEDACTR = (*NL(LSAACTR_tind));
+WEDACTR = (*A_NILCHECK(NL(LSAACTR_tind)));
 } 
 else
 { 
@@ -19925,7 +19925,7 @@ WEDACTR = (-1);
 } 
 JEDACTR_i = WEDACTR;
  /* line 3791: */
-MEDACTR_endcopy = (*NL(LSAACTR_tind))-=1;
+MEDACTR_endcopy = (*A_NILCHECK(NL(LSAACTR_tind)))-=1;
  /* line 3792: */
 (void)(KEDACTR_j = A_CALLPROC(NL(ZJBACTR_primread),(),((NL(ZJBACTR_primread)).nonlocals)));
  /* line 3794: */
@@ -19941,7 +19941,7 @@ if (Commenttype!=KEDACTR_j)
 { 
 if (JEDACTR_i>=0)
 { 
-(*NL(LSAACTR_tind)) = JEDACTR_i;
+(*A_NILCHECK(NL(LSAACTR_tind))) = JEDACTR_i;
 } 
  /* line 3797: */
  /* line 3798: */
@@ -19968,7 +19968,7 @@ if (LEDACTR_startcopy>0)
 ZEDACTR.All = A68_FALSE;
  /* line 3804: */
 ZEDACTR.Pr = A_VTRIM(AFDACTR,(NL(HSAACTR_textbuff)),A_VTSCRIPT(&(AFDACTR.upb),(NL(HSAACTR_textbuff)).upb,LEDACTR_startcopy,MEDACTR_endcopy));
-(void)(A_CALLPROC(NL(Output),(A_UNITE(BFDACTR,mode20,20,ZEDACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(BFDACTR,mode20,20,ZEDACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(BFDACTR,mode20,20,ZEDACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(BFDACTR,mode20,20,ZEDACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 3805: */
  /* line 3806: */
 LEDACTR_startcopy = 0;
@@ -19995,7 +19995,7 @@ CFDACTR.All = A68_TRUE;
 CFDACTR.Pr = A_VTRIM(DFDACTR,(NL(HSAACTR_textbuff)),A_VTSCRIPT(&(DFDACTR.upb),(NL(HSAACTR_textbuff)).upb,LEDACTR_startcopy,MEDACTR_endcopy));
  /* line 3816: */
  /* line 3817: */
-(void)(A_CALLPROC(NL(Output),(A_UNITE(EFDACTR,mode20,20,CFDACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(EFDACTR,mode20,20,CFDACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(EFDACTR,mode20,20,CFDACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(EFDACTR,mode20,20,CFDACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
 } 
 } 
 A_PROC_EXIT(readcom);
@@ -20010,13 +20010,13 @@ A68_INT  JFDACTR;  /* clause result */
 A_PROC_ENTRY(unlook);
  /* line 3823: */
  /* line 3824: */
-switch ( (*NL(AEBACTR_lkinserts))+=1 )
+switch ( (*A_NILCHECK(NL(AEBACTR_lkinserts)))+=1 )
 { 
 case 1: 
 { 
-if ((*NL(BEBACTR_lkmodeins))==0)
+if ((*A_NILCHECK(NL(BEBACTR_lkmodeins)))==0)
 { 
-(void)((*NL(AEBACTR_lkinserts)) = (-1));
+(void)((*A_NILCHECK(NL(AEBACTR_lkinserts))) = (-1));
 } 
  /* line 3825: */
  /* line 3826: */
@@ -20027,40 +20027,40 @@ break;
 case 2: 
 { 
  /* line 3829: */
-if ((*NL(YDBACTR_lkids))==YQAACTR_nillkids)
+if ((*A_NILCHECK(NL(YDBACTR_lkids)))==YQAACTR_nillkids)
 { 
  /* line 3830: */
-(void)((*NL(AEBACTR_lkinserts)) = (-1));
+(void)((*A_NILCHECK(NL(AEBACTR_lkinserts))) = (-1));
 } 
  /* line 3831: */
  /* line 3832: */
  /* line 3833: */
-JFDACTR = (*NL(BEBACTR_lkmodeins));
+JFDACTR = (*A_NILCHECK(NL(BEBACTR_lkmodeins)));
 } 
 break;
 default: 
  /* line 3834: */
  /* line 3836: */
-if ((A68_BITS )((A68_BITS )(*NL(AEBACTR_lkinserts))&NQAACTR_z1)==MQAACTR_z)
+if ((A68_BITS )((A68_BITS )(*A_NILCHECK(NL(AEBACTR_lkinserts)))&NQAACTR_z1)==MQAACTR_z)
 { 
  /* line 3837: */
 JFDACTR = 28;
 } 
 else
 { 
-(void)((*NL(PSAACTR_ident)) = (*(&((*NL(YDBACTR_lkids))->Id))));
+(void)((*A_NILCHECK(NL(PSAACTR_ident))) = (*A_NILCHECK((&(A_NILCHECK((*A_NILCHECK(NL(YDBACTR_lkids))))->Id)))));
  /* line 3838: */
-(void)((*NL(TSAACTR_idhash)) = (*(&((*NL(YDBACTR_lkids))->Idhash))));
+(void)((*A_NILCHECK(NL(TSAACTR_idhash))) = (*A_NILCHECK((&(A_NILCHECK((*A_NILCHECK(NL(YDBACTR_lkids))))->Idhash)))));
  /* line 3839: */
-(void)((*NL(SSAACTR_idsize)) = (*(&((*NL(YDBACTR_lkids))->Idsize))));
+(void)((*A_NILCHECK(NL(SSAACTR_idsize))) = (*A_NILCHECK((&(A_NILCHECK((*A_NILCHECK(NL(YDBACTR_lkids))))->Idsize)))));
  /* line 3840: */
  /* line 3841: */
-if (((*NL(YDBACTR_lkids)) = (*(&((*NL(YDBACTR_lkids))->Rest))))==YQAACTR_nillkids)
+if (((*A_NILCHECK(NL(YDBACTR_lkids))) = (*A_NILCHECK((&(A_NILCHECK((*A_NILCHECK(NL(YDBACTR_lkids))))->Rest)))))==YQAACTR_nillkids)
 { 
-(void)((*NL(AEBACTR_lkinserts)) = (-1));
+(void)((*A_NILCHECK(NL(AEBACTR_lkinserts))) = (-1));
  /* line 3842: */
  /* line 3843: */
-(void)((*NL(ZDBACTR_lkend)) = NL(YDBACTR_lkids));
+(void)((*A_NILCHECK(NL(ZDBACTR_lkend))) = NL(YDBACTR_lkids));
 } 
  /* line 3844: */
  /* line 3845: */
@@ -20131,31 +20131,31 @@ SFDACTR_case = 0;
  /* line 3854: */
  /* line 3855: */
  /* line 3856: */
-WFDACTR = ((*NL(EEBACTR_noflts))>0);
+WFDACTR = ((*A_NILCHECK(NL(EEBACTR_noflts)))>0);
 if ( WFDACTR )
 { /* line 3857: */
-WFDACTR = ((*NL(ODBACTR_next))==(-1));
+WFDACTR = ((*A_NILCHECK(NL(ODBACTR_next)))==(-1));
 }
 if (WFDACTR)
 { 
  /* line 3858: */
-(*NL(EEBACTR_noflts))-=1;
+(*A_NILCHECK(NL(EEBACTR_noflts)))-=1;
 } 
  /* line 3859: */
  /* line 3860: */
-if ((*NL(ITAACTR_supflts))>0)
+if ((*A_NILCHECK(NL(ITAACTR_supflts)))>0)
 { 
  /* line 3861: */
-(*NL(ITAACTR_supflts))-=1;
+(*A_NILCHECK(NL(ITAACTR_supflts)))-=1;
 } 
  /* line 3863: */
  /* line 3864: */
-if ((*NL(AEBACTR_lkinserts))<0)
+if ((*A_NILCHECK(NL(AEBACTR_lkinserts)))<0)
 { 
 YFDACTR_l: A_UNUSED;
  /* line 3865: */
  /* line 3866: */
-if ((*NL(ODBACTR_next))==(-1))
+if ((*A_NILCHECK(NL(ODBACTR_next)))==(-1))
 { 
  /* line 3867: */
  /* line 3868: */
@@ -20174,23 +20174,23 @@ PFDACTR_r = BGDACTR;
 else
 { 
  /* line 3871: */
-if ((*NL(ODBACTR_next))<1000)
+if ((*A_NILCHECK(NL(ODBACTR_next)))<1000)
 { 
  /* line 3872: */
-(void)(PFDACTR_r = (*NL(ODBACTR_next)));
+(void)(PFDACTR_r = (*A_NILCHECK(NL(ODBACTR_next))));
 } 
 else
 { 
-(void)(RFDACTR_ans = ((*NL(ODBACTR_next))-900));
+(void)(RFDACTR_ans = ((*A_NILCHECK(NL(ODBACTR_next)))-900));
  /* line 3873: */
-(void)((*NL(ODBACTR_next)) = (-1));
+(void)((*A_NILCHECK(NL(ODBACTR_next))) = (-1));
  /* line 3874: */
  /* line 3875: */
 goto AGDACTR_exit;
 } 
  /* line 3876: */
  /* line 3877: */
-(void)((*NL(ODBACTR_next)) = (-1));
+(void)((*A_NILCHECK(NL(ODBACTR_next))) = (-1));
 } 
  /* line 3879: */
  /* line 3880: */
@@ -20199,21 +20199,21 @@ switch ( ((PFDACTR_r-CCBACTR_rcnewline)+1) )
 { 
 case 1: 
  /* line 3882: */
-(*NL(MSAACTR_textend))-=1 ;
+(*A_NILCHECK(NL(MSAACTR_textend)))-=1 ;
 if (A_CALLPROC(NL(Input),(NL(LBBACTR_textbuff1), NL(MSAACTR_textend)),(NL(LBBACTR_textbuff1), NL(MSAACTR_textend),(NL(Input)).nonlocals)))
 { 
-(*NL(JBBACTR_oldtind)) = (*NL(LSAACTR_tind)) = 0;
+(*A_NILCHECK(NL(JBBACTR_oldtind))) = (*A_NILCHECK(NL(LSAACTR_tind))) = 0;
  /* line 3883: */
-CGDACTR = (*NL(MSAACTR_textend))+=1 ;
+CGDACTR = (*A_NILCHECK(NL(MSAACTR_textend)))+=1 ;
 DGDACTR = (&A_VINDEX(NL(HSAACTR_textbuff),CGDACTR)) ;
-(*DGDACTR) = ' ';
+(*A_NILCHECK(DGDACTR)) = ' ';
  /* line 3884: */
  /* line 3885: */
 goto YFDACTR_l;
 } 
 else
 { 
-(*NL(SIBACTR_moreinput)) = A68_FALSE;
+(*A_NILCHECK(NL(SIBACTR_moreinput))) = A68_FALSE;
  /* line 3886: */
  /* line 3887: */
  /* line 3889: */
@@ -20231,7 +20231,7 @@ RFDACTR_ans = PCBACTR_identtok;
  /* line 3893: */
 if (Readertype==TDBACTR_screader)
 { 
-(void)(QFDACTR_t = (*NL(LSAACTR_tind)));
+(void)(QFDACTR_t = (*A_NILCHECK(NL(LSAACTR_tind))));
  /* line 3894: */
  /* line 3895: */
 if (A_CALLPROC(NL(ZJBACTR_primread),(),((NL(ZJBACTR_primread)).nonlocals))==FCBACTR_rccolon)
@@ -20245,14 +20245,14 @@ else
  /* line 3898: */
  /* line 3899: */
  /* line 3901: */
-(*NL(LSAACTR_tind)) = QFDACTR_t;
+(*A_NILCHECK(NL(LSAACTR_tind))) = QFDACTR_t;
 } 
 } 
 } 
 break;
 case 4: 
 { 
-(*NL(ODBACTR_next)) = VCBACTR_powertentok;
+(*A_NILCHECK(NL(ODBACTR_next))) = VCBACTR_powertentok;
  /* line 3902: */
  /* line 3903: */
  /* line 3905: */
@@ -20263,7 +20263,7 @@ case 5:
 EGDACTR = (Readertype==SDBACTR_ucreader);
 if ( EGDACTR )
 { /* line 3907: */
-EGDACTR = ((*NL(MFBACTR_t1))!=33);
+EGDACTR = ((*A_NILCHECK(NL(MFBACTR_t1)))!=33);
 }
  /* line 3908: */
 if (EGDACTR)
@@ -20290,16 +20290,16 @@ GGDACTR = (PFDACTR_r==SCBACTR_otheroptok);
 }
 if (GGDACTR)
 { 
-LGDACTR = (*(&((*NL(QYAACTR_globcurrent))->Indics))) ;
-(void)(TFDACTR_ri = (*(&A_VINDEX(LGDACTR,(*NL(RSAACTR_comphash))))));
+LGDACTR = (*A_NILCHECK((&(A_NILCHECK((*A_NILCHECK(NL(QYAACTR_globcurrent))))->Indics)))) ;
+(void)(TFDACTR_ri = (*A_NILCHECK((&A_VINDEX(LGDACTR,(*A_NILCHECK(NL(RSAACTR_comphash))))))));
  /* line 3914: */
-(*NL(KDBACTR_cindic)) = (A68_110 *)A68_NIL;
+(*A_NILCHECK(NL(KDBACTR_cindic))) = (A68_110 *)A68_NIL;
  /* line 3915: */
-(*NL(LDBACTR_cinst)) = (A68_108 *)A68_NIL;
+(*A_NILCHECK(NL(LDBACTR_cinst))) = (A68_108 *)A68_NIL;
  /* line 3916: */
-(*NL(MDBACTR_cbiop)) = 0;
+(*A_NILCHECK(NL(MDBACTR_cbiop))) = 0;
  /* line 3917: */
-(*NL(NDBACTR_clibop)) = A68_FALSE;
+(*A_NILCHECK(NL(NDBACTR_clibop))) = A68_FALSE;
  /* line 3918: */
 IGDACTR_aa: A_UNUSED;
 for ( ;; )
@@ -20307,13 +20307,13 @@ for ( ;; )
  /* line 3919: */
 if ( !((TFDACTR_ri!=SQAACTR_nilind)) ) break;
  /* line 3920: */
-OGDACTR = (*(&(TFDACTR_ri->Name))) ;
-if (A_VC_EQ(A_HISVEC(MGDACTR,(*NL(OSAACTR_compsymb)),32,A68_CHAR ),A_HISVEC(NGDACTR,OGDACTR,32,A68_CHAR )))
+OGDACTR = (*A_NILCHECK((&(A_NILCHECK(TFDACTR_ri)->Name)))) ;
+if (A_VC_EQ(A_HISVEC(MGDACTR,(*A_NILCHECK(NL(OSAACTR_compsymb))),32,A68_CHAR ),A_HISVEC(NGDACTR,OGDACTR,32,A68_CHAR )))
 { 
-(*NL(KDBACTR_cindic)) = TFDACTR_ri;
+(*A_NILCHECK(NL(KDBACTR_cindic))) = TFDACTR_ri;
  /* line 3921: */
  /* line 3922: */
-PGDACTR = (*(&(TFDACTR_ri->U))) ;
+PGDACTR = (*A_NILCHECK((&(A_NILCHECK(TFDACTR_ri)->U)))) ;
 switch ( PGDACTR.mode )
 { 
 case 1: /* REF STRUCT(INT,REF MODE108)  */
@@ -20321,26 +20321,26 @@ QGDACTR_op = (PGDACTR.data.mode1);
  /* line 3923: */
 { 
  /* line 3924: */
-RGDACTR = (*(&(QGDACTR_op->Prio))) ;
+RGDACTR = (*A_NILCHECK((&(A_NILCHECK(QGDACTR_op)->Prio)))) ;
 (void)(RFDACTR_ans = (HCBACTR_illegaltok+A_ABS(RGDACTR)));
  /* line 3925: */
-(void)((*NL(LDBACTR_cinst)) = (*(&(QGDACTR_op->I))));
+(void)((*A_NILCHECK(NL(LDBACTR_cinst))) = (*A_NILCHECK((&(A_NILCHECK(QGDACTR_op)->I)))));
  /* line 3926: */
  /* line 3927: */
 if (PFDACTR_r>=YCBACTR_biplus)
 { 
  /* line 3928: */
-(*NL(MDBACTR_cbiop)) = PFDACTR_r;
+(*A_NILCHECK(NL(MDBACTR_cbiop))) = PFDACTR_r;
 } 
  /* line 3929: */
  /* line 3930: */
  /* line 3931: */
-if ((*(&(TFDACTR_ri->Level)))!=0)
+if ((*A_NILCHECK((&(A_NILCHECK(TFDACTR_ri)->Level))))!=0)
 { 
  /* line 3932: */
  /* line 3933: */
  /* line 3934: */
-(*NL(NDBACTR_clibop)) = A68_FALSE;
+(*A_NILCHECK(NL(NDBACTR_clibop))) = A68_FALSE;
 } 
 } 
 break;
@@ -20352,7 +20352,7 @@ RFDACTR_ans = WCBACTR_modenametok;
  /* line 3936: */
  /* line 3937: */
  /* line 3938: */
-(*NL(JDBACTR_decmode)) = SGDACTR_ra;
+(*A_NILCHECK(NL(JDBACTR_decmode))) = SGDACTR_ra;
 } 
 break;
 default: 
@@ -20368,16 +20368,16 @@ else
 { 
  /* line 3942: */
  /* line 3943: */
-(void)(TFDACTR_ri = (*(&(TFDACTR_ri->Rest))));
+(void)(TFDACTR_ri = (*A_NILCHECK((&(A_NILCHECK(TFDACTR_ri)->Rest)))));
 } 
 }
  /* line 3944: */
-(*NL(NDBACTR_clibop)) = A68_FALSE;
+(*A_NILCHECK(NL(NDBACTR_clibop))) = A68_FALSE;
  /* line 3946: */
  /* line 3947: */
 if (PFDACTR_r>=YCBACTR_biplus)
 { 
-(*NL(MDBACTR_cbiop)) = PFDACTR_r;
+(*A_NILCHECK(NL(MDBACTR_cbiop))) = PFDACTR_r;
  /* line 3948: */
  /* line 3949: */
  /* line 3950: */
@@ -20398,51 +20398,51 @@ else
 { 
  /* line 3953: */
  /* line 3954: */
-if ((*NL(QDBACTR_look))==2)
+if ((*A_NILCHECK(NL(QDBACTR_look)))==2)
 { 
  /* line 3955: */
 switch ( SFDACTR_case+=1 )
 { 
 case 1: 
  /* line 3956: */
-(void)(TFDACTR_ri = (*(&A_VINDEX(NL(MABACTR_libinds),(*NL(RSAACTR_comphash))))));
+(void)(TFDACTR_ri = (*A_NILCHECK((&A_VINDEX(NL(MABACTR_libinds),(*A_NILCHECK(NL(RSAACTR_comphash))))))));
 break;
 case 2: 
 { 
  /* line 3957: */
  /* line 3958: */
-VGDACTR = ((*NL(BUAACTR_typechar1))!=3);
+VGDACTR = ((*A_NILCHECK(NL(BUAACTR_typechar1)))!=3);
 if ( VGDACTR )
-{VGDACTR = ((*NL(BUAACTR_typechar1))!=6);
+{VGDACTR = ((*A_NILCHECK(NL(BUAACTR_typechar1)))!=6);
 }
  /* line 3959: */
-(void)(A_CALLPROC((*NL(FFDACTR_bumodule)),(NL(OSAACTR_compsymb), (2+((!VGDACTR)))),(NL(OSAACTR_compsymb), (2+((!VGDACTR))),((*NL(FFDACTR_bumodule))).nonlocals)));
+(void)(A_CALLPROC((*A_NILCHECK(NL(FFDACTR_bumodule))),(NL(OSAACTR_compsymb), (2+((!VGDACTR)))),(NL(OSAACTR_compsymb), (2+((!VGDACTR))),((*A_NILCHECK(NL(FFDACTR_bumodule)))).nonlocals)));
  /* line 3960: */
  /* line 3961: */
  /* line 3962: */
-(void)(TFDACTR_ri = (*(&A_VINDEX(NL(MABACTR_libinds),(*NL(RSAACTR_comphash))))));
+(void)(TFDACTR_ri = (*A_NILCHECK((&A_VINDEX(NL(MABACTR_libinds),(*A_NILCHECK(NL(RSAACTR_comphash))))))));
 } 
 break;
 case 3: 
 { 
  /* line 3963: */
  /* line 3964: */
-WGDACTR.Name = (*NL(OSAACTR_compsymb));
+WGDACTR.Name = (*A_NILCHECK(NL(OSAACTR_compsymb)));
 WGDACTR.Level = 1;
 WGDACTR.Scope = 0;
 YGDACTR = 1 ;
 WGDACTR.U = A_UNITE(XGDACTR,mode3,3,YGDACTR);
-WGDACTR.Rest = (*(&A_VINDEX(NL(MABACTR_libinds),(*NL(RSAACTR_comphash)))));
+WGDACTR.Rest = (*A_NILCHECK((&A_VINDEX(NL(MABACTR_libinds),(*A_NILCHECK(NL(RSAACTR_comphash)))))));
 ZGDACTR = A_HEAP(A68_110 ) ;
-(void)((*ZGDACTR) = WGDACTR) ;
-AHDACTR = (&A_VINDEX(NL(MABACTR_libinds),(*NL(RSAACTR_comphash)))) ;
-TFDACTR_ri = (*AHDACTR) = ZGDACTR;
+(void)((*A_NILCHECK(ZGDACTR)) = WGDACTR) ;
+AHDACTR = (&A_VINDEX(NL(MABACTR_libinds),(*A_NILCHECK(NL(RSAACTR_comphash))))) ;
+TFDACTR_ri = (*A_NILCHECK(AHDACTR)) = ZGDACTR;
  /* line 3965: */
 (void)(A_CALLPROC(NL(PZBACTR_faultp),(115, 0, 0, NL(OSAACTR_compsymb)),(115, 0, 0, NL(OSAACTR_compsymb),(NL(PZBACTR_faultp)).nonlocals)));
  /* line 3967: */
  /* line 3968: */
  /* line 3969: */
-(*NL(ITAACTR_supflts)) = FEBACTR_fltgap;
+(*A_NILCHECK(NL(ITAACTR_supflts))) = FEBACTR_fltgap;
 } 
 break;
 default: 
@@ -20450,14 +20450,14 @@ A_IMP_SKIP ;
 break;
 } 
  /* line 3970: */
-(*NL(NDBACTR_clibop)) = A68_TRUE;
+(*A_NILCHECK(NL(NDBACTR_clibop))) = A68_TRUE;
  /* line 3971: */
  /* line 3972: */
 goto IGDACTR_aa;
 } 
 else
 { 
-BHDACTR = ((*NL(QDBACTR_look))==1);
+BHDACTR = ((*A_NILCHECK(NL(QDBACTR_look)))==1);
 if ( BHDACTR )
 { /* line 3973: */
 BHDACTR = (SFDACTR_case==0);
@@ -20466,7 +20466,7 @@ if (BHDACTR)
 { 
 SFDACTR_case = 1;
  /* line 3974: */
-(void)(TFDACTR_ri = (*(&A_VINDEX(NL(MABACTR_libinds),(*NL(RSAACTR_comphash))))));
+(void)(TFDACTR_ri = (*A_NILCHECK((&A_VINDEX(NL(MABACTR_libinds),(*A_NILCHECK(NL(RSAACTR_comphash))))))));
  /* line 3975: */
  /* line 3976: */
 goto IGDACTR_aa;
@@ -20504,10 +20504,10 @@ if (PFDACTR_r<=44)
 { 
 RFDACTR_ans = KCBACTR_bangtok;
  /* line 3987: */
-(void)((*NL(PDBACTR_bangtype)) = (PFDACTR_r+5));
+(void)((*A_NILCHECK(NL(PDBACTR_bangtype))) = (PFDACTR_r+5));
  /* line 3988: */
  /* line 3989: */
-(*NL(ODBACTR_next)) = XCBACTR_colonhtok;
+(*A_NILCHECK(NL(ODBACTR_next))) = XCBACTR_colonhtok;
 } 
 else
 { 
@@ -20517,21 +20517,21 @@ if (PFDACTR_r<=49)
 RFDACTR_ans = KCBACTR_bangtok;
  /* line 3992: */
  /* line 3993: */
-(*NL(PDBACTR_bangtype)) = PFDACTR_r;
+(*A_NILCHECK(NL(PDBACTR_bangtype))) = PFDACTR_r;
 } 
 else
 { 
  /* line 3994: */
 if (PFDACTR_r<ZBBACTR_rccrd)
 { 
-CHDACTR = (&A_VINDEX(NL(TBBACTR_brackets),(*NL(VBBACTR_brind)))) ;
-(void)((*CHDACTR) = (PFDACTR_r+4));
+CHDACTR = (&A_VINDEX(NL(TBBACTR_brackets),(*A_NILCHECK(NL(VBBACTR_brind))))) ;
+(void)((*A_NILCHECK(CHDACTR)) = (PFDACTR_r+4));
  /* line 3995: */
  /* line 3996: */
-if ((*NL(VBBACTR_brind))<64)
+if ((*A_NILCHECK(NL(VBBACTR_brind)))<64)
 { 
  /* line 3997: */
-(*NL(VBBACTR_brind))+=1;
+(*A_NILCHECK(NL(VBBACTR_brind)))+=1;
 } 
 else
 { 
@@ -20548,17 +20548,17 @@ else
 if (PFDACTR_r<ACBACTR_rccomment)
 { 
  /* line 4003: */
-if ((*NL(VBBACTR_brind))<=2)
+if ((*A_NILCHECK(NL(VBBACTR_brind)))<=2)
 { 
  /* line 4004: */
-DHDACTR = ((*NL(VBBACTR_brind))==2);
+DHDACTR = ((*A_NILCHECK(NL(VBBACTR_brind)))==2);
 if ( DHDACTR )
-{DHDACTR = (*NL(HEBACTR_inprogram));
+{DHDACTR = (*A_NILCHECK(NL(HEBACTR_inprogram)));
 }
 if ( DHDACTR )
 { /* line 4005: */
 EHDACTR = 1 ;
-DHDACTR = (PFDACTR_r!=(*(&A_VINDEX(NL(TBBACTR_brackets),EHDACTR))));
+DHDACTR = (PFDACTR_r!=(*A_NILCHECK((&A_VINDEX(NL(TBBACTR_brackets),EHDACTR)))));
 }
 if (DHDACTR)
 { 
@@ -20570,53 +20570,53 @@ if (DHDACTR)
 else
 { 
  /* line 4009: */
-FHDACTR = (*NL(VBBACTR_brind))-=1 ;
-if ((QFDACTR_t = (*(&A_VINDEX(NL(TBBACTR_brackets),FHDACTR))))!=PFDACTR_r)
+FHDACTR = (*A_NILCHECK(NL(VBBACTR_brind)))-=1 ;
+if ((QFDACTR_t = (*A_NILCHECK((&A_VINDEX(NL(TBBACTR_brackets),FHDACTR)))))!=PFDACTR_r)
 { 
-GHDACTR = ((*NL(YBBACTR_wronglevel))==(*NL(VBBACTR_brind)));
+GHDACTR = ((*A_NILCHECK(NL(YBBACTR_wronglevel)))==(*A_NILCHECK(NL(VBBACTR_brind))));
 if ( GHDACTR )
 { /* line 4010: */
-GHDACTR = ((*NL(WBBACTR_wrongord))==PFDACTR_r);
+GHDACTR = ((*A_NILCHECK(NL(WBBACTR_wrongord)))==PFDACTR_r);
 }
 if (GHDACTR)
 { 
 (void)(A_CALLPROC(NL(QJBACTR_fault),(116),(116,(NL(QJBACTR_fault)).nonlocals)));
  /* line 4012: */
-(*NL(VBBACTR_brind))+=1;
+(*A_NILCHECK(NL(VBBACTR_brind)))+=1;
  /* line 4013: */
-(*NL(XBBACTR_wrongcrd)) = (*NL(WBBACTR_wrongord)) = 0;
+(*A_NILCHECK(NL(XBBACTR_wrongcrd))) = (*A_NILCHECK(NL(WBBACTR_wrongord))) = 0;
  /* line 4014: */
  /* line 4015: */
 goto YFDACTR_l;
 } 
 else
 { 
-HHDACTR = ((*NL(YBBACTR_wronglevel))==(*NL(VBBACTR_brind)));
+HHDACTR = ((*A_NILCHECK(NL(YBBACTR_wronglevel)))==(*A_NILCHECK(NL(VBBACTR_brind))));
 if ( HHDACTR )
 { /* line 4016: */
-HHDACTR = (QFDACTR_t==(*NL(XBBACTR_wrongcrd)));
+HHDACTR = (QFDACTR_t==(*A_NILCHECK(NL(XBBACTR_wrongcrd))));
 }
 if ( HHDACTR )
 { /* line 4017: */
-IHDACTR = ((*NL(VBBACTR_brind))-1) ;
-HHDACTR = ((*(&A_VINDEX(NL(TBBACTR_brackets),IHDACTR)))==PFDACTR_r);
+IHDACTR = ((*A_NILCHECK(NL(VBBACTR_brind)))-1) ;
+HHDACTR = ((*A_NILCHECK((&A_VINDEX(NL(TBBACTR_brackets),IHDACTR))))==PFDACTR_r);
 }
 if (HHDACTR)
 { 
 (void)(A_CALLPROC(NL(QJBACTR_fault),(116),(116,(NL(QJBACTR_fault)).nonlocals)));
  /* line 4019: */
-(*NL(VBBACTR_brind))-=1;
+(*A_NILCHECK(NL(VBBACTR_brind)))-=1;
  /* line 4020: */
  /* line 4021: */
-(*NL(XBBACTR_wrongcrd)) = (*NL(WBBACTR_wrongord)) = 0;
+(*A_NILCHECK(NL(XBBACTR_wrongcrd))) = (*A_NILCHECK(NL(WBBACTR_wrongord))) = 0;
 } 
 else
 { 
-(*NL(XBBACTR_wrongcrd)) = PFDACTR_r;
+(*A_NILCHECK(NL(XBBACTR_wrongcrd))) = PFDACTR_r;
  /* line 4022: */
-(*NL(WBBACTR_wrongord)) = QFDACTR_t;
+(*A_NILCHECK(NL(WBBACTR_wrongord))) = QFDACTR_t;
  /* line 4023: */
-(void)((*NL(YBBACTR_wronglevel)) = ((*NL(VBBACTR_brind))-1));
+(void)((*A_NILCHECK(NL(YBBACTR_wronglevel))) = ((*A_NILCHECK(NL(VBBACTR_brind)))-1));
  /* line 4025: */
  /* line 4026: */
  /* line 4027: */
@@ -20650,36 +20650,36 @@ if (JHDACTR)
 } 
 else
 { 
-(void)(QFDACTR_t = (*NL(LSAACTR_tind)));
+(void)(QFDACTR_t = (*A_NILCHECK(NL(LSAACTR_tind))));
  /* line 4037: */
-(*NL(HBBACTR_incom)) = A68_TRUE;
+(*A_NILCHECK(NL(HBBACTR_incom))) = A68_TRUE;
  /* line 4038: */
 (void)(A_CALLPROC(NL(EEDACTR_readcom),(PFDACTR_r),(PFDACTR_r,(NL(EEDACTR_readcom)).nonlocals)));
  /* line 4039: */
-(*NL(HBBACTR_incom)) = A68_FALSE;
+(*A_NILCHECK(NL(HBBACTR_incom))) = A68_FALSE;
  /* line 4040: */
 KHDACTR = (Readertype==UDBACTR_formatreader);
 if ( KHDACTR )
 { /* line 4041: */
-KHDACTR = ((*NL(LSAACTR_tind))<QFDACTR_t);
+KHDACTR = ((*A_NILCHECK(NL(LSAACTR_tind)))<QFDACTR_t);
 }
 if (KHDACTR)
 { 
-LHDACTR.Nochars = (-(*NL(NSAACTR_find)));
+LHDACTR.Nochars = (-(*A_NILCHECK(NL(NSAACTR_find))));
  /* line 4042: */
 LHDACTR.Base = 0;
  /* line 4043: */
-LHDACTR.Chars = A_VTRIM(MHDACTR,(NL(JSAACTR_globfbuff)),A_VTSCRIPT(&(MHDACTR.upb),(NL(JSAACTR_globfbuff)).upb,1,(*NL(NSAACTR_find))));
-(void)(A_CALLPROC(NL(Output),(A_UNITE(NHDACTR,mode35,35,LHDACTR), ((*NL(FZAACTR_outlevel))+1)),(A_UNITE(NHDACTR,mode35,35,LHDACTR), ((*NL(FZAACTR_outlevel))+1),(NL(Output)).nonlocals)));
+LHDACTR.Chars = A_VTRIM(MHDACTR,(NL(JSAACTR_globfbuff)),A_VTSCRIPT(&(MHDACTR.upb),(NL(JSAACTR_globfbuff)).upb,1,(*A_NILCHECK(NL(NSAACTR_find)))));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(NHDACTR,mode35,35,LHDACTR), ((*A_NILCHECK(NL(FZAACTR_outlevel)))+1)),(A_UNITE(NHDACTR,mode35,35,LHDACTR), ((*A_NILCHECK(NL(FZAACTR_outlevel)))+1),(NL(Output)).nonlocals)));
  /* line 4044: */
-(void)((*NL(IBBACTR_noofstrings))+=(*NL(NSAACTR_find)));
+(void)((*A_NILCHECK(NL(IBBACTR_noofstrings)))+=(*A_NILCHECK(NL(NSAACTR_find))));
  /* line 4045: */
  /* line 4046: */
-(*NL(NSAACTR_find)) = 0;
+(*A_NILCHECK(NL(NSAACTR_find))) = 0;
 } 
  /* line 4047: */
  /* line 4048: */
-(void)((*NL(JBBACTR_oldtind)) = (*NL(LSAACTR_tind)));
+(void)((*A_NILCHECK(NL(JBBACTR_oldtind))) = (*A_NILCHECK(NL(LSAACTR_tind))));
 } 
  /* line 4049: */
  /* line 4050: */
@@ -20798,28 +20798,28 @@ A_CLOSURE( KIDACTR_f, LIDACTR_f, MIDACTR_f );
  /* line 4113: */
  /* line 4114: */
  /* line 4115: */
-(*NL(PHDACTR_last_flex)) = 1;
+(*A_NILCHECK(NL(PHDACTR_last_flex))) = 1;
  /* line 4116: */
 TJDACTR.I = I;
 TJDACTR.J = J;
 UJDACTR = 1 ;
-VJDACTR = (&A_VINDEX((*NL(WHDACTR_test_flex)),UJDACTR)) ;
-(*VJDACTR) = TJDACTR;
+VJDACTR = (&A_VINDEX((*A_NILCHECK(NL(WHDACTR_test_flex))),UJDACTR)) ;
+(*A_NILCHECK(VJDACTR)) = TJDACTR;
  /* line 4118: */
  /* line 4119: */
 for ( WJDACTR_z = 1;;
 WJDACTR_z += 1 ) 
 { 
  /* line 4120: */
-if ( !((WJDACTR_z<=(*NL(PHDACTR_last_flex)))) ) break;
-(void)(NJDACTR_p = (*(&A_VINDEX((*NL(WHDACTR_test_flex)),WJDACTR_z))));
+if ( !((WJDACTR_z<=(*A_NILCHECK(NL(PHDACTR_last_flex))))) ) break;
+(void)(NJDACTR_p = (*A_NILCHECK((&A_VINDEX((*A_NILCHECK(NL(WHDACTR_test_flex))),WJDACTR_z)))));
  /* line 4121: */
-XJDACTR = (*(&((&NJDACTR_p)->J))) ;
-(void)(OJDACTR_m2 = (*(&A_VINDEX(NL(KUAACTR_modes),XJDACTR))));
+XJDACTR = (*A_NILCHECK((&(A_NILCHECK((&NJDACTR_p))->J)))) ;
+(void)(OJDACTR_m2 = (*A_NILCHECK((&A_VINDEX(NL(KUAACTR_modes),XJDACTR)))));
  /* line 4122: */
  /* line 4123: */
-YJDACTR = (*(&((&NJDACTR_p)->I))) ;
-ZJDACTR = (*(&A_VINDEX(NL(KUAACTR_modes),YJDACTR))) ;
+YJDACTR = (*A_NILCHECK((&(A_NILCHECK((&NJDACTR_p))->I)))) ;
+ZJDACTR = (*A_NILCHECK((&A_VINDEX(NL(KUAACTR_modes),YJDACTR)))) ;
 switch ( ZJDACTR.mode )
 { 
 case 6: /* REF STRUCT(INT)  */
@@ -20833,7 +20833,7 @@ case 6: /* REF STRUCT(INT)  */
 CKDACTR_prc2 = (BKDACTR.data.mode6);
  /* line 4126: */
  /* line 4127: */
-(void)(A_CALLPROC(KIDACTR_f,((*(&(AKDACTR_prc1->Deproc))), (*(&(CKDACTR_prc2->Deproc)))),((*(&(AKDACTR_prc1->Deproc))), (*(&(CKDACTR_prc2->Deproc))),(KIDACTR_f).nonlocals)));
+(void)(A_CALLPROC(KIDACTR_f,((*A_NILCHECK((&(A_NILCHECK(AKDACTR_prc1)->Deproc)))), (*A_NILCHECK((&(A_NILCHECK(CKDACTR_prc2)->Deproc))))),((*A_NILCHECK((&(A_NILCHECK(AKDACTR_prc1)->Deproc)))), (*A_NILCHECK((&(A_NILCHECK(CKDACTR_prc2)->Deproc)))),(KIDACTR_f).nonlocals)));
 break;
 default: 
  /* line 4128: */
@@ -20853,11 +20853,11 @@ case 3: /* REF STRUCT(INT,REF MODE54)  */
 FKDACTR_p2 = (EKDACTR.data.mode3);
  /* line 4133: */
 { 
-(void)(A_CALLPROC(KIDACTR_f,((*(&(DKDACTR_p1->Deproc))), (*(&(FKDACTR_p2->Deproc)))),((*(&(DKDACTR_p1->Deproc))), (*(&(FKDACTR_p2->Deproc))),(KIDACTR_f).nonlocals)));
+(void)(A_CALLPROC(KIDACTR_f,((*A_NILCHECK((&(A_NILCHECK(DKDACTR_p1)->Deproc)))), (*A_NILCHECK((&(A_NILCHECK(FKDACTR_p2)->Deproc))))),((*A_NILCHECK((&(A_NILCHECK(DKDACTR_p1)->Deproc)))), (*A_NILCHECK((&(A_NILCHECK(FKDACTR_p2)->Deproc)))),(KIDACTR_f).nonlocals)));
  /* line 4134: */
-(void)(PJDACTR_ml1 = (*(&(DKDACTR_p1->Pars))));
+(void)(PJDACTR_ml1 = (*A_NILCHECK((&(A_NILCHECK(DKDACTR_p1)->Pars)))));
  /* line 4135: */
-(void)(QJDACTR_ml2 = (*(&(FKDACTR_p2->Pars))));
+(void)(QJDACTR_ml2 = (*A_NILCHECK((&(A_NILCHECK(FKDACTR_p2)->Pars)))));
  /* line 4136: */
 for ( ;; )
 { 
@@ -20868,12 +20868,12 @@ if ( GKDACTR )
 GKDACTR = (QJDACTR_ml2!=OQAACTR_nilml);
 }
 if ( !(GKDACTR) ) break;
-(void)(A_CALLPROC(KIDACTR_f,((*(&(PJDACTR_ml1->Mode))), (*(&(QJDACTR_ml2->Mode)))),((*(&(PJDACTR_ml1->Mode))), (*(&(QJDACTR_ml2->Mode))),(KIDACTR_f).nonlocals)));
+(void)(A_CALLPROC(KIDACTR_f,((*A_NILCHECK((&(A_NILCHECK(PJDACTR_ml1)->Mode)))), (*A_NILCHECK((&(A_NILCHECK(QJDACTR_ml2)->Mode))))),((*A_NILCHECK((&(A_NILCHECK(PJDACTR_ml1)->Mode)))), (*A_NILCHECK((&(A_NILCHECK(QJDACTR_ml2)->Mode)))),(KIDACTR_f).nonlocals)));
  /* line 4139: */
-(void)(PJDACTR_ml1 = (*(&(PJDACTR_ml1->Rest))));
+(void)(PJDACTR_ml1 = (*A_NILCHECK((&(A_NILCHECK(PJDACTR_ml1)->Rest)))));
  /* line 4140: */
  /* line 4141: */
-(void)(QJDACTR_ml2 = (*(&(QJDACTR_ml2->Rest))));
+(void)(QJDACTR_ml2 = (*A_NILCHECK((&(A_NILCHECK(QJDACTR_ml2)->Rest)))));
 }
  /* line 4142: */
  /* line 4143: */
@@ -20909,9 +20909,9 @@ case 4: /* REF STRUCT(INT,INT,REF MODE58)  */
 KKDACTR_s2 = (JKDACTR.data.mode4);
  /* line 4153: */
 { 
-(void)(RJDACTR_sl1 = (*(&(IKDACTR_s1->Sels))));
+(void)(RJDACTR_sl1 = (*A_NILCHECK((&(A_NILCHECK(IKDACTR_s1)->Sels)))));
  /* line 4154: */
-(void)(SJDACTR_sl2 = (*(&(KKDACTR_s2->Sels))));
+(void)(SJDACTR_sl2 = (*A_NILCHECK((&(A_NILCHECK(KKDACTR_s2)->Sels)))));
  /* line 4155: */
 for ( ;; )
 { 
@@ -20923,17 +20923,17 @@ if ( LKDACTR )
  /* line 4157: */
 if ( LKDACTR )
 { /* line 4158: */
-NKDACTR = (*(&(RJDACTR_sl1->Name))) ;
-PKDACTR = (*(&(SJDACTR_sl2->Name))) ;
+NKDACTR = (*A_NILCHECK((&(A_NILCHECK(RJDACTR_sl1)->Name)))) ;
+PKDACTR = (*A_NILCHECK((&(A_NILCHECK(SJDACTR_sl2)->Name)))) ;
 LKDACTR = A_VC_EQ(A_HISVEC(MKDACTR,NKDACTR,32,A68_CHAR ),A_HISVEC(OKDACTR,PKDACTR,32,A68_CHAR ));
 }
 if ( !(LKDACTR) ) break;
-(void)(A_CALLPROC(KIDACTR_f,((*(&(RJDACTR_sl1->Mode))), (*(&(SJDACTR_sl2->Mode)))),((*(&(RJDACTR_sl1->Mode))), (*(&(SJDACTR_sl2->Mode))),(KIDACTR_f).nonlocals)));
+(void)(A_CALLPROC(KIDACTR_f,((*A_NILCHECK((&(A_NILCHECK(RJDACTR_sl1)->Mode)))), (*A_NILCHECK((&(A_NILCHECK(SJDACTR_sl2)->Mode))))),((*A_NILCHECK((&(A_NILCHECK(RJDACTR_sl1)->Mode)))), (*A_NILCHECK((&(A_NILCHECK(SJDACTR_sl2)->Mode)))),(KIDACTR_f).nonlocals)));
  /* line 4159: */
-(void)(RJDACTR_sl1 = (*(&(RJDACTR_sl1->Rest))));
+(void)(RJDACTR_sl1 = (*A_NILCHECK((&(A_NILCHECK(RJDACTR_sl1)->Rest)))));
  /* line 4160: */
  /* line 4161: */
-(void)(SJDACTR_sl2 = (*(&(SJDACTR_sl2->Rest))));
+(void)(SJDACTR_sl2 = (*A_NILCHECK((&(A_NILCHECK(SJDACTR_sl2)->Rest)))));
 }
  /* line 4162: */
  /* line 4163: */
@@ -20969,9 +20969,9 @@ case 2: /* REF STRUCT(INT,REF MODE54)  */
 TKDACTR_u2 = (SKDACTR.data.mode2);
  /* line 4173: */
 { 
-(void)(PJDACTR_ml1 = (*(&(RKDACTR_u1->Modelist))));
+(void)(PJDACTR_ml1 = (*A_NILCHECK((&(A_NILCHECK(RKDACTR_u1)->Modelist)))));
  /* line 4174: */
-(void)(QJDACTR_ml2 = (*(&(TKDACTR_u2->Modelist))));
+(void)(QJDACTR_ml2 = (*A_NILCHECK((&(A_NILCHECK(TKDACTR_u2)->Modelist)))));
  /* line 4175: */
 for ( ;; )
 { 
@@ -20982,12 +20982,12 @@ if ( UKDACTR )
 UKDACTR = (QJDACTR_ml2!=OQAACTR_nilml);
 }
 if ( !(UKDACTR) ) break;
-(void)(A_CALLPROC(KIDACTR_f,((*(&(PJDACTR_ml1->Mode))), (*(&(QJDACTR_ml2->Mode)))),((*(&(PJDACTR_ml1->Mode))), (*(&(QJDACTR_ml2->Mode))),(KIDACTR_f).nonlocals)));
+(void)(A_CALLPROC(KIDACTR_f,((*A_NILCHECK((&(A_NILCHECK(PJDACTR_ml1)->Mode)))), (*A_NILCHECK((&(A_NILCHECK(QJDACTR_ml2)->Mode))))),((*A_NILCHECK((&(A_NILCHECK(PJDACTR_ml1)->Mode)))), (*A_NILCHECK((&(A_NILCHECK(QJDACTR_ml2)->Mode)))),(KIDACTR_f).nonlocals)));
  /* line 4178: */
-(void)(PJDACTR_ml1 = (*(&(PJDACTR_ml1->Rest))));
+(void)(PJDACTR_ml1 = (*A_NILCHECK((&(A_NILCHECK(PJDACTR_ml1)->Rest)))));
  /* line 4179: */
  /* line 4180: */
-(void)(QJDACTR_ml2 = (*(&(QJDACTR_ml2->Rest))));
+(void)(QJDACTR_ml2 = (*A_NILCHECK((&(A_NILCHECK(QJDACTR_ml2)->Rest)))));
 }
  /* line 4181: */
  /* line 4182: */
@@ -21023,26 +21023,26 @@ case 8: /* REF STRUCT(INT,INT,INT,INT)  */
 YKDACTR_a2 = (XKDACTR.data.mode8);
  /* line 4192: */
  /* line 4193: */
-ZKDACTR = ((*(&(WKDACTR_a1->Nods)))==(*(&(YKDACTR_a2->Nods))));
+ZKDACTR = ((*A_NILCHECK((&(A_NILCHECK(WKDACTR_a1)->Nods))))==(*A_NILCHECK((&(A_NILCHECK(YKDACTR_a2)->Nods)))));
 if ( ZKDACTR )
 { /* line 4194: */
-if ((*(&(WKDACTR_a1->Deflex)))>=0)
+if ((*A_NILCHECK((&(A_NILCHECK(WKDACTR_a1)->Deflex))))>=0)
 { 
  /* line 4195: */
-ALDACTR = ((*(&(YKDACTR_a2->Deflex)))>=0);
+ALDACTR = ((*A_NILCHECK((&(A_NILCHECK(YKDACTR_a2)->Deflex))))>=0);
 } 
 else
 { 
  /* line 4196: */
  /* line 4197: */
-ALDACTR = ((*(&(YKDACTR_a2->Deflex)))<0);
+ALDACTR = ((*A_NILCHECK((&(A_NILCHECK(YKDACTR_a2)->Deflex))))<0);
 } 
 ZKDACTR = ALDACTR;
 }
 if (ZKDACTR)
 { 
  /* line 4198: */
-(void)(A_CALLPROC(KIDACTR_f,((*(&(WKDACTR_a1->Mode))), (*(&(YKDACTR_a2->Mode)))),((*(&(WKDACTR_a1->Mode))), (*(&(YKDACTR_a2->Mode))),(KIDACTR_f).nonlocals)));
+(void)(A_CALLPROC(KIDACTR_f,((*A_NILCHECK((&(A_NILCHECK(WKDACTR_a1)->Mode)))), (*A_NILCHECK((&(A_NILCHECK(YKDACTR_a2)->Mode))))),((*A_NILCHECK((&(A_NILCHECK(WKDACTR_a1)->Mode)))), (*A_NILCHECK((&(A_NILCHECK(YKDACTR_a2)->Mode)))),(KIDACTR_f).nonlocals)));
 } 
 else
 { 
@@ -21069,10 +21069,10 @@ case 5: /* REF STRUCT(INT,INT,INT,INT)  */
 DLDACTR_is2 = (CLDACTR.data.mode5);
  /* line 4206: */
  /* line 4207: */
-if ((*(&(BLDACTR_is1->Length)))==(*(&(DLDACTR_is2->Length))))
+if ((*A_NILCHECK((&(A_NILCHECK(BLDACTR_is1)->Length))))==(*A_NILCHECK((&(A_NILCHECK(DLDACTR_is2)->Length)))))
 { 
  /* line 4208: */
-(void)(A_CALLPROC(KIDACTR_f,((*(&(BLDACTR_is1->Imode))), (*(&(DLDACTR_is2->Imode)))),((*(&(BLDACTR_is1->Imode))), (*(&(DLDACTR_is2->Imode))),(KIDACTR_f).nonlocals)));
+(void)(A_CALLPROC(KIDACTR_f,((*A_NILCHECK((&(A_NILCHECK(BLDACTR_is1)->Imode)))), (*A_NILCHECK((&(A_NILCHECK(DLDACTR_is2)->Imode))))),((*A_NILCHECK((&(A_NILCHECK(BLDACTR_is1)->Imode)))), (*A_NILCHECK((&(A_NILCHECK(DLDACTR_is2)->Imode)))),(KIDACTR_f).nonlocals)));
 } 
 else
 { 
@@ -21099,7 +21099,7 @@ case 9: /* REF STRUCT(INT,REF MODE63)  */
 GLDACTR_sten2 = (FLDACTR.data.mode9);
  /* line 4216: */
  /* line 4217: */
-(void)(A_CALLPROC(KIDACTR_f,((*(&(ELDACTR_sten1->Mode))), (*(&(GLDACTR_sten2->Mode)))),((*(&(ELDACTR_sten1->Mode))), (*(&(GLDACTR_sten2->Mode))),(KIDACTR_f).nonlocals)));
+(void)(A_CALLPROC(KIDACTR_f,((*A_NILCHECK((&(A_NILCHECK(ELDACTR_sten1)->Mode)))), (*A_NILCHECK((&(A_NILCHECK(GLDACTR_sten2)->Mode))))),((*A_NILCHECK((&(A_NILCHECK(ELDACTR_sten1)->Mode)))), (*A_NILCHECK((&(A_NILCHECK(GLDACTR_sten2)->Mode)))),(KIDACTR_f).nonlocals)));
 break;
 default: 
  /* line 4218: */
@@ -21119,21 +21119,21 @@ case 7: /* REF STRUCT(INT,INT,INT)  */
 JLDACTR_v2 = (ILDACTR.data.mode7);
  /* line 4223: */
  /* line 4224: */
-if ((*(&(HLDACTR_v1->Deflex)))>=0)
+if ((*A_NILCHECK((&(A_NILCHECK(HLDACTR_v1)->Deflex))))>=0)
 { 
  /* line 4225: */
-KLDACTR = ((*(&(JLDACTR_v2->Deflex)))>=0);
+KLDACTR = ((*A_NILCHECK((&(A_NILCHECK(JLDACTR_v2)->Deflex))))>=0);
 } 
 else
 { 
  /* line 4226: */
  /* line 4227: */
-KLDACTR = ((*(&(JLDACTR_v2->Deflex)))<0);
+KLDACTR = ((*A_NILCHECK((&(A_NILCHECK(JLDACTR_v2)->Deflex))))<0);
 } 
 if (KLDACTR)
 { 
  /* line 4228: */
-(void)(A_CALLPROC(KIDACTR_f,((*(&(HLDACTR_v1->Vecmode))), (*(&(JLDACTR_v2->Vecmode)))),((*(&(HLDACTR_v1->Vecmode))), (*(&(JLDACTR_v2->Vecmode))),(KIDACTR_f).nonlocals)));
+(void)(A_CALLPROC(KIDACTR_f,((*A_NILCHECK((&(A_NILCHECK(HLDACTR_v1)->Vecmode)))), (*A_NILCHECK((&(A_NILCHECK(JLDACTR_v2)->Vecmode))))),((*A_NILCHECK((&(A_NILCHECK(HLDACTR_v1)->Vecmode)))), (*A_NILCHECK((&(A_NILCHECK(JLDACTR_v2)->Vecmode)))),(KIDACTR_f).nonlocals)));
 } 
 else
 { 
@@ -21205,10 +21205,10 @@ for ( ;; )
 VLDACTR = (SLDACTR_mx!=OQAACTR_nilml);
 if ( VLDACTR )
 { /* line 4248: */
-VLDACTR = ((*(&(SLDACTR_mx->Mode)))!=A);
+VLDACTR = ((*A_NILCHECK((&(A_NILCHECK(SLDACTR_mx)->Mode))))!=A);
 }
 if ( !(VLDACTR) ) break;
-(void)(SLDACTR_mx = (*(&(SLDACTR_mx->Rest))));
+(void)(SLDACTR_mx = (*A_NILCHECK((&(A_NILCHECK(SLDACTR_mx)->Rest)))));
 }
  /* line 4250: */
  /* line 4251: */
@@ -21222,7 +21222,7 @@ else
 XLDACTR.Mode = A;
 XLDACTR.Rest = Ml;
 YLDACTR = A_LOC(A68_54 ) ;
-(void)((*YLDACTR) = XLDACTR) ;
+(void)((*A_NILCHECK(YLDACTR)) = XLDACTR) ;
 SLDACTR_mx = YLDACTR;
  /* line 4253: */
  /* line 4254: */
@@ -21238,7 +21238,7 @@ WLDACTR = ZLDACTR;
 else
 { 
  /* line 4256: */
-AMDACTR = (*(&A_VINDEX(NL(KUAACTR_modes),A))) ;
+AMDACTR = (*A_NILCHECK((&A_VINDEX(NL(KUAACTR_modes),A)))) ;
 switch ( AMDACTR.mode )
 { 
 case 6: /* REF STRUCT(INT)  */
@@ -21246,7 +21246,7 @@ BMDACTR_p = (AMDACTR.data.mode6);
  /* line 4257: */
 CMDACTR = (X==2);
 if ( ! CMDACTR )
-{CMDACTR = A_CALLPROC(NL(PLDACTR_mcond),((*(&(BMDACTR_p->Deproc))), SLDACTR_mx, 1),((*(&(BMDACTR_p->Deproc))), SLDACTR_mx, 1,(NL(PLDACTR_mcond)).nonlocals));
+{CMDACTR = A_CALLPROC(NL(PLDACTR_mcond),((*A_NILCHECK((&(A_NILCHECK(BMDACTR_p)->Deproc)))), SLDACTR_mx, 1),((*A_NILCHECK((&(A_NILCHECK(BMDACTR_p)->Deproc)))), SLDACTR_mx, 1,(NL(PLDACTR_mcond)).nonlocals));
 }
  /* line 4258: */
 WLDACTR = CMDACTR;
@@ -21257,7 +21257,7 @@ DMDACTR_s = (AMDACTR.data.mode4);
 EMDACTR = (X==1);
 if ( ! EMDACTR )
 {{ 
-(void)(ULDACTR_sl = (*(&(DMDACTR_s->Sels))));
+(void)(ULDACTR_sl = (*A_NILCHECK((&(A_NILCHECK(DMDACTR_s)->Sels)))));
  /* line 4260: */
 for ( ;; )
 { 
@@ -21265,10 +21265,10 @@ for ( ;; )
 FMDACTR = (ULDACTR_sl!=RQAACTR_nilsel);
 if ( FMDACTR )
 { /* line 4262: */
-FMDACTR = A_CALLPROC(NL(PLDACTR_mcond),((*(&(ULDACTR_sl->Mode))), SLDACTR_mx, 2),((*(&(ULDACTR_sl->Mode))), SLDACTR_mx, 2,(NL(PLDACTR_mcond)).nonlocals));
+FMDACTR = A_CALLPROC(NL(PLDACTR_mcond),((*A_NILCHECK((&(A_NILCHECK(ULDACTR_sl)->Mode)))), SLDACTR_mx, 2),((*A_NILCHECK((&(A_NILCHECK(ULDACTR_sl)->Mode)))), SLDACTR_mx, 2,(NL(PLDACTR_mcond)).nonlocals));
 }
 if ( !(FMDACTR) ) break;
-(void)(ULDACTR_sl = (*(&(ULDACTR_sl->Rest))));
+(void)(ULDACTR_sl = (*A_NILCHECK((&(A_NILCHECK(ULDACTR_sl)->Rest)))));
 }
  /* line 4263: */
  /* line 4264: */
@@ -21283,13 +21283,13 @@ case 8: /* REF STRUCT(INT,INT,INT,INT)  */
 HMDACTR_ar = (AMDACTR.data.mode8);
  /* line 4266: */
  /* line 4267: */
-WLDACTR = A_CALLPROC(NL(PLDACTR_mcond),((*(&(HMDACTR_ar->Mode))), SLDACTR_mx, X),((*(&(HMDACTR_ar->Mode))), SLDACTR_mx, X,(NL(PLDACTR_mcond)).nonlocals));
+WLDACTR = A_CALLPROC(NL(PLDACTR_mcond),((*A_NILCHECK((&(A_NILCHECK(HMDACTR_ar)->Mode)))), SLDACTR_mx, X),((*A_NILCHECK((&(A_NILCHECK(HMDACTR_ar)->Mode)))), SLDACTR_mx, X,(NL(PLDACTR_mcond)).nonlocals));
 break;
 case 7: /* REF STRUCT(INT,INT,INT)  */
 IMDACTR_v = (AMDACTR.data.mode7);
  /* line 4268: */
  /* line 4269: */
-WLDACTR = A_CALLPROC(NL(PLDACTR_mcond),((*(&(IMDACTR_v->Vecmode))), SLDACTR_mx, X),((*(&(IMDACTR_v->Vecmode))), SLDACTR_mx, X,(NL(PLDACTR_mcond)).nonlocals));
+WLDACTR = A_CALLPROC(NL(PLDACTR_mcond),((*A_NILCHECK((&(A_NILCHECK(IMDACTR_v)->Vecmode)))), SLDACTR_mx, X),((*A_NILCHECK((&(A_NILCHECK(IMDACTR_v)->Vecmode)))), SLDACTR_mx, X,(NL(PLDACTR_mcond)).nonlocals));
 break;
 case 5: /* REF STRUCT(INT,INT,INT,INT)  */
 JMDACTR_is = (AMDACTR.data.mode5);
@@ -21297,7 +21297,7 @@ JMDACTR_is = (AMDACTR.data.mode5);
  /* line 4271: */
  /* line 4272: */
  /* line 4273: */
-if ((*(&(JMDACTR_is->Length)))==1)
+if ((*A_NILCHECK((&(A_NILCHECK(JMDACTR_is)->Length))))==1)
 { 
  /* line 4274: */
 KMDACTR = X;
@@ -21308,13 +21308,13 @@ else
 KMDACTR = 2;
 } 
  /* line 4276: */
-WLDACTR = A_CALLPROC(NL(PLDACTR_mcond),((*(&(JMDACTR_is->Imode))), SLDACTR_mx, KMDACTR),((*(&(JMDACTR_is->Imode))), SLDACTR_mx, KMDACTR,(NL(PLDACTR_mcond)).nonlocals));
+WLDACTR = A_CALLPROC(NL(PLDACTR_mcond),((*A_NILCHECK((&(A_NILCHECK(JMDACTR_is)->Imode)))), SLDACTR_mx, KMDACTR),((*A_NILCHECK((&(A_NILCHECK(JMDACTR_is)->Imode)))), SLDACTR_mx, KMDACTR,(NL(PLDACTR_mcond)).nonlocals));
 break;
 case 2: /* REF STRUCT(INT,REF MODE54)  */
 LMDACTR_u = (AMDACTR.data.mode2);
  /* line 4277: */
 { 
-(void)(TLDACTR_el = (*(&(LMDACTR_u->Modelist))));
+(void)(TLDACTR_el = (*A_NILCHECK((&(A_NILCHECK(LMDACTR_u)->Modelist)))));
  /* line 4278: */
 for ( ;; )
 { 
@@ -21322,10 +21322,10 @@ for ( ;; )
 MMDACTR = (TLDACTR_el!=OQAACTR_nilml);
 if ( MMDACTR )
 { /* line 4280: */
-MMDACTR = A_CALLPROC(NL(PLDACTR_mcond),((*(&(TLDACTR_el->Mode))), SLDACTR_mx, X),((*(&(TLDACTR_el->Mode))), SLDACTR_mx, X,(NL(PLDACTR_mcond)).nonlocals));
+MMDACTR = A_CALLPROC(NL(PLDACTR_mcond),((*A_NILCHECK((&(A_NILCHECK(TLDACTR_el)->Mode)))), SLDACTR_mx, X),((*A_NILCHECK((&(A_NILCHECK(TLDACTR_el)->Mode)))), SLDACTR_mx, X,(NL(PLDACTR_mcond)).nonlocals));
 }
 if ( !(MMDACTR) ) break;
-(void)(TLDACTR_el = (*(&(TLDACTR_el->Rest))));
+(void)(TLDACTR_el = (*A_NILCHECK((&(A_NILCHECK(TLDACTR_el)->Rest)))));
 }
  /* line 4281: */
  /* line 4282: */
@@ -21376,7 +21376,7 @@ if ( !(TMDACTR) ) break;
 UMDACTR = SMDACTR_b;
 if ( ! UMDACTR )
 { /* line 4295: */
-if ((*(&((*(&(RMDACTR_x->Am)))->Modeproc)))==0)
+if ((*A_NILCHECK((&(A_NILCHECK((*A_NILCHECK((&(A_NILCHECK(RMDACTR_x)->Am)))))->Modeproc))))==0)
 { 
  /* line 4296: */
 VMDACTR = A68_FALSE;
@@ -21384,7 +21384,7 @@ VMDACTR = A68_FALSE;
 else
 { 
  /* line 4297: */
-if ((*(&((*(&(RMDACTR_x->Am)))->Modeproc)))!=1)
+if ((*A_NILCHECK((&(A_NILCHECK((*A_NILCHECK((&(A_NILCHECK(RMDACTR_x)->Am)))))->Modeproc))))!=1)
 { 
  /* line 4298: */
 VMDACTR = A68_TRUE;
@@ -21392,7 +21392,7 @@ VMDACTR = A68_TRUE;
 else
 { 
  /* line 4299: */
-VMDACTR = A_CALLPROC(NL(OMDACTR_dynamic),((*(&((*(&(RMDACTR_x->Am)))->El)))),((*(&((*(&(RMDACTR_x->Am)))->El))),(NL(OMDACTR_dynamic)).nonlocals));
+VMDACTR = A_CALLPROC(NL(OMDACTR_dynamic),((*A_NILCHECK((&(A_NILCHECK((*A_NILCHECK((&(A_NILCHECK(RMDACTR_x)->Am)))))->El))))),((*A_NILCHECK((&(A_NILCHECK((*A_NILCHECK((&(A_NILCHECK(RMDACTR_x)->Am)))))->El)))),(NL(OMDACTR_dynamic)).nonlocals));
 } 
 } 
 UMDACTR = VMDACTR;
@@ -21400,7 +21400,7 @@ UMDACTR = VMDACTR;
 SMDACTR_b = UMDACTR;
  /* line 4300: */
  /* line 4301: */
-(void)(RMDACTR_x = (*(&(RMDACTR_x->Rest))));
+(void)(RMDACTR_x = (*A_NILCHECK((&(A_NILCHECK(RMDACTR_x)->Rest)))));
 }
  /* line 4302: */
  /* line 4303: */
@@ -21440,21 +21440,21 @@ GNDACTR = A68_TRUE;
 else
 { 
  /* line 4314: */
-HNDACTR = (*(&A_VINDEX(NL(KUAACTR_modes),M))) ;
+HNDACTR = (*A_NILCHECK((&A_VINDEX(NL(KUAACTR_modes),M)))) ;
 switch ( HNDACTR.mode )
 { 
 case 2: /* REF STRUCT(INT,REF MODE54)  */
 INDACTR_u = (HNDACTR.data.mode2);
  /* line 4315: */
 { 
-(void)(ENDACTR_ml = (*(&(INDACTR_u->Modelist))));
+(void)(ENDACTR_ml = (*A_NILCHECK((&(A_NILCHECK(INDACTR_u)->Modelist)))));
  /* line 4316: */
 for ( ;; )
 { 
  /* line 4317: */
 if ( !((ENDACTR_ml!=OQAACTR_nilml)) ) break;
  /* line 4318: */
-if (A_CALLPROC(NL(YMDACTR_testkept),((*(&(ENDACTR_ml->Mode)))),((*(&(ENDACTR_ml->Mode))),(NL(YMDACTR_testkept)).nonlocals)))
+if (A_CALLPROC(NL(YMDACTR_testkept),((*A_NILCHECK((&(A_NILCHECK(ENDACTR_ml)->Mode))))),((*A_NILCHECK((&(A_NILCHECK(ENDACTR_ml)->Mode)))),(NL(YMDACTR_testkept)).nonlocals)))
 { 
  /* line 4319: */
 goto DNDACTR_true;
@@ -21463,7 +21463,7 @@ else
 { 
  /* line 4320: */
  /* line 4321: */
-(void)(ENDACTR_ml = (*(&(ENDACTR_ml->Rest))));
+(void)(ENDACTR_ml = (*A_NILCHECK((&(A_NILCHECK(ENDACTR_ml)->Rest)))));
 } 
 }
  /* line 4322: */
@@ -21476,14 +21476,14 @@ case 4: /* REF STRUCT(INT,INT,REF MODE58)  */
 JNDACTR_s = (HNDACTR.data.mode4);
  /* line 4325: */
 { 
-(void)(FNDACTR_sels = (*(&(JNDACTR_s->Sels))));
+(void)(FNDACTR_sels = (*A_NILCHECK((&(A_NILCHECK(JNDACTR_s)->Sels)))));
  /* line 4326: */
 for ( ;; )
 { 
  /* line 4327: */
 if ( !((FNDACTR_sels!=RQAACTR_nilsel)) ) break;
  /* line 4328: */
-if (A_CALLPROC(NL(YMDACTR_testkept),((*(&(FNDACTR_sels->Mode)))),((*(&(FNDACTR_sels->Mode))),(NL(YMDACTR_testkept)).nonlocals)))
+if (A_CALLPROC(NL(YMDACTR_testkept),((*A_NILCHECK((&(A_NILCHECK(FNDACTR_sels)->Mode))))),((*A_NILCHECK((&(A_NILCHECK(FNDACTR_sels)->Mode)))),(NL(YMDACTR_testkept)).nonlocals)))
 { 
  /* line 4329: */
 goto DNDACTR_true;
@@ -21492,7 +21492,7 @@ else
 { 
  /* line 4330: */
  /* line 4331: */
-(void)(FNDACTR_sels = (*(&(FNDACTR_sels->Rest))));
+(void)(FNDACTR_sels = (*A_NILCHECK((&(A_NILCHECK(FNDACTR_sels)->Rest)))));
 } 
 }
  /* line 4332: */
@@ -21505,19 +21505,19 @@ case 5: /* REF STRUCT(INT,INT,INT,INT)  */
 KNDACTR_is = (HNDACTR.data.mode5);
  /* line 4335: */
  /* line 4336: */
-GNDACTR = A_CALLPROC(NL(YMDACTR_testkept),((*(&(KNDACTR_is->Imode)))),((*(&(KNDACTR_is->Imode))),(NL(YMDACTR_testkept)).nonlocals));
+GNDACTR = A_CALLPROC(NL(YMDACTR_testkept),((*A_NILCHECK((&(A_NILCHECK(KNDACTR_is)->Imode))))),((*A_NILCHECK((&(A_NILCHECK(KNDACTR_is)->Imode)))),(NL(YMDACTR_testkept)).nonlocals));
 break;
 case 7: /* REF STRUCT(INT,INT,INT)  */
 LNDACTR_v = (HNDACTR.data.mode7);
  /* line 4337: */
  /* line 4338: */
-GNDACTR = A_CALLPROC(NL(YMDACTR_testkept),((*(&(LNDACTR_v->Vecmode)))),((*(&(LNDACTR_v->Vecmode))),(NL(YMDACTR_testkept)).nonlocals));
+GNDACTR = A_CALLPROC(NL(YMDACTR_testkept),((*A_NILCHECK((&(A_NILCHECK(LNDACTR_v)->Vecmode))))),((*A_NILCHECK((&(A_NILCHECK(LNDACTR_v)->Vecmode)))),(NL(YMDACTR_testkept)).nonlocals));
 break;
 case 8: /* REF STRUCT(INT,INT,INT,INT)  */
 MNDACTR_a = (HNDACTR.data.mode8);
  /* line 4339: */
  /* line 4340: */
-GNDACTR = A_CALLPROC(NL(YMDACTR_testkept),((*(&(MNDACTR_a->Mode)))),((*(&(MNDACTR_a->Mode))),(NL(YMDACTR_testkept)).nonlocals));
+GNDACTR = A_CALLPROC(NL(YMDACTR_testkept),((*A_NILCHECK((&(A_NILCHECK(MNDACTR_a)->Mode))))),((*A_NILCHECK((&(A_NILCHECK(MNDACTR_a)->Mode)))),(NL(YMDACTR_testkept)).nonlocals));
 break;
 case 9: /* REF STRUCT(INT,REF MODE63)  */
 NNDACTR_st = (HNDACTR.data.mode9);
@@ -21566,19 +21566,19 @@ for ( ;; )
 TNDACTR = (SNDACTR_rd1!=(A68_68 *)A68_NIL);
 if ( TNDACTR )
 { /* line 4356: */
-TNDACTR = (Level<(*(&(SNDACTR_rd1->Level))));
+TNDACTR = (Level<(*A_NILCHECK((&(A_NILCHECK(SNDACTR_rd1)->Level)))));
 }
 if ( !(TNDACTR) ) break;
  /* line 4357: */
-if ((*(&(SNDACTR_rd1->Maxname)))<Scope)
+if ((*A_NILCHECK((&(A_NILCHECK(SNDACTR_rd1)->Maxname))))<Scope)
 { 
  /* line 4358: */
-UNDACTR = (&(SNDACTR_rd1->Maxname)) ;
-(*UNDACTR) = Scope;
+UNDACTR = (&(A_NILCHECK(SNDACTR_rd1)->Maxname)) ;
+(*A_NILCHECK(UNDACTR)) = Scope;
 } 
  /* line 4359: */
  /* line 4360: */
-(void)(SNDACTR_rd1 = (*(&(SNDACTR_rd1->Rest))));
+(void)(SNDACTR_rd1 = (*A_NILCHECK((&(A_NILCHECK(SNDACTR_rd1)->Rest)))));
 }
  /* line 4361: */
 } 
@@ -21600,26 +21600,26 @@ A68_106  HODACTR = {0};  /* OPERATORS - mode -> union mode */
 A_PROC_ENTRY(loadmodeproc);
  /* line 4367: */
 { 
-BODACTR = (*(&(A->Modeproc))) ;
+BODACTR = (*A_NILCHECK((&(A_NILCHECK(A)->Modeproc)))) ;
 CODACTR_i = A_ABS(BODACTR);
  /* line 4368: */
  /* line 4369: */
 if (CODACTR_i<GKAACTR_startkmp)
 { 
  /* line 4370: */
-(void)(A_CALLPROC(NL(Output),(A_UNITE(DODACTR,mode3,3,CODACTR_i), (*NL(FZAACTR_outlevel))),(A_UNITE(DODACTR,mode3,3,CODACTR_i), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(DODACTR,mode3,3,CODACTR_i), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(DODACTR,mode3,3,CODACTR_i), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
 } 
 else
 { 
 FODACTR = (CODACTR_i-GKAACTR_startkmp) ;
-(void)(A_CALLPROC(NL(Output),(A_UNITE(EODACTR,mode3,3,FODACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(EODACTR,mode3,3,FODACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(EODACTR,mode3,3,FODACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(EODACTR,mode3,3,FODACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 4371: */
 GODACTR.Fn = ZNAACTR_xderef;
-GODACTR.M = A_CALLPROC(NL(ZICACTR_mproc),((*(&(A->Mode)))),((*(&(A->Mode))),(NL(ZICACTR_mproc)).nonlocals));
+GODACTR.M = A_CALLPROC(NL(ZICACTR_mproc),((*A_NILCHECK((&(A_NILCHECK(A)->Mode))))),((*A_NILCHECK((&(A_NILCHECK(A)->Mode)))),(NL(ZICACTR_mproc)).nonlocals));
 GODACTR.Param = 0;
  /* line 4372: */
  /* line 4373: */
-(void)(A_CALLPROC(NL(Output),(A_UNITE(HODACTR,mode14,14,GODACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(HODACTR,mode14,14,GODACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(HODACTR,mode14,14,GODACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(HODACTR,mode14,14,GODACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
 } 
 } 
 A_PROC_EXIT(loadmodeproc);
@@ -21720,14 +21720,14 @@ PODACTR = (A68_INT *)A68_NIL;
 } 
 else
 { 
-PODACTR = (&(Am->Modeproc));
+PODACTR = (&(A_NILCHECK(Am)->Modeproc));
 } 
 QODACTR_mp = PODACTR;
  /* line 4385: */
 RODACTR = (Am==QQAACTR_nilam);
 if ( ! RODACTR )
 { /* line 4386: */
-RODACTR = ((*(&(Am->Mode)))==ZKAACTR_faultmode);
+RODACTR = ((*A_NILCHECK((&(A_NILCHECK(Am)->Mode))))==ZKAACTR_faultmode);
 }
  /* line 4387: */
 if (RODACTR)
@@ -21736,25 +21736,25 @@ if (RODACTR)
 } 
 else
 { 
-SODACTR = ((*QODACTR_mp)==1);
+SODACTR = ((*A_NILCHECK(QODACTR_mp))==1);
 if ( SODACTR )
 { /* line 4388: */
-SODACTR = (!A_CALLPROC(NL(OMDACTR_dynamic),((*(&(Am->El)))),((*(&(Am->El))),(NL(OMDACTR_dynamic)).nonlocals)));
+SODACTR = (!A_CALLPROC(NL(OMDACTR_dynamic),((*A_NILCHECK((&(A_NILCHECK(Am)->El))))),((*A_NILCHECK((&(A_NILCHECK(Am)->El)))),(NL(OMDACTR_dynamic)).nonlocals)));
 }
 if (SODACTR)
 { 
-(*QODACTR_mp) = 0;
+(*A_NILCHECK(QODACTR_mp)) = 0;
  /* line 4389: */
  /* line 4390: */
-TODACTR = (&(Am->El)) ;
-(*TODACTR) = (A68_53 *)A68_NIL;
+TODACTR = (&(A_NILCHECK(Am)->El)) ;
+(*A_NILCHECK(TODACTR)) = (A68_53 *)A68_NIL;
 } 
 else
 { 
-UODACTR = ((*QODACTR_mp)>1);
+UODACTR = ((*A_NILCHECK(QODACTR_mp))>1);
 if ( ! UODACTR )
 { /* line 4391: */
-UODACTR = ((*QODACTR_mp)<=(-GKAACTR_startkmp));
+UODACTR = ((*A_NILCHECK(QODACTR_mp))<=(-GKAACTR_startkmp));
 }
 if (UODACTR)
 { 
@@ -21768,15 +21768,15 @@ else
 { 
  /* line 4393: */
  /* line 4394: */
-if ((*QODACTR_mp)!=0)
+if ((*A_NILCHECK(QODACTR_mp))!=0)
 { 
-VODACTR_lastid = (&((*NL(QYAACTR_globcurrent))->Lastid));
+VODACTR_lastid = (&(A_NILCHECK((*A_NILCHECK(NL(QYAACTR_globcurrent))))->Lastid));
  /* line 4395: */
-(*NL(GBBACTR_lastidchanged)) = A68_TRUE;
+(*A_NILCHECK(NL(GBBACTR_lastidchanged))) = A68_TRUE;
  /* line 4396: */
-WODACTR_x = (*QODACTR_mp);
-XODACTR_m = (*(&(Am->Mode)));
-APDACTR_lastid1 = (*VODACTR_lastid);
+WODACTR_x = (*A_NILCHECK(QODACTR_mp));
+XODACTR_m = (*A_NILCHECK((&(A_NILCHECK(Am)->Mode))));
+APDACTR_lastid1 = (*A_NILCHECK(VODACTR_lastid));
  /* line 4397: */
  /* line 4398: */
 BPDACTR.Name = A_CALLPROC(NL(KTAACTR_idmess),(60),(60,(NL(KTAACTR_idmess)).nonlocals));
@@ -21792,7 +21792,7 @@ CPDACTR = MQAACTR_z;
 BPDACTR.Props = (A68_BITS )((A68_BITS )(DMAACTR_genprocbit|LLAACTR_ccbit)|CPDACTR);
 BPDACTR.Mode = A_CALLPROC(NL(ZICACTR_mproc),(XODACTR_m),(XODACTR_m,(NL(ZICACTR_mproc)).nonlocals));
  /* line 4400: */
-BPDACTR.Rdenno = (*QODACTR_mp) = (*NL(CZAACTR_lastrd))+=1;
+BPDACTR.Rdenno = (*A_NILCHECK(QODACTR_mp)) = (*A_NILCHECK(NL(CZAACTR_lastrd)))+=1;
 BPDACTR.Maxname = Scope;
  /* line 4401: */
 BPDACTR.Level = 1;
@@ -21800,7 +21800,7 @@ BPDACTR.Rest = (A68_68 *)A68_NIL;
 DPDACTR_rd = BPDACTR;
  /* line 4402: */
 EPDACTR.Name = NL(BZAACTR_nullid);
-EPDACTR.Decno = (*VODACTR_lastid)+=1;
+EPDACTR.Decno = (*A_NILCHECK(VODACTR_lastid))+=1;
 EPDACTR.Level = 1;
 EPDACTR.Mode = ALAACTR_bool;
 EPDACTR.Scope = 0;
@@ -21828,38 +21828,38 @@ A_CLOSURE( XPDACTR_assignarr, YPDACTR_assignarr, ZPDACTR_assignarr );
 (( ZPDACTR_assignarr * ) ( XPDACTR_assignarr.nonlocals )) -> HPDACTR_assigngen = HPDACTR_assigngen;
 (( ZPDACTR_assignarr * ) ( XPDACTR_assignarr.nonlocals )) -> XPDACTR_assignarr = XPDACTR_assignarr;
  /* line 4458: */
-(void)(A_CALLPROC(NL(Output),(A_UNITE(WQDACTR,mode34,34,(&DPDACTR_rd)), (*NL(FZAACTR_outlevel))),(A_UNITE(WQDACTR,mode34,34,(&DPDACTR_rd)), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(WQDACTR,mode34,34,(&DPDACTR_rd)), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(WQDACTR,mode34,34,(&DPDACTR_rd)), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 4459: */
 XQDACTR.Type = YOAACTR_xfdec;
 XQDACTR.Iddec = (&FPDACTR_loc);
-(void)(A_CALLPROC(NL(Output),(A_UNITE(YQDACTR,mode12,12,XQDACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(YQDACTR,mode12,12,XQDACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(YQDACTR,mode12,12,XQDACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(YQDACTR,mode12,12,XQDACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 4460: */
 ZQDACTR.Fn = ZMAACTR_xbegin;
 ZQDACTR.M = XODACTR_m;
 ZQDACTR.Props = (A68_BITS )(WLAACTR_compgenbit|SLAACTR_semibit);
 ZQDACTR.Param = XODACTR_m;
-(void)(A_CALLPROC(NL(Output),(A_UNITE(ARDACTR,mode17,17,ZQDACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(ARDACTR,mode17,17,ZQDACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(ARDACTR,mode17,17,ZQDACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(ARDACTR,mode17,17,ZQDACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 4462: */
  /* line 4463: */
 if (WODACTR_x<0)
 { 
-(void)(A_CALLPROC(NL(Output),(SKAACTR_down, (*NL(FZAACTR_outlevel))),(SKAACTR_down, (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(SKAACTR_down, (*A_NILCHECK(NL(FZAACTR_outlevel)))),(SKAACTR_down, (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 4464: */
-CRDACTR = (*(&((&FPDACTR_loc)->Decno))) ;
-(void)(A_CALLPROC(NL(Output),(A_UNITE(BRDACTR,mode3,3,CRDACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(BRDACTR,mode3,3,CRDACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+CRDACTR = (*A_NILCHECK((&(A_NILCHECK((&FPDACTR_loc))->Decno)))) ;
+(void)(A_CALLPROC(NL(Output),(A_UNITE(BRDACTR,mode3,3,CRDACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(BRDACTR,mode3,3,CRDACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 4465: */
 DRDACTR.Fn = NMAACTR_xdyngrab;
 DRDACTR.M = A_CALLPROC(NL(JGCACTR_deflex),(XODACTR_m),(XODACTR_m,(NL(JGCACTR_deflex)).nonlocals));
 DRDACTR.Param = 0;
-(void)(A_CALLPROC(NL(Output),(A_UNITE(ERDACTR,mode14,14,DRDACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(ERDACTR,mode14,14,DRDACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(ERDACTR,mode14,14,DRDACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(ERDACTR,mode14,14,DRDACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 4466: */
  /* line 4467: */
-if (A_CALLPROC(NL(OMDACTR_dynamic),((*(&(Am->El)))),((*(&(Am->El))),(NL(OMDACTR_dynamic)).nonlocals)))
+if (A_CALLPROC(NL(OMDACTR_dynamic),((*A_NILCHECK((&(A_NILCHECK(Am)->El))))),((*A_NILCHECK((&(A_NILCHECK(Am)->El)))),(NL(OMDACTR_dynamic)).nonlocals)))
 { 
-FRDACTR_amel = (*(&((*(&(Am->El)))->Am)));
+FRDACTR_amel = (*A_NILCHECK((&(A_NILCHECK((*A_NILCHECK((&(A_NILCHECK(Am)->El)))))->Am))));
  /* line 4468: */
 GRDACTR.Name = NL(BZAACTR_nullid);
-GRDACTR.Decno = (*VODACTR_lastid)+=1;
+GRDACTR.Decno = (*A_NILCHECK(VODACTR_lastid))+=1;
  /* line 4469: */
 GRDACTR.Level = 1;
 GRDACTR.Mode = (A_CALLPROC(NL(ZHCACTR_enflex),(XODACTR_m),(XODACTR_m,(NL(ZHCACTR_enflex)).nonlocals))+KQAACTR_refmark);
@@ -21870,24 +21870,24 @@ HRDACTR_array = GRDACTR;
  /* line 4471: */
 IRDACTR.Type = APAACTR_xivardec;
 IRDACTR.Iddec = (&HRDACTR_array);
-(void)(A_CALLPROC(NL(Output),(A_UNITE(JRDACTR,mode12,12,IRDACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(JRDACTR,mode12,12,IRDACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(JRDACTR,mode12,12,IRDACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(JRDACTR,mode12,12,IRDACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 4472: */
 (void)(A_CALLPROC(NL(LODACTR_treatam),(FRDACTR_amel, WNDACTR_decam, Scope),(FRDACTR_amel, WNDACTR_decam, Scope,(NL(LODACTR_treatam)).nonlocals)));
  /* line 4473: */
-LRDACTR = (*(&((&HRDACTR_array)->Decno))) ;
-(void)(A_CALLPROC(NL(Output),(A_UNITE(KRDACTR,mode3,3,LRDACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(KRDACTR,mode3,3,LRDACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+LRDACTR = (*A_NILCHECK((&(A_NILCHECK((&HRDACTR_array))->Decno)))) ;
+(void)(A_CALLPROC(NL(Output),(A_UNITE(KRDACTR,mode3,3,LRDACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(KRDACTR,mode3,3,LRDACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 4474: */
 (void)(A_CALLPROC(XPDACTR_assignarr,((&HRDACTR_array), FRDACTR_amel),((&HRDACTR_array), FRDACTR_amel,(XPDACTR_assignarr).nonlocals)));
  /* line 4475: */
-NRDACTR = (*(&((&HRDACTR_array)->Decno))) ;
-(void)(A_CALLPROC(NL(Output),(A_UNITE(MRDACTR,mode3,3,NRDACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(MRDACTR,mode3,3,NRDACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+NRDACTR = (*A_NILCHECK((&(A_NILCHECK((&HRDACTR_array))->Decno)))) ;
+(void)(A_CALLPROC(NL(Output),(A_UNITE(MRDACTR,mode3,3,NRDACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(MRDACTR,mode3,3,NRDACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 4476: */
 ORDACTR.Fn = ZNAACTR_xderef;
 ORDACTR.M = XODACTR_m;
 ORDACTR.Param = 0;
  /* line 4477: */
  /* line 4478: */
-(void)(A_CALLPROC(NL(Output),(A_UNITE(PRDACTR,mode14,14,ORDACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(PRDACTR,mode14,14,ORDACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(PRDACTR,mode14,14,ORDACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(PRDACTR,mode14,14,ORDACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
 } 
 } 
 else
@@ -21895,32 +21895,32 @@ else
  /* line 4479: */
 if (XODACTR_m!=ZKAACTR_faultmode)
 { 
-(void)(OODACTR_aml = (*(&(Am->El))));
+(void)(OODACTR_aml = (*A_NILCHECK((&(A_NILCHECK(Am)->El)))));
  /* line 4480: */
 for ( ;; )
 { 
  /* line 4481: */
 if ( !((OODACTR_aml!=PQAACTR_nilaml)) ) break;
-(void)(A_CALLPROC(NL(LODACTR_treatam),((*(&(OODACTR_aml->Am))), WNDACTR_decam, Scope),((*(&(OODACTR_aml->Am))), WNDACTR_decam, Scope,(NL(LODACTR_treatam)).nonlocals)));
+(void)(A_CALLPROC(NL(LODACTR_treatam),((*A_NILCHECK((&(A_NILCHECK(OODACTR_aml)->Am)))), WNDACTR_decam, Scope),((*A_NILCHECK((&(A_NILCHECK(OODACTR_aml)->Am)))), WNDACTR_decam, Scope,(NL(LODACTR_treatam)).nonlocals)));
  /* line 4482: */
  /* line 4483: */
-(void)(OODACTR_aml = (*(&(OODACTR_aml->Rest))));
+(void)(OODACTR_aml = (*A_NILCHECK((&(A_NILCHECK(OODACTR_aml)->Rest)))));
 }
  /* line 4484: */
  /* line 4485: */
-QRDACTR = (*(&A_VINDEX(NL(KUAACTR_modes),XODACTR_m))) ;
+QRDACTR = (*A_NILCHECK((&A_VINDEX(NL(KUAACTR_modes),XODACTR_m)))) ;
 switch ( QRDACTR.mode )
 { 
 case 4: /* REF STRUCT(INT,INT,REF MODE58)  */
 RRDACTR_st = (QRDACTR.data.mode4);
  /* line 4486: */
 { 
-SRDACTR_s = (*(&(RRDACTR_st->Sels)));
+SRDACTR_s = (*A_NILCHECK((&(A_NILCHECK(RRDACTR_st)->Sels))));
  /* line 4487: */
-TRDACTR_aml = (*(&(Am->El)));
+TRDACTR_aml = (*A_NILCHECK((&(A_NILCHECK(Am)->El))));
  /* line 4488: */
 URDACTR.Name = NL(BZAACTR_nullid);
-URDACTR.Decno = (*VODACTR_lastid)+=1;
+URDACTR.Decno = (*A_NILCHECK(VODACTR_lastid))+=1;
  /* line 4489: */
 URDACTR.Level = 1;
  /* line 4490: */
@@ -21932,7 +21932,7 @@ VRDACTR_struct = URDACTR;
  /* line 4492: */
 WRDACTR.Type = XOAACTR_xvardec;
 WRDACTR.Iddec = (&VRDACTR_struct);
-(void)(A_CALLPROC(NL(Output),(A_UNITE(XRDACTR,mode12,12,WRDACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(XRDACTR,mode12,12,WRDACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(XRDACTR,mode12,12,WRDACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(XRDACTR,mode12,12,WRDACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 4494: */
 for ( ;; )
 { 
@@ -21944,56 +21944,56 @@ for ( ;; )
 YRDACTR = (SRDACTR_s!=RQAACTR_nilsel);
 if ( YRDACTR )
 { /* line 4497: */
-YRDACTR = ((*(&(SRDACTR_s->Mode)))!=(*(&((*(&(TRDACTR_aml->Am)))->Mode))));
+YRDACTR = ((*A_NILCHECK((&(A_NILCHECK(SRDACTR_s)->Mode))))!=(*A_NILCHECK((&(A_NILCHECK((*A_NILCHECK((&(A_NILCHECK(TRDACTR_aml)->Am)))))->Mode)))));
 }
 if ( !(YRDACTR) ) break;
-(void)(SRDACTR_s = (*(&(SRDACTR_s->Rest))));
+(void)(SRDACTR_s = (*A_NILCHECK((&(A_NILCHECK(SRDACTR_s)->Rest)))));
 }
  /* line 4499: */
  /* line 4500: */
 if (SRDACTR_s!=RQAACTR_nilsel)
 { 
  /* line 4501: */
-if ((*(&((*(&(TRDACTR_aml->Am)))->Modeproc)))!=0)
+if ((*A_NILCHECK((&(A_NILCHECK((*A_NILCHECK((&(A_NILCHECK(TRDACTR_aml)->Am)))))->Modeproc))))!=0)
 { 
  /* line 4503: */
-ASDACTR = (*(&((&VRDACTR_struct)->Decno))) ;
-(void)(A_CALLPROC(NL(Output),(A_UNITE(ZRDACTR,mode3,3,ASDACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(ZRDACTR,mode3,3,ASDACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+ASDACTR = (*A_NILCHECK((&(A_NILCHECK((&VRDACTR_struct))->Decno)))) ;
+(void)(A_CALLPROC(NL(Output),(A_UNITE(ZRDACTR,mode3,3,ASDACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(ZRDACTR,mode3,3,ASDACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 4504: */
  /* line 4505: */
 BSDACTR.Fn = IMAACTR_xselect;
  /* line 4506: */
  /* line 4508: */
-BSDACTR.M = (A_CALLPROC(NL(ZHCACTR_enflex),((*(&(SRDACTR_s->Mode)))),((*(&(SRDACTR_s->Mode))),(NL(ZHCACTR_enflex)).nonlocals))+KQAACTR_refmark);
-BSDACTR.Param = (*(&(SRDACTR_s->Fieldno)));
-(void)(A_CALLPROC(NL(Output),(A_UNITE(CSDACTR,mode14,14,BSDACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(CSDACTR,mode14,14,BSDACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+BSDACTR.M = (A_CALLPROC(NL(ZHCACTR_enflex),((*A_NILCHECK((&(A_NILCHECK(SRDACTR_s)->Mode))))),((*A_NILCHECK((&(A_NILCHECK(SRDACTR_s)->Mode)))),(NL(ZHCACTR_enflex)).nonlocals))+KQAACTR_refmark);
+BSDACTR.Param = (*A_NILCHECK((&(A_NILCHECK(SRDACTR_s)->Fieldno))));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(CSDACTR,mode14,14,BSDACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(CSDACTR,mode14,14,BSDACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 4509: */
  /* line 4510: */
-(void)(A_CALLPROC(HPDACTR_assigngen,((*(&(TRDACTR_aml->Am)))),((*(&(TRDACTR_aml->Am))),(HPDACTR_assigngen).nonlocals)));
+(void)(A_CALLPROC(HPDACTR_assigngen,((*A_NILCHECK((&(A_NILCHECK(TRDACTR_aml)->Am))))),((*A_NILCHECK((&(A_NILCHECK(TRDACTR_aml)->Am)))),(HPDACTR_assigngen).nonlocals)));
 } 
  /* line 4511: */
  /* line 4512: */
-(void)(SRDACTR_s = (*(&(SRDACTR_s->Rest))));
+(void)(SRDACTR_s = (*A_NILCHECK((&(A_NILCHECK(SRDACTR_s)->Rest)))));
 } 
  /* line 4513: */
  /* line 4514: */
-(void)(TRDACTR_aml = (*(&(TRDACTR_aml->Rest))));
+(void)(TRDACTR_aml = (*A_NILCHECK((&(A_NILCHECK(TRDACTR_aml)->Rest)))));
 }
  /* line 4515: */
  /* line 4516: */
  /* line 4517: */
-ESDACTR = (*(&((&VRDACTR_struct)->Decno))) ;
-(void)(A_CALLPROC(NL(Output),(A_UNITE(DSDACTR,mode3,3,ESDACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(DSDACTR,mode3,3,ESDACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+ESDACTR = (*A_NILCHECK((&(A_NILCHECK((&VRDACTR_struct))->Decno)))) ;
+(void)(A_CALLPROC(NL(Output),(A_UNITE(DSDACTR,mode3,3,ESDACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(DSDACTR,mode3,3,ESDACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
 } 
 break;
 case 5: /* REF STRUCT(INT,INT,INT,INT)  */
 FSDACTR_is = (QRDACTR.data.mode5);
  /* line 4518: */
 { 
-GSDACTR_i = A_CALLPROC(NL(ZVBACTR_insertvec),(A_CALLPROC(NL(ZHCACTR_enflex),((*(&(FSDACTR_is->Imode)))),((*(&(FSDACTR_is->Imode))),(NL(ZHCACTR_enflex)).nonlocals)), 1),(A_CALLPROC(NL(ZHCACTR_enflex),((*(&(FSDACTR_is->Imode)))),((*(&(FSDACTR_is->Imode))),(NL(ZHCACTR_enflex)).nonlocals)), 1,(NL(ZVBACTR_insertvec)).nonlocals));
+GSDACTR_i = A_CALLPROC(NL(ZVBACTR_insertvec),(A_CALLPROC(NL(ZHCACTR_enflex),((*A_NILCHECK((&(A_NILCHECK(FSDACTR_is)->Imode))))),((*A_NILCHECK((&(A_NILCHECK(FSDACTR_is)->Imode)))),(NL(ZHCACTR_enflex)).nonlocals)), 1),(A_CALLPROC(NL(ZHCACTR_enflex),((*A_NILCHECK((&(A_NILCHECK(FSDACTR_is)->Imode))))),((*A_NILCHECK((&(A_NILCHECK(FSDACTR_is)->Imode)))),(NL(ZHCACTR_enflex)).nonlocals)), 1,(NL(ZVBACTR_insertvec)).nonlocals));
  /* line 4519: */
 HSDACTR.Name = NL(BZAACTR_nullid);
-HSDACTR.Decno = (*VODACTR_lastid)+=1;
+HSDACTR.Decno = (*A_NILCHECK(VODACTR_lastid))+=1;
  /* line 4520: */
 HSDACTR.Level = 1;
  /* line 4521: */
@@ -22004,7 +22004,7 @@ HSDACTR.Rest = (A68_67 *)A68_NIL;
 ISDACTR_istruct = HSDACTR;
  /* line 4523: */
 JSDACTR.Name = NL(BZAACTR_nullid);
-JSDACTR.Decno = (*VODACTR_lastid)+=1;
+JSDACTR.Decno = (*A_NILCHECK(VODACTR_lastid))+=1;
  /* line 4524: */
 JSDACTR.Level = 1;
 JSDACTR.Mode = (GSDACTR_i+KQAACTR_refmark);
@@ -22015,22 +22015,22 @@ KSDACTR_element = JSDACTR;
  /* line 4526: */
 LSDACTR.Type = XOAACTR_xvardec;
 LSDACTR.Iddec = (&ISDACTR_istruct);
-(void)(A_CALLPROC(NL(Output),(A_UNITE(MSDACTR,mode12,12,LSDACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(MSDACTR,mode12,12,LSDACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(MSDACTR,mode12,12,LSDACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(MSDACTR,mode12,12,LSDACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 4527: */
-OSDACTR = (*(&((&ISDACTR_istruct)->Decno))) ;
-(void)(A_CALLPROC(NL(Output),(A_UNITE(NSDACTR,mode3,3,OSDACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(NSDACTR,mode3,3,OSDACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+OSDACTR = (*A_NILCHECK((&(A_NILCHECK((&ISDACTR_istruct))->Decno)))) ;
+(void)(A_CALLPROC(NL(Output),(A_UNITE(NSDACTR,mode3,3,OSDACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(NSDACTR,mode3,3,OSDACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 4528: */
 PSDACTR.Fn = JOAACTR_xisvec;
 PSDACTR.M = (GSDACTR_i+KQAACTR_refmark);
 PSDACTR.Param = 0;
-(void)(A_CALLPROC(NL(Output),(A_UNITE(QSDACTR,mode14,14,PSDACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(QSDACTR,mode14,14,PSDACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(QSDACTR,mode14,14,PSDACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(QSDACTR,mode14,14,PSDACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 4529: */
-(void)(A_CALLPROC(XPDACTR_assignarr,((&KSDACTR_element), (*(&((*(&(Am->El)))->Am)))),((&KSDACTR_element), (*(&((*(&(Am->El)))->Am))),(XPDACTR_assignarr).nonlocals)));
+(void)(A_CALLPROC(XPDACTR_assignarr,((&KSDACTR_element), (*A_NILCHECK((&(A_NILCHECK((*A_NILCHECK((&(A_NILCHECK(Am)->El)))))->Am))))),((&KSDACTR_element), (*A_NILCHECK((&(A_NILCHECK((*A_NILCHECK((&(A_NILCHECK(Am)->El)))))->Am)))),(XPDACTR_assignarr).nonlocals)));
  /* line 4530: */
  /* line 4531: */
  /* line 4532: */
-SSDACTR = (*(&((&ISDACTR_istruct)->Decno))) ;
-(void)(A_CALLPROC(NL(Output),(A_UNITE(RSDACTR,mode3,3,SSDACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(RSDACTR,mode3,3,SSDACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+SSDACTR = (*A_NILCHECK((&(A_NILCHECK((&ISDACTR_istruct))->Decno)))) ;
+(void)(A_CALLPROC(NL(Output),(A_UNITE(RSDACTR,mode3,3,SSDACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(RSDACTR,mode3,3,SSDACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
 } 
 break;
 default: 
@@ -22042,7 +22042,7 @@ TSDACTR.Fn = ZNAACTR_xderef;
 TSDACTR.M = XODACTR_m;
 TSDACTR.Param = 0;
  /* line 4534: */
-(void)(A_CALLPROC(NL(Output),(A_UNITE(USDACTR,mode14,14,TSDACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(USDACTR,mode14,14,TSDACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(USDACTR,mode14,14,TSDACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(USDACTR,mode14,14,TSDACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
 } 
 } 
  /* line 4535: */
@@ -22050,7 +22050,7 @@ VSDACTR.Fn = MNAACTR_xend;
 VSDACTR.M = 0;
 VSDACTR.Props = (A68_BITS )(WLAACTR_compgenbit|ZLAACTR_dontpullbit);
 VSDACTR.Param = XODACTR_m;
-(void)(A_CALLPROC(NL(Output),(A_UNITE(WSDACTR,mode17,17,VSDACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(WSDACTR,mode17,17,VSDACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(WSDACTR,mode17,17,VSDACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(WSDACTR,mode17,17,VSDACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 4536: */
 XSDACTR.Fn = VNAACTR_xroutinend;
  /* line 4537: */
@@ -22067,18 +22067,18 @@ YSDACTR = MQAACTR_z;
  /* line 4540: */
 XSDACTR.Props = (A68_BITS )((A68_BITS )(DMAACTR_genprocbit|WLAACTR_compgenbit)|YSDACTR);
 XSDACTR.Param = 0;
-(void)(A_CALLPROC(NL(Output),(A_UNITE(ZSDACTR,mode17,17,XSDACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(ZSDACTR,mode17,17,XSDACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(ZSDACTR,mode17,17,XSDACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(ZSDACTR,mode17,17,XSDACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 4541: */
  /* line 4542: */
-if ((*VODACTR_lastid)>(*NL(GZAACTR_maxident)))
+if ((*A_NILCHECK(VODACTR_lastid))>(*A_NILCHECK(NL(GZAACTR_maxident))))
 { 
  /* line 4543: */
-(void)((*NL(GZAACTR_maxident)) = (*VODACTR_lastid));
+(void)((*A_NILCHECK(NL(GZAACTR_maxident))) = (*A_NILCHECK(VODACTR_lastid)));
 } 
  /* line 4544: */
  /* line 4545: */
  /* line 4546: */
-(*VODACTR_lastid) = APDACTR_lastid1;
+(*A_NILCHECK(VODACTR_lastid)) = APDACTR_lastid1;
 } 
 } 
 } 
@@ -22126,7 +22126,7 @@ ETDACTR_a = (A68_53 *)A68_NIL;
 FTDACTR_b = Aml;
  /* line 4551: */
  /* line 4552: */
-ITDACTR_lastid = (&((*NL(QYAACTR_globcurrent))->Lastid));
+ITDACTR_lastid = (&(A_NILCHECK((*A_NILCHECK(NL(QYAACTR_globcurrent))))->Lastid));
  /* line 4553: */
  /* line 4554: */
  /* line 4555: */
@@ -22136,25 +22136,25 @@ for ( ;; )
 { 
  /* line 4559: */
 if ( !((FTDACTR_b!=PQAACTR_nilaml)) ) break;
-(void)(JTDACTR_am = (*(&(FTDACTR_b->Am))));
+(void)(JTDACTR_am = (*A_NILCHECK((&(A_NILCHECK(FTDACTR_b)->Am)))));
  /* line 4560: */
-(void)(KTDACTR_mp = (&(JTDACTR_am->Modeproc)));
+(void)(KTDACTR_mp = (&(A_NILCHECK(JTDACTR_am)->Modeproc)));
  /* line 4561: */
-NTDACTR = ((*KTDACTR_mp)<0);
+NTDACTR = ((*A_NILCHECK(KTDACTR_mp))<0);
 if ( ! NTDACTR )
-{OTDACTR = ((*KTDACTR_mp)==1);
+{OTDACTR = ((*A_NILCHECK(KTDACTR_mp))==1);
 if ( OTDACTR )
 { /* line 4562: */
-OTDACTR = A_CALLPROC(NL(OMDACTR_dynamic),((*(&(JTDACTR_am->El)))),((*(&(JTDACTR_am->El))),(NL(OMDACTR_dynamic)).nonlocals));
+OTDACTR = A_CALLPROC(NL(OMDACTR_dynamic),((*A_NILCHECK((&(A_NILCHECK(JTDACTR_am)->El))))),((*A_NILCHECK((&(A_NILCHECK(JTDACTR_am)->El)))),(NL(OMDACTR_dynamic)).nonlocals));
 }
 NTDACTR = OTDACTR;
 }
 if (NTDACTR)
 { 
-(void)(GTDACTR_l = (*(&(FTDACTR_b->Rest))));
+(void)(GTDACTR_l = (*A_NILCHECK((&(A_NILCHECK(FTDACTR_b)->Rest)))));
  /* line 4563: */
-PTDACTR = (&(FTDACTR_b->Rest)) ;
-(*PTDACTR) = ETDACTR_a;
+PTDACTR = (&(A_NILCHECK(FTDACTR_b)->Rest)) ;
+(*A_NILCHECK(PTDACTR)) = ETDACTR_a;
  /* line 4564: */
 ETDACTR_a = FTDACTR_b;
  /* line 4565: */
@@ -22163,14 +22163,14 @@ FTDACTR_b = GTDACTR_l;
 } 
 else
 { 
-if ((*KTDACTR_mp)==1)
+if ((*A_NILCHECK(KTDACTR_mp))==1)
 { 
-(*KTDACTR_mp) = 0;
+(*A_NILCHECK(KTDACTR_mp)) = 0;
 } 
  /* line 4567: */
  /* line 4568: */
  /* line 4569: */
-(void)(FTDACTR_b = (*(&(FTDACTR_b->Rest))));
+(void)(FTDACTR_b = (*A_NILCHECK((&(A_NILCHECK(FTDACTR_b)->Rest)))));
 } 
 }
  /* line 4571: */
@@ -22180,43 +22180,43 @@ for ( ;; )
 { 
  /* line 4573: */
 if ( !((FTDACTR_b!=PQAACTR_nilaml)) ) break;
-(void)(JTDACTR_am = (*(&(FTDACTR_b->Am))));
+(void)(JTDACTR_am = (*A_NILCHECK((&(A_NILCHECK(FTDACTR_b)->Am)))));
  /* line 4574: */
-(void)(KTDACTR_mp = (&(JTDACTR_am->Modeproc)));
+(void)(KTDACTR_mp = (&(A_NILCHECK(JTDACTR_am)->Modeproc)));
  /* line 4575: */
 QTDACTR.Name = NL(BZAACTR_nullid);
-QTDACTR.Decno = (*ITDACTR_lastid)+=1;
+QTDACTR.Decno = (*A_NILCHECK(ITDACTR_lastid))+=1;
  /* line 4576: */
 QTDACTR.Level = 1;
-QTDACTR.Mode = (A_CALLPROC(NL(ZICACTR_mproc),((*(&(JTDACTR_am->Mode)))),((*(&(JTDACTR_am->Mode))),(NL(ZICACTR_mproc)).nonlocals))+KQAACTR_refmark);
+QTDACTR.Mode = (A_CALLPROC(NL(ZICACTR_mproc),((*A_NILCHECK((&(A_NILCHECK(JTDACTR_am)->Mode))))),((*A_NILCHECK((&(A_NILCHECK(JTDACTR_am)->Mode)))),(NL(ZICACTR_mproc)).nonlocals))+KQAACTR_refmark);
  /* line 4577: */
 QTDACTR.Scope = 0;
 QTDACTR.Rest = (A68_67 *)A68_NIL;
 LTDACTR_n = QTDACTR;
  /* line 4578: */
  /* line 4579: */
-if ((*KTDACTR_mp)<0)
+if ((*A_NILCHECK(KTDACTR_mp))<0)
 { 
-(void)(HTDACTR_rb = (&(FTDACTR_b->Rest)));
+(void)(HTDACTR_rb = (&(A_NILCHECK(FTDACTR_b)->Rest)));
  /* line 4581: */
 for ( ;; )
 { 
  /* line 4582: */
-if ( !(((*HTDACTR_rb)!=PQAACTR_nilaml)) ) break;
+if ( !(((*A_NILCHECK(HTDACTR_rb))!=PQAACTR_nilaml)) ) break;
  /* line 4583: */
-if ((*(&((*(&((*HTDACTR_rb)->Am)))->Modeproc)))==(*KTDACTR_mp))
+if ((*A_NILCHECK((&(A_NILCHECK((*A_NILCHECK((&(A_NILCHECK((*A_NILCHECK(HTDACTR_rb)))->Am)))))->Modeproc))))==(*A_NILCHECK(KTDACTR_mp)))
 { 
-RTDACTR = (&((*(&((*HTDACTR_rb)->Am)))->Modeproc)) ;
-(void)((*RTDACTR) = ((*ITDACTR_lastid)+GKAACTR_startkmp));
+RTDACTR = (&(A_NILCHECK((*A_NILCHECK((&(A_NILCHECK((*A_NILCHECK(HTDACTR_rb)))->Am)))))->Modeproc)) ;
+(void)((*A_NILCHECK(RTDACTR)) = ((*A_NILCHECK(ITDACTR_lastid))+GKAACTR_startkmp));
  /* line 4584: */
  /* line 4585: */
-(void)((*HTDACTR_rb) = (*(&((*HTDACTR_rb)->Rest))));
+(void)((*A_NILCHECK(HTDACTR_rb)) = (*A_NILCHECK((&(A_NILCHECK((*A_NILCHECK(HTDACTR_rb)))->Rest)))));
 } 
 else
 { 
  /* line 4586: */
  /* line 4587: */
-(void)(HTDACTR_rb = (&((*HTDACTR_rb)->Rest)));
+(void)(HTDACTR_rb = (&(A_NILCHECK((*A_NILCHECK(HTDACTR_rb)))->Rest)));
 } 
 }
  /* line 4588: */
@@ -22224,43 +22224,43 @@ else
  /* line 4590: */
 STDACTR.Type = XOAACTR_xvardec;
 STDACTR.Iddec = (&LTDACTR_n);
-(void)(A_CALLPROC(NL(Output),(A_UNITE(TTDACTR,mode12,12,STDACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(TTDACTR,mode12,12,STDACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(TTDACTR,mode12,12,STDACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(TTDACTR,mode12,12,STDACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 4591: */
  /* line 4592: */
-if ((*KTDACTR_mp)<0)
+if ((*A_NILCHECK(KTDACTR_mp))<0)
 { 
  /* line 4593: */
-UTDACTR = ((-(*ITDACTR_lastid))-GKAACTR_startkmp);
+UTDACTR = ((-(*A_NILCHECK(ITDACTR_lastid)))-GKAACTR_startkmp);
 } 
 else
 { 
  /* line 4594: */
-UTDACTR = ((*ITDACTR_lastid)+GKAACTR_startkmp);
+UTDACTR = ((*A_NILCHECK(ITDACTR_lastid))+GKAACTR_startkmp);
 } 
-(*KTDACTR_mp) = UTDACTR;
+(*A_NILCHECK(KTDACTR_mp)) = UTDACTR;
  /* line 4595: */
  /* line 4596: */
-(void)(FTDACTR_b = (*(&(FTDACTR_b->Rest))));
+(void)(FTDACTR_b = (*A_NILCHECK((&(A_NILCHECK(FTDACTR_b)->Rest)))));
 }
  /* line 4598: */
 for ( ;; )
 { 
  /* line 4599: */
 if ( !((ETDACTR_a!=PQAACTR_nilaml)) ) break;
-(void)(JTDACTR_am = (*(&(ETDACTR_a->Am))));
+(void)(JTDACTR_am = (*A_NILCHECK((&(A_NILCHECK(ETDACTR_a)->Am)))));
  /* line 4600: */
-(void)(ETDACTR_a = (*(&(ETDACTR_a->Rest))));
+(void)(ETDACTR_a = (*A_NILCHECK((&(A_NILCHECK(ETDACTR_a)->Rest)))));
  /* line 4601: */
-VTDACTR = (*(&(JTDACTR_am->Modeproc))) ;
+VTDACTR = (*A_NILCHECK((&(A_NILCHECK(JTDACTR_am)->Modeproc)))) ;
 (void)(MTDACTR_x = (A_ABS(VTDACTR)-GKAACTR_startkmp));
  /* line 4602: */
-(void)(A_CALLPROC(NL(Output),(A_UNITE(WTDACTR,mode3,3,MTDACTR_x), (*NL(FZAACTR_outlevel))),(A_UNITE(WTDACTR,mode3,3,MTDACTR_x), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(WTDACTR,mode3,3,MTDACTR_x), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(WTDACTR,mode3,3,MTDACTR_x), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 4603: */
-(void)(A_CALLPROC(NL(Output),(A_UNITE(XTDACTR,mode16,16,EPAACTR_xwass), (*NL(FZAACTR_outlevel))),(A_UNITE(XTDACTR,mode16,16,EPAACTR_xwass), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(XTDACTR,mode16,16,EPAACTR_xwass), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(XTDACTR,mode16,16,EPAACTR_xwass), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 4604: */
  /* line 4605: */
  /* line 4606: */
-if ((*(&(JTDACTR_am->Modeproc)))<0)
+if ((*A_NILCHECK((&(A_NILCHECK(JTDACTR_am)->Modeproc))))<0)
 { 
  /* line 4607: */
 YTDACTR = (-2);
@@ -22269,25 +22269,25 @@ else
 { 
 YTDACTR = 1;
 } 
-ZTDACTR = (&(JTDACTR_am->Modeproc)) ;
-(*ZTDACTR) = YTDACTR;
+ZTDACTR = (&(A_NILCHECK(JTDACTR_am)->Modeproc)) ;
+(*A_NILCHECK(ZTDACTR)) = YTDACTR;
  /* line 4608: */
-(void)(A_CALLPROC(NL(LODACTR_treatam),(JTDACTR_am, VNDACTR_genam, (*(&((*NL(QYAACTR_globcurrent))->Lastid)))),(JTDACTR_am, VNDACTR_genam, (*(&((*NL(QYAACTR_globcurrent))->Lastid))),(NL(LODACTR_treatam)).nonlocals)));
+(void)(A_CALLPROC(NL(LODACTR_treatam),(JTDACTR_am, VNDACTR_genam, (*A_NILCHECK((&(A_NILCHECK((*A_NILCHECK(NL(QYAACTR_globcurrent))))->Lastid))))),(JTDACTR_am, VNDACTR_genam, (*A_NILCHECK((&(A_NILCHECK((*A_NILCHECK(NL(QYAACTR_globcurrent))))->Lastid)))),(NL(LODACTR_treatam)).nonlocals)));
  /* line 4609: */
-AUDACTR = (&(JTDACTR_am->Modeproc)) ;
-(void)((*AUDACTR) = (MTDACTR_x+GKAACTR_startkmp));
+AUDACTR = (&(A_NILCHECK(JTDACTR_am)->Modeproc)) ;
+(void)((*A_NILCHECK(AUDACTR)) = (MTDACTR_x+GKAACTR_startkmp));
  /* line 4610: */
  /* line 4611: */
 BUDACTR.Fn = UMAACTR_xassign;
  /* line 4612: */
-BUDACTR.M = (A_CALLPROC(NL(ZICACTR_mproc),((*(&(JTDACTR_am->Mode)))),((*(&(JTDACTR_am->Mode))),(NL(ZICACTR_mproc)).nonlocals))+KQAACTR_refmark);
+BUDACTR.M = (A_CALLPROC(NL(ZICACTR_mproc),((*A_NILCHECK((&(A_NILCHECK(JTDACTR_am)->Mode))))),((*A_NILCHECK((&(A_NILCHECK(JTDACTR_am)->Mode)))),(NL(ZICACTR_mproc)).nonlocals))+KQAACTR_refmark);
 BUDACTR.Param = 1;
-(void)(A_CALLPROC(NL(Output),(A_UNITE(CUDACTR,mode14,14,BUDACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(CUDACTR,mode14,14,BUDACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(CUDACTR,mode14,14,BUDACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(CUDACTR,mode14,14,BUDACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 4613: */
-(void)(A_CALLPROC(NL(Output),(A_UNITE(DUDACTR,mode14,14,IRAACTR_opervoid), (*NL(FZAACTR_outlevel))),(A_UNITE(DUDACTR,mode14,14,IRAACTR_opervoid), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(DUDACTR,mode14,14,IRAACTR_opervoid), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(DUDACTR,mode14,14,IRAACTR_opervoid), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 4614: */
  /* line 4615: */
-(void)(A_CALLPROC(NL(Output),(A_UNITE(EUDACTR,mode17,17,KRAACTR_controlsemi), (*NL(FZAACTR_outlevel))),(A_UNITE(EUDACTR,mode17,17,KRAACTR_controlsemi), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(EUDACTR,mode17,17,KRAACTR_controlsemi), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(EUDACTR,mode17,17,KRAACTR_controlsemi), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
 }
  /* line 4616: */
 } 
@@ -22332,8 +22332,8 @@ LUDACTR_m = (I-J);
 MUDACTR_md = (A_CALLPROC(NL(JGCACTR_deflex),(I),(I,(NL(JGCACTR_deflex)).nonlocals))-J);
  /* line 4621: */
  /* line 4622: */
-OUDACTR = (&((&NUDACTR_asa)->Mode)) ;
-(*OUDACTR) = I;
+OUDACTR = (&(A_NILCHECK((&NUDACTR_asa))->Mode)) ;
+(*A_NILCHECK(OUDACTR)) = I;
  /* line 4623: */
 PUDACTR_ml = (A68_54 *)A68_NIL;
  /* line 4624: */
@@ -22350,7 +22350,7 @@ A_CLOSURE( AVDACTR_subd, BVDACTR_subd, CVDACTR_subd );
 (( CVDACTR_subd * ) ( AVDACTR_subd.nonlocals )) -> I = I;
  /* line 4652: */
  /* line 4653: */
-EVDACTR = (*NL(VYAACTR_lastmode));
+EVDACTR = (*A_NILCHECK(NL(VYAACTR_lastmode)));
 for ( DVDACTR_k = From;
 DVDACTR_k <= EVDACTR;
 DVDACTR_k += 1 )
@@ -22360,36 +22360,36 @@ if (DVDACTR_k==J)
 { 
  /* line 4655: */
 GVDACTR = (&A_VINDEX(NL(KUAACTR_modes),DVDACTR_k)) ;
-(void)((*GVDACTR) = A_UNITE(FVDACTR,mode11,11,NUDACTR_asa));
+(void)((*A_NILCHECK(GVDACTR)) = A_UNITE(FVDACTR,mode11,11,NUDACTR_asa));
 } 
 else
 { 
  /* line 4656: */
-HVDACTR = (*(&A_VINDEX(NL(KUAACTR_modes),DVDACTR_k))) ;
+HVDACTR = (*A_NILCHECK((&A_VINDEX(NL(KUAACTR_modes),DVDACTR_k)))) ;
 switch ( HVDACTR.mode )
 { 
 case 4: /* REF STRUCT(INT,INT,REF MODE58)  */
 IVDACTR_s = (HVDACTR.data.mode4);
  /* line 4657: */
 { 
-(void)(RUDACTR_sl = (*(&(IVDACTR_s->Sels))));
+(void)(RUDACTR_sl = (*A_NILCHECK((&(A_NILCHECK(IVDACTR_s)->Sels)))));
  /* line 4658: */
-(void)(A_CALLPROC(AVDACTR_subd,((&(IVDACTR_s->Deflex))),((&(IVDACTR_s->Deflex)),(AVDACTR_subd).nonlocals)));
+(void)(A_CALLPROC(AVDACTR_subd,((&(A_NILCHECK(IVDACTR_s)->Deflex))),((&(A_NILCHECK(IVDACTR_s)->Deflex)),(AVDACTR_subd).nonlocals)));
  /* line 4660: */
 for ( ;; )
 { 
  /* line 4661: */
 if ( !((RUDACTR_sl!=RQAACTR_nilsel)) ) break;
  /* line 4663: */
-if ((A68_BITS )((A68_BITS )(*(&(RUDACTR_sl->Mode)))&LQAACTR_decsmask)==(A68_BITS )J)
+if ((A68_BITS )((A68_BITS )(*A_NILCHECK((&(A_NILCHECK(RUDACTR_sl)->Mode))))&LQAACTR_decsmask)==(A68_BITS )J)
 { 
  /* line 4664: */
-JVDACTR = (&(RUDACTR_sl->Mode)) ;
-(*JVDACTR)+=LUDACTR_m;
+JVDACTR = (&(A_NILCHECK(RUDACTR_sl)->Mode)) ;
+(*A_NILCHECK(JVDACTR))+=LUDACTR_m;
 } 
  /* line 4665: */
  /* line 4666: */
-(void)(RUDACTR_sl = (*(&(RUDACTR_sl->Rest))));
+(void)(RUDACTR_sl = (*A_NILCHECK((&(A_NILCHECK(RUDACTR_sl)->Rest)))));
 }
  /* line 4667: */
  /* line 4668: */
@@ -22399,56 +22399,56 @@ case 7: /* REF STRUCT(INT,INT,INT)  */
 KVDACTR_v = (HVDACTR.data.mode7);
  /* line 4669: */
 { 
-(void)(A_CALLPROC(AVDACTR_subd,((&(KVDACTR_v->Deflex))),((&(KVDACTR_v->Deflex)),(AVDACTR_subd).nonlocals)));
+(void)(A_CALLPROC(AVDACTR_subd,((&(A_NILCHECK(KVDACTR_v)->Deflex))),((&(A_NILCHECK(KVDACTR_v)->Deflex)),(AVDACTR_subd).nonlocals)));
  /* line 4670: */
  /* line 4671: */
  /* line 4672: */
-(void)(QUDACTR_r = (&(KVDACTR_v->Vecmode)));
+(void)(QUDACTR_r = (&(A_NILCHECK(KVDACTR_v)->Vecmode)));
 } 
 break;
 case 5: /* REF STRUCT(INT,INT,INT,INT)  */
 LVDACTR_is = (HVDACTR.data.mode5);
  /* line 4673: */
 { 
-(void)(A_CALLPROC(AVDACTR_subd,((&(LVDACTR_is->Deflex))),((&(LVDACTR_is->Deflex)),(AVDACTR_subd).nonlocals)));
+(void)(A_CALLPROC(AVDACTR_subd,((&(A_NILCHECK(LVDACTR_is)->Deflex))),((&(A_NILCHECK(LVDACTR_is)->Deflex)),(AVDACTR_subd).nonlocals)));
  /* line 4674: */
  /* line 4675: */
  /* line 4676: */
-(void)(QUDACTR_r = (&(LVDACTR_is->Imode)));
+(void)(QUDACTR_r = (&(A_NILCHECK(LVDACTR_is)->Imode)));
 } 
 break;
 case 6: /* REF STRUCT(INT)  */
 MVDACTR_p = (HVDACTR.data.mode6);
  /* line 4677: */
  /* line 4678: */
-(void)(QUDACTR_r = (&(MVDACTR_p->Deproc)));
+(void)(QUDACTR_r = (&(A_NILCHECK(MVDACTR_p)->Deproc)));
 break;
 case 2: /* REF STRUCT(INT,REF MODE54)  */
 NVDACTR_u = (HVDACTR.data.mode2);
  /* line 4679: */
  /* line 4680: */
-(void)(PUDACTR_ml = (*(&(NVDACTR_u->Modelist))));
+(void)(PUDACTR_ml = (*A_NILCHECK((&(A_NILCHECK(NVDACTR_u)->Modelist)))));
 break;
 case 3: /* REF STRUCT(INT,REF MODE54)  */
 OVDACTR_pp = (HVDACTR.data.mode3);
  /* line 4681: */
 { 
-(void)(QUDACTR_r = (&(OVDACTR_pp->Deproc)));
+(void)(QUDACTR_r = (&(A_NILCHECK(OVDACTR_pp)->Deproc)));
  /* line 4682: */
  /* line 4683: */
  /* line 4684: */
-(void)(PUDACTR_ml = (*(&(OVDACTR_pp->Pars))));
+(void)(PUDACTR_ml = (*A_NILCHECK((&(A_NILCHECK(OVDACTR_pp)->Pars)))));
 } 
 break;
 case 8: /* REF STRUCT(INT,INT,INT,INT)  */
 PVDACTR_a = (HVDACTR.data.mode8);
  /* line 4685: */
 { 
-(void)(A_CALLPROC(AVDACTR_subd,((&(PVDACTR_a->Deflex))),((&(PVDACTR_a->Deflex)),(AVDACTR_subd).nonlocals)));
+(void)(A_CALLPROC(AVDACTR_subd,((&(A_NILCHECK(PVDACTR_a)->Deflex))),((&(A_NILCHECK(PVDACTR_a)->Deflex)),(AVDACTR_subd).nonlocals)));
  /* line 4686: */
  /* line 4687: */
  /* line 4688: */
-(void)(QUDACTR_r = (&(PVDACTR_a->Mode)));
+(void)(QUDACTR_r = (&(A_NILCHECK(PVDACTR_a)->Mode)));
 } 
 break;
 case 9: /* REF STRUCT(INT,REF MODE63)  */
@@ -22456,7 +22456,7 @@ QVDACTR_stn = (HVDACTR.data.mode9);
  /* line 4689: */
  /* line 4690: */
  /* line 4691: */
-(void)(QUDACTR_r = (&(QVDACTR_stn->Mode)));
+(void)(QUDACTR_r = (&(A_NILCHECK(QVDACTR_stn)->Mode)));
 break;
 default: 
 /*SKIP*/;
@@ -22467,11 +22467,11 @@ break;
 RVDACTR = (QUDACTR_r!=ZQAACTR_nilint);
 if ( RVDACTR )
 { /* line 4695: */
-RVDACTR = ((A68_BITS )((A68_BITS )(*QUDACTR_r)&LQAACTR_decsmask)==(A68_BITS )J);
+RVDACTR = ((A68_BITS )((A68_BITS )(*A_NILCHECK(QUDACTR_r))&LQAACTR_decsmask)==(A68_BITS )J);
 }
 if (RVDACTR)
 { 
-(*QUDACTR_r)+=LUDACTR_m;
+(*A_NILCHECK(QUDACTR_r))+=LUDACTR_m;
  /* line 4696: */
  /* line 4697: */
 QUDACTR_r = (A68_INT *)A68_NIL;
@@ -22482,11 +22482,11 @@ for ( ;; )
  /* line 4700: */
 if ( !((PUDACTR_ml!=OQAACTR_nilml)) ) break;
  /* line 4701: */
-if ((A68_BITS )((A68_BITS )(*(&(PUDACTR_ml->Mode)))&LQAACTR_decsmask)==(A68_BITS )J)
+if ((A68_BITS )((A68_BITS )(*A_NILCHECK((&(A_NILCHECK(PUDACTR_ml)->Mode))))&LQAACTR_decsmask)==(A68_BITS )J)
 { 
  /* line 4702: */
  /* line 4703: */
-if ((*(&(PUDACTR_ml->Mode)))<KQAACTR_refmark)
+if ((*A_NILCHECK((&(A_NILCHECK(PUDACTR_ml)->Mode))))<KQAACTR_refmark)
 { 
  /* line 4704: */
 SVDACTR = MUDACTR_md;
@@ -22496,12 +22496,12 @@ else
  /* line 4705: */
 SVDACTR = LUDACTR_m;
 } 
-TVDACTR = (&(PUDACTR_ml->Mode)) ;
-(*TVDACTR)+=SVDACTR;
+TVDACTR = (&(A_NILCHECK(PUDACTR_ml)->Mode)) ;
+(*A_NILCHECK(TVDACTR))+=SVDACTR;
 } 
  /* line 4706: */
  /* line 4707: */
-(void)(PUDACTR_ml = (*(&(PUDACTR_ml->Rest))));
+(void)(PUDACTR_ml = (*A_NILCHECK((&(A_NILCHECK(PUDACTR_ml)->Rest)))));
 }
  /* line 4708: */
  /* line 4709: */
@@ -22509,7 +22509,7 @@ TVDACTR = (&(PUDACTR_ml->Mode)) ;
 }
  /* line 4710: */
  /* line 4711: */
-(void)(A_CALLPROC(TUDACTR_subam,((*NL(TYAACTR_untreated))),((*NL(TYAACTR_untreated)),(TUDACTR_subam).nonlocals)));
+(void)(A_CALLPROC(TUDACTR_subam,((*A_NILCHECK(NL(TYAACTR_untreated)))),((*A_NILCHECK(NL(TYAACTR_untreated))),(TUDACTR_subam).nonlocals)));
 } 
 A_PROC_EXIT(substitute);
 return;
@@ -22533,21 +22533,21 @@ for ( ;; )
  /* line 4719: */
 if ( !((YVDACTR_a!=PQAACTR_nilaml)) ) break;
  /* line 4720: */
-if (!A_CALLPROC(NL(PLDACTR_mcond),((*(&((*(&(YVDACTR_a->Am)))->Mode))), (A68_54 *)A68_NIL, 0),((*(&((*(&(YVDACTR_a->Am)))->Mode))), (A68_54 *)A68_NIL, 0,(NL(PLDACTR_mcond)).nonlocals)))
+if (!A_CALLPROC(NL(PLDACTR_mcond),((*A_NILCHECK((&(A_NILCHECK((*A_NILCHECK((&(A_NILCHECK(YVDACTR_a)->Am)))))->Mode)))), (A68_54 *)A68_NIL, 0),((*A_NILCHECK((&(A_NILCHECK((*A_NILCHECK((&(A_NILCHECK(YVDACTR_a)->Am)))))->Mode)))), (A68_54 *)A68_NIL, 0,(NL(PLDACTR_mcond)).nonlocals)))
 { 
-(void)(A_CALLPROC(NL(PZBACTR_faultp),(121, (*(&((*(&(YVDACTR_a->Am)))->Mode))), 0, (A68_31 *)A68_NIL),(121, (*(&((*(&(YVDACTR_a->Am)))->Mode))), 0, (A68_31 *)A68_NIL,(NL(PZBACTR_faultp)).nonlocals)));
+(void)(A_CALLPROC(NL(PZBACTR_faultp),(121, (*A_NILCHECK((&(A_NILCHECK((*A_NILCHECK((&(A_NILCHECK(YVDACTR_a)->Am)))))->Mode)))), 0, (A68_31 *)A68_NIL),(121, (*A_NILCHECK((&(A_NILCHECK((*A_NILCHECK((&(A_NILCHECK(YVDACTR_a)->Am)))))->Mode)))), 0, (A68_31 *)A68_NIL,(NL(PZBACTR_faultp)).nonlocals)));
  /* line 4722: */
  /* line 4723: */
  /* line 4724: */
  /* line 4725: */
-(void)(A_CALLPROC(NL(IUDACTR_substitute),(ZKAACTR_faultmode, (A68_INT )(A68_BITS )((A68_BITS )(*(&((*(&(YVDACTR_a->Am)))->Mode)))&LQAACTR_decsmask), NL(YYAACTR_newmode1)),(ZKAACTR_faultmode, (A68_INT )(A68_BITS )((A68_BITS )(*(&((*(&(YVDACTR_a->Am)))->Mode)))&LQAACTR_decsmask), NL(YYAACTR_newmode1),(NL(IUDACTR_substitute)).nonlocals)));
+(void)(A_CALLPROC(NL(IUDACTR_substitute),(ZKAACTR_faultmode, (A68_INT )(A68_BITS )((A68_BITS )(*A_NILCHECK((&(A_NILCHECK((*A_NILCHECK((&(A_NILCHECK(YVDACTR_a)->Am)))))->Mode))))&LQAACTR_decsmask), NL(YYAACTR_newmode1)),(ZKAACTR_faultmode, (A68_INT )(A68_BITS )((A68_BITS )(*A_NILCHECK((&(A_NILCHECK((*A_NILCHECK((&(A_NILCHECK(YVDACTR_a)->Am)))))->Mode))))&LQAACTR_decsmask), NL(YYAACTR_newmode1),(NL(IUDACTR_substitute)).nonlocals)));
  /* line 4726: */
  /* line 4727: */
-(*NL(TYAACTR_untreated)) = (A68_53 *)A68_NIL;
+(*A_NILCHECK(NL(TYAACTR_untreated))) = (A68_53 *)A68_NIL;
 } 
  /* line 4728: */
  /* line 4729: */
-(void)(YVDACTR_a = (*(&(YVDACTR_a->Rest))));
+(void)(YVDACTR_a = (*A_NILCHECK((&(A_NILCHECK(YVDACTR_a)->Rest)))));
 }
  /* line 4730: */
 } 
@@ -22572,30 +22572,30 @@ for ( ;; )
 { 
  /* line 4738: */
 if ( !((DWDACTR_m1!=OQAACTR_nilml)) ) break;
-(void)(CWDACTR_mode = (*(&(DWDACTR_m1->Mode))));
+(void)(CWDACTR_mode = (*A_NILCHECK((&(A_NILCHECK(DWDACTR_m1)->Mode)))));
  /* line 4739: */
-(void)(EWDACTR_m2 = (&(DWDACTR_m1->Rest)));
+(void)(EWDACTR_m2 = (&(A_NILCHECK(DWDACTR_m1)->Rest)));
  /* line 4740: */
 for ( ;; )
 { 
  /* line 4741: */
-if ( !(((*EWDACTR_m2)!=OQAACTR_nilml)) ) break;
+if ( !(((*A_NILCHECK(EWDACTR_m2))!=OQAACTR_nilml)) ) break;
  /* line 4742: */
-if ((*(&((*EWDACTR_m2)->Mode)))==CWDACTR_mode)
+if ((*A_NILCHECK((&(A_NILCHECK((*A_NILCHECK(EWDACTR_m2)))->Mode))))==CWDACTR_mode)
 { 
  /* line 4743: */
-(void)((*EWDACTR_m2) = (*(&((*EWDACTR_m2)->Rest))));
+(void)((*A_NILCHECK(EWDACTR_m2)) = (*A_NILCHECK((&(A_NILCHECK((*A_NILCHECK(EWDACTR_m2)))->Rest)))));
 } 
 else
 { 
  /* line 4744: */
  /* line 4745: */
-(void)(EWDACTR_m2 = (&((*EWDACTR_m2)->Rest)));
+(void)(EWDACTR_m2 = (&(A_NILCHECK((*A_NILCHECK(EWDACTR_m2)))->Rest)));
 } 
 }
  /* line 4746: */
  /* line 4747: */
-(void)(DWDACTR_m1 = (*(&(DWDACTR_m1->Rest))));
+(void)(DWDACTR_m1 = (*A_NILCHECK((&(A_NILCHECK(DWDACTR_m1)->Rest)))));
 }
  /* line 4748: */
 } 
@@ -22630,18 +22630,18 @@ A_PROC_ENTRY(flattenunion);
  /* line 4752: */
 { 
  /* line 4753: */
-OWDACTR_rm = (&(U->Modelist));
+OWDACTR_rm = (&(A_NILCHECK(U)->Modelist));
  /* line 4754: */
 for ( ;; )
 { 
  /* line 4755: */
-if ( !(((*OWDACTR_rm)!=OQAACTR_nilml)) ) break;
+if ( !(((*A_NILCHECK(OWDACTR_rm))!=OQAACTR_nilml)) ) break;
  /* line 4756: */
-if ((*(&((*OWDACTR_rm)->Mode)))<KQAACTR_refmark)
+if ((*A_NILCHECK((&(A_NILCHECK((*A_NILCHECK(OWDACTR_rm)))->Mode))))<KQAACTR_refmark)
 { 
  /* line 4757: */
-PWDACTR = (*(&((*OWDACTR_rm)->Mode))) ;
-QWDACTR = (*(&A_VINDEX(NL(KUAACTR_modes),PWDACTR))) ;
+PWDACTR = (*A_NILCHECK((&(A_NILCHECK((*A_NILCHECK(OWDACTR_rm)))->Mode)))) ;
+QWDACTR = (*A_NILCHECK((&A_VINDEX(NL(KUAACTR_modes),PWDACTR)))) ;
 switch ( QWDACTR.mode )
 { 
 case 2: /* REF STRUCT(INT,REF MODE54)  */
@@ -22657,9 +22657,9 @@ for (;UWDACTR-- >= 0;
 SWDACTR_di = *TWDACTR;
  /* line 4759: */
  /* line 4760: */
-if (SWDACTR_di==(*(&((*OWDACTR_rm)->Mode))))
+if (SWDACTR_di==(*A_NILCHECK((&(A_NILCHECK((*A_NILCHECK(OWDACTR_rm)))->Mode)))))
 { 
-(void)(A_CALLPROC(NL(PZBACTR_faultp),(121, (*(&((*OWDACTR_rm)->Mode))), 0, (A68_31 *)A68_NIL),(121, (*(&((*OWDACTR_rm)->Mode))), 0, (A68_31 *)A68_NIL,(NL(PZBACTR_faultp)).nonlocals)));
+(void)(A_CALLPROC(NL(PZBACTR_faultp),(121, (*A_NILCHECK((&(A_NILCHECK((*A_NILCHECK(OWDACTR_rm)))->Mode)))), 0, (A68_31 *)A68_NIL),(121, (*A_NILCHECK((&(A_NILCHECK((*A_NILCHECK(OWDACTR_rm)))->Mode)))), 0, (A68_31 *)A68_NIL,(NL(PZBACTR_faultp)).nonlocals)));
  /* line 4761: */
  /* line 4762: */
  /* line 4763: */
@@ -22676,38 +22676,38 @@ EXDACTR = A_VTRIM(DXDACTR,(BXDACTR_new),A_VTSCRIPT(&(DXDACTR.upb),(BXDACTR_new).
 (void)(A_VASSIGN2(Done,EXDACTR,A68_INT ));
 FXDACTR = BXDACTR_new.upb ;
 GXDACTR = (&A_VINDEX(BXDACTR_new,FXDACTR)) ;
-(void)((*GXDACTR) = (*(&((*OWDACTR_rm)->Mode))));
+(void)((*A_NILCHECK(GXDACTR)) = (*A_NILCHECK((&(A_NILCHECK((*A_NILCHECK(OWDACTR_rm)))->Mode)))));
  /* line 4766: */
 (void)(MWDACTR_n = A_CALLPROC(NL(HWDACTR_flattenunion),(RWDACTR_uu, BXDACTR_new),(RWDACTR_uu, BXDACTR_new,(NL(HWDACTR_flattenunion)).nonlocals)));
  /* line 4767: */
-(void)(NWDACTR_p = (*(&((*OWDACTR_rm)->Rest))));
+(void)(NWDACTR_p = (*A_NILCHECK((&(A_NILCHECK((*A_NILCHECK(OWDACTR_rm)))->Rest)))));
  /* line 4768: */
 for ( ;; )
 { 
  /* line 4769: */
 if ( !((MWDACTR_n!=OQAACTR_nilml)) ) break;
  /* line 4770: */
-HXDACTR.Mode = (*(&(MWDACTR_n->Mode)));
+HXDACTR.Mode = (*A_NILCHECK((&(A_NILCHECK(MWDACTR_n)->Mode))));
 HXDACTR.Rest = (A68_54 *)A68_NIL;
 IXDACTR = A_HEAP(A68_54 ) ;
-(void)((*IXDACTR) = HXDACTR) ;
-(*OWDACTR_rm) = IXDACTR;
+(void)((*A_NILCHECK(IXDACTR)) = HXDACTR) ;
+(*A_NILCHECK(OWDACTR_rm)) = IXDACTR;
  /* line 4771: */
-(void)(OWDACTR_rm = (&((*OWDACTR_rm)->Rest)));
+(void)(OWDACTR_rm = (&(A_NILCHECK((*A_NILCHECK(OWDACTR_rm)))->Rest)));
  /* line 4772: */
  /* line 4773: */
-(void)(MWDACTR_n = (*(&(MWDACTR_n->Rest))));
+(void)(MWDACTR_n = (*A_NILCHECK((&(A_NILCHECK(MWDACTR_n)->Rest)))));
 }
  /* line 4774: */
  /* line 4775: */
  /* line 4776: */
-(*OWDACTR_rm) = NWDACTR_p;
+(*A_NILCHECK(OWDACTR_rm)) = NWDACTR_p;
 } 
 break;
 default: 
  /* line 4777: */
  /* line 4778: */
-(void)(OWDACTR_rm = (&((*OWDACTR_rm)->Rest)));
+(void)(OWDACTR_rm = (&(A_NILCHECK((*A_NILCHECK(OWDACTR_rm)))->Rest)));
 break;
 } 
 } 
@@ -22715,13 +22715,13 @@ else
 { 
  /* line 4779: */
  /* line 4780: */
-(void)(OWDACTR_rm = (&((*OWDACTR_rm)->Rest)));
+(void)(OWDACTR_rm = (&(A_NILCHECK((*A_NILCHECK(OWDACTR_rm)))->Rest)));
 } 
 }
  /* line 4781: */
 LWDACTR_end: A_UNUSED;
  /* line 4782: */
-JXDACTR = (*(&(U->Modelist)));
+JXDACTR = (*A_NILCHECK((&(A_NILCHECK(U)->Modelist))));
 } 
 A_PROC_EXIT(flattenunion);
 return( JXDACTR );
@@ -22864,9 +22864,9 @@ GYDACTR_i <= HYDACTR;
 GYDACTR_i += 1 )
 { 
 IYDACTR = (&A_R1INDEX(WXDACTR_ind,GYDACTR_i)) ;
-(*IYDACTR) = GYDACTR_i;
+(*A_NILCHECK(IYDACTR)) = GYDACTR_i;
 JYDACTR = (&A_R1INDEX(EYDACTR_classno,GYDACTR_i)) ;
-(*JYDACTR) = 1;
+(*A_NILCHECK(JYDACTR)) = 1;
 }
  /* line 4792: */
 A_CLOSURE( LYDACTR_generator, MYDACTR_generator, NYDACTR_generator );
@@ -22889,7 +22889,7 @@ QZDACTR.I = PXDACTR_l;
 QZDACTR.J = OXDACTR_u;
 RZDACTR = 1 ;
 SZDACTR = (&A_VINDEX(QYDACTR_classes,RZDACTR)) ;
-(*SZDACTR) = QZDACTR;
+(*A_NILCHECK(SZDACTR)) = QZDACTR;
  /* line 4812: */
 TZDACTR_change = A68_TRUE;
  /* line 4813: */
@@ -22908,79 +22908,79 @@ if ( !((NZDACTR_x<=MZDACTR_nc)) ) break;
 UZDACTR_cx = (&A_VINDEX(QYDACTR_classes,NZDACTR_x));
  /* line 4818: */
  /* line 4819: */
-if ((*(&(UZDACTR_cx->I)))<(*(&(UZDACTR_cx->J))))
+if ((*A_NILCHECK((&(A_NILCHECK(UZDACTR_cx)->I))))<(*A_NILCHECK((&(A_NILCHECK(UZDACTR_cx)->J)))))
 { 
-VZDACTR = (*(&(UZDACTR_cx->I))) ;
-WZDACTR = (*(&A_R1INDEX(WXDACTR_ind,VZDACTR))) ;
+VZDACTR = (*A_NILCHECK((&(A_NILCHECK(UZDACTR_cx)->I)))) ;
+WZDACTR = (*A_NILCHECK((&A_R1INDEX(WXDACTR_ind,VZDACTR)))) ;
 XZDACTR_mx = (&A_R1INDEX(Mds,WZDACTR));
  /* line 4820: */
  /* line 4821: */
-YZDACTR = (*XZDACTR_mx) ;
+YZDACTR = (*A_NILCHECK(XZDACTR_mx)) ;
 switch ( YZDACTR.mode )
 { 
 case 11: /* STRUCT(INT)  */
  /* line 4822: */
  /* line 4823: */
-ZZDACTR = (&(UZDACTR_cx->I)) ;
-(*ZZDACTR)+=1;
+ZZDACTR = (&(A_NILCHECK(UZDACTR_cx)->I)) ;
+(*A_NILCHECK(ZZDACTR))+=1;
 break;
 default: 
 PZDACTR_alter = (A68_70 *)A68_NIL;
  /* line 4824: */
-(void)(OZDACTR_y = ((*(&(UZDACTR_cx->I)))+1));
+(void)(OZDACTR_y = ((*A_NILCHECK((&(A_NILCHECK(UZDACTR_cx)->I))))+1));
  /* line 4825: */
 for ( ;; )
 { 
  /* line 4826: */
-if ( !((OZDACTR_y<=(*(&(UZDACTR_cx->J))))) ) break;
-AAEACTR = (*(&A_R1INDEX(WXDACTR_ind,OZDACTR_y))) ;
+if ( !((OZDACTR_y<=(*A_NILCHECK((&(A_NILCHECK(UZDACTR_cx)->J)))))) ) break;
+AAEACTR = (*A_NILCHECK((&A_R1INDEX(WXDACTR_ind,OZDACTR_y)))) ;
 BAEACTR_my = (&A_R1INDEX(Mds,AAEACTR));
  /* line 4827: */
  /* line 4828: */
-CAEACTR = (*BAEACTR_my) ;
+CAEACTR = (*A_NILCHECK(BAEACTR_my)) ;
 switch ( CAEACTR.mode )
 { 
 case 11: /* STRUCT(INT)  */
 { 
 TZDACTR_change = A68_TRUE;
  /* line 4829: */
-DAEACTR = (*(&(UZDACTR_cx->J))) ;
-EAEACTR_z = (*(&A_R1INDEX(WXDACTR_ind,DAEACTR)));
+DAEACTR = (*A_NILCHECK((&(A_NILCHECK(UZDACTR_cx)->J)))) ;
+EAEACTR_z = (*A_NILCHECK((&A_R1INDEX(WXDACTR_ind,DAEACTR))));
  /* line 4830: */
-FAEACTR = (*(&(UZDACTR_cx->J))) ;
+FAEACTR = (*A_NILCHECK((&(A_NILCHECK(UZDACTR_cx)->J)))) ;
 GAEACTR = (&A_R1INDEX(WXDACTR_ind,FAEACTR)) ;
-(void)((*GAEACTR) = (*(&A_R1INDEX(WXDACTR_ind,OZDACTR_y))));
+(void)((*A_NILCHECK(GAEACTR)) = (*A_NILCHECK((&A_R1INDEX(WXDACTR_ind,OZDACTR_y)))));
  /* line 4831: */
 HAEACTR = (&A_R1INDEX(WXDACTR_ind,OZDACTR_y)) ;
-(*HAEACTR) = EAEACTR_z;
+(*A_NILCHECK(HAEACTR)) = EAEACTR_z;
  /* line 4832: */
  /* line 4833: */
  /* line 4834: */
-IAEACTR = (&(UZDACTR_cx->J)) ;
-(*IAEACTR)-=1;
+IAEACTR = (&(A_NILCHECK(UZDACTR_cx)->J)) ;
+(*A_NILCHECK(IAEACTR))-=1;
 } 
 break;
 default: 
  /* line 4835: */
 JAEACTR.source = XZDACTR_mx ;
 KAEACTR.source = BAEACTR_my ;
-LAEACTR = ((*(JAEACTR.destination))==(*(KAEACTR.destination)));
+LAEACTR = ((*A_NILCHECK((JAEACTR.destination)))==(*A_NILCHECK((KAEACTR.destination))));
 if ( LAEACTR )
 { /* line 4836: */
-MAEACTR = (*XZDACTR_mx) ;
+MAEACTR = (*A_NILCHECK(XZDACTR_mx)) ;
 switch ( MAEACTR.mode )
 { 
 case 6: /* REF STRUCT(INT)  */
 NAEACTR_px = (MAEACTR.data.mode6);
  /* line 4837: */
  /* line 4838: */
-OAEACTR = (*BAEACTR_my) ;
+OAEACTR = (*A_NILCHECK(BAEACTR_my)) ;
 switch ( OAEACTR.mode )
 { 
 case 6: /* REF STRUCT(INT)  */
 PAEACTR_py = (OAEACTR.data.mode6);
  /* line 4839: */
-QAEACTR = A_CALLPROC(UYDACTR_f,((*(&(NAEACTR_px->Deproc))), (*(&(PAEACTR_py->Deproc)))),((*(&(NAEACTR_px->Deproc))), (*(&(PAEACTR_py->Deproc))),(UYDACTR_f).nonlocals));
+QAEACTR = A_CALLPROC(UYDACTR_f,((*A_NILCHECK((&(A_NILCHECK(NAEACTR_px)->Deproc)))), (*A_NILCHECK((&(A_NILCHECK(PAEACTR_py)->Deproc))))),((*A_NILCHECK((&(A_NILCHECK(NAEACTR_px)->Deproc)))), (*A_NILCHECK((&(A_NILCHECK(PAEACTR_py)->Deproc)))),(UYDACTR_f).nonlocals));
 break;
 default: 
  /* line 4840: */
@@ -22993,16 +22993,16 @@ case 3: /* REF STRUCT(INT,REF MODE54)  */
 RAEACTR_px = (MAEACTR.data.mode3);
  /* line 4842: */
  /* line 4843: */
-SAEACTR = (*BAEACTR_my) ;
+SAEACTR = (*A_NILCHECK(BAEACTR_my)) ;
 switch ( SAEACTR.mode )
 { 
 case 3: /* REF STRUCT(INT,REF MODE54)  */
 TAEACTR_py = (SAEACTR.data.mode3);
  /* line 4844: */
-UAEACTR = A_CALLPROC(UYDACTR_f,((*(&(RAEACTR_px->Deproc))), (*(&(TAEACTR_py->Deproc)))),((*(&(RAEACTR_px->Deproc))), (*(&(TAEACTR_py->Deproc))),(UYDACTR_f).nonlocals));
+UAEACTR = A_CALLPROC(UYDACTR_f,((*A_NILCHECK((&(A_NILCHECK(RAEACTR_px)->Deproc)))), (*A_NILCHECK((&(A_NILCHECK(TAEACTR_py)->Deproc))))),((*A_NILCHECK((&(A_NILCHECK(RAEACTR_px)->Deproc)))), (*A_NILCHECK((&(A_NILCHECK(TAEACTR_py)->Deproc)))),(UYDACTR_f).nonlocals));
 if ( UAEACTR )
 { /* line 4845: */
-UAEACTR = A_CALLPROC(EZDACTR_flist,((*(&(RAEACTR_px->Pars))), (*(&(TAEACTR_py->Pars)))),((*(&(RAEACTR_px->Pars))), (*(&(TAEACTR_py->Pars))),(EZDACTR_flist).nonlocals));
+UAEACTR = A_CALLPROC(EZDACTR_flist,((*A_NILCHECK((&(A_NILCHECK(RAEACTR_px)->Pars)))), (*A_NILCHECK((&(A_NILCHECK(TAEACTR_py)->Pars))))),((*A_NILCHECK((&(A_NILCHECK(RAEACTR_px)->Pars)))), (*A_NILCHECK((&(A_NILCHECK(TAEACTR_py)->Pars)))),(EZDACTR_flist).nonlocals));
 }
 QAEACTR = UAEACTR;
 break;
@@ -23017,7 +23017,7 @@ case 4: /* REF STRUCT(INT,INT,REF MODE58)  */
 VAEACTR_sx = (MAEACTR.data.mode4);
  /* line 4848: */
  /* line 4849: */
-WAEACTR = (*BAEACTR_my) ;
+WAEACTR = (*A_NILCHECK(BAEACTR_my)) ;
 switch ( WAEACTR.mode )
 { 
 case 4: /* REF STRUCT(INT,INT,REF MODE58)  */
@@ -23026,41 +23026,41 @@ XAEACTR_sy = (WAEACTR.data.mode4);
  /* line 4851: */
 { 
 YAEACTR = A_HEAP(A68_58 *) ;
-(void)((*YAEACTR) = (*(&(VAEACTR_sx->Sels)))) ;
+(void)((*A_NILCHECK(YAEACTR)) = (*A_NILCHECK((&(A_NILCHECK(VAEACTR_sx)->Sels))))) ;
 ZAEACTR_slx = YAEACTR;
  /* line 4852: */
 ABEACTR = A_HEAP(A68_58 *) ;
-(void)((*ABEACTR) = (*(&(XAEACTR_sy->Sels)))) ;
+(void)((*A_NILCHECK(ABEACTR)) = (*A_NILCHECK((&(A_NILCHECK(XAEACTR_sy)->Sels))))) ;
 BBEACTR_sly = ABEACTR;
  /* line 4853: */
 for ( ;; )
 { 
  /* line 4854: */
-CBEACTR = ((*ZAEACTR_slx)!=RQAACTR_nilsel);
+CBEACTR = ((*A_NILCHECK(ZAEACTR_slx))!=RQAACTR_nilsel);
 if ( CBEACTR )
-{CBEACTR = ((*BBEACTR_sly)!=RQAACTR_nilsel);
+{CBEACTR = ((*A_NILCHECK(BBEACTR_sly))!=RQAACTR_nilsel);
 }
  /* line 4855: */
 if ( CBEACTR )
-{EBEACTR = (*(&((*ZAEACTR_slx)->Name))) ;
-GBEACTR = (*(&((*BBEACTR_sly)->Name))) ;
+{EBEACTR = (*A_NILCHECK((&(A_NILCHECK((*A_NILCHECK(ZAEACTR_slx)))->Name)))) ;
+GBEACTR = (*A_NILCHECK((&(A_NILCHECK((*A_NILCHECK(BBEACTR_sly)))->Name)))) ;
 CBEACTR = A_VC_EQ(A_HISVEC(DBEACTR,EBEACTR,32,A68_CHAR ),A_HISVEC(FBEACTR,GBEACTR,32,A68_CHAR ));
 }
  /* line 4856: */
 if ( CBEACTR )
 { /* line 4857: */
-CBEACTR = A_CALLPROC(UYDACTR_f,((*(&((*ZAEACTR_slx)->Mode))), (*(&((*BBEACTR_sly)->Mode)))),((*(&((*ZAEACTR_slx)->Mode))), (*(&((*BBEACTR_sly)->Mode))),(UYDACTR_f).nonlocals));
+CBEACTR = A_CALLPROC(UYDACTR_f,((*A_NILCHECK((&(A_NILCHECK((*A_NILCHECK(ZAEACTR_slx)))->Mode)))), (*A_NILCHECK((&(A_NILCHECK((*A_NILCHECK(BBEACTR_sly)))->Mode))))),((*A_NILCHECK((&(A_NILCHECK((*A_NILCHECK(ZAEACTR_slx)))->Mode)))), (*A_NILCHECK((&(A_NILCHECK((*A_NILCHECK(BBEACTR_sly)))->Mode)))),(UYDACTR_f).nonlocals));
 }
 if ( !(CBEACTR) ) break;
-(void)((*ZAEACTR_slx) = (*(&((*ZAEACTR_slx)->Rest))));
+(void)((*A_NILCHECK(ZAEACTR_slx)) = (*A_NILCHECK((&(A_NILCHECK((*A_NILCHECK(ZAEACTR_slx)))->Rest)))));
  /* line 4858: */
-(void)((*BBEACTR_sly) = (*(&((*BBEACTR_sly)->Rest))));
+(void)((*A_NILCHECK(BBEACTR_sly)) = (*A_NILCHECK((&(A_NILCHECK((*A_NILCHECK(BBEACTR_sly)))->Rest)))));
 }
  /* line 4859: */
-HBEACTR = ((*ZAEACTR_slx)==RQAACTR_nilsel);
+HBEACTR = ((*A_NILCHECK(ZAEACTR_slx))==RQAACTR_nilsel);
 if ( HBEACTR )
 { /* line 4860: */
-HBEACTR = ((*BBEACTR_sly)==RQAACTR_nilsel);
+HBEACTR = ((*A_NILCHECK(BBEACTR_sly))==RQAACTR_nilsel);
 }
  /* line 4861: */
 QAEACTR = HBEACTR;
@@ -23077,13 +23077,13 @@ case 2: /* REF STRUCT(INT,REF MODE54)  */
 IBEACTR_ux = (MAEACTR.data.mode2);
  /* line 4864: */
  /* line 4865: */
-JBEACTR = (*BAEACTR_my) ;
+JBEACTR = (*A_NILCHECK(BAEACTR_my)) ;
 switch ( JBEACTR.mode )
 { 
 case 2: /* REF STRUCT(INT,REF MODE54)  */
 KBEACTR_uy = (JBEACTR.data.mode2);
  /* line 4866: */
-QAEACTR = A_CALLPROC(EZDACTR_flist,((*(&(IBEACTR_ux->Modelist))), (*(&(KBEACTR_uy->Modelist)))),((*(&(IBEACTR_ux->Modelist))), (*(&(KBEACTR_uy->Modelist))),(EZDACTR_flist).nonlocals));
+QAEACTR = A_CALLPROC(EZDACTR_flist,((*A_NILCHECK((&(A_NILCHECK(IBEACTR_ux)->Modelist)))), (*A_NILCHECK((&(A_NILCHECK(KBEACTR_uy)->Modelist))))),((*A_NILCHECK((&(A_NILCHECK(IBEACTR_ux)->Modelist)))), (*A_NILCHECK((&(A_NILCHECK(KBEACTR_uy)->Modelist)))),(EZDACTR_flist).nonlocals));
 break;
 default: 
  /* line 4867: */
@@ -23096,16 +23096,16 @@ case 8: /* REF STRUCT(INT,INT,INT,INT)  */
 LBEACTR_ax = (MAEACTR.data.mode8);
  /* line 4869: */
  /* line 4870: */
-MBEACTR = (*BAEACTR_my) ;
+MBEACTR = (*A_NILCHECK(BAEACTR_my)) ;
 switch ( MBEACTR.mode )
 { 
 case 8: /* REF STRUCT(INT,INT,INT,INT)  */
 NBEACTR_ay = (MBEACTR.data.mode8);
  /* line 4871: */
-OBEACTR = ((*(&(LBEACTR_ax->Nods)))==(*(&(NBEACTR_ay->Nods))));
+OBEACTR = ((*A_NILCHECK((&(A_NILCHECK(LBEACTR_ax)->Nods))))==(*A_NILCHECK((&(A_NILCHECK(NBEACTR_ay)->Nods)))));
 if ( OBEACTR )
 { /* line 4872: */
-OBEACTR = A_CALLPROC(UYDACTR_f,((*(&(LBEACTR_ax->Mode))), (*(&(NBEACTR_ay->Mode)))),((*(&(LBEACTR_ax->Mode))), (*(&(NBEACTR_ay->Mode))),(UYDACTR_f).nonlocals));
+OBEACTR = A_CALLPROC(UYDACTR_f,((*A_NILCHECK((&(A_NILCHECK(LBEACTR_ax)->Mode)))), (*A_NILCHECK((&(A_NILCHECK(NBEACTR_ay)->Mode))))),((*A_NILCHECK((&(A_NILCHECK(LBEACTR_ax)->Mode)))), (*A_NILCHECK((&(A_NILCHECK(NBEACTR_ay)->Mode)))),(UYDACTR_f).nonlocals));
 }
 QAEACTR = OBEACTR;
 break;
@@ -23120,16 +23120,16 @@ case 5: /* REF STRUCT(INT,INT,INT,INT)  */
 PBEACTR_ix = (MAEACTR.data.mode5);
  /* line 4875: */
  /* line 4876: */
-QBEACTR = (*BAEACTR_my) ;
+QBEACTR = (*A_NILCHECK(BAEACTR_my)) ;
 switch ( QBEACTR.mode )
 { 
 case 5: /* REF STRUCT(INT,INT,INT,INT)  */
 RBEACTR_iy = (QBEACTR.data.mode5);
  /* line 4877: */
-SBEACTR = ((*(&(PBEACTR_ix->Length)))==(*(&(RBEACTR_iy->Length))));
+SBEACTR = ((*A_NILCHECK((&(A_NILCHECK(PBEACTR_ix)->Length))))==(*A_NILCHECK((&(A_NILCHECK(RBEACTR_iy)->Length)))));
 if ( SBEACTR )
 { /* line 4878: */
-SBEACTR = A_CALLPROC(UYDACTR_f,((*(&(PBEACTR_ix->Imode))), (*(&(RBEACTR_iy->Imode)))),((*(&(PBEACTR_ix->Imode))), (*(&(RBEACTR_iy->Imode))),(UYDACTR_f).nonlocals));
+SBEACTR = A_CALLPROC(UYDACTR_f,((*A_NILCHECK((&(A_NILCHECK(PBEACTR_ix)->Imode)))), (*A_NILCHECK((&(A_NILCHECK(RBEACTR_iy)->Imode))))),((*A_NILCHECK((&(A_NILCHECK(PBEACTR_ix)->Imode)))), (*A_NILCHECK((&(A_NILCHECK(RBEACTR_iy)->Imode)))),(UYDACTR_f).nonlocals));
 }
 QAEACTR = SBEACTR;
 break;
@@ -23144,13 +23144,13 @@ case 9: /* REF STRUCT(INT,REF MODE63)  */
 TBEACTR_sx = (MAEACTR.data.mode9);
  /* line 4881: */
  /* line 4882: */
-UBEACTR = (*BAEACTR_my) ;
+UBEACTR = (*A_NILCHECK(BAEACTR_my)) ;
 switch ( UBEACTR.mode )
 { 
 case 9: /* REF STRUCT(INT,REF MODE63)  */
 VBEACTR_sy = (UBEACTR.data.mode9);
  /* line 4883: */
-QAEACTR = A_CALLPROC(UYDACTR_f,((*(&(TBEACTR_sx->Mode))), (*(&(VBEACTR_sy->Mode)))),((*(&(TBEACTR_sx->Mode))), (*(&(VBEACTR_sy->Mode))),(UYDACTR_f).nonlocals));
+QAEACTR = A_CALLPROC(UYDACTR_f,((*A_NILCHECK((&(A_NILCHECK(TBEACTR_sx)->Mode)))), (*A_NILCHECK((&(A_NILCHECK(VBEACTR_sy)->Mode))))),((*A_NILCHECK((&(A_NILCHECK(TBEACTR_sx)->Mode)))), (*A_NILCHECK((&(A_NILCHECK(VBEACTR_sy)->Mode)))),(UYDACTR_f).nonlocals));
 break;
 default: 
  /* line 4884: */
@@ -23163,13 +23163,13 @@ case 7: /* REF STRUCT(INT,INT,INT)  */
 WBEACTR_vx = (MAEACTR.data.mode7);
  /* line 4886: */
  /* line 4887: */
-XBEACTR = (*BAEACTR_my) ;
+XBEACTR = (*A_NILCHECK(BAEACTR_my)) ;
 switch ( XBEACTR.mode )
 { 
 case 7: /* REF STRUCT(INT,INT,INT)  */
 YBEACTR_vy = (XBEACTR.data.mode7);
  /* line 4888: */
-QAEACTR = A_CALLPROC(UYDACTR_f,((*(&(WBEACTR_vx->Vecmode))), (*(&(YBEACTR_vy->Vecmode)))),((*(&(WBEACTR_vx->Vecmode))), (*(&(YBEACTR_vy->Vecmode))),(UYDACTR_f).nonlocals));
+QAEACTR = A_CALLPROC(UYDACTR_f,((*A_NILCHECK((&(A_NILCHECK(WBEACTR_vx)->Vecmode)))), (*A_NILCHECK((&(A_NILCHECK(YBEACTR_vy)->Vecmode))))),((*A_NILCHECK((&(A_NILCHECK(WBEACTR_vx)->Vecmode)))), (*A_NILCHECK((&(A_NILCHECK(YBEACTR_vy)->Vecmode)))),(UYDACTR_f).nonlocals));
 break;
 default: 
  /* line 4889: */
@@ -23195,15 +23195,15 @@ else
 { 
 TZDACTR_change = A68_TRUE;
  /* line 4894: */
-ZBEACTR = (*(&(UZDACTR_cx->J))) ;
-ACEACTR_z = (*(&A_R1INDEX(WXDACTR_ind,ZBEACTR)));
+ZBEACTR = (*A_NILCHECK((&(A_NILCHECK(UZDACTR_cx)->J)))) ;
+ACEACTR_z = (*A_NILCHECK((&A_R1INDEX(WXDACTR_ind,ZBEACTR))));
  /* line 4895: */
-BCEACTR = (*(&(UZDACTR_cx->J))) ;
+BCEACTR = (*A_NILCHECK((&(A_NILCHECK(UZDACTR_cx)->J)))) ;
 CCEACTR = (&A_R1INDEX(WXDACTR_ind,BCEACTR)) ;
-(void)((*CCEACTR) = (*(&A_R1INDEX(WXDACTR_ind,OZDACTR_y))));
+(void)((*A_NILCHECK(CCEACTR)) = (*A_NILCHECK((&A_R1INDEX(WXDACTR_ind,OZDACTR_y)))));
  /* line 4896: */
 DCEACTR = (&A_R1INDEX(WXDACTR_ind,OZDACTR_y)) ;
-(*DCEACTR) = ACEACTR_z;
+(*A_NILCHECK(DCEACTR)) = ACEACTR_z;
  /* line 4897: */
  /* line 4898: */
 if (PZDACTR_alter==(A68_70 *)A68_NIL)
@@ -23211,23 +23211,23 @@ if (PZDACTR_alter==(A68_70 *)A68_NIL)
 ECEACTR = MZDACTR_nc+=1 ;
 (void)(PZDACTR_alter = (&A_VINDEX(QYDACTR_classes,ECEACTR)));
  /* line 4899: */
-FCEACTR.I = (*(&(UZDACTR_cx->J)));
+FCEACTR.I = (*A_NILCHECK((&(A_NILCHECK(UZDACTR_cx)->J))));
  /* line 4900: */
-FCEACTR.J = (*(&(UZDACTR_cx->J)));
-(*PZDACTR_alter) = FCEACTR;
+FCEACTR.J = (*A_NILCHECK((&(A_NILCHECK(UZDACTR_cx)->J))));
+(*A_NILCHECK(PZDACTR_alter)) = FCEACTR;
 } 
 else
 { 
  /* line 4901: */
-GCEACTR = (&(PZDACTR_alter->I)) ;
-(void)((*GCEACTR) = (*(&(UZDACTR_cx->J))));
+GCEACTR = (&(A_NILCHECK(PZDACTR_alter)->I)) ;
+(void)((*A_NILCHECK(GCEACTR)) = (*A_NILCHECK((&(A_NILCHECK(UZDACTR_cx)->J)))));
 } 
  /* line 4902: */
  /* line 4903: */
  /* line 4904: */
  /* line 4905: */
-HCEACTR = (&(UZDACTR_cx->J)) ;
-(*HCEACTR)-=1;
+HCEACTR = (&(A_NILCHECK(UZDACTR_cx)->J)) ;
+(*A_NILCHECK(HCEACTR))-=1;
 } 
 break;
 } 
@@ -23237,14 +23237,14 @@ break;
 if (PZDACTR_alter!=(A68_70 *)A68_NIL)
 { 
  /* line 4908: */
-JCEACTR = (*(&(PZDACTR_alter->J)));
-for ( ICEACTR_i = (*(&(PZDACTR_alter->I)));
+JCEACTR = (*A_NILCHECK((&(A_NILCHECK(PZDACTR_alter)->J))));
+for ( ICEACTR_i = (*A_NILCHECK((&(A_NILCHECK(PZDACTR_alter)->I))));
 ICEACTR_i <= JCEACTR;
 ICEACTR_i += 1 )
 { 
-KCEACTR = (*(&A_R1INDEX(WXDACTR_ind,ICEACTR_i))) ;
+KCEACTR = (*A_NILCHECK((&A_R1INDEX(WXDACTR_ind,ICEACTR_i)))) ;
 LCEACTR = (&A_R1INDEX(EYDACTR_classno,KCEACTR)) ;
-(*LCEACTR) = MZDACTR_nc;
+(*A_NILCHECK(LCEACTR)) = MZDACTR_nc;
 }
  /* line 4909: */
 } 
@@ -23274,19 +23274,19 @@ for (;PCEACTR-- >= 0;
 {
  /* line 4918: */
  /* line 4919: */
-if ((*(&(MCEACTR_ci->I)))<(*(&(MCEACTR_ci->J))))
+if ((*A_NILCHECK((&(A_NILCHECK(MCEACTR_ci)->I))))<(*A_NILCHECK((&(A_NILCHECK(MCEACTR_ci)->J)))))
 { 
-QCEACTR = (*(&(MCEACTR_ci->I))) ;
-RCEACTR_nm = (*(&A_R1INDEX(WXDACTR_ind,QCEACTR)));
+QCEACTR = (*A_NILCHECK((&(A_NILCHECK(MCEACTR_ci)->I)))) ;
+RCEACTR_nm = (*A_NILCHECK((&A_R1INDEX(WXDACTR_ind,QCEACTR))));
  /* line 4920: */
-TCEACTR = (*(&(MCEACTR_ci->J)));
-for ( SCEACTR_i = ((*(&(MCEACTR_ci->I)))+1);
+TCEACTR = (*A_NILCHECK((&(A_NILCHECK(MCEACTR_ci)->J))));
+for ( SCEACTR_i = ((*A_NILCHECK((&(A_NILCHECK(MCEACTR_ci)->I))))+1);
 SCEACTR_i <= TCEACTR;
 SCEACTR_i += 1 )
 { 
  /* line 4921: */
  /* line 4922: */
-(void)(A_CALLPROC(NL(IUDACTR_substitute),(RCEACTR_nm, (*(&A_R1INDEX(WXDACTR_ind,SCEACTR_i))), PXDACTR_l),(RCEACTR_nm, (*(&A_R1INDEX(WXDACTR_ind,SCEACTR_i))), PXDACTR_l,(NL(IUDACTR_substitute)).nonlocals)));
+(void)(A_CALLPROC(NL(IUDACTR_substitute),(RCEACTR_nm, (*A_NILCHECK((&A_R1INDEX(WXDACTR_ind,SCEACTR_i)))), PXDACTR_l),(RCEACTR_nm, (*A_NILCHECK((&A_R1INDEX(WXDACTR_ind,SCEACTR_i)))), PXDACTR_l,(NL(IUDACTR_substitute)).nonlocals)));
 }
  /* line 4923: */
  /* line 4924: */
@@ -23466,7 +23466,7 @@ A_PROC_ENTRY(assign);
 { 
  /* line 4934: */
  /* line 4935: */
-BDEACTR_lastid = (&((*NL(QYAACTR_globcurrent))->Lastid));
+BDEACTR_lastid = (&(A_NILCHECK((*A_NILCHECK(NL(QYAACTR_globcurrent))))->Lastid));
  /* line 4937: */
 CDEACTR = A_CALLPROC(NL(ZFCACTR_assmarker),(Mode),(Mode,(NL(ZFCACTR_assmarker)).nonlocals)) ;
 (void)(YCEACTR_i = A_ABS(CDEACTR));
@@ -23496,7 +23496,7 @@ if (EDEACTR)
 FDEACTR.Fn = JMAACTR_xcopy;
 FDEACTR.M = ZCEACTR_m;
 FDEACTR.Param = 0;
-(void)(A_CALLPROC(NL(Output),(A_UNITE(GDEACTR,mode14,14,FDEACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(GDEACTR,mode14,14,FDEACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(GDEACTR,mode14,14,FDEACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(GDEACTR,mode14,14,FDEACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 4945: */
  /* line 4946: */
 YCEACTR_i = 1;
@@ -23507,16 +23507,16 @@ HDEACTR.M = (Mode+KQAACTR_refmark);
 HDEACTR.Param = YCEACTR_i;
  /* line 4948: */
  /* line 4949: */
-(void)(A_CALLPROC(NL(Output),(A_UNITE(IDEACTR,mode14,14,HDEACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(IDEACTR,mode14,14,HDEACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(IDEACTR,mode14,14,HDEACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(IDEACTR,mode14,14,HDEACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
 } 
 else
 { 
  /* line 4950: */
 if (YCEACTR_i==3)
 { 
-JDEACTR_lastid1 = (*BDEACTR_lastid);
+JDEACTR_lastid1 = (*A_NILCHECK(BDEACTR_lastid));
  /* line 4951: */
-(*NL(GBBACTR_lastidchanged)) = A68_TRUE;
+(*A_NILCHECK(NL(GBBACTR_lastidchanged))) = A68_TRUE;
  /* line 4952: */
  /* line 4953: */
 KDEACTR.Name = A_CALLPROC(NL(KTAACTR_idmess),(61),(61,(NL(KTAACTR_idmess)).nonlocals));
@@ -23524,7 +23524,7 @@ KDEACTR.Name = A_CALLPROC(NL(KTAACTR_idmess),(61),(61,(NL(KTAACTR_idmess)).nonlo
 KDEACTR.Props = (A68_BITS )(LLAACTR_ccbit|PLAACTR_globscopebit);
  /* line 4955: */
 KDEACTR.Mode = A_CALLPROC(NL(LXBACTR_insertassmntproc),(Mode),(Mode,(NL(LXBACTR_insertassmntproc)).nonlocals));
-KDEACTR.Rdenno = YCEACTR_i = (*NL(CZAACTR_lastrd))+=1;
+KDEACTR.Rdenno = YCEACTR_i = (*A_NILCHECK(NL(CZAACTR_lastrd)))+=1;
 KDEACTR.Maxname = 0;
  /* line 4956: */
 KDEACTR.Level = 0;
@@ -23533,7 +23533,7 @@ LDEACTR_rd = KDEACTR;
  /* line 4957: */
  /* line 4958: */
 ODEACTR.Name = NL(BZAACTR_nullid);
-ODEACTR.Decno = (*BDEACTR_lastid)+=1;
+ODEACTR.Decno = (*A_NILCHECK(BDEACTR_lastid))+=1;
  /* line 4959: */
 ODEACTR.Level = 1;
 ODEACTR.Mode = (Mode+KQAACTR_refmark);
@@ -23543,7 +23543,7 @@ ODEACTR.Rest = (A68_67 *)A68_NIL;
 PDEACTR_lhs = ODEACTR;
  /* line 4961: */
 QDEACTR.Name = NL(BZAACTR_nullid);
-QDEACTR.Decno = (*BDEACTR_lastid)+=1;
+QDEACTR.Decno = (*A_NILCHECK(BDEACTR_lastid))+=1;
  /* line 4962: */
 QDEACTR.Level = 1;
 QDEACTR.Mode = A_CALLPROC(NL(JGCACTR_deflex),(Mode),(Mode,(NL(JGCACTR_deflex)).nonlocals));
@@ -23560,15 +23560,15 @@ A_CLOSURE( SDEACTR_fass, TDEACTR_fass, UDEACTR_fass );
 (( UDEACTR_fass * ) ( SDEACTR_fass.nonlocals )) -> RDEACTR_rhs = (&RDEACTR_rhs);
 (( UDEACTR_fass * ) ( SDEACTR_fass.nonlocals )) -> Mode = Mode;
  /* line 4973: */
-(void)(A_CALLPROC(NL(Output),(A_UNITE(EEEACTR,mode34,34,(&LDEACTR_rd)), (*NL(FZAACTR_outlevel))),(A_UNITE(EEEACTR,mode34,34,(&LDEACTR_rd)), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(EEEACTR,mode34,34,(&LDEACTR_rd)), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(EEEACTR,mode34,34,(&LDEACTR_rd)), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 4974: */
 FEEACTR.Type = YOAACTR_xfdec;
 FEEACTR.Iddec = (&PDEACTR_lhs);
-(void)(A_CALLPROC(NL(Output),(A_UNITE(GEEACTR,mode12,12,FEEACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(GEEACTR,mode12,12,FEEACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(GEEACTR,mode12,12,FEEACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(GEEACTR,mode12,12,FEEACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 4975: */
 HEEACTR.Type = YOAACTR_xfdec;
 HEEACTR.Iddec = (&RDEACTR_rhs);
-(void)(A_CALLPROC(NL(Output),(A_UNITE(IEEACTR,mode12,12,HEEACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(IEEACTR,mode12,12,HEEACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(IEEACTR,mode12,12,HEEACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(IEEACTR,mode12,12,HEEACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 4976: */
 JEEACTR.Fn = ZMAACTR_xbegin;
  /* line 4977: */
@@ -23576,12 +23576,12 @@ JEEACTR.M = (Mode+KQAACTR_refmark);
 JEEACTR.Props = (A68_BITS )(WLAACTR_compgenbit|SLAACTR_semibit);
  /* line 4978: */
 JEEACTR.Param = (Mode+KQAACTR_refmark);
-(void)(A_CALLPROC(NL(Output),(A_UNITE(KEEACTR,mode17,17,JEEACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(KEEACTR,mode17,17,JEEACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(KEEACTR,mode17,17,JEEACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(KEEACTR,mode17,17,JEEACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 4979: */
  /* line 4980: */
 { 
  /* line 4981: */
-QEEACTR = (*(&A_VINDEX(NL(KUAACTR_modes),Mode))) ;
+QEEACTR = (*A_NILCHECK((&A_VINDEX(NL(KUAACTR_modes),Mode)))) ;
 switch ( QEEACTR.mode )
 { 
 case 4: /* REF STRUCT(INT,INT,REF MODE58)  */
@@ -23590,19 +23590,19 @@ REEACTR_rs = (QEEACTR.data.mode4);
 { 
  /* line 4983: */
  /* line 4984: */
-if ((*(&(REEACTR_rs->Rdenno)))<0)
+if ((*A_NILCHECK((&(A_NILCHECK(REEACTR_rs)->Rdenno))))<0)
 { 
  /* line 4985: */
-SEEACTR = (-(*NL(CZAACTR_lastrd)));
+SEEACTR = (-(*A_NILCHECK(NL(CZAACTR_lastrd))));
 } 
 else
 { 
-SEEACTR = (*NL(CZAACTR_lastrd));
+SEEACTR = (*A_NILCHECK(NL(CZAACTR_lastrd)));
 } 
-TEEACTR = (&(REEACTR_rs->Rdenno)) ;
-(*TEEACTR) = SEEACTR;
+TEEACTR = (&(A_NILCHECK(REEACTR_rs)->Rdenno)) ;
+(*A_NILCHECK(TEEACTR)) = SEEACTR;
  /* line 4986: */
-(void)(ADEACTR_sels = (*(&(REEACTR_rs->Sels))));
+(void)(ADEACTR_sels = (*A_NILCHECK((&(A_NILCHECK(REEACTR_rs)->Sels)))));
  /* line 4987: */
  /* line 4988: */
 for ( UEEACTR_i = 1;;
@@ -23610,42 +23610,42 @@ UEEACTR_i += 1 )
 { 
  /* line 4989: */
 if ( !((ADEACTR_sels!=RQAACTR_nilsel)) ) break;
-WEEACTR = (*(&((&PDEACTR_lhs)->Decno))) ;
-(void)(A_CALLPROC(NL(Output),(A_UNITE(VEEACTR,mode3,3,WEEACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(VEEACTR,mode3,3,WEEACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+WEEACTR = (*A_NILCHECK((&(A_NILCHECK((&PDEACTR_lhs))->Decno)))) ;
+(void)(A_CALLPROC(NL(Output),(A_UNITE(VEEACTR,mode3,3,WEEACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(VEEACTR,mode3,3,WEEACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 4990: */
  /* line 4991: */
 XEEACTR.Fn = IMAACTR_xselect;
  /* line 4992: */
-XEEACTR.M = ((*(&(ADEACTR_sels->Mode)))+KQAACTR_refmark);
+XEEACTR.M = ((*A_NILCHECK((&(A_NILCHECK(ADEACTR_sels)->Mode))))+KQAACTR_refmark);
 XEEACTR.Param = UEEACTR_i;
-(void)(A_CALLPROC(NL(Output),(A_UNITE(YEEACTR,mode14,14,XEEACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(YEEACTR,mode14,14,XEEACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(YEEACTR,mode14,14,XEEACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(YEEACTR,mode14,14,XEEACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 4993: */
  /* line 4994: */
-ZEEACTR = A_CALLPROC(NL(VECACTR_marker),((*(&(ADEACTR_sels->Mode)))),((*(&(ADEACTR_sels->Mode))),(NL(VECACTR_marker)).nonlocals)) ;
+ZEEACTR = A_CALLPROC(NL(VECACTR_marker),((*A_NILCHECK((&(A_NILCHECK(ADEACTR_sels)->Mode))))),((*A_NILCHECK((&(A_NILCHECK(ADEACTR_sels)->Mode)))),(NL(VECACTR_marker)).nonlocals)) ;
 if (A_ABS(ZEEACTR)<=2)
 { 
  /* line 4995: */
-(void)(A_CALLPROC(NL(Output),(A_UNITE(AFEACTR,mode16,16,EPAACTR_xwass), (*NL(FZAACTR_outlevel))),(A_UNITE(AFEACTR,mode16,16,EPAACTR_xwass), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(AFEACTR,mode16,16,EPAACTR_xwass), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(AFEACTR,mode16,16,EPAACTR_xwass), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
 } 
  /* line 4996: */
-CFEACTR = (*(&((&RDEACTR_rhs)->Decno))) ;
-(void)(A_CALLPROC(NL(Output),(A_UNITE(BFEACTR,mode3,3,CFEACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(BFEACTR,mode3,3,CFEACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+CFEACTR = (*A_NILCHECK((&(A_NILCHECK((&RDEACTR_rhs))->Decno)))) ;
+(void)(A_CALLPROC(NL(Output),(A_UNITE(BFEACTR,mode3,3,CFEACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(BFEACTR,mode3,3,CFEACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 4997: */
  /* line 4998: */
 DFEACTR.Fn = IMAACTR_xselect;
  /* line 4999: */
-DFEACTR.M = A_CALLPROC(NL(JGCACTR_deflex),((*(&(ADEACTR_sels->Mode)))),((*(&(ADEACTR_sels->Mode))),(NL(JGCACTR_deflex)).nonlocals));
+DFEACTR.M = A_CALLPROC(NL(JGCACTR_deflex),((*A_NILCHECK((&(A_NILCHECK(ADEACTR_sels)->Mode))))),((*A_NILCHECK((&(A_NILCHECK(ADEACTR_sels)->Mode)))),(NL(JGCACTR_deflex)).nonlocals));
 DFEACTR.Param = UEEACTR_i;
-(void)(A_CALLPROC(NL(Output),(A_UNITE(EFEACTR,mode14,14,DFEACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(EFEACTR,mode14,14,DFEACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(EFEACTR,mode14,14,DFEACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(EFEACTR,mode14,14,DFEACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 5000: */
-(void)(A_CALLPROC(NL(VCEACTR_assign),((*(&(ADEACTR_sels->Mode)))),((*(&(ADEACTR_sels->Mode))),(NL(VCEACTR_assign)).nonlocals)));
+(void)(A_CALLPROC(NL(VCEACTR_assign),((*A_NILCHECK((&(A_NILCHECK(ADEACTR_sels)->Mode))))),((*A_NILCHECK((&(A_NILCHECK(ADEACTR_sels)->Mode)))),(NL(VCEACTR_assign)).nonlocals)));
  /* line 5001: */
-(void)(A_CALLPROC(NL(Output),(A_UNITE(FFEACTR,mode14,14,IRAACTR_opervoid), (*NL(FZAACTR_outlevel))),(A_UNITE(FFEACTR,mode14,14,IRAACTR_opervoid), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(FFEACTR,mode14,14,IRAACTR_opervoid), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(FFEACTR,mode14,14,IRAACTR_opervoid), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 5002: */
-(void)(A_CALLPROC(NL(Output),(A_UNITE(GFEACTR,mode17,17,KRAACTR_controlsemi), (*NL(FZAACTR_outlevel))),(A_UNITE(GFEACTR,mode17,17,KRAACTR_controlsemi), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(GFEACTR,mode17,17,KRAACTR_controlsemi), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(GFEACTR,mode17,17,KRAACTR_controlsemi), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 5003: */
  /* line 5004: */
-(void)(ADEACTR_sels = (*(&(ADEACTR_sels->Rest))));
+(void)(ADEACTR_sels = (*A_NILCHECK((&(A_NILCHECK(ADEACTR_sels)->Rest)))));
 }
  /* line 5005: */
  /* line 5006: */
@@ -23655,24 +23655,24 @@ case 7: /* REF STRUCT(INT,INT,INT)  */
 HFEACTR_rv = (QEEACTR.data.mode7);
  /* line 5007: */
 { 
-(void)(ZCEACTR_m = (*(&(HFEACTR_rv->Vecmode))));
+(void)(ZCEACTR_m = (*A_NILCHECK((&(A_NILCHECK(HFEACTR_rv)->Vecmode)))));
  /* line 5008: */
  /* line 5009: */
  /* line 5010: */
-if ((*(&(HFEACTR_rv->Rdenno)))<0)
+if ((*A_NILCHECK((&(A_NILCHECK(HFEACTR_rv)->Rdenno))))<0)
 { 
  /* line 5011: */
-IFEACTR = (-(*NL(CZAACTR_lastrd)));
+IFEACTR = (-(*A_NILCHECK(NL(CZAACTR_lastrd))));
 } 
 else
 { 
-IFEACTR = (*NL(CZAACTR_lastrd));
+IFEACTR = (*A_NILCHECK(NL(CZAACTR_lastrd)));
 } 
-JFEACTR = (&(HFEACTR_rv->Rdenno)) ;
-(*JFEACTR) = IFEACTR;
+JFEACTR = (&(A_NILCHECK(HFEACTR_rv)->Rdenno)) ;
+(*A_NILCHECK(JFEACTR)) = IFEACTR;
  /* line 5012: */
  /* line 5013: */
-if ((*(&(HFEACTR_rv->Deflex)))<0)
+if ((*A_NILCHECK((&(A_NILCHECK(HFEACTR_rv)->Deflex))))<0)
 { 
 (void)(A_CALLPROC(SDEACTR_fass,(),((SDEACTR_fass).nonlocals)));
  /* line 5014: */
@@ -23694,88 +23694,88 @@ case 5: /* REF STRUCT(INT,INT,INT,INT)  */
 KFEACTR_ri = (QEEACTR.data.mode5);
  /* line 5020: */
 { 
-(void)(ZCEACTR_m = A_CALLPROC(NL(ZVBACTR_insertvec),((*(&(KFEACTR_ri->Imode))), 1),((*(&(KFEACTR_ri->Imode))), 1,(NL(ZVBACTR_insertvec)).nonlocals)));
+(void)(ZCEACTR_m = A_CALLPROC(NL(ZVBACTR_insertvec),((*A_NILCHECK((&(A_NILCHECK(KFEACTR_ri)->Imode)))), 1),((*A_NILCHECK((&(A_NILCHECK(KFEACTR_ri)->Imode)))), 1,(NL(ZVBACTR_insertvec)).nonlocals)));
  /* line 5021: */
  /* line 5022: */
  /* line 5023: */
-if ((*(&(KFEACTR_ri->Rdenno)))<0)
+if ((*A_NILCHECK((&(A_NILCHECK(KFEACTR_ri)->Rdenno))))<0)
 { 
  /* line 5024: */
-LFEACTR = (-(*NL(CZAACTR_lastrd)));
+LFEACTR = (-(*A_NILCHECK(NL(CZAACTR_lastrd))));
 } 
 else
 { 
-LFEACTR = (*NL(CZAACTR_lastrd));
+LFEACTR = (*A_NILCHECK(NL(CZAACTR_lastrd)));
 } 
-MFEACTR = (&(KFEACTR_ri->Rdenno)) ;
-(*MFEACTR) = LFEACTR;
+MFEACTR = (&(A_NILCHECK(KFEACTR_ri)->Rdenno)) ;
+(*A_NILCHECK(MFEACTR)) = LFEACTR;
  /* line 5025: */
-OFEACTR = (*(&((&PDEACTR_lhs)->Decno))) ;
-(void)(A_CALLPROC(NL(Output),(A_UNITE(NFEACTR,mode3,3,OFEACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(NFEACTR,mode3,3,OFEACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+OFEACTR = (*A_NILCHECK((&(A_NILCHECK((&PDEACTR_lhs))->Decno)))) ;
+(void)(A_CALLPROC(NL(Output),(A_UNITE(NFEACTR,mode3,3,OFEACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(NFEACTR,mode3,3,OFEACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 5026: */
 PFEACTR.Fn = JOAACTR_xisvec;
 PFEACTR.M = (ZCEACTR_m+KQAACTR_refmark);
 PFEACTR.Param = 0;
-(void)(A_CALLPROC(NL(Output),(A_UNITE(QFEACTR,mode14,14,PFEACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(QFEACTR,mode14,14,PFEACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(QFEACTR,mode14,14,PFEACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(QFEACTR,mode14,14,PFEACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 5027: */
  /* line 5028: */
 RFEACTR = A_CALLPROC(NL(VECACTR_marker),(ZCEACTR_m),(ZCEACTR_m,(NL(VECACTR_marker)).nonlocals)) ;
 if (A_ABS(RFEACTR)<=2)
 { 
  /* line 5029: */
-(void)(A_CALLPROC(NL(Output),(A_UNITE(SFEACTR,mode16,16,EPAACTR_xwass), (*NL(FZAACTR_outlevel))),(A_UNITE(SFEACTR,mode16,16,EPAACTR_xwass), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(SFEACTR,mode16,16,EPAACTR_xwass), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(SFEACTR,mode16,16,EPAACTR_xwass), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
 } 
  /* line 5030: */
-UFEACTR = (*(&((&RDEACTR_rhs)->Decno))) ;
-(void)(A_CALLPROC(NL(Output),(A_UNITE(TFEACTR,mode3,3,UFEACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(TFEACTR,mode3,3,UFEACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+UFEACTR = (*A_NILCHECK((&(A_NILCHECK((&RDEACTR_rhs))->Decno)))) ;
+(void)(A_CALLPROC(NL(Output),(A_UNITE(TFEACTR,mode3,3,UFEACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(TFEACTR,mode3,3,UFEACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 5031: */
 VFEACTR.Fn = JOAACTR_xisvec;
 VFEACTR.M = ZCEACTR_m;
 VFEACTR.Param = 0;
-(void)(A_CALLPROC(NL(Output),(A_UNITE(WFEACTR,mode14,14,VFEACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(WFEACTR,mode14,14,VFEACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(WFEACTR,mode14,14,VFEACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(WFEACTR,mode14,14,VFEACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 5032: */
 (void)(A_CALLPROC(NL(VCEACTR_assign),(ZCEACTR_m),(ZCEACTR_m,(NL(VCEACTR_assign)).nonlocals)));
  /* line 5033: */
-(void)(A_CALLPROC(NL(Output),(A_UNITE(XFEACTR,mode14,14,IRAACTR_opervoid), (*NL(FZAACTR_outlevel))),(A_UNITE(XFEACTR,mode14,14,IRAACTR_opervoid), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(XFEACTR,mode14,14,IRAACTR_opervoid), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(XFEACTR,mode14,14,IRAACTR_opervoid), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 5034: */
  /* line 5035: */
  /* line 5036: */
-(void)(A_CALLPROC(NL(Output),(A_UNITE(YFEACTR,mode17,17,KRAACTR_controlsemi), (*NL(FZAACTR_outlevel))),(A_UNITE(YFEACTR,mode17,17,KRAACTR_controlsemi), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(YFEACTR,mode17,17,KRAACTR_controlsemi), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(YFEACTR,mode17,17,KRAACTR_controlsemi), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
 } 
 break;
 case 8: /* REF STRUCT(INT,INT,INT,INT)  */
 ZFEACTR_ra = (QEEACTR.data.mode8);
  /* line 5037: */
 { 
-(void)(ZCEACTR_m = (*(&(ZFEACTR_ra->Mode))));
+(void)(ZCEACTR_m = (*A_NILCHECK((&(A_NILCHECK(ZFEACTR_ra)->Mode)))));
  /* line 5038: */
  /* line 5039: */
  /* line 5040: */
-if ((*(&(ZFEACTR_ra->Rdenno)))<0)
+if ((*A_NILCHECK((&(A_NILCHECK(ZFEACTR_ra)->Rdenno))))<0)
 { 
  /* line 5041: */
-AGEACTR = (-(*NL(CZAACTR_lastrd)));
+AGEACTR = (-(*A_NILCHECK(NL(CZAACTR_lastrd))));
 } 
 else
 { 
-AGEACTR = (*NL(CZAACTR_lastrd));
+AGEACTR = (*A_NILCHECK(NL(CZAACTR_lastrd)));
 } 
-BGEACTR = (&(ZFEACTR_ra->Rdenno)) ;
-(*BGEACTR) = AGEACTR;
+BGEACTR = (&(A_NILCHECK(ZFEACTR_ra)->Rdenno)) ;
+(*A_NILCHECK(BGEACTR)) = AGEACTR;
  /* line 5042: */
  /* line 5043: */
-if ((*(&(ZFEACTR_ra->Deflex)))<0)
+if ((*A_NILCHECK((&(A_NILCHECK(ZFEACTR_ra)->Deflex))))<0)
 { 
 (void)(A_CALLPROC(SDEACTR_fass,(),((SDEACTR_fass).nonlocals)));
  /* line 5044: */
  /* line 5045: */
-CGEACTR = ((*(&(ZFEACTR_ra->Nods)))-1);
+CGEACTR = ((*A_NILCHECK((&(A_NILCHECK(ZFEACTR_ra)->Nods))))-1);
 for ( DGEACTR = 1;
 DGEACTR <= CGEACTR;
 DGEACTR += 1 )
 { 
  /* line 5046: */
-EGEACTR = (*(&A_VINDEX(NL(KUAACTR_modes),ZCEACTR_m))) ;
+EGEACTR = (*A_NILCHECK((&A_VINDEX(NL(KUAACTR_modes),ZCEACTR_m)))) ;
 switch ( EGEACTR.mode )
 { 
 case 8: /* REF STRUCT(INT,INT,INT,INT)  */
@@ -23783,7 +23783,7 @@ FGEACTR_a1 = (EGEACTR.data.mode8);
  /* line 5047: */
  /* line 5048: */
  /* line 5049: */
-(void)(ZCEACTR_m = (*(&(FGEACTR_a1->Mode))));
+(void)(ZCEACTR_m = (*A_NILCHECK((&(A_NILCHECK(FGEACTR_a1)->Mode)))));
 break;
 default: 
 A_IMP_SKIP ;
@@ -23794,7 +23794,7 @@ break;
 (void)(ZCEACTR_m = A_CALLPROC(NL(ZHCACTR_enflex),(ZCEACTR_m),(ZCEACTR_m,(NL(ZHCACTR_enflex)).nonlocals)));
  /* line 5051: */
  /* line 5052: */
-HGEACTR = ((*(&(ZFEACTR_ra->Nods)))-1);
+HGEACTR = ((*A_NILCHECK((&(A_NILCHECK(ZFEACTR_ra)->Nods))))-1);
 for ( GGEACTR_i = 1;
 GGEACTR_i <= HGEACTR;
 GGEACTR_i += 1 )
@@ -23824,14 +23824,14 @@ case 2: /* REF STRUCT(INT,REF MODE54)  */
 JGEACTR_ru = (QEEACTR.data.mode2);
  /* line 5061: */
 { 
-KGEACTR_ml = (*(&(JGEACTR_ru->Modelist)));
+KGEACTR_ml = (*A_NILCHECK((&(A_NILCHECK(JGEACTR_ru)->Modelist))));
  /* line 5062: */
 LGEACTR_caseno = 1;
 MGEACTR_maxcase = 0;
  /* line 5063: */
 NGEACTR.Name = NL(BZAACTR_nullid);
  /* line 5064: */
-NGEACTR.Decno = (*BDEACTR_lastid)+=1;
+NGEACTR.Decno = (*A_NILCHECK(BDEACTR_lastid))+=1;
 NGEACTR.Level = 1;
 NGEACTR.Mode = 0;
  /* line 5065: */
@@ -23841,41 +23841,41 @@ OGEACTR_ccdec = NGEACTR;
  /* line 5066: */
  /* line 5067: */
  /* line 5068: */
-if ((*(&(JGEACTR_ru->Rdenno)))<0)
+if ((*A_NILCHECK((&(A_NILCHECK(JGEACTR_ru)->Rdenno))))<0)
 { 
  /* line 5069: */
-PGEACTR = (-(*NL(CZAACTR_lastrd)));
+PGEACTR = (-(*A_NILCHECK(NL(CZAACTR_lastrd))));
 } 
 else
 { 
-PGEACTR = (*NL(CZAACTR_lastrd));
+PGEACTR = (*A_NILCHECK(NL(CZAACTR_lastrd)));
 } 
-QGEACTR = (&(JGEACTR_ru->Rdenno)) ;
-(*QGEACTR) = PGEACTR;
+QGEACTR = (&(A_NILCHECK(JGEACTR_ru)->Rdenno)) ;
+(*A_NILCHECK(QGEACTR)) = PGEACTR;
  /* line 5070: */
-SGEACTR = (*(&((&PDEACTR_lhs)->Decno))) ;
-(void)(A_CALLPROC(NL(Output),(A_UNITE(RGEACTR,mode3,3,SGEACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(RGEACTR,mode3,3,SGEACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+SGEACTR = (*A_NILCHECK((&(A_NILCHECK((&PDEACTR_lhs))->Decno)))) ;
+(void)(A_CALLPROC(NL(Output),(A_UNITE(RGEACTR,mode3,3,SGEACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(RGEACTR,mode3,3,SGEACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 5071: */
-(void)(A_CALLPROC(NL(Output),(A_UNITE(TGEACTR,mode16,16,EPAACTR_xwass), (*NL(FZAACTR_outlevel))),(A_UNITE(TGEACTR,mode16,16,EPAACTR_xwass), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(TGEACTR,mode16,16,EPAACTR_xwass), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(TGEACTR,mode16,16,EPAACTR_xwass), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 5072: */
-VGEACTR = (*(&((&RDEACTR_rhs)->Decno))) ;
-(void)(A_CALLPROC(NL(Output),(A_UNITE(UGEACTR,mode3,3,VGEACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(UGEACTR,mode3,3,VGEACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+VGEACTR = (*A_NILCHECK((&(A_NILCHECK((&RDEACTR_rhs))->Decno)))) ;
+(void)(A_CALLPROC(NL(Output),(A_UNITE(UGEACTR,mode3,3,VGEACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(UGEACTR,mode3,3,VGEACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 5073: */
 WGEACTR.Fn = UMAACTR_xassign;
 WGEACTR.M = (Mode+KQAACTR_refmark);
 WGEACTR.Param = 1;
-(void)(A_CALLPROC(NL(Output),(A_UNITE(XGEACTR,mode14,14,WGEACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(XGEACTR,mode14,14,WGEACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(XGEACTR,mode14,14,WGEACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(XGEACTR,mode14,14,WGEACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 5074: */
-(void)(A_CALLPROC(NL(Output),(A_UNITE(YGEACTR,mode14,14,IRAACTR_opervoid), (*NL(FZAACTR_outlevel))),(A_UNITE(YGEACTR,mode14,14,IRAACTR_opervoid), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(YGEACTR,mode14,14,IRAACTR_opervoid), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(YGEACTR,mode14,14,IRAACTR_opervoid), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 5075: */
-(void)(A_CALLPROC(NL(Output),(A_UNITE(ZGEACTR,mode17,17,KRAACTR_controlsemi), (*NL(FZAACTR_outlevel))),(A_UNITE(ZGEACTR,mode17,17,KRAACTR_controlsemi), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(ZGEACTR,mode17,17,KRAACTR_controlsemi), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(ZGEACTR,mode17,17,KRAACTR_controlsemi), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 5077: */
 for ( ;; )
 { 
  /* line 5078: */
 if ( !((KGEACTR_ml!=OQAACTR_nilml)) ) break;
  /* line 5079: */
-AHEACTR = A_CALLPROC(NL(VECACTR_marker),((*(&(KGEACTR_ml->Mode)))),((*(&(KGEACTR_ml->Mode))),(NL(VECACTR_marker)).nonlocals)) ;
+AHEACTR = A_CALLPROC(NL(VECACTR_marker),((*A_NILCHECK((&(A_NILCHECK(KGEACTR_ml)->Mode))))),((*A_NILCHECK((&(A_NILCHECK(KGEACTR_ml)->Mode)))),(NL(VECACTR_marker)).nonlocals)) ;
 if (A_ABS(AHEACTR)!=1)
 { 
  /* line 5080: */
@@ -23883,7 +23883,7 @@ MGEACTR_maxcase+=1;
 } 
  /* line 5081: */
  /* line 5082: */
-(void)(KGEACTR_ml = (*(&(KGEACTR_ml->Rest))));
+(void)(KGEACTR_ml = (*A_NILCHECK((&(A_NILCHECK(KGEACTR_ml)->Rest)))));
 }
  /* line 5083: */
 BHEACTR.Fn = YMAACTR_xcaseu;
@@ -23892,12 +23892,12 @@ BHEACTR.M = Mode;
  /* line 5085: */
 BHEACTR.Props = WLAACTR_compgenbit;
 BHEACTR.Param = YKAACTR_voidmode;
-(void)(A_CALLPROC(NL(Output),(A_UNITE(CHEACTR,mode17,17,BHEACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(CHEACTR,mode17,17,BHEACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(CHEACTR,mode17,17,BHEACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(CHEACTR,mode17,17,BHEACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 5086: */
-EHEACTR = (*(&((&RDEACTR_rhs)->Decno))) ;
-(void)(A_CALLPROC(NL(Output),(A_UNITE(DHEACTR,mode3,3,EHEACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(DHEACTR,mode3,3,EHEACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+EHEACTR = (*A_NILCHECK((&(A_NILCHECK((&RDEACTR_rhs))->Decno)))) ;
+(void)(A_CALLPROC(NL(Output),(A_UNITE(DHEACTR,mode3,3,EHEACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(DHEACTR,mode3,3,EHEACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 5087: */
-(void)(KGEACTR_ml = (*(&(JGEACTR_ru->Modelist))));
+(void)(KGEACTR_ml = (*A_NILCHECK((&(A_NILCHECK(JGEACTR_ru)->Modelist)))));
  /* line 5088: */
  /* line 5089: */
 for ( FHEACTR_i = 1;;
@@ -23906,11 +23906,11 @@ FHEACTR_i += 1 )
  /* line 5090: */
 if ( !((KGEACTR_ml!=OQAACTR_nilml)) ) break;
  /* line 5091: */
-GHEACTR = A_CALLPROC(NL(VECACTR_marker),((*(&(KGEACTR_ml->Mode)))),((*(&(KGEACTR_ml->Mode))),(NL(VECACTR_marker)).nonlocals)) ;
+GHEACTR = A_CALLPROC(NL(VECACTR_marker),((*A_NILCHECK((&(A_NILCHECK(KGEACTR_ml)->Mode))))),((*A_NILCHECK((&(A_NILCHECK(KGEACTR_ml)->Mode)))),(NL(VECACTR_marker)).nonlocals)) ;
 if (A_ABS(GHEACTR)!=1)
 { 
-HHEACTR = (&((&OGEACTR_ccdec)->Mode)) ;
-(void)((*HHEACTR) = (*(&(KGEACTR_ml->Mode))));
+HHEACTR = (&(A_NILCHECK((&OGEACTR_ccdec))->Mode)) ;
+(void)((*A_NILCHECK(HHEACTR)) = (*A_NILCHECK((&(A_NILCHECK(KGEACTR_ml)->Mode)))));
  /* line 5092: */
  /* line 5093: */
  /* line 5094: */
@@ -23940,55 +23940,55 @@ else
  /* line 5102: */
 IHEACTR.Param = LGEACTR_caseno;
 } 
-(void)(A_CALLPROC(NL(Output),(A_UNITE(JHEACTR,mode17,17,IHEACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(JHEACTR,mode17,17,IHEACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(JHEACTR,mode17,17,IHEACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(JHEACTR,mode17,17,IHEACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 5103: */
  /* line 5104: */
 KHEACTR.Fn = WNAACTR_xuchoice;
  /* line 5105: */
-KHEACTR.M = (*(&(KGEACTR_ml->Mode)));
+KHEACTR.M = (*A_NILCHECK((&(A_NILCHECK(KGEACTR_ml)->Mode))));
  /* line 5106: */
  /* line 5107: */
 KHEACTR.Props = (A68_BITS )(ULAACTR_decbit|WLAACTR_compgenbit);
 KHEACTR.Param = FHEACTR_i;
-(void)(A_CALLPROC(NL(Output),(A_UNITE(LHEACTR,mode17,17,KHEACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(LHEACTR,mode17,17,KHEACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(LHEACTR,mode17,17,KHEACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(LHEACTR,mode17,17,KHEACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 5108: */
  /* line 5110: */
 MHEACTR.Type = BPAACTR_xccdec;
 MHEACTR.Iddec = (&OGEACTR_ccdec);
-(void)(A_CALLPROC(NL(Output),(A_UNITE(NHEACTR,mode12,12,MHEACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(NHEACTR,mode12,12,MHEACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(NHEACTR,mode12,12,MHEACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(NHEACTR,mode12,12,MHEACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 5111: */
-PHEACTR = (*(&((&PDEACTR_lhs)->Decno))) ;
-(void)(A_CALLPROC(NL(Output),(A_UNITE(OHEACTR,mode3,3,PHEACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(OHEACTR,mode3,3,PHEACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+PHEACTR = (*A_NILCHECK((&(A_NILCHECK((&PDEACTR_lhs))->Decno)))) ;
+(void)(A_CALLPROC(NL(Output),(A_UNITE(OHEACTR,mode3,3,PHEACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(OHEACTR,mode3,3,PHEACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 5112: */
  /* line 5113: */
 QHEACTR.Fn = ROAACTR_xdeunite;
  /* line 5114: */
  /* line 5116: */
-QHEACTR.M = ((ZCEACTR_m = A_CALLPROC(NL(ZHCACTR_enflex),((*(&(KGEACTR_ml->Mode)))),((*(&(KGEACTR_ml->Mode))),(NL(ZHCACTR_enflex)).nonlocals)))+KQAACTR_refmark);
+QHEACTR.M = ((ZCEACTR_m = A_CALLPROC(NL(ZHCACTR_enflex),((*A_NILCHECK((&(A_NILCHECK(KGEACTR_ml)->Mode))))),((*A_NILCHECK((&(A_NILCHECK(KGEACTR_ml)->Mode)))),(NL(ZHCACTR_enflex)).nonlocals)))+KQAACTR_refmark);
 QHEACTR.Param = 0;
-(void)(A_CALLPROC(NL(Output),(A_UNITE(RHEACTR,mode14,14,QHEACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(RHEACTR,mode14,14,QHEACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(RHEACTR,mode14,14,QHEACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(RHEACTR,mode14,14,QHEACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 5117: */
  /* line 5118: */
 SHEACTR = A_CALLPROC(NL(VECACTR_marker),(ZCEACTR_m),(ZCEACTR_m,(NL(VECACTR_marker)).nonlocals)) ;
 if (A_ABS(SHEACTR)<=2)
 { 
  /* line 5119: */
-(void)(A_CALLPROC(NL(Output),(A_UNITE(THEACTR,mode16,16,EPAACTR_xwass), (*NL(FZAACTR_outlevel))),(A_UNITE(THEACTR,mode16,16,EPAACTR_xwass), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(THEACTR,mode16,16,EPAACTR_xwass), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(THEACTR,mode16,16,EPAACTR_xwass), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
 } 
  /* line 5120: */
-VHEACTR = (*(&((&OGEACTR_ccdec)->Decno))) ;
-(void)(A_CALLPROC(NL(Output),(A_UNITE(UHEACTR,mode3,3,VHEACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(UHEACTR,mode3,3,VHEACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+VHEACTR = (*A_NILCHECK((&(A_NILCHECK((&OGEACTR_ccdec))->Decno)))) ;
+(void)(A_CALLPROC(NL(Output),(A_UNITE(UHEACTR,mode3,3,VHEACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(UHEACTR,mode3,3,VHEACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 5121: */
 (void)(A_CALLPROC(NL(VCEACTR_assign),(ZCEACTR_m),(ZCEACTR_m,(NL(VCEACTR_assign)).nonlocals)));
  /* line 5122: */
-(void)(A_CALLPROC(NL(Output),(A_UNITE(WHEACTR,mode14,14,IRAACTR_opervoid), (*NL(FZAACTR_outlevel))),(A_UNITE(WHEACTR,mode14,14,IRAACTR_opervoid), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(WHEACTR,mode14,14,IRAACTR_opervoid), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(WHEACTR,mode14,14,IRAACTR_opervoid), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 5123: */
  /* line 5124: */
 LGEACTR_caseno+=1;
 } 
  /* line 5125: */
  /* line 5126: */
-(void)(KGEACTR_ml = (*(&(KGEACTR_ml->Rest))));
+(void)(KGEACTR_ml = (*A_NILCHECK((&(A_NILCHECK(KGEACTR_ml)->Rest)))));
 }
  /* line 5127: */
 XHEACTR.Fn = HNAACTR_xoutu;
@@ -23997,11 +23997,11 @@ XHEACTR.M = YKAACTR_voidmode;
 XHEACTR.Props = WLAACTR_compgenbit;
  /* line 5129: */
 XHEACTR.Param = (MGEACTR_maxcase+1);
-(void)(A_CALLPROC(NL(Output),(A_UNITE(YHEACTR,mode17,17,XHEACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(YHEACTR,mode17,17,XHEACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(YHEACTR,mode17,17,XHEACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(YHEACTR,mode17,17,XHEACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 5130: */
-(void)(A_CALLPROC(NL(Output),(A_UNITE(ZHEACTR,mode5,5,SPAACTR_skip), (*NL(FZAACTR_outlevel))),(A_UNITE(ZHEACTR,mode5,5,SPAACTR_skip), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(ZHEACTR,mode5,5,SPAACTR_skip), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(ZHEACTR,mode5,5,SPAACTR_skip), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 5131: */
-(void)(A_CALLPROC(NL(Output),(A_UNITE(AIEACTR,mode14,14,IRAACTR_opervoid), (*NL(FZAACTR_outlevel))),(A_UNITE(AIEACTR,mode14,14,IRAACTR_opervoid), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(AIEACTR,mode14,14,IRAACTR_opervoid), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(AIEACTR,mode14,14,IRAACTR_opervoid), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 5132: */
 BIEACTR.Fn = LNAACTR_xesacu;
  /* line 5133: */
@@ -24009,13 +24009,13 @@ BIEACTR.M = YKAACTR_voidmode;
  /* line 5134: */
 BIEACTR.Props = WLAACTR_compgenbit;
 BIEACTR.Param = YKAACTR_voidmode;
-(void)(A_CALLPROC(NL(Output),(A_UNITE(CIEACTR,mode17,17,BIEACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(CIEACTR,mode17,17,BIEACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(CIEACTR,mode17,17,BIEACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(CIEACTR,mode17,17,BIEACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 5135: */
  /* line 5136: */
  /* line 5137: */
  /* line 5138: */
  /* line 5140: */
-(void)(A_CALLPROC(NL(Output),(A_UNITE(DIEACTR,mode17,17,KRAACTR_controlsemi), (*NL(FZAACTR_outlevel))),(A_UNITE(DIEACTR,mode17,17,KRAACTR_controlsemi), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(DIEACTR,mode17,17,KRAACTR_controlsemi), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(DIEACTR,mode17,17,KRAACTR_controlsemi), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
 } 
 break;
 default: 
@@ -24024,12 +24024,12 @@ break;
 } 
 goto LEEACTR;
 PEEACTR_loop: A_UNUSED;
-FIEACTR = (*(&((&PDEACTR_lhs)->Decno))) ;
-(void)(A_CALLPROC(NL(Output),(A_UNITE(EIEACTR,mode3,3,FIEACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(EIEACTR,mode3,3,FIEACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+FIEACTR = (*A_NILCHECK((&(A_NILCHECK((&PDEACTR_lhs))->Decno)))) ;
+(void)(A_CALLPROC(NL(Output),(A_UNITE(EIEACTR,mode3,3,FIEACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(EIEACTR,mode3,3,FIEACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 5141: */
 NEEACTR_loopf: A_UNUSED;
 GIEACTR.Name = NL(BZAACTR_nullid);
-GIEACTR.Decno = (*BDEACTR_lastid)+=1;
+GIEACTR.Decno = (*A_NILCHECK(BDEACTR_lastid))+=1;
  /* line 5142: */
 GIEACTR.Level = 1;
 GIEACTR.Mode = (ZCEACTR_m+KQAACTR_refmark);
@@ -24039,33 +24039,33 @@ GIEACTR.Rest = (A68_67 *)A68_NIL;
 MDEACTR_forall1 = GIEACTR;
  /* line 5144: */
 HIEACTR.Name = NL(BZAACTR_nullid);
-HIEACTR.Decno = (*BDEACTR_lastid)+=1;
+HIEACTR.Decno = (*A_NILCHECK(BDEACTR_lastid))+=1;
 HIEACTR.Level = 1;
 HIEACTR.Mode = ZCEACTR_m;
 HIEACTR.Scope = 0;
 HIEACTR.Rest = (A68_67 *)A68_NIL;
 NDEACTR_forall2 = HIEACTR;
  /* line 5146: */
-(void)(A_CALLPROC(NL(Output),(A_UNITE(IIEACTR,mode16,16,JPAACTR_xwforall), (*NL(FZAACTR_outlevel))),(A_UNITE(IIEACTR,mode16,16,JPAACTR_xwforall), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(IIEACTR,mode16,16,JPAACTR_xwforall), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(IIEACTR,mode16,16,JPAACTR_xwforall), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 5147: */
-KIEACTR = (*(&((&RDEACTR_rhs)->Decno))) ;
-(void)(A_CALLPROC(NL(Output),(A_UNITE(JIEACTR,mode3,3,KIEACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(JIEACTR,mode3,3,KIEACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+KIEACTR = (*A_NILCHECK((&(A_NILCHECK((&RDEACTR_rhs))->Decno)))) ;
+(void)(A_CALLPROC(NL(Output),(A_UNITE(JIEACTR,mode3,3,KIEACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(JIEACTR,mode3,3,KIEACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 5148: */
-(void)(A_CALLPROC(NL(Output),(A_UNITE(LIEACTR,mode16,16,JPAACTR_xwforall), (*NL(FZAACTR_outlevel))),(A_UNITE(LIEACTR,mode16,16,JPAACTR_xwforall), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(LIEACTR,mode16,16,JPAACTR_xwforall), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(LIEACTR,mode16,16,JPAACTR_xwforall), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 5149: */
 MIEACTR.Fn = SNAACTR_xforall;
 MIEACTR.M = 0;
 MIEACTR.Props = WLAACTR_compgenbit;
 MIEACTR.Param = 2;
-(void)(A_CALLPROC(NL(Output),(A_UNITE(NIEACTR,mode17,17,MIEACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(NIEACTR,mode17,17,MIEACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(NIEACTR,mode17,17,MIEACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(NIEACTR,mode17,17,MIEACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 5150: */
 OIEACTR.Type = CPAACTR_xforalldec;
 OIEACTR.Iddec = (&NDEACTR_forall2);
-(void)(A_CALLPROC(NL(Output),(A_UNITE(PIEACTR,mode12,12,OIEACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(PIEACTR,mode12,12,OIEACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(PIEACTR,mode12,12,OIEACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(PIEACTR,mode12,12,OIEACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 5151: */
 QIEACTR.Type = CPAACTR_xforalldec;
 QIEACTR.Iddec = (&MDEACTR_forall1);
-(void)(A_CALLPROC(NL(Output),(A_UNITE(RIEACTR,mode12,12,QIEACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(RIEACTR,mode12,12,QIEACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(RIEACTR,mode12,12,QIEACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(RIEACTR,mode12,12,QIEACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 5152: */
 SIEACTR.Fn = XNAACTR_xdo;
  /* line 5153: */
@@ -24073,79 +24073,79 @@ SIEACTR.M = YKAACTR_voidmode;
  /* line 5154: */
 SIEACTR.Props = (A68_BITS )(WLAACTR_compgenbit|SLAACTR_semibit);
 SIEACTR.Param = 0;
-(void)(A_CALLPROC(NL(Output),(A_UNITE(TIEACTR,mode17,17,SIEACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(TIEACTR,mode17,17,SIEACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(TIEACTR,mode17,17,SIEACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(TIEACTR,mode17,17,SIEACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 5155: */
-VIEACTR = (*(&((&MDEACTR_forall1)->Decno))) ;
-(void)(A_CALLPROC(NL(Output),(A_UNITE(UIEACTR,mode3,3,VIEACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(UIEACTR,mode3,3,VIEACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+VIEACTR = (*A_NILCHECK((&(A_NILCHECK((&MDEACTR_forall1))->Decno)))) ;
+(void)(A_CALLPROC(NL(Output),(A_UNITE(UIEACTR,mode3,3,VIEACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(UIEACTR,mode3,3,VIEACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 5156: */
  /* line 5157: */
 WIEACTR = A_CALLPROC(NL(VECACTR_marker),(ZCEACTR_m),(ZCEACTR_m,(NL(VECACTR_marker)).nonlocals)) ;
 if (A_ABS(WIEACTR)<=2)
 { 
  /* line 5158: */
-(void)(A_CALLPROC(NL(Output),(A_UNITE(XIEACTR,mode16,16,EPAACTR_xwass), (*NL(FZAACTR_outlevel))),(A_UNITE(XIEACTR,mode16,16,EPAACTR_xwass), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(XIEACTR,mode16,16,EPAACTR_xwass), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(XIEACTR,mode16,16,EPAACTR_xwass), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
 } 
  /* line 5159: */
-ZIEACTR = (*(&((&NDEACTR_forall2)->Decno))) ;
-(void)(A_CALLPROC(NL(Output),(A_UNITE(YIEACTR,mode3,3,ZIEACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(YIEACTR,mode3,3,ZIEACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+ZIEACTR = (*A_NILCHECK((&(A_NILCHECK((&NDEACTR_forall2))->Decno)))) ;
+(void)(A_CALLPROC(NL(Output),(A_UNITE(YIEACTR,mode3,3,ZIEACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(YIEACTR,mode3,3,ZIEACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 5160: */
 (void)(A_CALLPROC(NL(VCEACTR_assign),(ZCEACTR_m),(ZCEACTR_m,(NL(VCEACTR_assign)).nonlocals)));
  /* line 5161: */
-(void)(A_CALLPROC(NL(Output),(A_UNITE(AJEACTR,mode14,14,IRAACTR_opervoid), (*NL(FZAACTR_outlevel))),(A_UNITE(AJEACTR,mode14,14,IRAACTR_opervoid), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(AJEACTR,mode14,14,IRAACTR_opervoid), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(AJEACTR,mode14,14,IRAACTR_opervoid), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 5162: */
-(void)(A_CALLPROC(NL(Output),(A_UNITE(BJEACTR,mode17,17,KRAACTR_controlsemi), (*NL(FZAACTR_outlevel))),(A_UNITE(BJEACTR,mode17,17,KRAACTR_controlsemi), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(BJEACTR,mode17,17,KRAACTR_controlsemi), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(BJEACTR,mode17,17,KRAACTR_controlsemi), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 5163: */
 CJEACTR.Fn = TNAACTR_xod;
 CJEACTR.M = 0;
 CJEACTR.Props = WLAACTR_compgenbit;
 CJEACTR.Param = 0;
-(void)(A_CALLPROC(NL(Output),(A_UNITE(DJEACTR,mode17,17,CJEACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(DJEACTR,mode17,17,CJEACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(DJEACTR,mode17,17,CJEACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(DJEACTR,mode17,17,CJEACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 5164: */
  /* line 5165: */
-(void)(A_CALLPROC(NL(Output),(A_UNITE(EJEACTR,mode17,17,KRAACTR_controlsemi), (*NL(FZAACTR_outlevel))),(A_UNITE(EJEACTR,mode17,17,KRAACTR_controlsemi), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(EJEACTR,mode17,17,KRAACTR_controlsemi), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(EJEACTR,mode17,17,KRAACTR_controlsemi), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
 LEEACTR: ;
 } 
  /* line 5166: */
-GJEACTR = (*(&((&PDEACTR_lhs)->Decno))) ;
-(void)(A_CALLPROC(NL(Output),(A_UNITE(FJEACTR,mode3,3,GJEACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(FJEACTR,mode3,3,GJEACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+GJEACTR = (*A_NILCHECK((&(A_NILCHECK((&PDEACTR_lhs))->Decno)))) ;
+(void)(A_CALLPROC(NL(Output),(A_UNITE(FJEACTR,mode3,3,GJEACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(FJEACTR,mode3,3,GJEACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 5167: */
 HJEACTR.Fn = MNAACTR_xend;
 HJEACTR.M = 0;
 HJEACTR.Props = WLAACTR_compgenbit;
 HJEACTR.Param = (Mode+KQAACTR_refmark);
  /* line 5169: */
-(void)(A_CALLPROC(NL(Output),(A_UNITE(IJEACTR,mode17,17,HJEACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(IJEACTR,mode17,17,HJEACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(IJEACTR,mode17,17,HJEACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(IJEACTR,mode17,17,HJEACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 5170: */
 JJEACTR.Fn = VNAACTR_xroutinend;
 JJEACTR.M = 0;
 JJEACTR.Props = WLAACTR_compgenbit;
 JJEACTR.Param = 0;
-(void)(A_CALLPROC(NL(Output),(A_UNITE(KJEACTR,mode17,17,JJEACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(KJEACTR,mode17,17,JJEACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(KJEACTR,mode17,17,JJEACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(KJEACTR,mode17,17,JJEACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 5171: */
  /* line 5172: */
-if ((*BDEACTR_lastid)>(*NL(GZAACTR_maxident)))
+if ((*A_NILCHECK(BDEACTR_lastid))>(*A_NILCHECK(NL(GZAACTR_maxident))))
 { 
  /* line 5173: */
-(void)((*NL(GZAACTR_maxident)) = (*BDEACTR_lastid));
+(void)((*A_NILCHECK(NL(GZAACTR_maxident))) = (*A_NILCHECK(BDEACTR_lastid)));
 } 
  /* line 5174: */
  /* line 5175: */
-(*BDEACTR_lastid) = JDEACTR_lastid1;
+(*A_NILCHECK(BDEACTR_lastid)) = JDEACTR_lastid1;
 } 
  /* line 5176: */
 LJEACTR.Fn = HMAACTR_xparampack;
 LJEACTR.M = A_CALLPROC(NL(LXBACTR_insertassmntproc),(Mode),(Mode,(NL(LXBACTR_insertassmntproc)).nonlocals));
 LJEACTR.Param = 2;
-(void)(A_CALLPROC(NL(Output),(A_UNITE(MJEACTR,mode14,14,LJEACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(MJEACTR,mode14,14,LJEACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(MJEACTR,mode14,14,LJEACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(MJEACTR,mode14,14,LJEACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 5177: */
-(void)(A_CALLPROC(NL(Output),(A_UNITE(NJEACTR,mode3,3,YCEACTR_i), (*NL(FZAACTR_outlevel))),(A_UNITE(NJEACTR,mode3,3,YCEACTR_i), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(NJEACTR,mode3,3,YCEACTR_i), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(NJEACTR,mode3,3,YCEACTR_i), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 5178: */
 OJEACTR.Fn = AOAACTR_xcall;
 OJEACTR.M = (Mode+KQAACTR_refmark);
 OJEACTR.Param = 0;
  /* line 5179: */
  /* line 5180: */
-(void)(A_CALLPROC(NL(Output),(A_UNITE(PJEACTR,mode14,14,OJEACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(PJEACTR,mode14,14,OJEACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(PJEACTR,mode14,14,OJEACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(PJEACTR,mode14,14,OJEACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
 } 
 } 
 } 
@@ -24174,36 +24174,36 @@ UJEACTR_rprl = NL(IZAACTR_prl);
  /* line 5186: */
 for ( ;; )
 { 
-WJEACTR = ((*UJEACTR_rprl)!=GQAACTR_nilprl);
+WJEACTR = ((*A_NILCHECK(UJEACTR_rprl))!=GQAACTR_nilprl);
 if ( WJEACTR )
 { /* line 5187: */
-ZJEACTR = (*(&((*UJEACTR_rprl)->Name))) ;
-WJEACTR = A_VC_NE(A_HISVEC(XJEACTR,(*Ident),32,A68_CHAR ),A_HISVEC(YJEACTR,ZJEACTR,32,A68_CHAR ));
+ZJEACTR = (*A_NILCHECK((&(A_NILCHECK((*A_NILCHECK(UJEACTR_rprl)))->Name)))) ;
+WJEACTR = A_VC_NE(A_HISVEC(XJEACTR,(*A_NILCHECK(Ident)),32,A68_CHAR ),A_HISVEC(YJEACTR,ZJEACTR,32,A68_CHAR ));
 }
 if ( !(WJEACTR) ) break;
-(void)(UJEACTR_rprl = (&((*UJEACTR_rprl)->Rest)));
+(void)(UJEACTR_rprl = (&(A_NILCHECK((*A_NILCHECK(UJEACTR_rprl)))->Rest)));
 }
  /* line 5189: */
  /* line 5190: */
  /* line 5191: */
-if ((*UJEACTR_rprl)==GQAACTR_nilprl)
+if ((*A_NILCHECK(UJEACTR_rprl))==GQAACTR_nilprl)
 { 
 (void)(A_CALLPROC(NL(PZBACTR_faultp),(123, 0, 0, Ident),(123, 0, 0, Ident,(NL(PZBACTR_faultp)).nonlocals)));
  /* line 5192: */
-AKEACTR.Name = (*Ident);
+AKEACTR.Name = (*A_NILCHECK(Ident));
 AKEACTR.No = 0;
  /* line 5193: */
 AKEACTR.Rest = (A68_114 *)A68_NIL;
 BKEACTR = A_HEAP(A68_114 ) ;
-(void)((*BKEACTR) = AKEACTR) ;
+(void)((*A_NILCHECK(BKEACTR)) = AKEACTR) ;
 VJEACTR_ans = BKEACTR;
 } 
 else
 { 
-(void)(VJEACTR_ans = (*UJEACTR_rprl));
+(void)(VJEACTR_ans = (*A_NILCHECK(UJEACTR_rprl)));
  /* line 5194: */
  /* line 5195: */
-(void)((*UJEACTR_rprl) = (*(&((*UJEACTR_rprl)->Rest))));
+(void)((*A_NILCHECK(UJEACTR_rprl)) = (*A_NILCHECK((&(A_NILCHECK((*A_NILCHECK(UJEACTR_rprl)))->Rest)))));
 } 
  /* line 5196: */
  /* line 5197: */
@@ -24337,13 +24337,13 @@ A_PROC_ENTRY(simplespec);
  /* line 5206: */
 { 
 NKEACTR_ki = (A_HEAP(A68_INT ));
-(*NKEACTR_ki) = 1;
+(*A_NILCHECK(NKEACTR_ki)) = 1;
  /* line 5208: */
 OKEACTR_basemode = (A_HEAP(A68_INT ));
-(void)((*OKEACTR_basemode) = ((*NL(VYAACTR_lastmode))+1));
+(void)((*A_NILCHECK(OKEACTR_basemode)) = ((*A_NILCHECK(NL(VYAACTR_lastmode)))+1));
  /* line 5210: */
 PKEACTR_nomem = (A_HEAP(A68_INT ));
-(*PKEACTR_nomem) = 0;
+(*A_NILCHECK(PKEACTR_nomem)) = 0;
  /* line 5211: */
 A_CLOSURE( SKEACTR_generator, TKEACTR_generator, UKEACTR_generator );
 (( UKEACTR_generator * ) ( SKEACTR_generator.nonlocals )) -> PKEACTR_nomem = PKEACTR_nomem;
@@ -24351,7 +24351,7 @@ QKEACTR_anonymous = SKEACTR_generator;
  /* line 5212: */
 XKEACTR_modemem = (A_HEAP(A68_221 ));
 A_CALLPROC(QKEACTR_anonymous,(A68_FALSE, &YKEACTR),(A68_FALSE, &YKEACTR,(QKEACTR_anonymous).nonlocals));
-(*XKEACTR_modemem) = YKEACTR;
+(*A_NILCHECK(XKEACTR_modemem)) = YKEACTR;
  /* line 5213: */
 A_CLOSURE( ALEACTR_remember, BLEACTR_remember, CLEACTR_remember );
 (( CLEACTR_remember * ) ( ALEACTR_remember.nonlocals )) -> OKEACTR_basemode = OKEACTR_basemode;
@@ -24365,7 +24365,7 @@ A_CLOSURE( LLEACTR_repmode, MLEACTR_repmode, NLEACTR_repmode );
  /* line 5230: */
  /* line 5231: */
 ULEACTR_noids = (A_HEAP(A68_INT ));
-(*ULEACTR_noids) = 0;
+(*A_NILCHECK(ULEACTR_noids)) = 0;
  /* line 5232: */
 A_CLOSURE( XLEACTR_generator, YLEACTR_generator, ZLEACTR_generator );
 (( ZLEACTR_generator * ) ( XLEACTR_generator.nonlocals )) -> ULEACTR_noids = ULEACTR_noids;
@@ -24416,7 +24416,7 @@ A_CLOSURE( TNEACTR_readmodes, UNEACTR_readmodes, VNEACTR_readmodes );
 for ( ;; )
 { 
  /* line 5385: */
-if ( !(((*NKEACTR_ki)<Ka.upb)) ) break;
+if ( !(((*A_NILCHECK(NKEACTR_ki))<Ka.upb)) ) break;
 (void)(RQEACTR_i = A_CALLPROC(TNEACTR_readmodes,(),((TNEACTR_readmodes).nonlocals)));
  /* line 5386: */
 (void)(QQEACTR_hash = A_CALLPROC(QMEACTR_rs,((&PQEACTR_tempid)),((&PQEACTR_tempid),(QMEACTR_rs).nonlocals)));
@@ -24429,7 +24429,7 @@ if (RQEACTR_i==1)
 { 
  /* line 5390: */
  /* line 5391: */
-SQEACTR = (*Ndno)+=1;
+SQEACTR = (*A_NILCHECK(Ndno))+=1;
 } 
 else
 { 
@@ -24446,16 +24446,16 @@ UQEACTR.Mode = A_CALLPROC(JNEACTR_unnumber,(A_CALLPROC(JMEACTR_rw,(),((JMEACTR_r
 UQEACTR.Scope = Scope;
  /* line 5395: */
  /* line 5396: */
-UQEACTR.Rest = (*(&A_VINDEX(Ids,QQEACTR_hash)));
+UQEACTR.Rest = (*A_NILCHECK((&A_VINDEX(Ids,QQEACTR_hash))));
  /* line 5397: */
 VQEACTR = A_HEAP(A68_67 ) ;
-(void)((*VQEACTR) = UQEACTR) ;
+(void)((*A_NILCHECK(VQEACTR)) = UQEACTR) ;
 WQEACTR = (&A_VINDEX(Ids,QQEACTR_hash)) ;
-(*WQEACTR) = KQEACTR_id = VQEACTR;
+(*A_NILCHECK(WQEACTR)) = KQEACTR_id = VQEACTR;
 } 
 else
 { 
-(void)(LQEACTR_ind = (*(&A_VINDEX(Inds,QQEACTR_hash))));
+(void)(LQEACTR_ind = (*A_NILCHECK((&A_VINDEX(Inds,QQEACTR_hash)))));
  /* line 5399: */
 for ( ;; )
 { 
@@ -24463,11 +24463,11 @@ for ( ;; )
 XQEACTR = (LQEACTR_ind!=SQAACTR_nilind);
 if ( XQEACTR )
 { /* line 5401: */
-ZQEACTR = (*(&(LQEACTR_ind->Name))) ;
+ZQEACTR = (*A_NILCHECK((&(A_NILCHECK(LQEACTR_ind)->Name)))) ;
 XQEACTR = A_VC_NE(A_HISVEC(YQEACTR,ZQEACTR,32,A68_CHAR ),A_HISVEC(AREACTR,PQEACTR_tempid,32,A68_CHAR ));
 }
 if ( !(XQEACTR) ) break;
-(void)(LQEACTR_ind = (*(&(LQEACTR_ind->Rest))));
+(void)(LQEACTR_ind = (*A_NILCHECK((&(A_NILCHECK(LQEACTR_ind)->Rest)))));
 }
  /* line 5402: */
  /* line 5403: */
@@ -24479,11 +24479,11 @@ BREACTR.Level = 0;
 BREACTR.Scope = Scope;
 BREACTR.U = A_UNITE(CREACTR,mode2,2,MQEACTR_am);
  /* line 5405: */
-BREACTR.Rest = (*(&A_VINDEX(Inds,QQEACTR_hash)));
+BREACTR.Rest = (*A_NILCHECK((&A_VINDEX(Inds,QQEACTR_hash))));
 DREACTR = A_HEAP(A68_110 ) ;
-(void)((*DREACTR) = BREACTR) ;
+(void)((*A_NILCHECK(DREACTR)) = BREACTR) ;
 EREACTR = (&A_VINDEX(Inds,QQEACTR_hash)) ;
-LQEACTR_ind = (*EREACTR) = DREACTR;
+LQEACTR_ind = (*A_NILCHECK(EREACTR)) = DREACTR;
 } 
  /* line 5406: */
  /* line 5407: */
@@ -24494,12 +24494,12 @@ FREACTR.Mode = A_CALLPROC(JNEACTR_unnumber,(A_CALLPROC(JMEACTR_rw,(),((JMEACTR_r
 FREACTR.Modeproc = 0;
 FREACTR.El = (A68_53 *)A68_NIL;
 GREACTR = A_HEAP(A68_52 ) ;
-(void)((*GREACTR) = FREACTR) ;
+(void)((*A_NILCHECK(GREACTR)) = FREACTR) ;
 IREACTR = MQEACTR_am = GREACTR ;
-JREACTR = (&(LQEACTR_ind->U)) ;
-(void)((*JREACTR) = A_UNITE(HREACTR,mode2,2,IREACTR));
+JREACTR = (&(A_NILCHECK(LQEACTR_ind)->U)) ;
+(void)((*A_NILCHECK(JREACTR)) = A_UNITE(HREACTR,mode2,2,IREACTR));
  /* line 5409: */
-(void)(A_CALLPROC(ALEACTR_remember,((&(MQEACTR_am->Mode))),((&(MQEACTR_am->Mode)),(ALEACTR_remember).nonlocals)));
+(void)(A_CALLPROC(ALEACTR_remember,((&(A_NILCHECK(MQEACTR_am)->Mode))),((&(A_NILCHECK(MQEACTR_am)->Mode)),(ALEACTR_remember).nonlocals)));
  /* line 5410: */
  /* line 5411: */
 if (A_CALLPROC(EMEACTR_rc,(),((EMEACTR_rc).nonlocals))==0)
@@ -24512,24 +24512,24 @@ else
 { 
  /* line 5414: */
 KREACTR.Name = PQEACTR_tempid;
-LREACTR = (&(MQEACTR_am->Modeproc)) ;
-KREACTR.Decno = (*LREACTR) = (*Ndno)+=1;
+LREACTR = (&(A_NILCHECK(MQEACTR_am)->Modeproc)) ;
+KREACTR.Decno = (*A_NILCHECK(LREACTR)) = (*A_NILCHECK(Ndno))+=1;
  /* line 5415: */
 KREACTR.Level = 0;
-KREACTR.Mode = A_CALLPROC(NL(ZICACTR_mproc),((*(&(MQEACTR_am->Mode)))),((*(&(MQEACTR_am->Mode))),(NL(ZICACTR_mproc)).nonlocals));
+KREACTR.Mode = A_CALLPROC(NL(ZICACTR_mproc),((*A_NILCHECK((&(A_NILCHECK(MQEACTR_am)->Mode))))),((*A_NILCHECK((&(A_NILCHECK(MQEACTR_am)->Mode)))),(NL(ZICACTR_mproc)).nonlocals));
 KREACTR.Scope = Scope;
  /* line 5417: */
 KREACTR.Rest = (A68_67 *)A68_NIL;
  /* line 5418: */
 MREACTR = A_HEAP(A68_67 ) ;
-(void)((*MREACTR) = KREACTR) ;
+(void)((*A_NILCHECK(MREACTR)) = KREACTR) ;
 KQEACTR_id = MREACTR;
 } 
 } 
 else
 { 
  /* line 5419: */
-NREACTR = (*(&(LQEACTR_ind->U))) ;
+NREACTR = (*A_NILCHECK((&(A_NILCHECK(LQEACTR_ind)->U)))) ;
 switch ( NREACTR.mode )
 { 
 case 1: /* REF STRUCT(INT,REF MODE108)  */
@@ -24546,18 +24546,18 @@ QREACTR.Prio = 0;
  /* line 5424: */
 QREACTR.I = (A68_108 *)A68_NIL;
 RREACTR = A_HEAP(A68_109 ) ;
-(void)((*RREACTR) = QREACTR) ;
+(void)((*A_NILCHECK(RREACTR)) = QREACTR) ;
 TREACTR = NQEACTR_oper = RREACTR ;
-UREACTR = (&(LQEACTR_ind->U)) ;
-(void)((*UREACTR) = A_UNITE(SREACTR,mode1,1,TREACTR));
+UREACTR = (&(A_NILCHECK(LQEACTR_ind)->U)) ;
+(void)((*A_NILCHECK(UREACTR)) = A_UNITE(SREACTR,mode1,1,TREACTR));
 break;
 default: 
 A_IMP_SKIP ;
 break;
 } 
  /* line 5425: */
-VREACTR = (&(NQEACTR_oper->Prio)) ;
-(void)((*VREACTR) = A_CALLPROC(EMEACTR_rc,(),((EMEACTR_rc).nonlocals)));
+VREACTR = (&(A_NILCHECK(NQEACTR_oper)->Prio)) ;
+(void)((*A_NILCHECK(VREACTR)) = A_CALLPROC(EMEACTR_rc,(),((EMEACTR_rc).nonlocals)));
  /* line 5426: */
  /* line 5427: */
 (void)(WREACTR_x = A_CALLPROC(JNEACTR_unnumber,(A_CALLPROC(JMEACTR_rw,(),((JMEACTR_rw).nonlocals))),(A_CALLPROC(JMEACTR_rw,(),((JMEACTR_rw).nonlocals)),(JNEACTR_unnumber).nonlocals)));
@@ -24577,7 +24577,7 @@ ZREACTR.Level = 0;
 if (RQEACTR_i==4)
 { 
  /* line 5436: */
-ZREACTR.Decno = (*Ndno)+=1;
+ZREACTR.Decno = (*A_NILCHECK(Ndno))+=1;
 } 
 else
 { 
@@ -24589,23 +24589,23 @@ ZREACTR.Decno = (-A_CALLPROC(JMEACTR_rw,(),((JMEACTR_rw).nonlocals)));
 } 
  /* line 5440: */
 ZREACTR.Scope = Scope;
-ZREACTR.Rest = (*(&(NQEACTR_oper->I)));
+ZREACTR.Rest = (*A_NILCHECK((&(A_NILCHECK(NQEACTR_oper)->I))));
 ASEACTR = A_HEAP(A68_108 ) ;
-(void)((*ASEACTR) = ZREACTR) ;
-BSEACTR = (&(NQEACTR_oper->I)) ;
-(*BSEACTR) = OQEACTR_inst = ASEACTR;
+(void)((*A_NILCHECK(ASEACTR)) = ZREACTR) ;
+BSEACTR = (&(A_NILCHECK(NQEACTR_oper)->I)) ;
+(*A_NILCHECK(BSEACTR)) = OQEACTR_inst = ASEACTR;
  /* line 5442: */
-(void)(A_CALLPROC(ALEACTR_remember,((&(OQEACTR_inst->Lmode))),((&(OQEACTR_inst->Lmode)),(ALEACTR_remember).nonlocals)));
+(void)(A_CALLPROC(ALEACTR_remember,((&(A_NILCHECK(OQEACTR_inst)->Lmode))),((&(A_NILCHECK(OQEACTR_inst)->Lmode)),(ALEACTR_remember).nonlocals)));
  /* line 5443: */
-(void)(A_CALLPROC(ALEACTR_remember,((&(OQEACTR_inst->Rmode))),((&(OQEACTR_inst->Rmode)),(ALEACTR_remember).nonlocals)));
+(void)(A_CALLPROC(ALEACTR_remember,((&(A_NILCHECK(OQEACTR_inst)->Rmode))),((&(A_NILCHECK(OQEACTR_inst)->Rmode)),(ALEACTR_remember).nonlocals)));
  /* line 5444: */
-(void)(A_CALLPROC(ALEACTR_remember,((&(OQEACTR_inst->Ans))),((&(OQEACTR_inst->Ans)),(ALEACTR_remember).nonlocals)));
+(void)(A_CALLPROC(ALEACTR_remember,((&(A_NILCHECK(OQEACTR_inst)->Ans))),((&(A_NILCHECK(OQEACTR_inst)->Ans)),(ALEACTR_remember).nonlocals)));
  /* line 5445: */
  /* line 5446: */
 if (RQEACTR_i==4)
 { 
 CSEACTR.Name = PQEACTR_tempid;
-CSEACTR.Decno = (*Ndno);
+CSEACTR.Decno = (*A_NILCHECK(Ndno));
  /* line 5447: */
 CSEACTR.Level = 0;
 CSEACTR.Mode = A_CALLPROC(NL(UXBACTR_opproc),(OQEACTR_inst),(OQEACTR_inst,(NL(UXBACTR_opproc)).nonlocals));
@@ -24615,7 +24615,7 @@ CSEACTR.Rest = (A68_67 *)A68_NIL;
  /* line 5449: */
  /* line 5450: */
 DSEACTR = A_HEAP(A68_67 ) ;
-(void)((*DSEACTR) = CSEACTR) ;
+(void)((*A_NILCHECK(DSEACTR)) = CSEACTR) ;
 KQEACTR_id = DSEACTR;
 } 
 } 
@@ -24629,15 +24629,15 @@ ESEACTR = (RQEACTR_i!=2);
  /* line 5454: */
 if (ESEACTR)
 { 
-(void)(A_CALLPROC(ALEACTR_remember,((&(KQEACTR_id->Mode))),((&(KQEACTR_id->Mode)),(ALEACTR_remember).nonlocals)));
+(void)(A_CALLPROC(ALEACTR_remember,((&(A_NILCHECK(KQEACTR_id)->Mode))),((&(A_NILCHECK(KQEACTR_id)->Mode)),(ALEACTR_remember).nonlocals)));
  /* line 5455: */
  /* line 5456: */
-if ((*ULEACTR_noids)==CMEACTR_allids.upb)
+if ((*A_NILCHECK(ULEACTR_noids))==CMEACTR_allids.upb)
 { 
 A_CALLPROC(VLEACTR_anonymous,(A68_FALSE, &FSEACTR),(A68_FALSE, &FSEACTR,(VLEACTR_anonymous).nonlocals));
 GSEACTR_temp = FSEACTR;
  /* line 5457: */
-ISEACTR = A_VTRIM(HSEACTR,(GSEACTR_temp),A_VTSCRIPT(&(HSEACTR.upb),(GSEACTR_temp).upb,1,(*ULEACTR_noids))) ;
+ISEACTR = A_VTRIM(HSEACTR,(GSEACTR_temp),A_VTSCRIPT(&(HSEACTR.upb),(GSEACTR_temp).upb,1,(*A_NILCHECK(ULEACTR_noids)))) ;
 (void)(A_VASSIGN2(CMEACTR_allids,ISEACTR,A68_67 *));
  /* line 5458: */
 CMEACTR_allids = GSEACTR_temp;
@@ -24645,20 +24645,20 @@ CMEACTR_allids = GSEACTR_temp;
  /* line 5459: */
  /* line 5460: */
  /* line 5461: */
-JSEACTR = (*ULEACTR_noids)+=1 ;
+JSEACTR = (*A_NILCHECK(ULEACTR_noids))+=1 ;
 KSEACTR = (&A_VINDEX(CMEACTR_allids,JSEACTR)) ;
-(*KSEACTR) = KQEACTR_id;
+(*A_NILCHECK(KSEACTR)) = KQEACTR_id;
 } 
 }
  /* line 5464: */
-MSEACTR = (*NL(VYAACTR_lastmode));
-for ( LSEACTR_i = (*OKEACTR_basemode);
+MSEACTR = (*A_NILCHECK(NL(VYAACTR_lastmode)));
+for ( LSEACTR_i = (*A_NILCHECK(OKEACTR_basemode));
 LSEACTR_i <= MSEACTR;
 LSEACTR_i += 1 )
 { 
  /* line 5465: */
  /* line 5466: */
-NSEACTR = (*(&A_VINDEX(NL(KUAACTR_modes),LSEACTR_i))) ;
+NSEACTR = (*A_NILCHECK((&A_VINDEX(NL(KUAACTR_modes),LSEACTR_i)))) ;
 switch ( NSEACTR.mode )
 { 
 case 11: /* STRUCT(INT)  */
@@ -24668,7 +24668,7 @@ case 11: /* STRUCT(INT)  */
 break;
 default: 
  /* line 5469: */
-PSEACTR = ((*OKEACTR_basemode)-1);
+PSEACTR = ((*A_NILCHECK(OKEACTR_basemode))-1);
 for ( OSEACTR_j = NL(YYAACTR_newmode1);
 OSEACTR_j <= PSEACTR;
 OSEACTR_j += 1 )
@@ -24676,14 +24676,14 @@ OSEACTR_j += 1 )
  /* line 5470: */
 QSEACTR.source = (&A_VINDEX(NL(KUAACTR_modes),LSEACTR_i)) ;
 RSEACTR.source = (&A_VINDEX(NL(KUAACTR_modes),OSEACTR_j)) ;
-SSEACTR = ((*(QSEACTR.destination))==(*(RSEACTR.destination)));
+SSEACTR = ((*A_NILCHECK((QSEACTR.destination)))==(*A_NILCHECK((RSEACTR.destination))));
 if ( SSEACTR )
 { /* line 5471: */
-SSEACTR = A_CALLPROC(NL(BIDACTR_equality),(LSEACTR_i, OSEACTR_j, ((*OKEACTR_basemode)-1)),(LSEACTR_i, OSEACTR_j, ((*OKEACTR_basemode)-1),(NL(BIDACTR_equality)).nonlocals));
+SSEACTR = A_CALLPROC(NL(BIDACTR_equality),(LSEACTR_i, OSEACTR_j, ((*A_NILCHECK(OKEACTR_basemode))-1)),(LSEACTR_i, OSEACTR_j, ((*A_NILCHECK(OKEACTR_basemode))-1),(NL(BIDACTR_equality)).nonlocals));
 }
 if (SSEACTR)
 { 
-VSEACTR = A_VTRIM(USEACTR,((*NL(WHDACTR_test_flex))),A_VTSCRIPT(&(USEACTR.upb),((*NL(WHDACTR_test_flex))).upb,1,(*NL(PHDACTR_last_flex)))) ;
+VSEACTR = A_VTRIM(USEACTR,((*A_NILCHECK(NL(WHDACTR_test_flex)))),A_VTSCRIPT(&(USEACTR.upb),((*A_NILCHECK(NL(WHDACTR_test_flex)))).upb,1,(*A_NILCHECK(NL(PHDACTR_last_flex))))) ;
 WSEACTR = VSEACTR.upb -1;
 TSEACTR_pi = VSEACTR.data;
 for (;WSEACTR-- >= 0;
@@ -24691,14 +24691,14 @@ for (;WSEACTR-- >= 0;
 ) )
 {
  /* line 5472: */
-(void)(A_CALLPROC(LLEACTR_repmode,((*(&(TSEACTR_pi->I))), (*(&(TSEACTR_pi->J)))),((*(&(TSEACTR_pi->I))), (*(&(TSEACTR_pi->J))),(LLEACTR_repmode).nonlocals)));
+(void)(A_CALLPROC(LLEACTR_repmode,((*A_NILCHECK((&(A_NILCHECK(TSEACTR_pi)->I)))), (*A_NILCHECK((&(A_NILCHECK(TSEACTR_pi)->J))))),((*A_NILCHECK((&(A_NILCHECK(TSEACTR_pi)->I)))), (*A_NILCHECK((&(A_NILCHECK(TSEACTR_pi)->J)))),(LLEACTR_repmode).nonlocals)));
  /* line 5473: */
-XSEACTR = (&((&TLEACTR_asa)->Mode)) ;
-(void)((*XSEACTR) = (*(&(TSEACTR_pi->J))));
+XSEACTR = (&(A_NILCHECK((&TLEACTR_asa))->Mode)) ;
+(void)((*A_NILCHECK(XSEACTR)) = (*A_NILCHECK((&(A_NILCHECK(TSEACTR_pi)->J)))));
  /* line 5474: */
-YSEACTR = (*(&(TSEACTR_pi->I))) ;
+YSEACTR = (*A_NILCHECK((&(A_NILCHECK(TSEACTR_pi)->I)))) ;
 ATEACTR = (&A_VINDEX(NL(KUAACTR_modes),YSEACTR)) ;
-(void)((*ATEACTR) = A_UNITE(ZSEACTR,mode11,11,TLEACTR_asa));
+(void)((*A_NILCHECK(ATEACTR)) = A_UNITE(ZSEACTR,mode11,11,TLEACTR_asa));
 }
  /* line 5475: */
  /* line 5476: */
@@ -24720,24 +24720,24 @@ break;
 } 
 }
  /* line 5482: */
-(*NKEACTR_ki) = 0;
+(*A_NILCHECK(NKEACTR_ki)) = 0;
  /* line 5483: */
-(void)(RQEACTR_i = (*OKEACTR_basemode));
+(void)(RQEACTR_i = (*A_NILCHECK(OKEACTR_basemode)));
  /* line 5484: */
 for ( ;; )
 { 
  /* line 5485: */
-if ( !((RQEACTR_i<=(*NL(VYAACTR_lastmode)))) ) break;
+if ( !((RQEACTR_i<=(*A_NILCHECK(NL(VYAACTR_lastmode))))) ) break;
  /* line 5486: */
-DTEACTR = (*(&A_VINDEX(NL(KUAACTR_modes),RQEACTR_i))) ;
+DTEACTR = (*A_NILCHECK((&A_VINDEX(NL(KUAACTR_modes),RQEACTR_i)))) ;
 switch ( DTEACTR.mode )
 { 
 case 11: /* STRUCT(INT)  */
 ETEACTR_s = (DTEACTR.data.mode11);
 { 
-if ((*NKEACTR_ki)==0)
+if ((*A_NILCHECK(NKEACTR_ki))==0)
 { 
-(*NKEACTR_ki) = RQEACTR_i;
+(*A_NILCHECK(NKEACTR_ki)) = RQEACTR_i;
 } 
  /* line 5487: */
  /* line 5488: */
@@ -24746,20 +24746,20 @@ RQEACTR_i+=1;
 break;
 default: 
  /* line 5489: */
-if ((*NKEACTR_ki)!=0)
+if ((*A_NILCHECK(NKEACTR_ki))!=0)
 { 
-(void)(A_CALLPROC(LLEACTR_repmode,(RQEACTR_i, (*NKEACTR_ki)),(RQEACTR_i, (*NKEACTR_ki),(LLEACTR_repmode).nonlocals)));
-FTEACTR = (&A_VINDEX(NL(KUAACTR_modes),(*NKEACTR_ki))) ;
-(void)((*FTEACTR) = (*(&A_VINDEX(NL(KUAACTR_modes),RQEACTR_i))));
+(void)(A_CALLPROC(LLEACTR_repmode,(RQEACTR_i, (*A_NILCHECK(NKEACTR_ki))),(RQEACTR_i, (*A_NILCHECK(NKEACTR_ki)),(LLEACTR_repmode).nonlocals)));
+FTEACTR = (&A_VINDEX(NL(KUAACTR_modes),(*A_NILCHECK(NKEACTR_ki)))) ;
+(void)((*A_NILCHECK(FTEACTR)) = (*A_NILCHECK((&A_VINDEX(NL(KUAACTR_modes),RQEACTR_i)))));
  /* line 5490: */
-GTEACTR = (&((&TLEACTR_asa)->Mode)) ;
-(void)((*GTEACTR) = (*NKEACTR_ki));
+GTEACTR = (&(A_NILCHECK((&TLEACTR_asa))->Mode)) ;
+(void)((*A_NILCHECK(GTEACTR)) = (*A_NILCHECK(NKEACTR_ki)));
 ITEACTR = (&A_VINDEX(NL(KUAACTR_modes),RQEACTR_i)) ;
-(void)((*ITEACTR) = A_UNITE(HTEACTR,mode11,11,TLEACTR_asa));
+(void)((*A_NILCHECK(ITEACTR)) = A_UNITE(HTEACTR,mode11,11,TLEACTR_asa));
  /* line 5491: */
-(void)(RQEACTR_i = ((*NKEACTR_ki)+1));
+(void)(RQEACTR_i = ((*A_NILCHECK(NKEACTR_ki))+1));
  /* line 5492: */
-(*NKEACTR_ki) = 0;
+(*A_NILCHECK(NKEACTR_ki)) = 0;
 } 
 else
 { 
@@ -24772,7 +24772,7 @@ break;
 } 
 }
  /* line 5497: */
-LTEACTR = A_VTRIM(KTEACTR,(CMEACTR_allids),A_VTSCRIPT(&(KTEACTR.upb),(CMEACTR_allids).upb,1,(*ULEACTR_noids))) ;
+LTEACTR = A_VTRIM(KTEACTR,(CMEACTR_allids),A_VTSCRIPT(&(KTEACTR.upb),(CMEACTR_allids).upb,1,(*A_NILCHECK(ULEACTR_noids)))) ;
 MTEACTR = LTEACTR.upb -1;
 JTEACTR_id = LTEACTR.data;
 for (;MTEACTR-- >= 0;
@@ -24781,8 +24781,8 @@ for (;MTEACTR-- >= 0;
 {
  /* line 5498: */
 NTEACTR.Bu = Bu;
-NTEACTR.Level = (*NL(TZAACTR_modulelevel));
-NTEACTR.Id = (*JTEACTR_id);
+NTEACTR.Level = (*A_NILCHECK(NL(TZAACTR_modulelevel)));
+NTEACTR.Id = (*A_NILCHECK(JTEACTR_id));
  /* line 5499: */
 (void)(A_CALLPROC(NL(Output),(A_UNITE(OTEACTR,mode26,26,NTEACTR), 2),(A_UNITE(OTEACTR,mode26,26,NTEACTR), 2,(NL(Output)).nonlocals)));
 }
@@ -24790,7 +24790,7 @@ NTEACTR.Id = (*JTEACTR_id);
 for ( ;; )
 { 
  /* line 5502: */
-PTEACTR = (*(&A_VINDEX(NL(KUAACTR_modes),(*NL(VYAACTR_lastmode))))) ;
+PTEACTR = (*A_NILCHECK((&A_VINDEX(NL(KUAACTR_modes),(*A_NILCHECK(NL(VYAACTR_lastmode))))))) ;
 switch ( PTEACTR.mode )
 { 
 case 11: /* STRUCT(INT)  */
@@ -24806,7 +24806,7 @@ break;
 } 
 STEACTR = RTEACTR;
 if ( !STEACTR ) break;
-(*NL(VYAACTR_lastmode))-=1;
+(*A_NILCHECK(NL(VYAACTR_lastmode)))-=1;
 }
  /* line 5506: */
 } 
@@ -24842,13 +24842,13 @@ A68_VC  EVEACTR_s A_UNUSED = {0};
 A_PROC_ENTRY(treatspec);
  /* line 5511: */
 { 
-A_CALLPROC(NL(Givespec),((*Name), (*P), Ym, &AUEACTR),((*Name), (*P), Ym, &AUEACTR,(NL(Givespec)).nonlocals));
+A_CALLPROC(NL(Givespec),((*A_NILCHECK(Name)), (*A_NILCHECK(P)), Ym, &AUEACTR),((*A_NILCHECK(Name)), (*A_NILCHECK(P)), Ym, &AUEACTR,(NL(Givespec)).nonlocals));
 ZTEACTR_ys = AUEACTR;
  /* line 5512: */
-BUEACTR_xs = (&((&ZTEACTR_ys)->Xs));
+BUEACTR_xs = (&(A_NILCHECK((&ZTEACTR_ys))->Xs));
  /* line 5513: */
  /* line 5514: */
-DUEACTR_x = (&((&CUEACTR_y)->Xmi));
+DUEACTR_x = (&(A_NILCHECK((&CUEACTR_y))->Xmi));
  /* line 5516: */
  /* line 5517: */
 A_CLOSURE( EUEACTR_setc, FUEACTR_setc, GUEACTR_setc );
@@ -24863,7 +24863,7 @@ A_CLOSURE( EUEACTR_setc, FUEACTR_setc, GUEACTR_setc );
 (( GUEACTR_setc * ) ( EUEACTR_setc.nonlocals )) -> QYAACTR_globcurrent = NL(QYAACTR_globcurrent);
  /* line 5527: */
  /* line 5528: */
-if ((*(&(BUEACTR_xs->No)))<=0)
+if ((*A_NILCHECK((&(A_NILCHECK(BUEACTR_xs)->No))))<=0)
 { 
  /* line 5530: */
 (void)(A_CALLPROC(NL(PZBACTR_faultp),(124, 0, 0, Name),(124, 0, 0, Name,(NL(PZBACTR_faultp)).nonlocals)));
@@ -24871,7 +24871,7 @@ if ((*(&(BUEACTR_xs->No)))<=0)
 else
 { 
  /* line 5531: */
-LUEACTR = (*(&(BUEACTR_xs->U))) ;
+LUEACTR = (*A_NILCHECK((&(A_NILCHECK(BUEACTR_xs)->U)))) ;
 switch ( LUEACTR.mode )
 { 
 case 2: /* REF VECTOR [] MODE42 */
@@ -24890,16 +24890,16 @@ for ( VUEACTR_i = 1;
 VUEACTR_i <= WUEACTR;
 VUEACTR_i += 1 )
 { 
-A_CALLPROC(NL(Givemoduledetails),((*(&((&A_VINDEX(TUEACTR_c,VUEACTR_i))->N))), 0, A68_FALSE, &XUEACTR),((*(&((&A_VINDEX(TUEACTR_c,VUEACTR_i))->N))), 0, A68_FALSE, &XUEACTR,(NL(Givemoduledetails)).nonlocals));
+A_CALLPROC(NL(Givemoduledetails),((*A_NILCHECK((&(A_NILCHECK((&A_VINDEX(TUEACTR_c,VUEACTR_i)))->N)))), 0, A68_FALSE, &XUEACTR),((*A_NILCHECK((&(A_NILCHECK((&A_VINDEX(TUEACTR_c,VUEACTR_i)))->N)))), 0, A68_FALSE, &XUEACTR,(NL(Givemoduledetails)).nonlocals));
 CUEACTR_y = XUEACTR;
  /* line 5535: */
  /* line 5536: */
  /* line 5537: */
-if ((*(&(DUEACTR_x->Type)))<=0)
+if ((*A_NILCHECK((&(A_NILCHECK(DUEACTR_x)->Type))))<=0)
 { 
  /* line 5538: */
  /* line 5539: */
-if ((*(&(DUEACTR_x->Type)))==(-2))
+if ((*A_NILCHECK((&(A_NILCHECK(DUEACTR_x)->Type))))==(-2))
 { 
  /* line 5540: */
 YUEACTR = 160;
@@ -24909,7 +24909,7 @@ else
 YUEACTR = 125;
 } 
  /* line 5541: */
-(void)(A_CALLPROC(NL(PZBACTR_faultp),(YUEACTR, 0, 0, (&((&A_VINDEX(TUEACTR_c,VUEACTR_i))->N))),(YUEACTR, 0, 0, (&((&A_VINDEX(TUEACTR_c,VUEACTR_i))->N)),(NL(PZBACTR_faultp)).nonlocals)));
+(void)(A_CALLPROC(NL(PZBACTR_faultp),(YUEACTR, 0, 0, (&(A_NILCHECK((&A_VINDEX(TUEACTR_c,VUEACTR_i)))->N))),(YUEACTR, 0, 0, (&(A_NILCHECK((&A_VINDEX(TUEACTR_c,VUEACTR_i)))->N)),(NL(PZBACTR_faultp)).nonlocals)));
 } 
 else
 { 
@@ -24917,32 +24917,32 @@ else
  /* line 5543: */
  /* line 5544: */
  /* line 5545: */
-(void)(A_CALLPROC(NL(WTEACTR_treatspec),((&((&A_VINDEX(TUEACTR_c,VUEACTR_i))->N)), (&((&A_VINDEX(TUEACTR_c,VUEACTR_i))->F)), (*(&((&CUEACTR_y)->Ym)))),((&((&A_VINDEX(TUEACTR_c,VUEACTR_i))->N)), (&((&A_VINDEX(TUEACTR_c,VUEACTR_i))->F)), (*(&((&CUEACTR_y)->Ym))),(NL(WTEACTR_treatspec)).nonlocals)));
+(void)(A_CALLPROC(NL(WTEACTR_treatspec),((&(A_NILCHECK((&A_VINDEX(TUEACTR_c,VUEACTR_i)))->N)), (&(A_NILCHECK((&A_VINDEX(TUEACTR_c,VUEACTR_i)))->F)), (*A_NILCHECK((&(A_NILCHECK((&CUEACTR_y))->Ym))))),((&(A_NILCHECK((&A_VINDEX(TUEACTR_c,VUEACTR_i)))->N)), (&(A_NILCHECK((&A_VINDEX(TUEACTR_c,VUEACTR_i)))->F)), (*A_NILCHECK((&(A_NILCHECK((&CUEACTR_y))->Ym)))),(NL(WTEACTR_treatspec)).nonlocals)));
 } 
 }
  /* line 5546: */
 (void)(A_CALLPROC(EUEACTR_setc,(),((EUEACTR_setc).nonlocals)));
  /* line 5547: */
-ZUEACTR = (&((*NL(QYAACTR_globcurrent))->Lastid)) ;
-(*ZUEACTR)+=1;
+ZUEACTR = (&(A_NILCHECK((*A_NILCHECK(NL(QYAACTR_globcurrent))))->Lastid)) ;
+(*A_NILCHECK(ZUEACTR))+=1;
  /* line 5548: */
 AVEACTR.Bu = A68_FALSE;
  /* line 5549: */
-AVEACTR.Level = (*NL(TZAACTR_modulelevel));
+AVEACTR.Level = (*A_NILCHECK(NL(TZAACTR_modulelevel)));
  /* line 5550: */
  /* line 5551: */
 BVEACTR.Name = NL(BZAACTR_nullid);
  /* line 5552: */
-BVEACTR.Decno = (*(&((*NL(QYAACTR_globcurrent))->Lastid)));
-BVEACTR.Level = (*(&((*NL(QYAACTR_globcurrent))->Level)));
+BVEACTR.Decno = (*A_NILCHECK((&(A_NILCHECK((*A_NILCHECK(NL(QYAACTR_globcurrent))))->Lastid))));
+BVEACTR.Level = (*A_NILCHECK((&(A_NILCHECK((*A_NILCHECK(NL(QYAACTR_globcurrent))))->Level))));
  /* line 5553: */
 BVEACTR.Mode = ELAACTR_int;
  /* line 5554: */
-BVEACTR.Scope = (*(&((*NL(QYAACTR_globcurrent))->Lastid)));
+BVEACTR.Scope = (*A_NILCHECK((&(A_NILCHECK((*A_NILCHECK(NL(QYAACTR_globcurrent))))->Lastid))));
  /* line 5555: */
 BVEACTR.Rest = (A68_67 *)A68_NIL;
 CVEACTR = A_LOC(A68_67 ) ;
-(void)((*CVEACTR) = BVEACTR) ;
+(void)((*A_NILCHECK(CVEACTR)) = BVEACTR) ;
 AVEACTR.Id = CVEACTR;
  /* line 5556: */
  /* line 5557: */
@@ -24964,7 +24964,7 @@ EVEACTR_s = (LUEACTR.data.mode1);
  /* line 5566: */
  /* line 5567: */
  /* line 5568: */
-(void)(A_CALLPROC(NL(KKEACTR_simplespec),(A68_FALSE, (*(&((*NL(QYAACTR_globcurrent))->Ids))), (*(&((*NL(QYAACTR_globcurrent))->Indics))), (&((*NL(QYAACTR_globcurrent))->Lastid)), ((*(&((*NL(QYAACTR_globcurrent))->Lastid)))+1), EVEACTR_s),(A68_FALSE, (*(&((*NL(QYAACTR_globcurrent))->Ids))), (*(&((*NL(QYAACTR_globcurrent))->Indics))), (&((*NL(QYAACTR_globcurrent))->Lastid)), ((*(&((*NL(QYAACTR_globcurrent))->Lastid)))+1), EVEACTR_s,(NL(KKEACTR_simplespec)).nonlocals)));
+(void)(A_CALLPROC(NL(KKEACTR_simplespec),(A68_FALSE, (*A_NILCHECK((&(A_NILCHECK((*A_NILCHECK(NL(QYAACTR_globcurrent))))->Ids)))), (*A_NILCHECK((&(A_NILCHECK((*A_NILCHECK(NL(QYAACTR_globcurrent))))->Indics)))), (&(A_NILCHECK((*A_NILCHECK(NL(QYAACTR_globcurrent))))->Lastid)), ((*A_NILCHECK((&(A_NILCHECK((*A_NILCHECK(NL(QYAACTR_globcurrent))))->Lastid))))+1), EVEACTR_s),(A68_FALSE, (*A_NILCHECK((&(A_NILCHECK((*A_NILCHECK(NL(QYAACTR_globcurrent))))->Ids)))), (*A_NILCHECK((&(A_NILCHECK((*A_NILCHECK(NL(QYAACTR_globcurrent))))->Indics)))), (&(A_NILCHECK((*A_NILCHECK(NL(QYAACTR_globcurrent))))->Lastid)), ((*A_NILCHECK((&(A_NILCHECK((*A_NILCHECK(NL(QYAACTR_globcurrent))))->Lastid))))+1), EVEACTR_s,(NL(KKEACTR_simplespec)).nonlocals)));
 } 
 break;
 default: 
@@ -25044,39 +25044,39 @@ A_PROC_ENTRY(closure);
  /* line 5571: */
  /* line 5572: */
 { 
-A_CALLPROC(NL(Givemoduledetails),((*(&(C->Name))), 0, A68_TRUE, &LVEACTR),((*(&(C->Name))), 0, A68_TRUE, &LVEACTR,(NL(Givemoduledetails)).nonlocals));
+A_CALLPROC(NL(Givemoduledetails),((*A_NILCHECK((&(A_NILCHECK(C)->Name)))), 0, A68_TRUE, &LVEACTR),((*A_NILCHECK((&(A_NILCHECK(C)->Name)))), 0, A68_TRUE, &LVEACTR,(NL(Givemoduledetails)).nonlocals));
 KVEACTR_y = LVEACTR;
  /* line 5573: */
-MVEACTR_x = (&((&KVEACTR_y)->Xmi));
+MVEACTR_x = (&(A_NILCHECK((&KVEACTR_y))->Xmi));
  /* line 5574: */
 NVEACTR_i = 0;
-OVEACTR_rm = ((*NL(UZAACTR_nextmodule))+=1);
+OVEACTR_rm = ((*A_NILCHECK(NL(UZAACTR_nextmodule)))+=1);
  /* line 5575: */
-PVEACTR.Type = (*(&(MVEACTR_x->Type)));
+PVEACTR.Type = (*A_NILCHECK((&(A_NILCHECK(MVEACTR_x)->Type))));
 PVEACTR.Moduleno = OVEACTR_rm;
-PVEACTR.Name = (*(&(C->Name)));
-PVEACTR.Ym = (*(&((&KVEACTR_y)->Ym)));
-(void)(A_CALLPROC(NL(Output),(A_UNITE(QVEACTR,mode25,25,PVEACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(QVEACTR,mode25,25,PVEACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+PVEACTR.Name = (*A_NILCHECK((&(A_NILCHECK(C)->Name))));
+PVEACTR.Ym = (*A_NILCHECK((&(A_NILCHECK((&KVEACTR_y))->Ym))));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(QVEACTR,mode25,25,PVEACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(QVEACTR,mode25,25,PVEACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 5576: */
  /* line 5577: */
  /* line 5578: */
  /* line 5579: */
-if ((*(&((&(MVEACTR_x->G))->Level)))==0)
+if ((*A_NILCHECK((&(A_NILCHECK((&(A_NILCHECK(MVEACTR_x)->G)))->Level))))==0)
 { 
  /* line 5580: */
-SVEACTR = (*(&(MVEACTR_x->L)));
+SVEACTR = (*A_NILCHECK((&(A_NILCHECK(MVEACTR_x)->L))));
 } 
 else
 { 
-SVEACTR = (*(&(MVEACTR_x->G)));
+SVEACTR = (*A_NILCHECK((&(A_NILCHECK(MVEACTR_x)->G))));
 } 
-TVEACTR = (&((&RVEACTR_ncon)->G)) ;
-(*TVEACTR) = SVEACTR;
+TVEACTR = (&(A_NILCHECK((&RVEACTR_ncon))->G)) ;
+(*A_NILCHECK(TVEACTR)) = SVEACTR;
  /* line 5581: */
-UVEACTR = (&((&RVEACTR_ncon)->Rest)) ;
-(*UVEACTR) = Con;
+UVEACTR = (&(A_NILCHECK((&RVEACTR_ncon))->Rest)) ;
+(*A_NILCHECK(UVEACTR)) = Con;
  /* line 5582: */
-VVEACTR_sb = (*(&(C->S)));
+VVEACTR_sb = (*A_NILCHECK((&(A_NILCHECK(C)->S))));
  /* line 5584: */
 for ( ;; )
 { 
@@ -25085,16 +25085,16 @@ if ( !((VVEACTR_sb!=HQAACTR_nilsubl)) ) break;
 NVEACTR_i+=1;
  /* line 5586: */
  /* line 5587: */
-(void)(VVEACTR_sb = (*(&(VVEACTR_sb->Rest))));
+(void)(VVEACTR_sb = (*A_NILCHECK((&(A_NILCHECK(VVEACTR_sb)->Rest)))));
 }
  /* line 5589: */
  /* line 5590: */
  /* line 5591: */
-if ((*(&(MVEACTR_x->Type)))<0)
+if ((*A_NILCHECK((&(A_NILCHECK(MVEACTR_x)->Type))))<0)
 { 
  /* line 5592: */
  /* line 5593: */
-if ((*(&(MVEACTR_x->Type)))==(-1))
+if ((*A_NILCHECK((&(A_NILCHECK(MVEACTR_x)->Type))))==(-1))
 { 
  /* line 5594: */
 WVEACTR = 199;
@@ -25103,7 +25103,7 @@ else
 { 
 WVEACTR = 160;
 } 
-(void)(A_CALLPROC(NL(PZBACTR_faultp),(WVEACTR, 0, 0, (&(C->Name))),(WVEACTR, 0, 0, (&(C->Name)),(NL(PZBACTR_faultp)).nonlocals)));
+(void)(A_CALLPROC(NL(PZBACTR_faultp),(WVEACTR, 0, 0, (&(A_NILCHECK(C)->Name))),(WVEACTR, 0, 0, (&(A_NILCHECK(C)->Name)),(NL(PZBACTR_faultp)).nonlocals)));
  /* line 5595: */
  /* line 5596: */
 XVEACTR = 0;
@@ -25111,30 +25111,30 @@ XVEACTR = 0;
 else
 { 
  /* line 5597: */
-if (NVEACTR_i!=(*(&(MVEACTR_x->Type))))
+if (NVEACTR_i!=(*A_NILCHECK((&(A_NILCHECK(MVEACTR_x)->Type)))))
 { 
-(void)(A_CALLPROC(NL(PZBACTR_faultp),(126, 0, 0, (&(C->Name))),(126, 0, 0, (&(C->Name)),(NL(PZBACTR_faultp)).nonlocals)));
+(void)(A_CALLPROC(NL(PZBACTR_faultp),(126, 0, 0, (&(A_NILCHECK(C)->Name))),(126, 0, 0, (&(A_NILCHECK(C)->Name)),(NL(PZBACTR_faultp)).nonlocals)));
  /* line 5599: */
  /* line 5600: */
 XVEACTR = 0;
 } 
 else
 { 
-YVEACTR = ((*(&((&(MVEACTR_x->L))->Level)))!=0);
+YVEACTR = ((*A_NILCHECK((&(A_NILCHECK((&(A_NILCHECK(MVEACTR_x)->L)))->Level))))!=0);
 if ( YVEACTR )
 { /* line 5601: */
 YVEACTR = (Con!=EQAACTR_nilcon);
 }
 if ( YVEACTR )
-{YVEACTR = VABACTR_((&(MVEACTR_x->L)), (&(Con->L)));
+{YVEACTR = VABACTR_((&(A_NILCHECK(MVEACTR_x)->L)), (&(A_NILCHECK(Con)->L)));
 }
 if ( YVEACTR )
 { /* line 5602: */
-YVEACTR = VABACTR_((&(MVEACTR_x->L)), (&(Con->G)));
+YVEACTR = VABACTR_((&(A_NILCHECK(MVEACTR_x)->L)), (&(A_NILCHECK(Con)->G)));
 }
 if (YVEACTR)
 { 
-(void)(A_CALLPROC(NL(PZBACTR_faultp),(127, 0, 0, (&(C->Name))),(127, 0, 0, (&(C->Name)),(NL(PZBACTR_faultp)).nonlocals)));
+(void)(A_CALLPROC(NL(PZBACTR_faultp),(127, 0, 0, (&(A_NILCHECK(C)->Name))),(127, 0, 0, (&(A_NILCHECK(C)->Name)),(NL(PZBACTR_faultp)).nonlocals)));
  /* line 5604: */
  /* line 5605: */
 XVEACTR = 0;
@@ -25158,11 +25158,11 @@ GWEACTR_actuals = HWEACTR;
  /* line 5610: */
  /* line 5611: */
  /* line 5612: */
-NWEACTR_xs = (&((&MWEACTR_ys)->Xs));
+NWEACTR_xs = (&(A_NILCHECK((&MWEACTR_ys))->Xs));
  /* line 5613: */
  /* line 5614: */
  /* line 5615: */
-(void)(VVEACTR_sb = (*(&(C->S))));
+(void)(VVEACTR_sb = (*A_NILCHECK((&(A_NILCHECK(C)->S)))));
  /* line 5617: */
  /* line 5618: */
 QWEACTR = NVEACTR_i;
@@ -25170,26 +25170,26 @@ for ( RWEACTR = 1;
 RWEACTR <= QWEACTR;
 RWEACTR += 1 )
 { 
-A_CALLPROC(NL(Givespec),((*(&(C->Name))), (*(&(VVEACTR_sb->Proxy))), (*(&((&KVEACTR_y)->Ym))), &SWEACTR),((*(&(C->Name))), (*(&(VVEACTR_sb->Proxy))), (*(&((&KVEACTR_y)->Ym))), &SWEACTR,(NL(Givespec)).nonlocals));
+A_CALLPROC(NL(Givespec),((*A_NILCHECK((&(A_NILCHECK(C)->Name)))), (*A_NILCHECK((&(A_NILCHECK(VVEACTR_sb)->Proxy)))), (*A_NILCHECK((&(A_NILCHECK((&KVEACTR_y))->Ym)))), &SWEACTR),((*A_NILCHECK((&(A_NILCHECK(C)->Name)))), (*A_NILCHECK((&(A_NILCHECK(VVEACTR_sb)->Proxy)))), (*A_NILCHECK((&(A_NILCHECK((&KVEACTR_y))->Ym)))), &SWEACTR,(NL(Givespec)).nonlocals));
 MWEACTR_ys = SWEACTR;
  /* line 5619: */
-TWEACTR.N = (*(&(C->Name)));
-TWEACTR.F = (*(&(VVEACTR_sb->Proxy)));
-TWEACTR.Level = (*(&(NWEACTR_xs->Nl)));
-UWEACTR = (&((&RVEACTR_ncon)->L)) ;
-(*UWEACTR) = TWEACTR;
+TWEACTR.N = (*A_NILCHECK((&(A_NILCHECK(C)->Name))));
+TWEACTR.F = (*A_NILCHECK((&(A_NILCHECK(VVEACTR_sb)->Proxy))));
+TWEACTR.Level = (*A_NILCHECK((&(A_NILCHECK(NWEACTR_xs)->Nl))));
+UWEACTR = (&(A_NILCHECK((&RVEACTR_ncon))->L)) ;
+(*A_NILCHECK(UWEACTR)) = TWEACTR;
  /* line 5621: */
  /* line 5622: */
-if ((*(&(NWEACTR_xs->No)))<=0)
+if ((*A_NILCHECK((&(A_NILCHECK(NWEACTR_xs)->No))))<=0)
 { 
  /* line 5624: */
-(void)(A_CALLPROC(NL(PZBACTR_faultp),(128, 0, 0, (&(VVEACTR_sb->Proxy))),(128, 0, 0, (&(VVEACTR_sb->Proxy)),(NL(PZBACTR_faultp)).nonlocals)));
+(void)(A_CALLPROC(NL(PZBACTR_faultp),(128, 0, 0, (&(A_NILCHECK(VVEACTR_sb)->Proxy))),(128, 0, 0, (&(A_NILCHECK(VVEACTR_sb)->Proxy)),(NL(PZBACTR_faultp)).nonlocals)));
 } 
 else
 { 
  /* line 5625: */
  /* line 5626: */
-VWEACTR = (*(&(VVEACTR_sb->A))) ;
+VWEACTR = (*A_NILCHECK((&(A_NILCHECK(VVEACTR_sb)->A)))) ;
 switch ( VWEACTR.mode )
 { 
 case 1: /* REF STRUCT(MODE31,REF MODE116)  */
@@ -25210,14 +25210,14 @@ for ( ;; )
 { 
  /* line 5633: */
 if ( !((ZVEACTR_g!=EQAACTR_nilcon)) ) break;
-(void)(IWEACTR_j+=(*(&((&(ZVEACTR_g->L))->Level))));
+(void)(IWEACTR_j+=(*A_NILCHECK((&(A_NILCHECK((&(A_NILCHECK(ZVEACTR_g)->L)))->Level)))));
  /* line 5634: */
 JWEACTR_k+=1;
  /* line 5635: */
-(void)(LWEACTR_u = (*(&((&(ZVEACTR_g->G))->Level))));
+(void)(LWEACTR_u = (*A_NILCHECK((&(A_NILCHECK((&(A_NILCHECK(ZVEACTR_g)->G)))->Level)))));
  /* line 5636: */
  /* line 5637: */
-(void)(ZVEACTR_g = (*(&(ZVEACTR_g->Rest))));
+(void)(ZVEACTR_g = (*A_NILCHECK((&(A_NILCHECK(ZVEACTR_g)->Rest)))));
 }
  /* line 5639: */
 A_CLOSURE( AXEACTR_generator, BXEACTR_generator, CXEACTR_generator );
@@ -25231,13 +25231,13 @@ A_CALLPROC(HXEACTR_generator,(A68_TRUE, &MXEACTR),(A68_TRUE, &MXEACTR,(HXEACTR_g
 PWEACTR_kc = MXEACTR;
  /* line 5642: */
  /* line 5644: */
-NXEACTR.Name = (*(&(YWEACTR_p->Name)));
+NXEACTR.Name = (*A_NILCHECK((&(A_NILCHECK(YWEACTR_p)->Name))));
  /* line 5645: */
-NXEACTR.Maxlevel = ((*(&((&((&RVEACTR_ncon)->L))->Level)))+(*(&((&((&RVEACTR_ncon)->G))->Level))));
+NXEACTR.Maxlevel = ((*A_NILCHECK((&(A_NILCHECK((&(A_NILCHECK((&RVEACTR_ncon))->L)))->Level))))+(*A_NILCHECK((&(A_NILCHECK((&(A_NILCHECK((&RVEACTR_ncon))->G)))->Level)))));
 NXEACTR.Nof = 0;
  /* line 5646: */
-NXEACTR.Moduleno = (*NL(UZAACTR_nextmodule))+=1;
-(void)(A_CALLPROC(NL(Output),(A_UNITE(OXEACTR,mode23,23,NXEACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(OXEACTR,mode23,23,NXEACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+NXEACTR.Moduleno = (*A_NILCHECK(NL(UZAACTR_nextmodule)))+=1;
+(void)(A_CALLPROC(NL(Output),(A_UNITE(OXEACTR,mode23,23,NXEACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(OXEACTR,mode23,23,NXEACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 5647: */
 (void)(ZVEACTR_g = (&RVEACTR_ncon));
  /* line 5648: */
@@ -25262,38 +25262,38 @@ else
 { 
  /* line 5653: */
  /* line 5655: */
-RXEACTR.J = ((*(&((&(ZVEACTR_g->G))->Level)))+1);
+RXEACTR.J = ((*A_NILCHECK((&(A_NILCHECK((&(A_NILCHECK(ZVEACTR_g)->G)))->Level))))+1);
 } 
  /* line 5656: */
-RXEACTR.K = ((*(&((&(ZVEACTR_g->L))->Level)))+(*(&((&(ZVEACTR_g->G))->Level))));
+RXEACTR.K = ((*A_NILCHECK((&(A_NILCHECK((&(A_NILCHECK(ZVEACTR_g)->L)))->Level))))+(*A_NILCHECK((&(A_NILCHECK((&(A_NILCHECK(ZVEACTR_g)->G)))->Level)))));
 SXEACTR = (&A_VINDEX(OWEACTR_kp,PXEACTR_i)) ;
-(*SXEACTR) = RXEACTR;
+(*A_NILCHECK(SXEACTR)) = RXEACTR;
  /* line 5657: */
 TXEACTR = (&A_VINDEX(PWEACTR_kc,PXEACTR_i)) ;
-(void)((*TXEACTR) = (*(&(ZVEACTR_g->L))));
+(void)((*A_NILCHECK(TXEACTR)) = (*A_NILCHECK((&(A_NILCHECK(ZVEACTR_g)->L)))));
  /* line 5658: */
 KWEACTR_l+=1;
  /* line 5659: */
  /* line 5660: */
-(void)(ZVEACTR_g = (*(&(ZVEACTR_g->Rest))));
+(void)(ZVEACTR_g = (*A_NILCHECK((&(A_NILCHECK(ZVEACTR_g)->Rest)))));
 }
  /* line 5661: */
-UXEACTR.Body.I = (*(&(YWEACTR_p->No)));
+UXEACTR.Body.I = (*A_NILCHECK((&(A_NILCHECK(YWEACTR_p)->No))));
  /* line 5662: */
 UXEACTR.Body.J = KWEACTR_l;
 UXEACTR.Kset = OWEACTR_kp;
  /* line 5663: */
 UXEACTR.Keeps = A_VVAC(VXEACTR);
 UXEACTR.Last = KWEACTR_l;
-(void)(A_CALLPROC(NL(Output),(A_UNITE(WXEACTR,mode27,27,UXEACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(WXEACTR,mode27,27,UXEACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(WXEACTR,mode27,27,UXEACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(WXEACTR,mode27,27,UXEACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 5664: */
-XXEACTR.Moduleno = (*NL(UZAACTR_nextmodule));
+XXEACTR.Moduleno = (*A_NILCHECK(NL(UZAACTR_nextmodule)));
 XXEACTR.Nof = 0;
-(void)(A_CALLPROC(NL(Output),(A_UNITE(YXEACTR,mode24,24,XXEACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(YXEACTR,mode24,24,XXEACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(YXEACTR,mode24,24,XXEACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(YXEACTR,mode24,24,XXEACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 5665: */
-ZXEACTR.F = (*(&(YWEACTR_p->Name)));
+ZXEACTR.F = (*A_NILCHECK((&(A_NILCHECK(YWEACTR_p)->Name))));
  /* line 5666: */
-ZXEACTR.No = (*(&(YWEACTR_p->No)));
+ZXEACTR.No = (*A_NILCHECK((&(A_NILCHECK(YWEACTR_p)->No))));
 ZXEACTR.Nl = IWEACTR_j;
  /* line 5667: */
 ZXEACTR.Ng = LWEACTR_u;
@@ -25303,7 +25303,7 @@ ZXEACTR.U = A_UNITE(AYEACTR,mode2,2,PWEACTR_kc);
  /* line 5669: */
  /* line 5670: */
  /* line 5671: */
-XWEACTR = (*NL(UZAACTR_nextmodule));
+XWEACTR = (*A_NILCHECK(NL(UZAACTR_nextmodule)));
 } 
 break;
 default: 
@@ -25311,23 +25311,23 @@ default:
 XWEACTR = 0;
 break;
 } 
-CYEACTR = (*(&(NWEACTR_xs->No))) ;
+CYEACTR = (*A_NILCHECK((&(A_NILCHECK(NWEACTR_xs)->No)))) ;
 DYEACTR = (&A_VINDEX(GWEACTR_actuals,CYEACTR)) ;
-(*DYEACTR) = XWEACTR;
+(*A_NILCHECK(DYEACTR)) = XWEACTR;
 } 
  /* line 5673: */
  /* line 5674: */
-(void)(VVEACTR_sb = (*(&(VVEACTR_sb->Rest))));
+(void)(VVEACTR_sb = (*A_NILCHECK((&(A_NILCHECK(VVEACTR_sb)->Rest)))));
 }
  /* line 5675: */
 EYEACTR.Body = OVEACTR_rm;
 EYEACTR.Actuals = GWEACTR_actuals;
-EYEACTR.Moduleno = (*NL(UZAACTR_nextmodule))+=1;
-(void)(A_CALLPROC(NL(Output),(A_UNITE(FYEACTR,mode28,28,EYEACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(FYEACTR,mode28,28,EYEACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+EYEACTR.Moduleno = (*A_NILCHECK(NL(UZAACTR_nextmodule)))+=1;
+(void)(A_CALLPROC(NL(Output),(A_UNITE(FYEACTR,mode28,28,EYEACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(FYEACTR,mode28,28,EYEACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 5676: */
  /* line 5677: */
  /* line 5678: */
-XVEACTR = (*NL(UZAACTR_nextmodule));
+XVEACTR = (*A_NILCHECK(NL(UZAACTR_nextmodule)));
 } 
 } 
 } 
@@ -25384,7 +25384,7 @@ A_PROC_ENTRY(makekeepinfo);
 { 
 QYEACTR_ki = 0;
  /* line 5686: */
-(*NL(QSAACTR_compsize)) = 0;
+(*A_NILCHECK(NL(QSAACTR_compsize))) = 0;
  /* line 5688: */
 A_CLOSURE( UYEACTR_mdno, VYEACTR_mdno, WYEACTR_mdno );
 (( WYEACTR_mdno * ) ( UYEACTR_mdno.nonlocals )) -> QSAACTR_compsize = NL(QSAACTR_compsize);
@@ -25439,16 +25439,16 @@ for ( ;; )
  /* line 5860: */
 if ( !((AAFACTR_klist!=IQAACTR_nilkl)) ) break;
  /* line 5861: */
-DCFACTR = (*(&(AAFACTR_klist->U))) ;
+DCFACTR = (*A_NILCHECK((&(A_NILCHECK(AAFACTR_klist)->U)))) ;
 switch ( DCFACTR.mode )
 { 
 case 1: /* REF STRUCT(MODE31,INT,INT,INT,INT,REF MODE67)  */
 ECFACTR_idd = (DCFACTR.data.mode1);
  /* line 5862: */
 { 
-(void)(BAFACTR_i = A_CALLPROC(WAFACTR_keepmode,((*(&(ECFACTR_idd->Mode)))),((*(&(ECFACTR_idd->Mode))),(WAFACTR_keepmode).nonlocals)));
+(void)(BAFACTR_i = A_CALLPROC(WAFACTR_keepmode,((*A_NILCHECK((&(A_NILCHECK(ECFACTR_idd)->Mode))))),((*A_NILCHECK((&(A_NILCHECK(ECFACTR_idd)->Mode)))),(WAFACTR_keepmode).nonlocals)));
  /* line 5863: */
-(void)(CAFACTR_j = (*(&(ECFACTR_idd->Decno))));
+(void)(CAFACTR_j = (*A_NILCHECK((&(A_NILCHECK(ECFACTR_idd)->Decno)))));
  /* line 5864: */
 if (CAFACTR_j>=0)
 { 
@@ -25460,7 +25460,7 @@ FCFACTR = 2;
 } 
 (void)(A_CALLPROC(AZEACTR_kc,(FCFACTR),(FCFACTR,(AZEACTR_kc).nonlocals)));
  /* line 5865: */
-HCFACTR = (*(&(ECFACTR_idd->Name))) ;
+HCFACTR = (*A_NILCHECK((&(A_NILCHECK(ECFACTR_idd)->Name)))) ;
 (void)(A_CALLPROC(PZEACTR_ks,(A_HISVEC(GCFACTR,HCFACTR,32,A68_CHAR )),(A_HISVEC(GCFACTR,HCFACTR,32,A68_CHAR ),(PZEACTR_ks).nonlocals)));
  /* line 5866: */
 if (CAFACTR_j<0)
@@ -25476,7 +25476,7 @@ if (CAFACTR_j>=0)
  /* line 5870: */
  /* line 5871: */
  /* line 5872: */
-(void)(A_CALLPROC(UYEACTR_mdno,((*(&(ECFACTR_idd->Decno))), (*(&(ECFACTR_idd->Mode)))),((*(&(ECFACTR_idd->Decno))), (*(&(ECFACTR_idd->Mode))),(UYEACTR_mdno).nonlocals)));
+(void)(A_CALLPROC(UYEACTR_mdno,((*A_NILCHECK((&(A_NILCHECK(ECFACTR_idd)->Decno)))), (*A_NILCHECK((&(A_NILCHECK(ECFACTR_idd)->Mode))))),((*A_NILCHECK((&(A_NILCHECK(ECFACTR_idd)->Decno)))), (*A_NILCHECK((&(A_NILCHECK(ECFACTR_idd)->Mode)))),(UYEACTR_mdno).nonlocals)));
 } 
 } 
 break;
@@ -25484,19 +25484,19 @@ case 2: /* REF STRUCT(MODE31,INT,INT,MODE111,REF MODE110)  */
 ICFACTR_ind = (DCFACTR.data.mode2);
  /* line 5873: */
  /* line 5874: */
-JCFACTR = (*(&(ICFACTR_ind->U))) ;
+JCFACTR = (*A_NILCHECK((&(A_NILCHECK(ICFACTR_ind)->U)))) ;
 switch ( JCFACTR.mode )
 { 
 case 2: /* REF STRUCT(INT,INT,REF MODE53)  */
 KCFACTR_am = (JCFACTR.data.mode2);
  /* line 5875: */
 { 
-(void)(BAFACTR_i = A_CALLPROC(WAFACTR_keepmode,((*(&(KCFACTR_am->Mode)))),((*(&(KCFACTR_am->Mode))),(WAFACTR_keepmode).nonlocals)));
+(void)(BAFACTR_i = A_CALLPROC(WAFACTR_keepmode,((*A_NILCHECK((&(A_NILCHECK(KCFACTR_am)->Mode))))),((*A_NILCHECK((&(A_NILCHECK(KCFACTR_am)->Mode)))),(WAFACTR_keepmode).nonlocals)));
  /* line 5876: */
  /* line 5877: */
-if ((*(&(KCFACTR_am->Modeproc)))!=0)
+if ((*A_NILCHECK((&(A_NILCHECK(KCFACTR_am)->Modeproc))))!=0)
 { 
-(void)(CAFACTR_j = A_CALLPROC(NL(RRBACTR_insertprocp),((*(&(KCFACTR_am->Mode))), NL(YVAACTR_boolnil)),((*(&(KCFACTR_am->Mode))), NL(YVAACTR_boolnil),(NL(RRBACTR_insertprocp)).nonlocals)));
+(void)(CAFACTR_j = A_CALLPROC(NL(RRBACTR_insertprocp),((*A_NILCHECK((&(A_NILCHECK(KCFACTR_am)->Mode)))), NL(YVAACTR_boolnil)),((*A_NILCHECK((&(A_NILCHECK(KCFACTR_am)->Mode)))), NL(YVAACTR_boolnil),(NL(RRBACTR_insertprocp)).nonlocals)));
  /* line 5884: */
  /* line 5885: */
 (void)(A_CALLPROC(WAFACTR_keepmode,(CAFACTR_j),(CAFACTR_j,(WAFACTR_keepmode).nonlocals)));
@@ -25504,13 +25504,13 @@ if ((*(&(KCFACTR_am->Modeproc)))!=0)
  /* line 5886: */
 (void)(A_CALLPROC(AZEACTR_kc,(3),(3,(AZEACTR_kc).nonlocals)));
  /* line 5887: */
-MCFACTR = (*(&(ICFACTR_ind->Name))) ;
+MCFACTR = (*A_NILCHECK((&(A_NILCHECK(ICFACTR_ind)->Name)))) ;
 (void)(A_CALLPROC(PZEACTR_ks,(A_HISVEC(LCFACTR,MCFACTR,32,A68_CHAR )),(A_HISVEC(LCFACTR,MCFACTR,32,A68_CHAR ),(PZEACTR_ks).nonlocals)));
  /* line 5888: */
 (void)(A_CALLPROC(GZEACTR_kw,(BAFACTR_i),(BAFACTR_i,(GZEACTR_kw).nonlocals)));
  /* line 5889: */
  /* line 5890: */
-if ((*(&(KCFACTR_am->Modeproc)))==0)
+if ((*A_NILCHECK((&(A_NILCHECK(KCFACTR_am)->Modeproc))))==0)
 { 
  /* line 5891: */
 (void)(A_CALLPROC(AZEACTR_kc,(0),(0,(AZEACTR_kc).nonlocals)));
@@ -25523,7 +25523,7 @@ else
  /* line 5894: */
  /* line 5895: */
  /* line 5896: */
-(void)(A_CALLPROC(UYEACTR_mdno,((*(&(KCFACTR_am->Modeproc))), CAFACTR_j),((*(&(KCFACTR_am->Modeproc))), CAFACTR_j,(UYEACTR_mdno).nonlocals)));
+(void)(A_CALLPROC(UYEACTR_mdno,((*A_NILCHECK((&(A_NILCHECK(KCFACTR_am)->Modeproc)))), CAFACTR_j),((*A_NILCHECK((&(A_NILCHECK(KCFACTR_am)->Modeproc)))), CAFACTR_j,(UYEACTR_mdno).nonlocals)));
 } 
 } 
 break;
@@ -25536,23 +25536,23 @@ case 3: /* STRUCT(REF MODE110,REF MODE108)  */
 NCFACTR_op = (DCFACTR.data.mode3);
  /* line 5897: */
 { 
-(void)(BAFACTR_i = A_CALLPROC(WAFACTR_keepmode,((*(&(NCFACTR_op.I->Lmode)))),((*(&(NCFACTR_op.I->Lmode))),(WAFACTR_keepmode).nonlocals)));
+(void)(BAFACTR_i = A_CALLPROC(WAFACTR_keepmode,((*A_NILCHECK((&(A_NILCHECK(NCFACTR_op.I)->Lmode))))),((*A_NILCHECK((&(A_NILCHECK(NCFACTR_op.I)->Lmode)))),(WAFACTR_keepmode).nonlocals)));
  /* line 5898: */
-(void)(CAFACTR_j = A_CALLPROC(WAFACTR_keepmode,((*(&(NCFACTR_op.I->Rmode)))),((*(&(NCFACTR_op.I->Rmode))),(WAFACTR_keepmode).nonlocals)));
+(void)(CAFACTR_j = A_CALLPROC(WAFACTR_keepmode,((*A_NILCHECK((&(A_NILCHECK(NCFACTR_op.I)->Rmode))))),((*A_NILCHECK((&(A_NILCHECK(NCFACTR_op.I)->Rmode)))),(WAFACTR_keepmode).nonlocals)));
  /* line 5899: */
-(void)(DAFACTR_k = A_CALLPROC(WAFACTR_keepmode,((*(&(NCFACTR_op.I->Ans)))),((*(&(NCFACTR_op.I->Ans))),(WAFACTR_keepmode).nonlocals)));
+(void)(DAFACTR_k = A_CALLPROC(WAFACTR_keepmode,((*A_NILCHECK((&(A_NILCHECK(NCFACTR_op.I)->Ans))))),((*A_NILCHECK((&(A_NILCHECK(NCFACTR_op.I)->Ans)))),(WAFACTR_keepmode).nonlocals)));
  /* line 5900: */
 (void)(A_CALLPROC(WAFACTR_keepmode,(A_CALLPROC(NL(UXBACTR_opproc),(NCFACTR_op.I),(NCFACTR_op.I,(NL(UXBACTR_opproc)).nonlocals))),(A_CALLPROC(NL(UXBACTR_opproc),(NCFACTR_op.I),(NCFACTR_op.I,(NL(UXBACTR_opproc)).nonlocals)),(WAFACTR_keepmode).nonlocals)));
  /* line 5901: */
  /* line 5902: */
-if ((RYEACTR_d = (*(&(NCFACTR_op.I->Decno))))>=0)
+if ((RYEACTR_d = (*A_NILCHECK((&(A_NILCHECK(NCFACTR_op.I)->Decno)))))>=0)
 { 
  /* line 5903: */
 (void)(A_CALLPROC(UYEACTR_mdno,(RYEACTR_d, A_CALLPROC(NL(UXBACTR_opproc),(NCFACTR_op.I),(NCFACTR_op.I,(NL(UXBACTR_opproc)).nonlocals))),(RYEACTR_d, A_CALLPROC(NL(UXBACTR_opproc),(NCFACTR_op.I),(NCFACTR_op.I,(NL(UXBACTR_opproc)).nonlocals)),(UYEACTR_mdno).nonlocals)));
 } 
  /* line 5904: */
  /* line 5905: */
-OCFACTR = (*(&(NCFACTR_op.N->U))) ;
+OCFACTR = (*A_NILCHECK((&(A_NILCHECK(NCFACTR_op.N)->U)))) ;
 switch ( OCFACTR.mode )
 { 
 case 1: /* REF STRUCT(INT,REF MODE108)  */
@@ -25569,10 +25569,10 @@ QCFACTR = 5;
 } 
 (void)(A_CALLPROC(AZEACTR_kc,(QCFACTR),(QCFACTR,(AZEACTR_kc).nonlocals)));
  /* line 5907: */
-SCFACTR = (*(&(NCFACTR_op.N->Name))) ;
+SCFACTR = (*A_NILCHECK((&(A_NILCHECK(NCFACTR_op.N)->Name)))) ;
 (void)(A_CALLPROC(PZEACTR_ks,(A_HISVEC(RCFACTR,SCFACTR,32,A68_CHAR )),(A_HISVEC(RCFACTR,SCFACTR,32,A68_CHAR ),(PZEACTR_ks).nonlocals)));
  /* line 5908: */
-TCFACTR = (*(&(PCFACTR_oper->Prio))) ;
+TCFACTR = (*A_NILCHECK((&(A_NILCHECK(PCFACTR_oper)->Prio)))) ;
 (void)(A_CALLPROC(AZEACTR_kc,(A_ABS(TCFACTR)),(A_ABS(TCFACTR),(AZEACTR_kc).nonlocals)));
  /* line 5909: */
 (void)(A_CALLPROC(GZEACTR_kw,(BAFACTR_i),(BAFACTR_i,(GZEACTR_kw).nonlocals)));
@@ -25603,22 +25603,22 @@ break;
 } 
  /* line 5918: */
  /* line 5919: */
-(void)(AAFACTR_klist = (*(&(AAFACTR_klist->Rest))));
+(void)(AAFACTR_klist = (*A_NILCHECK((&(A_NILCHECK(AAFACTR_klist)->Rest)))));
 }
  /* line 5921: */
 for ( ;; )
 { 
  /* line 5922: */
-if ( !(((*NL(GYEACTR_mdone))!=JQAACTR_nilkml)) ) break;
-(void)(IAFACTR_mtodo = (*NL(GYEACTR_mdone)));
+if ( !(((*A_NILCHECK(NL(GYEACTR_mdone)))!=JQAACTR_nilkml)) ) break;
+(void)(IAFACTR_mtodo = (*A_NILCHECK(NL(GYEACTR_mdone))));
  /* line 5923: */
-(void)((*NL(GYEACTR_mdone)) = (*(&((*NL(GYEACTR_mdone))->Rest))));
+(void)((*A_NILCHECK(NL(GYEACTR_mdone))) = (*A_NILCHECK((&(A_NILCHECK((*A_NILCHECK(NL(GYEACTR_mdone))))->Rest)))));
  /* line 5924: */
-UCFACTR = (&(IAFACTR_mtodo->Rest)) ;
-(void)((*UCFACTR) = (*NL(HYEACTR_kmfree)));
+UCFACTR = (&(A_NILCHECK(IAFACTR_mtodo)->Rest)) ;
+(void)((*A_NILCHECK(UCFACTR)) = (*A_NILCHECK(NL(HYEACTR_kmfree))));
  /* line 5925: */
  /* line 5926: */
-(*NL(HYEACTR_kmfree)) = IAFACTR_mtodo;
+(*A_NILCHECK(NL(HYEACTR_kmfree))) = IAFACTR_mtodo;
 }
  /* line 5927: */
  /* line 5928: */
@@ -25651,14 +25651,14 @@ A68_121 * PDFACTR;  /* YIELD */
 A_PROC_ENTRY(addtokl);
  /* line 5932: */
 { 
-ADFACTR_k = (*NL(LZAACTR_kl));
+ADFACTR_k = (*A_NILCHECK(NL(LZAACTR_kl)));
  /* line 5933: */
 for ( ;; )
 { 
  /* line 5935: */
 BDFACTR = (ADFACTR_k!=IQAACTR_nilkl);
 if ( BDFACTR )
-{CDFACTR = (*(&(ADFACTR_k->U))) ;
+{CDFACTR = (*A_NILCHECK((&(A_NILCHECK(ADFACTR_k)->U)))) ;
 switch ( CDFACTR.mode )
 { 
 case 1: /* REF STRUCT(MODE31,INT,INT,INT,INT,REF MODE67)  */
@@ -25735,7 +25735,7 @@ break;
 BDFACTR = GDFACTR;
 }
 if ( !(BDFACTR) ) break;
-(void)(ADFACTR_k = (*(&(ADFACTR_k->Rest))));
+(void)(ADFACTR_k = (*A_NILCHECK((&(A_NILCHECK(ADFACTR_k)->Rest)))));
 }
  /* line 5958: */
  /* line 5959: */
@@ -25749,12 +25749,12 @@ else
 ODFACTR.U = Ki;
 ODFACTR.Rest = (A68_121 *)A68_NIL;
 PDFACTR = A_HEAP(A68_121 ) ;
-(void)((*PDFACTR) = ODFACTR) ;
-(**NL(MZAACTR_rkl)) = PDFACTR;
+(void)((*A_NILCHECK(PDFACTR)) = ODFACTR) ;
+(*A_NILCHECK(*A_NILCHECK(NL(MZAACTR_rkl)))) = PDFACTR;
  /* line 5962: */
  /* line 5963: */
  /* line 5964: */
-(void)((*NL(MZAACTR_rkl)) = (&((**NL(MZAACTR_rkl))->Rest)));
+(void)((*A_NILCHECK(NL(MZAACTR_rkl))) = (&(A_NILCHECK((*A_NILCHECK(*A_NILCHECK(NL(MZAACTR_rkl)))))->Rest)));
 } 
 } 
 A_PROC_EXIT(addtokl);
@@ -25781,15 +25781,15 @@ A68_40  HEFACTR;  /* united object - for case conformity */
 A68_VC  IEFACTR_s A_UNUSED = {0};
  /* line 5969: */
 { 
-A_CALLPROC(NL(Givemoduledetails),((*N), Mn, A68_FALSE, &WDFACTR),((*N), Mn, A68_FALSE, &WDFACTR,(NL(Givemoduledetails)).nonlocals));
+A_CALLPROC(NL(Givemoduledetails),((*A_NILCHECK(N)), Mn, A68_FALSE, &WDFACTR),((*A_NILCHECK(N)), Mn, A68_FALSE, &WDFACTR,(NL(Givemoduledetails)).nonlocals));
 VDFACTR_y = WDFACTR;
  /* line 5970: */
-XDFACTR_x = (&((&VDFACTR_y)->Xmi));
+XDFACTR_x = (&(A_NILCHECK((&VDFACTR_y))->Xmi));
  /* line 5971: */
  /* line 5972: */
-ZDFACTR_xs = (&((&YDFACTR_ys)->Xs));
+ZDFACTR_xs = (&(A_NILCHECK((&YDFACTR_ys))->Xs));
  /* line 5973: */
-AEFACTR_c = (*NL(RABACTR_concheck));
+AEFACTR_c = (*A_NILCHECK(NL(RABACTR_concheck)));
  /* line 5974: */
  /* line 5976: */
 for ( ;; )
@@ -25797,14 +25797,14 @@ for ( ;; )
 CEFACTR = (AEFACTR_c!=FQAACTR_nilconchk);
 if ( CEFACTR )
 { /* line 5977: */
-CEFACTR = VABACTR_((&(XDFACTR_x->L)), (&(AEFACTR_c->C)));
+CEFACTR = VABACTR_((&(A_NILCHECK(XDFACTR_x)->L)), (&(A_NILCHECK(AEFACTR_c)->C)));
 }
 if ( !(CEFACTR) ) break;
-(void)(AEFACTR_c = (*(&(AEFACTR_c->Rest))));
+(void)(AEFACTR_c = (*A_NILCHECK((&(A_NILCHECK(AEFACTR_c)->Rest)))));
 }
  /* line 5979: */
  /* line 5980: */
-if ((*(&(XDFACTR_x->Type)))!=(-1))
+if ((*A_NILCHECK((&(A_NILCHECK(XDFACTR_x)->Type))))!=(-1))
 { 
  /* line 5981: */
 if (Mn==0)
@@ -25819,12 +25819,12 @@ else
 DEFACTR = (AEFACTR_c==FQAACTR_nilconchk);
 if ( DEFACTR )
 { /* line 5985: */
-DEFACTR = ((*(&((&(XDFACTR_x->L))->Level)))!=0);
+DEFACTR = ((*A_NILCHECK((&(A_NILCHECK((&(A_NILCHECK(XDFACTR_x)->L)))->Level))))!=0);
 }
 if (DEFACTR)
 { 
  /* line 5987: */
-(void)(A_CALLPROC(NL(PZBACTR_faultp),(130, 0, 0, (&(XDFACTR_x->Name))),(130, 0, 0, (&(XDFACTR_x->Name)),(NL(PZBACTR_faultp)).nonlocals)));
+(void)(A_CALLPROC(NL(PZBACTR_faultp),(130, 0, 0, (&(A_NILCHECK(XDFACTR_x)->Name))),(130, 0, 0, (&(A_NILCHECK(XDFACTR_x)->Name)),(NL(PZBACTR_faultp)).nonlocals)));
 } 
 else
 { 
@@ -25834,29 +25834,29 @@ if (AEFACTR_c==FQAACTR_nilconchk)
 BEFACTR_scope = 3;
  /* line 5989: */
  /* line 5990: */
-(*NL(TZAACTR_modulelevel)) = 0;
+(*A_NILCHECK(NL(TZAACTR_modulelevel))) = 0;
 } 
 else
 { 
-(void)(BEFACTR_scope = (*(&(AEFACTR_c->Scope))));
+(void)(BEFACTR_scope = (*A_NILCHECK((&(A_NILCHECK(AEFACTR_c)->Scope)))));
  /* line 5991: */
  /* line 5992: */
-(void)((*NL(TZAACTR_modulelevel)) = (*(&((&(AEFACTR_c->C))->Level))));
+(void)((*A_NILCHECK(NL(TZAACTR_modulelevel))) = (*A_NILCHECK((&(A_NILCHECK((&(A_NILCHECK(AEFACTR_c)->C)))->Level)))));
 } 
  /* line 5993: */
 EEFACTR.Type = (-1);
  /* line 5994: */
-EEFACTR.Moduleno = (*NL(UZAACTR_nextmodule))+=1;
+EEFACTR.Moduleno = (*A_NILCHECK(NL(UZAACTR_nextmodule)))+=1;
  /* line 5995: */
-EEFACTR.Name = (*(&(XDFACTR_x->Name)));
-EEFACTR.Ym = (*(&((&VDFACTR_y)->Ym)));
+EEFACTR.Name = (*A_NILCHECK((&(A_NILCHECK(XDFACTR_x)->Name))));
+EEFACTR.Ym = (*A_NILCHECK((&(A_NILCHECK((&VDFACTR_y))->Ym))));
 (void)(A_CALLPROC(NL(Output),(A_UNITE(FEFACTR,mode25,25,EEFACTR), 2),(A_UNITE(FEFACTR,mode25,25,EEFACTR), 2,(NL(Output)).nonlocals)));
  /* line 5996: */
-A_CALLPROC(NL(Givespec),((*(&(XDFACTR_x->Name))), (*(&(XDFACTR_x->Name))), (*(&((&VDFACTR_y)->Ym))), &GEFACTR),((*(&(XDFACTR_x->Name))), (*(&(XDFACTR_x->Name))), (*(&((&VDFACTR_y)->Ym))), &GEFACTR,(NL(Givespec)).nonlocals));
+A_CALLPROC(NL(Givespec),((*A_NILCHECK((&(A_NILCHECK(XDFACTR_x)->Name)))), (*A_NILCHECK((&(A_NILCHECK(XDFACTR_x)->Name)))), (*A_NILCHECK((&(A_NILCHECK((&VDFACTR_y))->Ym)))), &GEFACTR),((*A_NILCHECK((&(A_NILCHECK(XDFACTR_x)->Name)))), (*A_NILCHECK((&(A_NILCHECK(XDFACTR_x)->Name)))), (*A_NILCHECK((&(A_NILCHECK((&VDFACTR_y))->Ym)))), &GEFACTR,(NL(Givespec)).nonlocals));
 YDFACTR_ys = GEFACTR;
  /* line 5998: */
  /* line 5999: */
-HEFACTR = (*(&(ZDFACTR_xs->U))) ;
+HEFACTR = (*A_NILCHECK((&(A_NILCHECK(ZDFACTR_xs)->U)))) ;
 switch ( HEFACTR.mode )
 { 
 case 1: /* REF VECTOR [] CHAR */
@@ -25869,7 +25869,7 @@ if (Mn==0)
  /* line 6003: */
  /* line 6004: */
  /* line 6005: */
-(void)(A_CALLPROC(NL(KKEACTR_simplespec),(A68_TRUE, (*(&((*NL(QYAACTR_globcurrent))->Ids))), (*(&((*NL(QYAACTR_globcurrent))->Indics))), (&((*NL(QYAACTR_globcurrent))->Lastid)), BEFACTR_scope, IEFACTR_s),(A68_TRUE, (*(&((*NL(QYAACTR_globcurrent))->Ids))), (*(&((*NL(QYAACTR_globcurrent))->Indics))), (&((*NL(QYAACTR_globcurrent))->Lastid)), BEFACTR_scope, IEFACTR_s,(NL(KKEACTR_simplespec)).nonlocals)));
+(void)(A_CALLPROC(NL(KKEACTR_simplespec),(A68_TRUE, (*A_NILCHECK((&(A_NILCHECK((*A_NILCHECK(NL(QYAACTR_globcurrent))))->Ids)))), (*A_NILCHECK((&(A_NILCHECK((*A_NILCHECK(NL(QYAACTR_globcurrent))))->Indics)))), (&(A_NILCHECK((*A_NILCHECK(NL(QYAACTR_globcurrent))))->Lastid)), BEFACTR_scope, IEFACTR_s),(A68_TRUE, (*A_NILCHECK((&(A_NILCHECK((*A_NILCHECK(NL(QYAACTR_globcurrent))))->Ids)))), (*A_NILCHECK((&(A_NILCHECK((*A_NILCHECK(NL(QYAACTR_globcurrent))))->Indics)))), (&(A_NILCHECK((*A_NILCHECK(NL(QYAACTR_globcurrent))))->Lastid)), BEFACTR_scope, IEFACTR_s,(NL(KKEACTR_simplespec)).nonlocals)));
 } 
 else
 { 
@@ -25910,8 +25910,8 @@ A68_INT * AFFACTR;  /* YIELD */
 A68_67 * BFFACTR;  /* clause result */
 A_PROC_ENTRY(findid);
 { 
-REFACTR = (*(&((*NL(QYAACTR_globcurrent))->Ids))) ;
-QEFACTR_id = (*(&A_VINDEX(REFACTR,(*NL(TSAACTR_idhash)))));
+REFACTR = (*A_NILCHECK((&(A_NILCHECK((*A_NILCHECK(NL(QYAACTR_globcurrent))))->Ids)))) ;
+QEFACTR_id = (*A_NILCHECK((&A_VINDEX(REFACTR,(*A_NILCHECK(NL(TSAACTR_idhash)))))));
  /* line 6017: */
 SEFACTR_i = 0;
  /* line 6018: */
@@ -25922,11 +25922,11 @@ for ( ;; )
 TEFACTR = (QEFACTR_id!=TQAACTR_nilid);
 if ( TEFACTR )
 { /* line 6020: */
-VEFACTR = (*(&(QEFACTR_id->Name))) ;
-TEFACTR = A_VC_NE(A_HISVEC(UEFACTR,VEFACTR,32,A68_CHAR ),A_HISVEC(WEFACTR,(*NL(PSAACTR_ident)),32,A68_CHAR ));
+VEFACTR = (*A_NILCHECK((&(A_NILCHECK(QEFACTR_id)->Name)))) ;
+TEFACTR = A_VC_NE(A_HISVEC(UEFACTR,VEFACTR,32,A68_CHAR ),A_HISVEC(WEFACTR,(*A_NILCHECK(NL(PSAACTR_ident))),32,A68_CHAR ));
 }
 if ( !(TEFACTR) ) break;
-(void)(QEFACTR_id = (*(&(QEFACTR_id->Rest))));
+(void)(QEFACTR_id = (*A_NILCHECK((&(A_NILCHECK(QEFACTR_id)->Rest)))));
 }
  /* line 6022: */
  /* line 6023: */
@@ -25937,7 +25937,7 @@ switch ( SEFACTR_i+=1 )
 { 
 case 1: 
 { 
-(void)(QEFACTR_id = (*(&A_VINDEX(NL(EABACTR_libids),(*NL(TSAACTR_idhash))))));
+(void)(QEFACTR_id = (*A_NILCHECK((&A_VINDEX(NL(EABACTR_libids),(*A_NILCHECK(NL(TSAACTR_idhash))))))));
  /* line 6025: */
  /* line 6026: */
  /* line 6027: */
@@ -25946,9 +25946,9 @@ goto NEFACTR_aa;
 break;
 case 2: 
 { 
-(void)(A_CALLPROC((*NL(FFDACTR_bumodule)),(NL(PSAACTR_ident), 1),(NL(PSAACTR_ident), 1,((*NL(FFDACTR_bumodule))).nonlocals)));
+(void)(A_CALLPROC((*A_NILCHECK(NL(FFDACTR_bumodule))),(NL(PSAACTR_ident), 1),(NL(PSAACTR_ident), 1,((*A_NILCHECK(NL(FFDACTR_bumodule)))).nonlocals)));
  /* line 6028: */
-(void)(QEFACTR_id = (*(&A_VINDEX(NL(EABACTR_libids),(*NL(TSAACTR_idhash))))));
+(void)(QEFACTR_id = (*A_NILCHECK((&A_VINDEX(NL(EABACTR_libids),(*A_NILCHECK(NL(TSAACTR_idhash))))))));
  /* line 6029: */
  /* line 6030: */
  /* line 6031: */
@@ -25957,22 +25957,22 @@ goto NEFACTR_aa;
 break;
 case 3: 
 { 
-XEFACTR.Name = (*NL(PSAACTR_ident));
+XEFACTR.Name = (*A_NILCHECK(NL(PSAACTR_ident)));
 XEFACTR.Decno = 1;
  /* line 6032: */
 XEFACTR.Level = 1;
 XEFACTR.Mode = ZKAACTR_faultmode;
 XEFACTR.Scope = 0;
  /* line 6033: */
-XEFACTR.Rest = (*(&A_VINDEX(NL(EABACTR_libids),(*NL(TSAACTR_idhash)))));
+XEFACTR.Rest = (*A_NILCHECK((&A_VINDEX(NL(EABACTR_libids),(*A_NILCHECK(NL(TSAACTR_idhash)))))));
 YEFACTR = A_HEAP(A68_67 ) ;
-(void)((*YEFACTR) = XEFACTR) ;
+(void)((*A_NILCHECK(YEFACTR)) = XEFACTR) ;
 QEFACTR_id = YEFACTR;
  /* line 6034: */
-if ((*NL(ITAACTR_supflts))==0)
+if ((*A_NILCHECK(NL(ITAACTR_supflts)))==0)
 { 
-ZEFACTR = (&A_VINDEX(NL(EABACTR_libids),(*NL(TSAACTR_idhash)))) ;
-(*ZEFACTR) = QEFACTR_id;
+ZEFACTR = (&A_VINDEX(NL(EABACTR_libids),(*A_NILCHECK(NL(TSAACTR_idhash))))) ;
+(*A_NILCHECK(ZEFACTR)) = QEFACTR_id;
 } 
  /* line 6036: */
 (void)(A_CALLPROC(NL(PZBACTR_faultp),(131, 0, 0, NL(PSAACTR_ident)),(131, 0, 0, NL(PSAACTR_ident),(NL(PZBACTR_faultp)).nonlocals)));
@@ -25990,11 +25990,11 @@ break;
 } 
  /* line 6041: */
  /* line 6042: */
-if ((*(&(QEFACTR_id->Mode)))==ZKAACTR_faultmode)
+if ((*A_NILCHECK((&(A_NILCHECK(QEFACTR_id)->Mode))))==ZKAACTR_faultmode)
 { 
  /* line 6043: */
-AFFACTR = (&(QEFACTR_id->Decno)) ;
-(*AFFACTR)+=1;
+AFFACTR = (&(A_NILCHECK(QEFACTR_id)->Decno)) ;
+(*A_NILCHECK(AFFACTR))+=1;
 } 
  /* line 6045: */
 PEFACTR_e: A_UNUSED;
@@ -26559,16 +26559,16 @@ if ( sigsetjmp( LFFACTR_scstart.label,1) ) goto MFFACTR_scstart;
 A_PROC_ENTRY(range);
  /* line 6053: */
 { 
-NFFACTR_current = (*External);
+NFFACTR_current = (*A_NILCHECK(External));
  /* line 6054: */
-(void)((*NL(QYAACTR_globcurrent)) = (&NFFACTR_current));
+(void)((*A_NILCHECK(NL(QYAACTR_globcurrent))) = (&NFFACTR_current));
  /* line 6055: */
 OFFACTR_oldidhash = A68_TRUE;
 PFFACTR_oldindichash = A68_TRUE;
  /* line 6056: */
  /* line 6057: */
  /* line 6058: */
-if ((*(&(External->Props)))==(A68_BITS )(-1))
+if ((*A_NILCHECK((&(A_NILCHECK(External)->Props))))==(A68_BITS )(-1))
 { 
  /* line 6059: */
 QFFACTR = ULAACTR_decbit;
@@ -26577,17 +26577,17 @@ else
 { 
 QFFACTR = MQAACTR_z;
 } 
-RFFACTR = (&((&NFFACTR_current)->Props)) ;
-(*RFFACTR) = QFFACTR;
+RFFACTR = (&(A_NILCHECK((&NFFACTR_current))->Props)) ;
+(*A_NILCHECK(RFFACTR)) = QFFACTR;
  /* line 6060: */
-SFFACTR = (&((&NFFACTR_current)->Level)) ;
-(*SFFACTR)+=1;
+SFFACTR = (&(A_NILCHECK((&NFFACTR_current))->Level)) ;
+(*A_NILCHECK(SFFACTR))+=1;
  /* line 6061: */
-TFFACTR = (&((&NFFACTR_current)->Labs)) ;
-(*TFFACTR) = (A68_69 *)A68_NIL;
+TFFACTR = (&(A_NILCHECK((&NFFACTR_current))->Labs)) ;
+(*A_NILCHECK(TFFACTR)) = (A68_69 *)A68_NIL;
  /* line 6062: */
-UFFACTR = (&((&NFFACTR_current)->Dybits)) ;
-(*UFFACTR) = MQAACTR_z;
+UFFACTR = (&(A_NILCHECK((&NFFACTR_current))->Dybits)) ;
+(*A_NILCHECK(UFFACTR)) = MQAACTR_z;
  /* line 6064: */
  /* line 6065: */
  /* line 6066: */
@@ -26603,8 +26603,8 @@ UFFACTR = (&((&NFFACTR_current)->Dybits)) ;
  /* line 6077: */
  /* line 6078: */
  /* line 6079: */
-PGFACTR = (&((&OGFACTR_scam)->Mode)) ;
-(*PGFACTR) = ZKAACTR_faultmode;
+PGFACTR = (&(A_NILCHECK((&OGFACTR_scam))->Mode)) ;
+(*A_NILCHECK(PGFACTR)) = ZKAACTR_faultmode;
  /* line 6080: */
 QGFACTR.Props = MQAACTR_z;
 QGFACTR.Mode = ZKAACTR_faultmode;
@@ -26612,8 +26612,8 @@ QGFACTR.Vlist = (A68_124 *)A68_NIL;
 QGFACTR.Labs = (A68_69 *)A68_NIL;
 RGFACTR_v = QGFACTR;
  /* line 6081: */
-SGFACTR_rangestind = (*NL(JFBACTR_stind));
-TGFACTR_rangebrind = (*NL(VBBACTR_brind));
+SGFACTR_rangestind = (*A_NILCHECK(NL(JFBACTR_stind)));
+TGFACTR_rangebrind = (*A_NILCHECK(NL(VBBACTR_brind)));
  /* line 6082: */
  /* line 6083: */
  /* line 6084: */
@@ -26859,7 +26859,7 @@ switch ( A_CALLPROC(NL(PFBACTR_analyser),(),((NL(PFBACTR_analyser)).nonlocals)) 
 { 
 case 1: 
  /* line 7993: */
-(void)((*NL(MFBACTR_t1)) = A_CALLPROC(NL(LFDACTR_reader),((*NL(XDBACTR_nscreader))),((*NL(XDBACTR_nscreader)),(NL(LFDACTR_reader)).nonlocals)));
+(void)((*A_NILCHECK(NL(MFBACTR_t1))) = A_CALLPROC(NL(LFDACTR_reader),((*A_NILCHECK(NL(XDBACTR_nscreader)))),((*A_NILCHECK(NL(XDBACTR_nscreader))),(NL(LFDACTR_reader)).nonlocals)));
 break;
 case 2: 
 { 
@@ -26891,157 +26891,157 @@ case 4:
 /*SKIP*/;
 break;
 case 5: 
-if ((*NL(MFBACTR_t1))==28)
+if ((*A_NILCHECK(NL(MFBACTR_t1)))==28)
 { 
  /* line 8008: */
-(*NL(MFBACTR_t1)) = 68;
+(*A_NILCHECK(NL(MFBACTR_t1))) = 68;
 } 
 break;
 case 6: 
 { 
-(*NL(FZAACTR_outlevel)) = 2;
+(*A_NILCHECK(NL(FZAACTR_outlevel))) = 2;
  /* line 8009: */
-PHGACTR = (&(NL(HZAACTR_xm)->Name)) ;
-(void)((*PHGACTR) = (*NL(PSAACTR_ident)));
+PHGACTR = (&(A_NILCHECK(NL(HZAACTR_xm))->Name)) ;
+(void)((*A_NILCHECK(PHGACTR)) = (*A_NILCHECK(NL(PSAACTR_ident))));
  /* line 8010: */
  /* line 8011: */
  /* line 8014: */
-(*NL(XDBACTR_nscreader)) = TDBACTR_screader;
+(*A_NILCHECK(NL(XDBACTR_nscreader))) = TDBACTR_screader;
 } 
 break;
 case 7: 
 { 
-(*NL(FZAACTR_outlevel)) = 2;
+(*A_NILCHECK(NL(FZAACTR_outlevel))) = 2;
  /* line 8015: */
-QHGACTR = (&(NL(HZAACTR_xm)->Name)) ;
-(void)((*QHGACTR) = (*NL(PSAACTR_ident)));
+QHGACTR = (&(A_NILCHECK(NL(HZAACTR_xm))->Name)) ;
+(void)((*A_NILCHECK(QHGACTR)) = (*A_NILCHECK(NL(PSAACTR_ident))));
  /* line 8016: */
-RHGACTR = (&(NL(HZAACTR_xm)->Type)) ;
-(void)((*RHGACTR) = (-1));
+RHGACTR = (&(A_NILCHECK(NL(HZAACTR_xm))->Type)) ;
+(void)((*A_NILCHECK(RHGACTR)) = (-1));
  /* line 8017: */
-(*NL(VBBACTR_brind)) = 2;
+(*A_NILCHECK(NL(VBBACTR_brind))) = 2;
  /* line 8018: */
  /* line 8019: */
  /* line 8022: */
-(*NL(XZAACTR_burestrict)) = A68_TRUE;
+(*A_NILCHECK(NL(XZAACTR_burestrict))) = A68_TRUE;
 } 
 break;
 case 8: 
 { 
-A_CALLPROC(NL(Givemoduledetails),((*(&((*NL(KZAACTR_close))->Name))), 0, A68_TRUE, &THGACTR),((*(&((*NL(KZAACTR_close))->Name))), 0, A68_TRUE, &THGACTR,(NL(Givemoduledetails)).nonlocals));
+A_CALLPROC(NL(Givemoduledetails),((*A_NILCHECK((&(A_NILCHECK((*A_NILCHECK(NL(KZAACTR_close))))->Name)))), 0, A68_TRUE, &THGACTR),((*A_NILCHECK((&(A_NILCHECK((*A_NILCHECK(NL(KZAACTR_close))))->Name)))), 0, A68_TRUE, &THGACTR,(NL(Givemoduledetails)).nonlocals));
 SHGACTR_y = THGACTR;
  /* line 8023: */
-UHGACTR = (&(NL(HZAACTR_xm)->L)) ;
-(void)((*UHGACTR) = (*(&((&((&SHGACTR_y)->Xmi))->L))));
+UHGACTR = (&(A_NILCHECK(NL(HZAACTR_xm))->L)) ;
+(void)((*A_NILCHECK(UHGACTR)) = (*A_NILCHECK((&(A_NILCHECK((&(A_NILCHECK((&SHGACTR_y))->Xmi)))->L)))));
  /* line 8024: */
-VHGACTR = (&(NL(HZAACTR_xm)->G)) ;
-(void)((*VHGACTR) = (*(&((&((&SHGACTR_y)->Xmi))->G))));
+VHGACTR = (&(A_NILCHECK(NL(HZAACTR_xm))->G)) ;
+(void)((*A_NILCHECK(VHGACTR)) = (*A_NILCHECK((&(A_NILCHECK((&(A_NILCHECK((&SHGACTR_y))->Xmi)))->G)))));
  /* line 8025: */
-(void)(A_CALLPROC(NL(Output),(A_UNITE(WHGACTR,mode21,21,(*NL(HZAACTR_xm))), 0),(A_UNITE(WHGACTR,mode21,21,(*NL(HZAACTR_xm))), 0,(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(WHGACTR,mode21,21,(*A_NILCHECK(NL(HZAACTR_xm)))), 0),(A_UNITE(WHGACTR,mode21,21,(*A_NILCHECK(NL(HZAACTR_xm)))), 0,(NL(Output)).nonlocals)));
  /* line 8026: */
-(void)((*NL(SZAACTR_moduleno)) = A_CALLPROC(NL(HVEACTR_closure),((*NL(KZAACTR_close)), (A68_113 *)A68_NIL),((*NL(KZAACTR_close)), (A68_113 *)A68_NIL,(NL(HVEACTR_closure)).nonlocals)));
+(void)((*A_NILCHECK(NL(SZAACTR_moduleno))) = A_CALLPROC(NL(HVEACTR_closure),((*A_NILCHECK(NL(KZAACTR_close))), (A68_113 *)A68_NIL),((*A_NILCHECK(NL(KZAACTR_close))), (A68_113 *)A68_NIL,(NL(HVEACTR_closure)).nonlocals)));
  /* line 8027: */
 XHGACTR.Fn = YNAACTR_xfinish;
 XHGACTR.M = 0;
 XHGACTR.Props = MQAACTR_z;
 XHGACTR.Param = 0;
-(void)(A_CALLPROC(NL(Output),(A_UNITE(YHGACTR,mode17,17,XHGACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(YHGACTR,mode17,17,XHGACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(YHGACTR,mode17,17,XHGACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(YHGACTR,mode17,17,XHGACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 8028: */
-(*NL(FZAACTR_outlevel)) = 1;
+(*A_NILCHECK(NL(FZAACTR_outlevel))) = 1;
  /* line 8029: */
-ZHGACTR.Moduleno = (*NL(SZAACTR_moduleno));
-ZHGACTR.Type = (*(&(NL(HZAACTR_xm)->Type)));
-ZHGACTR.Maxmodule = (*NL(UZAACTR_nextmodule));
-(void)(A_CALLPROC(NL(Output),(A_UNITE(AIGACTR,mode33,33,ZHGACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(AIGACTR,mode33,33,ZHGACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+ZHGACTR.Moduleno = (*A_NILCHECK(NL(SZAACTR_moduleno)));
+ZHGACTR.Type = (*A_NILCHECK((&(A_NILCHECK(NL(HZAACTR_xm))->Type))));
+ZHGACTR.Maxmodule = (*A_NILCHECK(NL(UZAACTR_nextmodule)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(AIGACTR,mode33,33,ZHGACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(AIGACTR,mode33,33,ZHGACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 8030: */
  /* line 8031: */
  /* line 8034: */
-(void)(A_CALLPROC(NL(Output),(SKAACTR_down, (*NL(FZAACTR_outlevel))),(SKAACTR_down, (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(SKAACTR_down, (*A_NILCHECK(NL(FZAACTR_outlevel)))),(SKAACTR_down, (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
 } 
 break;
 case 9: 
 { 
-(*NL(FZAACTR_outlevel)) = 3;
+(*A_NILCHECK(NL(FZAACTR_outlevel))) = 3;
  /* line 8035: */
  /* line 8036: */
-BIGACTR.Name = (*(&(NL(HZAACTR_xm)->Name)));
+BIGACTR.Name = (*A_NILCHECK((&(A_NILCHECK(NL(HZAACTR_xm))->Name))));
  /* line 8037: */
-BIGACTR.Maxlevel = ((*(&((&(NL(HZAACTR_xm)->L))->Level)))+(*(&((&(NL(HZAACTR_xm)->G))->Level))));
-BIGACTR.Nof = (*(&(NL(HZAACTR_xm)->Type)));
+BIGACTR.Maxlevel = ((*A_NILCHECK((&(A_NILCHECK((&(A_NILCHECK(NL(HZAACTR_xm))->L)))->Level))))+(*A_NILCHECK((&(A_NILCHECK((&(A_NILCHECK(NL(HZAACTR_xm))->G)))->Level)))));
+BIGACTR.Nof = (*A_NILCHECK((&(A_NILCHECK(NL(HZAACTR_xm))->Type))));
  /* line 8038: */
-BIGACTR.Moduleno = (*NL(SZAACTR_moduleno)) = (*NL(UZAACTR_nextmodule))+=1;
+BIGACTR.Moduleno = (*A_NILCHECK(NL(SZAACTR_moduleno))) = (*A_NILCHECK(NL(UZAACTR_nextmodule)))+=1;
  /* line 8039: */
-(void)(A_CALLPROC(NL(Output),(A_UNITE(CIGACTR,mode23,23,BIGACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(CIGACTR,mode23,23,BIGACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(CIGACTR,mode23,23,BIGACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(CIGACTR,mode23,23,BIGACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 8040: */
-(*NL(HEBACTR_inprogram)) = A68_TRUE;
+(*A_NILCHECK(NL(HEBACTR_inprogram))) = A68_TRUE;
  /* line 8041: */
  /* line 8043: */
-if ((*NL(MFBACTR_t1))==24)
+if ((*A_NILCHECK(NL(MFBACTR_t1)))==24)
 { 
-DIGACTR = (&((&NFFACTR_current)->Lastid)) ;
-(*DIGACTR)+=1;
+DIGACTR = (&(A_NILCHECK((&NFFACTR_current))->Lastid)) ;
+(*A_NILCHECK(DIGACTR))+=1;
  /* line 8044: */
  /* line 8045: */
 EIGACTR.Type = DPAACTR_xdummydec;
 FIGACTR.Name = NL(BZAACTR_nullid);
-FIGACTR.Decno = (*(&((&NFFACTR_current)->Lastid)));
+FIGACTR.Decno = (*A_NILCHECK((&(A_NILCHECK((&NFFACTR_current))->Lastid))));
 FIGACTR.Level = 1;
  /* line 8046: */
 FIGACTR.Mode = 0;
  /* line 8047: */
-FIGACTR.Scope = (*(&((&NFFACTR_current)->Lastid)));
+FIGACTR.Scope = (*A_NILCHECK((&(A_NILCHECK((&NFFACTR_current))->Lastid))));
  /* line 8048: */
 FIGACTR.Rest = (A68_67 *)A68_NIL;
 GIGACTR = A_LOC(A68_67 ) ;
-(void)((*GIGACTR) = FIGACTR) ;
+(void)((*A_NILCHECK(GIGACTR)) = FIGACTR) ;
 EIGACTR.Iddec = GIGACTR;
 (void)(A_CALLPROC(NL(Output),(A_UNITE(HIGACTR,mode12,12,EIGACTR), 4),(A_UNITE(HIGACTR,mode12,12,EIGACTR), 4,(NL(Output)).nonlocals)));
  /* line 8049: */
  /* line 8050: */
-IIGACTR = (&((&NFFACTR_current)->Props)) ;
-(void)((*IIGACTR) = (A68_BITS )(-1));
+IIGACTR = (&(A_NILCHECK((&NFFACTR_current))->Props)) ;
+(void)((*A_NILCHECK(IIGACTR)) = (A68_BITS )(-1));
 } 
  /* line 8052: */
-JIGACTR = (&((&FHFACTR_xcharpos)->Charpos)) ;
-(void)((*JIGACTR) = (*NL(LSAACTR_tind)));
+JIGACTR = (&(A_NILCHECK((&FHFACTR_xcharpos))->Charpos)) ;
+(void)((*A_NILCHECK(JIGACTR)) = (*A_NILCHECK(NL(LSAACTR_tind))));
  /* line 8053: */
-(void)(A_CALLPROC(NL(Output),(A_UNITE(KIGACTR,mode15,15,FHFACTR_xcharpos), (*NL(FZAACTR_outlevel))),(A_UNITE(KIGACTR,mode15,15,FHFACTR_xcharpos), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(KIGACTR,mode15,15,FHFACTR_xcharpos), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(KIGACTR,mode15,15,FHFACTR_xcharpos), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 8055: */
 A_CALLPROC(YTFACTR_uc,(YKAACTR_voidmode, &LIGACTR),(YKAACTR_voidmode, &LIGACTR,(YTFACTR_uc).nonlocals));
 ;
  /* line 8056: */
-(void)(A_CALLPROC(KHFACTR_scopel,((&((&NFFACTR_current)->Labs)), (&(External->Labs))),((&((&NFFACTR_current)->Labs)), (&(External->Labs)),(KHFACTR_scopel).nonlocals)));
+(void)(A_CALLPROC(KHFACTR_scopel,((&(A_NILCHECK((&NFFACTR_current))->Labs)), (&(A_NILCHECK(External)->Labs))),((&(A_NILCHECK((&NFFACTR_current))->Labs)), (&(A_NILCHECK(External)->Labs)),(KHFACTR_scopel).nonlocals)));
  /* line 8057: */
-MIGACTR.Moduleno = (*NL(SZAACTR_moduleno));
-MIGACTR.Nof = (*(&(NL(HZAACTR_xm)->Type)));
-(void)(A_CALLPROC(NL(Output),(A_UNITE(NIGACTR,mode24,24,MIGACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(NIGACTR,mode24,24,MIGACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+MIGACTR.Moduleno = (*A_NILCHECK(NL(SZAACTR_moduleno)));
+MIGACTR.Nof = (*A_NILCHECK((&(A_NILCHECK(NL(HZAACTR_xm))->Type))));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(NIGACTR,mode24,24,MIGACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(NIGACTR,mode24,24,MIGACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 8058: */
 OIGACTR.Fn = YNAACTR_xfinish;
 OIGACTR.M = 0;
 OIGACTR.Props = MQAACTR_z;
 OIGACTR.Param = 0;
-(void)(A_CALLPROC(NL(Output),(A_UNITE(PIGACTR,mode17,17,OIGACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(PIGACTR,mode17,17,OIGACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(PIGACTR,mode17,17,OIGACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(PIGACTR,mode17,17,OIGACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 8059: */
-(*NL(FZAACTR_outlevel)) = 1;
+(*A_NILCHECK(NL(FZAACTR_outlevel))) = 1;
  /* line 8060: */
-QIGACTR.Norden = ((*NL(CZAACTR_lastrd))-EKAACTR_startrd);
-QIGACTR.Nomodes = (*NL(VYAACTR_lastmode));
-QIGACTR.Nolabs = (*NL(DZAACTR_labno));
+QIGACTR.Norden = ((*A_NILCHECK(NL(CZAACTR_lastrd)))-EKAACTR_startrd);
+QIGACTR.Nomodes = (*A_NILCHECK(NL(VYAACTR_lastmode)));
+QIGACTR.Nolabs = (*A_NILCHECK(NL(DZAACTR_labno)));
  /* line 8061: */
-QIGACTR.Nodecnos = (*NL(GZAACTR_maxident));
-QIGACTR.Nomodules = (*NL(UZAACTR_nextmodule));
+QIGACTR.Nodecnos = (*A_NILCHECK(NL(GZAACTR_maxident)));
+QIGACTR.Nomodules = (*A_NILCHECK(NL(UZAACTR_nextmodule)));
  /* line 8062: */
-QIGACTR.Nolibinds = ((*NL(VZAACTR_nextlibno))-FKAACTR_startlib);
-(void)(A_CALLPROC(NL(Output),(A_UNITE(RIGACTR,mode18,18,QIGACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(RIGACTR,mode18,18,QIGACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+QIGACTR.Nolibinds = ((*A_NILCHECK(NL(VZAACTR_nextlibno)))-FKAACTR_startlib);
+(void)(A_CALLPROC(NL(Output),(A_UNITE(RIGACTR,mode18,18,QIGACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(RIGACTR,mode18,18,QIGACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 8063: */
-UIGACTR = A_VTRIM(SIGACTR,(NL(KUAACTR_modes)),A_VTSCRIPT(&(SIGACTR.upb),(NL(KUAACTR_modes)).upb,1,(*NL(VYAACTR_lastmode)))) ;
-(void)(A_CALLPROC(NL(Output),(A_UNITE(TIGACTR,mode19,19,UIGACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(TIGACTR,mode19,19,UIGACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+UIGACTR = A_VTRIM(SIGACTR,(NL(KUAACTR_modes)),A_VTSCRIPT(&(SIGACTR.upb),(NL(KUAACTR_modes)).upb,1,(*A_NILCHECK(NL(VYAACTR_lastmode))))) ;
+(void)(A_CALLPROC(NL(Output),(A_UNITE(TIGACTR,mode19,19,UIGACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(TIGACTR,mode19,19,UIGACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 8064: */
-VIGACTR.Moduleno = (*NL(SZAACTR_moduleno));
-VIGACTR.Type = (*(&(NL(HZAACTR_xm)->Type)));
-(void)(A_CALLPROC(NL(Output),(A_UNITE(WIGACTR,mode31,31,VIGACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(WIGACTR,mode31,31,VIGACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+VIGACTR.Moduleno = (*A_NILCHECK(NL(SZAACTR_moduleno)));
+VIGACTR.Type = (*A_NILCHECK((&(A_NILCHECK(NL(HZAACTR_xm))->Type))));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(WIGACTR,mode31,31,VIGACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(WIGACTR,mode31,31,VIGACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 8065: */
-(void)(A_CALLPROC(NL(Output),(SKAACTR_down, (*NL(FZAACTR_outlevel))),(SKAACTR_down, (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(SKAACTR_down, (*A_NILCHECK(NL(FZAACTR_outlevel)))),(SKAACTR_down, (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 8066: */
  /* line 8067: */
  /* line 8070: */
@@ -27050,31 +27050,31 @@ VIGACTR.Type = (*(&(NL(HZAACTR_xm)->Type)));
 break;
 case 10: 
 { 
-(void)((*NL(JZAACTR_tempprl)) = (*NL(IZAACTR_prl)));
+(void)((*A_NILCHECK(NL(JZAACTR_tempprl))) = (*A_NILCHECK(NL(IZAACTR_prl))));
  /* line 8071: */
 for ( ;; )
 { 
-XIGACTR = ((*NL(JZAACTR_tempprl))!=GQAACTR_nilprl);
+XIGACTR = ((*A_NILCHECK(NL(JZAACTR_tempprl)))!=GQAACTR_nilprl);
 if ( XIGACTR )
 { /* line 8072: */
-ZIGACTR = (*(&((*NL(JZAACTR_tempprl))->Name))) ;
-XIGACTR = A_VC_NE(A_HISVEC(YIGACTR,ZIGACTR,32,A68_CHAR ),A_HISVEC(AJGACTR,(*NL(PSAACTR_ident)),32,A68_CHAR ));
+ZIGACTR = (*A_NILCHECK((&(A_NILCHECK((*A_NILCHECK(NL(JZAACTR_tempprl))))->Name)))) ;
+XIGACTR = A_VC_NE(A_HISVEC(YIGACTR,ZIGACTR,32,A68_CHAR ),A_HISVEC(AJGACTR,(*A_NILCHECK(NL(PSAACTR_ident))),32,A68_CHAR ));
 }
 if ( !(XIGACTR) ) break;
-(void)((*NL(JZAACTR_tempprl)) = (*(&((*NL(JZAACTR_tempprl))->Rest))));
+(void)((*A_NILCHECK(NL(JZAACTR_tempprl))) = (*A_NILCHECK((&(A_NILCHECK((*A_NILCHECK(NL(JZAACTR_tempprl))))->Rest)))));
 }
  /* line 8073: */
  /* line 8074: */
-if ((*NL(JZAACTR_tempprl))==GQAACTR_nilprl)
+if ((*A_NILCHECK(NL(JZAACTR_tempprl)))==GQAACTR_nilprl)
 { 
-BJGACTR.Name = (*NL(PSAACTR_ident));
-CJGACTR = (&(NL(HZAACTR_xm)->Type)) ;
-BJGACTR.No = (*CJGACTR)+=1;
+BJGACTR.Name = (*A_NILCHECK(NL(PSAACTR_ident)));
+CJGACTR = (&(A_NILCHECK(NL(HZAACTR_xm))->Type)) ;
+BJGACTR.No = (*A_NILCHECK(CJGACTR))+=1;
  /* line 8075: */
-BJGACTR.Rest = (*NL(IZAACTR_prl));
+BJGACTR.Rest = (*A_NILCHECK(NL(IZAACTR_prl)));
 DJGACTR = A_HEAP(A68_114 ) ;
-(void)((*DJGACTR) = BJGACTR) ;
-(*NL(IZAACTR_prl)) = DJGACTR;
+(void)((*A_NILCHECK(DJGACTR)) = BJGACTR) ;
+(*A_NILCHECK(NL(IZAACTR_prl))) = DJGACTR;
 } 
 else
 { 
@@ -27100,86 +27100,86 @@ VJGACTR_decnos = WJGACTR;
 A_CALLPROC(QJGACTR_generator,(A68_TRUE, &YJGACTR),(A68_TRUE, &YJGACTR,(QJGACTR_generator).nonlocals));
 XJGACTR_modenos = YJGACTR;
  /* line 8083: */
-(void)(A_CALLPROC(NL(NYEACTR_makekeepinfo),((*NL(LZAACTR_kl)), A68_TRUE, NJGACTR_kspec, VJGACTR_decnos, XJGACTR_modenos),((*NL(LZAACTR_kl)), A68_TRUE, NJGACTR_kspec, VJGACTR_decnos, XJGACTR_modenos,(NL(NYEACTR_makekeepinfo)).nonlocals)));
+(void)(A_CALLPROC(NL(NYEACTR_makekeepinfo),((*A_NILCHECK(NL(LZAACTR_kl))), A68_TRUE, NJGACTR_kspec, VJGACTR_decnos, XJGACTR_modenos),((*A_NILCHECK(NL(LZAACTR_kl))), A68_TRUE, NJGACTR_kspec, VJGACTR_decnos, XJGACTR_modenos,(NL(NYEACTR_makekeepinfo)).nonlocals)));
  /* line 8084: */
-(void)(A_CALLPROC(NL(Output),(A_UNITE(ZJGACTR,mode30,30,VJGACTR_decnos), (*NL(FZAACTR_outlevel))),(A_UNITE(ZJGACTR,mode30,30,VJGACTR_decnos), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(ZJGACTR,mode30,30,VJGACTR_decnos), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(ZJGACTR,mode30,30,VJGACTR_decnos), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 8085: */
 AKGACTR.Fn = YNAACTR_xfinish;
 AKGACTR.M = 0;
 AKGACTR.Props = MQAACTR_z;
 AKGACTR.Param = 0;
-(void)(A_CALLPROC(NL(Output),(A_UNITE(BKGACTR,mode17,17,AKGACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(BKGACTR,mode17,17,AKGACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(BKGACTR,mode17,17,AKGACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(BKGACTR,mode17,17,AKGACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 8086: */
-(*NL(FZAACTR_outlevel)) = 1;
+(*A_NILCHECK(NL(FZAACTR_outlevel))) = 1;
  /* line 8087: */
  /* line 8088: */
-if ((*(&((&NFFACTR_current)->Lastid)))>(*NL(GZAACTR_maxident)))
+if ((*A_NILCHECK((&(A_NILCHECK((&NFFACTR_current))->Lastid))))>(*A_NILCHECK(NL(GZAACTR_maxident))))
 { 
  /* line 8089: */
-(void)((*NL(GZAACTR_maxident)) = (*(&((&NFFACTR_current)->Lastid))));
+(void)((*A_NILCHECK(NL(GZAACTR_maxident))) = (*A_NILCHECK((&(A_NILCHECK((&NFFACTR_current))->Lastid)))));
 } 
  /* line 8090: */
-CKGACTR.Norden = ((*NL(CZAACTR_lastrd))-EKAACTR_startrd);
-CKGACTR.Nomodes = (*NL(VYAACTR_lastmode));
-CKGACTR.Nolabs = (*NL(DZAACTR_labno));
+CKGACTR.Norden = ((*A_NILCHECK(NL(CZAACTR_lastrd)))-EKAACTR_startrd);
+CKGACTR.Nomodes = (*A_NILCHECK(NL(VYAACTR_lastmode)));
+CKGACTR.Nolabs = (*A_NILCHECK(NL(DZAACTR_labno)));
  /* line 8091: */
-CKGACTR.Nodecnos = (*NL(GZAACTR_maxident));
-CKGACTR.Nomodules = (*NL(UZAACTR_nextmodule));
+CKGACTR.Nodecnos = (*A_NILCHECK(NL(GZAACTR_maxident)));
+CKGACTR.Nomodules = (*A_NILCHECK(NL(UZAACTR_nextmodule)));
  /* line 8092: */
-CKGACTR.Nolibinds = ((*NL(VZAACTR_nextlibno))-FKAACTR_startlib);
-(void)(A_CALLPROC(NL(Output),(A_UNITE(DKGACTR,mode18,18,CKGACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(DKGACTR,mode18,18,CKGACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+CKGACTR.Nolibinds = ((*A_NILCHECK(NL(VZAACTR_nextlibno)))-FKAACTR_startlib);
+(void)(A_CALLPROC(NL(Output),(A_UNITE(DKGACTR,mode18,18,CKGACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(DKGACTR,mode18,18,CKGACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 8093: */
-GKGACTR = A_VTRIM(EKGACTR,(NL(KUAACTR_modes)),A_VTSCRIPT(&(EKGACTR.upb),(NL(KUAACTR_modes)).upb,1,(*NL(VYAACTR_lastmode)))) ;
-(void)(A_CALLPROC(NL(Output),(A_UNITE(FKGACTR,mode19,19,GKGACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(FKGACTR,mode19,19,GKGACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+GKGACTR = A_VTRIM(EKGACTR,(NL(KUAACTR_modes)),A_VTSCRIPT(&(EKGACTR.upb),(NL(KUAACTR_modes)).upb,1,(*A_NILCHECK(NL(VYAACTR_lastmode))))) ;
+(void)(A_CALLPROC(NL(Output),(A_UNITE(FKGACTR,mode19,19,GKGACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(FKGACTR,mode19,19,GKGACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 8094: */
 HKGACTR.Decnos = VJGACTR_decnos;
 HKGACTR.Modes = XJGACTR_modenos;
-(void)(A_CALLPROC(NL(Output),(A_UNITE(IKGACTR,mode32,32,HKGACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(IKGACTR,mode32,32,HKGACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(IKGACTR,mode32,32,HKGACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(IKGACTR,mode32,32,HKGACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 8095: */
-(void)(A_CALLPROC(NL(Output),(SKAACTR_down, (*NL(FZAACTR_outlevel))),(SKAACTR_down, (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(SKAACTR_down, (*A_NILCHECK(NL(FZAACTR_outlevel)))),(SKAACTR_down, (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 8096: */
 (void)(A_CALLPROC(NL(Output),(SKAACTR_down, 2),(SKAACTR_down, 2,(NL(Output)).nonlocals)));
  /* line 8097: */
-JKGACTR.F = (*(&(NL(HZAACTR_xm)->Name)));
+JKGACTR.F = (*A_NILCHECK((&(A_NILCHECK(NL(HZAACTR_xm))->Name))));
 JKGACTR.No = 0;
  /* line 8098: */
-JKGACTR.Nl = (*(&((&(NL(HZAACTR_xm)->L))->Level)));
+JKGACTR.Nl = (*A_NILCHECK((&(A_NILCHECK((&(A_NILCHECK(NL(HZAACTR_xm))->L)))->Level))));
  /* line 8099: */
-JKGACTR.Ng = (*(&((&(NL(HZAACTR_xm)->G))->Level)));
+JKGACTR.Ng = (*A_NILCHECK((&(A_NILCHECK((&(A_NILCHECK(NL(HZAACTR_xm))->G)))->Level))));
 JKGACTR.U = A_UNITE(KKGACTR,mode1,1,NJGACTR_kspec);
 (void)(A_CALLPROC(NL(Output),(A_UNITE(LKGACTR,mode22,22,JKGACTR), 0),(A_UNITE(LKGACTR,mode22,22,JKGACTR), 0,(NL(Output)).nonlocals)));
  /* line 8100: */
  /* line 8101: */
  /* line 8104: */
-MKGACTR = (&(NL(BVAACTR_globinfo)->Labs)) ;
-(void)((*MKGACTR) = (*(&((&NFFACTR_current)->Labs))));
+MKGACTR = (&(A_NILCHECK(NL(BVAACTR_globinfo))->Labs)) ;
+(void)((*A_NILCHECK(MKGACTR)) = (*A_NILCHECK((&(A_NILCHECK((&NFFACTR_current))->Labs)))));
 } 
 break;
 case 12: 
 { 
-(void)((*NL(WZAACTR_lastkept)) = (*(&((&NFFACTR_current)->Lastid))));
+(void)((*A_NILCHECK(NL(WZAACTR_lastkept))) = (*A_NILCHECK((&(A_NILCHECK((&NFFACTR_current))->Lastid)))));
  /* line 8105: */
-(*NL(FZAACTR_outlevel)) = 3;
+(*A_NILCHECK(NL(FZAACTR_outlevel))) = 3;
  /* line 8106: */
  /* line 8107: */
  /* line 8110: */
-(*NL(XDBACTR_nscreader)) = TDBACTR_screader;
+(*A_NILCHECK(NL(XDBACTR_nscreader))) = TDBACTR_screader;
 } 
 break;
 case 13: 
  /* line 8113: */
-NKGACTR = (&((&(NL(HZAACTR_xm)->L))->F)) ;
-(void)((*NKGACTR) = (*NL(PSAACTR_ident)));
+NKGACTR = (&(A_NILCHECK((&(A_NILCHECK(NL(HZAACTR_xm))->L)))->F)) ;
+(void)((*A_NILCHECK(NKGACTR)) = (*A_NILCHECK(NL(PSAACTR_ident))));
 break;
 case 14: 
 { 
-OKGACTR = (&((&(NL(HZAACTR_xm)->L))->N)) ;
-(void)((*OKGACTR) = (*NL(PSAACTR_ident)));
+OKGACTR = (&(A_NILCHECK((&(A_NILCHECK(NL(HZAACTR_xm))->L)))->N)) ;
+(void)((*A_NILCHECK(OKGACTR)) = (*A_NILCHECK(NL(PSAACTR_ident))));
  /* line 8114: */
  /* line 8115: */
  /* line 8118: */
-PKGACTR = (&((&(NL(HZAACTR_xm)->L))->Level)) ;
-(*PKGACTR) = 1;
+PKGACTR = (&(A_NILCHECK((&(A_NILCHECK(NL(HZAACTR_xm))->L)))->Level)) ;
+(*A_NILCHECK(PKGACTR)) = 1;
 } 
 break;
 case 15: 
@@ -27187,72 +27187,72 @@ QKGACTR.N = NL(XTAACTR_spaces);
 QKGACTR.F = NL(XTAACTR_spaces);
 QKGACTR.Level = 0;
  /* line 8121: */
-RKGACTR = (&(NL(HZAACTR_xm)->L)) ;
-SKGACTR = (&(NL(HZAACTR_xm)->G)) ;
-(*SKGACTR) = (*RKGACTR) = QKGACTR;
+RKGACTR = (&(A_NILCHECK(NL(HZAACTR_xm))->L)) ;
+SKGACTR = (&(A_NILCHECK(NL(HZAACTR_xm))->G)) ;
+(*A_NILCHECK(SKGACTR)) = (*A_NILCHECK(RKGACTR)) = QKGACTR;
 break;
 case 16: 
 TKGACTR.N = A_CALLPROC(NL(KTAACTR_idmess),(58),(58,(NL(KTAACTR_idmess)).nonlocals));
 TKGACTR.F = A_CALLPROC(NL(KTAACTR_idmess),(57),(57,(NL(KTAACTR_idmess)).nonlocals));
 TKGACTR.Level = 1;
  /* line 8124: */
-UKGACTR = (&(NL(HZAACTR_xm)->L)) ;
-(*UKGACTR) = TKGACTR;
+UKGACTR = (&(A_NILCHECK(NL(HZAACTR_xm))->L)) ;
+(*A_NILCHECK(UKGACTR)) = TKGACTR;
 break;
 case 17: 
 { 
  /* line 8125: */
-if ((*(&((&(NL(HZAACTR_xm)->L))->Level)))!=0)
+if ((*A_NILCHECK((&(A_NILCHECK((&(A_NILCHECK(NL(HZAACTR_xm))->L)))->Level))))!=0)
 { 
-A_CALLPROC(NL(Givemoduledetails),((*(&((&(NL(HZAACTR_xm)->L))->N))), 0, A68_FALSE, &WKGACTR),((*(&((&(NL(HZAACTR_xm)->L))->N))), 0, A68_FALSE, &WKGACTR,(NL(Givemoduledetails)).nonlocals));
+A_CALLPROC(NL(Givemoduledetails),((*A_NILCHECK((&(A_NILCHECK((&(A_NILCHECK(NL(HZAACTR_xm))->L)))->N)))), 0, A68_FALSE, &WKGACTR),((*A_NILCHECK((&(A_NILCHECK((&(A_NILCHECK(NL(HZAACTR_xm))->L)))->N)))), 0, A68_FALSE, &WKGACTR,(NL(Givemoduledetails)).nonlocals));
 VKGACTR_yml = WKGACTR;
  /* line 8126: */
  /* line 8127: */
-YKGACTR_xml = (&((&VKGACTR_yml)->Xmi));
+YKGACTR_xml = (&(A_NILCHECK((&VKGACTR_yml))->Xmi));
  /* line 8128: */
  /* line 8129: */
-if ((*(&(YKGACTR_xml->Type)))>=0)
+if ((*A_NILCHECK((&(A_NILCHECK(YKGACTR_xml)->Type))))>=0)
 { 
  /* line 8130: */
  /* line 8131: */
-if ((*(&((&(YKGACTR_xml->G))->Level)))!=0)
+if ((*A_NILCHECK((&(A_NILCHECK((&(A_NILCHECK(YKGACTR_xml)->G)))->Level))))!=0)
 { 
  /* line 8132: */
-ZKGACTR = (*(&(YKGACTR_xml->G)));
+ZKGACTR = (*A_NILCHECK((&(A_NILCHECK(YKGACTR_xml)->G))));
 } 
 else
 { 
-ZKGACTR = (*(&(YKGACTR_xml->L)));
+ZKGACTR = (*A_NILCHECK((&(A_NILCHECK(YKGACTR_xml)->L))));
 } 
-ALGACTR = (&(NL(HZAACTR_xm)->G)) ;
-(*ALGACTR) = ZKGACTR;
+ALGACTR = (&(A_NILCHECK(NL(HZAACTR_xm))->G)) ;
+(*A_NILCHECK(ALGACTR)) = ZKGACTR;
  /* line 8133: */
  /* line 8134: */
-if ((*(&((&(NL(HZAACTR_xm)->G))->Level)))!=0)
+if ((*A_NILCHECK((&(A_NILCHECK((&(A_NILCHECK(NL(HZAACTR_xm))->G)))->Level))))!=0)
 { 
  /* line 8135: */
  /* line 8136: */
-A_CALLPROC(NL(Givemoduledetails),((*(&((&(NL(HZAACTR_xm)->G))->N))), 0, A68_FALSE, &BLGACTR),((*(&((&(NL(HZAACTR_xm)->G))->N))), 0, A68_FALSE, &BLGACTR,(NL(Givemoduledetails)).nonlocals));
+A_CALLPROC(NL(Givemoduledetails),((*A_NILCHECK((&(A_NILCHECK((&(A_NILCHECK(NL(HZAACTR_xm))->G)))->N)))), 0, A68_FALSE, &BLGACTR),((*A_NILCHECK((&(A_NILCHECK((&(A_NILCHECK(NL(HZAACTR_xm))->G)))->N)))), 0, A68_FALSE, &BLGACTR,(NL(Givemoduledetails)).nonlocals));
 XKGACTR_ymg = BLGACTR;
  /* line 8137: */
  /* line 8138: */
  /* line 8139: */
  /* line 8140: */
-(void)(A_CALLPROC(NL(WTEACTR_treatspec),((&((&(NL(HZAACTR_xm)->G))->N)), (&((&(NL(HZAACTR_xm)->G))->F)), (*(&((&XKGACTR_ymg)->Ym)))),((&((&(NL(HZAACTR_xm)->G))->N)), (&((&(NL(HZAACTR_xm)->G))->F)), (*(&((&XKGACTR_ymg)->Ym))),(NL(WTEACTR_treatspec)).nonlocals)));
+(void)(A_CALLPROC(NL(WTEACTR_treatspec),((&(A_NILCHECK((&(A_NILCHECK(NL(HZAACTR_xm))->G)))->N)), (&(A_NILCHECK((&(A_NILCHECK(NL(HZAACTR_xm))->G)))->F)), (*A_NILCHECK((&(A_NILCHECK((&XKGACTR_ymg))->Ym))))),((&(A_NILCHECK((&(A_NILCHECK(NL(HZAACTR_xm))->G)))->N)), (&(A_NILCHECK((&(A_NILCHECK(NL(HZAACTR_xm))->G)))->F)), (*A_NILCHECK((&(A_NILCHECK((&XKGACTR_ymg))->Ym)))),(NL(WTEACTR_treatspec)).nonlocals)));
 } 
  /* line 8141: */
-(void)(A_CALLPROC(NL(WTEACTR_treatspec),((&((&(NL(HZAACTR_xm)->L))->N)), (&((&(NL(HZAACTR_xm)->L))->F)), (*(&((&VKGACTR_yml)->Ym)))),((&((&(NL(HZAACTR_xm)->L))->N)), (&((&(NL(HZAACTR_xm)->L))->F)), (*(&((&VKGACTR_yml)->Ym))),(NL(WTEACTR_treatspec)).nonlocals)));
+(void)(A_CALLPROC(NL(WTEACTR_treatspec),((&(A_NILCHECK((&(A_NILCHECK(NL(HZAACTR_xm))->L)))->N)), (&(A_NILCHECK((&(A_NILCHECK(NL(HZAACTR_xm))->L)))->F)), (*A_NILCHECK((&(A_NILCHECK((&VKGACTR_yml))->Ym))))),((&(A_NILCHECK((&(A_NILCHECK(NL(HZAACTR_xm))->L)))->N)), (&(A_NILCHECK((&(A_NILCHECK(NL(HZAACTR_xm))->L)))->F)), (*A_NILCHECK((&(A_NILCHECK((&VKGACTR_yml))->Ym)))),(NL(WTEACTR_treatspec)).nonlocals)));
  /* line 8142: */
  /* line 8143: */
  /* line 8144: */
-CLGACTR = (&((&(NL(HZAACTR_xm)->L))->Level)) ;
-(void)((*CLGACTR) = ((*NL(TZAACTR_modulelevel))-(*(&((&(NL(HZAACTR_xm)->G))->Level)))));
+CLGACTR = (&(A_NILCHECK((&(A_NILCHECK(NL(HZAACTR_xm))->L)))->Level)) ;
+(void)((*A_NILCHECK(CLGACTR)) = ((*A_NILCHECK(NL(TZAACTR_modulelevel)))-(*A_NILCHECK((&(A_NILCHECK((&(A_NILCHECK(NL(HZAACTR_xm))->G)))->Level))))));
 } 
 else
 { 
  /* line 8145: */
  /* line 8146: */
-if ((*(&(YKGACTR_xml->Type)))==(-1))
+if ((*A_NILCHECK((&(A_NILCHECK(YKGACTR_xml)->Type))))==(-1))
 { 
  /* line 8147: */
 DLGACTR = 199;
@@ -27263,133 +27263,133 @@ DLGACTR = 160;
 } 
  /* line 8148: */
  /* line 8149: */
-(void)(A_CALLPROC(NL(PZBACTR_faultp),(DLGACTR, 0, 0, (&((&(NL(HZAACTR_xm)->L))->N))),(DLGACTR, 0, 0, (&((&(NL(HZAACTR_xm)->L))->N)),(NL(PZBACTR_faultp)).nonlocals)));
+(void)(A_CALLPROC(NL(PZBACTR_faultp),(DLGACTR, 0, 0, (&(A_NILCHECK((&(A_NILCHECK(NL(HZAACTR_xm))->L)))->N))),(DLGACTR, 0, 0, (&(A_NILCHECK((&(A_NILCHECK(NL(HZAACTR_xm))->L)))->N)),(NL(PZBACTR_faultp)).nonlocals)));
 } 
 } 
  /* line 8150: */
  /* line 8151: */
  /* line 8154: */
-(void)(A_CALLPROC(NL(Output),(A_UNITE(ELGACTR,mode21,21,(*NL(HZAACTR_xm))), 0),(A_UNITE(ELGACTR,mode21,21,(*NL(HZAACTR_xm))), 0,(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(ELGACTR,mode21,21,(*A_NILCHECK(NL(HZAACTR_xm)))), 0),(A_UNITE(ELGACTR,mode21,21,(*A_NILCHECK(NL(HZAACTR_xm)))), 0,(NL(Output)).nonlocals)));
 } 
 break;
 case 18: 
  /* line 8157: */
-(void)(A_CALLPROC((*NL(FFDACTR_bumodule)),(NL(PSAACTR_ident), 0),(NL(PSAACTR_ident), 0,((*NL(FFDACTR_bumodule))).nonlocals)));
+(void)(A_CALLPROC((*A_NILCHECK(NL(FFDACTR_bumodule))),(NL(PSAACTR_ident), 0),(NL(PSAACTR_ident), 0,((*A_NILCHECK(NL(FFDACTR_bumodule)))).nonlocals)));
 break;
 case 19: 
-if ((*NL(MFBACTR_t1))==32)
+if ((*A_NILCHECK(NL(MFBACTR_t1)))==32)
 { 
  /* line 8161: */
-(*NL(MFBACTR_t1)) = 85;
+(*A_NILCHECK(NL(MFBACTR_t1))) = 85;
 } 
 break;
 case 20: 
 { 
-(void)((*NL(QZAACTR_testsubst)) = (*NL(NZAACTR_substack)));
+(void)((*A_NILCHECK(NL(QZAACTR_testsubst))) = (*A_NILCHECK(NL(NZAACTR_substack))));
  /* line 8162: */
-(*NL(RZAACTR_substlevel))+=1;
+(*A_NILCHECK(NL(RZAACTR_substlevel)))+=1;
  /* line 8163: */
 for ( ;; )
 { 
  /* line 8164: */
-FLGACTR = ((*NL(QZAACTR_testsubst))!=HQAACTR_nilsubl);
+FLGACTR = ((*A_NILCHECK(NL(QZAACTR_testsubst)))!=HQAACTR_nilsubl);
 if ( FLGACTR )
 { /* line 8165: */
-HLGACTR = (*(&((*NL(QZAACTR_testsubst))->Proxy))) ;
-JLGACTR = A_VC_NE(A_HISVEC(GLGACTR,HLGACTR,32,A68_CHAR ),A_HISVEC(ILGACTR,(*NL(PSAACTR_ident)),32,A68_CHAR ));
+HLGACTR = (*A_NILCHECK((&(A_NILCHECK((*A_NILCHECK(NL(QZAACTR_testsubst))))->Proxy)))) ;
+JLGACTR = A_VC_NE(A_HISVEC(GLGACTR,HLGACTR,32,A68_CHAR ),A_HISVEC(ILGACTR,(*A_NILCHECK(NL(PSAACTR_ident))),32,A68_CHAR ));
 if ( ! JLGACTR )
 { /* line 8166: */
-JLGACTR = ((*(&((*NL(QZAACTR_testsubst))->Level)))!=(*NL(RZAACTR_substlevel)));
+JLGACTR = ((*A_NILCHECK((&(A_NILCHECK((*A_NILCHECK(NL(QZAACTR_testsubst))))->Level))))!=(*A_NILCHECK(NL(RZAACTR_substlevel))));
 }
  /* line 8167: */
 FLGACTR = JLGACTR;
 }
 if ( !(FLGACTR) ) break;
-(void)((*NL(QZAACTR_testsubst)) = (*(&((*NL(QZAACTR_testsubst))->Rest))));
+(void)((*A_NILCHECK(NL(QZAACTR_testsubst))) = (*A_NILCHECK((&(A_NILCHECK((*A_NILCHECK(NL(QZAACTR_testsubst))))->Rest)))));
 }
  /* line 8169: */
  /* line 8170: */
-if ((*NL(QZAACTR_testsubst))!=HQAACTR_nilsubl)
+if ((*A_NILCHECK(NL(QZAACTR_testsubst)))!=HQAACTR_nilsubl)
 { 
  /* line 8172: */
 (void)(A_CALLPROC(NL(PZBACTR_faultp),(198, 0, 0, NL(PSAACTR_ident)),(198, 0, 0, NL(PSAACTR_ident),(NL(PZBACTR_faultp)).nonlocals)));
 } 
  /* line 8173: */
-KLGACTR.Proxy = (*NL(PSAACTR_ident));
-KLGACTR.Level = (*NL(RZAACTR_substlevel));
-KLGACTR.A = A_UNITE(LLGACTR,mode1,1,(*NL(KZAACTR_close)));
+KLGACTR.Proxy = (*A_NILCHECK(NL(PSAACTR_ident)));
+KLGACTR.Level = (*A_NILCHECK(NL(RZAACTR_substlevel)));
+KLGACTR.A = A_UNITE(LLGACTR,mode1,1,(*A_NILCHECK(NL(KZAACTR_close))));
  /* line 8174: */
-KLGACTR.Rest = (*NL(NZAACTR_substack));
+KLGACTR.Rest = (*A_NILCHECK(NL(NZAACTR_substack)));
  /* line 8177: */
 MLGACTR = A_HEAP(A68_116 ) ;
-(void)((*MLGACTR) = KLGACTR) ;
-(*NL(NZAACTR_substack)) = MLGACTR;
+(void)((*A_NILCHECK(MLGACTR)) = KLGACTR) ;
+(*A_NILCHECK(NL(NZAACTR_substack))) = MLGACTR;
 } 
 break;
 case 21: 
 { 
-NLGACTR.Name = (*NL(PSAACTR_ident));
+NLGACTR.Name = (*A_NILCHECK(NL(PSAACTR_ident)));
 NLGACTR.S = (A68_116 *)A68_NIL;
 OLGACTR = A_HEAP(A68_118 ) ;
-(void)((*OLGACTR) = NLGACTR) ;
-QLGACTR = (&((*NL(NZAACTR_substack))->A)) ;
-(void)((*QLGACTR) = A_UNITE(PLGACTR,mode1,1,OLGACTR));
+(void)((*A_NILCHECK(OLGACTR)) = NLGACTR) ;
+QLGACTR = (&(A_NILCHECK((*A_NILCHECK(NL(NZAACTR_substack))))->A)) ;
+(void)((*A_NILCHECK(QLGACTR)) = A_UNITE(PLGACTR,mode1,1,OLGACTR));
  /* line 8178: */
  /* line 8179: */
  /* line 8182: */
-(*NL(RZAACTR_substlevel))-=1;
+(*A_NILCHECK(NL(RZAACTR_substlevel)))-=1;
 } 
 break;
 case 22: 
 { 
-SLGACTR = (&((*NL(NZAACTR_substack))->A)) ;
-(void)((*SLGACTR) = A_UNITE(RLGACTR,mode1,1,(*NL(KZAACTR_close))));
+SLGACTR = (&(A_NILCHECK((*A_NILCHECK(NL(NZAACTR_substack))))->A)) ;
+(void)((*A_NILCHECK(SLGACTR)) = A_UNITE(RLGACTR,mode1,1,(*A_NILCHECK(NL(KZAACTR_close)))));
  /* line 8183: */
  /* line 8184: */
  /* line 8187: */
-(*NL(RZAACTR_substlevel))-=2;
+(*A_NILCHECK(NL(RZAACTR_substlevel)))-=2;
 } 
 break;
 case 23: 
 { 
 ULGACTR = A_CALLPROC(NL(RJEACTR_findproxy),(NL(PSAACTR_ident)),(NL(PSAACTR_ident),(NL(RJEACTR_findproxy)).nonlocals)) ;
-VLGACTR = (&((*NL(NZAACTR_substack))->A)) ;
-(void)((*VLGACTR) = A_UNITE(TLGACTR,mode2,2,ULGACTR));
+VLGACTR = (&(A_NILCHECK((*A_NILCHECK(NL(NZAACTR_substack))))->A)) ;
+(void)((*A_NILCHECK(VLGACTR)) = A_UNITE(TLGACTR,mode2,2,ULGACTR));
  /* line 8188: */
  /* line 8189: */
  /* line 8192: */
-(*NL(RZAACTR_substlevel))-=1;
+(*A_NILCHECK(NL(RZAACTR_substlevel)))-=1;
 } 
 break;
 case 24: 
 { 
-(void)((*NL(PZAACTR_tsubst)) = (*NL(NZAACTR_substack)));
+(void)((*A_NILCHECK(NL(PZAACTR_tsubst))) = (*A_NILCHECK(NL(NZAACTR_substack))));
  /* line 8193: */
-(void)((*NL(NZAACTR_substack)) = (*(&((*NL(NZAACTR_substack))->Rest))));
+(void)((*A_NILCHECK(NL(NZAACTR_substack))) = (*A_NILCHECK((&(A_NILCHECK((*A_NILCHECK(NL(NZAACTR_substack))))->Rest)))));
  /* line 8194: */
-WLGACTR = (&((*NL(PZAACTR_tsubst))->Rest)) ;
-(void)((*WLGACTR) = (*NL(OZAACTR_sublist)));
+WLGACTR = (&(A_NILCHECK((*A_NILCHECK(NL(PZAACTR_tsubst))))->Rest)) ;
+(void)((*A_NILCHECK(WLGACTR)) = (*A_NILCHECK(NL(OZAACTR_sublist))));
  /* line 8195: */
  /* line 8196: */
  /* line 8199: */
-(void)((*NL(OZAACTR_sublist)) = (*NL(PZAACTR_tsubst)));
+(void)((*A_NILCHECK(NL(OZAACTR_sublist))) = (*A_NILCHECK(NL(PZAACTR_tsubst))));
 } 
 break;
 case 25: 
  /* line 8202: */
-(*NL(OZAACTR_sublist)) = (A68_116 *)A68_NIL;
+(*A_NILCHECK(NL(OZAACTR_sublist))) = (A68_116 *)A68_NIL;
 break;
 case 26: 
 { 
-XLGACTR.Name = (*(&((*NL(NZAACTR_substack))->Proxy)));
-XLGACTR.S = (*NL(OZAACTR_sublist));
+XLGACTR.Name = (*A_NILCHECK((&(A_NILCHECK((*A_NILCHECK(NL(NZAACTR_substack))))->Proxy))));
+XLGACTR.S = (*A_NILCHECK(NL(OZAACTR_sublist)));
 YLGACTR = A_HEAP(A68_118 ) ;
-(void)((*YLGACTR) = XLGACTR) ;
-(*NL(KZAACTR_close)) = YLGACTR;
+(void)((*A_NILCHECK(YLGACTR)) = XLGACTR) ;
+(*A_NILCHECK(NL(KZAACTR_close))) = YLGACTR;
  /* line 8203: */
  /* line 8204: */
  /* line 8207: */
-(void)((*NL(NZAACTR_substack)) = (*(&((*NL(NZAACTR_substack))->Rest))));
+(void)((*A_NILCHECK(NL(NZAACTR_substack))) = (*A_NILCHECK((&(A_NILCHECK((*A_NILCHECK(NL(NZAACTR_substack))))->Rest)))));
 } 
 break;
 case 27: 
@@ -27399,16 +27399,16 @@ AMGACTR = IGFACTR_id = A_CALLPROC(NL(JEFACTR_findid),(),((NL(JEFACTR_findid)).no
  /* line 8208: */
  /* line 8209: */
  /* line 8212: */
-(void)(RNDACTR_adjscope((*(&((&NFFACTR_current)->Rd))), (*(&(IGFACTR_id->Level))), (*(&(IGFACTR_id->Scope)))));
+(void)(RNDACTR_adjscope((*A_NILCHECK((&(A_NILCHECK((&NFFACTR_current))->Rd)))), (*A_NILCHECK((&(A_NILCHECK(IGFACTR_id)->Level)))), (*A_NILCHECK((&(A_NILCHECK(IGFACTR_id)->Scope))))));
 } 
 break;
 case 28: 
  /* line 8215: */
-(void)(A_CALLPROC(NL(XCFACTR_addtokl),(A_UNITE(BMGACTR,mode2,2,(*NL(KDBACTR_cindic)))),(A_UNITE(BMGACTR,mode2,2,(*NL(KDBACTR_cindic))),(NL(XCFACTR_addtokl)).nonlocals)));
+(void)(A_CALLPROC(NL(XCFACTR_addtokl),(A_UNITE(BMGACTR,mode2,2,(*A_NILCHECK(NL(KDBACTR_cindic))))),(A_UNITE(BMGACTR,mode2,2,(*A_NILCHECK(NL(KDBACTR_cindic)))),(NL(XCFACTR_addtokl)).nonlocals)));
 break;
 case 29: 
 { 
-(void)(JGFACTR_indic = (*NL(KDBACTR_cindic)));
+(void)(JGFACTR_indic = (*A_NILCHECK(NL(KDBACTR_cindic))));
  /* line 8216: */
  /* line 8217: */
 if (JGFACTR_indic==SQAACTR_nilind)
@@ -27417,7 +27417,7 @@ if (JGFACTR_indic==SQAACTR_nilind)
 (void)(A_CALLPROC(NL(QJBACTR_fault),(196),(196,(NL(QJBACTR_fault)).nonlocals)));
 } 
  /* line 8220: */
-(void)(KGFACTR_inst1 = (*NL(LDBACTR_cinst)));
+(void)(KGFACTR_inst1 = (*A_NILCHECK(NL(LDBACTR_cinst))));
  /* line 8221: */
 (void)(DGFACTR_j = A_CALLPROC(QLFACTR_declarer,(A68_FALSE, (&OGFACTR_scam)),(A68_FALSE, (&OGFACTR_scam),(QLFACTR_declarer).nonlocals)));
  /* line 8222: */
@@ -27433,15 +27433,15 @@ for ( ;; )
  /* line 8227: */
 CMGACTR = (KGFACTR_inst1!=VQAACTR_nilinst);
 if ( CMGACTR )
-{DMGACTR = (CGFACTR_i!=(*(&(KGFACTR_inst1->Lmode))));
+{DMGACTR = (CGFACTR_i!=(*A_NILCHECK((&(A_NILCHECK(KGFACTR_inst1)->Lmode)))));
 if ( ! DMGACTR )
-{DMGACTR = (DGFACTR_j!=(*(&(KGFACTR_inst1->Rmode))));
+{DMGACTR = (DGFACTR_j!=(*A_NILCHECK((&(A_NILCHECK(KGFACTR_inst1)->Rmode)))));
 }
  /* line 8228: */
 CMGACTR = DMGACTR;
 }
 if ( !(CMGACTR) ) break;
-(void)(KGFACTR_inst1 = (*(&(KGFACTR_inst1->Rest))));
+(void)(KGFACTR_inst1 = (*A_NILCHECK((&(A_NILCHECK(KGFACTR_inst1)->Rest)))));
 }
  /* line 8229: */
  /* line 8230: */
@@ -27452,13 +27452,13 @@ if (JGFACTR_indic!=SQAACTR_nilind)
 { 
  /* line 8233: */
  /* line 8234: */
-(void)((*NL(OSAACTR_compsymb)) = (*(&(JGFACTR_indic->Name)))) ;
+(void)((*A_NILCHECK(NL(OSAACTR_compsymb))) = (*A_NILCHECK((&(A_NILCHECK(JGFACTR_indic)->Name))))) ;
 (void)(A_CALLPROC(NL(PZBACTR_faultp),(161, 0, 0, NL(OSAACTR_compsymb)),(161, 0, 0, NL(OSAACTR_compsymb),(NL(PZBACTR_faultp)).nonlocals)));
 } 
 } 
 else
 { 
-(void)(RNDACTR_adjscope((*(&((&NFFACTR_current)->Rd))), (*(&(KGFACTR_inst1->Level))), (*(&(KGFACTR_inst1->Scope)))));
+(void)(RNDACTR_adjscope((*A_NILCHECK((&(A_NILCHECK((&NFFACTR_current))->Rd)))), (*A_NILCHECK((&(A_NILCHECK(KGFACTR_inst1)->Level)))), (*A_NILCHECK((&(A_NILCHECK(KGFACTR_inst1)->Scope))))));
  /* line 8235: */
 EMGACTR.N = JGFACTR_indic;
 EMGACTR.I = KGFACTR_inst1;
@@ -27480,27 +27480,27 @@ CGFACTR_i = DGFACTR_j;
 break;
 case 32: 
 { 
-(void)((*NL(LZAACTR_kl)) = (A68_121 *)A68_NIL) ;
-(void)((*NL(MZAACTR_rkl)) = NL(LZAACTR_kl));
+(void)((*A_NILCHECK(NL(LZAACTR_kl))) = (A68_121 *)A68_NIL) ;
+(void)((*A_NILCHECK(NL(MZAACTR_rkl))) = NL(LZAACTR_kl));
  /* line 8246: */
  /* line 8247: */
-if ((*(&((&NFFACTR_current)->Rd)))!=(A68_68 *)A68_NIL)
+if ((*A_NILCHECK((&(A_NILCHECK((&NFFACTR_current))->Rd))))!=(A68_68 *)A68_NIL)
 { 
  /* line 8248: */
  /* line 8249: */
-GMGACTR = (&((*(&((&NFFACTR_current)->Rd)))->Props)) ;
-(void)((*GMGACTR) = (A68_BITS )((*(&((*(&((&NFFACTR_current)->Rd)))->Props)))|OLAACTR_holebit));
+GMGACTR = (&(A_NILCHECK((*A_NILCHECK((&(A_NILCHECK((&NFFACTR_current))->Rd)))))->Props)) ;
+(void)((*A_NILCHECK(GMGACTR)) = (A68_BITS )((*A_NILCHECK((&(A_NILCHECK((*A_NILCHECK((&(A_NILCHECK((&NFFACTR_current))->Rd)))))->Props))))|OLAACTR_holebit));
 } 
  /* line 8250: */
-HMGACTR.Proxy = (*NL(PSAACTR_ident));
-HMGACTR.Level = (*NL(RZAACTR_substlevel));
-HMGACTR.A = A_UNITE(IMGACTR,mode1,1,(*NL(KZAACTR_close)));
+HMGACTR.Proxy = (*A_NILCHECK(NL(PSAACTR_ident)));
+HMGACTR.Level = (*A_NILCHECK(NL(RZAACTR_substlevel)));
+HMGACTR.A = A_UNITE(IMGACTR,mode1,1,(*A_NILCHECK(NL(KZAACTR_close))));
  /* line 8251: */
 HMGACTR.Rest = (A68_116 *)A68_NIL;
  /* line 8254: */
 JMGACTR = A_HEAP(A68_116 ) ;
-(void)((*JMGACTR) = HMGACTR) ;
-(*NL(NZAACTR_substack)) = JMGACTR;
+(void)((*A_NILCHECK(JMGACTR)) = HMGACTR) ;
+(*A_NILCHECK(NL(NZAACTR_substack))) = JMGACTR;
 } 
 break;
 case 33: 
@@ -27518,40 +27518,40 @@ BNGACTR_decnos = CNGACTR;
 A_CALLPROC(WMGACTR_generator,(A68_TRUE, &ENGACTR),(A68_TRUE, &ENGACTR,(WMGACTR_generator).nonlocals));
 DNGACTR_modes = ENGACTR;
  /* line 8256: */
-FNGACTR_p = A_CALLPROC(NL(RJEACTR_findproxy),((&((*NL(NZAACTR_substack))->Proxy))),((&((*NL(NZAACTR_substack))->Proxy)),(NL(RJEACTR_findproxy)).nonlocals));
+FNGACTR_p = A_CALLPROC(NL(RJEACTR_findproxy),((&(A_NILCHECK((*A_NILCHECK(NL(NZAACTR_substack))))->Proxy))),((&(A_NILCHECK((*A_NILCHECK(NL(NZAACTR_substack))))->Proxy)),(NL(RJEACTR_findproxy)).nonlocals));
  /* line 8257: */
-(void)((*NL(NZAACTR_substack)) = (*(&((*NL(NZAACTR_substack))->Rest))));
+(void)((*A_NILCHECK(NL(NZAACTR_substack))) = (*A_NILCHECK((&(A_NILCHECK((*A_NILCHECK(NL(NZAACTR_substack))))->Rest)))));
  /* line 8258: */
-(void)(A_CALLPROC(NL(NYEACTR_makekeepinfo),((*NL(LZAACTR_kl)), A68_TRUE, TMGACTR_kspec, BNGACTR_decnos, DNGACTR_modes),((*NL(LZAACTR_kl)), A68_TRUE, TMGACTR_kspec, BNGACTR_decnos, DNGACTR_modes,(NL(NYEACTR_makekeepinfo)).nonlocals)));
+(void)(A_CALLPROC(NL(NYEACTR_makekeepinfo),((*A_NILCHECK(NL(LZAACTR_kl))), A68_TRUE, TMGACTR_kspec, BNGACTR_decnos, DNGACTR_modes),((*A_NILCHECK(NL(LZAACTR_kl))), A68_TRUE, TMGACTR_kspec, BNGACTR_decnos, DNGACTR_modes,(NL(NYEACTR_makekeepinfo)).nonlocals)));
  /* line 8259: */
 GNGACTR.I = 1;
  /* line 8260: */
  /* line 8261: */
-if ((*(&((&(NL(HZAACTR_xm)->G))->Level)))==0)
+if ((*A_NILCHECK((&(A_NILCHECK((&(A_NILCHECK(NL(HZAACTR_xm))->G)))->Level))))==0)
 { 
  /* line 8262: */
-GNGACTR.J = (*(&((&(NL(HZAACTR_xm)->L))->Level)));
+GNGACTR.J = (*A_NILCHECK((&(A_NILCHECK((&(A_NILCHECK(NL(HZAACTR_xm))->L)))->Level))));
 } 
 else
 { 
-GNGACTR.J = (*(&((&(NL(HZAACTR_xm)->G))->Level)));
+GNGACTR.J = (*A_NILCHECK((&(A_NILCHECK((&(A_NILCHECK(NL(HZAACTR_xm))->G)))->Level))));
 } 
 GNGACTR.K = 0;
 HNGACTR_kset = GNGACTR;
  /* line 8263: */
-INGACTR.F = (*(&(FNGACTR_p->Name)));
-INGACTR.No = (*(&(FNGACTR_p->No)));
+INGACTR.F = (*A_NILCHECK((&(A_NILCHECK(FNGACTR_p)->Name))));
+INGACTR.No = (*A_NILCHECK((&(A_NILCHECK(FNGACTR_p)->No))));
 INGACTR.Nl = 1;
-INGACTR.Ng = (*(&((&HNGACTR_kset)->J)));
+INGACTR.Ng = (*A_NILCHECK((&(A_NILCHECK((&HNGACTR_kset))->J))));
 INGACTR.U = A_UNITE(JNGACTR,mode1,1,TMGACTR_kspec);
 (void)(A_CALLPROC(NL(Output),(A_UNITE(KNGACTR,mode22,22,INGACTR), 0),(A_UNITE(KNGACTR,mode22,22,INGACTR), 0,(NL(Output)).nonlocals)));
  /* line 8264: */
-LNGACTR.Body.I = (*(&(FNGACTR_p->No)));
+LNGACTR.Body.I = (*A_NILCHECK((&(A_NILCHECK(FNGACTR_p)->No))));
 LNGACTR.Body.J = 0;
 LNGACTR.Kset = A_VEC(MNGACTR,(&HNGACTR_kset),A68_71 *);
 LNGACTR.Keeps = BNGACTR_decnos;
 LNGACTR.Last = 0;
-(void)(A_CALLPROC(NL(Output),(A_UNITE(NNGACTR,mode27,27,LNGACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(NNGACTR,mode27,27,LNGACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(NNGACTR,mode27,27,LNGACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(NNGACTR,mode27,27,LNGACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 8265: */
 ONGACTR.Props = MQAACTR_z;
 ONGACTR.Mode = YKAACTR_voidmode;
@@ -27570,19 +27570,19 @@ if (PFFACTR_oldindichash)
 A_CLOSURE( UNGACTR_generator, VNGACTR_generator, WNGACTR_generator );
  /* line 8272: */
 A_CALLPROC(UNGACTR_generator,(A68_TRUE, &ZNGACTR),(A68_TRUE, &ZNGACTR,(UNGACTR_generator).nonlocals));
-AOGACTR = (*(&((&NFFACTR_current)->Indics))) ;
+AOGACTR = (*A_NILCHECK((&(A_NILCHECK((&NFFACTR_current))->Indics)))) ;
 (void)(A_VASSIGN2(AOGACTR,ZNGACTR,A68_110 *)) ;
-BOGACTR = (&((&NFFACTR_current)->Indics)) ;
-(*BOGACTR) = ZNGACTR;
+BOGACTR = (&(A_NILCHECK((&NFFACTR_current))->Indics)) ;
+(*A_NILCHECK(BOGACTR)) = ZNGACTR;
  /* line 8273: */
  /* line 8274: */
 PFFACTR_oldindichash = A68_FALSE;
 } 
  /* line 8275: */
-COGACTR = ((*NL(BUAACTR_typechar1))!=3);
+COGACTR = ((*A_NILCHECK(NL(BUAACTR_typechar1)))!=3);
 if ( COGACTR )
 { /* line 8276: */
-COGACTR = ((*NL(BUAACTR_typechar1))!=6);
+COGACTR = ((*A_NILCHECK(NL(BUAACTR_typechar1)))!=6);
 }
 if (COGACTR)
 { 
@@ -27592,8 +27592,8 @@ if (COGACTR)
 goto QNGACTR_l;
 } 
  /* line 8280: */
-DOGACTR = (*(&((&NFFACTR_current)->Indics))) ;
-(void)(JGFACTR_indic = (*(&A_VINDEX(DOGACTR,(*NL(RSAACTR_comphash))))));
+DOGACTR = (*A_NILCHECK((&(A_NILCHECK((&NFFACTR_current))->Indics)))) ;
+(void)(JGFACTR_indic = (*A_NILCHECK((&A_VINDEX(DOGACTR,(*A_NILCHECK(NL(RSAACTR_comphash))))))));
  /* line 8281: */
 for ( ;; )
 { 
@@ -27601,22 +27601,22 @@ for ( ;; )
 EOGACTR = (JGFACTR_indic!=SQAACTR_nilind);
 if ( EOGACTR )
 { /* line 8283: */
-EOGACTR = ((*(&(JGFACTR_indic->Level)))==(*(&((&NFFACTR_current)->Level))));
+EOGACTR = ((*A_NILCHECK((&(A_NILCHECK(JGFACTR_indic)->Level))))==(*A_NILCHECK((&(A_NILCHECK((&NFFACTR_current))->Level)))));
 }
 if ( !(EOGACTR) ) break;
  /* line 8284: */
-GOGACTR = (*(&(JGFACTR_indic->Name))) ;
-if (A_VC_EQ(A_HISVEC(FOGACTR,GOGACTR,32,A68_CHAR ),A_HISVEC(HOGACTR,(*NL(OSAACTR_compsymb)),32,A68_CHAR )))
+GOGACTR = (*A_NILCHECK((&(A_NILCHECK(JGFACTR_indic)->Name)))) ;
+if (A_VC_EQ(A_HISVEC(FOGACTR,GOGACTR,32,A68_CHAR ),A_HISVEC(HOGACTR,(*A_NILCHECK(NL(OSAACTR_compsymb))),32,A68_CHAR )))
 { 
  /* line 8285: */
-IOGACTR = (*(&(JGFACTR_indic->U))) ;
+IOGACTR = (*A_NILCHECK((&(A_NILCHECK(JGFACTR_indic)->U)))) ;
 switch ( IOGACTR.mode )
 { 
 case 2: /* REF STRUCT(INT,INT,REF MODE53)  */
 JOGACTR_a = (IOGACTR.data.mode2);
  /* line 8286: */
  /* line 8287: */
-if ((*(&(JOGACTR_a->Modeproc)))==2)
+if ((*A_NILCHECK((&(A_NILCHECK(JOGACTR_a)->Modeproc))))==2)
 { 
 BGFACTR_am = JOGACTR_a;
  /* line 8288: */
@@ -27636,54 +27636,54 @@ break;
 } 
  /* line 8295: */
  /* line 8296: */
-(void)(JGFACTR_indic = (*(&(JGFACTR_indic->Rest))));
+(void)(JGFACTR_indic = (*A_NILCHECK((&(A_NILCHECK(JGFACTR_indic)->Rest)))));
 }
  /* line 8297: */
 QNGACTR_l: A_UNUSED;
  /* line 8298: */
-KOGACTR.Mode = (*NL(VYAACTR_lastmode))+=1;
+KOGACTR.Mode = (*A_NILCHECK(NL(VYAACTR_lastmode)))+=1;
 KOGACTR.Modeproc = 2;
 KOGACTR.El = (A68_53 *)A68_NIL;
 LOGACTR = A_HEAP(A68_52 ) ;
-(void)((*LOGACTR) = KOGACTR) ;
+(void)((*A_NILCHECK(LOGACTR)) = KOGACTR) ;
 BGFACTR_am = LOGACTR;
  /* line 8299: */
  /* line 8300: */
-MOGACTR.Name = (*NL(OSAACTR_compsymb));
+MOGACTR.Name = (*A_NILCHECK(NL(OSAACTR_compsymb)));
  /* line 8301: */
-MOGACTR.Level = (*(&((&NFFACTR_current)->Level)));
-MOGACTR.Scope = (*(&((&NFFACTR_current)->Lastid)));
+MOGACTR.Level = (*A_NILCHECK((&(A_NILCHECK((&NFFACTR_current))->Level))));
+MOGACTR.Scope = (*A_NILCHECK((&(A_NILCHECK((&NFFACTR_current))->Lastid))));
  /* line 8302: */
 MOGACTR.U = A_UNITE(NOGACTR,mode2,2,BGFACTR_am);
  /* line 8303: */
-OOGACTR = (*(&((&NFFACTR_current)->Indics))) ;
-MOGACTR.Rest = (*(&A_VINDEX(OOGACTR,(*NL(RSAACTR_comphash)))));
-POGACTR = (*(&((&NFFACTR_current)->Indics))) ;
+OOGACTR = (*A_NILCHECK((&(A_NILCHECK((&NFFACTR_current))->Indics)))) ;
+MOGACTR.Rest = (*A_NILCHECK((&A_VINDEX(OOGACTR,(*A_NILCHECK(NL(RSAACTR_comphash)))))));
+POGACTR = (*A_NILCHECK((&(A_NILCHECK((&NFFACTR_current))->Indics)))) ;
 QOGACTR = A_LOC(A68_110 ) ;
-(void)((*QOGACTR) = MOGACTR) ;
-ROGACTR = (&A_VINDEX(POGACTR,(*NL(RSAACTR_comphash)))) ;
-JGFACTR_indic = (*ROGACTR) = QOGACTR;
+(void)((*A_NILCHECK(QOGACTR)) = MOGACTR) ;
+ROGACTR = (&A_VINDEX(POGACTR,(*A_NILCHECK(NL(RSAACTR_comphash))))) ;
+JGFACTR_indic = (*A_NILCHECK(ROGACTR)) = QOGACTR;
  /* line 8304: */
-TOGACTR = (&A_VINDEX(NL(KUAACTR_modes),(*NL(VYAACTR_lastmode)))) ;
-(void)((*TOGACTR) = A_UNITE(SOGACTR,mode10,10,BGFACTR_am));
+TOGACTR = (&A_VINDEX(NL(KUAACTR_modes),(*A_NILCHECK(NL(VYAACTR_lastmode))))) ;
+(void)((*A_NILCHECK(TOGACTR)) = A_UNITE(SOGACTR,mode10,10,BGFACTR_am));
  /* line 8305: */
 SNGACTR_out: A_UNUSED;
  /* line 8306: */
  /* line 8309: */
-(*NL(QDBACTR_look)) = 2;
+(*A_NILCHECK(NL(QDBACTR_look))) = 2;
 } 
 break;
 case 35: 
 { 
-(void)(CGFACTR_i = (*(&(BGFACTR_am->Mode))));
+(void)(CGFACTR_i = (*A_NILCHECK((&(A_NILCHECK(BGFACTR_am)->Mode)))));
  /* line 8310: */
-(void)((*NL(RZAACTR_substlevel)) = ((*NL(VYAACTR_lastmode))-CGFACTR_i));
+(void)((*A_NILCHECK(NL(RZAACTR_substlevel))) = ((*A_NILCHECK(NL(VYAACTR_lastmode)))-CGFACTR_i));
  /* line 8311: */
 UOGACTR.Am = BGFACTR_am;
-UOGACTR.Rest = (*NL(TYAACTR_untreated));
+UOGACTR.Rest = (*A_NILCHECK(NL(TYAACTR_untreated)));
 VOGACTR = A_HEAP(A68_53 ) ;
-(void)((*VOGACTR) = UOGACTR) ;
-(*NL(TYAACTR_untreated)) = VOGACTR;
+(void)((*A_NILCHECK(VOGACTR)) = UOGACTR) ;
+(*A_NILCHECK(NL(TYAACTR_untreated))) = VOGACTR;
  /* line 8312: */
 (void)(DGFACTR_j = A_CALLPROC(QLFACTR_declarer,(A68_TRUE, BGFACTR_am),(A68_TRUE, BGFACTR_am,(QLFACTR_declarer).nonlocals)));
  /* line 8313: */
@@ -27707,14 +27707,14 @@ else
 WOGACTR = (DGFACTR_j<KQAACTR_refmark);
 if ( WOGACTR )
 { /* line 8322: */
-XOGACTR = (*(&A_VINDEX(NL(KUAACTR_modes),DGFACTR_j))) ;
+XOGACTR = (*A_NILCHECK((&A_VINDEX(NL(KUAACTR_modes),DGFACTR_j)))) ;
 switch ( XOGACTR.mode )
 { 
 case 10: /* REF STRUCT(INT,INT,REF MODE53)  */
 YOGACTR_a = (XOGACTR.data.mode10);
  /* line 8323: */
  /* line 8324: */
-if ((*(&(YOGACTR_a->Mode)))==DGFACTR_j)
+if ((*A_NILCHECK((&(A_NILCHECK(YOGACTR_a)->Mode))))==DGFACTR_j)
 { 
 BGFACTR_am = YOGACTR_a;
  /* line 8325: */
@@ -27738,39 +27738,39 @@ WOGACTR = ZOGACTR;
 }
 if (WOGACTR)
 { 
-(void)((*NL(TYAACTR_untreated)) = (*(&((*NL(TYAACTR_untreated))->Rest))));
+(void)((*A_NILCHECK(NL(TYAACTR_untreated))) = (*A_NILCHECK((&(A_NILCHECK((*A_NILCHECK(NL(TYAACTR_untreated))))->Rest)))));
  /* line 8331: */
-BPGACTR = (&(JGFACTR_indic->U)) ;
-(void)((*BPGACTR) = A_UNITE(APGACTR,mode2,2,BGFACTR_am));
+BPGACTR = (&(A_NILCHECK(JGFACTR_indic)->U)) ;
+(void)((*A_NILCHECK(BPGACTR)) = A_UNITE(APGACTR,mode2,2,BGFACTR_am));
  /* line 8332: */
  /* line 8333: */
-(*NL(VYAACTR_lastmode))-=1;
+(*A_NILCHECK(NL(VYAACTR_lastmode)))-=1;
 } 
 else
 { 
-CPGACTR = (DGFACTR_j==(*NL(VYAACTR_lastmode)));
+CPGACTR = (DGFACTR_j==(*A_NILCHECK(NL(VYAACTR_lastmode))));
 if ( CPGACTR )
 { /* line 8334: */
-CPGACTR = ((*NL(RZAACTR_substlevel))==0);
+CPGACTR = ((*A_NILCHECK(NL(RZAACTR_substlevel)))==0);
 }
 if (CPGACTR)
 { 
 DPGACTR = (&A_VINDEX(NL(KUAACTR_modes),CGFACTR_i)) ;
-(void)((*DPGACTR) = (*(&A_VINDEX(NL(KUAACTR_modes),DGFACTR_j))));
+(void)((*A_NILCHECK(DPGACTR)) = (*A_NILCHECK((&A_VINDEX(NL(KUAACTR_modes),DGFACTR_j)))));
  /* line 8335: */
-(*NL(VYAACTR_lastmode))-=1;
+(*A_NILCHECK(NL(VYAACTR_lastmode)))-=1;
  /* line 8336: */
  /* line 8337: */
-EPGACTR = (&(BGFACTR_am->Mode)) ;
-(*EPGACTR) = CGFACTR_i;
+EPGACTR = (&(A_NILCHECK(BGFACTR_am)->Mode)) ;
+(*A_NILCHECK(EPGACTR)) = CGFACTR_i;
 } 
 else
 { 
  /* line 8338: */
-if (CGFACTR_i==(*NL(VYAACTR_lastmode)))
+if (CGFACTR_i==(*A_NILCHECK(NL(VYAACTR_lastmode))))
 { 
  /* line 8339: */
-(*NL(VYAACTR_lastmode))-=1;
+(*A_NILCHECK(NL(VYAACTR_lastmode)))-=1;
 } 
  /* line 8340: */
  /* line 8341: */
@@ -27788,23 +27788,23 @@ case 36:
  /* line 8347: */
 GPGACTR = FGFACTR_firstmode;
 HPGACTR = (-1);
-for ( FPGACTR_i = (*NL(VYAACTR_lastmode));
+for ( FPGACTR_i = (*A_NILCHECK(NL(VYAACTR_lastmode)));
 ( HPGACTR > 0 && FPGACTR_i <= GPGACTR) ||
 ( HPGACTR < 0 && FPGACTR_i >= GPGACTR) ||
 ( HPGACTR == 0 ) ;
 FPGACTR_i += HPGACTR )
 { 
  /* line 8348: */
-IPGACTR = (*(&A_VINDEX(NL(KUAACTR_modes),FPGACTR_i))) ;
+IPGACTR = (*A_NILCHECK((&A_VINDEX(NL(KUAACTR_modes),FPGACTR_i)))) ;
 switch ( IPGACTR.mode )
 { 
 case 11: /* STRUCT(INT)  */
 JPGACTR_s = (IPGACTR.data.mode11);
  /* line 8349: */
-if (FPGACTR_i==(*NL(VYAACTR_lastmode)))
+if (FPGACTR_i==(*A_NILCHECK(NL(VYAACTR_lastmode))))
 { 
  /* line 8350: */
-(*NL(VYAACTR_lastmode))-=1;
+(*A_NILCHECK(NL(VYAACTR_lastmode)))-=1;
 } 
 break;
 case 10: /* REF STRUCT(INT,INT,REF MODE53)  */
@@ -27817,8 +27817,8 @@ KPGACTR_a = (IPGACTR.data.mode10);
  /* line 8354: */
  /* line 8355: */
  /* line 8356: */
-LPGACTR = (&(KPGACTR_a->Modeproc)) ;
-(*LPGACTR) = 0;
+LPGACTR = (&(A_NILCHECK(KPGACTR_a)->Modeproc)) ;
+(*A_NILCHECK(LPGACTR)) = 0;
 } 
 break;
 case 2: /* REF STRUCT(INT,REF MODE54)  */
@@ -27835,14 +27835,14 @@ break;
 }
  /* line 8360: */
  /* line 8361: */
-if (FGFACTR_firstmode<(*NL(VYAACTR_lastmode)))
+if (FGFACTR_firstmode<(*A_NILCHECK(NL(VYAACTR_lastmode))))
 { 
  /* line 8362: */
 PPGACTR = A_VECARR(NL(KUAACTR_modes),OPGACTR) ;
-(void)(A_CALLPROC(NL(LXDACTR_accidental_eqs),(A_R1TRIM(QPGACTR,(PPGACTR),A_RTSCRIPT(&(QPGACTR.dim[0]),&((PPGACTR).dim[0]),FGFACTR_firstmode,(*NL(VYAACTR_lastmode)),FGFACTR_firstmode))),(A_R1TRIM(QPGACTR,(PPGACTR),A_RTSCRIPT(&(QPGACTR.dim[0]),&((PPGACTR).dim[0]),FGFACTR_firstmode,(*NL(VYAACTR_lastmode)),FGFACTR_firstmode)),(NL(LXDACTR_accidental_eqs)).nonlocals)));
+(void)(A_CALLPROC(NL(LXDACTR_accidental_eqs),(A_R1TRIM(QPGACTR,(PPGACTR),A_RTSCRIPT(&(QPGACTR.dim[0]),&((PPGACTR).dim[0]),FGFACTR_firstmode,(*A_NILCHECK(NL(VYAACTR_lastmode))),FGFACTR_firstmode))),(A_R1TRIM(QPGACTR,(PPGACTR),A_RTSCRIPT(&(QPGACTR.dim[0]),&((PPGACTR).dim[0]),FGFACTR_firstmode,(*A_NILCHECK(NL(VYAACTR_lastmode))),FGFACTR_firstmode)),(NL(LXDACTR_accidental_eqs)).nonlocals)));
 } 
  /* line 8363: */
-SPGACTR = (*NL(VYAACTR_lastmode));
+SPGACTR = (*A_NILCHECK(NL(VYAACTR_lastmode)));
 for ( RPGACTR_i = FGFACTR_firstmode;
 RPGACTR_i <= SPGACTR;
 RPGACTR_i += 1 )
@@ -27851,7 +27851,7 @@ RPGACTR_i += 1 )
 TPGACTR_mi = (&A_VINDEX(NL(KUAACTR_modes),RPGACTR_i));
  /* line 8365: */
  /* line 8366: */
-UPGACTR = (*TPGACTR_mi) ;
+UPGACTR = (*A_NILCHECK(TPGACTR_mi)) ;
 switch ( UPGACTR.mode )
 { 
 case 11: /* STRUCT(INT)  */
@@ -27868,14 +27868,14 @@ VPGACTR_j += 1 )
  /* line 8369: */
 ZPGACTR.source = TPGACTR_mi ;
 AQGACTR.source = (&A_VINDEX(NL(KUAACTR_modes),VPGACTR_j)) ;
-BQGACTR = ((*(ZPGACTR.destination))==(*(AQGACTR.destination)));
+BQGACTR = ((*A_NILCHECK((ZPGACTR.destination)))==(*A_NILCHECK((AQGACTR.destination))));
 if ( BQGACTR )
 {BQGACTR = A_CALLPROC(NL(BIDACTR_equality),(RPGACTR_i, VPGACTR_j, (FGFACTR_firstmode-1)),(RPGACTR_i, VPGACTR_j, (FGFACTR_firstmode-1),(NL(BIDACTR_equality)).nonlocals));
 }
  /* line 8370: */
 if (BQGACTR)
 { 
-EQGACTR = A_VTRIM(DQGACTR,((*NL(WHDACTR_test_flex))),A_VTSCRIPT(&(DQGACTR.upb),((*NL(WHDACTR_test_flex))).upb,1,(*NL(PHDACTR_last_flex)))) ;
+EQGACTR = A_VTRIM(DQGACTR,((*A_NILCHECK(NL(WHDACTR_test_flex)))),A_VTSCRIPT(&(DQGACTR.upb),((*A_NILCHECK(NL(WHDACTR_test_flex)))).upb,1,(*A_NILCHECK(NL(PHDACTR_last_flex))))) ;
 FQGACTR = EQGACTR.upb -1;
 CQGACTR_pi = EQGACTR.data;
 for (;FQGACTR-- >= 0;
@@ -27884,7 +27884,7 @@ for (;FQGACTR-- >= 0;
 {
  /* line 8371: */
  /* line 8372: */
-(void)(A_CALLPROC(NL(IUDACTR_substitute),((*(&(CQGACTR_pi->J))), (*(&(CQGACTR_pi->I))), FGFACTR_firstmode),((*(&(CQGACTR_pi->J))), (*(&(CQGACTR_pi->I))), FGFACTR_firstmode,(NL(IUDACTR_substitute)).nonlocals)));
+(void)(A_CALLPROC(NL(IUDACTR_substitute),((*A_NILCHECK((&(A_NILCHECK(CQGACTR_pi)->J)))), (*A_NILCHECK((&(A_NILCHECK(CQGACTR_pi)->I)))), FGFACTR_firstmode),((*A_NILCHECK((&(A_NILCHECK(CQGACTR_pi)->J)))), (*A_NILCHECK((&(A_NILCHECK(CQGACTR_pi)->I)))), FGFACTR_firstmode,(NL(IUDACTR_substitute)).nonlocals)));
 }
  /* line 8373: */
  /* line 8374: */
@@ -27901,18 +27901,18 @@ break;
 } 
 }
  /* line 8381: */
-(void)(A_CALLPROC(NL(VVDACTR_checkmodes),((*NL(TYAACTR_untreated))),((*NL(TYAACTR_untreated)),(NL(VVDACTR_checkmodes)).nonlocals)));
+(void)(A_CALLPROC(NL(VVDACTR_checkmodes),((*A_NILCHECK(NL(TYAACTR_untreated)))),((*A_NILCHECK(NL(TYAACTR_untreated))),(NL(VVDACTR_checkmodes)).nonlocals)));
  /* line 8382: */
-(void)(A_CALLPROC(NL(BTDACTR_modevars),((*NL(TYAACTR_untreated))),((*NL(TYAACTR_untreated)),(NL(BTDACTR_modevars)).nonlocals)));
+(void)(A_CALLPROC(NL(BTDACTR_modevars),((*A_NILCHECK(NL(TYAACTR_untreated)))),((*A_NILCHECK(NL(TYAACTR_untreated))),(NL(BTDACTR_modevars)).nonlocals)));
  /* line 8383: */
  /* line 8384: */
  /* line 8387: */
-(*NL(TYAACTR_untreated)) = (A68_53 *)A68_NIL;
+(*A_NILCHECK(NL(TYAACTR_untreated))) = (A68_53 *)A68_NIL;
 } 
 break;
 case 37: 
 { 
-(void)(A_CALLPROC(KHFACTR_scopel,((&((&((&XGFACTR_vlist)->V))->Labs)), (&(External->Labs))),((&((&((&XGFACTR_vlist)->V))->Labs)), (&(External->Labs)),(KHFACTR_scopel).nonlocals)));
+(void)(A_CALLPROC(KHFACTR_scopel,((&(A_NILCHECK((&(A_NILCHECK((&XGFACTR_vlist))->V)))->Labs)), (&(A_NILCHECK(External)->Labs))),((&(A_NILCHECK((&(A_NILCHECK((&XGFACTR_vlist))->V)))->Labs)), (&(A_NILCHECK(External)->Labs)),(KHFACTR_scopel).nonlocals)));
  /* line 8388: */
  /* line 8389: */
  /* line 8392: */
@@ -27939,12 +27939,12 @@ case 40:
 { 
 (void)(A_CALLPROC(NL(BZBACTR_tidyv),((&RGFACTR_v)),((&RGFACTR_v),(NL(BZBACTR_tidyv)).nonlocals)));
  /* line 8401: */
-HQGACTR = (&((&NFFACTR_current)->Props)) ;
-(void)((*HQGACTR) = (A68_BITS )((*(&((&NFFACTR_current)->Props)))&GRAACTR_notdontpull));
+HQGACTR = (&(A_NILCHECK((&NFFACTR_current))->Props)) ;
+(void)((*A_NILCHECK(HQGACTR)) = (A68_BITS )((*A_NILCHECK((&(A_NILCHECK((&NFFACTR_current))->Props))))&GRAACTR_notdontpull));
  /* line 8402: */
  /* line 8403: */
-IQGACTR = (&((&((&XGFACTR_vlist)->V))->Props)) ;
-(void)((*IQGACTR) = (A68_BITS )((A68_BITS )((*(&((&((&XGFACTR_vlist)->V))->Props)))|(*(&((&NFFACTR_current)->Props))))|RLAACTR_exitbit));
+IQGACTR = (&(A_NILCHECK((&(A_NILCHECK((&XGFACTR_vlist))->V)))->Props)) ;
+(void)((*A_NILCHECK(IQGACTR)) = (A68_BITS )((A68_BITS )((*A_NILCHECK((&(A_NILCHECK((&(A_NILCHECK((&XGFACTR_vlist))->V)))->Props))))|(*A_NILCHECK((&(A_NILCHECK((&NFFACTR_current))->Props)))))|RLAACTR_exitbit));
  /* line 8404: */
 (void)(YGFACTR_vl = (&XGFACTR_vlist));
  /* line 8405: */
@@ -27952,14 +27952,14 @@ IQGACTR = (&((&((&XGFACTR_vlist)->V))->Props)) ;
 if (Saveexit!=ARAACTR_nilbool)
 { 
  /* line 8407: */
-(*Saveexit) = A68_TRUE;
+(*A_NILCHECK(Saveexit)) = A68_TRUE;
 } 
  /* line 8408: */
 for ( ;; )
 { 
  /* line 8409: */
-if ( !(((*(&(YGFACTR_vl->Rest)))!=UQAACTR_nilvl)) ) break;
-(void)(YGFACTR_vl = (*(&(YGFACTR_vl->Rest))));
+if ( !(((*A_NILCHECK((&(A_NILCHECK(YGFACTR_vl)->Rest))))!=UQAACTR_nilvl)) ) break;
+(void)(YGFACTR_vl = (*A_NILCHECK((&(A_NILCHECK(YGFACTR_vl)->Rest)))));
 }
  /* line 8411: */
 JQGACTR.V = RGFACTR_v;
@@ -27968,40 +27968,40 @@ JQGACTR.Type = FNAACTR_xexit;
 JQGACTR.Rest = (A68_124 *)A68_NIL;
  /* line 8415: */
 KQGACTR = JYBACTR_globvlist() ;
-(void)((*KQGACTR) = JQGACTR) ;
-LQGACTR = (&(YGFACTR_vl->Rest)) ;
-(*LQGACTR) = KQGACTR;
+(void)((*A_NILCHECK(KQGACTR)) = JQGACTR) ;
+LQGACTR = (&(A_NILCHECK(YGFACTR_vl)->Rest)) ;
+(*A_NILCHECK(LQGACTR)) = KQGACTR;
 } 
 break;
 case 41: 
 { 
-MQGACTR = (&((&NFFACTR_current)->Props)) ;
-(void)((*MQGACTR) = (A68_BITS )((*(&((&NFFACTR_current)->Props)))|SLAACTR_semibit));
+MQGACTR = (&(A_NILCHECK((&NFFACTR_current))->Props)) ;
+(void)((*A_NILCHECK(MQGACTR)) = (A68_BITS )((*A_NILCHECK((&(A_NILCHECK((&NFFACTR_current))->Props))))|SLAACTR_semibit));
  /* line 8416: */
 NQGACTR.Fn = UNAACTR_xsemi;
 NQGACTR.M = 0;
-NQGACTR.Props = (*(&((&NFFACTR_current)->Dybits)));
+NQGACTR.Props = (*A_NILCHECK((&(A_NILCHECK((&NFFACTR_current))->Dybits))));
 NQGACTR.Param = 0;
-(void)(A_CALLPROC(NL(Output),(A_UNITE(OQGACTR,mode17,17,NQGACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(OQGACTR,mode17,17,NQGACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(OQGACTR,mode17,17,NQGACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(OQGACTR,mode17,17,NQGACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 8417: */
  /* line 8418: */
  /* line 8421: */
-PQGACTR = (&((&NFFACTR_current)->Dybits)) ;
-(*PQGACTR) = MQAACTR_z;
+PQGACTR = (&(A_NILCHECK((&NFFACTR_current))->Dybits)) ;
+(*A_NILCHECK(PQGACTR)) = MQAACTR_z;
 } 
 break;
 case 42: 
 { 
-(*NL(QDBACTR_look)) = 0;
+(*A_NILCHECK(NL(QDBACTR_look))) = 0;
  /* line 8422: */
  /* line 8424: */
-if ((*NL(MFBACTR_t1))==65)
+if ((*A_NILCHECK(NL(MFBACTR_t1)))==65)
 { 
 HGFACTR_descno = 1;
  /* line 8425: */
  /* line 8426: */
  /* line 8427: */
-if ((*NL(SYAACTR_modedecdepth))>0)
+if ((*A_NILCHECK(NL(SYAACTR_modedecdepth)))>0)
 { 
  /* line 8428: */
 (void)(A_CALLPROC(NL(QJBACTR_fault),(202),(202,(NL(QJBACTR_fault)).nonlocals)));
@@ -28010,7 +28010,7 @@ if ((*NL(SYAACTR_modedecdepth))>0)
  /* line 8430: */
  /* line 8431: */
  /* line 8434: */
-(void)(FGFACTR_firstmode = ((*NL(VYAACTR_lastmode))+1));
+(void)(FGFACTR_firstmode = ((*A_NILCHECK(NL(VYAACTR_lastmode)))+1));
 } 
 } 
 break;
@@ -28035,34 +28035,34 @@ if (PFFACTR_oldindichash)
 A_CLOSURE( SQGACTR_generator, TQGACTR_generator, UQGACTR_generator );
  /* line 8443: */
 A_CALLPROC(SQGACTR_generator,(A68_TRUE, &XQGACTR),(A68_TRUE, &XQGACTR,(SQGACTR_generator).nonlocals));
-YQGACTR = (*(&((&NFFACTR_current)->Indics))) ;
+YQGACTR = (*A_NILCHECK((&(A_NILCHECK((&NFFACTR_current))->Indics)))) ;
 (void)(A_VASSIGN2(YQGACTR,XQGACTR,A68_110 *)) ;
-ZQGACTR = (&((&NFFACTR_current)->Indics)) ;
-(*ZQGACTR) = XQGACTR;
+ZQGACTR = (&(A_NILCHECK((&NFFACTR_current))->Indics)) ;
+(*A_NILCHECK(ZQGACTR)) = XQGACTR;
  /* line 8444: */
 PFFACTR_oldindichash = A68_FALSE;
  /* line 8445: */
  /* line 8446: */
-(*NL(KDBACTR_cindic)) = (A68_110 *)A68_NIL;
+(*A_NILCHECK(NL(KDBACTR_cindic))) = (A68_110 *)A68_NIL;
 } 
  /* line 8447: */
-ARGACTR = (*(&((&NFFACTR_current)->Indics))) ;
-(void)(JGFACTR_indic = (*(&A_VINDEX(ARGACTR,(*NL(RSAACTR_comphash))))));
+ARGACTR = (*A_NILCHECK((&(A_NILCHECK((&NFFACTR_current))->Indics)))) ;
+(void)(JGFACTR_indic = (*A_NILCHECK((&A_VINDEX(ARGACTR,(*A_NILCHECK(NL(RSAACTR_comphash))))))));
  /* line 8448: */
 for ( ;; )
 { 
 BRGACTR = (JGFACTR_indic!=SQAACTR_nilind);
 if ( BRGACTR )
 { /* line 8449: */
-BRGACTR = ((*(&(JGFACTR_indic->Level)))==(*(&((&NFFACTR_current)->Level))));
+BRGACTR = ((*A_NILCHECK((&(A_NILCHECK(JGFACTR_indic)->Level))))==(*A_NILCHECK((&(A_NILCHECK((&NFFACTR_current))->Level)))));
 }
 if ( !(BRGACTR) ) break;
  /* line 8450: */
-DRGACTR = (*(&(JGFACTR_indic->Name))) ;
-if (A_VC_EQ(A_HISVEC(CRGACTR,DRGACTR,32,A68_CHAR ),A_HISVEC(ERGACTR,(*NL(OSAACTR_compsymb)),32,A68_CHAR )))
+DRGACTR = (*A_NILCHECK((&(A_NILCHECK(JGFACTR_indic)->Name)))) ;
+if (A_VC_EQ(A_HISVEC(CRGACTR,DRGACTR,32,A68_CHAR ),A_HISVEC(ERGACTR,(*A_NILCHECK(NL(OSAACTR_compsymb))),32,A68_CHAR )))
 { 
  /* line 8451: */
-FRGACTR = (*(&(JGFACTR_indic->U))) ;
+FRGACTR = (*A_NILCHECK((&(A_NILCHECK(JGFACTR_indic)->U)))) ;
 switch ( FRGACTR.mode )
 { 
 case 2: /* REF STRUCT(INT,INT,REF MODE53)  */
@@ -28080,51 +28080,51 @@ break;
 } 
  /* line 8457: */
  /* line 8458: */
-(void)(JGFACTR_indic = (*(&(JGFACTR_indic->Rest))));
+(void)(JGFACTR_indic = (*A_NILCHECK((&(A_NILCHECK(JGFACTR_indic)->Rest)))));
 }
  /* line 8459: */
-HRGACTR = ((*NL(KDBACTR_cindic))==SQAACTR_nilind);
+HRGACTR = ((*A_NILCHECK(NL(KDBACTR_cindic)))==SQAACTR_nilind);
 if ( ! HRGACTR )
 { /* line 8460: */
-HRGACTR = ((*(&((*NL(KDBACTR_cindic))->Level)))<(*(&((&NFFACTR_current)->Level))));
+HRGACTR = ((*A_NILCHECK((&(A_NILCHECK((*A_NILCHECK(NL(KDBACTR_cindic))))->Level))))<(*A_NILCHECK((&(A_NILCHECK((&NFFACTR_current))->Level)))));
 }
 if (HRGACTR)
 { 
  /* line 8461: */
-IRGACTR.Name = (*NL(OSAACTR_compsymb));
-IRGACTR.Level = (*(&((&NFFACTR_current)->Level)));
+IRGACTR.Name = (*A_NILCHECK(NL(OSAACTR_compsymb)));
+IRGACTR.Level = (*A_NILCHECK((&(A_NILCHECK((&NFFACTR_current))->Level))));
  /* line 8462: */
-IRGACTR.Scope = (*(&((&NFFACTR_current)->Lastid)));
+IRGACTR.Scope = (*A_NILCHECK((&(A_NILCHECK((&NFFACTR_current))->Lastid))));
  /* line 8463: */
  /* line 8464: */
-if ((*NL(MFBACTR_t1))<10)
+if ((*A_NILCHECK(NL(MFBACTR_t1)))<10)
 { 
  /* line 8465: */
-JRGACTR.Prio = (*NL(MFBACTR_t1));
+JRGACTR.Prio = (*A_NILCHECK(NL(MFBACTR_t1)));
 } 
 else
 { 
 JRGACTR.Prio = 1;
 } 
-JRGACTR.I = (*NL(LDBACTR_cinst));
+JRGACTR.I = (*A_NILCHECK(NL(LDBACTR_cinst)));
  /* line 8466: */
 KRGACTR = A_LOC(A68_109 ) ;
-(void)((*KRGACTR) = JRGACTR) ;
+(void)((*A_NILCHECK(KRGACTR)) = JRGACTR) ;
 IRGACTR.U = A_UNITE(LRGACTR,mode1,1,KRGACTR);
  /* line 8467: */
  /* line 8468: */
-MRGACTR = (*(&((&NFFACTR_current)->Indics))) ;
-IRGACTR.Rest = (*(&A_VINDEX(MRGACTR,(*NL(RSAACTR_comphash)))));
-NRGACTR = (*(&((&NFFACTR_current)->Indics))) ;
+MRGACTR = (*A_NILCHECK((&(A_NILCHECK((&NFFACTR_current))->Indics)))) ;
+IRGACTR.Rest = (*A_NILCHECK((&A_VINDEX(MRGACTR,(*A_NILCHECK(NL(RSAACTR_comphash)))))));
+NRGACTR = (*A_NILCHECK((&(A_NILCHECK((&NFFACTR_current))->Indics)))) ;
 ORGACTR = A_LOC(A68_110 ) ;
-(void)((*ORGACTR) = IRGACTR) ;
-PRGACTR = (&A_VINDEX(NRGACTR,(*NL(RSAACTR_comphash)))) ;
-(*PRGACTR) = (*NL(KDBACTR_cindic)) = ORGACTR;
+(void)((*A_NILCHECK(ORGACTR)) = IRGACTR) ;
+PRGACTR = (&A_VINDEX(NRGACTR,(*A_NILCHECK(NL(RSAACTR_comphash))))) ;
+(*A_NILCHECK(PRGACTR)) = (*A_NILCHECK(NL(KDBACTR_cindic))) = ORGACTR;
 } 
  /* line 8469: */
-(void)(JGFACTR_indic = (*NL(KDBACTR_cindic)));
+(void)(JGFACTR_indic = (*A_NILCHECK(NL(KDBACTR_cindic))));
  /* line 8470: */
-(*NL(QDBACTR_look)) = 2;
+(*A_NILCHECK(NL(QDBACTR_look))) = 2;
  /* line 8471: */
  /* line 8472: */
  /* line 8475: */
@@ -28133,24 +28133,24 @@ IGFACTR_id = (A68_67 *)A68_NIL;
 break;
 case 45: 
 { 
-QRGACTR = ((*NL(HTAACTR_iv))<1);
+QRGACTR = ((*A_NILCHECK(NL(HTAACTR_iv)))<1);
 if ( ! QRGACTR )
 { /* line 8476: */
-QRGACTR = ((*NL(HTAACTR_iv))>9);
+QRGACTR = ((*A_NILCHECK(NL(HTAACTR_iv)))>9);
 }
 if (QRGACTR)
 { 
 (void)(A_CALLPROC(NL(QJBACTR_fault),(167),(167,(NL(QJBACTR_fault)).nonlocals)));
  /* line 8478: */
  /* line 8479: */
-(*NL(HTAACTR_iv)) = 1;
+(*A_NILCHECK(NL(HTAACTR_iv))) = 1;
 } 
  /* line 8480: */
-RRGACTR = (&((&NFFACTR_current)->Props)) ;
-(void)((*RRGACTR) = (A68_BITS )((*(&((&NFFACTR_current)->Props)))|QLAACTR_priobit));
+RRGACTR = (&(A_NILCHECK((&NFFACTR_current))->Props)) ;
+(void)((*A_NILCHECK(RRGACTR)) = (A68_BITS )((*A_NILCHECK((&(A_NILCHECK((&NFFACTR_current))->Props))))|QLAACTR_priobit));
  /* line 8481: */
  /* line 8482: */
-SRGACTR = (*(&(JGFACTR_indic->U))) ;
+SRGACTR = (*A_NILCHECK((&(A_NILCHECK(JGFACTR_indic)->U)))) ;
 switch ( SRGACTR.mode )
 { 
 case 1: /* REF STRUCT(INT,REF MODE108)  */
@@ -28158,7 +28158,7 @@ TRGACTR_op = (SRGACTR.data.mode1);
  /* line 8483: */
 { 
  /* line 8484: */
-if ((*(&(TRGACTR_op->Prio)))<0)
+if ((*A_NILCHECK((&(A_NILCHECK(TRGACTR_op)->Prio))))<0)
 { 
  /* line 8486: */
 (void)(A_CALLPROC(NL(QJBACTR_fault),(204),(204,(NL(QJBACTR_fault)).nonlocals)));
@@ -28167,8 +28167,8 @@ if ((*(&(TRGACTR_op->Prio)))<0)
  /* line 8488: */
  /* line 8489: */
  /* line 8490: */
-URGACTR = (&(TRGACTR_op->Prio)) ;
-(void)((*URGACTR) = (-(*NL(HTAACTR_iv))));
+URGACTR = (&(A_NILCHECK(TRGACTR_op)->Prio)) ;
+(void)((*A_NILCHECK(URGACTR)) = (-(*A_NILCHECK(NL(HTAACTR_iv)))));
 } 
 break;
 default: 
@@ -28181,7 +28181,7 @@ break;
 break;
 case 46: 
  /* line 8495: */
-VRGACTR = (*(&(JGFACTR_indic->U))) ;
+VRGACTR = (*A_NILCHECK((&(A_NILCHECK(JGFACTR_indic)->U)))) ;
 switch ( VRGACTR.mode )
 { 
 case 1: /* REF STRUCT(INT,REF MODE108)  */
@@ -28191,22 +28191,22 @@ WRGACTR_op = (VRGACTR.data.mode1);
 XRGACTR.Lmode = 0;
 XRGACTR.Rmode = 1;
 XRGACTR.Ans = 0;
-XRGACTR.Level = (*(&((&NFFACTR_current)->Level)));
+XRGACTR.Level = (*A_NILCHECK((&(A_NILCHECK((&NFFACTR_current))->Level))));
  /* line 8497: */
 XRGACTR.Decno = 0;
  /* line 8498: */
-XRGACTR.Scope = (*(&((&NFFACTR_current)->Lastid)));
-XRGACTR.Rest = (*(&(WRGACTR_op->I)));
+XRGACTR.Scope = (*A_NILCHECK((&(A_NILCHECK((&NFFACTR_current))->Lastid))));
+XRGACTR.Rest = (*A_NILCHECK((&(A_NILCHECK(WRGACTR_op)->I))));
 YRGACTR = A_LOC(A68_108 ) ;
-(void)((*YRGACTR) = XRGACTR) ;
-ZRGACTR = (&(WRGACTR_op->I)) ;
-(*ZRGACTR) = YRGACTR;
+(void)((*A_NILCHECK(YRGACTR)) = XRGACTR) ;
+ZRGACTR = (&(A_NILCHECK(WRGACTR_op)->I)) ;
+(*A_NILCHECK(ZRGACTR)) = YRGACTR;
  /* line 8499: */
  /* line 8500: */
  /* line 8501: */
  /* line 8502: */
-ASGACTR = (&((&NFFACTR_current)->Props)) ;
-(void)((*ASGACTR) = (A68_BITS )((*(&((&NFFACTR_current)->Props)))|ULAACTR_decbit));
+ASGACTR = (&(A_NILCHECK((&NFFACTR_current))->Props)) ;
+(void)((*A_NILCHECK(ASGACTR)) = (A68_BITS )((*A_NILCHECK((&(A_NILCHECK((&NFFACTR_current))->Props))))|ULAACTR_decbit));
 } 
 break;
 default: 
@@ -28217,10 +28217,10 @@ break;
 break;
 case 47: 
 { 
-(*NL(QDBACTR_look)) = 2;
+(*A_NILCHECK(NL(QDBACTR_look))) = 2;
  /* line 8506: */
-BSGACTR = (&((&NFFACTR_current)->Props)) ;
-(void)((*BSGACTR) = (A68_BITS )((*(&((&NFFACTR_current)->Props)))|ULAACTR_decbit));
+BSGACTR = (&(A_NILCHECK((&NFFACTR_current))->Props)) ;
+(void)((*A_NILCHECK(BSGACTR)) = (A68_BITS )((*A_NILCHECK((&(A_NILCHECK((&NFFACTR_current))->Props))))|ULAACTR_decbit));
  /* line 8507: */
  /* line 8508: */
  /* line 8511: */
@@ -28232,33 +28232,33 @@ case 48:
 A_CALLPROC(YTFACTR_uc,(CGFACTR_i, &CSGACTR),(CGFACTR_i, &CSGACTR,(YTFACTR_uc).nonlocals));
 ;
  /* line 8512: */
-DSGACTR = (&((&NFFACTR_current)->Lastid)) ;
-(*DSGACTR)+=1;
+DSGACTR = (&(A_NILCHECK((&NFFACTR_current))->Lastid)) ;
+(*A_NILCHECK(DSGACTR))+=1;
  /* line 8513: */
-ESGACTR.Name = (*(&(JGFACTR_indic->Name)));
+ESGACTR.Name = (*A_NILCHECK((&(A_NILCHECK(JGFACTR_indic)->Name))));
  /* line 8514: */
-ESGACTR.Decno = (*(&((&NFFACTR_current)->Lastid)));
+ESGACTR.Decno = (*A_NILCHECK((&(A_NILCHECK((&NFFACTR_current))->Lastid))));
 ESGACTR.Level = 1;
 ESGACTR.Mode = CGFACTR_i;
  /* line 8515: */
-ESGACTR.Scope = (*(&((&NFFACTR_current)->Lastid)));
+ESGACTR.Scope = (*A_NILCHECK((&(A_NILCHECK((&NFFACTR_current))->Lastid))));
 ESGACTR.Rest = (A68_67 *)A68_NIL;
 FSGACTR = A_LOC(A68_67 ) ;
-(void)((*FSGACTR) = ESGACTR) ;
+(void)((*A_NILCHECK(FSGACTR)) = ESGACTR) ;
 IGFACTR_id = FSGACTR;
  /* line 8516: */
 GSGACTR.Type = WOAACTR_xiddec;
 GSGACTR.Iddec = IGFACTR_id;
-(void)(A_CALLPROC(NL(Output),(A_UNITE(HSGACTR,mode12,12,GSGACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(HSGACTR,mode12,12,GSGACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(HSGACTR,mode12,12,GSGACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(HSGACTR,mode12,12,GSGACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 8517: */
  /* line 8518: */
  /* line 8521: */
-(void)(DGFACTR_j = EGFACTR_k = (*(&(IGFACTR_id->Decno))));
+(void)(DGFACTR_j = EGFACTR_k = (*A_NILCHECK((&(A_NILCHECK(IGFACTR_id)->Decno)))));
 } 
 break;
 case 49: 
  /* line 8522: */
-ISGACTR = (*(&(JGFACTR_indic->U))) ;
+ISGACTR = (*A_NILCHECK((&(A_NILCHECK(JGFACTR_indic)->U)))) ;
 switch ( ISGACTR.mode )
 { 
 case 1: /* REF STRUCT(INT,REF MODE108)  */
@@ -28269,44 +28269,44 @@ KSGACTR.Lmode = 0;
 KSGACTR.Rmode = 1;
 KSGACTR.Ans = 0;
  /* line 8524: */
-KSGACTR.Level = (*(&((&NFFACTR_current)->Level)));
+KSGACTR.Level = (*A_NILCHECK((&(A_NILCHECK((&NFFACTR_current))->Level))));
 KSGACTR.Decno = DGFACTR_j;
  /* line 8525: */
 KSGACTR.Scope = EGFACTR_k;
-KSGACTR.Rest = (*(&(JSGACTR_op->I)));
+KSGACTR.Rest = (*A_NILCHECK((&(A_NILCHECK(JSGACTR_op)->I))));
 LSGACTR = A_LOC(A68_108 ) ;
-(void)((*LSGACTR) = KSGACTR) ;
-MSGACTR = (&(JSGACTR_op->I)) ;
-(*MSGACTR) = LSGACTR;
+(void)((*A_NILCHECK(LSGACTR)) = KSGACTR) ;
+MSGACTR = (&(A_NILCHECK(JSGACTR_op)->I)) ;
+(*A_NILCHECK(MSGACTR)) = LSGACTR;
  /* line 8526: */
  /* line 8527: */
-NSGACTR = (*(&A_VINDEX(NL(KUAACTR_modes),CGFACTR_i))) ;
+NSGACTR = (*A_NILCHECK((&A_VINDEX(NL(KUAACTR_modes),CGFACTR_i)))) ;
 switch ( NSGACTR.mode )
 { 
 case 3: /* REF STRUCT(INT,REF MODE54)  */
 OSGACTR_p = (NSGACTR.data.mode3);
  /* line 8528: */
 { 
-(void)(CHFACTR_pl1 = (*(&(OSGACTR_p->Pars))));
+(void)(CHFACTR_pl1 = (*A_NILCHECK((&(A_NILCHECK(OSGACTR_p)->Pars)))));
  /* line 8529: */
-PSGACTR = (&((*(&(JSGACTR_op->I)))->Ans)) ;
-(void)((*PSGACTR) = (*(&(OSGACTR_p->Deproc))));
+PSGACTR = (&(A_NILCHECK((*A_NILCHECK((&(A_NILCHECK(JSGACTR_op)->I)))))->Ans)) ;
+(void)((*A_NILCHECK(PSGACTR)) = (*A_NILCHECK((&(A_NILCHECK(OSGACTR_p)->Deproc)))));
  /* line 8530: */
  /* line 8531: */
-if ((*(&(CHFACTR_pl1->Rest)))!=OQAACTR_nilml)
+if ((*A_NILCHECK((&(A_NILCHECK(CHFACTR_pl1)->Rest))))!=OQAACTR_nilml)
 { 
-QSGACTR = (&((*(&(JSGACTR_op->I)))->Lmode)) ;
-(void)((*QSGACTR) = (*(&(CHFACTR_pl1->Mode))));
+QSGACTR = (&(A_NILCHECK((*A_NILCHECK((&(A_NILCHECK(JSGACTR_op)->I)))))->Lmode)) ;
+(void)((*A_NILCHECK(QSGACTR)) = (*A_NILCHECK((&(A_NILCHECK(CHFACTR_pl1)->Mode)))));
  /* line 8532: */
  /* line 8533: */
-(void)(CHFACTR_pl1 = (*(&(CHFACTR_pl1->Rest))));
+(void)(CHFACTR_pl1 = (*A_NILCHECK((&(A_NILCHECK(CHFACTR_pl1)->Rest)))));
 } 
  /* line 8534: */
-RSGACTR = (&((*(&(JSGACTR_op->I)))->Rmode)) ;
-(void)((*RSGACTR) = (*(&(CHFACTR_pl1->Mode))));
+RSGACTR = (&(A_NILCHECK((*A_NILCHECK((&(A_NILCHECK(JSGACTR_op)->I)))))->Rmode)) ;
+(void)((*A_NILCHECK(RSGACTR)) = (*A_NILCHECK((&(A_NILCHECK(CHFACTR_pl1)->Mode)))));
  /* line 8535: */
  /* line 8536: */
-if ((*(&(CHFACTR_pl1->Rest)))!=OQAACTR_nilml)
+if ((*A_NILCHECK((&(A_NILCHECK(CHFACTR_pl1)->Rest))))!=OQAACTR_nilml)
 { 
  /* line 8538: */
  /* line 8539: */
@@ -28314,7 +28314,7 @@ if ((*(&(CHFACTR_pl1->Rest)))!=OQAACTR_nilml)
  /* line 8541: */
  /* line 8542: */
  /* line 8543: */
-(void)(A_CALLPROC(NL(PZBACTR_faultp),(168, 0, 0, (&(JGFACTR_indic->Name))),(168, 0, 0, (&(JGFACTR_indic->Name)),(NL(PZBACTR_faultp)).nonlocals)));
+(void)(A_CALLPROC(NL(PZBACTR_faultp),(168, 0, 0, (&(A_NILCHECK(JGFACTR_indic)->Name))),(168, 0, 0, (&(A_NILCHECK(JGFACTR_indic)->Name)),(NL(PZBACTR_faultp)).nonlocals)));
 } 
 } 
 break;
@@ -28332,7 +28332,7 @@ break;
 break;
 case 50: 
 { 
-(void)(DGFACTR_j = (-(*NL(HTAACTR_iv))));
+(void)(DGFACTR_j = (-(*A_NILCHECK(NL(HTAACTR_iv)))));
  /* line 8547: */
  /* line 8548: */
  /* line 8552: */
@@ -28341,16 +28341,16 @@ EGFACTR_k = 0;
 break;
 case 51: 
 { 
-SSGACTR = (&(IGFACTR_id->Mode)) ;
-(*SSGACTR) = ZKAACTR_faultmode;
+SSGACTR = (&(A_NILCHECK(IGFACTR_id)->Mode)) ;
+(*A_NILCHECK(SSGACTR)) = ZKAACTR_faultmode;
  /* line 8553: */
-TSGACTR = (&(IGFACTR_id->Scope)) ;
-(*TSGACTR)-=1;
+TSGACTR = (&(A_NILCHECK(IGFACTR_id)->Scope)) ;
+(*A_NILCHECK(TSGACTR))-=1;
  /* line 8554: */
-USGACTR = (&((&NFFACTR_current)->Lastid)) ;
-(*USGACTR)-=1;
+USGACTR = (&(A_NILCHECK((&NFFACTR_current))->Lastid)) ;
+(*A_NILCHECK(USGACTR))-=1;
  /* line 8555: */
-(*MGFACTR_rid) = IGFACTR_id;
+(*A_NILCHECK(MGFACTR_rid)) = IGFACTR_id;
  /* line 8556: */
  /* line 8557: */
  /* line 8560: */
@@ -28359,17 +28359,17 @@ JGFACTR_indic = (A68_110 *)A68_NIL;
 break;
 case 52: 
 { 
-VSGACTR = (&(IGFACTR_id->Mode)) ;
-(void)((*VSGACTR) = (KQAACTR_refmark+ZKAACTR_faultmode));
+VSGACTR = (&(A_NILCHECK(IGFACTR_id)->Mode)) ;
+(void)((*A_NILCHECK(VSGACTR)) = (KQAACTR_refmark+ZKAACTR_faultmode));
  /* line 8561: */
-(*MGFACTR_rid) = IGFACTR_id;
+(*A_NILCHECK(MGFACTR_rid)) = IGFACTR_id;
  /* line 8562: */
 JGFACTR_indic = (A68_110 *)A68_NIL;
  /* line 8563: */
  /* line 8564: */
  /* line 8567: */
-WSGACTR = (&((&NFFACTR_current)->Props)) ;
-(void)((*WSGACTR) = (A68_BITS )((A68_BITS )((*(&((&NFFACTR_current)->Props)))|ULAACTR_decbit)|VLAACTR_vardecbit));
+WSGACTR = (&(A_NILCHECK((&NFFACTR_current))->Props)) ;
+(void)((*A_NILCHECK(WSGACTR)) = (A68_BITS )((A68_BITS )((*A_NILCHECK((&(A_NILCHECK((&NFFACTR_current))->Props))))|ULAACTR_decbit)|VLAACTR_vardecbit));
 } 
 break;
 case 53: 
@@ -28377,25 +28377,25 @@ case 53:
 XSGACTR.Name = NL(BZAACTR_nullid);
 XSGACTR.Props = MQAACTR_z;
 XSGACTR.Mode = 0;
-XSGACTR.Rdenno = (*NL(CZAACTR_lastrd))+=1;
+XSGACTR.Rdenno = (*A_NILCHECK(NL(CZAACTR_lastrd)))+=1;
  /* line 8568: */
 XSGACTR.Maxname = 0;
  /* line 8569: */
-XSGACTR.Level = (*(&((&NFFACTR_current)->Level)));
-XSGACTR.Rest = (*(&((&NFFACTR_current)->Rd)));
+XSGACTR.Level = (*A_NILCHECK((&(A_NILCHECK((&NFFACTR_current))->Level))));
+XSGACTR.Rest = (*A_NILCHECK((&(A_NILCHECK((&NFFACTR_current))->Rd))));
 YSGACTR = A_LOC(A68_68 ) ;
-(void)((*YSGACTR) = XSGACTR) ;
-ZSGACTR = (&((&NFFACTR_current)->Rd)) ;
-(*ZSGACTR) = YSGACTR;
+(void)((*A_NILCHECK(YSGACTR)) = XSGACTR) ;
+ZSGACTR = (&(A_NILCHECK((&NFFACTR_current))->Rd)) ;
+(*A_NILCHECK(ZSGACTR)) = YSGACTR;
  /* line 8570: */
-ATGACTR = (&((&FHFACTR_xcharpos)->Charpos)) ;
-(void)((*ATGACTR) = (*NL(LSAACTR_tind)));
+ATGACTR = (&(A_NILCHECK((&FHFACTR_xcharpos))->Charpos)) ;
+(void)((*A_NILCHECK(ATGACTR)) = (*A_NILCHECK(NL(LSAACTR_tind))));
  /* line 8571: */
-(void)(A_CALLPROC(NL(Output),(A_UNITE(BTGACTR,mode15,15,FHFACTR_xcharpos), (*NL(FZAACTR_outlevel))),(A_UNITE(BTGACTR,mode15,15,FHFACTR_xcharpos), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(BTGACTR,mode15,15,FHFACTR_xcharpos), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(BTGACTR,mode15,15,FHFACTR_xcharpos), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 8572: */
  /* line 8573: */
  /* line 8576: */
-(*NL(FZAACTR_outlevel))+=1;
+(*A_NILCHECK(NL(FZAACTR_outlevel)))+=1;
 } 
 break;
 case 54: 
@@ -28406,16 +28406,16 @@ case 55:
 { 
 CTGACTR.Type = YOAACTR_xfdec;
 CTGACTR.Iddec = IGFACTR_id;
-(void)(A_CALLPROC(NL(Output),(A_UNITE(DTGACTR,mode12,12,CTGACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(DTGACTR,mode12,12,CTGACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(DTGACTR,mode12,12,CTGACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(DTGACTR,mode12,12,CTGACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 8580: */
-(*MGFACTR_rid) = IGFACTR_id;
+(*A_NILCHECK(MGFACTR_rid)) = IGFACTR_id;
  /* line 8581: */
-ETGACTR.Mode = (*(&(IGFACTR_id->Mode)));
+ETGACTR.Mode = (*A_NILCHECK((&(A_NILCHECK(IGFACTR_id)->Mode))));
  /* line 8582: */
 ETGACTR.Rest = AHFACTR_parlist;
  /* line 8585: */
 FTGACTR = A_HEAP(A68_54 ) ;
-(void)((*FTGACTR) = ETGACTR) ;
+(void)((*A_NILCHECK(FTGACTR)) = ETGACTR) ;
 AHFACTR_parlist = FTGACTR;
 } 
 break;
@@ -28429,10 +28429,10 @@ for ( ;; )
 if ( !((AHFACTR_parlist!=OQAACTR_nilml)) ) break;
 CHFACTR_pl1 = AHFACTR_parlist;
  /* line 8588: */
-(void)(AHFACTR_parlist = (*(&(AHFACTR_parlist->Rest))));
+(void)(AHFACTR_parlist = (*A_NILCHECK((&(A_NILCHECK(AHFACTR_parlist)->Rest)))));
  /* line 8589: */
-GTGACTR = (&(CHFACTR_pl1->Rest)) ;
-(*GTGACTR) = BHFACTR_pl;
+GTGACTR = (&(A_NILCHECK(CHFACTR_pl1)->Rest)) ;
+(*A_NILCHECK(GTGACTR)) = BHFACTR_pl;
  /* line 8590: */
  /* line 8591: */
 BHFACTR_pl = CHFACTR_pl1;
@@ -28440,24 +28440,24 @@ BHFACTR_pl = CHFACTR_pl1;
  /* line 8592: */
 (void)(CGFACTR_i = A_CALLPROC(QLFACTR_declarer,(A68_FALSE, (&OGFACTR_scam)),(A68_FALSE, (&OGFACTR_scam),(QLFACTR_declarer).nonlocals)));
  /* line 8593: */
-HTGACTR = (&((*(&((&NFFACTR_current)->Rd)))->Mode)) ;
-(void)((*HTGACTR) = DGFACTR_j = A_CALLPROC(NL(RRBACTR_insertprocp),(CGFACTR_i, BHFACTR_pl),(CGFACTR_i, BHFACTR_pl,(NL(RRBACTR_insertprocp)).nonlocals)));
+HTGACTR = (&(A_NILCHECK((*A_NILCHECK((&(A_NILCHECK((&NFFACTR_current))->Rd)))))->Mode)) ;
+(void)((*A_NILCHECK(HTGACTR)) = DGFACTR_j = A_CALLPROC(NL(RRBACTR_insertprocp),(CGFACTR_i, BHFACTR_pl),(CGFACTR_i, BHFACTR_pl,(NL(RRBACTR_insertprocp)).nonlocals)));
  /* line 8594: */
  /* line 8595: */
 if (Rdname!=TQAACTR_nilid)
 { 
-ITGACTR = (&(Rdname->Mode)) ;
-(void)((*ITGACTR)+=(DGFACTR_j-ZKAACTR_faultmode));
+ITGACTR = (&(A_NILCHECK(Rdname)->Mode)) ;
+(void)((*A_NILCHECK(ITGACTR))+=(DGFACTR_j-ZKAACTR_faultmode));
  /* line 8596: */
  /* line 8597: */
-if ((*(&(Rdname->Mode)))<KQAACTR_refmark)
+if ((*A_NILCHECK((&(A_NILCHECK(Rdname)->Mode))))<KQAACTR_refmark)
 { 
-JTGACTR = (&(Rdname->Decno)) ;
-(void)((*JTGACTR) = (*NL(CZAACTR_lastrd)));
+JTGACTR = (&(A_NILCHECK(Rdname)->Decno)) ;
+(void)((*A_NILCHECK(JTGACTR)) = (*A_NILCHECK(NL(CZAACTR_lastrd))));
  /* line 8598: */
  /* line 8599: */
-KTGACTR = (&((*(&((&NFFACTR_current)->Rd)))->Name)) ;
-(void)((*KTGACTR) = (*(&(Rdname->Name))));
+KTGACTR = (&(A_NILCHECK((*A_NILCHECK((&(A_NILCHECK((&NFFACTR_current))->Rd)))))->Name)) ;
+(void)((*A_NILCHECK(KTGACTR)) = (*A_NILCHECK((&(A_NILCHECK(Rdname)->Name)))));
 } 
 else
 { 
@@ -28465,57 +28465,57 @@ LTGACTR.Type = XOAACTR_xvardec;
 LTGACTR.Iddec = Rdname;
  /* line 8600: */
  /* line 8601: */
-(void)(A_CALLPROC(NL(Output),(A_UNITE(MTGACTR,mode12,12,LTGACTR), ((*NL(FZAACTR_outlevel))-1)),(A_UNITE(MTGACTR,mode12,12,LTGACTR), ((*NL(FZAACTR_outlevel))-1),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(MTGACTR,mode12,12,LTGACTR), ((*A_NILCHECK(NL(FZAACTR_outlevel)))-1)),(A_UNITE(MTGACTR,mode12,12,LTGACTR), ((*A_NILCHECK(NL(FZAACTR_outlevel)))-1),(NL(Output)).nonlocals)));
 } 
 } 
  /* line 8602: */
  /* line 8603: */
 if (Indname!=SQAACTR_nilind)
 { 
-NTGACTR = (&((*(&((&NFFACTR_current)->Rd)))->Name)) ;
-(void)((*NTGACTR) = (*(&(Indname->Name))));
+NTGACTR = (&(A_NILCHECK((*A_NILCHECK((&(A_NILCHECK((&NFFACTR_current))->Rd)))))->Name)) ;
+(void)((*A_NILCHECK(NTGACTR)) = (*A_NILCHECK((&(A_NILCHECK(Indname)->Name)))));
  /* line 8604: */
  /* line 8605: */
-OTGACTR = (&((*(&((&NFFACTR_current)->Rd)))->Props)) ;
-(void)((*OTGACTR) = (A68_BITS )((*(&((*(&((&NFFACTR_current)->Rd)))->Props)))|MLAACTR_operatorbit));
+OTGACTR = (&(A_NILCHECK((*A_NILCHECK((&(A_NILCHECK((&NFFACTR_current))->Rd)))))->Props)) ;
+(void)((*A_NILCHECK(OTGACTR)) = (A68_BITS )((*A_NILCHECK((&(A_NILCHECK((*A_NILCHECK((&(A_NILCHECK((&NFFACTR_current))->Rd)))))->Props))))|MLAACTR_operatorbit));
  /* line 8606: */
  /* line 8607: */
-PTGACTR = (*(&(Indname->U))) ;
+PTGACTR = (*A_NILCHECK((&(A_NILCHECK(Indname)->U)))) ;
 switch ( PTGACTR.mode )
 { 
 case 1: /* REF STRUCT(INT,REF MODE108)  */
 QTGACTR_op = (PTGACTR.data.mode1);
  /* line 8608: */
 { 
-RTGACTR_in = (*(&(QTGACTR_op->I)));
+RTGACTR_in = (*A_NILCHECK((&(A_NILCHECK(QTGACTR_op)->I))));
  /* line 8609: */
-STGACTR = (&(RTGACTR_in->Ans)) ;
-(*STGACTR) = CGFACTR_i;
+STGACTR = (&(A_NILCHECK(RTGACTR_in)->Ans)) ;
+(*A_NILCHECK(STGACTR)) = CGFACTR_i;
  /* line 8610: */
-TTGACTR = (&(RTGACTR_in->Decno)) ;
-(void)((*TTGACTR) = (*NL(CZAACTR_lastrd)));
+TTGACTR = (&(A_NILCHECK(RTGACTR_in)->Decno)) ;
+(void)((*A_NILCHECK(TTGACTR)) = (*A_NILCHECK(NL(CZAACTR_lastrd))));
  /* line 8611: */
  /* line 8612: */
-if ((*(&(BHFACTR_pl->Rest)))!=OQAACTR_nilml)
+if ((*A_NILCHECK((&(A_NILCHECK(BHFACTR_pl)->Rest))))!=OQAACTR_nilml)
 { 
-UTGACTR = (&(RTGACTR_in->Lmode)) ;
-(void)((*UTGACTR) = (*(&(BHFACTR_pl->Mode))));
+UTGACTR = (&(A_NILCHECK(RTGACTR_in)->Lmode)) ;
+(void)((*A_NILCHECK(UTGACTR)) = (*A_NILCHECK((&(A_NILCHECK(BHFACTR_pl)->Mode)))));
  /* line 8613: */
  /* line 8614: */
-(void)(BHFACTR_pl = (*(&(BHFACTR_pl->Rest))));
+(void)(BHFACTR_pl = (*A_NILCHECK((&(A_NILCHECK(BHFACTR_pl)->Rest)))));
 } 
  /* line 8615: */
-VTGACTR = (&(RTGACTR_in->Rmode)) ;
-(void)((*VTGACTR) = (*(&(BHFACTR_pl->Mode))));
+VTGACTR = (&(A_NILCHECK(RTGACTR_in)->Rmode)) ;
+(void)((*A_NILCHECK(VTGACTR)) = (*A_NILCHECK((&(A_NILCHECK(BHFACTR_pl)->Mode)))));
  /* line 8616: */
  /* line 8617: */
-if ((*(&(BHFACTR_pl->Rest)))!=OQAACTR_nilml)
+if ((*A_NILCHECK((&(A_NILCHECK(BHFACTR_pl)->Rest))))!=OQAACTR_nilml)
 { 
  /* line 8619: */
  /* line 8620: */
  /* line 8621: */
  /* line 8622: */
-(void)(A_CALLPROC(NL(PZBACTR_faultp),(168, 0, 0, (&(Indname->Name))),(168, 0, 0, (&(Indname->Name)),(NL(PZBACTR_faultp)).nonlocals)));
+(void)(A_CALLPROC(NL(PZBACTR_faultp),(168, 0, 0, (&(A_NILCHECK(Indname)->Name))),(168, 0, 0, (&(A_NILCHECK(Indname)->Name)),(NL(PZBACTR_faultp)).nonlocals)));
 } 
 } 
 break;
@@ -28531,16 +28531,16 @@ break;
 break;
 case 57: 
 { 
-WTGACTR_b = (*NL(XZAACTR_burestrict));
+WTGACTR_b = (*A_NILCHECK(NL(XZAACTR_burestrict)));
  /* line 8628: */
-(*NL(XZAACTR_burestrict)) = A68_FALSE;
+(*A_NILCHECK(NL(XZAACTR_burestrict))) = A68_FALSE;
  /* line 8629: */
 A_CALLPROC(YTFACTR_uc,(CGFACTR_i, &XTGACTR),(CGFACTR_i, &XTGACTR,(YTFACTR_uc).nonlocals));
 ;
  /* line 8630: */
-(*NL(XZAACTR_burestrict)) = WTGACTR_b;
+(*A_NILCHECK(NL(XZAACTR_burestrict))) = WTGACTR_b;
  /* line 8631: */
-ZTGACTR = (*(&((*(&((&NFFACTR_current)->Rd)))->Name))) ;
+ZTGACTR = (*A_NILCHECK((&(A_NILCHECK((*A_NILCHECK((&(A_NILCHECK((&NFFACTR_current))->Rd)))))->Name)))) ;
 BUGACTR_format = A_VC_EQ(A_HISVEC(YTGACTR,ZTGACTR,32,A68_CHAR ),A_HISVEC(AUGACTR,NL(AUAACTR_identformat),32,A68_CHAR ));
  /* line 8632: */
  /* line 8633: */
@@ -28550,7 +28550,7 @@ if (BUGACTR_format)
 if (WGFACTR_formatcaseno!=0)
 { 
  /* line 8635: */
-(*NL(FZAACTR_outlevel))+=3;
+(*A_NILCHECK(NL(FZAACTR_outlevel)))+=3;
 } 
 else
 { 
@@ -28562,9 +28562,9 @@ CUGACTR.Type = 0;
 CUGACTR.Rest = (A68_124 *)A68_NIL;
 XGFACTR_vlist = CUGACTR;
  /* line 8636: */
-(*NL(CZAACTR_lastrd))-=1;
+(*A_NILCHECK(NL(CZAACTR_lastrd)))-=1;
  /* line 8637: */
-(void)(A_CALLPROC(NL(Output),(QKAACTR_up, ((*NL(FZAACTR_outlevel))+2)),(QKAACTR_up, ((*NL(FZAACTR_outlevel))+2),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(QKAACTR_up, ((*A_NILCHECK(NL(FZAACTR_outlevel)))+2)),(QKAACTR_up, ((*A_NILCHECK(NL(FZAACTR_outlevel)))+2),(NL(Output)).nonlocals)));
  /* line 8638: */
  /* line 8639: */
  /* line 8640: */
@@ -28580,8 +28580,8 @@ DUGACTR = (Indname==SQAACTR_nilind);
 if (DUGACTR)
 { 
  /* line 8643: */
-EUGACTR = (&((*(&((&NFFACTR_current)->Rd)))->Props)) ;
-(void)((*EUGACTR) = (A68_BITS )((*(&((*(&((&NFFACTR_current)->Rd)))->Props)))|NLAACTR_valbit));
+EUGACTR = (&(A_NILCHECK((*A_NILCHECK((&(A_NILCHECK((&NFFACTR_current))->Rd)))))->Props)) ;
+(void)((*A_NILCHECK(EUGACTR)) = (A68_BITS )((*A_NILCHECK((&(A_NILCHECK((*A_NILCHECK((&(A_NILCHECK((&NFFACTR_current))->Rd)))))->Props))))|NLAACTR_valbit));
 } 
  /* line 8644: */
  /* line 8645: */
@@ -28590,29 +28590,29 @@ if (A_ABS(FUGACTR)!=1)
 { 
  /* line 8646: */
  /* line 8647: */
-GUGACTR = (&((*(&((&NFFACTR_current)->Rd)))->Props)) ;
-(void)((*GUGACTR) = (A68_BITS )((*(&((*(&((&NFFACTR_current)->Rd)))->Props)))|ZLAACTR_dontpullbit));
+GUGACTR = (&(A_NILCHECK((*A_NILCHECK((&(A_NILCHECK((&NFFACTR_current))->Rd)))))->Props)) ;
+(void)((*A_NILCHECK(GUGACTR)) = (A68_BITS )((*A_NILCHECK((&(A_NILCHECK((*A_NILCHECK((&(A_NILCHECK((&NFFACTR_current))->Rd)))))->Props))))|ZLAACTR_dontpullbit));
 } 
  /* line 8648: */
 HUGACTR.Fn = VNAACTR_xroutinend;
  /* line 8650: */
 HUGACTR.M = 0;
  /* line 8651: */
-HUGACTR.Props = (A68_BITS )((*(&((*(&((&NFFACTR_current)->Rd)))->Props)))&(A68_BITS )(ZLAACTR_dontpullbit|NLAACTR_valbit));
+HUGACTR.Props = (A68_BITS )((*A_NILCHECK((&(A_NILCHECK((*A_NILCHECK((&(A_NILCHECK((&NFFACTR_current))->Rd)))))->Props))))&(A68_BITS )(ZLAACTR_dontpullbit|NLAACTR_valbit));
 HUGACTR.Param = 0;
-(void)(A_CALLPROC(NL(Output),(A_UNITE(IUGACTR,mode17,17,HUGACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(IUGACTR,mode17,17,HUGACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(IUGACTR,mode17,17,HUGACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(IUGACTR,mode17,17,HUGACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 8652: */
-(void)(A_CALLPROC(NL(Output),(QKAACTR_up, (*NL(FZAACTR_outlevel))),(QKAACTR_up, (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(QKAACTR_up, (*A_NILCHECK(NL(FZAACTR_outlevel)))),(QKAACTR_up, (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 8653: */
-(*NL(FZAACTR_outlevel))-=1;
+(*A_NILCHECK(NL(FZAACTR_outlevel)))-=1;
  /* line 8654: */
 (void)(EHFACTR_labl = (A68_69 *)A68_NIL) ;
-(void)(A_CALLPROC(KHFACTR_scopel,((&((&((&XGFACTR_vlist)->V))->Labs)), (&EHFACTR_labl)),((&((&((&XGFACTR_vlist)->V))->Labs)), (&EHFACTR_labl),(KHFACTR_scopel).nonlocals)));
+(void)(A_CALLPROC(KHFACTR_scopel,((&(A_NILCHECK((&(A_NILCHECK((&XGFACTR_vlist))->V)))->Labs)), (&EHFACTR_labl)),((&(A_NILCHECK((&(A_NILCHECK((&XGFACTR_vlist))->V)))->Labs)), (&EHFACTR_labl),(KHFACTR_scopel).nonlocals)));
  /* line 8655: */
-KUGACTR = (*(&((&NFFACTR_current)->Rd))) ;
-(void)(A_CALLPROC(NL(Output),(A_UNITE(JUGACTR,mode34,34,KUGACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(JUGACTR,mode34,34,KUGACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+KUGACTR = (*A_NILCHECK((&(A_NILCHECK((&NFFACTR_current))->Rd)))) ;
+(void)(A_CALLPROC(NL(Output),(A_UNITE(JUGACTR,mode34,34,KUGACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(JUGACTR,mode34,34,KUGACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 8656: */
-(void)(DHFACTR_lab = (*(&((&((&XGFACTR_vlist)->V))->Labs))));
+(void)(DHFACTR_lab = (*A_NILCHECK((&(A_NILCHECK((&(A_NILCHECK((&XGFACTR_vlist))->V)))->Labs)))));
  /* line 8657: */
 for ( ;; )
 { 
@@ -28620,10 +28620,10 @@ for ( ;; )
 if ( !((DHFACTR_lab!=XQAACTR_nillab)) ) break;
 LUGACTR.Lab = DHFACTR_lab;
 LUGACTR.Notsetting = A68_TRUE;
-(void)(A_CALLPROC(NL(Output),(A_UNITE(MUGACTR,mode13,13,LUGACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(MUGACTR,mode13,13,LUGACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(MUGACTR,mode13,13,LUGACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(MUGACTR,mode13,13,LUGACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 8659: */
  /* line 8660: */
-(void)(DHFACTR_lab = (*(&(DHFACTR_lab->Rest))));
+(void)(DHFACTR_lab = (*A_NILCHECK((&(A_NILCHECK(DHFACTR_lab)->Rest)))));
 }
  /* line 8661: */
 for ( ;; )
@@ -28632,19 +28632,19 @@ for ( ;; )
 if ( !((EHFACTR_labl!=XQAACTR_nillab)) ) break;
 NUGACTR.Lab = DHFACTR_lab = EHFACTR_labl;
 NUGACTR.Notsetting = A68_TRUE;
-(void)(A_CALLPROC(NL(Output),(A_UNITE(OUGACTR,mode13,13,NUGACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(OUGACTR,mode13,13,NUGACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(OUGACTR,mode13,13,NUGACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(OUGACTR,mode13,13,NUGACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 8663: */
-(void)(EHFACTR_labl = (*(&(EHFACTR_labl->Rest))));
+(void)(EHFACTR_labl = (*A_NILCHECK((&(A_NILCHECK(EHFACTR_labl)->Rest)))));
  /* line 8664: */
-PUGACTR = (&(DHFACTR_lab->Rest)) ;
-(void)((*PUGACTR) = (*(&(External->Labs))));
+PUGACTR = (&(A_NILCHECK(DHFACTR_lab)->Rest)) ;
+(void)((*A_NILCHECK(PUGACTR)) = (*A_NILCHECK((&(A_NILCHECK(External)->Labs)))));
  /* line 8665: */
  /* line 8666: */
-QUGACTR = (&(External->Labs)) ;
-(*QUGACTR) = DHFACTR_lab;
+QUGACTR = (&(A_NILCHECK(External)->Labs)) ;
+(*A_NILCHECK(QUGACTR)) = DHFACTR_lab;
 }
  /* line 8667: */
-(void)(A_CALLPROC(NL(Output),(SKAACTR_down, (*NL(FZAACTR_outlevel))),(SKAACTR_down, (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(SKAACTR_down, (*A_NILCHECK(NL(FZAACTR_outlevel)))),(SKAACTR_down, (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 8668: */
  /* line 8669: */
 if (Rdname==TQAACTR_nilid)
@@ -28662,7 +28662,7 @@ RUGACTR.V.Mode = CLAACTR_formatmode;
 } 
 else
 { 
-RUGACTR.V.Mode = (*(&((*(&((&NFFACTR_current)->Rd)))->Mode)));
+RUGACTR.V.Mode = (*A_NILCHECK((&(A_NILCHECK((*A_NILCHECK((&(A_NILCHECK((&NFFACTR_current))->Rd)))))->Mode))));
 } 
 RUGACTR.V.Vlist = (A68_124 *)A68_NIL;
 RUGACTR.V.Labs = (A68_69 *)A68_NIL;
@@ -28676,36 +28676,36 @@ XGFACTR_vlist = RUGACTR;
 else
 { 
  /* line 8676: */
-if ((*(&(Rdname->Mode)))>KQAACTR_refmark)
+if ((*A_NILCHECK((&(A_NILCHECK(Rdname)->Mode))))>KQAACTR_refmark)
 { 
-TUGACTR = (*(&(Rdname->Decno))) ;
-(void)(A_CALLPROC(NL(Output),(A_UNITE(SUGACTR,mode3,3,TUGACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(SUGACTR,mode3,3,TUGACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+TUGACTR = (*A_NILCHECK((&(A_NILCHECK(Rdname)->Decno)))) ;
+(void)(A_CALLPROC(NL(Output),(A_UNITE(SUGACTR,mode3,3,TUGACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(SUGACTR,mode3,3,TUGACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 8677: */
-(void)(A_CALLPROC(NL(Output),(A_UNITE(UUGACTR,mode16,16,EPAACTR_xwass), (*NL(FZAACTR_outlevel))),(A_UNITE(UUGACTR,mode16,16,EPAACTR_xwass), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(UUGACTR,mode16,16,EPAACTR_xwass), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(UUGACTR,mode16,16,EPAACTR_xwass), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 8678: */
-WUGACTR = (*(&((*(&((&NFFACTR_current)->Rd)))->Rdenno))) ;
-(void)(A_CALLPROC(NL(Output),(A_UNITE(VUGACTR,mode3,3,WUGACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(VUGACTR,mode3,3,WUGACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+WUGACTR = (*A_NILCHECK((&(A_NILCHECK((*A_NILCHECK((&(A_NILCHECK((&NFFACTR_current))->Rd)))))->Rdenno)))) ;
+(void)(A_CALLPROC(NL(Output),(A_UNITE(VUGACTR,mode3,3,WUGACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(VUGACTR,mode3,3,WUGACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 8679: */
 XUGACTR.Fn = UMAACTR_xassign;
-XUGACTR.M = (*(&(Rdname->Mode)));
+XUGACTR.M = (*A_NILCHECK((&(A_NILCHECK(Rdname)->Mode))));
 XUGACTR.Param = 1;
-(void)(A_CALLPROC(NL(Output),(A_UNITE(YUGACTR,mode14,14,XUGACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(YUGACTR,mode14,14,XUGACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(YUGACTR,mode14,14,XUGACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(YUGACTR,mode14,14,XUGACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 8680: */
 ZUGACTR.Fn = BOAACTR_xvoid;
 ZUGACTR.M = YKAACTR_voidmode;
 ZUGACTR.Param = 0;
  /* line 8681: */
-(void)(A_CALLPROC(NL(Output),(A_UNITE(AVGACTR,mode14,14,ZUGACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(AVGACTR,mode14,14,ZUGACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(AVGACTR,mode14,14,ZUGACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(AVGACTR,mode14,14,ZUGACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
 } 
 } 
  /* line 8682: */
  /* line 8683: */
 if (BUGACTR_format)
 { 
-(void)(A_CALLPROC(NL(Output),(QKAACTR_up, (*NL(FZAACTR_outlevel))),(QKAACTR_up, (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(QKAACTR_up, (*A_NILCHECK(NL(FZAACTR_outlevel)))),(QKAACTR_up, (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 8684: */
  /* line 8685: */
-(*NL(FZAACTR_outlevel))-=2;
+(*A_NILCHECK(NL(FZAACTR_outlevel)))-=2;
 } 
  /* line 8686: */
  /* line 8687: */
@@ -28715,7 +28715,7 @@ goto KFFACTR_exitsc;
 break;
 case 58: 
  /* line 8693: */
-(void)((*NL(EZAACTR_rdmode)) = A_CALLPROC(QLFACTR_declarer,(A68_FALSE, (&OGFACTR_scam)),(A68_FALSE, (&OGFACTR_scam),(QLFACTR_declarer).nonlocals)));
+(void)((*A_NILCHECK(NL(EZAACTR_rdmode))) = A_CALLPROC(QLFACTR_declarer,(A68_FALSE, (&OGFACTR_scam)),(A68_FALSE, (&OGFACTR_scam),(QLFACTR_declarer).nonlocals)));
 break;
 case 59: 
  /* line 8696: */
@@ -28724,32 +28724,32 @@ A_CALLPROC(NL(GFFACTR_range),((&NFFACTR_current), IGFACTR_id, JGFACTR_indic, (A6
 break;
 case 60: 
 { 
-CVGACTR = (&((*(&((&NFFACTR_current)->Rd)))->Mode)) ;
-(void)((*CVGACTR) = DGFACTR_j = A_CALLPROC(NL(LUBACTR_insertprc),(CGFACTR_i = (*NL(EZAACTR_rdmode))),(CGFACTR_i = (*NL(EZAACTR_rdmode)),(NL(LUBACTR_insertprc)).nonlocals)));
+CVGACTR = (&(A_NILCHECK((*A_NILCHECK((&(A_NILCHECK((&NFFACTR_current))->Rd)))))->Mode)) ;
+(void)((*A_NILCHECK(CVGACTR)) = DGFACTR_j = A_CALLPROC(NL(LUBACTR_insertprc),(CGFACTR_i = (*A_NILCHECK(NL(EZAACTR_rdmode)))),(CGFACTR_i = (*A_NILCHECK(NL(EZAACTR_rdmode))),(NL(LUBACTR_insertprc)).nonlocals)));
  /* line 8697: */
  /* line 8698: */
 if (Indname!=SQAACTR_nilind)
 { 
  /* line 8700: */
-(void)(A_CALLPROC(NL(PZBACTR_faultp),(170, 0, 0, (&(Indname->Name))),(170, 0, 0, (&(Indname->Name)),(NL(PZBACTR_faultp)).nonlocals)));
+(void)(A_CALLPROC(NL(PZBACTR_faultp),(170, 0, 0, (&(A_NILCHECK(Indname)->Name))),(170, 0, 0, (&(A_NILCHECK(Indname)->Name)),(NL(PZBACTR_faultp)).nonlocals)));
 } 
 else
 { 
  /* line 8701: */
 if (Rdname!=TQAACTR_nilid)
 { 
-DVGACTR = (&(Rdname->Mode)) ;
-(void)((*DVGACTR)+=(DGFACTR_j-ZKAACTR_faultmode));
+DVGACTR = (&(A_NILCHECK(Rdname)->Mode)) ;
+(void)((*A_NILCHECK(DVGACTR))+=(DGFACTR_j-ZKAACTR_faultmode));
  /* line 8702: */
  /* line 8703: */
-if ((*(&(Rdname->Mode)))<KQAACTR_refmark)
+if ((*A_NILCHECK((&(A_NILCHECK(Rdname)->Mode))))<KQAACTR_refmark)
 { 
-EVGACTR = (&((*(&((&NFFACTR_current)->Rd)))->Name)) ;
-(void)((*EVGACTR) = (*(&(Rdname->Name))));
+EVGACTR = (&(A_NILCHECK((*A_NILCHECK((&(A_NILCHECK((&NFFACTR_current))->Rd)))))->Name)) ;
+(void)((*A_NILCHECK(EVGACTR)) = (*A_NILCHECK((&(A_NILCHECK(Rdname)->Name)))));
  /* line 8704: */
  /* line 8705: */
-FVGACTR = (&(Rdname->Decno)) ;
-(void)((*FVGACTR) = (*NL(CZAACTR_lastrd)));
+FVGACTR = (&(A_NILCHECK(Rdname)->Decno)) ;
+(void)((*A_NILCHECK(FVGACTR)) = (*A_NILCHECK(NL(CZAACTR_lastrd))));
 } 
 else
 { 
@@ -28759,7 +28759,7 @@ GVGACTR.Iddec = Rdname;
  /* line 8707: */
  /* line 8708: */
  /* line 8712: */
-(void)(A_CALLPROC(NL(Output),(A_UNITE(HVGACTR,mode12,12,GVGACTR), ((*NL(FZAACTR_outlevel))-1)),(A_UNITE(HVGACTR,mode12,12,GVGACTR), ((*NL(FZAACTR_outlevel))-1),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(HVGACTR,mode12,12,GVGACTR), ((*A_NILCHECK(NL(FZAACTR_outlevel)))-1)),(A_UNITE(HVGACTR,mode12,12,GVGACTR), ((*A_NILCHECK(NL(FZAACTR_outlevel)))-1),(NL(Output)).nonlocals)));
 } 
 } 
 } 
@@ -28767,7 +28767,7 @@ GVGACTR.Iddec = Rdname;
 break;
 case 61: 
 { 
-(void)(YFFACTR_ccmode = (*NL(AZAACTR_globccmode)));
+(void)(YFFACTR_ccmode = (*A_NILCHECK(NL(AZAACTR_globccmode))));
  /* line 8713: */
 (void)(ZFFACTR_m = A_CALLPROC(QLFACTR_declarer,(A68_FALSE, (&OGFACTR_scam)),(A68_FALSE, (&OGFACTR_scam),(QLFACTR_declarer).nonlocals)));
  /* line 8714: */
@@ -28780,30 +28780,30 @@ else
 LVGACTR = ZFFACTR_m;
 } 
  /* line 8715: */
-MVGACTR = (*(&A_VINDEX(NL(KUAACTR_modes),LVGACTR)));
+MVGACTR = (*A_NILCHECK((&A_VINDEX(NL(KUAACTR_modes),LVGACTR))));
 switch ( MVGACTR.mode )
 { 
 case 2: /* REF STRUCT(INT,REF MODE54)  */
 NVGACTR_ru = (MVGACTR.data.mode2);
  /* line 8716: */
 { 
-(void)(AGFACTR_ml = (*(&(NVGACTR_ru->Modelist))));
+(void)(AGFACTR_ml = (*A_NILCHECK((&(A_NILCHECK(NVGACTR_ru)->Modelist)))));
  /* line 8717: */
 for ( ;; )
 { 
  /* line 8718: */
 if ( !((AGFACTR_ml!=(A68_54 *)A68_NIL)) ) break;
  /* line 8719: */
-if (A_CALLPROC(NL(MLCACTR_unite),((A68_125 *)A68_NIL, (*(&(AGFACTR_ml->Mode))), YFFACTR_ccmode, 1, A68_FALSE),((A68_125 *)A68_NIL, (*(&(AGFACTR_ml->Mode))), YFFACTR_ccmode, 1, A68_FALSE,(NL(MLCACTR_unite)).nonlocals))==0)
+if (A_CALLPROC(NL(MLCACTR_unite),((A68_125 *)A68_NIL, (*A_NILCHECK((&(A_NILCHECK(AGFACTR_ml)->Mode)))), YFFACTR_ccmode, 1, A68_FALSE),((A68_125 *)A68_NIL, (*A_NILCHECK((&(A_NILCHECK(AGFACTR_ml)->Mode)))), YFFACTR_ccmode, 1, A68_FALSE,(NL(MLCACTR_unite)).nonlocals))==0)
 { 
-(void)(ZFFACTR_m = (*(&(AGFACTR_ml->Mode))));
+(void)(ZFFACTR_m = (*A_NILCHECK((&(A_NILCHECK(AGFACTR_ml)->Mode)))));
  /* line 8720: */
  /* line 8721: */
 goto KVGACTR_flt;
 } 
  /* line 8722: */
  /* line 8723: */
-(void)(AGFACTR_ml = (*(&(AGFACTR_ml->Rest))));
+(void)(AGFACTR_ml = (*A_NILCHECK((&(A_NILCHECK(AGFACTR_ml)->Rest)))));
 }
  /* line 8724: */
  /* line 8725: */
@@ -28826,7 +28826,7 @@ OVGACTR.Fn = WNAACTR_xuchoice;
 OVGACTR.M = ZFFACTR_m;
  /* line 8732: */
  /* line 8733: */
-if ((*NL(MFBACTR_t1))==32)
+if ((*A_NILCHECK(NL(MFBACTR_t1)))==32)
 { 
  /* line 8734: */
 OVGACTR.Props = ULAACTR_decbit;
@@ -28838,7 +28838,7 @@ OVGACTR.Props = MQAACTR_z;
 OVGACTR.Param = DGFACTR_j;
  /* line 8735: */
  /* line 8736: */
-(void)(A_CALLPROC(NL(Output),(A_UNITE(PVGACTR,mode17,17,OVGACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(PVGACTR,mode17,17,OVGACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(PVGACTR,mode17,17,OVGACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(PVGACTR,mode17,17,OVGACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
 goto IVGACTR;
 KVGACTR_flt: A_UNUSED;
  /* line 8737: */
@@ -28846,16 +28846,16 @@ KVGACTR_flt: A_UNUSED;
  /* line 8739: */
  /* line 8740: */
  /* line 8743: */
-QVGACTR = (&((&OGFACTR_scam)->Mode)) ;
-(*QVGACTR) = ZKAACTR_faultmode;
+QVGACTR = (&(A_NILCHECK((&OGFACTR_scam))->Mode)) ;
+(*A_NILCHECK(QVGACTR)) = ZKAACTR_faultmode;
 IVGACTR: ;
 } 
 break;
 case 62: 
 { 
-(*NL(AZAACTR_globccmode)) = YFFACTR_ccmode;
+(*A_NILCHECK(NL(AZAACTR_globccmode))) = YFFACTR_ccmode;
  /* line 8744: */
-(void)(A_CALLPROC(KHFACTR_scopel,((&((&((&XGFACTR_vlist)->V))->Labs)), (&(External->Labs))),((&((&((&XGFACTR_vlist)->V))->Labs)), (&(External->Labs)),(KHFACTR_scopel).nonlocals)));
+(void)(A_CALLPROC(KHFACTR_scopel,((&(A_NILCHECK((&(A_NILCHECK((&XGFACTR_vlist))->V)))->Labs)), (&(A_NILCHECK(External)->Labs))),((&(A_NILCHECK((&(A_NILCHECK((&XGFACTR_vlist))->V)))->Labs)), (&(A_NILCHECK(External)->Labs)),(KHFACTR_scopel).nonlocals)));
  /* line 8745: */
  /* line 8746: */
  /* line 8749: */
@@ -28864,13 +28864,13 @@ goto KFFACTR_exitsc;
 break;
 case 63: 
 { 
-(*MGFACTR_rid) = IGFACTR_id;
+(*A_NILCHECK(MGFACTR_rid)) = IGFACTR_id;
  /* line 8750: */
 RVGACTR.Type = BPAACTR_xccdec;
 RVGACTR.Iddec = IGFACTR_id;
  /* line 8751: */
  /* line 8754: */
-(void)(A_CALLPROC(NL(Output),(A_UNITE(SVGACTR,mode12,12,RVGACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(SVGACTR,mode12,12,RVGACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(SVGACTR,mode12,12,RVGACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(SVGACTR,mode12,12,RVGACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
 } 
 break;
 case 64: 
@@ -28887,24 +28887,24 @@ if (OFFACTR_oldidhash)
 { 
 A_CLOSURE( VVGACTR_generator, WVGACTR_generator, XVGACTR_generator );
 A_CALLPROC(VVGACTR_generator,(A68_TRUE, &AWGACTR),(A68_TRUE, &AWGACTR,(VVGACTR_generator).nonlocals));
-BWGACTR = (*(&((&NFFACTR_current)->Ids))) ;
+BWGACTR = (*A_NILCHECK((&(A_NILCHECK((&NFFACTR_current))->Ids)))) ;
 (void)(A_VASSIGN2(BWGACTR,AWGACTR,A68_67 *)) ;
-CWGACTR = (&((&NFFACTR_current)->Ids)) ;
-(*CWGACTR) = AWGACTR;
+CWGACTR = (&(A_NILCHECK((&NFFACTR_current))->Ids)) ;
+(*A_NILCHECK(CWGACTR)) = AWGACTR;
  /* line 8761: */
  /* line 8762: */
 OFFACTR_oldidhash = A68_FALSE;
 } 
  /* line 8763: */
-DWGACTR = (*(&((&NFFACTR_current)->Ids))) ;
-(void)(MGFACTR_rid = (&A_VINDEX(DWGACTR,(*NL(TSAACTR_idhash)))));
+DWGACTR = (*A_NILCHECK((&(A_NILCHECK((&NFFACTR_current))->Ids)))) ;
+(void)(MGFACTR_rid = (&A_VINDEX(DWGACTR,(*A_NILCHECK(NL(TSAACTR_idhash))))));
  /* line 8764: */
-(void)(IGFACTR_id = (*MGFACTR_rid));
+(void)(IGFACTR_id = (*A_NILCHECK(MGFACTR_rid)));
  /* line 8765: */
-(*NL(GBBACTR_lastidchanged)) = A68_TRUE;
+(*A_NILCHECK(NL(GBBACTR_lastidchanged))) = A68_TRUE;
  /* line 8766: */
  /* line 8767: */
-if ((*NL(MFBACTR_t1))==32)
+if ((*A_NILCHECK(NL(MFBACTR_t1)))==32)
 { 
 for ( ;; )
 { 
@@ -28912,12 +28912,12 @@ for ( ;; )
 EWGACTR = (IGFACTR_id!=TQAACTR_nilid);
 if ( EWGACTR )
 { /* line 8769: */
-EWGACTR = ((*(&(IGFACTR_id->Level)))==(*(&((&NFFACTR_current)->Level))));
+EWGACTR = ((*A_NILCHECK((&(A_NILCHECK(IGFACTR_id)->Level))))==(*A_NILCHECK((&(A_NILCHECK((&NFFACTR_current))->Level)))));
 }
 if ( !(EWGACTR) ) break;
  /* line 8770: */
-HWGACTR = (*(&(IGFACTR_id->Name))) ;
-IWGACTR = A_VC_EQ(A_HISVEC(FWGACTR,(*NL(PSAACTR_ident)),32,A68_CHAR ),A_HISVEC(GWGACTR,HWGACTR,32,A68_CHAR ));
+HWGACTR = (*A_NILCHECK((&(A_NILCHECK(IGFACTR_id)->Name)))) ;
+IWGACTR = A_VC_EQ(A_HISVEC(FWGACTR,(*A_NILCHECK(NL(PSAACTR_ident))),32,A68_CHAR ),A_HISVEC(GWGACTR,HWGACTR,32,A68_CHAR ));
 if ( IWGACTR )
 {IWGACTR = (!HHFACTR_givenmess);
 }
@@ -28930,71 +28930,71 @@ HHFACTR_givenmess = A68_TRUE;
 } 
  /* line 8774: */
  /* line 8775: */
-(void)(IGFACTR_id = (*(&(IGFACTR_id->Rest))));
+(void)(IGFACTR_id = (*A_NILCHECK((&(A_NILCHECK(IGFACTR_id)->Rest)))));
 }
  /* line 8776: */
 } 
  /* line 8777: */
-JWGACTR = (&((&NFFACTR_current)->Lastid)) ;
-(*JWGACTR)+=1;
+JWGACTR = (&(A_NILCHECK((&NFFACTR_current))->Lastid)) ;
+(*A_NILCHECK(JWGACTR))+=1;
  /* line 8778: */
  /* line 8779: */
  /* line 8780: */
-if ((*NL(MFBACTR_t1))==32)
+if ((*A_NILCHECK(NL(MFBACTR_t1)))==32)
 { 
  /* line 8781: */
-KWGACTR.Name = (*NL(PSAACTR_ident));
+KWGACTR.Name = (*A_NILCHECK(NL(PSAACTR_ident)));
 } 
 else
 { 
 KWGACTR.Name = NL(XTAACTR_spaces);
 } 
-KWGACTR.Decno = (*(&((&NFFACTR_current)->Lastid)));
+KWGACTR.Decno = (*A_NILCHECK((&(A_NILCHECK((&NFFACTR_current))->Lastid))));
  /* line 8782: */
-KWGACTR.Level = (*(&((&NFFACTR_current)->Level)));
-KWGACTR.Mode = (*(&((&OGFACTR_scam)->Mode)));
+KWGACTR.Level = (*A_NILCHECK((&(A_NILCHECK((&NFFACTR_current))->Level))));
+KWGACTR.Mode = (*A_NILCHECK((&(A_NILCHECK((&OGFACTR_scam))->Mode))));
  /* line 8783: */
-KWGACTR.Scope = (*(&((&NFFACTR_current)->Lastid)));
+KWGACTR.Scope = (*A_NILCHECK((&(A_NILCHECK((&NFFACTR_current))->Lastid))));
  /* line 8784: */
-KWGACTR.Rest = (*MGFACTR_rid);
+KWGACTR.Rest = (*A_NILCHECK(MGFACTR_rid));
  /* line 8787: */
 LWGACTR = A_LOC(A68_67 ) ;
-(void)((*LWGACTR) = KWGACTR) ;
+(void)((*A_NILCHECK(LWGACTR)) = KWGACTR) ;
 IGFACTR_id = LWGACTR;
 } 
 break;
 case 66: 
  /* line 8788: */
-MWGACTR = (*(&((&NFFACTR_current)->Props))) ;
+MWGACTR = (*A_NILCHECK((&(A_NILCHECK((&NFFACTR_current))->Props)))) ;
 if (!A_LB_GE(MWGACTR,ULAACTR_decbit))
 { 
-NWGACTR = (&((&NFFACTR_current)->Lastid)) ;
-(*NWGACTR)+=1;
+NWGACTR = (&(A_NILCHECK((&NFFACTR_current))->Lastid)) ;
+(*A_NILCHECK(NWGACTR))+=1;
  /* line 8789: */
  /* line 8790: */
 OWGACTR.Type = DPAACTR_xdummydec;
  /* line 8791: */
 PWGACTR.Name = NL(BZAACTR_nullid);
  /* line 8792: */
-PWGACTR.Decno = (*(&((&NFFACTR_current)->Lastid)));
-PWGACTR.Level = (*(&((&NFFACTR_current)->Level)));
+PWGACTR.Decno = (*A_NILCHECK((&(A_NILCHECK((&NFFACTR_current))->Lastid))));
+PWGACTR.Level = (*A_NILCHECK((&(A_NILCHECK((&NFFACTR_current))->Level))));
  /* line 8793: */
 PWGACTR.Mode = 0;
  /* line 8794: */
-PWGACTR.Scope = (*(&((&NFFACTR_current)->Lastid)));
+PWGACTR.Scope = (*A_NILCHECK((&(A_NILCHECK((&NFFACTR_current))->Lastid))));
  /* line 8795: */
 PWGACTR.Rest = (A68_67 *)A68_NIL;
 QWGACTR = A_LOC(A68_67 ) ;
-(void)((*QWGACTR) = PWGACTR) ;
+(void)((*A_NILCHECK(QWGACTR)) = PWGACTR) ;
 OWGACTR.Iddec = QWGACTR;
-(void)(A_CALLPROC(NL(Output),(A_UNITE(RWGACTR,mode12,12,OWGACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(RWGACTR,mode12,12,OWGACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(RWGACTR,mode12,12,OWGACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(RWGACTR,mode12,12,OWGACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 8796: */
-SWGACTR = (&((&NFFACTR_current)->Props)) ;
-(void)((*SWGACTR) = (A68_BITS )((*(&((&NFFACTR_current)->Props)))|ULAACTR_decbit));
+SWGACTR = (&(A_NILCHECK((&NFFACTR_current))->Props)) ;
+(void)((*A_NILCHECK(SWGACTR)) = (A68_BITS )((*A_NILCHECK((&(A_NILCHECK((&NFFACTR_current))->Props))))|ULAACTR_decbit));
  /* line 8797: */
  /* line 8798: */
  /* line 8801: */
-(*NL(GBBACTR_lastidchanged)) = A68_TRUE;
+(*A_NILCHECK(NL(GBBACTR_lastidchanged))) = A68_TRUE;
 } 
 break;
 case 67: 
@@ -29024,50 +29024,50 @@ GGFACTR_type = 0;
 GHFACTR_firstaidec = A68_FALSE;
 } 
  /* line 8814: */
-TWGACTR = (&(IGFACTR_id->Mode)) ;
-(void)((*TWGACTR) = A_CALLPROC(NL(JGCACTR_deflex),((*(&(IGFACTR_id->Mode)))),((*(&(IGFACTR_id->Mode))),(NL(JGCACTR_deflex)).nonlocals)));
+TWGACTR = (&(A_NILCHECK(IGFACTR_id)->Mode)) ;
+(void)((*A_NILCHECK(TWGACTR)) = A_CALLPROC(NL(JGCACTR_deflex),((*A_NILCHECK((&(A_NILCHECK(IGFACTR_id)->Mode))))),((*A_NILCHECK((&(A_NILCHECK(IGFACTR_id)->Mode)))),(NL(JGCACTR_deflex)).nonlocals)));
  /* line 8815: */
-UWGACTR = (&((&NFFACTR_current)->Props)) ;
-(void)((*UWGACTR) = (A68_BITS )((*(&((&NFFACTR_current)->Props)))|ULAACTR_decbit));
+UWGACTR = (&(A_NILCHECK((&NFFACTR_current))->Props)) ;
+(void)((*A_NILCHECK(UWGACTR)) = (A68_BITS )((*A_NILCHECK((&(A_NILCHECK((&NFFACTR_current))->Props))))|ULAACTR_decbit));
  /* line 8816: */
-VWGACTR = (&((&NFFACTR_current)->Lastid)) ;
-(*VWGACTR)-=1;
+VWGACTR = (&(A_NILCHECK((&NFFACTR_current))->Lastid)) ;
+(*A_NILCHECK(VWGACTR))-=1;
  /* line 8817: */
  /* line 8818: */
-if ((*NL(MFBACTR_t1))!=92)
+if ((*A_NILCHECK(NL(MFBACTR_t1)))!=92)
 { 
-A_CALLPROC(YTFACTR_uc,((*(&(IGFACTR_id->Mode))), &WWGACTR),((*(&(IGFACTR_id->Mode))), &WWGACTR,(YTFACTR_uc).nonlocals));
+A_CALLPROC(YTFACTR_uc,((*A_NILCHECK((&(A_NILCHECK(IGFACTR_id)->Mode)))), &WWGACTR),((*A_NILCHECK((&(A_NILCHECK(IGFACTR_id)->Mode)))), &WWGACTR,(YTFACTR_uc).nonlocals));
 RGFACTR_v = WWGACTR;
  /* line 8819: */
-XWGACTR = (&((&NFFACTR_current)->Lastid)) ;
-(void)((*XWGACTR) = (*(&(IGFACTR_id->Decno))));
+XWGACTR = (&(A_NILCHECK((&NFFACTR_current))->Lastid)) ;
+(void)((*A_NILCHECK(XWGACTR)) = (*A_NILCHECK((&(A_NILCHECK(IGFACTR_id)->Decno)))));
  /* line 8820: */
 YWGACTR.Type = WOAACTR_xiddec;
 YWGACTR.Iddec = IGFACTR_id;
  /* line 8821: */
-(void)(A_CALLPROC(NL(Output),(A_UNITE(ZWGACTR,mode12,12,YWGACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(ZWGACTR,mode12,12,YWGACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(ZWGACTR,mode12,12,YWGACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(ZWGACTR,mode12,12,YWGACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
 } 
  /* line 8822: */
  /* line 8823: */
  /* line 8826: */
-(*MGFACTR_rid) = IGFACTR_id;
+(*A_NILCHECK(MGFACTR_rid)) = IGFACTR_id;
 } 
 break;
 case 68: 
 { 
-AXGACTR = (&(IGFACTR_id->Scope)) ;
-(*AXGACTR) = 0;
+AXGACTR = (&(A_NILCHECK(IGFACTR_id)->Scope)) ;
+(*A_NILCHECK(AXGACTR)) = 0;
  /* line 8827: */
  /* line 8828: */
  /* line 8831: */
-BXGACTR = (&(IGFACTR_id->Decno)) ;
-(void)((*BXGACTR) = (-(*NL(HTAACTR_iv))));
+BXGACTR = (&(A_NILCHECK(IGFACTR_id)->Decno)) ;
+(void)((*A_NILCHECK(BXGACTR)) = (-(*A_NILCHECK(NL(HTAACTR_iv)))));
 } 
 break;
 case 69: 
 { 
-CXGACTR = (&((&NFFACTR_current)->Props)) ;
-(void)((*CXGACTR) = (A68_BITS )((A68_BITS )((*(&((&NFFACTR_current)->Props)))|ULAACTR_decbit)|VLAACTR_vardecbit));
+CXGACTR = (&(A_NILCHECK((&NFFACTR_current))->Props)) ;
+(void)((*A_NILCHECK(CXGACTR)) = (A68_BITS )((A68_BITS )((*A_NILCHECK((&(A_NILCHECK((&NFFACTR_current))->Props))))|ULAACTR_decbit)|VLAACTR_vardecbit));
  /* line 8832: */
  /* line 8833: */
 if (GHFACTR_firstaidec)
@@ -29083,20 +29083,20 @@ if (GGFACTR_type==1)
 GHFACTR_firstaidec = A68_FALSE;
 } 
  /* line 8839: */
-DXGACTR = (&(IGFACTR_id->Mode)) ;
-(*DXGACTR)+=KQAACTR_refmark;
+DXGACTR = (&(A_NILCHECK(IGFACTR_id)->Mode)) ;
+(*A_NILCHECK(DXGACTR))+=KQAACTR_refmark;
  /* line 8840: */
  /* line 8841: */
-EXGACTR = ((CGFACTR_i = ((((*(&((&OGFACTR_scam)->Modeproc)))!=0))+1))==1);
+EXGACTR = ((CGFACTR_i = ((((*A_NILCHECK((&(A_NILCHECK((&OGFACTR_scam))->Modeproc))))!=0))+1))==1);
 if ( EXGACTR )
 {EXGACTR = ZGFACTR_heap;
 }
 if (EXGACTR)
 { 
-FXGACTR.Mode = (*(&(IGFACTR_id->Mode)));
+FXGACTR.Mode = (*A_NILCHECK((&(A_NILCHECK(IGFACTR_id)->Mode))));
 FXGACTR.Loc = A68_FALSE;
  /* line 8842: */
-(void)(A_CALLPROC(NL(Output),(A_UNITE(GXGACTR,mode6,6,FXGACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(GXGACTR,mode6,6,FXGACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(GXGACTR,mode6,6,FXGACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(GXGACTR,mode6,6,FXGACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
 } 
  /* line 8843: */
  /* line 8844: */
@@ -29105,33 +29105,33 @@ if (CGFACTR_i!=1)
 (void)(A_CALLPROC(NL(YNDACTR_loadmodeproc),((&OGFACTR_scam)),((&OGFACTR_scam),(NL(YNDACTR_loadmodeproc)).nonlocals)));
  /* line 8845: */
 IXGACTR = (!ZGFACTR_heap) ;
-(void)(A_CALLPROC(NL(Output),(A_UNITE(HXGACTR,mode2,2,IXGACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(HXGACTR,mode2,2,IXGACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(HXGACTR,mode2,2,IXGACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(HXGACTR,mode2,2,IXGACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 8846: */
 JXGACTR.Fn = HMAACTR_xparampack;
-JXGACTR.M = A_CALLPROC(NL(ZICACTR_mproc),((*(&((&OGFACTR_scam)->Mode)))),((*(&((&OGFACTR_scam)->Mode))),(NL(ZICACTR_mproc)).nonlocals));
+JXGACTR.M = A_CALLPROC(NL(ZICACTR_mproc),((*A_NILCHECK((&(A_NILCHECK((&OGFACTR_scam))->Mode))))),((*A_NILCHECK((&(A_NILCHECK((&OGFACTR_scam))->Mode)))),(NL(ZICACTR_mproc)).nonlocals));
 JXGACTR.Param = 1;
-(void)(A_CALLPROC(NL(Output),(A_UNITE(KXGACTR,mode14,14,JXGACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(KXGACTR,mode14,14,JXGACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(KXGACTR,mode14,14,JXGACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(KXGACTR,mode14,14,JXGACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 8847: */
 LXGACTR.Fn = AOAACTR_xcall;
-LXGACTR.M = (*(&((&OGFACTR_scam)->Mode)));
+LXGACTR.M = (*A_NILCHECK((&(A_NILCHECK((&OGFACTR_scam))->Mode))));
 LXGACTR.Param = (1+(ZGFACTR_heap));
-(void)(A_CALLPROC(NL(Output),(A_UNITE(MXGACTR,mode14,14,LXGACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(MXGACTR,mode14,14,LXGACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(MXGACTR,mode14,14,LXGACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(MXGACTR,mode14,14,LXGACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 8848: */
  /* line 8849: */
 if (ZGFACTR_heap)
 { 
 NXGACTR.Fn = GMAACTR_xstatgrab;
-NXGACTR.M = (*(&(IGFACTR_id->Mode)));
+NXGACTR.M = (*A_NILCHECK((&(A_NILCHECK(IGFACTR_id)->Mode))));
 NXGACTR.Param = 0;
  /* line 8851: */
-(void)(A_CALLPROC(NL(Output),(A_UNITE(OXGACTR,mode14,14,NXGACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(OXGACTR,mode14,14,NXGACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(OXGACTR,mode14,14,NXGACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(OXGACTR,mode14,14,NXGACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
 } 
 else
 { 
  /* line 8852: */
  /* line 8853: */
-PXGACTR = (&((&NFFACTR_current)->Props)) ;
-(void)((*PXGACTR) = (A68_BITS )((*(&((&NFFACTR_current)->Props)))|FMAACTR_locdydecbit));
+PXGACTR = (&(A_NILCHECK((&NFFACTR_current))->Props)) ;
+(void)((*A_NILCHECK(PXGACTR)) = (A68_BITS )((*A_NILCHECK((&(A_NILCHECK((&NFFACTR_current))->Props))))|FMAACTR_locdydecbit));
 } 
 } 
  /* line 8855: */
@@ -29156,17 +29156,17 @@ else
 RXGACTR.Type = APAACTR_xivardec;
 } 
 RXGACTR.Iddec = IGFACTR_id;
-(void)(A_CALLPROC(NL(Output),(A_UNITE(SXGACTR,mode12,12,RXGACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(SXGACTR,mode12,12,RXGACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(SXGACTR,mode12,12,RXGACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(SXGACTR,mode12,12,RXGACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 8861: */
  /* line 8862: */
-if ((*NL(MFBACTR_t1))!=11)
+if ((*A_NILCHECK(NL(MFBACTR_t1)))!=11)
 { 
 TXGACTR.Fn = UNAACTR_xsemi;
 TXGACTR.M = 0;
 TXGACTR.Props = ZLAACTR_dontpullbit;
 TXGACTR.Param = 0;
  /* line 8863: */
-(void)(A_CALLPROC(NL(Output),(A_UNITE(UXGACTR,mode17,17,TXGACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(UXGACTR,mode17,17,TXGACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(UXGACTR,mode17,17,TXGACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(UXGACTR,mode17,17,TXGACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
 } 
  /* line 8864: */
  /* line 8865: */
@@ -29181,65 +29181,65 @@ case 70:
  /* line 8870: */
 if (CGFACTR_i!=1)
 { 
-WXGACTR = (*(&(IGFACTR_id->Decno))) ;
-(void)(A_CALLPROC(NL(Output),(A_UNITE(VXGACTR,mode3,3,WXGACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(VXGACTR,mode3,3,WXGACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+WXGACTR = (*A_NILCHECK((&(A_NILCHECK(IGFACTR_id)->Decno)))) ;
+(void)(A_CALLPROC(NL(Output),(A_UNITE(VXGACTR,mode3,3,WXGACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(VXGACTR,mode3,3,WXGACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 8871: */
  /* line 8872: */
-XXGACTR = A_CALLPROC(NL(ZFCACTR_assmarker),((*(&((&OGFACTR_scam)->Mode)))),((*(&((&OGFACTR_scam)->Mode))),(NL(ZFCACTR_assmarker)).nonlocals)) ;
+XXGACTR = A_CALLPROC(NL(ZFCACTR_assmarker),((*A_NILCHECK((&(A_NILCHECK((&OGFACTR_scam))->Mode))))),((*A_NILCHECK((&(A_NILCHECK((&OGFACTR_scam))->Mode)))),(NL(ZFCACTR_assmarker)).nonlocals)) ;
 if (A_ABS(XXGACTR)<=2)
 { 
  /* line 8873: */
  /* line 8874: */
-(void)(A_CALLPROC(NL(Output),(A_UNITE(YXGACTR,mode16,16,EPAACTR_xwass), (*NL(FZAACTR_outlevel))),(A_UNITE(YXGACTR,mode16,16,EPAACTR_xwass), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(YXGACTR,mode16,16,EPAACTR_xwass), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(YXGACTR,mode16,16,EPAACTR_xwass), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
 } 
 } 
 else
 { 
  /* line 8875: */
-ZXGACTR = (&((&NFFACTR_current)->Lastid)) ;
-(*ZXGACTR)-=1;
+ZXGACTR = (&(A_NILCHECK((&NFFACTR_current))->Lastid)) ;
+(*A_NILCHECK(ZXGACTR))-=1;
 } 
  /* line 8876: */
-A_CALLPROC(YTFACTR_uc,(A_CALLPROC(NL(JGCACTR_deflex),((*(&((&OGFACTR_scam)->Mode)))),((*(&((&OGFACTR_scam)->Mode))),(NL(JGCACTR_deflex)).nonlocals)), &AYGACTR),(A_CALLPROC(NL(JGCACTR_deflex),((*(&((&OGFACTR_scam)->Mode)))),((*(&((&OGFACTR_scam)->Mode))),(NL(JGCACTR_deflex)).nonlocals)), &AYGACTR,(YTFACTR_uc).nonlocals));
+A_CALLPROC(YTFACTR_uc,(A_CALLPROC(NL(JGCACTR_deflex),((*A_NILCHECK((&(A_NILCHECK((&OGFACTR_scam))->Mode))))),((*A_NILCHECK((&(A_NILCHECK((&OGFACTR_scam))->Mode)))),(NL(JGCACTR_deflex)).nonlocals)), &AYGACTR),(A_CALLPROC(NL(JGCACTR_deflex),((*A_NILCHECK((&(A_NILCHECK((&OGFACTR_scam))->Mode))))),((*A_NILCHECK((&(A_NILCHECK((&OGFACTR_scam))->Mode)))),(NL(JGCACTR_deflex)).nonlocals)), &AYGACTR,(YTFACTR_uc).nonlocals));
 ;
  /* line 8877: */
  /* line 8878: */
 if (CGFACTR_i!=1)
 { 
-(void)(A_CALLPROC(NL(VCEACTR_assign),((*(&((&OGFACTR_scam)->Mode)))),((*(&((&OGFACTR_scam)->Mode))),(NL(VCEACTR_assign)).nonlocals)));
+(void)(A_CALLPROC(NL(VCEACTR_assign),((*A_NILCHECK((&(A_NILCHECK((&OGFACTR_scam))->Mode))))),((*A_NILCHECK((&(A_NILCHECK((&OGFACTR_scam))->Mode)))),(NL(VCEACTR_assign)).nonlocals)));
  /* line 8879: */
 BYGACTR.Fn = BOAACTR_xvoid;
 BYGACTR.M = YKAACTR_voidmode;
 BYGACTR.Param = 0;
-(void)(A_CALLPROC(NL(Output),(A_UNITE(CYGACTR,mode14,14,BYGACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(CYGACTR,mode14,14,BYGACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(CYGACTR,mode14,14,BYGACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(CYGACTR,mode14,14,BYGACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 8880: */
 DYGACTR.Fn = UNAACTR_xsemi;
 DYGACTR.M = 0;
-DYGACTR.Props = (*(&((&NFFACTR_current)->Dybits)));
+DYGACTR.Props = (*A_NILCHECK((&(A_NILCHECK((&NFFACTR_current))->Dybits))));
 DYGACTR.Param = 0;
-(void)(A_CALLPROC(NL(Output),(A_UNITE(EYGACTR,mode17,17,DYGACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(EYGACTR,mode17,17,DYGACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(EYGACTR,mode17,17,DYGACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(EYGACTR,mode17,17,DYGACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 8881: */
-FYGACTR = (&((&NFFACTR_current)->Props)) ;
-(void)((*FYGACTR) = (A68_BITS )((*(&((&NFFACTR_current)->Props)))|(*(&((&NFFACTR_current)->Dybits)))));
+FYGACTR = (&(A_NILCHECK((&NFFACTR_current))->Props)) ;
+(void)((*A_NILCHECK(FYGACTR)) = (A68_BITS )((*A_NILCHECK((&(A_NILCHECK((&NFFACTR_current))->Props))))|(*A_NILCHECK((&(A_NILCHECK((&NFFACTR_current))->Dybits))))));
  /* line 8882: */
  /* line 8883: */
-GYGACTR = (&((&NFFACTR_current)->Dybits)) ;
-(*GYGACTR) = MQAACTR_z;
+GYGACTR = (&(A_NILCHECK((&NFFACTR_current))->Dybits)) ;
+(*A_NILCHECK(GYGACTR)) = MQAACTR_z;
 } 
 else
 { 
-HYGACTR = (&((&NFFACTR_current)->Lastid)) ;
-(*HYGACTR)+=1;
+HYGACTR = (&(A_NILCHECK((&NFFACTR_current))->Lastid)) ;
+(*A_NILCHECK(HYGACTR))+=1;
  /* line 8884: */
 IYGACTR.Type = APAACTR_xivardec;
 IYGACTR.Iddec = IGFACTR_id;
  /* line 8885: */
-(void)(A_CALLPROC(NL(Output),(A_UNITE(JYGACTR,mode12,12,IYGACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(JYGACTR,mode12,12,IYGACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(JYGACTR,mode12,12,IYGACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(JYGACTR,mode12,12,IYGACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
 } 
  /* line 8886: */
 KYGACTR = (CGFACTR_i==3);
 if ( KYGACTR )
-{KYGACTR = ((*NL(MFBACTR_t1))!=11);
+{KYGACTR = ((*A_NILCHECK(NL(MFBACTR_t1)))!=11);
 }
 if (KYGACTR)
 { 
@@ -29248,7 +29248,7 @@ ZGFACTR_heap = A68_TRUE;
  /* line 8887: */
  /* line 8888: */
  /* line 8891: */
-(*MGFACTR_rid) = IGFACTR_id;
+(*A_NILCHECK(MGFACTR_rid)) = IGFACTR_id;
 } 
 break;
 case 71: 
@@ -29259,14 +29259,14 @@ if (CGFACTR_i==1)
 LYGACTR.Type = XOAACTR_xvardec;
 LYGACTR.Iddec = IGFACTR_id;
  /* line 8893: */
-(void)(A_CALLPROC(NL(Output),(A_UNITE(MYGACTR,mode12,12,LYGACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(MYGACTR,mode12,12,LYGACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(MYGACTR,mode12,12,LYGACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(MYGACTR,mode12,12,LYGACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
 } 
 else
 { 
 NYGACTR = (CGFACTR_i==3);
 if ( NYGACTR )
 { /* line 8894: */
-NYGACTR = ((*NL(MFBACTR_t1))!=11);
+NYGACTR = ((*A_NILCHECK(NL(MFBACTR_t1)))!=11);
 }
 if (NYGACTR)
 { 
@@ -29277,110 +29277,110 @@ ZGFACTR_heap = A68_TRUE;
  /* line 8896: */
  /* line 8897: */
  /* line 8900: */
-(*MGFACTR_rid) = IGFACTR_id;
+(*A_NILCHECK(MGFACTR_rid)) = IGFACTR_id;
 } 
 break;
 case 72: 
  /* line 8901: */
-OYGACTR = (*(&((&NFFACTR_current)->Props))) ;
+OYGACTR = (*A_NILCHECK((&(A_NILCHECK((&NFFACTR_current))->Props)))) ;
 if (A_LB_GE(OYGACTR,YLAACTR_labbit))
 { 
 (void)(A_CALLPROC(NL(QJBACTR_fault),(176),(176,(NL(QJBACTR_fault)).nonlocals)));
  /* line 8903: */
  /* line 8904: */
  /* line 8907: */
-PYGACTR = (&((&NFFACTR_current)->Props)) ;
-(void)((*PYGACTR) = (A68_BITS )((*(&((&NFFACTR_current)->Props)))&~YLAACTR_labbit));
+PYGACTR = (&(A_NILCHECK((&NFFACTR_current))->Props)) ;
+(void)((*A_NILCHECK(PYGACTR)) = (A68_BITS )((*A_NILCHECK((&(A_NILCHECK((&NFFACTR_current))->Props))))&~YLAACTR_labbit));
 } 
 break;
 case 73: 
 { 
-QYGACTR = (&((&FHFACTR_xcharpos)->Charpos)) ;
-(void)((*QYGACTR) = (*NL(LSAACTR_tind)));
+QYGACTR = (&(A_NILCHECK((&FHFACTR_xcharpos))->Charpos)) ;
+(void)((*A_NILCHECK(QYGACTR)) = (*A_NILCHECK(NL(LSAACTR_tind))));
  /* line 8908: */
-(void)(A_CALLPROC(NL(Output),(A_UNITE(RYGACTR,mode15,15,FHFACTR_xcharpos), (*NL(FZAACTR_outlevel))),(A_UNITE(RYGACTR,mode15,15,FHFACTR_xcharpos), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(RYGACTR,mode15,15,FHFACTR_xcharpos), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(RYGACTR,mode15,15,FHFACTR_xcharpos), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 8909: */
-(void)(DHFACTR_lab = (*(&((&NFFACTR_current)->Labs))));
+(void)(DHFACTR_lab = (*A_NILCHECK((&(A_NILCHECK((&NFFACTR_current))->Labs)))));
  /* line 8910: */
 for ( ;; )
 { 
 SYGACTR = (DHFACTR_lab!=XQAACTR_nillab);
 if ( SYGACTR )
 { /* line 8911: */
-UYGACTR = (*(&(DHFACTR_lab->Name))) ;
-SYGACTR = A_VC_NE(A_HISVEC(TYGACTR,UYGACTR,32,A68_CHAR ),A_HISVEC(VYGACTR,(*NL(PSAACTR_ident)),32,A68_CHAR ));
+UYGACTR = (*A_NILCHECK((&(A_NILCHECK(DHFACTR_lab)->Name)))) ;
+SYGACTR = A_VC_NE(A_HISVEC(TYGACTR,UYGACTR,32,A68_CHAR ),A_HISVEC(VYGACTR,(*A_NILCHECK(NL(PSAACTR_ident))),32,A68_CHAR ));
 }
 if ( !(SYGACTR) ) break;
-(void)(DHFACTR_lab = (*(&(DHFACTR_lab->Rest))));
+(void)(DHFACTR_lab = (*A_NILCHECK((&(A_NILCHECK(DHFACTR_lab)->Rest)))));
 }
  /* line 8913: */
  /* line 8914: */
 if (DHFACTR_lab==XQAACTR_nillab)
 { 
  /* line 8915: */
-WYGACTR.Name = (*NL(PSAACTR_ident));
-WYGACTR.Labno = (*NL(DZAACTR_labno))+=1;
+WYGACTR.Name = (*A_NILCHECK(NL(PSAACTR_ident)));
+WYGACTR.Labno = (*A_NILCHECK(NL(DZAACTR_labno)))+=1;
 WYGACTR.Status = 1;
  /* line 8916: */
-WYGACTR.Rest = (*(&((&NFFACTR_current)->Labs)));
+WYGACTR.Rest = (*A_NILCHECK((&(A_NILCHECK((&NFFACTR_current))->Labs))));
 XYGACTR = A_HEAP(A68_69 ) ;
-(void)((*XYGACTR) = WYGACTR) ;
-YYGACTR = (&((&NFFACTR_current)->Labs)) ;
-DHFACTR_lab = (*YYGACTR) = XYGACTR;
+(void)((*A_NILCHECK(XYGACTR)) = WYGACTR) ;
+YYGACTR = (&(A_NILCHECK((&NFFACTR_current))->Labs)) ;
+DHFACTR_lab = (*A_NILCHECK(YYGACTR)) = XYGACTR;
 } 
 else
 { 
  /* line 8917: */
-if ((*(&(DHFACTR_lab->Status)))==0)
+if ((*A_NILCHECK((&(A_NILCHECK(DHFACTR_lab)->Status))))==0)
 { 
  /* line 8919: */
 (void)(A_CALLPROC(NL(PZBACTR_faultp),(177, 0, 0, NL(PSAACTR_ident)),(177, 0, 0, NL(PSAACTR_ident),(NL(PZBACTR_faultp)).nonlocals)));
 } 
 } 
  /* line 8921: */
-ZYGACTR = (*(&((&NFFACTR_current)->Ids))) ;
-(void)(IGFACTR_id = (*(&A_VINDEX(ZYGACTR,(*NL(TSAACTR_idhash))))));
+ZYGACTR = (*A_NILCHECK((&(A_NILCHECK((&NFFACTR_current))->Ids)))) ;
+(void)(IGFACTR_id = (*A_NILCHECK((&A_VINDEX(ZYGACTR,(*A_NILCHECK(NL(TSAACTR_idhash))))))));
  /* line 8922: */
 for ( ;; )
 { 
 AZGACTR = (IGFACTR_id!=TQAACTR_nilid);
 if ( AZGACTR )
 { /* line 8923: */
-AZGACTR = ((*(&(IGFACTR_id->Level)))==(*(&((&NFFACTR_current)->Level))));
+AZGACTR = ((*A_NILCHECK((&(A_NILCHECK(IGFACTR_id)->Level))))==(*A_NILCHECK((&(A_NILCHECK((&NFFACTR_current))->Level)))));
 }
 if ( !(AZGACTR) ) break;
  /* line 8924: */
-DZGACTR = (*(&(IGFACTR_id->Name))) ;
-if (A_VC_EQ(A_HISVEC(BZGACTR,(*NL(PSAACTR_ident)),32,A68_CHAR ),A_HISVEC(CZGACTR,DZGACTR,32,A68_CHAR )))
+DZGACTR = (*A_NILCHECK((&(A_NILCHECK(IGFACTR_id)->Name)))) ;
+if (A_VC_EQ(A_HISVEC(BZGACTR,(*A_NILCHECK(NL(PSAACTR_ident))),32,A68_CHAR ),A_HISVEC(CZGACTR,DZGACTR,32,A68_CHAR )))
 { 
  /* line 8926: */
 (void)(A_CALLPROC(NL(PZBACTR_faultp),(205, 0, 0, NL(PSAACTR_ident)),(205, 0, 0, NL(PSAACTR_ident),(NL(PZBACTR_faultp)).nonlocals)));
 } 
  /* line 8927: */
  /* line 8928: */
-(void)(IGFACTR_id = (*(&(IGFACTR_id->Rest))));
+(void)(IGFACTR_id = (*A_NILCHECK((&(A_NILCHECK(IGFACTR_id)->Rest)))));
 }
  /* line 8930: */
-EZGACTR = (&(DHFACTR_lab->Status)) ;
-(*EZGACTR) = 0;
+EZGACTR = (&(A_NILCHECK(DHFACTR_lab)->Status)) ;
+(*A_NILCHECK(EZGACTR)) = 0;
  /* line 8931: */
-FZGACTR = (&((&NFFACTR_current)->Props)) ;
-(void)((*FZGACTR) = (A68_BITS )((*(&((&NFFACTR_current)->Props)))|YLAACTR_labbit));
+FZGACTR = (&(A_NILCHECK((&NFFACTR_current))->Props)) ;
+(void)((*A_NILCHECK(FZGACTR)) = (A68_BITS )((*A_NILCHECK((&(A_NILCHECK((&NFFACTR_current))->Props))))|YLAACTR_labbit));
  /* line 8932: */
 GZGACTR.Lab = DHFACTR_lab;
 GZGACTR.Notsetting = A68_FALSE;
  /* line 8933: */
  /* line 8936: */
-(void)(A_CALLPROC(NL(Output),(A_UNITE(HZGACTR,mode13,13,GZGACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(HZGACTR,mode13,13,GZGACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(HZGACTR,mode13,13,GZGACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(HZGACTR,mode13,13,GZGACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
 } 
 break;
 case 74: 
  /* line 8938: */
-if ((*NL(MFBACTR_t1))==17)
+if ((*A_NILCHECK(NL(MFBACTR_t1)))==17)
 { 
  /* line 8939: */
  /* line 8940: */
-JZGACTR = IZGACTR_b = (*(&((&((&XGFACTR_vlist)->V))->Props))) ;
+JZGACTR = IZGACTR_b = (*A_NILCHECK((&(A_NILCHECK((&(A_NILCHECK((&XGFACTR_vlist))->V)))->Props)))) ;
 if (A_LB_GE(JZGACTR,YLAACTR_labbit))
 { 
  /* line 8942: */
@@ -29393,13 +29393,13 @@ if ((A68_BITS )(IZGACTR_b&DRAACTR_decprio)!=MQAACTR_z)
  /* line 8946: */
  /* line 8947: */
  /* line 8950: */
-(*NL(MFBACTR_t1)) = 93;
+(*A_NILCHECK(NL(MFBACTR_t1))) = 93;
 } 
 } 
 break;
 case 75: 
 { 
-(void)((*NL(RYAACTR_enqv)) = (*(&((&XGFACTR_vlist)->V))));
+(void)((*A_NILCHECK(NL(RYAACTR_enqv))) = (*A_NILCHECK((&(A_NILCHECK((&XGFACTR_vlist))->V)))));
  /* line 8951: */
 A_CALLPROC(YTFACTR_uc,(0, &LZGACTR),(0, &LZGACTR,(YTFACTR_uc).nonlocals));
 KZGACTR.V = LZGACTR;
@@ -29413,7 +29413,7 @@ break;
 case 76: 
 { 
  /* line 8956: */
-if ((*NL(PYAACTR_formatproc))==0)
+if ((*A_NILCHECK(NL(PYAACTR_formatproc)))==0)
 { 
  /* line 8957: */
 MZGACTR.Mode = ELAACTR_int;
@@ -29421,11 +29421,11 @@ NZGACTR.Mode = CLAACTR_formatmode;
 NZGACTR.Rest = (A68_54 *)A68_NIL;
  /* line 8958: */
 OZGACTR = A_HEAP(A68_54 ) ;
-(void)((*OZGACTR) = NZGACTR) ;
+(void)((*A_NILCHECK(OZGACTR)) = NZGACTR) ;
 MZGACTR.Rest = OZGACTR;
 PZGACTR = A_HEAP(A68_54 ) ;
-(void)((*PZGACTR) = MZGACTR) ;
-(void)((*NL(OYAACTR_formatunion)) = A_CALLPROC(NL(OSBACTR_insertunion),(PZGACTR),(PZGACTR,(NL(OSBACTR_insertunion)).nonlocals)));
+(void)((*A_NILCHECK(PZGACTR)) = MZGACTR) ;
+(void)((*A_NILCHECK(NL(OYAACTR_formatunion))) = A_CALLPROC(NL(OSBACTR_insertunion),(PZGACTR),(PZGACTR,(NL(OSBACTR_insertunion)).nonlocals)));
  /* line 8959: */
  /* line 8960: */
 QZGACTR.Mode = ELAACTR_int;
@@ -29433,26 +29433,26 @@ QZGACTR.Mode = ELAACTR_int;
 QZGACTR.Rest = (A68_54 *)A68_NIL;
  /* line 8962: */
 RZGACTR = A_HEAP(A68_54 ) ;
-(void)((*RZGACTR) = QZGACTR) ;
-(void)((*NL(PYAACTR_formatproc)) = A_CALLPROC(NL(RRBACTR_insertprocp),((*NL(OYAACTR_formatunion)), RZGACTR),((*NL(OYAACTR_formatunion)), RZGACTR,(NL(RRBACTR_insertprocp)).nonlocals)));
+(void)((*A_NILCHECK(RZGACTR)) = QZGACTR) ;
+(void)((*A_NILCHECK(NL(PYAACTR_formatproc))) = A_CALLPROC(NL(RRBACTR_insertprocp),((*A_NILCHECK(NL(OYAACTR_formatunion))), RZGACTR),((*A_NILCHECK(NL(OYAACTR_formatunion))), RZGACTR,(NL(RRBACTR_insertprocp)).nonlocals)));
 } 
  /* line 8963: */
 SZGACTR.Name = NL(AUAACTR_identformat);
 SZGACTR.Props = LLAACTR_ccbit;
  /* line 8964: */
-SZGACTR.Mode = (*NL(PYAACTR_formatproc));
-SZGACTR.Rdenno = (*NL(CZAACTR_lastrd))+=1;
+SZGACTR.Mode = (*A_NILCHECK(NL(PYAACTR_formatproc)));
+SZGACTR.Rdenno = (*A_NILCHECK(NL(CZAACTR_lastrd)))+=1;
  /* line 8965: */
 SZGACTR.Maxname = 0;
  /* line 8967: */
-SZGACTR.Level = (*(&((&NFFACTR_current)->Level)));
-SZGACTR.Rest = (*(&((&NFFACTR_current)->Rd)));
+SZGACTR.Level = (*A_NILCHECK((&(A_NILCHECK((&NFFACTR_current))->Level))));
+SZGACTR.Rest = (*A_NILCHECK((&(A_NILCHECK((&NFFACTR_current))->Rd))));
 TZGACTR = A_LOC(A68_68 ) ;
-(void)((*TZGACTR) = SZGACTR) ;
-UZGACTR = (&((&NFFACTR_current)->Rd)) ;
-(*UZGACTR) = TZGACTR;
+(void)((*A_NILCHECK(TZGACTR)) = SZGACTR) ;
+UZGACTR = (&(A_NILCHECK((&NFFACTR_current))->Rd)) ;
+(*A_NILCHECK(UZGACTR)) = TZGACTR;
  /* line 8968: */
-(void)(CGFACTR_i = (*NL(OYAACTR_formatunion)));
+(void)(CGFACTR_i = (*A_NILCHECK(NL(OYAACTR_formatunion))));
  /* line 8969: */
  /* line 8970: */
  /* line 8973: */
@@ -29465,17 +29465,17 @@ XFFACTR_doint = 0;
  /* line 8974: */
 WFFACTR_dobits = MQAACTR_z;
  /* line 8975: */
-VZGACTR = (&((&NFFACTR_current)->Labs)) ;
-(void)((*VZGACTR) = (*(&(External->Labs))));
+VZGACTR = (&(A_NILCHECK((&NFFACTR_current))->Labs)) ;
+(void)((*A_NILCHECK(VZGACTR)) = (*A_NILCHECK((&(A_NILCHECK(External)->Labs)))));
  /* line 8976: */
-WZGACTR = (&((&FHFACTR_xcharpos)->Charpos)) ;
-(void)((*WZGACTR) = (*NL(LSAACTR_tind)));
+WZGACTR = (&(A_NILCHECK((&FHFACTR_xcharpos))->Charpos)) ;
+(void)((*A_NILCHECK(WZGACTR)) = (*A_NILCHECK(NL(LSAACTR_tind))));
  /* line 8977: */
-(void)(A_CALLPROC(NL(Output),(A_UNITE(XZGACTR,mode15,15,FHFACTR_xcharpos), (*NL(FZAACTR_outlevel))),(A_UNITE(XZGACTR,mode15,15,FHFACTR_xcharpos), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(XZGACTR,mode15,15,FHFACTR_xcharpos), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(XZGACTR,mode15,15,FHFACTR_xcharpos), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 8978: */
  /* line 8979: */
  /* line 8982: */
-(void)(A_CALLPROC(NL(Output),(A_UNITE(YZGACTR,mode16,16,KPAACTR_xwloop), (*NL(FZAACTR_outlevel))),(A_UNITE(YZGACTR,mode16,16,KPAACTR_xwloop), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(YZGACTR,mode16,16,KPAACTR_xwloop), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(YZGACTR,mode16,16,KPAACTR_xwloop), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
 } 
 break;
 case 78: 
@@ -29483,13 +29483,13 @@ case 78:
 A_CALLPROC(NL(GFFACTR_range),((&NFFACTR_current), (A68_67 *)A68_NIL, (A68_110 *)A68_NIL, (A68_BOOL *)A68_NIL, &ZZGACTR),((&NFFACTR_current), (A68_67 *)A68_NIL, (A68_110 *)A68_NIL, (A68_BOOL *)A68_NIL, &ZZGACTR,(NL(GFFACTR_range)).nonlocals));
 XGFACTR_vlist = ZZGACTR;
  /* line 8983: */
-(*NL(FZAACTR_outlevel))-=1;
+(*A_NILCHECK(NL(FZAACTR_outlevel)))-=1;
  /* line 8984: */
  /* line 8985: */
  /* line 8986: */
-if ((*(&((&XGFACTR_vlist)->Rest)))==UQAACTR_nilvl)
+if ((*A_NILCHECK((&(A_NILCHECK((&XGFACTR_vlist))->Rest))))==UQAACTR_nilvl)
 { 
-AAHACTR = (*(&((&XGFACTR_vlist)->V)));
+AAHACTR = (*A_NILCHECK((&(A_NILCHECK((&XGFACTR_vlist))->V))));
 } 
 else
 { 
@@ -29505,26 +29505,26 @@ BAHACTR.Fn = XNAACTR_xdo;
  /* line 8989: */
 BAHACTR.M = YKAACTR_voidmode;
  /* line 8991: */
-BAHACTR.Props = (A68_BITS )((A68_BITS )((*(&((&RGFACTR_v)->Props)))&GRAACTR_notdontpull)|(*(&((&NFFACTR_current)->Dybits))));
+BAHACTR.Props = (A68_BITS )((A68_BITS )((*A_NILCHECK((&(A_NILCHECK((&RGFACTR_v))->Props))))&GRAACTR_notdontpull)|(*A_NILCHECK((&(A_NILCHECK((&NFFACTR_current))->Dybits)))));
 BAHACTR.Param = YKAACTR_voidmode;
-(void)(A_CALLPROC(NL(Output),(A_UNITE(CAHACTR,mode17,17,BAHACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(CAHACTR,mode17,17,BAHACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(CAHACTR,mode17,17,BAHACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(CAHACTR,mode17,17,BAHACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 8992: */
 (void)(A_CALLPROC(NL(RYCACTR_strong),((&RGFACTR_v), YKAACTR_voidmode, A68_TRUE),((&RGFACTR_v), YKAACTR_voidmode, A68_TRUE,(NL(RYCACTR_strong)).nonlocals)));
  /* line 8993: */
 DAHACTR.Fn = UNAACTR_xsemi;
 DAHACTR.M = 0;
-DAHACTR.Props = (*(&((&NFFACTR_current)->Dybits)));
+DAHACTR.Props = (*A_NILCHECK((&(A_NILCHECK((&NFFACTR_current))->Dybits))));
 DAHACTR.Param = 0;
-(void)(A_CALLPROC(NL(Output),(A_UNITE(EAHACTR,mode17,17,DAHACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(EAHACTR,mode17,17,DAHACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(EAHACTR,mode17,17,DAHACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(EAHACTR,mode17,17,DAHACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 8994: */
 FAHACTR.Fn = TNAACTR_xod;
 FAHACTR.M = 0;
 FAHACTR.Props = MQAACTR_z;
 FAHACTR.Param = YKAACTR_voidmode;
-(void)(A_CALLPROC(NL(Output),(A_UNITE(GAHACTR,mode17,17,FAHACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(GAHACTR,mode17,17,FAHACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(GAHACTR,mode17,17,FAHACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(GAHACTR,mode17,17,FAHACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 8995: */
-HAHACTR = (&(External->Labs)) ;
-(void)((*HAHACTR) = (*(&((&NFFACTR_current)->Labs))));
+HAHACTR = (&(A_NILCHECK(External)->Labs)) ;
+(void)((*A_NILCHECK(HAHACTR)) = (*A_NILCHECK((&(A_NILCHECK((&NFFACTR_current))->Labs)))));
  /* line 8996: */
  /* line 8997: */
  /* line 9000: */
@@ -29535,10 +29535,10 @@ case 79:
 { 
 (void)(A_CALLPROC(NL(RYCACTR_strong),((&RGFACTR_v), ALAACTR_bool, A68_TRUE),((&RGFACTR_v), ALAACTR_bool, A68_TRUE,(NL(RYCACTR_strong)).nonlocals)));
  /* line 9001: */
-(void)(A_CALLPROC(NL(Output),(QKAACTR_up, (*NL(FZAACTR_outlevel))),(QKAACTR_up, (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(QKAACTR_up, (*A_NILCHECK(NL(FZAACTR_outlevel)))),(QKAACTR_up, (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 9002: */
  /* line 9003: */
-IAHACTR = (*(&((&NFFACTR_current)->Props))) ;
+IAHACTR = (*A_NILCHECK((&(A_NILCHECK((&NFFACTR_current))->Props)))) ;
 if (A_LB_GE(IAHACTR,YLAACTR_labbit))
 { 
  /* line 9005: */
@@ -29549,13 +29549,13 @@ JAHACTR.Fn = QNAACTR_xwhile;
  /* line 9007: */
 JAHACTR.M = ALAACTR_bool;
  /* line 9009: */
-JAHACTR.Props = (A68_BITS )((*(&((&NFFACTR_current)->Props)))|(*(&((&NFFACTR_current)->Dybits))));
+JAHACTR.Props = (A68_BITS )((*A_NILCHECK((&(A_NILCHECK((&NFFACTR_current))->Props))))|(*A_NILCHECK((&(A_NILCHECK((&NFFACTR_current))->Dybits)))));
 JAHACTR.Param = YKAACTR_voidmode;
-(void)(A_CALLPROC(NL(Output),(A_UNITE(KAHACTR,mode17,17,JAHACTR), ((*NL(FZAACTR_outlevel))-1)),(A_UNITE(KAHACTR,mode17,17,JAHACTR), ((*NL(FZAACTR_outlevel))-1),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(KAHACTR,mode17,17,JAHACTR), ((*A_NILCHECK(NL(FZAACTR_outlevel)))-1)),(A_UNITE(KAHACTR,mode17,17,JAHACTR), ((*A_NILCHECK(NL(FZAACTR_outlevel)))-1),(NL(Output)).nonlocals)));
  /* line 9010: */
  /* line 9011: */
  /* line 9014: */
-(void)(A_CALLPROC(NL(Output),(SKAACTR_down, ((*NL(FZAACTR_outlevel))-1)),(SKAACTR_down, ((*NL(FZAACTR_outlevel))-1),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(SKAACTR_down, ((*A_NILCHECK(NL(FZAACTR_outlevel)))-1)),(SKAACTR_down, ((*A_NILCHECK(NL(FZAACTR_outlevel)))-1),(NL(Output)).nonlocals)));
 } 
 break;
 case 80: 
@@ -29564,38 +29564,38 @@ LAHACTR.Rid = MGFACTR_rid;
 LAHACTR.Id = IGFACTR_id;
 LAHACTR.Rest = VFFACTR_rididlist;
 MAHACTR = A_LOC(A68_132 ) ;
-(void)((*MAHACTR) = LAHACTR) ;
+(void)((*A_NILCHECK(MAHACTR)) = LAHACTR) ;
 VFFACTR_rididlist = MAHACTR;
  /* line 9015: */
 XFFACTR_doint+=1;
  /* line 9016: */
-NAHACTR = (&((&NFFACTR_current)->Lastid)) ;
-(*NAHACTR)-=XFFACTR_doint;
+NAHACTR = (&(A_NILCHECK((&NFFACTR_current))->Lastid)) ;
+(*A_NILCHECK(NAHACTR))-=XFFACTR_doint;
  /* line 9017: */
 A_CALLPROC(YTFACTR_uc,(0, &OAHACTR),(0, &OAHACTR,(YTFACTR_uc).nonlocals));
 RGFACTR_v = OAHACTR;
  /* line 9018: */
-PAHACTR = (&((&NFFACTR_current)->Lastid)) ;
-(*PAHACTR)+=XFFACTR_doint;
+PAHACTR = (&(A_NILCHECK((&NFFACTR_current))->Lastid)) ;
+(*A_NILCHECK(PAHACTR))+=XFFACTR_doint;
  /* line 9019: */
-(void)(CGFACTR_i = (A68_INT )(A68_BITS )((A68_BITS )(DGFACTR_j = (*(&((&RGFACTR_v)->Mode))))&(A68_BITS )KQAACTR_refmark));
+(void)(CGFACTR_i = (A68_INT )(A68_BITS )((A68_BITS )(DGFACTR_j = (*A_NILCHECK((&(A_NILCHECK((&RGFACTR_v))->Mode)))))&(A68_BITS )KQAACTR_refmark));
  /* line 9020: */
  /* line 9021: */
 QAHACTR = (DGFACTR_j-CGFACTR_i) ;
-RAHACTR = (*(&A_VINDEX(NL(KUAACTR_modes),QAHACTR))) ;
+RAHACTR = (*A_NILCHECK((&A_VINDEX(NL(KUAACTR_modes),QAHACTR)))) ;
 switch ( RAHACTR.mode )
 { 
 case 7: /* REF STRUCT(INT,INT,INT)  */
 SAHACTR_rv = (RAHACTR.data.mode7);
  /* line 9022: */
  /* line 9023: */
-(void)(CGFACTR_i = ((*(&(SAHACTR_rv->Vecmode)))+CGFACTR_i));
+(void)(CGFACTR_i = ((*A_NILCHECK((&(A_NILCHECK(SAHACTR_rv)->Vecmode))))+CGFACTR_i));
 break;
 case 8: /* REF STRUCT(INT,INT,INT,INT)  */
 TAHACTR_ra = (RAHACTR.data.mode8);
  /* line 9024: */
  /* line 9025: */
-(void)(CGFACTR_i = ((*(&(TAHACTR_ra->Mode)))+CGFACTR_i));
+(void)(CGFACTR_i = ((*A_NILCHECK((&(A_NILCHECK(TAHACTR_ra)->Mode))))+CGFACTR_i));
 break;
 default: 
 (void)(A_CALLPROC(NL(PZBACTR_faultp),(179, DGFACTR_j, 0, (A68_31 *)A68_NIL),(179, DGFACTR_j, 0, (A68_31 *)A68_NIL,(NL(PZBACTR_faultp)).nonlocals)));
@@ -29607,8 +29607,8 @@ break;
  /* line 9029: */
  /* line 9030: */
  /* line 9033: */
-UAHACTR = (&(IGFACTR_id->Mode)) ;
-(*UAHACTR) = CGFACTR_i;
+UAHACTR = (&(A_NILCHECK(IGFACTR_id)->Mode)) ;
+(*A_NILCHECK(UAHACTR)) = CGFACTR_i;
 } 
 break;
 case 81: 
@@ -29617,7 +29617,7 @@ VAHACTR.Fn = SNAACTR_xforall;
 VAHACTR.M = 0;
 VAHACTR.Props = MQAACTR_z;
 VAHACTR.Param = XFFACTR_doint;
-(void)(A_CALLPROC(NL(Output),(A_UNITE(WAHACTR,mode17,17,VAHACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(WAHACTR,mode17,17,VAHACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(WAHACTR,mode17,17,VAHACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(WAHACTR,mode17,17,VAHACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 9034: */
  /* line 9035: */
 XAHACTR = XFFACTR_doint;
@@ -29625,36 +29625,36 @@ for ( YAHACTR = 1;
 YAHACTR <= XAHACTR;
 YAHACTR += 1 )
 { 
-ZAHACTR = (&((*(&(VFFACTR_rididlist->Id)))->Rest)) ;
-(void)((*ZAHACTR) = (*(*(&(VFFACTR_rididlist->Rid)))));
+ZAHACTR = (&(A_NILCHECK((*A_NILCHECK((&(A_NILCHECK(VFFACTR_rididlist)->Id)))))->Rest)) ;
+(void)((*A_NILCHECK(ZAHACTR)) = (*A_NILCHECK((*A_NILCHECK((&(A_NILCHECK(VFFACTR_rididlist)->Rid)))))));
  /* line 9036: */
-ABHACTR = (*(&(VFFACTR_rididlist->Rid))) ;
-(void)((*ABHACTR) = (*(&(VFFACTR_rididlist->Id))));
+ABHACTR = (*A_NILCHECK((&(A_NILCHECK(VFFACTR_rididlist)->Rid)))) ;
+(void)((*A_NILCHECK(ABHACTR)) = (*A_NILCHECK((&(A_NILCHECK(VFFACTR_rididlist)->Id)))));
  /* line 9037: */
 BBHACTR.Type = CPAACTR_xforalldec;
-BBHACTR.Iddec = (*(&(VFFACTR_rididlist->Id)));
-(void)(A_CALLPROC(NL(Output),(A_UNITE(CBHACTR,mode12,12,BBHACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(CBHACTR,mode12,12,BBHACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+BBHACTR.Iddec = (*A_NILCHECK((&(A_NILCHECK(VFFACTR_rididlist)->Id))));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(CBHACTR,mode12,12,BBHACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(CBHACTR,mode12,12,BBHACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 9038: */
  /* line 9039: */
-(void)(VFFACTR_rididlist = (*(&(VFFACTR_rididlist->Rest))));
+(void)(VFFACTR_rididlist = (*A_NILCHECK((&(A_NILCHECK(VFFACTR_rididlist)->Rest)))));
 }
  /* line 9040: */
  /* line 9041: */
  /* line 9044: */
-(*NL(FZAACTR_outlevel))+=1;
+(*A_NILCHECK(NL(FZAACTR_outlevel)))+=1;
 } 
 break;
 case 82: 
 { 
 (void)(WFFACTR_dobits = (A68_BITS )(WFFACTR_dobits|NQAACTR_z1));
  /* line 9045: */
-DBHACTR = (&(IGFACTR_id->Mode)) ;
-(*DBHACTR) = ELAACTR_int;
+DBHACTR = (&(A_NILCHECK(IGFACTR_id)->Mode)) ;
+(*A_NILCHECK(DBHACTR)) = ELAACTR_int;
  /* line 9046: */
  /* line 9047: */
  /* line 9050: */
-EBHACTR = (&((&NFFACTR_current)->Lastid)) ;
-(*EBHACTR)-=1;
+EBHACTR = (&(A_NILCHECK((&NFFACTR_current))->Lastid)) ;
+(*A_NILCHECK(EBHACTR))-=1;
 } 
 break;
 case 83: 
@@ -29699,33 +29699,33 @@ IBHACTR.Fn = PNAACTR_xfor;
 IBHACTR.M = 0;
 IBHACTR.Props = WFFACTR_dobits;
 IBHACTR.Param = XFFACTR_doint;
-(void)(A_CALLPROC(NL(Output),(A_UNITE(JBHACTR,mode17,17,IBHACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(JBHACTR,mode17,17,IBHACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(JBHACTR,mode17,17,IBHACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(JBHACTR,mode17,17,IBHACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 9069: */
  /* line 9070: */
 if (A_LB_GE(WFFACTR_dobits,NQAACTR_z1))
 { 
-(*MGFACTR_rid) = IGFACTR_id;
+(*A_NILCHECK(MGFACTR_rid)) = IGFACTR_id;
  /* line 9071: */
-KBHACTR = (&((&NFFACTR_current)->Lastid)) ;
-(*KBHACTR)+=1;
+KBHACTR = (&(A_NILCHECK((&NFFACTR_current))->Lastid)) ;
+(*A_NILCHECK(KBHACTR))+=1;
  /* line 9072: */
 LBHACTR.Type = ZOAACTR_xfordec;
 LBHACTR.Iddec = IGFACTR_id;
  /* line 9073: */
-(void)(A_CALLPROC(NL(Output),(A_UNITE(MBHACTR,mode12,12,LBHACTR), (*NL(FZAACTR_outlevel))),(A_UNITE(MBHACTR,mode12,12,LBHACTR), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(MBHACTR,mode12,12,LBHACTR), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(MBHACTR,mode12,12,LBHACTR), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
 } 
  /* line 9074: */
  /* line 9075: */
  /* line 9078: */
-(*NL(FZAACTR_outlevel))+=1;
+(*A_NILCHECK(NL(FZAACTR_outlevel)))+=1;
 } 
 break;
 case 87: 
-NBHACTR = ((*NL(MFBACTR_t1))!=11);
+NBHACTR = ((*A_NILCHECK(NL(MFBACTR_t1)))!=11);
 if ( NBHACTR )
-{OBHACTR = (*NL(XZAACTR_burestrict));
+{OBHACTR = (*A_NILCHECK(NL(XZAACTR_burestrict)));
 if ( OBHACTR )
-{OBHACTR = ((*NL(MFBACTR_t1))==13);
+{OBHACTR = ((*A_NILCHECK(NL(MFBACTR_t1)))==13);
 }
  /* line 9079: */
 NBHACTR = (!OBHACTR);
@@ -29743,15 +29743,15 @@ RGFACTR_v = PBHACTR;
 } 
 else
 { 
-QBHACTR = (&((&FHFACTR_xcharpos)->Charpos)) ;
-(void)((*QBHACTR) = (*NL(LSAACTR_tind)));
+QBHACTR = (&(A_NILCHECK((&FHFACTR_xcharpos))->Charpos)) ;
+(void)((*A_NILCHECK(QBHACTR)) = (*A_NILCHECK(NL(LSAACTR_tind))));
  /* line 9083: */
-(void)(A_CALLPROC(NL(Output),(A_UNITE(RBHACTR,mode15,15,FHFACTR_xcharpos), (*NL(FZAACTR_outlevel))),(A_UNITE(RBHACTR,mode15,15,FHFACTR_xcharpos), (*NL(FZAACTR_outlevel)),(NL(Output)).nonlocals)));
+(void)(A_CALLPROC(NL(Output),(A_UNITE(RBHACTR,mode15,15,FHFACTR_xcharpos), (*A_NILCHECK(NL(FZAACTR_outlevel)))),(A_UNITE(RBHACTR,mode15,15,FHFACTR_xcharpos), (*A_NILCHECK(NL(FZAACTR_outlevel))),(NL(Output)).nonlocals)));
  /* line 9084: */
  /* line 9085: */
  /* line 9088: */
-SBHACTR = (&((&NFFACTR_current)->Dybits)) ;
-(void)((*SBHACTR) = (A68_BITS )((*(&((&NFFACTR_current)->Dybits)))|ZLAACTR_dontpullbit));
+SBHACTR = (&(A_NILCHECK((&NFFACTR_current))->Dybits)) ;
+(void)((*A_NILCHECK(SBHACTR)) = (A68_BITS )((*A_NILCHECK((&(A_NILCHECK((&NFFACTR_current))->Dybits))))|ZLAACTR_dontpullbit));
 } 
 break;
 case 88: 
@@ -29765,22 +29765,22 @@ if (GGFACTR_type==2)
  /* line 9092: */
  /* line 9093: */
  /* line 9096: */
-TBHACTR = (&((&OGFACTR_scam)->Mode)) ;
-(void)((*TBHACTR) = A_CALLPROC(NL(JGCACTR_deflex),((*(&((&OGFACTR_scam)->Mode)))),((*(&((&OGFACTR_scam)->Mode))),(NL(JGCACTR_deflex)).nonlocals)));
+TBHACTR = (&(A_NILCHECK((&OGFACTR_scam))->Mode)) ;
+(void)((*A_NILCHECK(TBHACTR)) = A_CALLPROC(NL(JGCACTR_deflex),((*A_NILCHECK((&(A_NILCHECK((&OGFACTR_scam))->Mode))))),((*A_NILCHECK((&(A_NILCHECK((&OGFACTR_scam))->Mode)))),(NL(JGCACTR_deflex)).nonlocals)));
 } 
 break;
 case 89: 
 { 
-(void)(OGFACTR_scam = (*NL(DEBACTR_lkscam)));
+(void)(OGFACTR_scam = (*A_NILCHECK(NL(DEBACTR_lkscam))));
  /* line 9097: */
  /* line 9098: */
  /* line 9101: */
-(void)(GGFACTR_type = (*NL(CEBACTR_lktype)));
+(void)(GGFACTR_type = (*A_NILCHECK(NL(CEBACTR_lktype))));
 } 
 break;
 case 90: 
  /* line 9102: */
-if ((*NL(MDBACTR_cbiop))!=ADBACTR_biequals)
+if ((*A_NILCHECK(NL(MDBACTR_cbiop)))!=ADBACTR_biequals)
 { 
  /* line 9104: */
  /* line 9107: */
@@ -29789,7 +29789,7 @@ if ((*NL(MDBACTR_cbiop))!=ADBACTR_biequals)
 break;
 case 91: 
  /* line 9108: */
-if ((*NL(MFBACTR_t1))==74)
+if ((*A_NILCHECK(NL(MFBACTR_t1)))==74)
 { 
  /* line 9109: */
 (void)(siglongjmp(NL(XRAACTR_endcompile).label,1));
@@ -29800,7 +29800,7 @@ else
  /* line 9111: */
  /* line 9112: */
  /* line 9115: */
-(*NL(ITAACTR_supflts)) = FEBACTR_fltgap;
+(*A_NILCHECK(NL(ITAACTR_supflts))) = FEBACTR_fltgap;
 } 
 break;
 default: 
@@ -29813,13 +29813,13 @@ break;
  /* line 9121: */
 KFFACTR_exitsc: A_UNUSED;
  /* line 9122: */
-if ((*(&((&NFFACTR_current)->Lastid)))>(*NL(GZAACTR_maxident)))
+if ((*A_NILCHECK((&(A_NILCHECK((&NFFACTR_current))->Lastid))))>(*A_NILCHECK(NL(GZAACTR_maxident))))
 { 
  /* line 9123: */
-(void)((*NL(GZAACTR_maxident)) = (*(&((&NFFACTR_current)->Lastid))));
+(void)((*A_NILCHECK(NL(GZAACTR_maxident))) = (*A_NILCHECK((&(A_NILCHECK((&NFFACTR_current))->Lastid)))));
 } 
  /* line 9124: */
-(*NL(QYAACTR_globcurrent)) = External;
+(*A_NILCHECK(NL(QYAACTR_globcurrent))) = External;
  /* line 9125: */
  /* line 9127: */
 UBHACTR = XGFACTR_vlist;
@@ -30256,14 +30256,14 @@ for ( CVAACTR_i = 1;
 CVAACTR_i <= 64;
 CVAACTR_i += 1 )
 { 
-DVAACTR = (*(&((&BVAACTR_globinfo)->Ids))) ;
+DVAACTR = (*A_NILCHECK((&(A_NILCHECK((&BVAACTR_globinfo))->Ids)))) ;
 EVAACTR = (&A_VINDEX(DVAACTR,CVAACTR_i)) ;
-(*EVAACTR) = (A68_67 *)A68_NIL;
+(*A_NILCHECK(EVAACTR)) = (A68_67 *)A68_NIL;
  /* line 696: */
  /* line 697: */
-FVAACTR = (*(&((&BVAACTR_globinfo)->Indics))) ;
+FVAACTR = (*A_NILCHECK((&(A_NILCHECK((&BVAACTR_globinfo))->Indics)))) ;
 GVAACTR = (&A_VINDEX(FVAACTR,CVAACTR_i)) ;
-(*GVAACTR) = (A68_110 *)A68_NIL;
+(*A_NILCHECK(GVAACTR)) = (A68_110 *)A68_NIL;
 }
  /* line 699: */
  /* line 700: */
@@ -30464,17 +30464,17 @@ OABACTR_i <= 64;
 OABACTR_i += 1 )
 { 
 PABACTR = (&A_VINDEX(EABACTR_libids,OABACTR_i)) ;
-(*PABACTR) = (A68_67 *)A68_NIL;
+(*A_NILCHECK(PABACTR)) = (A68_67 *)A68_NIL;
  /* line 746: */
  /* line 747: */
 QABACTR = (&A_VINDEX(MABACTR_libinds,OABACTR_i)) ;
-(*QABACTR) = (A68_110 *)A68_NIL;
+(*A_NILCHECK(QABACTR)) = (A68_110 *)A68_NIL;
 }
  /* line 749: */
 RABACTR_concheck = (A68_112 *)A68_NIL;
  /* line 750: */
-SABACTR = (&((&HZAACTR_xm)->Type)) ;
-(*SABACTR) = 0;
+SABACTR = (&(A_NILCHECK((&HZAACTR_xm))->Type)) ;
+(*A_NILCHECK(SABACTR)) = 0;
  /* line 752: */
  /* line 755: */
  /* line 757: */
@@ -31883,10 +31883,10 @@ WRAACTR_endcompile2: A_UNUSED;
 for ( ;; )
 { 
  /* line 9150: */
-if ( !(((*(&((&BVAACTR_globinfo)->Labs)))!=XQAACTR_nillab)) ) break;
+if ( !(((*A_NILCHECK((&(A_NILCHECK((&BVAACTR_globinfo))->Labs))))!=XQAACTR_nillab)) ) break;
  /* line 9151: */
  /* line 9153: */
-if ((*(&((*(&((&BVAACTR_globinfo)->Labs)))->Status)))==0)
+if ((*A_NILCHECK((&(A_NILCHECK((*A_NILCHECK((&(A_NILCHECK((&BVAACTR_globinfo))->Labs)))))->Status))))==0)
 { 
  /* line 9155: */
 WBHACTR = 194;
@@ -31896,21 +31896,21 @@ else
 WBHACTR = 184;
 } 
  /* line 9156: */
-(void)(A_CALLPROC(PZBACTR_faultp,(WBHACTR, 0, 0, (&((*(&((&BVAACTR_globinfo)->Labs)))->Name))),(WBHACTR, 0, 0, (&((*(&((&BVAACTR_globinfo)->Labs)))->Name)),(PZBACTR_faultp).nonlocals)));
+(void)(A_CALLPROC(PZBACTR_faultp,(WBHACTR, 0, 0, (&(A_NILCHECK((*A_NILCHECK((&(A_NILCHECK((&BVAACTR_globinfo))->Labs)))))->Name))),(WBHACTR, 0, 0, (&(A_NILCHECK((*A_NILCHECK((&(A_NILCHECK((&BVAACTR_globinfo))->Labs)))))->Name)),(PZBACTR_faultp).nonlocals)));
  /* line 9157: */
  /* line 9158: */
-XBHACTR = (&((&BVAACTR_globinfo)->Labs)) ;
-(void)((*XBHACTR) = (*(&((*(&((&BVAACTR_globinfo)->Labs)))->Rest))));
+XBHACTR = (&(A_NILCHECK((&BVAACTR_globinfo))->Labs)) ;
+(void)((*A_NILCHECK(XBHACTR)) = (*A_NILCHECK((&(A_NILCHECK((*A_NILCHECK((&(A_NILCHECK((&BVAACTR_globinfo))->Labs)))))->Rest)))));
 }
  /* line 9160: */
 for ( ;; )
 { 
  /* line 9161: */
 if ( !((IZAACTR_prl!=GQAACTR_nilprl)) ) break;
-(void)(A_CALLPROC(PZBACTR_faultp,(185, 0, 0, (&(IZAACTR_prl->Name))),(185, 0, 0, (&(IZAACTR_prl->Name)),(PZBACTR_faultp).nonlocals)));
+(void)(A_CALLPROC(PZBACTR_faultp,(185, 0, 0, (&(A_NILCHECK(IZAACTR_prl)->Name))),(185, 0, 0, (&(A_NILCHECK(IZAACTR_prl)->Name)),(PZBACTR_faultp).nonlocals)));
  /* line 9163: */
  /* line 9164: */
-(void)(IZAACTR_prl = (*(&(IZAACTR_prl->Rest))));
+(void)(IZAACTR_prl = (*A_NILCHECK((&(A_NILCHECK(IZAACTR_prl)->Rest)))));
 }
  /* line 9166: */
  /* line 9167: */
@@ -31942,7 +31942,7 @@ for ( YBHACTR_i = 1;
 YBHACTR_i <= 64;
 YBHACTR_i += 1 )
 { 
-(void)(UYAACTR_ri = (*(&A_VINDEX(EABACTR_libids,YBHACTR_i))));
+(void)(UYAACTR_ri = (*A_NILCHECK((&A_VINDEX(EABACTR_libids,YBHACTR_i)))));
  /* line 9182: */
 for ( ;; )
 { 
@@ -31950,20 +31950,20 @@ for ( ;; )
 if ( !((UYAACTR_ri!=TQAACTR_nilid)) ) break;
 EEBACTR_noflts = 10;
  /* line 9184: */
-ZBHACTR = ((*(&(UYAACTR_ri->Mode)))==ZKAACTR_faultmode);
+ZBHACTR = ((*A_NILCHECK((&(A_NILCHECK(UYAACTR_ri)->Mode))))==ZKAACTR_faultmode);
 if ( ZBHACTR )
 { /* line 9185: */
-ZBHACTR = ((*(&(UYAACTR_ri->Decno)))!=1);
+ZBHACTR = ((*A_NILCHECK((&(A_NILCHECK(UYAACTR_ri)->Decno))))!=1);
 }
  /* line 9186: */
 if (ZBHACTR)
 { 
  /* line 9187: */
-(void)(A_CALLPROC(PZBACTR_faultp,(186, (*(&(UYAACTR_ri->Decno))), 0, (&(UYAACTR_ri->Name))),(186, (*(&(UYAACTR_ri->Decno))), 0, (&(UYAACTR_ri->Name)),(PZBACTR_faultp).nonlocals)));
+(void)(A_CALLPROC(PZBACTR_faultp,(186, (*A_NILCHECK((&(A_NILCHECK(UYAACTR_ri)->Decno)))), 0, (&(A_NILCHECK(UYAACTR_ri)->Name))),(186, (*A_NILCHECK((&(A_NILCHECK(UYAACTR_ri)->Decno)))), 0, (&(A_NILCHECK(UYAACTR_ri)->Name)),(PZBACTR_faultp).nonlocals)));
 } 
  /* line 9188: */
  /* line 9189: */
-(void)(UYAACTR_ri = (*(&(UYAACTR_ri->Rest))));
+(void)(UYAACTR_ri = (*A_NILCHECK((&(A_NILCHECK(UYAACTR_ri)->Rest)))));
 }
  /* line 9190: */
 }
@@ -32013,10 +32013,10 @@ ODAACTR();   /* USE incinstallation */
 BAAACTR();   /* USE incid */
 /* --- Initialise configuration information */
 A_config.source_file = "/home/vak/Project/Algol/Algol-68RS-Source/src/rscompiler.a68";
-A_config.translation_time = "Thu Nov  5 21:38:57 2026";
+A_config.translation_time = "Thu Nov  5 21:56:13 2026";
 A_config.ctrans_version = "Ctrans_34.6";
 A_config.name_seed = "YJAACTR (from seed file) ";
-A_config.spec_change_time = "Thu Nov  5 21:38:57 2026";
+A_config.spec_change_time = "Thu Nov  5 21:56:13 2026";
 A_config.arguments = A_config_arguments;
 A_config.environment = A_config_environment;
 A_config.modinfo_files = A_config_modinfo_files;
@@ -32046,11 +32046,11 @@ LKAACTR_bolddiff = (-32);
  /* line 387: */
  /* line 390: */
  /* line 391: */
-OKAACTR = (&((&MKAACTR_up1)->Up)) ;
-(*OKAACTR) = A68_TRUE;
+OKAACTR = (&(A_NILCHECK((&MKAACTR_up1))->Up)) ;
+(*A_NILCHECK(OKAACTR)) = A68_TRUE;
  /* line 392: */
-PKAACTR = (&((&NKAACTR_down1)->Up)) ;
-(*PKAACTR) = A68_FALSE;
+PKAACTR = (&(A_NILCHECK((&NKAACTR_down1))->Up)) ;
+(*A_NILCHECK(PKAACTR)) = A68_FALSE;
  /* line 393: */
 QKAACTR_up = A_UNITE(RKAACTR,mode1,1,MKAACTR_up1);
 SKAACTR_down = A_UNITE(TKAACTR,mode1,1,NKAACTR_down1);
@@ -32191,36 +32191,36 @@ FMAACTR_locdydecbit = (A68_BITS )131072;
  /* line 520: */
  /* line 524: */
  /* line 525: */
-LPAACTR = (&((&EPAACTR_xwass)->W)) ;
-(*LPAACTR) = 1;
+LPAACTR = (&(A_NILCHECK((&EPAACTR_xwass))->W)) ;
+(*A_NILCHECK(LPAACTR)) = 1;
  /* line 526: */
-MPAACTR = (&((&FPAACTR_xwandth)->W)) ;
-(*MPAACTR) = 2;
+MPAACTR = (&(A_NILCHECK((&FPAACTR_xwandth))->W)) ;
+(*A_NILCHECK(MPAACTR)) = 2;
  /* line 527: */
-NPAACTR = (&((&GPAACTR_xworel)->W)) ;
-(*NPAACTR) = 3;
+NPAACTR = (&(A_NILCHECK((&GPAACTR_xworel))->W)) ;
+(*A_NILCHECK(NPAACTR)) = 3;
  /* line 528: */
-OPAACTR = (&((&HPAACTR_xwindex)->W)) ;
-(*OPAACTR) = 4;
+OPAACTR = (&(A_NILCHECK((&HPAACTR_xwindex))->W)) ;
+(*A_NILCHECK(OPAACTR)) = 4;
  /* line 529: */
-PPAACTR = (&((&IPAACTR_xwplusabetc)->W)) ;
-(*PPAACTR) = 5;
+PPAACTR = (&(A_NILCHECK((&IPAACTR_xwplusabetc))->W)) ;
+(*A_NILCHECK(PPAACTR)) = 5;
  /* line 530: */
-QPAACTR = (&((&JPAACTR_xwforall)->W)) ;
-(*QPAACTR) = 6;
+QPAACTR = (&(A_NILCHECK((&JPAACTR_xwforall))->W)) ;
+(*A_NILCHECK(QPAACTR)) = 6;
  /* line 531: */
-RPAACTR = (&((&KPAACTR_xwloop)->W)) ;
-(*RPAACTR) = 7;
+RPAACTR = (&(A_NILCHECK((&KPAACTR_xwloop))->W)) ;
+(*A_NILCHECK(RPAACTR)) = 7;
  /* line 533: */
  /* line 534: */
-VPAACTR = (&((&SPAACTR_skip)->Nse)) ;
-(*VPAACTR) = VKAACTR_skipmode;
+VPAACTR = (&(A_NILCHECK((&SPAACTR_skip))->Nse)) ;
+(*A_NILCHECK(VPAACTR)) = VKAACTR_skipmode;
  /* line 535: */
-WPAACTR = (&((&TPAACTR_nil)->Nse)) ;
-(*WPAACTR) = WKAACTR_nilmode;
+WPAACTR = (&(A_NILCHECK((&TPAACTR_nil))->Nse)) ;
+(*A_NILCHECK(WPAACTR)) = WKAACTR_nilmode;
  /* line 536: */
-XPAACTR = (&((&UPAACTR_empty)->Nse)) ;
-(*XPAACTR) = 1;
+XPAACTR = (&(A_NILCHECK((&UPAACTR_empty))->Nse)) ;
+(*A_NILCHECK(XPAACTR)) = 1;
  /* line 538: */
 ZPAACTR_generator( A68_TRUE, &DQAACTR );
 CQAACTR_emptystring = DQAACTR;

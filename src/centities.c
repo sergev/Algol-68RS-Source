@@ -274,14 +274,14 @@ CJAACTR_result = DJAACTR;
  /* line 77: */
 EJAACTR = 1 ;
 FJAACTR = (&A_VINDEX(CJAACTR_result,EJAACTR)) ;
-(*FJAACTR) = '(';
+(*A_NILCHECK(FJAACTR)) = '(';
  /* line 78: */
 HJAACTR = A_VTRIM(GJAACTR,(CJAACTR_result),A_VTSCRIPT(&(GJAACTR.upb),(CJAACTR_result).upb,2,(S.upb+1))) ;
 (void)(A_VASSIGN2(S,HJAACTR,A68_CHAR ));
  /* line 79: */
 IJAACTR = CJAACTR_result.upb ;
 JJAACTR = (&A_VINDEX(CJAACTR_result,IJAACTR)) ;
-(*JJAACTR) = ')';
+(*A_NILCHECK(JJAACTR)) = ')';
  /* line 80: */
  /* line 81: */
 VIAACTR = CJAACTR_result;
@@ -353,10 +353,10 @@ BAAALIB();   /* USE a68config */
 ODAACTR();   /* USE incinstallation */
 /* --- Initialise configuration information */
 A_config.source_file = "/home/vak/Project/Algol/Algol-68RS-Source/src/centities.a68";
-A_config.translation_time = "Thu Nov  5 21:38:57 2026";
+A_config.translation_time = "Thu Nov  5 21:56:13 2026";
 A_config.ctrans_version = "Ctrans_34.6";
 A_config.name_seed = "SHAACTR (from seed file) ";
-A_config.spec_change_time = "Thu Nov  5 21:38:57 2026";
+A_config.spec_change_time = "Thu Nov  5 21:56:13 2026";
 A_config.arguments = A_config_arguments;
 A_config.environment = A_config_environment;
 A_config.modinfo_files = A_config_modinfo_files;

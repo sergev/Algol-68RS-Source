@@ -1,0 +1,11 @@
+PROGRAM nilfield CONTEXT VOID
+USE standard
+BEGIN
+   MODE NODE = STRUCT(INT value, REF NODE next);
+   REF NODE list := HEAP NODE := (1, HEAP NODE := (2, NIL));
+   INT sum := 0;
+   # walks one node too far #
+   TO 3 DO sum +:= value OF list; list := next OF list OD;
+   print((sum, newline))
+END
+FINISH

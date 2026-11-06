@@ -1029,11 +1029,11 @@ CZIACTR_value = (BZIACTR.destination);
 EZIACTR.source = Envname ;
 DZIACTR.Env_name = (EZIACTR.destination);
 DZIACTR.Env_value = CZIACTR_value;
-DZIACTR.Next = (*(&((&IYIACTR_config_info)->Environment)));
+DZIACTR.Next = (*A_NILCHECK((&(A_NILCHECK((&IYIACTR_config_info))->Environment))));
 FZIACTR = A_HEAP(A68_156 ) ;
-(void)((*FZIACTR) = DZIACTR) ;
-GZIACTR = (&((&IYIACTR_config_info)->Environment)) ;
-(*GZIACTR) = FZIACTR;
+(void)((*A_NILCHECK(FZIACTR)) = DZIACTR) ;
+GZIACTR = (&(A_NILCHECK((&IYIACTR_config_info))->Environment)) ;
+(*A_NILCHECK(GZIACTR)) = FZIACTR;
  /* line 461: */
  /* line 462: */
 HZIACTR = CZIACTR_value;
@@ -1053,7 +1053,7 @@ A_PROC_ENTRY(pushdir);
 HAJACTR.Dir = Dir;
 HAJACTR.Next = DRIACTR_modinfo_dirlist;
 IAJACTR = A_HEAP(A68_133 ) ;
-(void)((*IAJACTR) = HAJACTR) ;
+(void)((*A_NILCHECK(IAJACTR)) = HAJACTR) ;
 DRIACTR_modinfo_dirlist = IAJACTR;
 A_PROC_EXIT(pushdir);
 return;
@@ -1069,7 +1069,7 @@ A_PROC_ENTRY(pushdir);
 XAJACTR.Dir = Dir;
 XAJACTR.Next = ERIACTR_cfile_dirlist;
 YAJACTR = A_HEAP(A68_133 ) ;
-(void)((*YAJACTR) = XAJACTR) ;
+(void)((*A_NILCHECK(YAJACTR)) = XAJACTR) ;
 ERIACTR_cfile_dirlist = YAJACTR;
 A_PROC_EXIT(pushdir);
 return;
@@ -1102,11 +1102,11 @@ A_PROC_ENTRY(outchars);
 { 
 XVIACTR_u = V.upb;
  /* line 274: */
-ZVIACTR = A_VTRIM(YVIACTR,(NL(MVIACTR_m)),A_VTSCRIPT(&(YVIACTR.upb),(NL(MVIACTR_m)).upb,((*NL(OVIACTR_mind))+1),((*NL(OVIACTR_mind))+XVIACTR_u))) ;
+ZVIACTR = A_VTRIM(YVIACTR,(NL(MVIACTR_m)),A_VTSCRIPT(&(YVIACTR.upb),(NL(MVIACTR_m)).upb,((*A_NILCHECK(NL(OVIACTR_mind)))+1),((*A_NILCHECK(NL(OVIACTR_mind)))+XVIACTR_u))) ;
 (void)(A_VASSIGN2(V,ZVIACTR,A68_CHAR ));
  /* line 275: */
  /* line 276: */
-(*NL(OVIACTR_mind))+=XVIACTR_u;
+(*A_NILCHECK(NL(OVIACTR_mind)))+=XVIACTR_u;
 } 
 A_PROC_EXIT(outchars);
 return;
@@ -1147,7 +1147,7 @@ for ( ;; )
 PYIACTR = (OYIACTR_start>=1);
 if ( PYIACTR )
 { /* line 435: */
-PYIACTR = ((*(&A_VINDEX(XQIACTR_sourcefilename,OYIACTR_start)))!='/');
+PYIACTR = ((*A_NILCHECK((&A_VINDEX(XQIACTR_sourcefilename,OYIACTR_start))))!='/');
 }
  /* line 436: */
 if ( !(PYIACTR) ) break;
@@ -1160,7 +1160,7 @@ if (OYIACTR_start==0)
 OYIACTR_start = 1;
 } 
  /* line 439: */
-if ((*(&A_VINDEX(XQIACTR_sourcefilename,OYIACTR_start)))=='/')
+if ((*A_NILCHECK((&A_VINDEX(XQIACTR_sourcefilename,OYIACTR_start))))=='/')
 { 
 OYIACTR_start+=1;
 } 
@@ -1172,7 +1172,7 @@ for ( ;; )
 RYIACTR = (QYIACTR_end>OYIACTR_start);
 if ( RYIACTR )
 { /* line 443: */
-RYIACTR = ((*(&A_VINDEX(XQIACTR_sourcefilename,QYIACTR_end)))!='.');
+RYIACTR = ((*A_NILCHECK((&A_VINDEX(XQIACTR_sourcefilename,QYIACTR_end))))!='.');
 }
 if ( !(RYIACTR) ) break;
 QYIACTR_end-=1;
@@ -1277,14 +1277,14 @@ for (;XZIACTR-- >= 0;
 ) )
 {
  /* line 481: */
-YZIACTR = ((*WZIACTR_c)>='0');
+YZIACTR = ((*A_NILCHECK(WZIACTR_c))>='0');
 if ( YZIACTR )
-{YZIACTR = ((*WZIACTR_c)<='9');
+{YZIACTR = ((*A_NILCHECK(WZIACTR_c))<='9');
 }
 if ( ! YZIACTR )
-{ZZIACTR = ((*WZIACTR_c)>='A');
+{ZZIACTR = ((*A_NILCHECK(WZIACTR_c))>='A');
 if ( ZZIACTR )
-{ZZIACTR = ((*WZIACTR_c)<='Z');
+{ZZIACTR = ((*A_NILCHECK(WZIACTR_c))<='Z');
 }
 YZIACTR = ZZIACTR;
 }
@@ -1294,15 +1294,15 @@ if (!YZIACTR)
 { 
  /* line 484: */
  /* line 485: */
-(void)(BXIACTR_pterminalerror(282, A_HARR(BAJACTR,A_HVEC(AAJACTR,(*WZIACTR_c),A68_CHAR ),A68_VC )));
+(void)(BXIACTR_pterminalerror(282, A_HARR(BAJACTR,A_HVEC(AAJACTR,(*A_NILCHECK(WZIACTR_c)),A68_CHAR ),A68_VC )));
 } 
 else
 { 
  /* line 486: */
  /* line 487: */
-CAJACTR = (A68_INT)(unsigned char)(*WZIACTR_c) ;
+CAJACTR = (A68_INT)(unsigned char)(*A_NILCHECK(WZIACTR_c)) ;
 DAJACTR = (&A_R1INDEX(KRIACTR_stars,CAJACTR)) ;
-(*DAJACTR) = A68_TRUE;
+(*A_NILCHECK(DAJACTR)) = A68_TRUE;
 } 
 }
  /* line 488: */
@@ -1337,7 +1337,7 @@ RAJACTR += QAJACTR )
  /* line 506: */
  /* line 507: */
  /* line 508: */
-if ((*(&A_VINDEX(MAJACTR_a68_dir,OAJACTR_i)))==':')
+if ((*A_NILCHECK((&A_VINDEX(MAJACTR_a68_dir,OAJACTR_i))))==':')
 { 
 (void)(GAJACTR_pushdir(A_VTRIM(SAJACTR,(MAJACTR_a68_dir),A_VTSCRIPT(&(SAJACTR.upb),(MAJACTR_a68_dir).upb,(OAJACTR_i+1),PAJACTR_end))));
  /* line 509: */
@@ -1382,7 +1382,7 @@ HBJACTR += GBJACTR )
  /* line 533: */
  /* line 534: */
  /* line 535: */
-if ((*(&A_VINDEX(CBJACTR_a68_cdir,EBJACTR_i)))==':')
+if ((*A_NILCHECK((&A_VINDEX(CBJACTR_a68_cdir,EBJACTR_i))))==':')
 { 
 (void)(WAJACTR_pushdir(A_VTRIM(IBJACTR,(CBJACTR_a68_cdir),A_VTSCRIPT(&(IBJACTR.upb),(CBJACTR_a68_cdir).upb,(EBJACTR_i+1),FBJACTR_end))));
  /* line 536: */
@@ -1413,7 +1413,7 @@ PBJACTR.Dir = NBJACTR_libdir;
  /* line 550: */
 PBJACTR.Next = CRIACTR_nil_dirlist;
 QBJACTR = A_HEAP(A68_133 ) ;
-(void)((*QBJACTR) = PBJACTR) ;
+(void)((*A_NILCHECK(QBJACTR)) = PBJACTR) ;
 FRIACTR_library_directory = QBJACTR;
 } 
 } 
@@ -1812,7 +1812,7 @@ else
 { 
 IWIACTR = OVIACTR_mind+=1 ;
 JWIACTR = (&A_VINDEX(MVIACTR_m,IWIACTR)) ;
-(*JWIACTR) = QVIACTR_c;
+(*A_NILCHECK(JWIACTR)) = QVIACTR_c;
  /* line 292: */
  /* line 293: */
  /* line 294: */
@@ -2134,8 +2134,8 @@ SBJACTR_argv = RBJACTR;
  /* line 554: */
 TBJACTR_argc = SBJACTR_argv.upb;
  /* line 557: */
-UBJACTR = (&((&IYIACTR_config_info)->Translationtime)) ;
-(void)((*UBJACTR) = VPBAOSF_get_time());
+UBJACTR = (&(A_NILCHECK((&IYIACTR_config_info))->Translationtime)) ;
+(void)((*A_NILCHECK(UBJACTR)) = VPBAOSF_get_time());
  /* line 558: */
 EPBAOSF_get_working_directory(  &VBJACTR );
 WBJACTR.source = VBJACTR ;
@@ -2338,7 +2338,7 @@ for (;LEJACTR-- >= 0;
 (KEJACTR_b += KRIACTR_stars.dim[0].stride
 ) )
 {
-(*KEJACTR_b) = A68_FALSE;
+(*A_NILCHECK(KEJACTR_b)) = A68_FALSE;
 }
  /* line 626: */
 } 
@@ -2378,7 +2378,7 @@ else
  /* line 636: */
 VEJACTR = (A68_INT)(unsigned char)MEJACTR_c ;
 WEJACTR = (&A_R1INDEX(KRIACTR_stars,VEJACTR)) ;
-(*WEJACTR) = FEJACTR_setting;
+(*A_NILCHECK(WEJACTR)) = FEJACTR_setting;
 } 
 }
  /* line 637: */
@@ -2395,7 +2395,7 @@ AFJACTR.source = A_VINDEX(SBJACTR_argv,YBJACTR_argindex) ;
 ZEJACTR.Dir = (AFJACTR.destination);
 ZEJACTR.Next = DRIACTR_modinfo_dirlist;
 BFJACTR = A_HEAP(A68_133 ) ;
-(void)((*BFJACTR) = ZEJACTR) ;
+(void)((*A_NILCHECK(BFJACTR)) = ZEJACTR) ;
 DRIACTR_modinfo_dirlist = BFJACTR;
  /* line 642: */
  /* line 644: */
@@ -2411,7 +2411,7 @@ FFJACTR.source = A_VINDEX(SBJACTR_argv,YBJACTR_argindex) ;
 EFJACTR.Dir = (FFJACTR.destination);
 EFJACTR.Next = ERIACTR_cfile_dirlist;
 GFJACTR = A_HEAP(A68_133 ) ;
-(void)((*GFJACTR) = EFJACTR) ;
+(void)((*A_NILCHECK(GFJACTR)) = EFJACTR) ;
 ERIACTR_cfile_dirlist = GFJACTR;
  /* line 647: */
  /* line 649: */
@@ -2427,7 +2427,7 @@ KFJACTR.source = A_VINDEX(SBJACTR_argv,YBJACTR_argindex) ;
 JFJACTR.Dir = (KFJACTR.destination);
 JFJACTR.Next = CRIACTR_nil_dirlist;
 LFJACTR = A_HEAP(A68_133 ) ;
-(void)((*LFJACTR) = JFJACTR) ;
+(void)((*A_NILCHECK(LFJACTR)) = JFJACTR) ;
 FRIACTR_library_directory = LFJACTR;
  /* line 652: */
  /* line 654: */
@@ -2840,11 +2840,11 @@ for ( ;; )
  /* line 783: */
 if ( !((FJJACTR_this_dir!=CRIACTR_nil_dirlist)) ) break;
  /* line 784: */
-IJJACTR.source = A_VC_PLUS(A_VC_PLUS((*(&(FJJACTR_this_dir->Dir))),A_HVEC(HJJACTR,'/',A68_CHAR )),Basename) ;
-(void)((*Full_filename) = (IJJACTR.destination));
+IJJACTR.source = A_VC_PLUS(A_VC_PLUS((*A_NILCHECK((&(A_NILCHECK(FJJACTR_this_dir)->Dir)))),A_HVEC(HJJACTR,'/',A68_CHAR )),Basename) ;
+(void)((*A_NILCHECK(Full_filename)) = (IJJACTR.destination));
  /* line 785: */
  /* line 786: */
-(void)(GJJACTR_file = QVBAOSF_open_file((*Full_filename), ATBAOSF_read_access, RIBAOSF_ignore_msg));
+(void)(GJJACTR_file = QVBAOSF_open_file((*A_NILCHECK(Full_filename)), ATBAOSF_read_access, RIBAOSF_ignore_msg));
  /* line 787: */
  /* line 788: */
  /* line 789: */
@@ -2856,7 +2856,7 @@ goto EJJACTR_file_found;
 } 
  /* line 791: */
  /* line 792: */
-(void)(FJJACTR_this_dir = (*(&(FJJACTR_this_dir->Next))));
+(void)(FJJACTR_this_dir = (*A_NILCHECK((&(A_NILCHECK(FJJACTR_this_dir)->Next)))));
 }
  /* line 794: */
  /* line 795: */
@@ -2996,10 +2996,10 @@ CSCAOSF();   /* USE osif */
 BAAAOSF();   /* USE cif */
 /* --- Initialise configuration information */
 A_config.source_file = "/home/vak/Project/Algol/Algol-68RS-Source/src/environment.a68";
-A_config.translation_time = "Thu Nov  5 21:38:57 2026";
+A_config.translation_time = "Thu Nov  5 21:56:13 2026";
 A_config.ctrans_version = "Ctrans_34.6";
 A_config.name_seed = "GPIACTR (from seed file) ";
-A_config.spec_change_time = "Thu Nov  5 21:38:57 2026";
+A_config.spec_change_time = "Thu Nov  5 21:56:13 2026";
 A_config.arguments = A_config_arguments;
 A_config.environment = A_config_environment;
 A_config.modinfo_files = A_config_modinfo_files;
@@ -3089,7 +3089,7 @@ for (;NRIACTR-- >= 0;
 (MRIACTR_star += KRIACTR_stars.dim[0].stride
 ) )
 {
-(*MRIACTR_star) = A68_FALSE;
+(*A_NILCHECK(MRIACTR_star)) = A68_FALSE;
 }
  /* line 129: */
  /* line 132: */

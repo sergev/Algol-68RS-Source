@@ -1,4 +1,4 @@
-/* UNAME:VXQACTR */
+/* UNAME:DYQACTR */
 #include <algol68/Asupport.h>
 
 A_PROCEDURE(A68_INT *,A68t31,(A68_INT *,A68_VC ),(A68_INT *,A68_VC ,void *));
@@ -359,8 +359,8 @@ extern A68_INT  ZCHACTR_tracelevel(A68_VC );
 
 
 /* --- Imports from values --- */
-extern A68_74 * DFQACTR_operand(struct A68t74 *,A68_INT );
-extern A68_VOID  LJQACTR_valuestring(struct A68t74 *,A68_BOOL ,A68_VC *);
+extern A68_74 * LFQACTR_operand(struct A68t74 *,A68_INT );
+extern A68_VOID  TJQACTR_valuestring(struct A68t74 *,A68_BOOL ,A68_VC *);
 /* --- End of imports from values --- */
 
 
@@ -381,56 +381,56 @@ extern void OUPACTR(void);   /* values */
 extern void HPIACTR(void);   /* environment */
 extern void IKAAOSF(void);   /* usefulops */
 /* --- end of DECS initialisation functions --- */
-static A68_115   ZXQACTR = {"$Id: evalbase.a68,v 1.1.1.1 2001-05-07 10:16:10 sian Exp $"}; 
-A_GISVEC(A68_VC ,AYQACTR,ZXQACTR,58)
-A68_97  BYQACTR_evaluate A_UNUSED;
-static A68_117   FYQACTR = {"evalbase"}; 
-A_GISVEC(A68_VC ,GYQACTR,FYQACTR,8)
-static A68_118   HYQACTR = {"EVALBASE - eval1 result : "}; 
-A_GISVEC(A68_VC ,IYQACTR,HYQACTR,26)
-static A68_117   OYQACTR = {"evalbase"}; 
-A_GISVEC(A68_VC ,PYQACTR,OYQACTR,8)
-static A68_120   QYQACTR = {"*eval_pass_left result: "}; 
-A_GISVEC(A68_VC ,RYQACTR,QYQACTR,24)
-static A68_117   XYQACTR = {"evalbase"}; 
-A_GISVEC(A68_VC ,YYQACTR,XYQACTR,8)
-static A68_121   ZYQACTR = {"*eval_pass_right result: "}; 
-A_GISVEC(A68_VC ,AZQACTR,ZYQACTR,25)
-static A68_117   GZQACTR = {"evalbase"}; 
-A_GISVEC(A68_VC ,HZQACTR,GZQACTR,8)
-static A68_65   IZQACTR = {"*eval2 "}; 
-A_GISVEC(A68_VC ,JZQACTR,IZQACTR,7)
-static A68_123   LZQACTR = {"(left) : "}; 
-A_GISVEC(A68_VC ,MZQACTR,LZQACTR,9)
-static A68_123   OZQACTR = {"(right): "}; 
-A_GISVEC(A68_VC ,PZQACTR,OZQACTR,9)
+static A68_115   HYQACTR = {"$Id: evalbase.a68,v 1.1.1.1 2001-05-07 10:16:10 sian Exp $"}; 
+A_GISVEC(A68_VC ,IYQACTR,HYQACTR,58)
+A68_97  JYQACTR_evaluate A_UNUSED;
+static A68_117   NYQACTR = {"evalbase"}; 
+A_GISVEC(A68_VC ,OYQACTR,NYQACTR,8)
+static A68_118   PYQACTR = {"EVALBASE - eval1 result : "}; 
+A_GISVEC(A68_VC ,QYQACTR,PYQACTR,26)
+static A68_117   WYQACTR = {"evalbase"}; 
+A_GISVEC(A68_VC ,XYQACTR,WYQACTR,8)
+static A68_120   YYQACTR = {"*eval_pass_left result: "}; 
+A_GISVEC(A68_VC ,ZYQACTR,YYQACTR,24)
+static A68_117   FZQACTR = {"evalbase"}; 
+A_GISVEC(A68_VC ,GZQACTR,FZQACTR,8)
+static A68_121   HZQACTR = {"*eval_pass_right result: "}; 
+A_GISVEC(A68_VC ,IZQACTR,HZQACTR,25)
+static A68_117   OZQACTR = {"evalbase"}; 
+A_GISVEC(A68_VC ,PZQACTR,OZQACTR,8)
+static A68_65   QZQACTR = {"*eval2 "}; 
+A_GISVEC(A68_VC ,RZQACTR,QZQACTR,7)
+static A68_123   TZQACTR = {"(left) : "}; 
+A_GISVEC(A68_VC ,UZQACTR,TZQACTR,9)
+static A68_123   WZQACTR = {"(right): "}; 
+A_GISVEC(A68_VC ,XZQACTR,WZQACTR,9)
 
-A68_VOID  EYQACTR_eval1(A68_74 * Root, A68_74 ** Op1);
+A68_VOID  MYQACTR_eval1(A68_74 * Root, A68_74 ** Op1);
 
-A68_VOID  NYQACTR_eval_pass_left(A68_74 * Root, A68_74 ** Op, A68_BITS  Info);
+A68_VOID  VYQACTR_eval_pass_left(A68_74 * Root, A68_74 ** Op, A68_BITS  Info);
 
-A68_VOID  WYQACTR_eval_pass_right(A68_74 * Root, A68_74 ** Op, A68_BITS  Info);
+A68_VOID  EZQACTR_eval_pass_right(A68_74 * Root, A68_74 ** Op, A68_BITS  Info);
 
-A68_VOID  FZQACTR_eval2(A68_74 * Root, A68_74 ** Left, A68_74 ** Right);
+A68_VOID  NZQACTR_eval2(A68_74 * Root, A68_74 ** Left, A68_74 ** Right);
 
-A68_VOID  EYQACTR_eval1(A68_74 * Root, A68_74 ** Op1)
+A68_VOID  MYQACTR_eval1(A68_74 * Root, A68_74 ** Op1)
 { 
-A68_VC  JYQACTR;  /* avoid structure result */
+A68_VC  RYQACTR;  /* avoid structure result */
 A_PROC_ENTRY(eval1);
  /* line 48: */
  /* line 49: */
 { 
-(void)((*Op1) = DFQACTR_operand(Root, 1));
+(void)((*A_NILCHECK(Op1)) = LFQACTR_operand(Root, 1));
  /* line 50: */
-(void)(A_CALLPROC(BYQACTR_evaluate,((*Op1)),((*Op1),(BYQACTR_evaluate).nonlocals)));
+(void)(A_CALLPROC(JYQACTR_evaluate,((*A_NILCHECK(Op1))),((*A_NILCHECK(Op1)),(JYQACTR_evaluate).nonlocals)));
  /* line 51: */
  /* line 52: */
-if (ZCHACTR_tracelevel(GYQACTR)!=0)
+if (ZCHACTR_tracelevel(OYQACTR)!=0)
 { 
  /* line 53: */
  /* line 54: */
-LJQACTR_valuestring( (*Op1), A68_FALSE, &JYQACTR );
-(void)(A_CALLPROC(MSIACTR_list,(A_VC_PLUS(IYQACTR,JYQACTR)),(A_VC_PLUS(IYQACTR,JYQACTR),(MSIACTR_list).nonlocals)));
+TJQACTR_valuestring( (*A_NILCHECK(Op1)), A68_FALSE, &RYQACTR );
+(void)(A_CALLPROC(MSIACTR_list,(A_VC_PLUS(QYQACTR,RYQACTR)),(A_VC_PLUS(QYQACTR,RYQACTR),(MSIACTR_list).nonlocals)));
 } 
 } 
 A_PROC_EXIT(eval1);
@@ -438,26 +438,26 @@ return;
 } 
 #undef NL
 
-A68_VOID  NYQACTR_eval_pass_left(A68_74 * Root, A68_74 ** Op, A68_BITS  Info)
+A68_VOID  VYQACTR_eval_pass_left(A68_74 * Root, A68_74 ** Op, A68_BITS  Info)
 { 
-A68_VC  SYQACTR;  /* avoid structure result */
+A68_VC  AZQACTR;  /* avoid structure result */
 A_PROC_ENTRY(eval_pass_left);
  /* line 57: */
  /* line 58: */
 { 
-(void)((*Op) = DFQACTR_operand(Root, 1));
+(void)((*A_NILCHECK(Op)) = LFQACTR_operand(Root, 1));
  /* line 59: */
-(void)(PKAAOSF_orab((&((*Op)->Info)), Info));
+(void)(PKAAOSF_orab((&(A_NILCHECK((*A_NILCHECK(Op)))->Info)), Info));
  /* line 60: */
-(void)(A_CALLPROC(BYQACTR_evaluate,((*Op)),((*Op),(BYQACTR_evaluate).nonlocals)));
+(void)(A_CALLPROC(JYQACTR_evaluate,((*A_NILCHECK(Op))),((*A_NILCHECK(Op)),(JYQACTR_evaluate).nonlocals)));
  /* line 61: */
  /* line 62: */
-if (ZCHACTR_tracelevel(PYQACTR)!=0)
+if (ZCHACTR_tracelevel(XYQACTR)!=0)
 { 
  /* line 63: */
  /* line 64: */
-LJQACTR_valuestring( (*Op), A68_FALSE, &SYQACTR );
-(void)(A_CALLPROC(MSIACTR_list,(A_VC_PLUS(RYQACTR,SYQACTR)),(A_VC_PLUS(RYQACTR,SYQACTR),(MSIACTR_list).nonlocals)));
+TJQACTR_valuestring( (*A_NILCHECK(Op)), A68_FALSE, &AZQACTR );
+(void)(A_CALLPROC(MSIACTR_list,(A_VC_PLUS(ZYQACTR,AZQACTR)),(A_VC_PLUS(ZYQACTR,AZQACTR),(MSIACTR_list).nonlocals)));
 } 
 } 
 A_PROC_EXIT(eval_pass_left);
@@ -465,26 +465,26 @@ return;
 } 
 #undef NL
 
-A68_VOID  WYQACTR_eval_pass_right(A68_74 * Root, A68_74 ** Op, A68_BITS  Info)
+A68_VOID  EZQACTR_eval_pass_right(A68_74 * Root, A68_74 ** Op, A68_BITS  Info)
 { 
-A68_VC  BZQACTR;  /* avoid structure result */
+A68_VC  JZQACTR;  /* avoid structure result */
 A_PROC_ENTRY(eval_pass_right);
  /* line 67: */
  /* line 68: */
 { 
-(void)((*Op) = DFQACTR_operand(Root, 2));
+(void)((*A_NILCHECK(Op)) = LFQACTR_operand(Root, 2));
  /* line 69: */
-(void)(PKAAOSF_orab((&((*Op)->Info)), Info));
+(void)(PKAAOSF_orab((&(A_NILCHECK((*A_NILCHECK(Op)))->Info)), Info));
  /* line 70: */
-(void)(A_CALLPROC(BYQACTR_evaluate,((*Op)),((*Op),(BYQACTR_evaluate).nonlocals)));
+(void)(A_CALLPROC(JYQACTR_evaluate,((*A_NILCHECK(Op))),((*A_NILCHECK(Op)),(JYQACTR_evaluate).nonlocals)));
  /* line 71: */
  /* line 72: */
-if (ZCHACTR_tracelevel(YYQACTR)!=0)
+if (ZCHACTR_tracelevel(GZQACTR)!=0)
 { 
  /* line 73: */
  /* line 74: */
-LJQACTR_valuestring( (*Op), A68_FALSE, &BZQACTR );
-(void)(A_CALLPROC(MSIACTR_list,(A_VC_PLUS(AZQACTR,BZQACTR)),(A_VC_PLUS(AZQACTR,BZQACTR),(MSIACTR_list).nonlocals)));
+TJQACTR_valuestring( (*A_NILCHECK(Op)), A68_FALSE, &JZQACTR );
+(void)(A_CALLPROC(MSIACTR_list,(A_VC_PLUS(IZQACTR,JZQACTR)),(A_VC_PLUS(IZQACTR,JZQACTR),(MSIACTR_list).nonlocals)));
 } 
 } 
 A_PROC_EXIT(eval_pass_right);
@@ -492,35 +492,35 @@ return;
 } 
 #undef NL
 
-A68_VOID  FZQACTR_eval2(A68_74 * Root, A68_74 ** Left, A68_74 ** Right)
+A68_VOID  NZQACTR_eval2(A68_74 * Root, A68_74 ** Left, A68_74 ** Right)
 { 
-A68_VC  KZQACTR_trace A_UNUSED = {0};
-A68_VC  NZQACTR;  /* avoid structure result */
-A68_VC  QZQACTR;  /* avoid structure result */
+A68_VC  SZQACTR_trace A_UNUSED = {0};
+A68_VC  VZQACTR;  /* avoid structure result */
+A68_VC  YZQACTR;  /* avoid structure result */
 A_PROC_ENTRY(eval2);
  /* line 77: */
  /* line 78: */
 { 
-(void)((*Left) = DFQACTR_operand(Root, 1));
+(void)((*A_NILCHECK(Left)) = LFQACTR_operand(Root, 1));
  /* line 79: */
-(void)((*Right) = DFQACTR_operand(Root, 2));
+(void)((*A_NILCHECK(Right)) = LFQACTR_operand(Root, 2));
  /* line 80: */
-(void)(A_CALLPROC(BYQACTR_evaluate,((*Left)),((*Left),(BYQACTR_evaluate).nonlocals)));
+(void)(A_CALLPROC(JYQACTR_evaluate,((*A_NILCHECK(Left))),((*A_NILCHECK(Left)),(JYQACTR_evaluate).nonlocals)));
  /* line 81: */
-(void)(A_CALLPROC(BYQACTR_evaluate,((*Right)),((*Right),(BYQACTR_evaluate).nonlocals)));
+(void)(A_CALLPROC(JYQACTR_evaluate,((*A_NILCHECK(Right))),((*A_NILCHECK(Right)),(JYQACTR_evaluate).nonlocals)));
  /* line 82: */
  /* line 83: */
-if (ZCHACTR_tracelevel(HZQACTR)!=0)
+if (ZCHACTR_tracelevel(PZQACTR)!=0)
 { 
-KZQACTR_trace = JZQACTR;
+SZQACTR_trace = RZQACTR;
  /* line 84: */
-LJQACTR_valuestring( (*Left), A68_FALSE, &NZQACTR );
-(void)(A_CALLPROC(MSIACTR_list,(A_VC_PLUS(A_VC_PLUS(KZQACTR_trace,MZQACTR),NZQACTR)),(A_VC_PLUS(A_VC_PLUS(KZQACTR_trace,MZQACTR),NZQACTR),(MSIACTR_list).nonlocals)));
+TJQACTR_valuestring( (*A_NILCHECK(Left)), A68_FALSE, &VZQACTR );
+(void)(A_CALLPROC(MSIACTR_list,(A_VC_PLUS(A_VC_PLUS(SZQACTR_trace,UZQACTR),VZQACTR)),(A_VC_PLUS(A_VC_PLUS(SZQACTR_trace,UZQACTR),VZQACTR),(MSIACTR_list).nonlocals)));
  /* line 85: */
  /* line 86: */
  /* line 87: */
-LJQACTR_valuestring( (*Right), A68_FALSE, &QZQACTR );
-(void)(A_CALLPROC(MSIACTR_list,(A_VC_PLUS(A_VC_PLUS(KZQACTR_trace,PZQACTR),QZQACTR)),(A_VC_PLUS(A_VC_PLUS(KZQACTR_trace,PZQACTR),QZQACTR),(MSIACTR_list).nonlocals)));
+TJQACTR_valuestring( (*A_NILCHECK(Right)), A68_FALSE, &YZQACTR );
+(void)(A_CALLPROC(MSIACTR_list,(A_VC_PLUS(A_VC_PLUS(SZQACTR_trace,XZQACTR),YZQACTR)),(A_VC_PLUS(A_VC_PLUS(SZQACTR_trace,XZQACTR),YZQACTR),(MSIACTR_list).nonlocals)));
 } 
 } 
 A_PROC_EXIT(eval2);
@@ -531,7 +531,7 @@ return;
  /* line 2: */
  /* line 3: */
  /* line 5: */
-void WXQACTR(void)   /* initialise DECS evalbase */
+void EYQACTR(void)   /* initialise DECS evalbase */
 { 
 static A68_BOOL A_invoked = A68_FALSE;
 
@@ -550,15 +550,15 @@ HPIACTR();   /* USE environment */
 IKAAOSF();   /* USE usefulops */
 /* --- Initialise configuration information */
 A_config.source_file = "/home/vak/Project/Algol/Algol-68RS-Source/src/evalbase.a68";
-A_config.translation_time = "Thu Nov  5 21:38:58 2026";
+A_config.translation_time = "Thu Nov  5 21:56:13 2026";
 A_config.ctrans_version = "Ctrans_34.6";
-A_config.name_seed = "VXQACTR (from seed file) ";
-A_config.spec_change_time = "Thu Nov  5 21:38:58 2026";
+A_config.name_seed = "DYQACTR (from seed file) ";
+A_config.spec_change_time = "Thu Nov  5 21:56:13 2026";
 A_config.arguments = A_config_arguments;
 A_config.environment = A_config_environment;
 A_config.modinfo_files = A_config_modinfo_files;
 A_PROC_ENTRY(DECS evalbase);
-(void)(UEAALIB_a68config(LGAALIB_configinfo, AYQACTR));
+(void)(UEAALIB_a68config(LGAALIB_configinfo, IYQACTR));
  /* line 44: */
  /* line 47: */
  /* line 56: */

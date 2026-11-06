@@ -96,8 +96,8 @@ A_PROC_ENTRY(+);
 { 
 CNEAOSF_ans = A;
  /* line 60: */
-DNEAOSF = (&((&CNEAOSF_ans)->Options)) ;
-(void)((*DNEAOSF) = (A68_BITS )((*(&((&CNEAOSF_ans)->Options)))|B.Options));
+DNEAOSF = (&(A_NILCHECK((&CNEAOSF_ans))->Options)) ;
+(void)((*A_NILCHECK(DNEAOSF)) = (A68_BITS )((*A_NILCHECK((&(A_NILCHECK((&CNEAOSF_ans))->Options))))|B.Options));
  /* line 61: */
  /* line 62: */
 ENEAOSF = CNEAOSF_ans;
@@ -116,8 +116,8 @@ A_PROC_ENTRY(plusab);
  /* line 65: */
  /* line 66: */
 { 
-INEAOSF = (&(A->Options)) ;
-(void)((*INEAOSF) = (A68_BITS )((*(&(A->Options)))|B.Options));
+INEAOSF = (&(A_NILCHECK(A)->Options)) ;
+(void)((*A_NILCHECK(INEAOSF)) = (A68_BITS )((*A_NILCHECK((&(A_NILCHECK(A)->Options))))|B.Options));
  /* line 67: */
  /* line 68: */
 JNEAOSF = A;
@@ -138,8 +138,8 @@ A_PROC_ENTRY(-);
 { 
 NNEAOSF_ans = A;
  /* line 73: */
-ONEAOSF = (&((&NNEAOSF_ans)->Options)) ;
-(void)((*ONEAOSF) = (A68_BITS )((*(&((&NNEAOSF_ans)->Options)))&~B.Options));
+ONEAOSF = (&(A_NILCHECK((&NNEAOSF_ans))->Options)) ;
+(void)((*A_NILCHECK(ONEAOSF)) = (A68_BITS )((*A_NILCHECK((&(A_NILCHECK((&NNEAOSF_ans))->Options))))&~B.Options));
  /* line 74: */
  /* line 75: */
 PNEAOSF = NNEAOSF_ans;
@@ -158,8 +158,8 @@ A_PROC_ENTRY(minusab);
  /* line 78: */
  /* line 79: */
 { 
-TNEAOSF = (&(A->Options)) ;
-(void)((*TNEAOSF) = (A68_BITS )((*(&(A->Options)))&~B.Options));
+TNEAOSF = (&(A_NILCHECK(A)->Options)) ;
+(void)((*A_NILCHECK(TNEAOSF)) = (A68_BITS )((*A_NILCHECK((&(A_NILCHECK(A)->Options))))&~B.Options));
  /* line 80: */
  /* line 81: */
 UNEAOSF = A;
@@ -255,8 +255,8 @@ A_PROC_ENTRY(makeoptions);
  /* line 109: */
 APEAOSF = (Nth-1) ;
 BPEAOSF = 0X1U ;
-CPEAOSF = (&((&ZOEAOSF_ans)->Options)) ;
-(void)((*CPEAOSF) = A_SHL(BPEAOSF,APEAOSF));
+CPEAOSF = (&(A_NILCHECK((&ZOEAOSF_ans))->Options)) ;
+(void)((*A_NILCHECK(CPEAOSF)) = A_SHL(BPEAOSF,APEAOSF));
  /* line 110: */
  /* line 111: */
 DPEAOSF = ZOEAOSF_ans;
@@ -285,10 +285,10 @@ A_invoked = A68_TRUE;
 BAAALIB();   /* USE a68config */
 /* --- Initialise configuration information */
 A_config.source_file = "/home/vak/Project/Algol/Algol-68RS-Source/liba68prel/options.a68";
-A_config.translation_time = "Thu Nov  5 21:38:57 2026";
+A_config.translation_time = "Thu Nov  5 21:56:13 2026";
 A_config.ctrans_version = "Ctrans_34.6";
 A_config.name_seed = "TMEAOSF (from seed file) ";
-A_config.spec_change_time = "Thu Nov  5 21:38:57 2026";
+A_config.spec_change_time = "Thu Nov  5 21:56:13 2026";
 A_config.arguments = A_config_arguments;
 A_config.environment = A_config_environment;
 A_config.modinfo_files = A_config_modinfo_files;
@@ -308,8 +308,8 @@ A_PROC_ENTRY(DECS options);
  /* line 106: */
  /* line 115: */
 { 
-FPEAOSF = (&((&EPEAOSF_ans)->Options)) ;
-(*FPEAOSF) = 0X0U;
+FPEAOSF = (&(A_NILCHECK((&EPEAOSF_ans))->Options)) ;
+(*A_NILCHECK(FPEAOSF)) = 0X0U;
  /* line 117: */
 GPEAOSF = EPEAOSF_ans;
 } 

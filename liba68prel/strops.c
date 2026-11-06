@@ -129,7 +129,7 @@ A_STATIC A68_VOID  QDAAOSF_generator(A68_BOOL  ODAAOSF_anonymous, A68_VC  *Retur
 A68_VC  SDAAOSF;  /* clause result */
 A68_VC  TDAAOSF;  /* OPERATORS - dynamic generator */
 { 
-TDAAOSF.upb = (*NL(KDAAOSF_l)) ;
+TDAAOSF.upb = (*A_NILCHECK(NL(KDAAOSF_l))) ;
 ( ODAAOSF_anonymous? A_VLOC(A68_CHAR ,TDAAOSF): A_VHEAP(A68_CHAR ,TDAAOSF) );
 SDAAOSF = TDAAOSF;
 } 
@@ -144,7 +144,7 @@ A_STATIC A68_VOID  SEAAOSF_generator(A68_BOOL  QEAAOSF_anonymous, A68_VC  *Retur
 A68_VC  UEAAOSF;  /* clause result */
 A68_VC  VEAAOSF;  /* OPERATORS - dynamic generator */
 { 
-VEAAOSF.upb = ((*NL(LEAAOSF_l))+NL(NEAAOSF_e)) ;
+VEAAOSF.upb = ((*A_NILCHECK(NL(LEAAOSF_l)))+NL(NEAAOSF_e)) ;
 ( QEAAOSF_anonymous? A_VLOC(A68_CHAR ,VEAAOSF): A_VHEAP(A68_CHAR ,VEAAOSF) );
 UEAAOSF = VEAAOSF;
 } 
@@ -356,7 +356,7 @@ CFAAOSF = A_HISVEC(BFAAOSF,JEAAOSF_chars,10,A68_CHAR ) ;
 EFAAOSF = 10 ;
 FFAAOSF = (A_MOD(KEAAOSF_n,EFAAOSF,DFAAOSF)+1) ;
 GFAAOSF = (&A_VINDEX(WEAAOSF_line,YEAAOSF_i)) ;
-(void)((*GFAAOSF) = A_VINDEX(CFAAOSF,FFAAOSF));
+(void)((*A_NILCHECK(GFAAOSF)) = A_VINDEX(CFAAOSF,FFAAOSF));
  /* line 81: */
  /* line 82: */
 KEAAOSF_n/=10;
@@ -366,7 +366,7 @@ if (NEAAOSF_e==1)
 { 
 HFAAOSF = 1 ;
 IFAAOSF = (&A_VINDEX(WEAAOSF_line,HFAAOSF)) ;
-(*IFAAOSF) = '-';
+(*A_NILCHECK(IFAAOSF)) = '-';
 } 
  /* line 84: */
  /* line 85: */
@@ -398,10 +398,10 @@ A_invoked = A68_TRUE;
 BAAALIB();   /* USE a68config */
 /* --- Initialise configuration information */
 A_config.source_file = "/home/vak/Project/Algol/Algol-68RS-Source/liba68prel/strops.a68";
-A_config.translation_time = "Thu Nov  5 21:38:57 2026";
+A_config.translation_time = "Thu Nov  5 21:56:12 2026";
 A_config.ctrans_version = "Ctrans_34.6";
 A_config.name_seed = "ACAAOSF (from seed file) ";
-A_config.spec_change_time = "Thu Nov  5 21:38:57 2026";
+A_config.spec_change_time = "Thu Nov  5 21:56:12 2026";
 A_config.arguments = A_config_arguments;
 A_config.environment = A_config_environment;
 A_config.modinfo_files = A_config_modinfo_files;

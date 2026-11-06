@@ -46,6 +46,7 @@ COMMENT
                                   element is C struct.
 05:11:26  34.005  SV    Wall      Void discarded results; zeroed SKIP and
                                   union temps.
+05:11:26  34.006  SV    NilCheck  Dereference and select via A_NILCHECK.
 ??:??:??   ?.???  ????
 COMMENT
 
@@ -122,7 +123,7 @@ BEGIN
 	  ( has refs( op mode )
 	  | CFRAGMENT body =
 	    bracket
-	    ( bracket cfragment( op ) +"->"+ select(mode OF op,PARAMOF rator)
+	    ( "A_NILCHECK(" + bracket cfragment( op ) + ")->" + select(mode OF op,PARAMOF rator)
      	    ) ;
 	    ( HASONEREF op mode AND HASONEREF mode OF root
 	      AND is firm array( mode OF root )
@@ -650,7 +651,7 @@ BEGIN
 	| ( mode OF root, info OF op, extra OF op )
 	| ( mode OF root,
 	    info OF op AND fxwarn OR atomic,
-	    bracket("*"+bracket cfragment(op))
+	    bracket("*A_NILCHECK(" + bracket cfragment( op ) + ")")
 	  )
 	)
 END;                  

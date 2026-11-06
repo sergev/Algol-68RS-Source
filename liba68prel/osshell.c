@@ -918,7 +918,7 @@ break;
 } 
  /* line 193: */
 MAAAOSF_cstringtorvc( UDCAOSF_xname, &WECAOSF );
-(*Ans) = WECAOSF;
+(*A_NILCHECK(Ans)) = WECAOSF;
  /* line 194: */
  /* line 195: */
 XECAOSF = WDCAOSF_status;
@@ -1054,9 +1054,9 @@ for (;MICAOSF-- >= 0;
 ,HICAOSF_arg++
 ) )
 {
-MAAAOSF_cstringtorvc( (*GICAOSF_new), &NICAOSF );
+MAAAOSF_cstringtorvc( (*A_NILCHECK(GICAOSF_new)), &NICAOSF );
 ZCAAOSF_makervc( NICAOSF, &OICAOSF );
-(*HICAOSF_arg) = OICAOSF;
+(*A_NILCHECK(HICAOSF_arg)) = OICAOSF;
 }
  /* line 285: */
 } 
@@ -1135,7 +1135,7 @@ XJCAOSF_expanded = (A_VVAC(YJCAOSF));
 (void)(TDCAOSF_expand(WJCAOSF_buffer, (&XJCAOSF_expanded), Msg));
  /* line 323: */
 ZJCAOSF = 1 ;
-QHAAOSF_parse_prompt( (*(&A_VINDEX(LHCAOSF_arguments,ZJCAOSF))), XJCAOSF_expanded, &AKCAOSF );
+QHAAOSF_parse_prompt( (*A_NILCHECK((&A_VINDEX(LHCAOSF_arguments,ZJCAOSF)))), XJCAOSF_expanded, &AKCAOSF );
 LHCAOSF_arguments = AKCAOSF;
  /* line 324: */
  /* line 325: */
@@ -1177,10 +1177,10 @@ MCBAOSF();   /* USE oserrors */
 BAAAOSF();   /* USE cif */
 /* --- Initialise configuration information */
 A_config.source_file = "/home/vak/Project/Algol/Algol-68RS-Source/liba68prel/osshell.a68";
-A_config.translation_time = "Thu Nov  5 21:38:57 2026";
+A_config.translation_time = "Thu Nov  5 21:56:13 2026";
 A_config.ctrans_version = "Ctrans_34.6";
 A_config.name_seed = "JDCAOSF (from seed file) ";
-A_config.spec_change_time = "Thu Nov  5 21:38:57 2026";
+A_config.spec_change_time = "Thu Nov  5 21:56:13 2026";
 A_config.arguments = A_config_arguments;
 A_config.environment = A_config_environment;
 A_config.modinfo_files = A_config_modinfo_files;
@@ -1309,7 +1309,7 @@ FHCAOSF_args_initialised = A68_FALSE;
  /* line 265: */
 HHCAOSF_generator( A68_TRUE, &MHCAOSF );
 NHCAOSF = A_LOC(A68_77 ) ;
-(void)((*NHCAOSF) = KHCAOSF) ;
+(void)((*A_NILCHECK(NHCAOSF)) = KHCAOSF) ;
 QHCAOSF = A_HVEC(PHCAOSF,A_ISVEC(OHCAOSF,NHCAOSF,4,A68_CHAR ),A68_VC ) ;
 (void)(A_VASSIGN2(QHCAOSF,MHCAOSF,A68_VC )) ;
 LHCAOSF_arguments = MHCAOSF;

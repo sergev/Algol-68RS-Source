@@ -404,7 +404,7 @@ A68_BITS * PKAAOSF_orab(A68_BITS * L, A68_BITS  R)
 { 
 A68_BITS * QKAAOSF;  /* clause result */
 A_PROC_ENTRY(orab);
-(void)((*L) = (A68_BITS )((*L)|R)) ;
+(void)((*A_NILCHECK(L)) = (A68_BITS )((*A_NILCHECK(L))|R)) ;
 QKAAOSF = L;
 A_PROC_EXIT(orab);
 return( QKAAOSF );
@@ -473,7 +473,7 @@ for (;MLAAOSF-- >= 0;
 (LLAAOSF_c++
 ) )
 {
-(*LLAAOSF_c) = Source;
+(*A_NILCHECK(LLAAOSF_c)) = Source;
 }
 A_PROC_EXIT(fill);
 return;
@@ -659,11 +659,11 @@ for (;PNAAOSF-- >= 0;
  /* line 131: */
  /* line 132: */
  /* line 133: */
-if (((*ONAAOSF_c)>='a')&((*ONAAOSF_c)<='z'))
+if (((*A_NILCHECK(ONAAOSF_c))>='a')&((*A_NILCHECK(ONAAOSF_c))<='z'))
 { 
  /* line 134: */
  /* line 135: */
-(void)((*ONAAOSF_c) = (A68_SSBITS)((A68_INT)(unsigned char)(*ONAAOSF_c)-(A68_INT )040U));
+(void)((*A_NILCHECK(ONAAOSF_c)) = (A68_SSBITS)((A68_INT)(unsigned char)(*A_NILCHECK(ONAAOSF_c))-(A68_INT )040U));
 } 
 }
  /* line 136: */
@@ -702,11 +702,11 @@ COAAOSF_c = (&A_VINDEX(AOAAOSF_capitalisedstring,BOAAOSF));
  /* line 147: */
  /* line 148: */
  /* line 149: */
-DOAAOSF = (((*COAAOSF_c)>='a')&((*COAAOSF_c)<='z'));
+DOAAOSF = (((*A_NILCHECK(COAAOSF_c))>='a')&((*A_NILCHECK(COAAOSF_c))<='z'));
 if (DOAAOSF)
 { 
  /* line 150: */
-(void)((*COAAOSF_c) = (A68_SSBITS)((A68_INT)(unsigned char)(*COAAOSF_c)-(A68_INT )040U));
+(void)((*A_NILCHECK(COAAOSF_c)) = (A68_SSBITS)((A68_INT)(unsigned char)(*A_NILCHECK(COAAOSF_c))-(A68_INT )040U));
 } 
 } 
  /* line 151: */
@@ -995,7 +995,7 @@ goto WQAAOSF_error;
  /* line 251: */
 } 
  /* line 252: */
-(void)((*Ri) = (XQAAOSF_result*YQAAOSF_sign));
+(void)((*A_NILCHECK(Ri)) = (XQAAOSF_result*YQAAOSF_sign));
  /* line 253: */
  /* line 254: */
  /* line 255: */
@@ -1023,7 +1023,7 @@ A_PROC_ENTRY(charinstring);
  /* line 261: */
 { 
 RRAAOSF_found = A68_FALSE;
-(*I) = 0;
+(*A_NILCHECK(I)) = 0;
  /* line 262: */
  /* line 263: */
 TRAAOSF = S.upb;
@@ -1035,7 +1035,7 @@ SRAAOSF_k += 1 )
 if ( !((!RRAAOSF_found)) ) break;
 if (C==A_VINDEX(S,SRAAOSF_k))
 { 
-(*I) = SRAAOSF_k;
+(*A_NILCHECK(I)) = SRAAOSF_k;
 RRAAOSF_found = A68_TRUE;
 } 
 }
@@ -1079,10 +1079,10 @@ BCAAOSF();   /* USE strops */
 BAAAOSF();   /* USE cif */
 /* --- Initialise configuration information */
 A_config.source_file = "/home/vak/Project/Algol/Algol-68RS-Source/liba68prel/usefulops.a68";
-A_config.translation_time = "Thu Nov  5 21:38:57 2026";
+A_config.translation_time = "Thu Nov  5 21:56:12 2026";
 A_config.ctrans_version = "Ctrans_34.6";
 A_config.name_seed = "HKAAOSF (from seed file) ";
-A_config.spec_change_time = "Thu Nov  5 21:38:57 2026";
+A_config.spec_change_time = "Thu Nov  5 21:56:12 2026";
 A_config.arguments = A_config_arguments;
 A_config.environment = A_config_environment;
 A_config.modinfo_files = A_config_modinfo_files;

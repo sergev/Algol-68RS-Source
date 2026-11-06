@@ -64,6 +64,19 @@ static inline __attribute__((__noreturn__)) int A_error_value(const char *messag
 }
 #define A_ERROR(message)	A_error_value(message)
 
+/*	dereference: NIL is a run time fault when checking	*/
+#ifdef	A68_CHECK
+static inline void *A_nil_check(void *p)
+{
+	if (p == 0)
+		A68_ERROR("Dereference of NIL");
+	return p;
+}
+#define	A_NILCHECK(p)	((__typeof__(p)) A_nil_check((void *)(p)))
+#else
+#define	A_NILCHECK(p)	(p)
+#endif
+
 /*	boolean denotations	*/
 #define	A68_TRUE	1
 #define	A68_FALSE	0

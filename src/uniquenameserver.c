@@ -868,7 +868,7 @@ A_PROC_ENTRY(incrementnum);
 { 
 IIMACTR = 1 ;
 JIMACTR = (&A_VINDEX(AIMACTR_num,IIMACTR)) ;
-(*JIMACTR)+=1;
+(*A_NILCHECK(JIMACTR))+=1;
  /* line 62: */
  /* line 63: */
 LIMACTR = (GIMACTR_upbnum-1);
@@ -880,30 +880,30 @@ KIMACTR_i += 1 )
  /* line 65: */
  /* line 66: */
  /* line 67: */
-if ((*(&A_VINDEX(AIMACTR_num,KIMACTR_i)))>FIMACTR_upbidchars)
+if ((*A_NILCHECK((&A_VINDEX(AIMACTR_num,KIMACTR_i))))>FIMACTR_upbidchars)
 { 
 MIMACTR = (KIMACTR_i+1) ;
 NIMACTR = (&A_VINDEX(AIMACTR_num,MIMACTR)) ;
-(*NIMACTR)+=1;
+(*A_NILCHECK(NIMACTR))+=1;
  /* line 68: */
  /* line 69: */
  /* line 70: */
 OIMACTR = (&A_VINDEX(AIMACTR_num,KIMACTR_i)) ;
-(*OIMACTR) = 1;
+(*A_NILCHECK(OIMACTR)) = 1;
 } 
 }
  /* line 72: */
  /* line 73: */
  /* line 74: */
  /* line 75: */
-if ((*(&A_VINDEX(AIMACTR_num,GIMACTR_upbnum)))>FIMACTR_upbidchars)
+if ((*A_NILCHECK((&A_VINDEX(AIMACTR_num,GIMACTR_upbnum))))>FIMACTR_upbidchars)
 { 
 (void)(JXIACTR_warning(800));
  /* line 76: */
  /* line 77: */
  /* line 78: */
 PIMACTR = (&A_VINDEX(AIMACTR_num,GIMACTR_upbnum)) ;
-(*PIMACTR) = 1;
+(*A_NILCHECK(PIMACTR)) = 1;
 } 
 } 
 A_PROC_EXIT(incrementnum);
@@ -935,9 +935,9 @@ SIMACTR_i += 1 )
  /* line 89: */
  /* line 90: */
 VIMACTR = A_ISVEC(UIMACTR,(&RIMACTR_result),7,A68_CHAR ) ;
-WIMACTR = (*(&A_VINDEX(AIMACTR_num,SIMACTR_i))) ;
+WIMACTR = (*A_NILCHECK((&A_VINDEX(AIMACTR_num,SIMACTR_i)))) ;
 XIMACTR = (&A_VINDEX(VIMACTR,SIMACTR_i)) ;
-(void)((*XIMACTR) = A_VINDEX(EIMACTR_idchars,WIMACTR));
+(void)((*A_NILCHECK(XIMACTR)) = A_VINDEX(EIMACTR_idchars,WIMACTR));
 }
  /* line 91: */
  /* line 92: */
@@ -1113,8 +1113,8 @@ else
 { 
  /* line 143: */
  /* line 144: */
-DLMACTR = (&((&IYIACTR_config_info)->Nameseed)) ;
-(*DLMACTR) = Uname;
+DLMACTR = (&(A_NILCHECK((&IYIACTR_config_info))->Nameseed)) ;
+(*A_NILCHECK(DLMACTR)) = Uname;
 } 
 } 
 A_PROC_EXIT(initnum);
@@ -1145,8 +1145,8 @@ A68_BOOL  XLMACTR;  /* clause result */
 A68_152  YLMACTR = {0};  /* OPERATORS - mode -> union mode */
  /* line 153: */
  /* line 154: */
-GLMACTR = (&((&IYIACTR_config_info)->Nameseedorigin)) ;
-HLMACTR = (*GLMACTR) = Origin ;
+GLMACTR = (&(A_NILCHECK((&IYIACTR_config_info))->Nameseedorigin)) ;
+HLMACTR = (*A_NILCHECK(GLMACTR)) = Origin ;
 switch ( HLMACTR.mode )
 { 
 case 3: /* STRUCT 7 CHAR */
@@ -1300,7 +1300,7 @@ A68_VC  BNMACTR;  /* OPERATORS - scalar -> [] or VEC[] */
 A68_75  CNMACTR;  /* avoid structure result */
 A_PROC_ENTRY(closedownuniquenameserver);
  /* line 213: */
-TMMACTR = (*(&((&IYIACTR_config_info)->Nameseedorigin))) ;
+TMMACTR = (*A_NILCHECK((&(A_NILCHECK((&IYIACTR_config_info))->Nameseedorigin)))) ;
 switch ( TMMACTR.mode )
 { 
 case 2: /* STRUCT(INT)  */
@@ -1335,7 +1335,7 @@ for (;ANMACTR-- >= 0;
 {
  /* line 223: */
  /* line 224: */
-UXBAOSF_write_buffer( UMMACTR_ufile, A_HVEC(BNMACTR,A_VINDEX(EIMACTR_idchars,(*ZMMACTR_i)),A68_CHAR ), RIBAOSF_ignore_msg, &CNMACTR );
+UXBAOSF_write_buffer( UMMACTR_ufile, A_HVEC(BNMACTR,A_VINDEX(EIMACTR_idchars,(*A_NILCHECK(ZMMACTR_i))),A68_CHAR ), RIBAOSF_ignore_msg, &CNMACTR );
 ;
 }
  /* line 225: */
@@ -1382,10 +1382,10 @@ BAAAOSF();   /* USE cif */
 IKAAOSF();   /* USE usefulops */
 /* --- Initialise configuration information */
 A_config.source_file = "/home/vak/Project/Algol/Algol-68RS-Source/src/uniquenameserver.a68";
-A_config.translation_time = "Thu Nov  5 21:38:57 2026";
+A_config.translation_time = "Thu Nov  5 21:56:13 2026";
 A_config.ctrans_version = "Ctrans_34.6";
 A_config.name_seed = "QHMACTR (from seed file) ";
-A_config.spec_change_time = "Thu Nov  5 21:38:57 2026";
+A_config.spec_change_time = "Thu Nov  5 21:56:13 2026";
 A_config.arguments = A_config_arguments;
 A_config.environment = A_config_environment;
 A_config.modinfo_files = A_config_modinfo_files;
