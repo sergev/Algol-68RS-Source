@@ -10,6 +10,8 @@ qad_a := spmodes.a68 spaliens.a68 spops.a68 spplain.a68 \
 qad_c := $(patsubst %.a68,%.c,$(qad_a))
 qad_o := $(patsubst %.a68,%.o,$(qad_a))
 
+A68_ORDER := $(qad_c)
+
 include $(TOP)/Algol68.mk
 
 .PHONY: clean install
@@ -23,7 +25,13 @@ liba68s.a : $(ACD)/a68config.o $(qad_o)
 nameseed : rctr
 	cp rctr nameseed
 
-Translate : remove nameseed $(qad_c)
+$(firstword $(qad_c)) : | nameseed
+
+# Steps in sequence, also under make -j.
+Translate :
+	$(MAKE) remove
+	$(MAKE) nameseed
+	$(MAKE) $(qad_c)
 
 clean :
 	$(RM) -v nameseed $(qad_c) $(qad_o) *.m liba68s.a

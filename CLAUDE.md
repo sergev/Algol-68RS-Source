@@ -21,8 +21,10 @@ make dist-clean && make   # stage 2: compiler built from its own output
 sudo make install    # /usr (or /usr/local on macOS)
 ```
 
-- Sub-make failures propagate to the top-level exit status. Per-directory builds are serial
-  (`.NOTPARALLEL` in `Algol68.mk`), because modules need each other's `.m` files and share `nameseed`.
+- Sub-make failures propagate to the top-level exit status. `make -jN` works: directories build in
+  sequence, C compiles run in parallel, but translation stays serial in `A68_ORDER` (chained by
+  order-only prerequisites in `Algol68.mk`), because modules need each other's `.m` files and share
+  `nameseed`.
 - Progress is tracked by stamp files `c-stamp` (C dirs), `q-stamp` (QAD
   prelude). Delete them (or `make dist-clean`) to force a rebuild.
 - GC: system libgc via `pkg-config bdw-gc` (`libgc-dev` / Homebrew `bdw-gc`) is required,

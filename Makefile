@@ -131,7 +131,8 @@ remove :
 Translate : remove resetseed
 	for d in $(ADIRS); do $(MAKE) -C $$d Translate || exit 1; done
 
-c-stamp:
+# Seeds are reset before anything is translated.
+c-stamp: nameseed
 	for d in $(CDIRS); do $(MAKE) -C $$d || exit 1; done
 	touch c-stamp
 

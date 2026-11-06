@@ -18,6 +18,8 @@ a68toc_a:=incid.a68 incimperatives.a68 incinstallation.a68 \
 a68toc_c := $(patsubst %.a68,%.c,$(a68toc_a))
 a68toc_o := $(patsubst %.a68,%.o,$(a68toc_a))
 
+A68_ORDER := $(a68toc_c) a68toc.c
+
 include $(TOP)/Algol68.mk
 
 A68_DIRS=-dir $(A68_ROOT) -dir $(LPD) -dir .

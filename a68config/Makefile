@@ -9,6 +9,8 @@ a68config_a:=a68config.a68
 a68config_c:=a68config.c
 a68config_o:=a68config.o
 
+A68_ORDER := $(a68config_c)
+
 include $(TOP)/Algol68.mk
 
 #-------------- Rules --------------

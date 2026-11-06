@@ -17,6 +17,8 @@ liba68prel_a := cif.a68 strops.a68 oscommon.a68 usefulops.a68 \
 liba68prel_c := $(patsubst %.a68,%.c,$(liba68prel_a))
 liba68prel_o := $(patsubst %.a68,%.o,$(liba68prel_a))
 
+A68_ORDER := $(liba68prel_c)
+
 include $(TOP)/Algol68.mk
 
 A68_DIRS=-dir $(ACD) -dir $(LPD)
@@ -31,6 +33,8 @@ liba68prel.a : $(ACD)/a68config.o $(liba68prel_o)
 
 nameseed : rctr
 	cp rctr nameseed
+
+$(firstword $(liba68prel_c)) : | nameseed
 
 Translate : $(liba68prel_c)
 
