@@ -78,7 +78,19 @@ GCD=$(TOP)/bdwgc
 ADIRS=a68config liba68prel src qad
 CDIRS=library a68config liba68prel src
 DDIRS=doc data examples scripts
-INCS:=-I $(VPATH)
+
+#------------ Garbage collector ------------
+# System libgc (pkg-config bdw-gc) if present, else bundled bdwgc.tar.gz.
+# Force the bundled one with: make SYSTEM_GC=no
+SYSTEM_GC:=$(shell pkg-config --exists bdw-gc && echo yes || echo no)
+ifeq ($(SYSTEM_GC),yes)
+GC_CFLAGS:=$(shell pkg-config --cflags bdw-gc)
+GC_LIBS:=$(shell pkg-config --libs bdw-gc)
+else
+GC_CFLAGS:=
+GC_LIBS:=-la68gc
+endif
+INCS:=-I $(VPATH) $(GC_CFLAGS)
 
 #------------- a68toc environment --------------
 A68_GC_POLICY:=1
@@ -112,7 +124,7 @@ INSTALLPROG=$(INSTALL) -m 555
 export
 
 #-------------- Rules --------------
-.PHONY : clean info uninstall check resetseed
+.PHONY : clean info uninstall check resetseed gc-vars
 
 #-----Don't remake the documentation all the time----
 #all : g-stamp c-stamp q-stamp d-stamp
@@ -124,11 +136,17 @@ remove :
 Translate : remove resetseed
 	for d in $(ADIRS); do $(MAKE) -C $$d Translate || exit 1; done
 
+ifeq ($(SYSTEM_GC),yes)
+g-stamp:
+	$(RM) -r include/algol68/gc library/liba68gc.a
+	touch g-stamp
+else
 g-stamp: $(GCD)/gc.a
-	-mkdir -p include/gc
+	mkdir -p include/algol68/gc
 	cp -r $(GCD)/include/* include/algol68/gc
 	cp $(GCD)/gc.a library/liba68gc.a
 	touch g-stamp
+endif
 
 $(GCD)/gc.a:
 	tar zxvf bdwgc.tar.gz
@@ -151,9 +169,11 @@ install : g-stamp c-stamp q-stamp
 	$(INSTALL) -m 755 -d $(PKGDIR)
 	$(INSTALL) -m 755 -d $(INCDIR)
 	$(INSTALL) -m 755 -d $(INCDIR)/linux
+ifneq ($(SYSTEM_GC),yes)
 	$(INSTALL) -m 755 -d $(INCDIR)/gc
 	$(INSTALL) -m 755 -d $(INCDIR)/gc/extra
 	$(INSTALL) -m 755 -d $(INCDIR)/gc/private
+endif
 	$(INSTALL) -m 755 -d $(BINDIR)
 	$(INSTALL) -m 755 -d $(LIBDIR)
 	$(INSTALL) -m 755 -d $(INFODIR)
@@ -180,7 +200,7 @@ uninstall :
 dist-clean: clean
 	-$(RM) -v c-stamp q-stamp d-stamp g-stamp
 	-$(RM) -r debian/tmp debian/algol68toc
-	-$(RM) -rf bdwgc
+	-$(RM) -rf bdwgc include/algol68/gc
 
 nameseed : a68config/rctr liba68prel/rctr src/rctr qad/rctr
 	for d in $(ADIRS); do cp $$d/rctr $$d/nameseed; done
@@ -209,6 +229,10 @@ realclean:
 	find $(TOP) \( -name '*~' -o -name '*.asv' -o -name '*##' \) \
 		-exec $(RM) -v '{}' ';'
 	-for d in $(ADIRS) $(DDIRS) library; do $(MAKE) -C $$d realclean; done
+
+# Used by scripts/check.
+gc-vars:
+	@echo "CA_GC_CFLAGS='$(GC_CFLAGS)' CA_GC_LIBS='$(GC_LIBS)'"
 
 vars:
 	echo "NOR is $(NOR)"

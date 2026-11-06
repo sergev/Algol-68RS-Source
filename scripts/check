@@ -62,8 +62,9 @@ R=$WORK/root
 mkdir "$R"
 for f in a68config/a68config.m qad/standard.m qad/liba68s.a \
          library/Afirst.o library/liba68.a library/liba68gc.a; do
-    ln -s "$T/$f" "$R/"
+    if [ -e "$T/$f" ]; then ln -s "$T/$f" "$R/"; fi
 done
+eval "export $(make -s -C "$T" gc-vars)"
 export CA_A68TOC="$T/src/a68toc"
 export CA_ROOT="$R"
 export CA_LIBDIR="$R"

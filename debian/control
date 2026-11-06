@@ -2,13 +2,13 @@ Source: algol68toc
 Section: devel
 Priority: optional
 Maintainer: Sian Mountbatten <poenikatu@fastmail.co.uk>
-Build-Depends: debhelper (>= 8.0.0),libc6-dev (>=2.13-24)
+Build-Depends: debhelper (>= 8.0.0), libc6-dev (>=2.13-24), libgc-dev, pkgconf | pkg-config
 Standards-Version: 3.9.2
 Homepage: http://www.poenikatu.co.uk/
 
 Package: algol68toc
 Architecture: any
-Depends: gcc (>=8.3.0), ${shlibs:Depends}, ${misc:Depends}
+Depends: gcc (>=8.3.0), libgc-dev, ${shlibs:Depends}, ${misc:Depends}
 Section: devel
 Priority: optional
 Description: Algol 68 development system

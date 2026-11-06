@@ -20,7 +20,7 @@ ldconfig, cp, mv, rm, find, sh, tar: <installed by default>
 
 Install these original dependencies:
 
-$ sudo apt install fakeroot make binutils gcc texinfo texlive texlive-extra-utils texlive-latex-base texlive-latex-extra install-info dpkg-dev debhelper linux-libc-dev info
+$ sudo apt install fakeroot make binutils gcc texinfo texlive texlive-extra-utils texlive-latex-base texlive-latex-extra install-info dpkg-dev debhelper linux-libc-dev info libgc-dev pkgconf
 -----
 
 macOS
@@ -28,7 +28,12 @@ macOS
 The GitHub files contain already-processed documentation files, so it is not necessary to install the TeX packages.
 The build requires a C compiler. It has been tested with Xcode 12 (clang 12.0.5) with command-line tools installed.
 It should also work with homebrew installed gcc and libc6-dev
+Install the garbage collector with: brew install bdw-gc pkgconf
 -----
+
+The Boehm garbage collector is taken from the system (found via pkg-config,
+package bdw-gc). If it is not installed, the copy in bdwgc.tar.gz is built
+and installed as liba68gc.a instead; "make SYSTEM_GC=no" forces this.
 
 
 To build, run
@@ -79,7 +84,7 @@ This install the following(*):
 /usr/include/algol68/*
 /usr/lib/liba68.a
          liba68s.a
-         liba68gc.a
+         liba68gc.a (only with the bundled garbage collector)
 /usr/bin/a68toc
          resetseed
 	 ca

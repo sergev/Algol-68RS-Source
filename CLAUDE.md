@@ -15,7 +15,7 @@ compiler can be bootstrapped with only a C compiler. Not implemented: formats, `
 ```sh
 export A68_NAMESEED=nameseed
 make dist-clean
-make                 # stage 1: builds bdwgc, then compiles committed .c files -> src/a68toc
+make                 # stage 1: GC setup, then compiles committed .c files -> src/a68toc
 make Translate       # re-translate all .a68 -> .c using the freshly built src/a68toc
 make dist-clean && make   # stage 2: compiler built from its own output
 sudo make install    # /usr (or /usr/local on macOS)
@@ -25,7 +25,10 @@ sudo make install    # /usr (or /usr/local on macOS)
   (`.NOTPARALLEL` in `Algol68.mk`), because modules need each other's `.m` files and share `nameseed`.
 - Progress is tracked by stamp files `g-stamp` (bdwgc), `c-stamp` (C dirs), `q-stamp` (QAD
   prelude). Delete them (or `make dist-clean`) to force a rebuild.
-- `bdwgc/` is extracted from `bdwgc.tar.gz` on first build and is git-ignored.
+- GC: system libgc via `pkg-config bdw-gc` (`libgc-dev` / Homebrew `bdw-gc`), giving
+  `GC_CFLAGS`/`GC_LIBS`. Without it (or with `SYSTEM_GC=no`), `bdwgc.tar.gz` is extracted to
+  `bdwgc/`, built into `library/liba68gc.a`, headers copied to `include/algol68/gc/` (both
+  git-ignored). `make install` bakes the GC flags into the installed `ca`.
 - Build order matters: `library` → `a68config` → `liba68prel` → `src`, then `qad`.
 - Self-hosting check: `make check` (see Tests below).
 - Debian package: `dpkg-buildpackage -F`. Docs (`doc/`, `d-stamp`) are not built by default.

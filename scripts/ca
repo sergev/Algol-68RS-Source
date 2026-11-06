@@ -50,6 +50,10 @@ PROGRAM=${CA_A68TOC:-$PROGRAM}
 ROOT=${CA_ROOT:-$ROOT}
 INCLUDES=${CA_INCLUDES:-$INCLUDES}
 
+# Garbage collector flags; make install sets the defaults.
+GC_CFLAGS=${CA_GC_CFLAGS-""}
+GC_LIBS=${CA_GC_LIBS-"-la68gc"}
+
 A68DIRS="-dir ${ROOT}"
 CHECK=-DA68_CHECK
 DEBUG=
@@ -276,8 +280,8 @@ then
 	${ECHO} sed -E "s/ \/\* line ([0-9]+): \*\//#line \1 \"${A68S}.a68\"/" ${A68S}.c
 	        sed -E "s/ \/\* line ([0-9]+): \*\//#line \1 \"${A68S}.a68\"/" < .${A68S}.c >${A68S}.c
     fi
-    ${ECHO} ${CC} -O0 ${CHECK} ${CFLAGS} ${INCLUDES} -o ${A68S}.o -c ${A68S}.c
-            ${CC} -O0 ${CHECK} ${CFLAGS} ${INCLUDES} -o ${A68S}.o -c ${A68S}.c
+    ${ECHO} ${CC} -O0 ${CHECK} ${CFLAGS} ${INCLUDES} ${GC_CFLAGS} -o ${A68S}.o -c ${A68S}.c
+            ${CC} -O0 ${CHECK} ${CFLAGS} ${INCLUDES} ${GC_CFLAGS} -o ${A68S}.o -c ${A68S}.c
     RES=$?
     if [ ${RES} -ne 0 ]
     then exit ${RES}
@@ -289,8 +293,8 @@ fi
 
 if [ "${TYPE}" == "p" ]
 then # Link the program
-    ${ECHO} ${CC} ${DEBUG} -o ${A68S} ${ROOT}/Afirst.o ${A68S}.o ${LIBRARIES} -la68s -la68 -la68gc -lm -lc
-            ${CC} ${DEBUG} -o ${A68S} ${ROOT}/Afirst.o ${A68S}.o ${LIBRARIES} -la68s -la68 -la68gc -lm -lc
+    ${ECHO} ${CC} ${DEBUG} -o ${A68S} ${ROOT}/Afirst.o ${A68S}.o ${LIBRARIES} -la68s -la68 ${GC_LIBS} -lm -lc
+            ${CC} ${DEBUG} -o ${A68S} ${ROOT}/Afirst.o ${A68S}.o ${LIBRARIES} -la68s -la68 ${GC_LIBS} -lm -lc
     RES=$?
     if [ ${RES} -ne 0 ]
     then exit ${RES}

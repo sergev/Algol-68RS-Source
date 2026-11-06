@@ -8,4 +8,8 @@ all : resetseed ca
 	echo "Nothing to be done for all"
 
 install :
-	$(INSTALLPROG) -p resetseed ca $(BINDIR)
+	$(INSTALLPROG) -p resetseed $(BINDIR)
+	sed -e 's|^GC_CFLAGS=.*|GC_CFLAGS=$${CA_GC_CFLAGS-"$(GC_CFLAGS)"}|' \
+	    -e 's|^GC_LIBS=.*|GC_LIBS=$${CA_GC_LIBS-"$(GC_LIBS)"}|' ca >ca.inst
+	$(INSTALLPROG) ca.inst $(BINDIR)/ca
+	$(RM) ca.inst
